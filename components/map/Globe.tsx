@@ -9,7 +9,7 @@ export default function Globe({diagnostics=false,onReady}:{diagnostics?:boolean,
  const readyRef=useRef(onReady);readyRef.current=onReady;
  const [retry,setRetry]=useState(0),[error,setError]=useState(''),[loading,setLoading]=useState(true);
  const [metrics,setMetrics]=useState(''),[samples,setSamples]=useState(false),[benchmark,setBenchmark]=useState(''),[coverageNote,setCoverageNote]=useState('');
- useEffect(()=>{let cancelled=false;let map:Map|undefined;
+ useEffect(()=>{let cancelled=false;let map:Map|undefined;let attributionObserver:ResizeObserver|undefined;
   setError('');setLoading(true);
   (async()=>{try{
    const ml=await import('maplibre-gl');
@@ -19,7 +19,7 @@ export default function Globe({diagnostics=false,onReady}:{diagnostics?:boolean,
    mapRef.current=map;
    if(diagnostics)map.addControl(new ml.NavigationControl({showCompass:false}),'bottom-right');
    map.addControl(new ml.ScaleControl({unit:'metric'}),'bottom-left');
-   map.on('load',()=>{setLoading(false);container.current?.setAttribute('data-load-ms',String(performance.now()));readyRef.current?.(map!);});
+   map.on('load',()=>{setLoading(false);container.current?.setAttribute('data-load-ms',String(performance.now()));readyRef.current?.(map!);const attribution=container.current?.querySelector('.maplibregl-ctrl-attrib');if(attribution){attributionObserver=new ResizeObserver(()=>container.current?.parentElement?.style.setProperty('--attribution-space',`${Math.max(38,attribution.getBoundingClientRect().height+12)}px`));attributionObserver.observe(attribution);}});
    const scaleVisibility=()=>container.current?.classList.toggle('local-scale',map!.getZoom()>=8);map.on('zoomend',scaleVisibility);scaleVisibility();
    const record=async()=>{
     if(!map||cancelled)return;
@@ -38,7 +38,7 @@ export default function Globe({diagnostics=false,onReady}:{diagnostics?:boolean,
    map.on('webglcontextrestored',()=>{setError('');readyRef.current?.(map!);});
    map.getCanvas().setAttribute('aria-label','Mapa mundial. Flechas para mover y + o − para acercar.');
   }catch(e){console.error(e);if(!cancelled){setLoading(false);setError('Este dispositivo no pudo abrir el mapa. Reintenta con gráficos WebGL2 disponibles.');}}
-  })();return()=>{cancelled=true;mapRef.current=null;readyRef.current?.(null);map?.remove();};
+  })();return()=>{cancelled=true;attributionObserver?.disconnect();mapRef.current=null;readyRef.current?.(null);map?.remove();};
  },[retry]);
  const measure=()=>{const m=mapRef.current;if(!m)return;let frames=0;const start=performance.now();let first=0;const onRender=()=>{frames++;if(!first)first=performance.now()-start;};m.on('render',onRender);m.once('moveend',()=>{m.off('render',onRender);const duration=performance.now()-start;setBenchmark(JSON.stringify({durationMs:duration,frames,fps:frames/(duration/1000),controlRenderMs:first}));});m.easeTo({zoom:m.getZoom()+.5,center:[m.getCenter().lng+1,m.getCenter().lat],duration:3000,essential:true});};
  const reference=()=>{const m=mapRef.current;if(!m)return;if(m.getSource('qa-reference')){m.removeLayer('qa-reference');m.removeSource('qa-reference');}m.addSource('qa-reference',{type:'geojson',data:{type:'Feature',properties:{},geometry:{type:'Point',coordinates:m.getCenter().toArray()}}});m.addLayer({id:'qa-reference',type:'circle',source:'qa-reference',paint:{'circle-radius':7,'circle-color':'#fff','circle-stroke-color':'#003876','circle-stroke-width':2}});};

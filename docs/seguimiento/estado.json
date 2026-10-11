@@ -17,12 +17,12 @@
   "contextHash": "3931f9e7eb5d80b38c981e2143e4c72efbe2ee31c4c1846ea01d4580f9e316d0",
   "project": "ATLAS",
   "portal": "https://atlas-escenarios-hud.yerrybatista.chatgpt.site/",
-  "updatedAt": "2026-10-11T02:27:00.570Z",
+  "updatedAt": "2026-10-11T02:29:19.990Z",
   "sprints": [
     {
       "number": 1,
       "title": "Globo y experiencia del mapa",
-      "updatedAt": "2026-10-11T02:27:00.570Z",
+      "updatedAt": "2026-10-11T02:29:19.990Z",
       "phase": "en_curso",
       "approval": {
         "status": "pendiente",
@@ -396,6 +396,36 @@
           "action": "start",
           "pointId": null,
           "reference": null
+        },
+        {
+          "at": "2026-10-11T02:29:19.621Z",
+          "action": "set",
+          "pointId": "S01-1A-AC-01",
+          "reference": "Reverificado tras actualización documental v8: build oficial y API salud200; globo/calles publicados en commit cb5cffb9ebeac136c18e225de788f7f6e9384489, Sites versión b1ff92e18530819187350938919a0293. Proveedor/licencia/cobertura documentados."
+        },
+        {
+          "at": "2026-10-11T02:29:19.713Z",
+          "action": "set",
+          "pointId": "S01-1A-AC-02",
+          "reference": "Pruebas SD/Quito/Madrid de escala y continuidad conservadas; nueva publicación revalida SD5m35,311px, referencia exacta y centro zoom19→1,25. Carga fría1958,6ms,143,71fps,7,1ms respuesta."
+        },
+        {
+          "at": "2026-10-11T02:29:19.802Z",
+          "action": "set",
+          "pointId": "S01-1A-AC-03",
+          "reference": "ESM cliente, API200, veinte muestras dentro del mapa y worker real publicados sin errores inesperados; CSP y CORS verificados. Fallos gráficos inducidos en QA se distinguen de fallos de carga."
+        },
+        {
+          "at": "2026-10-11T02:29:19.895Z",
+          "action": "set",
+          "pointId": "S01-1A-AC-04",
+          "reference": "Build oficial incluye worker exacto6.13.0 y CSS; rutas de producción same-origin sin HMR. tsc y siete pruebas del portal pasan."
+        },
+        {
+          "at": "2026-10-11T02:29:19.990Z",
+          "action": "set",
+          "pointId": "S01-1A-AC-05",
+          "reference": "Veinte muestras visibles en el mapa publicado versión b1ff92e18530819187350938919a0293; archivo T:/tmp/atlas-sprint01-escrituras-final.png. Noto scripts y licencias documentados; no incompatibilidad conocida."
         }
       ],
       "points": [
@@ -714,9 +744,9 @@
           "group": "Bloque 1A Cartografía y acercamiento",
           "text": "La aplicación compila y su versión revisable carga el globo vectorial, las calles y las rutas de servidor; proveedor, versión fijada, licencia, cobertura y modalidad de credenciales están documentados sin incluir valores secretos.",
           "kind": "aceptacion",
-          "status": "pendiente",
-          "evidence": "Reverificar: cambiaron los requisitos o contratos desde el sprint 1.",
-          "updatedAt": "2026-10-11T02:27:00.455Z",
+          "status": "terminado",
+          "evidence": "Reverificado tras actualización documental v8: build oficial y API salud200; globo/calles publicados en commit cb5cffb9ebeac136c18e225de788f7f6e9384489, Sites versión b1ff92e18530819187350938919a0293. Proveedor/licencia/cobertura documentados.",
+          "updatedAt": "2026-10-11T02:29:19.621Z",
           "history": [
             {
               "at": "2026-10-10T18:55:37.061Z",
@@ -732,6 +762,11 @@
               "at": "2026-10-11T02:27:00.455Z",
               "status": "pendiente",
               "evidence": "Reverificar: cambiaron los requisitos o contratos desde el sprint 1."
+            },
+            {
+              "at": "2026-10-11T02:29:19.621Z",
+              "status": "terminado",
+              "evidence": "Reverificado tras actualización documental v8: build oficial y API salud200; globo/calles publicados en commit cb5cffb9ebeac136c18e225de788f7f6e9384489, Sites versión b1ff92e18530819187350938919a0293. Proveedor/licencia/cobertura documentados."
             }
           ]
         },
@@ -741,9 +776,9 @@
           "group": "Bloque 1A Cartografía y acercamiento",
           "text": "La transición globo a vista local conserva centro y ubicación; las pruebas reproducibles de escala, proyección, latitudes y rendimiento cumplen el bloque, sin sustituir detalle por ampliación de imagen.",
           "kind": "aceptacion",
-          "status": "pendiente",
-          "evidence": "Reverificar: cambiaron los requisitos o contratos desde el sprint 1.",
-          "updatedAt": "2026-10-11T02:27:00.455Z",
+          "status": "terminado",
+          "evidence": "Pruebas SD/Quito/Madrid de escala y continuidad conservadas; nueva publicación revalida SD5m35,311px, referencia exacta y centro zoom19→1,25. Carga fría1958,6ms,143,71fps,7,1ms respuesta.",
+          "updatedAt": "2026-10-11T02:29:19.713Z",
           "history": [
             {
               "at": "2026-10-11T02:16:29.036Z",
@@ -754,6 +789,11 @@
               "at": "2026-10-11T02:27:00.455Z",
               "status": "pendiente",
               "evidence": "Reverificar: cambiaron los requisitos o contratos desde el sprint 1."
+            },
+            {
+              "at": "2026-10-11T02:29:19.713Z",
+              "status": "terminado",
+              "evidence": "Pruebas SD/Quito/Madrid de escala y continuidad conservadas; nueva publicación revalida SD5m35,311px, referencia exacta y centro zoom19→1,25. Carga fría1958,6ms,143,71fps,7,1ms respuesta."
             }
           ]
         },
@@ -763,9 +803,9 @@
           "group": "Bloque 1A Cartografía y acercamiento",
           "text": "El build publicado carga su motor, glifos y workers sin errores de origen o de inicialización en servidor. Las rutas de servidor de referencia responden; la integración y aceptación del buscador se completan en 1B, sin condicionar 1A a ese bloque futuro.",
           "kind": "aceptacion",
-          "status": "pendiente",
-          "evidence": "Reverificar: cambiaron los requisitos o contratos desde el sprint 1.",
-          "updatedAt": "2026-10-11T02:27:00.455Z",
+          "status": "terminado",
+          "evidence": "ESM cliente, API200, veinte muestras dentro del mapa y worker real publicados sin errores inesperados; CSP y CORS verificados. Fallos gráficos inducidos en QA se distinguen de fallos de carga.",
+          "updatedAt": "2026-10-11T02:29:19.802Z",
           "history": [
             {
               "at": "2026-10-10T18:55:37.061Z",
@@ -781,6 +821,11 @@
               "at": "2026-10-11T02:27:00.455Z",
               "status": "pendiente",
               "evidence": "Reverificar: cambiaron los requisitos o contratos desde el sprint 1."
+            },
+            {
+              "at": "2026-10-11T02:29:19.802Z",
+              "status": "terminado",
+              "evidence": "ESM cliente, API200, veinte muestras dentro del mapa y worker real publicados sin errores inesperados; CSP y CORS verificados. Fallos gráficos inducidos en QA se distinguen de fallos de carga."
             }
           ]
         },
@@ -790,9 +835,9 @@
           "group": "Bloque 1A Cartografía y acercamiento",
           "text": "El worker y CSS del motor se incluyen correctamente en el build de Vite/Sites; no hay dependencia de rutas del servidor de desarrollo ni de una importación en servidor.",
           "kind": "aceptacion",
-          "status": "pendiente",
-          "evidence": "Reverificar: cambiaron los requisitos o contratos desde el sprint 1.",
-          "updatedAt": "2026-10-11T02:27:00.455Z",
+          "status": "terminado",
+          "evidence": "Build oficial incluye worker exacto6.13.0 y CSS; rutas de producción same-origin sin HMR. tsc y siete pruebas del portal pasan.",
+          "updatedAt": "2026-10-11T02:29:19.895Z",
           "history": [
             {
               "at": "2026-10-11T02:16:29.225Z",
@@ -803,6 +848,11 @@
               "at": "2026-10-11T02:27:00.455Z",
               "status": "pendiente",
               "evidence": "Reverificar: cambiaron los requisitos o contratos desde el sprint 1."
+            },
+            {
+              "at": "2026-10-11T02:29:19.895Z",
+              "status": "terminado",
+              "evidence": "Build oficial incluye worker exacto6.13.0 y CSS; rutas de producción same-origin sin HMR. tsc y siete pruebas del portal pasan."
             }
           ]
         },
@@ -812,9 +862,9 @@
           "group": "Bloque 1A Cartografía y acercamiento",
           "text": "La selección de motor, estilo y fuentes pasa muestras de composición de las escrituras requeridas; no se traslada al sprint 2 una incompatibilidad conocida que obligue a reemplazar el mapa.",
           "kind": "aceptacion",
-          "status": "pendiente",
-          "evidence": "Reverificar: cambiaron los requisitos o contratos desde el sprint 1.",
-          "updatedAt": "2026-10-11T02:27:00.455Z",
+          "status": "terminado",
+          "evidence": "Veinte muestras visibles en el mapa publicado versión b1ff92e18530819187350938919a0293; archivo T:/tmp/atlas-sprint01-escrituras-final.png. Noto scripts y licencias documentados; no incompatibilidad conocida.",
+          "updatedAt": "2026-10-11T02:29:19.990Z",
           "history": [
             {
               "at": "2026-10-11T02:16:29.309Z",
@@ -825,6 +875,11 @@
               "at": "2026-10-11T02:27:00.455Z",
               "status": "pendiente",
               "evidence": "Reverificar: cambiaron los requisitos o contratos desde el sprint 1."
+            },
+            {
+              "at": "2026-10-11T02:29:19.990Z",
+              "status": "terminado",
+              "evidence": "Veinte muestras visibles en el mapa publicado versión b1ff92e18530819187350938919a0293; archivo T:/tmp/atlas-sprint01-escrituras-final.png. Noto scripts y licencias documentados; no incompatibilidad conocida."
             }
           ]
         },
