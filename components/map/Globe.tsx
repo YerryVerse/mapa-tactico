@@ -1,6 +1,6 @@
 'use client';
 import {useEffect,useRef,useState} from 'react';
-import type {Map} from 'maplibre-gl';
+import type {Map,GeoJSONSource} from 'maplibre-gl';
 import {atlasStyle} from '../../lib/map-style';
 import {scriptSamples} from '../../lib/map-fonts';
 const locations=[{name:'Santo Domingo',lng:-69.8845,lat:18.4737},{name:'Quito',lng:-78.513,lat:-.2202},{name:'Madrid',lng:-3.7038,lat:40.4168},{name:'Tokio',lng:139.767,lat:35.681},{name:'Nairobi',lng:36.8219,lat:-1.2921},{name:'Sídney',lng:151.2093,lat:-33.8688},{name:'Rural',lng:-69.81,lat:18.81},{name:'Islandia',lng:-21.9426,lat:64.1466},{name:'Polo',lng:0,lat:89},{name:'Meridiano180',lng:179.99,lat:-16.8}];
@@ -19,8 +19,18 @@ export default function Globe({diagnostics=false}:{diagnostics?:boolean}){
    map.addControl(new ml.NavigationControl({showCompass:false}),'bottom-right');
    map.addControl(new ml.ScaleControl({unit:'metric'}),'bottom-left');
    map.on('load',()=>{setLoading(false);container.current?.setAttribute('data-load-ms',String(performance.now()));});
-   const record=()=>{if(!map)return;const c=map.getCenter(),z=map.getZoom(),d=5/(111319.49079327358*Math.cos(c.lat*Math.PI/180));const a=map.project(c),b=map.project([c.lng+d,c.lat]);const px=Math.hypot(b.x-a.x,b.y-a.y);const data={center:[c.lng,c.lat],zoom:z,projection:map.getProjection().type,viewport:[container.current?.clientWidth,container.current?.clientHeight],fiveMetersCssPx:px,tilesLoaded:map.areTilesLoaded(),reference:map.getSource('qa-reference')?map.querySourceFeatures('qa-reference').map(f=>f.geometry):[],scriptCount:map.getLayer('script-samples')?map.queryRenderedFeatures({layers:['script-samples']}).length:0};container.current?.setAttribute('data-camera',JSON.stringify(data));setMetrics(JSON.stringify(data));};
-   map.on('moveend',record);map.on('idle',record);
+   const record=async()=>{
+    if(!map||cancelled)return;
+    const referenceSource=map.getSource('qa-reference') as GeoJSONSource|undefined;
+    const referenceData=referenceSource?await referenceSource.getData():null;
+    if(cancelled||!map||map.isMoving())return;
+    const c=map.getCenter(),z=map.getZoom(),d=5/(111319.49079327358*Math.cos(c.lat*Math.PI/180));
+    const a=map.project(c),b=map.project([c.lng+d,c.lat]),px=Math.hypot(b.x-a.x,b.y-a.y);
+    const data={center:[c.lng,c.lat],zoom:z,projection:map.getProjection().type,viewport:[container.current?.clientWidth,container.current?.clientHeight],fiveMetersCssPx:px,tilesLoaded:map.areTilesLoaded(),reference:referenceData,scriptCount:map.getLayer('script-samples')?map.queryRenderedFeatures({layers:['script-samples']}).length:0};
+    container.current?.setAttribute('data-camera',JSON.stringify(data));setMetrics(JSON.stringify(data));
+   };
+   const markBusy=()=>container.current?.setAttribute('data-camera','{"tilesLoaded":false}');
+   map.on('movestart',markBusy);map.on('dataloading',markBusy);map.on('idle',()=>{void record().catch(e=>console.error('Map diagnostics:',e));});
    map.on('error',e=>{console.error('Map load:',e.error.message);setError('No se pudo cargar una parte del mapa. Reintenta.');setLoading(false);});
    map.on('webglcontextlost',()=>setError('El mapa perdió acceso a los gráficos. Reintenta.'));
    map.getCanvas().setAttribute('aria-label','Mapa mundial. Flechas para mover y + o − para acercar.');
