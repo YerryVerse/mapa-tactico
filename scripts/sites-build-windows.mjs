@@ -1,0 +1,10 @@
+import {mkdirSync,writeFileSync,existsSync} from 'node:fs';
+import {spawnSync} from 'node:child_process';
+import path from 'node:path';
+const nodeDir=path.dirname(process.execPath), npmCli=path.join(nodeDir,'node_modules/npm/bin/npm-cli.js');
+const helper='C:/Users/yerry/.codex/plugins/cache/openai-curated-remote/sites/1.0.1/scripts/build-site.mjs';
+if(process.platform!=='win32'||!existsSync(npmCli))throw new Error('Este adaptador exige Node/npm oficiales de Windows');
+const shim=path.resolve('.sites-runtime/npm-shim');mkdirSync(shim,{recursive:true});
+writeFileSync(path.join(shim,'npm.cmd'),`@echo off\r\n"${process.execPath}" "${npmCli}" %*\r\n`);
+const result=spawnSync(process.execPath,[helper],{stdio:'inherit',env:{...process.env,PATH:shim+';'+process.env.PATH}});
+if(result.error)throw result.error;process.exit(result.status??1);

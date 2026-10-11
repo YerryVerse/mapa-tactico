@@ -1,0 +1,404 @@
+import { readFile, writeFile, mkdir, stat, rename } from 'node:fs/promises';
+import http from 'node:http';
+import path from 'node:path';
+import { createHash } from 'node:crypto';
+
+const root = path.resolve(import.meta.dirname, '..');
+const folder = path.join(root, 'docs', 'seguimiento');
+const statePath = path.join(folder, 'estado.json');
+const planPath = path.join(root, 'docs', 'PLAN_DE_SPRINTS.md');
+const portal = 'https://atlas-escenarios-hud.yerrybatista.chatgpt.site/';
+const command = process.argv[2] || 'help';
+const args = Object.fromEntries(process.argv.slice(3).reduce((pairs, token, i, tokens) => {
+  if (token.startsWith('--')) pairs.push([token.slice(2), tokens[i + 1]]);
+  return pairs;
+}, []));
+const now = () => new Date().toISOString();
+const hash = text => createHash('sha256').update(text).digest('hex');
+const escape = text => String(text ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const jsonInline = value => JSON.stringify(value).replace(/</g, '\\u003c');
+const labels = { pendiente: 'Pendiente', en_curso: 'En curso', terminado: 'Terminado', no_completado: 'No completado' };
+const phaseLabels = { pendiente: 'Pendiente', en_curso: 'En curso', esperando_aprobacion: 'Esperando aprobación', aprobado: 'Aprobado por el usuario' };
+
+const guides = {
+  1: [
+    ['Abrir el portal en escritorio y móvil.', 'El mapa ocupa la pantalla; solo la marca y controles útiles flotan. No hay cabecera ni tarjetas de resultados iniciales.'],
+    ['Acercar hasta una calle de Santo Domingo y luego recuperar la vista global.', 'Se ven nombres de calles, sin satélite ni iconos o etiquetas de comercios. El globo puede llenar la pantalla. La evidencia técnica documenta la escala de 5 metros.'],
+    ['Buscar una ciudad con nombre repetido, elegirla y seleccionar una ubicación.', 'Las sugerencias permiten distinguirla; arrastrar el mapa no coloca un punto.'],
+    ['Abrir y cerrar configuración y una ficha disponible; repetir con teclado.', 'Solo aparecen paneles solicitados, el foco regresa y se conservan ubicación y zoom. No quedan población ficticia ni cifras arbitrarias.']
+  ],
+  2: [
+    ['Abrir el selector de idioma y comprobar sus veinte opciones.', 'Los idiomas se identifican por nombres nativos, sin banderas; todos son seleccionables.'],
+    ['Cambiar entre español, inglés, árabe, hindi y chino con una ubicación elegida.', 'Cambian interfaz y nombres de países; ubicación y resultado vigente permanecen. No hay glifos vacíos ni texto recortado.'],
+    ['Elegir árabe, urdu o punyabí occidental y recorrer los controles.', 'Paneles y texto tienen dirección correcta; coordenadas y cifras son legibles. El mapa mantiene su orientación geográfica.'],
+    ['Elegir un idioma manualmente y volver a abrir el portal.', 'Se conserva la elección. Sin preferencia guardada se utiliza una preferencia compatible del navegador o español.']
+  ],
+  3: [
+    ['Buscar una ciudad y abrir su consulta poblacional.', 'El total identifica año, fuente y perímetro; no se confunde una coordenada central con los límites de la ciudad.'],
+    ['Dibujar un área, consultar población y modificarla.', 'El resultado corresponde al área vigente y conserva unidad, resolución y cobertura. Una respuesta anterior no reemplaza la nueva consulta.'],
+    ['Consultar un área sin cobertura o que exceda los límites documentados.', 'Hay una explicación y recuperación pertinente; un fallo o ausencia de datos no aparece como cero habitantes.'],
+    ['Cerrar la consulta y volver a explorar.', 'Se conserva la navegación y no quedan capas de otra consulta. El total se identifica como población, no como víctimas.']
+  ],
+  4: [
+    ['Abrir Accidente y consultar gas doméstico, gas industrial y Beirut.', 'Las tres entradas están completas y diferenciadas, con información y fuentes pertinentes.'],
+    ['Abrir el caso Beirut y consultar su ubicación y registros.', 'Fecha, lugar y víctimas históricas corresponden al acontecimiento original; no cambian al mover el punto libre.'],
+    ['Consultar el contexto territorial disponible y cambiar de caso.', 'Población y registros históricos conservan etiquetas y fechas; se limpian capas previas y no se inventan cifras de víctimas.'],
+    ['Cerrar y reabrir la consulta en móvil y en otro idioma.', 'El flujo es utilizable, conserva la selección necesaria y no muestra resultados vacíos.']
+  ],
+  5: [
+    ['Abrir Natural y consultar los dos fenómenos documentados elegidos.', 'Incluye una erupción y otro fenómeno natural, con fichas y fuentes propias.'],
+    ['Abrir el caso con geometría publicada y consultar población en su área.', 'La capa coincide con su fuente y fecha; población corresponde al área y edición indicadas.'],
+    ['Cambiar de fenómeno y cerrar el panel.', 'Cada fenómeno usa sus capas pertinentes, sin círculos de explosión idénticos ni restos del caso anterior.'],
+    ['Consultar fuentes y repetir la lectura en otro idioma.', 'Se conservan los hechos y no se presenta un registro histórico como un aviso actual.']
+  ],
+  6: [
+    ['Abrir Militar y consultar un caso convencional y uno nuclear históricos.', 'Hay al menos un caso completo de cada tipo con lugar, fecha, datos y fuentes.'],
+    ['Mover la cámara o seleccionar otro punto libre mientras se consulta un caso.', 'Los hechos y víctimas históricas siguen vinculados al lugar original.'],
+    ['Abrir sus detalles, cambiar de caso y regresar al mapa.', 'Las capas se limpian, los controles funcionan y el contexto humanitario es accesible.'],
+    ['Consultar el módulo en móvil y en otro idioma.', 'La misma información permanece legible y no aparece un cálculo de daño o bajas de un ataque en el punto libre.']
+  ],
+  7: [
+    ['Abrir la sección Tierra y consultar diámetro, gravedad, masa y composición.', 'Cada cifra tiene unidad, definición y fuente; se distinguen medidas medias de otras referencias.'],
+    ['Abrir la explicación de HAARP y sus fuentes.', 'Se puede seguir la evidencia y distinguir observaciones de interpretaciones.'],
+    ['Consultar al menos tres pruebas subterráneas de dos países.', 'Hay fichas documentadas y eventos coherentes con el catálogo; se distingue sismicidad registrada de conclusiones generales.'],
+    ['Revisar las comparaciones y volver al mapa.', 'La escala terrestre no se usa para afirmar que no puede existir daño local; no quedan paneles o marcadores sobrantes.']
+  ],
+  8: [
+    ['Revisar las propuestas antes de elegir un nombre.', 'Se muestran significado, pronunciación, escrituras comprobadas y coincidencias relevantes. La elección corresponde al usuario.'],
+    ['Una vez aplicada la opción elegida, abrir el portal en móvil y escritorio.', 'Nombre e icono flotan, son legibles y no crean una cabecera ni reducen el mapa.'],
+    ['Revisar título de pestaña, favicon, menú, información y disclaimer en varios idiomas.', 'La identidad aprobada es consistente y no quedan referencias provisionales accidentales.'],
+    ['Comprobar la dirección y el acceso del portal.', 'Se mantiene el mismo proyecto y audiencia; cualquier dirección nueva responde a la decisión aprobada.']
+  ],
+  9: [
+    ['Abrir Materiales y consultar las fichas de propano y uranio.', 'Se identifica material, proceso, unidad, condiciones y fuente; ambos están terminados.'],
+    ['Usar la comparación visual y consultar los valores en tabla.', 'Las bases de comparación son compatibles; una escala logarítmica se identifica y existe lectura accesible.'],
+    ['Recorrer la explicación de masa y energía.', 'Se distingue masa del sistema, diferencia de masa, material que participa y energía liberada; no se afirma que todo el material desaparece.'],
+    ['Consultar la participación del material y el reparto de energía.', 'No se mezclan eficiencia y consumo ni aparecen porcentajes universales inventados o un cálculo de rendimiento de armas.'],
+    ['Repetir el recorrido con teclado, móvil y otro idioma.', 'Gráficos, unidades, leyendas y tablas conservan su significado y son utilizables.']
+  ],
+  10: [
+    ['Abrir la versión entregada y recorrer mapa, búsqueda y selector de idiomas.', 'Las funciones aceptadas siguen operativas en móvil y escritorio; carga y navegación cumplen los presupuestos documentados.'],
+    ['Consultar una ciudad, dibujar un área y explorar las tres categorías.', 'Datos, fuentes, fechas y capas conservan coherencia; no se muestran respuestas antiguas ni paneles vacíos permanentes.'],
+    ['Abrir Tierra y Materiales, revisar identidad y disclaimer.', 'Las secciones mantienen los veinte idiomas, el alcance y los contenidos aceptados.'],
+    ['Revisar versión, incidencias y guía de mantenimiento y recuperación.', 'Se identifica la entrega exacta, cómo actualizar fuentes y cómo recuperar código y datos de manera compatible.'],
+    ['Verificar el dominio publicado y su acceso.', 'La versión publicada conserva proyecto, audiencia y credenciales; no se ha abierto acceso anónimo sin autorización.']
+  ]
+};
+
+async function writeChanged(file, content) {
+  const old = await readFile(file, 'utf8').catch(error => { if (error.code === 'ENOENT') return null; throw error; });
+  if (old === content) return false;
+  await mkdir(path.dirname(file), { recursive: true });
+  const temporary = file + '.tmp';
+  await writeFile(temporary, content, 'utf8');
+  await rename(temporary, file);
+  return true;
+}
+
+function parsePlan(plan) {
+  const matches = [...plan.matchAll(/^## Sprint (\d+) (.+)$/gm)];
+  if (matches.length !== 10 || matches.some((match, index) => Number(match[1]) !== index + 1)) throw new Error('El plan debe contener diez sprints únicos y ordenados del 1 al 10.');
+  return matches.map((match, index) => {
+    const number = Number(match[1]);
+    const next = matches[index + 1]?.index ?? plan.indexOf('\n## Contratos comunes', match.index);
+    const section = plan.slice(match.index, next < 0 ? plan.length : next);
+    let group = null;
+    let acceptanceIndex = 0;
+    let acceptanceSection = false;
+    let lastPoint = null;
+    const points = [];
+    for (const line of section.split(/\r?\n/)) {
+      const heading = /^### (.+)$/.exec(line);
+      if (heading) { group = heading[1]; acceptanceSection = false; acceptanceIndex = 0; lastPoint = null; }
+      const block = /^Bloque (\d+[A-Z]) /.exec(group ?? '');
+      const acceptanceHeading = /^#### Criterios de aceptación del bloque (\d+[A-Z])$/.exec(line);
+      if (acceptanceHeading) {
+        if (!block || block[1] !== acceptanceHeading[1]) throw new Error(`Criterios fuera de su bloque: ${line}`);
+        acceptanceSection = true;
+        lastPoint = null;
+      }
+      const operation = /^(\d+)\. (.+)$/.exec(line);
+      const acceptance = /^- (.+)$/.exec(line);
+      if (block && operation && !acceptanceSection) points.push({ id: `S${String(number).padStart(2, '0')}-${block[1]}-${operation[1].padStart(2, '0')}`, blockId: block[1], group, text: operation[2], kind: 'operacion' });
+      if (block && acceptanceSection && acceptance) points.push({ id: `S${String(number).padStart(2, '0')}-${block[1]}-AC-${String(++acceptanceIndex).padStart(2, '0')}`, blockId: block[1], group, text: acceptance[1], kind: 'aceptacion' });
+      if (block && (operation && !acceptanceSection || acceptance && acceptanceSection)) lastPoint = points.at(-1);
+      else if (block && lastPoint && /^\s{2,}\S/.test(line)) lastPoint.text += ' ' + line.trim();
+    }
+    if (!points.length) throw new Error(`Sprint ${number} sin operaciones.`);
+    if (new Set(points.map(point => point.id)).size !== points.length) throw new Error(`Sprint ${number} con identificadores de puntos duplicados.`);
+    for (const id of new Set(points.map(point => point.blockId))) {
+      if (!points.some(point => point.blockId === id && point.kind === 'aceptacion')) throw new Error(`Bloque ${id} sin criterios de aceptación.`);
+    }
+    return { number, title: match[2].trim(), points };
+  });
+}
+
+async function sync() {
+  const plan = await readFile(planPath, 'utf8');
+  const old = await readFile(statePath, 'utf8').then(JSON.parse).catch(error => { if (error.code === 'ENOENT') return null; throw error; });
+  const stamp = now();
+  const firstSprint = plan.indexOf('## Sprint 1 ');
+  const commonContracts = plan.indexOf('## Contratos comunes');
+  if (firstSprint < 0 || commonContracts < 0) throw new Error('Faltan sprints o contratos comunes.');
+  const contextHash = hash(plan.slice(0, firstSprint).replace(/^Revisión técnica:.*$/m, '') + plan.slice(commonContracts));
+  let firstAffected = old?.contextHash && old.contextHash !== contextHash ? 1 : null;
+  const sprints = parsePlan(plan).map(source => {
+    const previous = old?.sprints.find(s => s.number === source.number);
+    let changed = false;
+    const points = source.points.map(point => {
+      const found = previous?.points.find(p => p.id === point.id) ?? (point.kind === 'aceptacion' ? previous?.points.find(p => p.kind === 'aceptacion' && p.text === point.text) : null);
+      if (found && found.text === point.text) return { ...found, ...point };
+      changed ||= Boolean(previous);
+      return { ...point, status: 'pendiente', evidence: '', updatedAt: stamp, history: found ? [...found.history, { at: stamp, status: 'pendiente', evidence: 'Cambió el requisito en el plan; necesita nueva verificación.' }] : [] };
+    });
+    changed ||= Boolean(previous && previous.points.length !== points.length);
+    if (changed) {
+      firstAffected = Math.min(firstAffected ?? source.number, source.number);
+      for (const point of points.filter(p => p.kind === 'aceptacion' && p.status === 'terminado')) {
+        point.status = 'pendiente';
+        point.evidence = 'Reverificar: cambiaron los requisitos del sprint.';
+        point.updatedAt = stamp;
+        point.history.push({ at: stamp, status: 'pendiente', evidence: point.evidence });
+      }
+    }
+    return {
+      number: source.number, title: source.title, updatedAt: changed ? stamp : previous?.updatedAt ?? stamp,
+      phase: changed ? 'pendiente' : previous?.phase ?? 'pendiente',
+      approval: changed ? { status: 'pendiente', at: null, reference: null } : previous?.approval ?? { status: 'pendiente', at: null, reference: null },
+      delivery: changed ? null : previous?.delivery ?? null,
+      reviewSteps: previous?.reviewSteps ?? guides[source.number].map(([action, expected]) => ({ action, expected })),
+      history: previous?.history ?? [], points
+    };
+  });
+  if (firstAffected !== null) {
+    for (const sprint of sprints.filter(s => s.number >= firstAffected)) {
+      const previous = old?.sprints.find(s => s.number === sprint.number);
+      if (!previous) continue;
+      for (const point of sprint.points.filter(p => p.kind === 'aceptacion' && p.status === 'terminado')) {
+        point.status = 'pendiente';
+        point.evidence = `Reverificar: cambiaron los requisitos o contratos desde el sprint ${firstAffected}.`;
+        point.updatedAt = stamp;
+        point.history.push({ at: stamp, status: 'pendiente', evidence: point.evidence });
+      }
+      sprint.phase = 'pendiente';
+      sprint.updatedAt = stamp;
+      sprint.delivery = null;
+      sprint.approval = { status: 'pendiente', at: null, reference: null };
+      sprint.history.push({ at: stamp, action: 'aceptacion_invalidada', reference: `Cambio de requisitos o contratos desde el sprint ${firstAffected}; verificar de nuevo antes de continuar.` });
+    }
+  }
+  const planVersion = Number(/Revisión técnica: versión (\d+) del plan/.exec(plan)?.[1]);
+  const controlSection = /## Documento de control del cumplimiento\r?\n([\s\S]*?)(?=\r?\n## |$)/.exec(plan)?.[1];
+  const controlRules = [...(controlSection ?? '').matchAll(/^\d+\. (.+)$/gm)].map(match => match[1].trim());
+  if (!Number.isInteger(planVersion) || planVersion < 1 || controlRules.length !== 10) throw new Error('Faltan la versión del plan o sus diez reglas de control.');
+  const result = { schemaVersion: 1, planVersion, controlRules, planHash: hash(plan), contextHash, project: 'ATLAS', portal, updatedAt: old?.updatedAt ?? stamp, sprints };
+  if (!old || JSON.stringify({ ...result, updatedAt: null }) !== JSON.stringify({ ...old, updatedAt: null })) result.updatedAt = stamp;
+  for (const sprint of result.sprints) {
+    const previous = old?.sprints.find(s => s.number === sprint.number);
+    if (previous && previous.phase !== sprint.phase && sprint.phase === 'pendiente') sprint.history.push({ at: stamp, action: 'requisito_modificado', reference: 'Plan actualizado; revisión y aprobación anteriores retiradas.' });
+  }
+  await save(result);
+  console.log(`Sincronizados ${sprints.length} sprints y ${sprints.reduce((sum, s) => sum + s.points.length, 0)} puntos. Estados y evidencias conservados donde siguen vigentes.`);
+}
+
+function pointRows(points) {
+  let acceptanceHeading = false;
+  return points.map(point => {
+    const heading = point.kind === 'aceptacion' && !acceptanceHeading ? '<tr class="acceptance-heading"><th colspan="4">Criterios de aceptación</th></tr>' : '';
+    acceptanceHeading ||= point.kind === 'aceptacion';
+    return heading + `<tr class="point-row ${point.status}"><th scope="row">${escape(point.id)}</th><td>${escape(point.text)}</td><td><span class="status ${point.status}">${labels[point.status]}</span></td><td>${escape(point.evidence || '—')}</td></tr>`;
+  }).join('');
+}
+
+function blockGroups(sprint) {
+  const groups = new Map();
+  for (const point of sprint.points) {
+    if (!groups.has(point.blockId)) groups.set(point.blockId, { id: point.blockId, name: point.group, points: [] });
+    groups.get(point.blockId).points.push(point);
+  }
+  return [...groups.values()];
+}
+
+const blockComplete = block => block.points.length > 0 && block.points.every(point => point.status === 'terminado' && point.evidence.trim());
+
+function groupSections(sprint) {
+  let firstIncomplete = null;
+  return blockGroups(sprint).map(block => {
+    const { name, points } = block;
+    const done = points.filter(point => point.status === 'terminado').length;
+    const complete = blockComplete(block);
+    const gate = firstIncomplete ? `<small class="block-gate">Requiere ${firstIncomplete}</small>` : '';
+    if (!complete && !firstIncomplete) firstIncomplete = block.id;
+    const id = `section-${points[0].id}`;
+    return `<details class="sprint-section" data-group="${id}" data-complete="${complete}"${complete ? '' : ' open'}><summary><h2 id="${id}">${escape(name)}</h2><span class="block-progress">${done} / ${points.length}${gate}</span></summary><div class="table-wrap"><table aria-labelledby="${id}"><thead><tr><th scope="col">Punto</th><th scope="col">Trabajo y resultado requerido</th><th scope="col">Estado</th><th scope="col">Evidencia o bloqueo</th></tr></thead><tbody>${pointRows(points)}</tbody></table></div></details>`;
+  }).join('');
+}
+
+function counts(sprint) {
+  return { done: sprint.points.filter(p => p.status === 'terminado').length, pending: sprint.points.filter(p => ['pendiente', 'en_curso'].includes(p.status)).length, failed: sprint.points.filter(p => p.status === 'no_completado').length, total: sprint.points.length };
+}
+
+function guideHtml(sprint) {
+  return sprint.reviewSteps.map(step => `<li><strong>${escape(step.action)}</strong><p>${escape(step.expected)}</p></li>`).join('');
+}
+
+function controlHtml(state) {
+  return `<details class="control-rules" data-group="control-rules" data-complete="false"><summary><h2>Reglas de cumplimiento · Plan v${state.planVersion}</h2></summary><ol>${state.controlRules.map(rule => `<li>${escape(rule)}</li>`).join('')}</ol></details>`;
+}
+
+function content(state, number) {
+  if (!number) return `<h1>Seguimiento de sprints</h1>${controlHtml(state)}<p>Las soluciones de la revisión técnica están incorporadas al plan. Cada función conserva su estado de desarrollo y requiere tu aprobación al cerrar el sprint.</p><div class="table-wrap"><table class="overview"><thead><tr><th>Sprint</th><th>Avance técnico</th><th>No completados</th><th>Estado del sprint</th><th>Aprobación</th></tr></thead><tbody>${state.sprints.map(sprint => {
+    const c = counts(sprint);
+    const rowStatus = sprint.phase === 'aprobado' ? 'terminado' : c.failed ? 'no_completado' : 'pendiente';
+    return `<tr class="point-row ${rowStatus}"><th scope="row"><a href="sprint-${String(sprint.number).padStart(2, '0')}.html">${sprint.number}. ${escape(sprint.title)}</a></th><td>${c.done} / ${c.total} terminados</td><td>${c.failed}</td><td>${phaseLabels[sprint.phase]}</td><td>${sprint.approval.status === 'aprobado' ? 'Aprobado por el usuario' : 'Pendiente'}</td></tr>`;
+  }).join('')}</tbody></table></div>`;
+  const sprint = state.sprints.find(s => s.number === number);
+  const c = counts(sprint);
+  const awaiting = sprint.phase === 'esperando_aprobacion';
+  return `<h1>Sprint ${String(number).padStart(2, '0')} · ${escape(sprint.title)}</h1><div class="summary"><span class="status terminado">${c.done} terminados</span><span class="status pendiente">${c.pending} pendientes / en curso</span><span class="status no_completado">${c.failed} no completados</span><span class="phase">${phaseLabels[sprint.phase]}</span></div><section class="approval" aria-label="Aprobación del sprint"><strong>Aprobación del usuario: ${sprint.approval.status === 'aprobado' ? 'registrada' : 'pendiente'}</strong><p>${sprint.approval.status === 'aprobado' ? escape(sprint.approval.reference) : awaiting ? 'La entrega está lista para tu revisión. El sprint permanece abierto hasta recibir tu aprobación explícita.' : 'El cierre requiere una entrega comprobada y tu aprobación explícita.'}</p></section>${controlHtml(state)}<div class="blocks">${groupSections(sprint)}</div><section class="review"><h2>Qué revisar en el portal</h2><p>${sprint.delivery ? `Entrega: <a href="${escape(sprint.delivery.url)}" target="_blank" rel="noopener noreferrer">Abrir versión para revisar</a> · Versión: ${escape(sprint.delivery.version)}` : 'Guía prevista. La URL y versión de la entrega aparecerán aquí cuando el sprint esté preparado para revisión; el portal actual conserva el prototipo.'}</p><ol>${guideHtml(sprint)}</ol></section>`;
+}
+
+async function save(state) {
+  await writeChanged(statePath, JSON.stringify(state, null, 2) + '\n');
+  for (const number of [0, ...state.sprints.map(s => s.number)]) {
+    const current = state.sprints.find(s => s.number === number);
+    const stamp = current?.updatedAt ?? state.updatedAt;
+    const snapshot = number ? { schemaVersion: state.schemaVersion, updatedAt: stamp, sprints: [current] } : { schemaVersion: state.schemaVersion, updatedAt: stamp, sprints: state.sprints.map(s => ({ ...s, points: s.points.map(p => ({ status: p.status })), reviewSteps: [] })) };
+    const filename = number ? `sprint-${String(number).padStart(2, '0')}.html` : 'index.html';
+    const title = number ? `Sprint ${number} · ${state.sprints.find(s => s.number === number).title}` : 'Seguimiento de sprints';
+    const html = `<!doctype html>\n<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>${escape(title)}</title><link rel="stylesheet" href="seguimiento.css"><script src="seguimiento.js" defer></script></head><body data-sprint="${number}"><header><a href="index.html">Sprints</a><a href="${portal}" target="_blank" rel="noopener noreferrer">Portal actual</a><span id="connection" role="status">Copia del informe · activar vista local para actualización en vivo</span></header><main id="report">${content(state, number)}</main><footer>Verde: terminado y verificado · Naranja: pendiente o en curso · Rojo: no completado, fallo o bloqueo.<br>Actualización de datos: <time id="updated">${escape(stamp)}</time>. El avance técnico no sustituye la aprobación del usuario.</footer><script id="snapshot" type="application/json">${jsonInline(snapshot)}</script></body></html>\n`;
+    await writeChanged(path.join(folder, filename), html);
+  }
+}
+
+function requireArgument(name) {
+  const value = args[name]?.trim();
+  if (!value || value.startsWith('--')) throw new Error(`Falta --${name}.`);
+  return value;
+}
+
+function validatedUrl(input) {
+  const url = new URL(input);
+  if (!['http:', 'https:'].includes(url.protocol) || url.username || url.password) throw new Error('La entrega necesita una URL http/https sin credenciales.');
+  return url.href;
+}
+
+async function mutate() {
+  const state = JSON.parse(await readFile(statePath, 'utf8'));
+  const sprint = command === 'set' ? state.sprints.find(s => s.points.some(p => p.id === args.id)) : state.sprints.find(s => s.number === Number(args.sprint));
+  if (!sprint) throw new Error('Sprint o identificador de punto inexistente.');
+  if (state.sprints.some(s => s.number < sprint.number && s.phase !== 'aprobado')) throw new Error('Los sprints anteriores necesitan aceptación vigente del usuario antes de modificar este sprint.');
+  const stamp = now();
+  if (command === 'start') {
+    if (sprint.phase !== 'pendiente') throw new Error('El sprint ya está iniciado o aprobado.');
+    if (state.sprints.some(s => s.number < sprint.number && s.phase !== 'aprobado')) throw new Error('Los sprints anteriores necesitan aprobación explícita del usuario.');
+    if (state.sprints.some(s => ['en_curso', 'esperando_aprobacion'].includes(s.phase))) throw new Error('Hay otro sprint abierto.');
+    sprint.phase = 'en_curso';
+  } else if (command === 'set') {
+    if (!['en_curso', 'esperando_aprobacion'].includes(sprint.phase)) throw new Error('Iniciar o reabrir el sprint antes de cambiar sus puntos.');
+    const status = requireArgument('status');
+    if (!labels[status]) throw new Error('Estado inválido.');
+    const evidence = args.evidence?.trim() ?? '';
+    if (['terminado', 'no_completado'].includes(status) && !evidence) throw new Error('Terminado y no completado requieren evidencia o motivo.');
+    const point = sprint.points.find(p => p.id === args.id);
+    const blocks = blockGroups(sprint);
+    const blockIndex = blocks.findIndex(block => block.id === point.blockId);
+    const previousIncomplete = blocks.slice(0, blockIndex).find(block => !blockComplete(block));
+    if (previousIncomplete) throw new Error(`No se puede avanzar a ${point.blockId}: completar y verificar las operaciones y criterios de ${previousIncomplete.id}.`);
+    if (point.kind === 'aceptacion' && status === 'terminado' && blocks[blockIndex].points.some(p => p.kind === 'operacion' && (p.status !== 'terminado' || !p.evidence.trim()))) throw new Error(`Terminar las operaciones de ${point.blockId} antes de dar por cumplidos sus criterios.`);
+    const invalidates = status !== 'terminado' || (point.kind === 'operacion' && point.status === 'terminado' && point.evidence !== evidence);
+    point.status = status;
+    point.evidence = evidence;
+    point.updatedAt = stamp;
+    point.history.push({ at: stamp, status, evidence });
+    if (invalidates) {
+      for (const affected of blocks.slice(blockIndex).flatMap(block => block.points)) {
+        if (affected.id === point.id || affected.kind !== 'aceptacion' || affected.status !== 'terminado') continue;
+        if (affected.blockId === point.blockId && point.kind === 'aceptacion') continue;
+        affected.status = 'pendiente';
+        affected.evidence = `Reverificar: cambió o quedó incompleto ${point.id}.`;
+        affected.updatedAt = stamp;
+        affected.history.push({ at: stamp, status: 'pendiente', evidence: affected.evidence });
+      }
+    }
+    sprint.phase = 'en_curso';
+    sprint.delivery = null;
+    sprint.approval = { status: 'pendiente', at: null, reference: null };
+  } else if (command === 'review') {
+    if (sprint.phase !== 'en_curso') throw new Error('El sprint debe estar en curso para preparar la revisión.');
+    if (sprint.points.some(p => p.status !== 'terminado' || !p.evidence.trim())) throw new Error('Hay puntos o criterios sin terminar y verificar.');
+    sprint.delivery = { url: validatedUrl(requireArgument('url')), version: requireArgument('version'), preparedAt: stamp };
+    sprint.phase = 'esperando_aprobacion';
+  } else if (command === 'guide') {
+    if (sprint.phase !== 'en_curso') throw new Error('La guía se actualiza durante el sprint, antes de presentar la revisión.');
+    const steps = JSON.parse(await readFile(path.resolve(root, requireArgument('file')), 'utf8'));
+    if (!Array.isArray(steps) || !steps.length || steps.length > 30 || steps.some(step => typeof step.action !== 'string' || !step.action.trim() || typeof step.expected !== 'string' || !step.expected.trim())) throw new Error('La guía requiere una lista de pasos con action y expected no vacíos.');
+    sprint.reviewSteps = steps.map(({ action, expected }) => ({ action, expected }));
+  } else if (command === 'approve') {
+    if (sprint.phase !== 'esperando_aprobacion' || !sprint.delivery || sprint.points.some(p => p.status !== 'terminado' || !p.evidence.trim())) throw new Error('No existe una entrega completa esperando aprobación.');
+    sprint.approval = { status: 'aprobado', at: stamp, reference: requireArgument('reference') };
+    sprint.phase = 'aprobado';
+  } else if (command === 'reject') {
+    if (sprint.phase !== 'esperando_aprobacion') throw new Error('No existe una revisión pendiente.');
+    sprint.approval = { status: 'cambios_solicitados', at: stamp, reference: requireArgument('reference') };
+    sprint.phase = 'en_curso';
+    sprint.delivery = null;
+  } else if (command === 'reopen') {
+    if (sprint.phase !== 'aprobado') throw new Error('Solo se reabre un sprint aprobado.');
+    const reference = requireArgument('reference');
+    for (const later of state.sprints.filter(s => s.number >= sprint.number)) {
+      for (const point of later.points.filter(p => p.kind === 'aceptacion' && p.status === 'terminado')) {
+        point.status = 'pendiente';
+        point.evidence = `Reverificar: se reabrió el sprint ${sprint.number}.`;
+        point.updatedAt = stamp;
+        point.history.push({ at: stamp, status: 'pendiente', evidence: point.evidence });
+      }
+      later.updatedAt = stamp;
+      later.phase = later.number === sprint.number ? 'en_curso' : 'pendiente';
+      later.delivery = null;
+      later.approval = { status: 'pendiente', at: null, reference: null };
+      later.history.push({ at: stamp, action: 'reabierto', reference });
+    }
+  }
+  sprint.history.push({ at: stamp, action: command, pointId: args.id ?? null, reference: args.reference ?? args.evidence ?? null });
+  sprint.updatedAt = stamp;
+  state.updatedAt = stamp;
+  await save(state);
+  console.log(`Sprint ${sprint.number}: ${phaseLabels[sprint.phase]}. Informe actualizado.`);
+}
+
+async function serve() {
+  const port = args.port ? Number(args.port) : 4174;
+  if (!Number.isInteger(port) || port < 1 || port > 65535) throw new Error('Puerto inválido.');
+  const allowed = /^(index\.html|sprint-(0[1-9]|10)\.html|estado\.json|seguimiento\.(css|js))$/;
+  const cache = new Map();
+  const types = { '.html': 'text/html; charset=utf-8', '.json': 'application/json; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8' };
+  const server = http.createServer(async (request, response) => {
+    try {
+      if (!['GET', 'HEAD'].includes(request.method)) { response.writeHead(405, { Allow: 'GET, HEAD' }); response.end(); return; }
+      const name = decodeURIComponent(new URL(request.url, 'http://127.0.0.1').pathname).replace(/^\//, '') || 'index.html';
+      if (!allowed.test(name)) { response.writeHead(404); response.end('No encontrado'); return; }
+      const file = path.join(folder, name);
+      const info = await stat(file);
+      let cached = cache.get(name);
+      if (!cached || cached.mtime !== info.mtimeMs || cached.size !== info.size) {
+        const bytes = await readFile(file);
+        cached = { mtime: info.mtimeMs, size: info.size, bytes, etag: '"' + hash(bytes) + '"' };
+        cache.set(name, cached);
+      }
+      const headers = { 'Content-Type': types[path.extname(name)], 'Cache-Control': 'no-cache', ETag: cached.etag, 'X-Content-Type-Options': 'nosniff' };
+      if (request.headers['if-none-match'] === cached.etag) { response.writeHead(304, headers); response.end(); return; }
+      response.writeHead(200, headers);
+      response.end(request.method === 'HEAD' ? undefined : cached.bytes);
+    } catch { response.writeHead(404); response.end('No encontrado'); }
+  });
+  server.on('error', error => { console.error(error.message); process.exitCode = 1; });
+  server.listen(port, '127.0.0.1', () => console.log(`Seguimiento: http://127.0.0.1:${port}/`));
+}
+
+try {
+  if (command === 'sync') await sync();
+  else if (command === 'serve') await serve();
+  else if (['start', 'set', 'review', 'guide', 'approve', 'reject', 'reopen'].includes(command)) await mutate();
+  else console.log('Comandos: sync | serve [--port 4174] | start --sprint N | set --id ID --status ESTADO --evidence TEXTO | guide --sprint N --file JSON_DE_PASOS | review --sprint N --url URL --version VERSION | approve/reject/reopen --sprint N --reference MENSAJE_DEL_USUARIO');
+} catch (error) { console.error(error.message); process.exitCode = 1; }

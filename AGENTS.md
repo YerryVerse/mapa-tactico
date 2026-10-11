@@ -1,0 +1,31 @@
+# Instrucciones persistentes del proyecto
+
+Estas instrucciones se mantienen hasta finalizar el proyecto completo. Antes de trabajar, leer `docs/PLAN_DE_SPRINTS.md`, `docs/REVISION_TECNICA_SPRINTS.md` y `docs/PROTOCOLO_DE_SPRINTS.md`. Conservar el alcance, el proyecto Sites y su audiencia.
+
+## Ejecución y aprobación de sprints
+
+- Trabajar por los bloques funcionales completos del plan. Las veinte soluciones iniciales y las doce de la auditoría final forman parte de sus operaciones y del control documental; su inclusión en el plan no significa que las funciones del portal ya estén implementadas.
+- El plan de trabajo y los HTML son documentos de control del cumplimiento. Ante un cambio de requisitos o reglas, actualizar el plan y sincronizar todos los HTML afectados; no limitarse a cambiar el mecanismo de actualización de la pantalla. Los HTML deben mostrar la versión del plan, sus reglas de control vigentes y todas las operaciones y criterios del sprint.
+- Antes de comenzar cada sprint, abrir para el usuario su archivo `docs/seguimiento/sprint-NN.html`. El índice es `docs/seguimiento/index.html`.
+- Mantener la tabla actualizada durante el trabajo, al iniciar, completar, verificar o encontrar un bloqueo en cada punto. No esperar al final del sprint para registrar los cambios.
+- Mantener abierta la vista local con actualización automática del HTML y de su diseño, además de los estados. Los cambios deben aparecer sin recarga manual, conservando la posición de lectura y los bloques abiertos por el usuario. No reescribir archivos periódicamente si no hay cambios reales.
+- Verde significa terminado y verificado, con evidencia. Naranja significa pendiente o en curso. Rojo significa no completado después de intentarlo, bloqueado o con una verificación fallida. Mostrar siempre texto además del color.
+- Los informes de sprints tienen fondo blanco. Colorear toda la fila según su estado; el indicador comparte exactamente el fondo de la fila, sin otro tono ni recuadro diferenciado. Conservar esta presentación tanto en el HTML guardado como en las actualizaciones en vivo. Esta presentación corresponde al seguimiento; la identidad del portal conserva su azul acordado.
+- Cada bloque tiene una sección con su propia tabla; sus criterios de aceptación van al final de esa misma tabla, después de las operaciones. Títulos de sección y encabezados de columna: fondo azul #003876 y letras blancas. Colapsar automáticamente una sección cuando todas sus operaciones y criterios estén terminados y verificados; conservar una flecha para abrirla o cerrarla con ratón o teclado. Respetar la reapertura manual durante las actualizaciones y volver a abrir la sección si reaparece trabajo pendiente. Colapsar una sección no aprueba el sprint.
+- Trabajar los bloques de cada sprint en orden. No comenzar el siguiente bloque hasta cumplir y verificar todas las operaciones y los criterios de aceptación del anterior, registrando evidencia. Una verificación fallida o un bloqueo mantiene abierto el bloque actual. No dar por cumplidos los criterios mientras sus operaciones sigan incompletas. Si se modifica una operación ya verificada, volver a comprobar los criterios afectados y de los bloques posteriores antes de continuar. El paso entre bloques requiere cumplimiento técnico; la aprobación humana se solicita al final del sprint.
+- Utilizar `node scripts/seguimiento-sprints.mjs` para registrar los estados, evidencias y versiones. `docs/seguimiento/estado.json` es la fuente de seguimiento. No marcar pruebas que no se ejecutaron ni convertir un bloqueo en una entrega terminada.
+- El progreso técnico y la aprobación del usuario son independientes. Preparar una versión revisable del portal y una guía de pasos con resultados esperados; registrar la URL y versión realmente probadas antes de pedir aceptación.
+- SOLO el usuario aprueba el cierre de cada sprint. Una IA no puede aprobarlo por sí misma, por ausencia de respuesta, por tiempo transcurrido ni porque todas las filas estén verdes. Registrar su aprobación explícita con la referencia al mensaje que la contiene.
+- No iniciar el siguiente sprint hasta que el usuario apruebe el anterior. Si solicita cambios, mantener abierto el sprint actual, actualizar los puntos afectados y repetir su revisión.
+- Si cambian requisitos de un sprint previo o contratos comunes, retirar la aceptación de las entregas afectadas y de las posteriores, conservando su historial y volviendo a comprobar criterios antes de continuar. Reabrir un sprint exige nueva verificación de sus criterios y de los posteriores. No seguir registrando trabajo en un sprint posterior con una aprobación previa que dejó de ser vigente.
+- El cierre debe indicar exactamente qué funcionalidades comprobar en el portal, cómo acceder a ellas y qué resultado esperar, con enlaces al portal y a la tabla actualizada. No presentar una vista previa antigua como la entrega nueva.
+- Los informes de seguimiento son herramientas del proyecto, fuera de la interfaz del portal. Mantener el mapa y sus flujos sin tablas administrativas, títulos redundantes ni mensajes decorativos.
+- La petición de establecer este protocolo no inicia por sí sola la implementación del sprint 1. Conservar todos los puntos de desarrollo pendientes hasta su ejecución y comprobación reales.
+
+## Windows PowerShell Command Safety
+
+- Do not use `Start-Process` to run PowerShell cmdlets such as `Start-Sleep`, `Set-Location`, `Copy-Item`, or command strings that contain semicolons, pipelines, or multiple statements.
+- When launching a background or separate-window process on Windows, run a real executable or a `.ps1` script file with explicit arguments. Use `-FilePath` for the executable and `-ArgumentList` as an array.
+- If multiple PowerShell statements are needed for a launched process, write or use a `.ps1` launcher script, or use a correctly quoted `powershell.exe -EncodedCommand` invocation. Do not pass inline command text where Windows can interpret tokens as documents to open.
+- Run follow-up checks such as sleeps, port checks, and process checks in a separate shell command after the launch command.
+- For local URLs, use `Start-Process 'http://...'` only for URLs. For commands, use the PowerShell call operator `&` with a quoted executable path.

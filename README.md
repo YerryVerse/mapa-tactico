@@ -14,6 +14,10 @@ El sitio no calcula bajas reales. El mapa no consulta población, objetivos ni c
 
 `dist/` contiene todos los activos para publicar. Ejecutar `node preview.mjs` y abrir `http://127.0.0.1:4173`. No se requieren instalación de dependencias ni compilación. `node prepare-assets.mjs` vuelve a descargar las versiones fijadas de los activos cartográficos.
 
+## Desarrollo por sprints
+
+Leer AGENTS.md, `docs/PLAN_DE_SPRINTS.md` y `docs/PROTOCOLO_DE_SPRINTS.md`. El usuario aprueba cada cierre antes de comenzar el siguiente sprint. Los informes de avance están en `docs/seguimiento/index.html`, separados del portal. Ejecutar `node scripts/seguimiento-sprints.mjs serve` para abrir el seguimiento con actualización en vivo en `http://127.0.0.1:4174/`. Ejecutar `node scripts/seguimiento-sprints.mjs sync` después de cambiar el plan; no confundir sus puntos pendientes con funciones ya desarrolladas.
+
 ## Fuentes
 
 - Cartografía: Natural Earth (dominio público), empaquetada por world-atlas 2.0.2.
