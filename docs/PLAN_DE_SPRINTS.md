@@ -2,7 +2,7 @@
 
 Fecha: 10 de octubre de 2026. ATLAS es el nombre provisional. Este plan convierte los requisitos acordados en diez entregas funcionales para las IA que desarrollarán el portal. La prioridad es que el usuario pueda explorar el mundo y acceder a información útil sin que paneles, mensajes o decoración dificulten el mapa.
 
-Revisión técnica: versión 6 del plan, del 10 de octubre de 2026. Conserva las veinte soluciones iniciales e incorpora doce hallazgos de la auditoría final: orden de aceptación, integración del motor cartográfico, infraestructura y formatos geográficos, contratos, pruebas y consistencia del seguimiento. Los diez HTML reflejan operaciones, criterios y reglas vigentes; documentar una solución no acredita su implementación. El detalle de los hallazgos está en [Revisión técnica de los sprints](REVISION_TECNICA_SPRINTS.md); la regla persistente de ejecución está en [Seguimiento y aprobación de los sprints](PROTOCOLO_DE_SPRINTS.md) y en AGENTS.md.
+Revisión técnica: versión 7 del plan, del 10 de octubre de 2026. Conserva las veinte soluciones iniciales e incorpora doce hallazgos de la auditoría final: orden de aceptación, integración del motor cartográfico, infraestructura y formatos geográficos, contratos, pruebas y consistencia del seguimiento. Los diez HTML reflejan operaciones, criterios y reglas vigentes; documentar una solución no acredita su implementación. El detalle de los hallazgos está en [Revisión técnica de los sprints](REVISION_TECNICA_SPRINTS.md); la regla persistente de ejecución está en [Seguimiento y aprobación de los sprints](PROTOCOLO_DE_SPRINTS.md) y en AGENTS.md.
 
 Este documento autoriza la planificación. La implementación y la publicación de estas mejoras no se han iniciado.
 
@@ -159,7 +159,7 @@ El usuario encuentra el globo como superficie principal, puede llegar al nivel d
 
 ### Bloque 1A Cartografía y acercamiento
 
-1. Auditar el globo actual y migrar al starter de servidor de Sites definido en la arquitectura. Conservar proyecto, audiencia y contenido utilizable; integrar mapa y búsqueda en una aplicación que compile y se publique con sus rutas de servidor. El prototipo usa un dibujo de países de baja resolución; aumentar su escala no incorporará calles.
+1. Auditar el globo actual y migrar al starter de servidor de Sites definido en la arquitectura. Conservar proyecto, audiencia y fuentes del contenido utilizable; integrar el mapa y rutas de servidor de referencia en una aplicación que compile y se publique. La integración completa del buscador y del recorrido de fichas se verifica respectivamente en 1B y 1C; no condiciona el cierre de 1A a bloques futuros. El prototipo usa un dibujo de países de baja resolución; aumentar su escala no incorporará calles.
 2. Validar MapLibre con vista de globo y navegación continua hasta cartografía local. Si necesita cambiar de proyección al acercar, conservar el centro, el punto seleccionado y la continuidad visual. Resolver esta transición y sus eventos en este bloque.
 3. Elegir y documentar proveedor, versión del motor, licencia, atribución, límites de solicitudes y configuración. Las claves privadas se mantienen en el servidor; las claves públicas restringidas se usan solamente si el proveedor permite exponerlas en el navegador.
 4. Configurar fondo principal azul #003876, elementos blancos y tonos auxiliares que mantengan legibles calles, fronteras y nombres. No añadir fotografías ni una opción de satélite.

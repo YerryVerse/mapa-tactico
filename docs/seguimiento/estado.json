@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "planVersion": 6,
+  "planVersion": 7,
   "controlRules": [
     "Correspondencia con el plan: cada HTML debe incluir todas las operaciones y criterios de su sprint, con identificadores estables, texto vigente y versión del plan. Ningún requisito se considera cumplido solo por estar documentado.",
     "Presentación del documento: fondo blanco; títulos de bloques y columnas en azul #003876 con letras blancas. Cada bloque tiene su propia tabla. Los estados colorean toda la fila; su indicador usa exactamente el mismo fondo, sin otro tono.",
@@ -13,16 +13,16 @@
     "Aprobación del usuario: solo el usuario puede aprobar el cierre de un sprint. Registrar su mensaje como evidencia y no comenzar el siguiente sprint antes de esa aprobación. Si pide cambios, mantener abierto el sprint y actualizar los puntos afectados.",
     "Vigencia y separación: conservar estas reglas durante todo el proyecto y mantener el documento de control fuera del portal. La pantalla local debe reflejar el HTML actualizado sin recarga manual; las consultas periódicas no deben generar escrituras si no hay cambios reales."
   ],
-  "planHash": "2559dcec4e7432beb354ed0d718681cdcf550e2b1b2c070a71c9227307f31646",
+  "planHash": "5991b19ce826139a0269c8964f6fcf55e24b0d107e38857160410ee540fe187c",
   "contextHash": "b8e7b9b938872c2d5f600a8c974c32c6e3013ecab105ac3000de2b7298bce941",
   "project": "ATLAS",
   "portal": "https://atlas-escenarios-hud.yerrybatista.chatgpt.site/",
-  "updatedAt": "2026-10-11T01:56:54.712Z",
+  "updatedAt": "2026-10-11T01:59:51.593Z",
   "sprints": [
     {
       "number": 1,
       "title": "Globo y experiencia del mapa",
-      "updatedAt": "2026-10-11T01:56:54.712Z",
+      "updatedAt": "2026-10-11T01:59:51.593Z",
       "phase": "en_curso",
       "approval": {
         "status": "pendiente",
@@ -178,17 +178,46 @@
           "action": "set",
           "pointId": "S01-1A-01",
           "reference": "Migración Vinext/TypeScript compila y APIhealth responde200; fuente ya sincronizada con repositorio Sites. Empaquetado encontró bashWSL/rutasWindows y tar interpretando T: como remoto. Reparando ejecución con GitBash del host y force-local, sin cambiar proyecto/audiencia. Publicación aún no comprobada."
+        },
+        {
+          "at": "2026-10-11T01:58:22.226Z",
+          "action": "set",
+          "pointId": "S01-1A-09",
+          "reference": "Sites publicó commitdfadef5c,despliegueappgdep_6acaed041e848191b0b1cb21d92b1324 con éxito. Carga fría892ms y glifos200CORS*. Auditoría de headers detectó que _headers no aplica a HTML dinámico: añadida CSP al Worker; se republicará y verificará, sin dar este punto por terminado aún."
+        },
+        {
+          "at": "2026-10-11T01:59:25.504Z",
+          "action": "aceptacion_invalidada",
+          "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
+        },
+        {
+          "at": "2026-10-11T01:59:25.504Z",
+          "action": "requisito_modificado",
+          "reference": "Plan actualizado; revisión y aprobación anteriores retiradas."
+        },
+        {
+          "at": "2026-10-11T01:59:51.188Z",
+          "action": "start",
+          "pointId": null,
+          "reference": null
+        },
+        {
+          "at": "2026-10-11T01:59:51.593Z",
+          "action": "set",
+          "pointId": "S01-1A-01",
+          "reference": "Planv7 corrigió dependencia circular: mapa+rutasreferencia en1A; búsqueda1B y fichas1C. Fuentes útiles preservadas en content/context.json. Publicación privada del mapa funciona; CSP de respuestasWorker añadida tras auditoría. Revalidación en curso."
         }
       ],
       "points": [
         {
           "id": "S01-1A-01",
+          "blockId": "1A",
           "group": "Bloque 1A Cartografía y acercamiento",
-          "text": "Auditar el globo actual y migrar al starter de servidor de Sites definido en la arquitectura. Conservar proyecto, audiencia y contenido utilizable; integrar mapa y búsqueda en una aplicación que compile y se publique con sus rutas de servidor. El prototipo usa un dibujo de países de baja resolución; aumentar su escala no incorporará calles.",
+          "text": "Auditar el globo actual y migrar al starter de servidor de Sites definido en la arquitectura. Conservar proyecto, audiencia y fuentes del contenido utilizable; integrar el mapa y rutas de servidor de referencia en una aplicación que compile y se publique. La integración completa del buscador y del recorrido de fichas se verifica respectivamente en 1B y 1C; no condiciona el cierre de 1A a bloques futuros. El prototipo usa un dibujo de países de baja resolución; aumentar su escala no incorporará calles.",
           "kind": "operacion",
           "status": "en_curso",
-          "evidence": "Migración Vinext/TypeScript compila y APIhealth responde200; fuente ya sincronizada con repositorio Sites. Empaquetado encontró bashWSL/rutasWindows y tar interpretando T: como remoto. Reparando ejecución con GitBash del host y force-local, sin cambiar proyecto/audiencia. Publicación aún no comprobada.",
-          "updatedAt": "2026-10-11T01:56:54.712Z",
+          "evidence": "Planv7 corrigió dependencia circular: mapa+rutasreferencia en1A; búsqueda1B y fichas1C. Fuentes útiles preservadas en content/context.json. Publicación privada del mapa funciona; CSP de respuestasWorker añadida tras auditoría. Revalidación en curso.",
+          "updatedAt": "2026-10-11T01:59:51.593Z",
           "history": [
             {
               "at": "2026-10-11T01:39:20.505Z",
@@ -199,9 +228,18 @@
               "at": "2026-10-11T01:56:54.712Z",
               "status": "en_curso",
               "evidence": "Migración Vinext/TypeScript compila y APIhealth responde200; fuente ya sincronizada con repositorio Sites. Empaquetado encontró bashWSL/rutasWindows y tar interpretando T: como remoto. Reparando ejecución con GitBash del host y force-local, sin cambiar proyecto/audiencia. Publicación aún no comprobada."
+            },
+            {
+              "at": "2026-10-11T01:59:25.504Z",
+              "status": "pendiente",
+              "evidence": "Cambió el requisito en el plan; necesita nueva verificación."
+            },
+            {
+              "at": "2026-10-11T01:59:51.593Z",
+              "status": "en_curso",
+              "evidence": "Planv7 corrigió dependencia circular: mapa+rutasreferencia en1A; búsqueda1B y fichas1C. Fuentes útiles preservadas en content/context.json. Publicación privada del mapa funciona; CSP de respuestasWorker añadida tras auditoría. Revalidación en curso."
             }
-          ],
-          "blockId": "1A"
+          ]
         },
         {
           "id": "S01-1A-02",
@@ -343,13 +381,18 @@
           "text": "Comprobar ESM, WebGL2, importación solo en cliente, carga del worker cartográfico, glifos, sprites, CORS y política de seguridad del contenido. Una prueba local no sustituye la prueba del build y del dominio Sites.",
           "kind": "operacion",
           "status": "en_curso",
-          "evidence": "ESM dinámico cliente y WebGL2 cargados. Worker estático original corrigió dev; cinco pruebas de estilo/worker y TypeScript pasan. Pendiente comprobar mismo build en Sites con CSP/CORS,TTF y rutasAPI.",
-          "updatedAt": "2026-10-11T01:53:56.531Z",
+          "evidence": "Sites publicó commitdfadef5c,despliegueappgdep_6acaed041e848191b0b1cb21d92b1324 con éxito. Carga fría892ms y glifos200CORS*. Auditoría de headers detectó que _headers no aplica a HTML dinámico: añadida CSP al Worker; se republicará y verificará, sin dar este punto por terminado aún.",
+          "updatedAt": "2026-10-11T01:58:22.226Z",
           "history": [
             {
               "at": "2026-10-11T01:53:56.531Z",
               "status": "en_curso",
               "evidence": "ESM dinámico cliente y WebGL2 cargados. Worker estático original corrigió dev; cinco pruebas de estilo/worker y TypeScript pasan. Pendiente comprobar mismo build en Sites con CSP/CORS,TTF y rutasAPI."
+            },
+            {
+              "at": "2026-10-11T01:58:22.226Z",
+              "status": "en_curso",
+              "evidence": "Sites publicó commitdfadef5c,despliegueappgdep_6acaed041e848191b0b1cb21d92b1324 con éxito. Carga fría892ms y glifos200CORS*. Auditoría de headers detectó que _headers no aplica a HTML dinámico: añadida CSP al Worker; se republicará y verificará, sin dar este punto por terminado aún."
             }
           ],
           "blockId": "1A"
@@ -915,7 +958,7 @@
     {
       "number": 2,
       "title": "Idiomas y nombres geográficos",
-      "updatedAt": "2026-10-10T18:59:30.230Z",
+      "updatedAt": "2026-10-11T01:59:25.504Z",
       "phase": "pendiente",
       "approval": {
         "status": "pendiente",
@@ -949,6 +992,11 @@
         },
         {
           "at": "2026-10-10T18:59:30.230Z",
+          "action": "aceptacion_invalidada",
+          "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
+        },
+        {
+          "at": "2026-10-11T01:59:25.504Z",
           "action": "aceptacion_invalidada",
           "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
         }
@@ -1355,7 +1403,7 @@
     {
       "number": 3,
       "title": "Población y consulta territorial",
-      "updatedAt": "2026-10-10T18:59:30.230Z",
+      "updatedAt": "2026-10-11T01:59:25.504Z",
       "phase": "pendiente",
       "approval": {
         "status": "pendiente",
@@ -1389,6 +1437,11 @@
         },
         {
           "at": "2026-10-10T18:59:30.230Z",
+          "action": "aceptacion_invalidada",
+          "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
+        },
+        {
+          "at": "2026-10-11T01:59:25.504Z",
           "action": "aceptacion_invalidada",
           "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
         }
@@ -1982,7 +2035,7 @@
     {
       "number": 4,
       "title": "Accidentes",
-      "updatedAt": "2026-10-10T18:59:30.230Z",
+      "updatedAt": "2026-10-11T01:59:25.504Z",
       "phase": "pendiente",
       "approval": {
         "status": "pendiente",
@@ -2016,6 +2069,11 @@
         },
         {
           "at": "2026-10-10T18:59:30.230Z",
+          "action": "aceptacion_invalidada",
+          "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
+        },
+        {
+          "at": "2026-10-11T01:59:25.504Z",
           "action": "aceptacion_invalidada",
           "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
         }
@@ -2268,7 +2326,7 @@
     {
       "number": 5,
       "title": "Fenómenos naturales",
-      "updatedAt": "2026-10-10T18:59:30.230Z",
+      "updatedAt": "2026-10-11T01:59:25.504Z",
       "phase": "pendiente",
       "approval": {
         "status": "pendiente",
@@ -2302,6 +2360,11 @@
         },
         {
           "at": "2026-10-10T18:59:30.230Z",
+          "action": "aceptacion_invalidada",
+          "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
+        },
+        {
+          "at": "2026-10-11T01:59:25.504Z",
           "action": "aceptacion_invalidada",
           "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
         }
@@ -2527,7 +2590,7 @@
     {
       "number": 6,
       "title": "Escenarios militares históricos",
-      "updatedAt": "2026-10-10T18:59:30.230Z",
+      "updatedAt": "2026-10-11T01:59:25.504Z",
       "phase": "pendiente",
       "approval": {
         "status": "pendiente",
@@ -2561,6 +2624,11 @@
         },
         {
           "at": "2026-10-10T18:59:30.230Z",
+          "action": "aceptacion_invalidada",
+          "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
+        },
+        {
+          "at": "2026-10-11T01:59:25.504Z",
           "action": "aceptacion_invalidada",
           "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
         }
@@ -2747,7 +2815,7 @@
     {
       "number": 7,
       "title": "Tierra y evidencia científica",
-      "updatedAt": "2026-10-10T18:59:30.230Z",
+      "updatedAt": "2026-10-11T01:59:25.504Z",
       "phase": "pendiente",
       "approval": {
         "status": "pendiente",
@@ -2781,6 +2849,11 @@
         },
         {
           "at": "2026-10-10T18:59:30.230Z",
+          "action": "aceptacion_invalidada",
+          "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
+        },
+        {
+          "at": "2026-10-11T01:59:25.504Z",
           "action": "aceptacion_invalidada",
           "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
         }
@@ -3132,7 +3205,7 @@
     {
       "number": 8,
       "title": "Nombre e identidad del portal",
-      "updatedAt": "2026-10-10T18:59:30.230Z",
+      "updatedAt": "2026-10-11T01:59:25.504Z",
       "phase": "pendiente",
       "approval": {
         "status": "pendiente",
@@ -3166,6 +3239,11 @@
         },
         {
           "at": "2026-10-10T18:59:30.230Z",
+          "action": "aceptacion_invalidada",
+          "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
+        },
+        {
+          "at": "2026-10-11T01:59:25.504Z",
           "action": "aceptacion_invalidada",
           "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
         }
@@ -3402,7 +3480,7 @@
     {
       "number": 9,
       "title": "Materiales y relación entre masa y energía",
-      "updatedAt": "2026-10-10T18:59:30.230Z",
+      "updatedAt": "2026-10-11T01:59:25.504Z",
       "phase": "pendiente",
       "approval": {
         "status": "pendiente",
@@ -3440,6 +3518,11 @@
         },
         {
           "at": "2026-10-10T18:59:30.230Z",
+          "action": "aceptacion_invalidada",
+          "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
+        },
+        {
+          "at": "2026-10-11T01:59:25.504Z",
           "action": "aceptacion_invalidada",
           "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
         }
@@ -4033,7 +4116,7 @@
     {
       "number": 10,
       "title": "Verificación integral y entrega",
-      "updatedAt": "2026-10-10T18:59:30.230Z",
+      "updatedAt": "2026-10-11T01:59:25.504Z",
       "phase": "pendiente",
       "approval": {
         "status": "pendiente",
@@ -4071,6 +4154,11 @@
         },
         {
           "at": "2026-10-10T18:59:30.230Z",
+          "action": "aceptacion_invalidada",
+          "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
+        },
+        {
+          "at": "2026-10-11T01:59:25.504Z",
           "action": "aceptacion_invalidada",
           "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
         }

@@ -127,3 +127,6 @@ No encontré otra dependencia hacia un bloque futuro en los criterios revisados 
 - Zod es una candidata a validación de runtime compartida; los tipos de compilación no reemplazan los esquemas y casos de respuesta exigidos en el plan. [Documentación Zod](https://zod.dev/).
 - Sites se contrastó con el starter y la referencia de almacenamiento instalados: Node >=22.13.0, integración sites(), bindings DB/BUCKET, Drizzle, migraciones y separación local/alojada. El starter no usa wrangler.jsonc. No se cambiaron manifiesto ni audiencia del sitio.
 
+## Corrección de ejecución del bloque1A — plan versión7
+
+Al ejecutar el sprint se detectó que la primera operación aún decía integrar completamente búsqueda, mientras1B era responsable de su aceptación. Se corrigió1A-01 para entregar mapa y rutas de referencia, conservar fuentes del contenido y dejar la integración de búsqueda/fichas en sus bloques correspondientes. Conserva el alcance del sprint; elimina una dependencia circular que habría impedido pasar de1A a1B. Los diez HTML fueron sincronizados con la versión7; la corrección no acredita desarrollo de1B/1C.

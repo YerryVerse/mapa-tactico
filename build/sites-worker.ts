@@ -23,6 +23,13 @@ export default {
         },
       };
     }
-    return runWithConnectorBinding(binding, () => handler.fetch(request, env, ctx));
+    return runWithConnectorBinding(binding, async () => {
+      const response=await handler.fetch(request, env, ctx);
+      const headers=new Headers(response.headers);
+      headers.set('X-Content-Type-Options','nosniff');
+      headers.set('Referrer-Policy','strict-origin-when-cross-origin');
+      headers.set('Content-Security-Policy',"default-src 'self'; script-src 'self' 'unsafe-inline'; worker-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self' https://tiles.openfreemap.org; object-src 'none'; base-uri 'self'; frame-ancestors 'self' https://chatgpt.com https://*.chatgpt.com;");
+      return new Response(response.body,{status:response.status,statusText:response.statusText,headers});
+    });
   },
 };
