@@ -1,1 +1,1 @@
-export function GET(){return Response.json({status:'ok',project:'atlas',release:'sprint01-1a',map:'MapLibre6.13.0',provider:'OpenFreeMap',edition:'20261004_113936_pt'},{headers:{'Cache-Control':'no-store'}});}
+export function GET(){return Response.json({status:'ok',project:'mapa-tactico',release:'sprint01-1a',map:'MapLibre6.13.0',provider:'OpenFreeMap',edition:'20261004_113936_pt'},{headers:{'Cache-Control':'no-store'}});}

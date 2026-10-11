@@ -1,4 +1,4 @@
-# Revisión técnica del plan de sprints de ATLAS
+# Revisión técnica del plan de sprints de Mapa Táctico
 
 Fecha: 10 de octubre de 2026. La sección de materiales y energía forma parte del sprint 9 y la entrega integral corresponde al sprint 10. La revisión de los diez sprints encontró veinte problemas o ambigüedades relevantes, corregidos en la versión 2 del [plan de sprints](PLAN_DE_SPRINTS.md).
 
@@ -7,6 +7,8 @@ Las correcciones se formularon durante la planificación, antes de iniciar la im
 La versión 6 del plan conserva las veinte soluciones iniciales e incorpora doce hallazgos de la auditoría final descrita al final de este documento. El [protocolo persistente de seguimiento y aprobación](PROTOCOLO_DE_SPRINTS.md) conserva los HTML como documentos de control con las reglas vigentes del plan. Cada bloque tiene criterios propios al final de su tabla y no se pasa al siguiente hasta cumplirlos. La implementación de estas soluciones se registra con evidencia durante su ejecución. Solo el usuario aprueba el cierre de cada sprint después de revisar la funcionalidad en la versión del portal indicada. [Índice de seguimiento](seguimiento/index.html).
 
 ## Hallazgos y correcciones
+
+Plan v17, 11oct2026: el usuario elige «Mapa Táctico». La entrega actual aplica el nombre; el sprint8 verifica su uso internacional sin reabrir la elección. El cambio no aprueba ni inicia otro sprint. Proyecto Sites y URL conservados.
 
 Plan v16,11oct2026: el usuario elige explícitamente «Verificar Chrome y navegador integrado» al resolver la matriz de entornos disponibles. Sustituye la matriz previa de FIN-08 y S01-1B-13. Se conservan las medidas de ventana, teclado y texto al200%; ninguna prueba de otro motor se atribuye a estos entornos.
 

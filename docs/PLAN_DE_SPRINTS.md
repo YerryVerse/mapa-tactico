@@ -1,8 +1,8 @@
-# Plan de sprints para el portal ATLAS
+# Plan de sprints para el portal Mapa Táctico
 
-Fecha: 10 de octubre de 2026. ATLAS es el nombre provisional. Este plan convierte los requisitos acordados en diez entregas funcionales para las IA que desarrollarán el portal. La prioridad es que el usuario pueda explorar el mundo y acceder a información útil sin que paneles, mensajes o decoración dificulten el mapa.
+Fecha: 10 de octubre de 2026. El usuario eligió explícitamente «Mapa Táctico» el 11 de octubre de 2026, sustituyendo el nombre provisional. Esta elección se aplica a la entrega actual sin aprobar ningún sprint ni iniciar el sprint 8. Este plan convierte los requisitos acordados en diez entregas funcionales para las IA que desarrollarán el portal. La prioridad es que el usuario pueda explorar el mundo y acceder a información útil sin que paneles, mensajes o decoración dificulten el mapa.
 
-Revisión técnica: versión 16 del plan, del 11 de octubre de 2026. Por decisión explícita del usuario, la matriz del sprint 1 comprende Chrome y el navegador integrado disponible, registrando sus versiones y tamaños de ventana; no se atribuyen pruebas a otros motores. Portal público en Sites, sin cuentas, registro, inicio de sesión, contraseñas ni claves aportadas por visitantes. Todas sus consultas funcionan anónimamente. Conserva las veinte soluciones iniciales y los doce hallazgos de la auditoría final, junto con la presentación del seguimiento acordada. El fondo exterior de la aplicación es negro #000000 con pequeñas estrellas discretas; el globo conserva sus azules y componentes blancos. La búsqueda geográfica se limita a países y ciudades; excluye calles, direcciones y puntos de interés tanto en el proveedor como en el servidor. Los diez HTML reflejan operaciones, criterios y reglas vigentes; documentar una solución no acredita su implementación. El detalle de los hallazgos está en [Revisión técnica de los sprints](REVISION_TECNICA_SPRINTS.md); la regla persistente de ejecución está en [Seguimiento y aprobación de los sprints](PROTOCOLO_DE_SPRINTS.md) y en AGENTS.md.
+Revisión técnica: versión 17 del plan, del 11 de octubre de 2026. Por decisión explícita del usuario, la matriz del sprint 1 comprende Chrome y el navegador integrado disponible, registrando sus versiones y tamaños de ventana; no se atribuyen pruebas a otros motores. Portal público en Sites, sin cuentas, registro, inicio de sesión, contraseñas ni claves aportadas por visitantes. Todas sus consultas funcionan anónimamente. Conserva las veinte soluciones iniciales y los doce hallazgos de la auditoría final, junto con la presentación del seguimiento acordada. El fondo exterior de la aplicación es negro #000000 con pequeñas estrellas discretas; el globo conserva sus azules y componentes blancos. La búsqueda geográfica se limita a países y ciudades; excluye calles, direcciones y puntos de interés tanto en el proveedor como en el servidor. Los diez HTML reflejan operaciones, criterios y reglas vigentes; documentar una solución no acredita su implementación. El detalle de los hallazgos está en [Revisión técnica de los sprints](REVISION_TECNICA_SPRINTS.md); la regla persistente de ejecución está en [Seguimiento y aprobación de los sprints](PROTOCOLO_DE_SPRINTS.md) y en AGENTS.md.
 
 El usuario autorizó iniciar el sprint 1 el 10 de octubre de 2026. Su ejecución y las publicaciones parciales se registran en el HTML y en estado.json; una publicación parcial no constituye una entrega aceptada ni el cierre del sprint. Se conserva la aprobación humana al final de cada sprint.
 
@@ -188,7 +188,7 @@ El usuario encuentra el globo como superficie principal, puede llegar al nivel d
 ### Bloque 1B Pantalla y controles
 
 1. Eliminar completamente el encabezado actual: barra, navegación, subtítulo, indicador de entorno, versión y línea divisoria. Retirar también mensajes promocionales y títulos decorativos superpuestos al mapa.
-2. Mantener solamente el icono y el nombre provisional flotando sobre el globo. La marca no reserva una franja de pantalla ni intercepta gestos fuera de su área real.
+2. Mantener solamente el icono y el nombre elegido «Mapa Táctico» flotando sobre el globo. Aplicar el nombre al título del navegador, proyecto Sites, metadatos y disclaimer. La marca no reserva una franja de pantalla ni intercepta gestos fuera de su área real.
 3. Hacer que el mapa ocupe todo el espacio visible, con adaptación al tamaño de la ventana del navegador. Al acercar, el globo puede extenderse más allá de los bordes de la pantalla.
 4. Disponer controles flotantes para acercar, alejar, recuperar la vista global, buscar un lugar y abrir escenarios. Agrupar idioma, información y disclaimer en un menú accesible; no reconstruir una barra superior.
 5. Incorporar búsqueda exclusivamente de países y ciudades. Las sugerencias indican su tipo y ubicación administrativa para distinguir nombres repetidos. No buscar ni ofrecer calles, direcciones, edificios, barrios, negocios u otros puntos de interés. El campo se identifica como «País o ciudad» y no ofrece búsqueda detallada alternativa. Mantener la búsqueda cerrada hasta que se solicite.
@@ -636,20 +636,20 @@ Instrucción para la IA: desarrollar un módulo de evidencia verificable. No con
 
 ### Objetivo y condición de entrada
 
-Definir y aplicar un nombre atractivo que contenga al menos una palabra con significado compartido en la mayor cantidad posible de idiomas del portal, con una identidad mínima. Priorizar una sola marca internacional; proponer variantes en español e inglés únicamente si aportan claridad. ATLAS permanece como identificador provisional hasta resolver la elección. Esta decisión no bloquea mapa, datos ni contenido.
+Verificar la identidad elegida «Mapa Táctico» en las veinte versiones lingüísticas y completar su aplicación con una identidad mínima. La elección explícita del usuario del 11 de octubre de 2026 sustituye la búsqueda de nombres candidatos. Conservar el nombre propio exacto en todos los idiomas; no introducir traducciones de marca, variantes ni direcciones nuevas sin otra decisión del usuario. La aplicación inicial en el sprint 1 no acredita por sí sola la revisión internacional ni el cierre del sprint 8.
 
 ### Bloque 8A Decisión de nombre
 
-1. Preparar al menos cinco opciones con pronunciación, significado, legibilidad en tamaño pequeño y correspondencia entre español e inglés. Usar DELTA, ATLAS, COSMOS, PLASMA y OMEGA como candidatas iniciales de la conversación, sin tratar ninguna como seleccionada.
+1. Registrar y comprobar la decisión explícita «Mapa Táctico» con referencia al mensaje del usuario del 11 de octubre de 2026. Documentar pronunciación y legibilidad del nombre elegido; no preparar alternativas que reabran una elección ya resuelta.
 2. Evaluar significado compartido, escritura, comprensión y asociaciones en los veinte idiomas. Documentar los idiomas efectivamente comprobados y distinguir significado técnico de reconocimiento por sus hablantes; no prometer cobertura lingüística universal. Evitar nombres que prometan precisión predictiva que el producto no tiene o que sugieran herramientas de ataque.
 3. Comprobar coincidencias evidentes en la web y disponibilidad de las direcciones necesarias. Esta revisión no constituye una autorización jurídica ni una búsqueda exhaustiva de marcas.
-4. Presentar una recomendación y alternativas con razones concretas. El usuario elige el nombre antes de aplicar un cambio definitivo de identidad o dirección.
-5. Resolver esta decisión dentro del bloque. Si falta la elección, el bloque queda abierto por esa decisión explícita; no se declara terminado ni se traslada la adopción a un sprint futuro.
-6. El bloque entra con criterios de nombre, no con un nombre ya elegido. Completar propuestas y presentar la elección concreta antes de iniciar 8B. Mientras se espera esa decisión, solo pueden revisarse funciones ya entregadas y documentación independiente; no iniciar 8B ni sprints posteriores. La selección pendiente no se toma como aprobación por transcurso de tiempo.
+4. Documentar la regla de marca: nombre propio exacto «Mapa Táctico» en todos los idiomas. Presentar hallazgos relevantes de legibilidad o asociaciones al usuario si requieren una decisión nueva; no cambiar el nombre por iniciativa de una IA.
+5. Completar la verificación de identidad dentro del bloque. La elección del nombre no implica que las verificaciones internacionales o los criterios del bloque estén terminados.
+6. El bloque entra con el nombre ya elegido, después de la aprobación del sprint 7. Verificar sus operaciones y criterios antes de iniciar 8B. La elección anticipada no concede aprobación al sprint 1, al sprint 8 ni a sus bloques.
 
 #### Criterios de aceptación del bloque 8A
 
-- Se presentaron al menos cinco propuestas con significado, pronunciación y legibilidad; se distingue significado técnico compartido de reconocimiento general por sus hablantes.
+- El nombre elegido, su pronunciación y legibilidad están registrados; se distingue significado técnico de reconocimiento general por sus hablantes.
 - Los idiomas efectivamente comprobados, escrituras, asociaciones y coincidencias web están registrados sin prometer significado universal ni disponibilidad jurídica no verificada.
 - El usuario eligió explícitamente el nombre y las variantes o regla internacional; su mensaje está registrado. Sin elección, el bloque permanece abierto y no se inicia 8B.
 - Las direcciones necesarias y el alcance de cualquier cambio de slug o dominio están comprobados antes de aplicar identidad; se conserva el proyecto y su audiencia.
@@ -676,7 +676,7 @@ Entregar decisión registrada, archivos de identidad y aplicación consistente.
 
 El cierre requiere todas las operaciones y los criterios de cada bloque terminados y verificados, una entrega revisable y la aprobación explícita del usuario.
 
-Instrucción para la IA: preparar la decisión en 8A y terminar su aplicación en 8B, dentro del mismo sprint. No elegir silenciosamente un nuevo nombre ni publicar variantes que el usuario no haya seleccionado.
+Instrucción para la IA: conservar la decisión «Mapa Táctico», verificarla en 8A y terminar su aplicación internacional en 8B. No elegir silenciosamente un nuevo nombre ni publicar variantes que el usuario no haya seleccionado.
 
 ## Sprint 9 Materiales y relación entre masa y energía
 

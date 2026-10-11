@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
 import './globals.css';
-export const metadata: Metadata = {title:'ATLAS — Escenarios',description:'Explora el mundo y consulta acontecimientos documentados.',icons:{icon:'/favicon.svg'}};
+import {SITE_NAME} from '../lib/identity';
+export const metadata: Metadata = {title:SITE_NAME,description:'Explora el mundo y consulta acontecimientos documentados.',icons:{icon:'/favicon.svg'}};
 export default function Layout({children}:{children:React.ReactNode}) {return <html lang="es"><body>{children}</body></html>;}

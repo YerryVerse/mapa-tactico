@@ -192,7 +192,7 @@ async function sync() {
   const controlRules = [...(controlSection ?? '').matchAll(/^\d+\. (.+)$/gm)].map(match => match[1].trim());
   const controlScope = /^Alcance web vigente:.*$/m.exec(controlSection ?? '')?.[0]?.trim() ?? '';
   if (!Number.isInteger(planVersion) || planVersion < 1 || controlRules.length !== 10) throw new Error('Faltan la versión del plan o sus diez reglas de control.');
-  const result = { schemaVersion: 1, planVersion, controlRules, controlScope, planHash: hash(plan), contextHash, project: 'ATLAS', portal, updatedAt: old?.updatedAt ?? stamp, sprints };
+  const result = { schemaVersion: 1, planVersion, controlRules, controlScope, planHash: hash(plan), contextHash, project: 'Mapa Táctico', portal, updatedAt: old?.updatedAt ?? stamp, sprints };
   if (!old || JSON.stringify({ ...result, updatedAt: null }) !== JSON.stringify({ ...old, updatedAt: null })) result.updatedAt = stamp;
   for (const sprint of result.sprints) {
     const previous = old?.sprints.find(s => s.number === sprint.number);

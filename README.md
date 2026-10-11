@@ -1,4 +1,4 @@
-# ATLAS — Escenarios
+# Mapa Táctico
 
 Portal de Sites en desarrollo por sprints. Identidad conservada: appgprj_6aca23222ed881919537ddd318f39d79. URL: https://atlas-escenarios-hud.yerrybatista.chatgpt.site/. La audiencia actual es pública, sin cuentas ni claves de visitantes. El runtime publicado funciona en Sites y no depende de este computador.
 
