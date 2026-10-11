@@ -15,3 +15,11 @@ Arrastre del mapa mantiene tarjeta, ocho resultados y punto. Clic fuera cierra y
 Regresión cartográfica local: veinte muestras de escritura dentro del mapa; SD zoom19, cinco metros35.311237px; referencia y centro -69.8845/18.4737 intactos al volver a zoom1.25. Medida143.707794fps y7.4ms hasta el primer render durante animación de3006.1ms. El código del motor, worker, estilo, fuentes, API y catálogos no cambió frente a Sites21. La evidencia anterior de latitudes, cobertura y recuperación gráfica se conserva como histórica; no se declara una repetición de esas pruebas.
 
 La versión y evidencia pública se añadirán después de la publicación. El Sprint2 conserva su desarrollo, pero su nueva aceptación queda pendiente de la aprobación vigente del Sprint1 según el protocolo.
+
+## Entrega publicada y comprobada
+
+Sites22, fuente a8d62202c3453d086d43079ee8f66f866835e69a, publicada el11/10/2026 a09:41:11 Santo Domingo. Versión appgprj_6aca23222ed881919537ddd318f39d79~appgver_c44429d7447c8191bd63e6ee4b78488b; despliegue appgdep_6acb91ecf41c8191b05bc56170d63a0e. Portal público: https://atlas-escenarios-hud.yerrybatista.chatgpt.site/.
+
+En producción: tres ciudades de Santiago elegidas manteniendo tarjeta, consulta y ocho resultados. X conserva Santiago de Cuba. Después, clic fuera conserva Santiago de Chile exacto -70.64827/-33.45694 y devuelve foco a Buscar lugar. La ficha Beirut mantiene la ubicación y firma context-20261011-2, con fuente ONU; cierre vuelve al mapa. Inicio local390x844 y1440x900: área visible completa, cero paneles y ningún overflow. Atrás desde búsqueda devuelve exploración. Overrides temporales retirados.
+
+La nueva revisión del Sprint1 está lista para aprobación humana. El desarrollo del Sprint2 se conserva, pero sus criterios siguen pendientes hasta contar con aceptación vigente del Sprint1 y reverificarlos. No se ha iniciado Sprint3. Para comprobar el ajuste, buscar Santiago, elegir dos o tres ciudades, verificar lista persistente y cerrar con X o clic sobre el mapa; debe conservarse la última ciudad seleccionada.
