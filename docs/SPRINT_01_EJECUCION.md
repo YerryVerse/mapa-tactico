@@ -2,7 +2,7 @@
 
 Actualización: 11 de octubre de 2026 UTC. Plan v15. El sprint está en curso, sin aprobación del usuario. Este documento registra una publicación parcial; no constituye una entrega completa.
 
-Portal: https://atlas-escenarios-hud.yerrybatista.chatgpt.site/ . Última publicación probada: commit 656854dd2b5bb427687b4a97f134a39551914a43, versión appgprj_6aca23222ed881919537ddd318f39d79~appgver_ab21841adddc819187038c0a4e101d91, estado succeeded a las 10:36:34 UTC. Mismo proyecto, ahora con audiencia pública autorizada por el usuario11oct2026 y confirmada por Sites revisión2. El código publicado no requiere el servidor local del PC. Los informes locales son exclusivamente de seguimiento.
+Portal: https://atlas-escenarios-hud.yerrybatista.chatgpt.site/ . Última publicación probada: commit 2d87aa9d94e400a3b90efd68d3f0d745c2b640b8, versión12 appgprj_6aca23222ed881919537ddd318f39d79~appgver_b2fe51a16d488191bd2b6697d4a512a3, estado succeeded a las 10:43:45 UTC. Mismo proyecto, ahora con audiencia pública autorizada por el usuario11oct2026 y confirmada por Sites revisión2. El código publicado no requiere el servidor local del PC. Los informes locales son exclusivamente de seguimiento.
 
 ## Bloque 1A
 
@@ -44,3 +44,9 @@ Por instrucción del usuario, los diez sprints cubren exclusivamente una web app
 Contrato compartido de búsqueda estricto: consulta2–160 caracteres, máximo8resultados, tipos país/ciudad, coordenadas finitas, respuestaJSON de máximo64KiB, tiempo8s, cancelación y descarte de respuestas antiguas.13/13 pruebas pasan, TypeScript y build oficial pasan. Publicación ab21841adddc819187038c0a4e101d91 comprobada: etiqueta País o ciudad y error503 real sin resultados inventados. Ventana320×568 sin desbordamiento y Escape restaura foco. No se probó una consulta real a un proveedor ni se afirma que estén terminados el adaptador, la cuota global o la caché.
 
 Bloque1A revalidado por revisión de evidencias, igualdad de sus archivos cartográficos, build, pruebas y carga publicada. La modificación documental no cambia motor, fuentes ni geometría; las métricas anteriores se conservan identificadas como mediciones anteriores. Bloque1B abierto: decisión de proveedor pendiente y Firefox sin verificación. Bloque1C no iniciado. Ningún sprint aprobado.
+
+## Audiencia pública — Plan v15
+
+El usuario autorizó explícitamente acceso público sin cuentas, registro, inicio de sesión, contraseñas ni claves del visitante. Sites confirmó access_mode public revisión2. La versión12 se publicó mediante save_site_version y deploy_site_version, sin usar publicación privada. No hay guardas de identidad invocadas por páginas o API; la vista local usa mockAuth false. Se conserva la integración técnica del starter y no se crea autenticación del portal.
+
+Verificación anónima de la versión12 sin cookies ni cabeceras de identidad o autorización y sin seguir redirecciones: /, /contexto, /informacion, /disclaimer y /api/health200; /api/search?q=Madrid503 JSON por proveedor pendiente; /api/search?q=x400 JSON por consulta inválida. No hay redirección a iniciar sesión. Build oficial y pruebas del seguimiento pasan. Diez HTML sincronizados con plan v15 y regla de acceso público. Bloque1A revalidado;1B sigue abierto por proveedor y Firefox,1C pendiente, sin aprobación de sprint.

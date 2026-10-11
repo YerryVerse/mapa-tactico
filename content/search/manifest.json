@@ -1,0 +1,32 @@
+{
+  "version": "geonames-20261011",
+  "cities": 161060,
+  "rejected": 10128,
+  "countries": 234,
+  "shards": 256,
+  "bytes": 56861634,
+  "maxShardBytes": 1820823,
+  "allowedFeatures": [
+    "PPL",
+    "PPLA",
+    "PPLA2",
+    "PPLA3",
+    "PPLA4",
+    "PPLA5",
+    "PPLC",
+    "PPLCD",
+    "PPLG"
+  ],
+  "sourceHashes": {
+    "cities1000.txt": "3ded15dca7e77cf0fdd7534cce63619fdb09b188af89823ce6de29875feb5bce",
+    "admin1CodesASCII.txt": "1da92a6323a5fec3176f3f743bf4cf4040fd56a876da55e46fbca23c863aa60a",
+    "countryInfo.txt": "c5997ea659df5bcf42509eb937064d172b2a998bb873608603e8421d714a9974",
+    "countries.geojson": "2f26ad9dd03c543d1aec3cd593c288367fd27a0ccd68db8a31182a95ad361196"
+  },
+  "naturalEarthCommit": "ca96624a56bd078437bca8184e78163e5039ad19",
+  "licenses": {
+    "GeoNames": "CC BY 4.0",
+    "NaturalEarth": "Public domain"
+  },
+  "generatedAt": "2026-10-11T10:59:16.839Z"
+}

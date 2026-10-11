@@ -16,6 +16,7 @@ const managedLinux = readExecutionProfile() === "managed-linux";
 
 const localBindingConfig = {
   main: "./build/sites-worker.ts",
+  assets: { binding: "ASSETS" },
   compatibility_flags: ["nodejs_compat"],
   d1_databases: d1
     ? [
