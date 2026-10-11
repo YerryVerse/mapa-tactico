@@ -17,12 +17,12 @@
   "contextHash": "b8e7b9b938872c2d5f600a8c974c32c6e3013ecab105ac3000de2b7298bce941",
   "project": "ATLAS",
   "portal": "https://atlas-escenarios-hud.yerrybatista.chatgpt.site/",
-  "updatedAt": "2026-10-11T01:53:56.531Z",
+  "updatedAt": "2026-10-11T01:56:54.712Z",
   "sprints": [
     {
       "number": 1,
       "title": "Globo y experiencia del mapa",
-      "updatedAt": "2026-10-11T01:53:56.531Z",
+      "updatedAt": "2026-10-11T01:56:54.712Z",
       "phase": "en_curso",
       "approval": {
         "status": "pendiente",
@@ -172,6 +172,12 @@
           "action": "set",
           "pointId": "S01-1A-09",
           "reference": "ESM dinámico cliente y WebGL2 cargados. Worker estático original corrigió dev; cinco pruebas de estilo/worker y TypeScript pasan. Pendiente comprobar mismo build en Sites con CSP/CORS,TTF y rutasAPI."
+        },
+        {
+          "at": "2026-10-11T01:56:54.712Z",
+          "action": "set",
+          "pointId": "S01-1A-01",
+          "reference": "Migración Vinext/TypeScript compila y APIhealth responde200; fuente ya sincronizada con repositorio Sites. Empaquetado encontró bashWSL/rutasWindows y tar interpretando T: como remoto. Reparando ejecución con GitBash del host y force-local, sin cambiar proyecto/audiencia. Publicación aún no comprobada."
         }
       ],
       "points": [
@@ -181,13 +187,18 @@
           "text": "Auditar el globo actual y migrar al starter de servidor de Sites definido en la arquitectura. Conservar proyecto, audiencia y contenido utilizable; integrar mapa y búsqueda en una aplicación que compile y se publique con sus rutas de servidor. El prototipo usa un dibujo de países de baja resolución; aumentar su escala no incorporará calles.",
           "kind": "operacion",
           "status": "en_curso",
-          "evidence": "Inicio autorizado por el usuario. Fuente estática D3 auditada; proyecto Sites y audiencia custom del propietario comprobados. Preparando apertura de la fuente y migración.",
-          "updatedAt": "2026-10-11T01:39:20.505Z",
+          "evidence": "Migración Vinext/TypeScript compila y APIhealth responde200; fuente ya sincronizada con repositorio Sites. Empaquetado encontró bashWSL/rutasWindows y tar interpretando T: como remoto. Reparando ejecución con GitBash del host y force-local, sin cambiar proyecto/audiencia. Publicación aún no comprobada.",
+          "updatedAt": "2026-10-11T01:56:54.712Z",
           "history": [
             {
               "at": "2026-10-11T01:39:20.505Z",
               "status": "en_curso",
               "evidence": "Inicio autorizado por el usuario. Fuente estática D3 auditada; proyecto Sites y audiencia custom del propietario comprobados. Preparando apertura de la fuente y migración."
+            },
+            {
+              "at": "2026-10-11T01:56:54.712Z",
+              "status": "en_curso",
+              "evidence": "Migración Vinext/TypeScript compila y APIhealth responde200; fuente ya sincronizada con repositorio Sites. Empaquetado encontró bashWSL/rutasWindows y tar interpretando T: como remoto. Reparando ejecución con GitBash del host y force-local, sin cambiar proyecto/audiencia. Publicación aún no comprobada."
             }
           ],
           "blockId": "1A"
