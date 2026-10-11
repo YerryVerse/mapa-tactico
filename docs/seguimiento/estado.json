@@ -17,12 +17,12 @@
   "contextHash": "b8e7b9b938872c2d5f600a8c974c32c6e3013ecab105ac3000de2b7298bce941",
   "project": "ATLAS",
   "portal": "https://atlas-escenarios-hud.yerrybatista.chatgpt.site/",
-  "updatedAt": "2026-10-11T01:59:51.593Z",
+  "updatedAt": "2026-10-11T02:03:50.082Z",
   "sprints": [
     {
       "number": 1,
       "title": "Globo y experiencia del mapa",
-      "updatedAt": "2026-10-11T01:59:51.593Z",
+      "updatedAt": "2026-10-11T02:03:50.082Z",
       "phase": "en_curso",
       "approval": {
         "status": "pendiente",
@@ -206,6 +206,24 @@
           "action": "set",
           "pointId": "S01-1A-01",
           "reference": "Planv7 corrigió dependencia circular: mapa+rutasreferencia en1A; búsqueda1B y fichas1C. Fuentes útiles preservadas en content/context.json. Publicación privada del mapa funciona; CSP de respuestasWorker añadida tras auditoría. Revalidación en curso."
+        },
+        {
+          "at": "2026-10-11T02:02:40.887Z",
+          "action": "set",
+          "pointId": "S01-1A-02",
+          "reference": "Prueba publicada detectó que al regresar desdezoom19 a globo1.25 renderWorldCopies=false restringía centro a0 y zoom1.322 en viewport1280. Es un fallo real de continuidad; se cambia a la opción compatible con globo para conservar centro y se repetirá antes de cerrar1A."
+        },
+        {
+          "at": "2026-10-11T02:02:41.267Z",
+          "action": "set",
+          "pointId": "S01-1A-12",
+          "reference": "Veinte muestras del catálogo real renderizadas dentro del motor en Sites con CSP; comparadas visualmente con DOM. Árabe,urdu/shahmukhi,devanagari,bengalí,telugu,CJK ylatín/cirílico visibles,sin cuadradosfaltantes. Evidencia T:/tmp/atlas-escrituras-sites.png. Fuentes fijadas OFL; revisión lingüística de traducciones corresponde2B."
+        },
+        {
+          "at": "2026-10-11T02:03:50.082Z",
+          "action": "set",
+          "pointId": "S01-1A-02",
+          "reference": "renderWorldCopies=true corrigió restricción Mercator durante transición: retorno local a global ahora[-30,20],zoom1.25 exactos en1280x720. Añadida comprobación técnica con puntoGeoJSON de referencia y cambios de zoom sin cambiar centro; se repetirá en Sites."
         }
       ],
       "points": [
@@ -247,13 +265,23 @@
           "text": "Validar MapLibre con vista de globo y navegación continua hasta cartografía local. Si necesita cambiar de proyección al acercar, conservar el centro, el punto seleccionado y la continuidad visual. Resolver esta transición y sus eventos en este bloque.",
           "kind": "operacion",
           "status": "en_curso",
-          "evidence": "Motor cliente implementado con importación ESM dinámica, proyección globo, cámara continua y zoom22. Estilo propio y fuente vectorial fijada; falta compilar y comprobar navegación en navegador.",
-          "updatedAt": "2026-10-11T01:43:16.095Z",
+          "evidence": "renderWorldCopies=true corrigió restricción Mercator durante transición: retorno local a global ahora[-30,20],zoom1.25 exactos en1280x720. Añadida comprobación técnica con puntoGeoJSON de referencia y cambios de zoom sin cambiar centro; se repetirá en Sites.",
+          "updatedAt": "2026-10-11T02:03:50.082Z",
           "history": [
             {
               "at": "2026-10-11T01:43:16.095Z",
               "status": "en_curso",
               "evidence": "Motor cliente implementado con importación ESM dinámica, proyección globo, cámara continua y zoom22. Estilo propio y fuente vectorial fijada; falta compilar y comprobar navegación en navegador."
+            },
+            {
+              "at": "2026-10-11T02:02:40.887Z",
+              "status": "no_completado",
+              "evidence": "Prueba publicada detectó que al regresar desdezoom19 a globo1.25 renderWorldCopies=false restringía centro a0 y zoom1.322 en viewport1280. Es un fallo real de continuidad; se cambia a la opción compatible con globo para conservar centro y se repetirá antes de cerrar1A."
+            },
+            {
+              "at": "2026-10-11T02:03:50.082Z",
+              "status": "en_curso",
+              "evidence": "renderWorldCopies=true corrigió restricción Mercator durante transición: retorno local a global ahora[-30,20],zoom1.25 exactos en1280x720. Añadida comprobación técnica con puntoGeoJSON de referencia y cambios de zoom sin cambiar centro; se repetirá en Sites."
             }
           ],
           "blockId": "1A"
@@ -457,14 +485,19 @@
           "group": "Bloque 1A Cartografía y acercamiento",
           "text": "Comprobar antes de cerrar la elección del motor y del proveedor que pueden representar muestras de las escrituras de los veinte idiomas, incluidos árabe, devanagari, bengalí, telugu y shahmukhi. Documentar si se usan glifos remotos o fuentes mediante font-faces y sus licencias, carga y compatibilidad. Esta prueba de capacidad no sustituye las traducciones y revisión de 2B/2C.",
           "kind": "operacion",
-          "status": "en_curso",
-          "evidence": "Investigación de glyphs PBF y cmap detectó telugu incompleto en OpenFreeMap. Añadidas cuatro fuentes Noto fijadas por commit con OFL1.1, 869104 bytes, en /fonts; font-faces por rango, incluido árabe de presentación. Preparada página técnica /qa/map con20 muestras dentro del motor y texto de comparación. Prueba visual pendiente.",
-          "updatedAt": "2026-10-11T01:45:21.031Z",
+          "status": "terminado",
+          "evidence": "Veinte muestras del catálogo real renderizadas dentro del motor en Sites con CSP; comparadas visualmente con DOM. Árabe,urdu/shahmukhi,devanagari,bengalí,telugu,CJK ylatín/cirílico visibles,sin cuadradosfaltantes. Evidencia T:/tmp/atlas-escrituras-sites.png. Fuentes fijadas OFL; revisión lingüística de traducciones corresponde2B.",
+          "updatedAt": "2026-10-11T02:02:41.267Z",
           "history": [
             {
               "at": "2026-10-11T01:45:21.031Z",
               "status": "en_curso",
               "evidence": "Investigación de glyphs PBF y cmap detectó telugu incompleto en OpenFreeMap. Añadidas cuatro fuentes Noto fijadas por commit con OFL1.1, 869104 bytes, en /fonts; font-faces por rango, incluido árabe de presentación. Preparada página técnica /qa/map con20 muestras dentro del motor y texto de comparación. Prueba visual pendiente."
+            },
+            {
+              "at": "2026-10-11T02:02:41.267Z",
+              "status": "terminado",
+              "evidence": "Veinte muestras del catálogo real renderizadas dentro del motor en Sites con CSP; comparadas visualmente con DOM. Árabe,urdu/shahmukhi,devanagari,bengalí,telugu,CJK ylatín/cirílico visibles,sin cuadradosfaltantes. Evidencia T:/tmp/atlas-escrituras-sites.png. Fuentes fijadas OFL; revisión lingüística de traducciones corresponde2B."
             }
           ]
         },

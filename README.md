@@ -1,28 +1,26 @@
-# ATLAS — Simulador de escenarios
+# ATLAS — Escenarios
 
-Sitio educativo de una sola página con globo interactivo, estética HUD azul `#003876` y componentes blancos. Publicación privada mediante Sites.
+Portal de Sites en desarrollo por sprints. Identidad conservada: appgprj_6aca23222ed881919537ddd318f39d79. URL: https://atlas-escenarios-hud.yerrybatista.chatgpt.site/. La audiencia actual sigue limitada al propietario. El runtime publicado funciona en Sites y no depende de este computador.
 
-## Uso
+## Estado real
 
-Arrastrar el globo para girarlo; usar la rueda o los botones para acercar. Pulsar el mapa para colocar un punto y seleccionar uno de cinco escenarios. El botón **Detonar escenario** muestra una animación simbólica y un ejercicio con comunidad ficticia. Las flechas giran el globo, `+`/`-` cambian el acercamiento y `Enter` coloca un punto en el centro.
+Sprint1 en ejecución, bloque1A: migración TypeScript/React/Vinext, globo MapLibre6.13.0, estilo propio azul, calles vectoriales OpenFreeMap y fuentes para las20escrituras. Los controles completos, buscador y fichas se aceptan en1B/1C. Consultar estado y evidencias en docs/seguimiento/estado.json; no inferir finalización de este texto.
 
-## Alcance del ejercicio
+El prototipo D3 y sus porcentajes ficticios no forman parte de la nueva aplicación. Sus referencias de contexto se conservan en content/context.json; el recorrido de consulta se desarrolla en1C. La población real por área y catálogos completos pertenecen a sprints posteriores. Mantener el alcance documentado en el plan.
 
-El sitio no calcula bajas reales. El mapa no consulta población, objetivos ni censos. Todos los escenarios comparten porcentajes arbitrarios de juego, independientes del tipo de evento y de las coordenadas: 8 %, 16 % o 24 % de unidades afectadas según preparación; 10 % de las unidades afectadas se muestran como fallecidas ficticias. No son tasas predictivas. Los anillos carecen de escala física y no modelan armas, explosiones, radiación, presión o distancias reales.
+## Ejecutar y comprobar
 
-## Archivos y ejecución
+Usar Node>=22.13.0 y el starter oficial de Sites. Dependencias fijadas y package-lock.json. Instalar con el helper oficial install-dependencies.mjs. Este host Windows necesita el entrypoint oficial de npm si su shim falla; ver docs/DECISION_CARTOGRAFICA.md. No modificar npm global ni la configuración del usuario.
 
-`dist/` contiene todos los activos para publicar. Ejecutar `node preview.mjs` y abrir `http://127.0.0.1:4173`. No se requieren instalación de dependencias ni compilación. `node prepare-assets.mjs` vuelve a descargar las versiones fijadas de los activos cartográficos.
+- Desarrollo: npm run dev, URL127.0.0.1:5173. Regenera el worker oficial del paquete en public/map-worker.
+- Verificación: npm run check y npm test. Las pruebas del seguimiento se ejecutan aparte con node tests/seguimiento-sprints.test.mjs.
+- Build: helper oficial build-site.mjs. En este host: node scripts/sites-build-windows.mjs lo invoca con reparación del shim solo en su proceso.
+- Vista compilada: npm start. Detener esa vista antes de reconstruir en Windows para liberar dist.
+- Verificación técnica cartográfica: /qa/map, sin enlace en interfaz principal ni indexación. Solo para evidencia, fuera del flujo de usuarios.
+- Seguimiento vivo: node scripts/seguimiento-sprints.mjs serve, URL127.0.0.1:4174/sprint-01.html.
 
-## Desarrollo por sprints
+## Publicar
 
-Leer AGENTS.md, `docs/PLAN_DE_SPRINTS.md` y `docs/PROTOCOLO_DE_SPRINTS.md`. El usuario aprueba cada cierre antes de comenzar el siguiente sprint. Los informes de avance están en `docs/seguimiento/index.html`, separados del portal. Ejecutar `node scripts/seguimiento-sprints.mjs serve` para abrir el seguimiento con actualización en vivo en `http://127.0.0.1:4174/`. Ejecutar `node scripts/seguimiento-sprints.mjs sync` después de cambiar el plan; no confundir sus puntos pendientes con funciones ya desarrolladas.
+Seguir la skill Sites y su site-workflow.mjs; conservar proyecto y audiencia. Las credenciales se pasan por stdin y nunca se guardan. El helper sincroniza fuente, empaqueta build y devuelve commit/archive verificados. En este Windows, el proceso debe seleccionar GitBash en T:/AI/Git/bin y TAR_OPTIONS=--force-local, evitando WSL y la interpretación del volumen T: como servidor remoto. No modificar PATH global. Publicar solo el estado fuente correspondiente al archivo generado.
 
-## Fuentes
-
-- Cartografía: Natural Earth (dominio público), empaquetada por world-atlas 2.0.2.
-- Visualización: D3 7.9.0 (ISC), topojson-client 3.1.0 (ISC). Las licencias se incluyen en `dist/assets/`.
-- Contexto Beirut: https://apnews.com/article/415b95004a8e914ce53400900fa7392a
-- Contexto humanitario nuclear: https://www.icrc.org/en/article/faq-nuclear-weapons
-
-Los activos de ejecución se sirven localmente desde el sitio. Los enlaces externos son exclusivamente lecturas de contexto.
+Leer AGENTS.md, docs/PLAN_DE_SPRINTS.md, docs/REVISION_TECNICA_SPRINTS.md y docs/PROTOCOLO_DE_SPRINTS.md antes de trabajar. Solo el usuario aprueba el sprint y autoriza pasar al siguiente.
