@@ -4,6 +4,8 @@ Estas instrucciones se mantienen hasta finalizar el proyecto completo. Antes de 
 
 ## Ejecución y aprobación de sprints
 
+- El portal tiene audiencia pública en Sites. Todas las funciones para visitantes funcionan sin cuentas, registro, inicio de sesión, contraseñas ni claves aportadas por visitantes. No introducir perfiles ni controles de acceso por identidad. Verificar páginas y API mediante solicitudes anónimas. Conservar el proyecto y su audiencia pública; la gestión técnica de Sites y los servicios no son funciones del visitante.
+
 - El producto es exclusivamente una web app responsiva. Verificar navegadores web, ventanas de320CSS a formatos amplios, ratón, teclado y texto200%. No exigir sistemas operativos adicionales, aplicaciones nativas ni equipos específicos en ningún sprint.
 
 - El buscador geográfico se limita a países y ciudades. Excluir calles, direcciones, edificios, barrios y puntos de interés mediante tipos permitidos del proveedor y validación en servidor, también en caché; no basta con ocultarlos en el cliente. Esta restricción no elimina los nombres de calles del mapa acordado.

@@ -81,7 +81,7 @@ const guides = {
     ['Consultar una ciudad, dibujar un área y explorar las tres categorías.', 'Datos, fuentes, fechas y capas conservan coherencia; no se muestran respuestas antiguas ni paneles vacíos permanentes.'],
     ['Abrir Tierra y Materiales, revisar identidad y disclaimer.', 'Las secciones mantienen los veinte idiomas, el alcance y los contenidos aceptados.'],
     ['Revisar versión, incidencias y guía de mantenimiento y recuperación.', 'Se identifica la entrega exacta, cómo actualizar fuentes y cómo recuperar código y datos de manera compatible.'],
-    ['Verificar el dominio publicado y su acceso.', 'La versión publicada conserva proyecto, audiencia y credenciales; no se ha abierto acceso anónimo sin autorización.']
+    ['Abrir el dominio publicado sin sesión iniciada y consultar sus API.', 'El acceso es público, sin cuentas, registro, inicio de sesión, contraseñas ni claves del visitante. Se conserva el mismo proyecto Sites.']
   ]
 };
 
@@ -166,7 +166,7 @@ async function sync() {
       phase: changed ? 'pendiente' : previous?.phase ?? 'pendiente',
       approval: changed ? { status: 'pendiente', at: null, reference: null } : previous?.approval ?? { status: 'pendiente', at: null, reference: null },
       delivery: changed ? null : previous?.delivery ?? null,
-      reviewSteps: previous?.reviewSteps ?? guides[source.number].map(([action, expected]) => ({ action, expected })),
+      reviewSteps: previous?.reviewSteps?.map(step => step.expected === 'La versión publicada conserva proyecto, audiencia y credenciales; no se ha abierto acceso anónimo sin autorización.' ? { action: guides[10].at(-1)[0], expected: guides[10].at(-1)[1] } : step) ?? guides[source.number].map(([action, expected]) => ({ action, expected })),
       history: previous?.history ?? [], points
     };
   });
@@ -190,8 +190,9 @@ async function sync() {
   const planVersion = Number(/Revisión técnica: versión (\d+) del plan/.exec(plan)?.[1]);
   const controlSection = /## Documento de control del cumplimiento\r?\n([\s\S]*?)(?=\r?\n## |$)/.exec(plan)?.[1];
   const controlRules = [...(controlSection ?? '').matchAll(/^\d+\. (.+)$/gm)].map(match => match[1].trim());
+  const controlScope = /^Alcance web vigente:.*$/m.exec(controlSection ?? '')?.[0]?.trim() ?? '';
   if (!Number.isInteger(planVersion) || planVersion < 1 || controlRules.length !== 10) throw new Error('Faltan la versión del plan o sus diez reglas de control.');
-  const result = { schemaVersion: 1, planVersion, controlRules, planHash: hash(plan), contextHash, project: 'ATLAS', portal, updatedAt: old?.updatedAt ?? stamp, sprints };
+  const result = { schemaVersion: 1, planVersion, controlRules, controlScope, planHash: hash(plan), contextHash, project: 'ATLAS', portal, updatedAt: old?.updatedAt ?? stamp, sprints };
   if (!old || JSON.stringify({ ...result, updatedAt: null }) !== JSON.stringify({ ...old, updatedAt: null })) result.updatedAt = stamp;
   for (const sprint of result.sprints) {
     const previous = old?.sprints.find(s => s.number === sprint.number);
@@ -243,7 +244,7 @@ function guideHtml(sprint) {
 }
 
 function controlHtml(state) {
-  return `<details class="control-rules" data-group="control-rules" data-complete="false"><summary><h2>Reglas de cumplimiento · Plan v${state.planVersion}</h2></summary><ol>${state.controlRules.map(rule => `<li>${escape(rule)}</li>`).join('')}</ol></details>`;
+  return `<details class="control-rules" data-group="control-rules" data-complete="false"><summary><h2>Reglas de cumplimiento · Plan v${state.planVersion}</h2></summary>${state.controlScope ? `<p>${escape(state.controlScope)}</p>` : ''}<ol>${state.controlRules.map(rule => `<li>${escape(rule)}</li>`).join('')}</ol></details>`;
 }
 
 function content(state, number) {

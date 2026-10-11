@@ -14,7 +14,7 @@ Bloque 1A verificado el 11 de octubre de 2026 UTC. El sprint continúa abierto; 
 - Equipo de referencia registrado ANTES de medir:Windows,Ryzen9 7900X,RTX3060,IAB Chromium. Red real actual sin throttling, versión y mediciones por registrar. Objetivos:≤5s mapa con caché fría,≤200ms controles,≥30fps interacción. No se ha aprobado reducirlos.
 - El shim npm de Windows invocado por los helpers de Sites resolvió erróneamente npm-cli.js dentro del checkout. La instalación se ejecutó con el entrypoint oficial C:/Program Files/nodejs/node_modules/npm/bin/npm-cli.js run install:ci después del fallo; se conserva install-ci del starter y lockfile. La compilación directa ejecuta el mismo scripts/run-framework.mjs build. No se alteraron npm global,HOME,proxy,registro ni cachés de host.
 
-La audiencia Sites actual es custom, exclusivamente el propietario, sin grupos ni visitantes. Se mantiene la identidad appgprj_6aca23222ed881919537ddd318f39d79; no hay servicios dependientes del PC en el código publicado.
+La audiencia inicial de estas pruebas fue custom, exclusivamente el propietario. El11oct2026 el usuario autorizó audiencia pública y Sites confirmó access_mode public, revisión2. La audiencia vigente es pública, con páginas y API de consulta accesibles sin identidad. Se mantiene la identidad appgprj_6aca23222ed881919537ddd318f39d79; no hay servicios dependientes del PC en el código publicado.
 
 ## Evidencia de la versión publicada
 
