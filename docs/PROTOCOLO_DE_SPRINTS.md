@@ -4,15 +4,18 @@ Instrucción persistente del usuario, establecida el 10 de octubre de 2026, vige
 
 ## Estados de los puntos
 
+Requisito vigente desde el 11 de octubre de 2026: el buscador geográfico solo ofrece países y ciudades, con exclusión de calles, direcciones, edificios, barrios y puntos de interés en proveedor, servidor y caché. Los nombres de calles visibles en el mapa conservan su requisito independiente. La restricción se desarrolla y comprueba en 1B, y se mantiene en traducciones y recorridos posteriores; documentarla no equivale a tener el proveedor integrado.
+
 | Color | Estado | Condición |
 | --- | --- | --- |
-| Verde | Terminado | Desarrollo y verificación correspondientes completos; evidencia registrada |
-| Naranja | Pendiente o en curso | Trabajo no iniciado o todavía en desarrollo, sin darlo por terminado |
-| Rojo | No completado | Intento incompleto, verificación fallida o bloqueo; explicar motivo y acción necesaria |
+| Verde y letras blancas | Terminado | Desarrollo y verificación correspondientes completos; evidencia registrada |
+| Naranja y letras negras | En curso | Trabajo en desarrollo, sin darlo por terminado |
+| Sin relleno y letras negras | Pendiente | Trabajo no iniciado |
+| Rojo y letras blancas | No completado | Intento incompleto, verificación fallida o bloqueo; explicar motivo y acción necesaria |
 
 Un punto no se vuelve verde solo por haber escrito código. Debe cumplir su operación completa y contar con evidencia del resultado. Los criterios de aceptación también tienen filas propias. Las pruebas técnicas, científicas y lingüísticas conservan su significado; una no sustituye a otra.
 
-Los informes tienen fondo blanco y texto oscuro. Cada fila completa recibe el color de su estado y conserva la etiqueta textual: verde, naranja o rojo. El indicador utiliza exactamente el fondo de su fila, sin otro tono ni recuadro diferenciado. La presentación se conserva al actualizar los estados en vivo y al generar los HTML. En el índice, una fila sigue naranja mientras el sprint esté pendiente, en curso o esperando aprobación; se vuelve roja si contiene puntos no completados y verde cuando el usuario aprueba su cierre.
+Los informes tienen fondo blanco. El portal mantiene una presentación independiente: fondo exterior negro #000000, globo azul #003876 y componentes blancos. Las filas «Terminado» tienen fondo verde y letras blancas; las filas «No completado», fondo rojo y letras blancas; las filas «Pendiente», sin relleno y letras negras. Las filas «En curso» conservan fondo naranja y texto negro. El indicador comparte exactamente el fondo y el color del texto de su fila, sin otro tono ni recuadro diferenciado. La presentación se conserva al actualizar los estados en vivo y al generar los HTML. El índice aplica la misma presentación: sprint en curso en naranja, aprobado en verde, no completado en rojo y pendiente sin relleno; el avance técnico nunca concede aprobación humana.
 
 Las soluciones REV-01 a REV-20 están incorporadas a las operaciones del plan. Su implementación se verifica en el sprint responsable. No colorear en verde una función del portal porque su solución ya figure en un documento.
 

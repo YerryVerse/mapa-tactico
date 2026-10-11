@@ -5,9 +5,9 @@
   color: #17212b;
   --line: #cbd5e1;
   --muted: #425466;
-  --row-green: #dcfce7;
   --row-orange: #ffedd5;
-  --row-red: #fee2e2;
+  --row-green: #166534;
+  --row-red: #b91c1c;
 }
 * { box-sizing: border-box; }
 body { margin: 0; background: #fff; }
@@ -23,9 +23,10 @@ h2 { font-size: 1.35rem; }
 p { line-height: 1.65; color: var(--muted); max-width: 90ch; }
 .summary { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 20px; }
 .status { display: inline-block; border-radius: 5px; padding: 5px 9px; font-size: .84rem; font-weight: 700; line-height: 1.35; white-space: nowrap; }
-.status.terminado { background: var(--row-green); color: #09391f; }
-.status.pendiente, .status.en_curso { background: var(--row-orange); color: #4f2b05; }
-.status.no_completado { background: var(--row-red); color: #510d18; }
+.status.terminado { background: transparent; color: #166534; }
+.status.pendiente { background: transparent; color: #000; }
+.status.en_curso { background: transparent; color: #9a3412; }
+.status.no_completado { background: transparent; color: #b91c1c; }
 .phase { border: 1px solid var(--line); border-radius: 5px; padding: 6px 10px; font-size: .9rem; }
 .approval { border-left: 3px solid #003876; background: #f8fafc; padding: 16px 20px; margin-bottom: 24px; }
 .approval p { margin: 8px 0 0; }
@@ -50,11 +51,13 @@ thead th:nth-child(4) { width: 24%; }
 tbody th[scope=row] { font-size: .78rem; font-weight: 600; }
 tbody td:last-child { white-space: pre-wrap; }
 tbody tr:last-child > * { border-bottom: 0; }
-tr.point-row.terminado { background: var(--row-green); }
-tr.point-row.pendiente, tr.point-row.en_curso { background: var(--row-orange); }
-tr.point-row.no_completado { background: var(--row-red); }
-tr.point-row > * { background: inherit; color: #17212b; }
+tr.point-row { background: transparent; color: #000; }
+tr.point-row.terminado { background: var(--row-green); color: #fff; }
+tr.point-row.no_completado { background: var(--row-red); color: #fff; }
+tr.point-row.en_curso { background: var(--row-orange); }
+tr.point-row > * { background: inherit; color: inherit; }
 tr.point-row .status { background: inherit; color: inherit; padding: 0; border-radius: 0; }
+tr.point-row a { color: inherit; }
 .sprint-section { border: 1px solid var(--line); border-radius: 10px; margin-bottom: 24px; overflow: hidden; }
 .sprint-section > summary { display: flex; gap: 16px; align-items: center; padding: 18px 16px; background: #003876; color: #fff; cursor: pointer; list-style: none; }
 .sprint-section > summary::-webkit-details-marker { display: none; }

@@ -8,6 +8,8 @@ La versión 6 del plan conserva las veinte soluciones iniciales e incorpora doce
 
 ## Hallazgos y correcciones
 
+Actualización de alcance · Plan v11, 11 de octubre de 2026: por instrucción del usuario, la búsqueda geográfica se limita a países y ciudades. El plan actualiza proveedor, operaciones S01-1B-05/12, criterios AC-04/08, localización S02-2C-08 y contrato geográfico común. Exige lista permitida de tipos en servidor y proveedor, incluida la caché, y pruebas que excluyan calles, direcciones, edificios, barrios, POI y tipos desconocidos. Los nombres de calles del mapa conservan su requisito. La búsqueda real sigue pendiente de proveedor e integración; este cambio documental no acredita su desarrollo.
+
 | ID | Prioridad | Problema del plan anterior | Corrección incorporada |
 | --- | --- | --- | --- |
 | REV-01 | Alta | La fuente actual es estática y el plan pedía API, secretos y consultas sin asignar su servidor | Arquitectura TypeScript, React y starter servidor de Sites; migración funcional en sprint 1 |

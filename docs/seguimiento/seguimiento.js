@@ -2,7 +2,7 @@
   'use strict';
   const report = document.querySelector('#report');
   const connection = document.querySelector('#connection');
-  const time = document.querySelector('#updated');
+  let time = document.querySelector('#updated');
   const number = Number(document.body.dataset.sprint);
   let state = JSON.parse(document.querySelector('#snapshot').textContent);
   let etag = null;
@@ -64,6 +64,11 @@
     const position = { x:scrollX, y:scrollY };
     const focusedGroup = document.activeElement?.closest('.sprint-section')?.dataset.group;
     report.replaceChildren(...nextReport.childNodes);
+    const nextFooter = nextDocument.querySelector('footer');
+    if (nextFooter?.querySelector('#updated')) {
+      document.querySelector('footer').replaceChildren(...nextFooter.childNodes);
+      time = document.querySelector('#updated');
+    }
     document.title = nextDocument.title;
     document.querySelector('#snapshot').textContent = snapshot.textContent;
     state = next;

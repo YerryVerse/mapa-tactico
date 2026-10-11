@@ -5,7 +5,7 @@ const source='world';
 const names=['coalesce',['get','name:es'],['get','name'],['get','name:latin']] as const;
 // Whitelist only land, boundaries, roads and geographical labels; no POI source is rendered.
 export function atlasStyle():StyleSpecification{return {
- version:8,name:'ATLAS azul',projection:{type:'globe'},'font-faces':mapFonts,sky:{'sky-color':'#003876','horizon-color':'#003876','fog-color':'#003876','atmosphere-blend':0},
+ version:8,name:'ATLAS azul',projection:{type:'globe'},'font-faces':mapFonts,sky:{'sky-color':'#000000','horizon-color':'#000000','fog-color':'#003876','atmosphere-blend':0},
  glyphs:'https://tiles.openfreemap.org/fonts/{fontstack}/{range}.pbf',
  sources:{world:{type:'vector',tiles:[`https://tiles.openfreemap.org/planet/${TILE_EDITION}/{z}/{x}/{y}.pbf`],minzoom:0,maxzoom:14,attribution:'<a href="https://openfreemap.org/">OpenFreeMap</a> · <a href="https://openmaptiles.org/">© OpenMapTiles</a> · <a href="https://www.openstreetmap.org/copyright">© OpenStreetMap</a>'}},
  layers:[
