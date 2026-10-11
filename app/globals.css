@@ -8,3 +8,6 @@ main,.portal{height:100dvh;width:100%;position:relative}.brand{position:absolute
 
 .selected-point{width:44px;height:44px}
 
+
+.maplibregl-ctrl-attrib{max-width:calc(100vw - 20px);white-space:normal;line-height:1.4;max-height:25dvh;overflow:auto}
+

@@ -2,9 +2,9 @@
 
 Fecha: 10 de octubre de 2026. ATLAS es el nombre provisional. Este plan convierte los requisitos acordados en diez entregas funcionales para las IA que desarrollarán el portal. La prioridad es que el usuario pueda explorar el mundo y acceder a información útil sin que paneles, mensajes o decoración dificulten el mapa.
 
-Revisión técnica: versión 7 del plan, del 10 de octubre de 2026. Conserva las veinte soluciones iniciales e incorpora doce hallazgos de la auditoría final: orden de aceptación, integración del motor cartográfico, infraestructura y formatos geográficos, contratos, pruebas y consistencia del seguimiento. Los diez HTML reflejan operaciones, criterios y reglas vigentes; documentar una solución no acredita su implementación. El detalle de los hallazgos está en [Revisión técnica de los sprints](REVISION_TECNICA_SPRINTS.md); la regla persistente de ejecución está en [Seguimiento y aprobación de los sprints](PROTOCOLO_DE_SPRINTS.md) y en AGENTS.md.
+Revisión técnica: versión 8 del plan, del 10 de octubre de 2026. Conserva las veinte soluciones iniciales e incorpora doce hallazgos de la auditoría final: orden de aceptación, integración del motor cartográfico, infraestructura y formatos geográficos, contratos, pruebas y consistencia del seguimiento. Los diez HTML reflejan operaciones, criterios y reglas vigentes; documentar una solución no acredita su implementación. El detalle de los hallazgos está en [Revisión técnica de los sprints](REVISION_TECNICA_SPRINTS.md); la regla persistente de ejecución está en [Seguimiento y aprobación de los sprints](PROTOCOLO_DE_SPRINTS.md) y en AGENTS.md.
 
-Este documento autoriza la planificación. La implementación y la publicación de estas mejoras no se han iniciado.
+El usuario autorizó iniciar el sprint 1 el 10 de octubre de 2026. Su ejecución y las publicaciones parciales se registran en el HTML y en estado.json; una publicación parcial no constituye una entrega aceptada ni el cierre del sprint. Se conserva la aprobación humana al final de cada sprint.
 
 ## Reglas de ejecución
 

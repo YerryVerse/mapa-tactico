@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "planVersion": 7,
+  "planVersion": 8,
   "controlRules": [
     "Correspondencia con el plan: cada HTML debe incluir todas las operaciones y criterios de su sprint, con identificadores estables, texto vigente y versión del plan. Ningún requisito se considera cumplido solo por estar documentado.",
     "Presentación del documento: fondo blanco; títulos de bloques y columnas en azul #003876 con letras blancas. Cada bloque tiene su propia tabla. Los estados colorean toda la fila; su indicador usa exactamente el mismo fondo, sin otro tono.",
@@ -13,16 +13,16 @@
     "Aprobación del usuario: solo el usuario puede aprobar el cierre de un sprint. Registrar su mensaje como evidencia y no comenzar el siguiente sprint antes de esa aprobación. Si pide cambios, mantener abierto el sprint y actualizar los puntos afectados.",
     "Vigencia y separación: conservar estas reglas durante todo el proyecto y mantener el documento de control fuera del portal. La pantalla local debe reflejar el HTML actualizado sin recarga manual; las consultas periódicas no deben generar escrituras si no hay cambios reales."
   ],
-  "planHash": "5991b19ce826139a0269c8964f6fcf55e24b0d107e38857160410ee540fe187c",
-  "contextHash": "b8e7b9b938872c2d5f600a8c974c32c6e3013ecab105ac3000de2b7298bce941",
+  "planHash": "72a7e7804ba07917c6d8053e20af482afebb8527b8190fe6fc42b45821dd3324",
+  "contextHash": "3931f9e7eb5d80b38c981e2143e4c72efbe2ee31c4c1846ea01d4580f9e316d0",
   "project": "ATLAS",
   "portal": "https://atlas-escenarios-hud.yerrybatista.chatgpt.site/",
-  "updatedAt": "2026-10-11T02:21:44.633Z",
+  "updatedAt": "2026-10-11T02:27:00.570Z",
   "sprints": [
     {
       "number": 1,
       "title": "Globo y experiencia del mapa",
-      "updatedAt": "2026-10-11T02:21:44.633Z",
+      "updatedAt": "2026-10-11T02:27:00.570Z",
       "phase": "en_curso",
       "approval": {
         "status": "pendiente",
@@ -374,6 +374,28 @@
           "action": "set",
           "pointId": "S01-1B-05",
           "reference": "Proveedor pendiente de elección del usuario; no se usa Photon demo ni Nominatim público sin decisión informada. El endpoint responde 503 recuperable y el mapa/edición de coordenadas siguen disponibles."
+        },
+        {
+          "at": "2026-10-11T02:25:36.486Z",
+          "action": "set",
+          "pointId": "S01-1B-04",
+          "reference": "Controles publicados funcionales; prueba de pulsaciones rápidas detectó pérdida parcial de incrementos durante la animación. Se acumula el zoom solicitado y se repite antes del cierre."
+        },
+        {
+          "at": "2026-10-11T02:27:00.455Z",
+          "action": "aceptacion_invalidada",
+          "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
+        },
+        {
+          "at": "2026-10-11T02:27:00.455Z",
+          "action": "requisito_modificado",
+          "reference": "Plan actualizado; revisión y aprobación anteriores retiradas."
+        },
+        {
+          "at": "2026-10-11T02:27:00.570Z",
+          "action": "start",
+          "pointId": null,
+          "reference": null
         }
       ],
       "points": [
@@ -692,9 +714,9 @@
           "group": "Bloque 1A Cartografía y acercamiento",
           "text": "La aplicación compila y su versión revisable carga el globo vectorial, las calles y las rutas de servidor; proveedor, versión fijada, licencia, cobertura y modalidad de credenciales están documentados sin incluir valores secretos.",
           "kind": "aceptacion",
-          "status": "terminado",
-          "evidence": "Criterio comprobado en Sites versión f579ac345a808191b46d66fd818aa6f1; operaciones 1A verificadas, evidencia de build, API, escala, continuidad, cobertura, rendimiento y veinte escrituras en docs/DECISION_CARTOGRAFICA.md.",
-          "updatedAt": "2026-10-11T02:16:28.948Z",
+          "status": "pendiente",
+          "evidence": "Reverificar: cambiaron los requisitos o contratos desde el sprint 1.",
+          "updatedAt": "2026-10-11T02:27:00.455Z",
           "history": [
             {
               "at": "2026-10-10T18:55:37.061Z",
@@ -705,6 +727,11 @@
               "at": "2026-10-11T02:16:28.948Z",
               "status": "terminado",
               "evidence": "Criterio comprobado en Sites versión f579ac345a808191b46d66fd818aa6f1; operaciones 1A verificadas, evidencia de build, API, escala, continuidad, cobertura, rendimiento y veinte escrituras en docs/DECISION_CARTOGRAFICA.md."
+            },
+            {
+              "at": "2026-10-11T02:27:00.455Z",
+              "status": "pendiente",
+              "evidence": "Reverificar: cambiaron los requisitos o contratos desde el sprint 1."
             }
           ]
         },
@@ -714,14 +741,19 @@
           "group": "Bloque 1A Cartografía y acercamiento",
           "text": "La transición globo a vista local conserva centro y ubicación; las pruebas reproducibles de escala, proyección, latitudes y rendimiento cumplen el bloque, sin sustituir detalle por ampliación de imagen.",
           "kind": "aceptacion",
-          "status": "terminado",
-          "evidence": "Criterio comprobado en Sites versión f579ac345a808191b46d66fd818aa6f1; operaciones 1A verificadas, evidencia de build, API, escala, continuidad, cobertura, rendimiento y veinte escrituras en docs/DECISION_CARTOGRAFICA.md.",
-          "updatedAt": "2026-10-11T02:16:29.036Z",
+          "status": "pendiente",
+          "evidence": "Reverificar: cambiaron los requisitos o contratos desde el sprint 1.",
+          "updatedAt": "2026-10-11T02:27:00.455Z",
           "history": [
             {
               "at": "2026-10-11T02:16:29.036Z",
               "status": "terminado",
               "evidence": "Criterio comprobado en Sites versión f579ac345a808191b46d66fd818aa6f1; operaciones 1A verificadas, evidencia de build, API, escala, continuidad, cobertura, rendimiento y veinte escrituras en docs/DECISION_CARTOGRAFICA.md."
+            },
+            {
+              "at": "2026-10-11T02:27:00.455Z",
+              "status": "pendiente",
+              "evidence": "Reverificar: cambiaron los requisitos o contratos desde el sprint 1."
             }
           ]
         },
@@ -731,9 +763,9 @@
           "group": "Bloque 1A Cartografía y acercamiento",
           "text": "El build publicado carga su motor, glifos y workers sin errores de origen o de inicialización en servidor. Las rutas de servidor de referencia responden; la integración y aceptación del buscador se completan en 1B, sin condicionar 1A a ese bloque futuro.",
           "kind": "aceptacion",
-          "status": "terminado",
-          "evidence": "Criterio comprobado en Sites versión f579ac345a808191b46d66fd818aa6f1; operaciones 1A verificadas, evidencia de build, API, escala, continuidad, cobertura, rendimiento y veinte escrituras en docs/DECISION_CARTOGRAFICA.md.",
-          "updatedAt": "2026-10-11T02:16:29.135Z",
+          "status": "pendiente",
+          "evidence": "Reverificar: cambiaron los requisitos o contratos desde el sprint 1.",
+          "updatedAt": "2026-10-11T02:27:00.455Z",
           "history": [
             {
               "at": "2026-10-10T18:55:37.061Z",
@@ -744,6 +776,11 @@
               "at": "2026-10-11T02:16:29.135Z",
               "status": "terminado",
               "evidence": "Criterio comprobado en Sites versión f579ac345a808191b46d66fd818aa6f1; operaciones 1A verificadas, evidencia de build, API, escala, continuidad, cobertura, rendimiento y veinte escrituras en docs/DECISION_CARTOGRAFICA.md."
+            },
+            {
+              "at": "2026-10-11T02:27:00.455Z",
+              "status": "pendiente",
+              "evidence": "Reverificar: cambiaron los requisitos o contratos desde el sprint 1."
             }
           ]
         },
@@ -753,14 +790,19 @@
           "group": "Bloque 1A Cartografía y acercamiento",
           "text": "El worker y CSS del motor se incluyen correctamente en el build de Vite/Sites; no hay dependencia de rutas del servidor de desarrollo ni de una importación en servidor.",
           "kind": "aceptacion",
-          "status": "terminado",
-          "evidence": "Criterio comprobado en Sites versión f579ac345a808191b46d66fd818aa6f1; operaciones 1A verificadas, evidencia de build, API, escala, continuidad, cobertura, rendimiento y veinte escrituras en docs/DECISION_CARTOGRAFICA.md.",
-          "updatedAt": "2026-10-11T02:16:29.225Z",
+          "status": "pendiente",
+          "evidence": "Reverificar: cambiaron los requisitos o contratos desde el sprint 1.",
+          "updatedAt": "2026-10-11T02:27:00.455Z",
           "history": [
             {
               "at": "2026-10-11T02:16:29.225Z",
               "status": "terminado",
               "evidence": "Criterio comprobado en Sites versión f579ac345a808191b46d66fd818aa6f1; operaciones 1A verificadas, evidencia de build, API, escala, continuidad, cobertura, rendimiento y veinte escrituras en docs/DECISION_CARTOGRAFICA.md."
+            },
+            {
+              "at": "2026-10-11T02:27:00.455Z",
+              "status": "pendiente",
+              "evidence": "Reverificar: cambiaron los requisitos o contratos desde el sprint 1."
             }
           ]
         },
@@ -770,14 +812,19 @@
           "group": "Bloque 1A Cartografía y acercamiento",
           "text": "La selección de motor, estilo y fuentes pasa muestras de composición de las escrituras requeridas; no se traslada al sprint 2 una incompatibilidad conocida que obligue a reemplazar el mapa.",
           "kind": "aceptacion",
-          "status": "terminado",
-          "evidence": "Criterio comprobado en Sites versión f579ac345a808191b46d66fd818aa6f1; operaciones 1A verificadas, evidencia de build, API, escala, continuidad, cobertura, rendimiento y veinte escrituras en docs/DECISION_CARTOGRAFICA.md.",
-          "updatedAt": "2026-10-11T02:16:29.309Z",
+          "status": "pendiente",
+          "evidence": "Reverificar: cambiaron los requisitos o contratos desde el sprint 1.",
+          "updatedAt": "2026-10-11T02:27:00.455Z",
           "history": [
             {
               "at": "2026-10-11T02:16:29.309Z",
               "status": "terminado",
               "evidence": "Criterio comprobado en Sites versión f579ac345a808191b46d66fd818aa6f1; operaciones 1A verificadas, evidencia de build, API, escala, continuidad, cobertura, rendimiento y veinte escrituras en docs/DECISION_CARTOGRAFICA.md."
+            },
+            {
+              "at": "2026-10-11T02:27:00.455Z",
+              "status": "pendiente",
+              "evidence": "Reverificar: cambiaron los requisitos o contratos desde el sprint 1."
             }
           ]
         },
@@ -838,13 +885,18 @@
           "text": "Disponer controles flotantes para acercar, alejar, recuperar la vista global, buscar un lugar y abrir escenarios. Agrupar idioma, información y disclaimer en un menú accesible; no reconstruir una barra superior.",
           "kind": "operacion",
           "status": "en_curso",
-          "evidence": "Implementación y comprobación en curso: controles flotantes, coordenadas, atribución, lectura accesible y contrato de búsqueda. Pendientes prueba publicada y entornos reales.",
-          "updatedAt": "2026-10-11T02:21:43.941Z",
+          "evidence": "Controles publicados funcionales; prueba de pulsaciones rápidas detectó pérdida parcial de incrementos durante la animación. Se acumula el zoom solicitado y se repite antes del cierre.",
+          "updatedAt": "2026-10-11T02:25:36.486Z",
           "history": [
             {
               "at": "2026-10-11T02:21:43.941Z",
               "status": "en_curso",
               "evidence": "Implementación y comprobación en curso: controles flotantes, coordenadas, atribución, lectura accesible y contrato de búsqueda. Pendientes prueba publicada y entornos reales."
+            },
+            {
+              "at": "2026-10-11T02:25:36.486Z",
+              "status": "en_curso",
+              "evidence": "Controles publicados funcionales; prueba de pulsaciones rápidas detectó pérdida parcial de incrementos durante la animación. Se acumula el zoom solicitado y se repite antes del cierre."
             }
           ],
           "blockId": "1B"
@@ -1282,7 +1334,7 @@
     {
       "number": 2,
       "title": "Idiomas y nombres geográficos",
-      "updatedAt": "2026-10-11T01:59:25.504Z",
+      "updatedAt": "2026-10-11T02:27:00.455Z",
       "phase": "pendiente",
       "approval": {
         "status": "pendiente",
@@ -1321,6 +1373,11 @@
         },
         {
           "at": "2026-10-11T01:59:25.504Z",
+          "action": "aceptacion_invalidada",
+          "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
+        },
+        {
+          "at": "2026-10-11T02:27:00.455Z",
           "action": "aceptacion_invalidada",
           "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
         }
@@ -1727,7 +1784,7 @@
     {
       "number": 3,
       "title": "Población y consulta territorial",
-      "updatedAt": "2026-10-11T01:59:25.504Z",
+      "updatedAt": "2026-10-11T02:27:00.455Z",
       "phase": "pendiente",
       "approval": {
         "status": "pendiente",
@@ -1766,6 +1823,11 @@
         },
         {
           "at": "2026-10-11T01:59:25.504Z",
+          "action": "aceptacion_invalidada",
+          "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
+        },
+        {
+          "at": "2026-10-11T02:27:00.455Z",
           "action": "aceptacion_invalidada",
           "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
         }
@@ -2359,7 +2421,7 @@
     {
       "number": 4,
       "title": "Accidentes",
-      "updatedAt": "2026-10-11T01:59:25.504Z",
+      "updatedAt": "2026-10-11T02:27:00.455Z",
       "phase": "pendiente",
       "approval": {
         "status": "pendiente",
@@ -2398,6 +2460,11 @@
         },
         {
           "at": "2026-10-11T01:59:25.504Z",
+          "action": "aceptacion_invalidada",
+          "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
+        },
+        {
+          "at": "2026-10-11T02:27:00.455Z",
           "action": "aceptacion_invalidada",
           "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
         }
@@ -2650,7 +2717,7 @@
     {
       "number": 5,
       "title": "Fenómenos naturales",
-      "updatedAt": "2026-10-11T01:59:25.504Z",
+      "updatedAt": "2026-10-11T02:27:00.455Z",
       "phase": "pendiente",
       "approval": {
         "status": "pendiente",
@@ -2689,6 +2756,11 @@
         },
         {
           "at": "2026-10-11T01:59:25.504Z",
+          "action": "aceptacion_invalidada",
+          "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
+        },
+        {
+          "at": "2026-10-11T02:27:00.455Z",
           "action": "aceptacion_invalidada",
           "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
         }
@@ -2914,7 +2986,7 @@
     {
       "number": 6,
       "title": "Escenarios militares históricos",
-      "updatedAt": "2026-10-11T01:59:25.504Z",
+      "updatedAt": "2026-10-11T02:27:00.455Z",
       "phase": "pendiente",
       "approval": {
         "status": "pendiente",
@@ -2953,6 +3025,11 @@
         },
         {
           "at": "2026-10-11T01:59:25.504Z",
+          "action": "aceptacion_invalidada",
+          "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
+        },
+        {
+          "at": "2026-10-11T02:27:00.455Z",
           "action": "aceptacion_invalidada",
           "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
         }
@@ -3139,7 +3216,7 @@
     {
       "number": 7,
       "title": "Tierra y evidencia científica",
-      "updatedAt": "2026-10-11T01:59:25.504Z",
+      "updatedAt": "2026-10-11T02:27:00.455Z",
       "phase": "pendiente",
       "approval": {
         "status": "pendiente",
@@ -3178,6 +3255,11 @@
         },
         {
           "at": "2026-10-11T01:59:25.504Z",
+          "action": "aceptacion_invalidada",
+          "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
+        },
+        {
+          "at": "2026-10-11T02:27:00.455Z",
           "action": "aceptacion_invalidada",
           "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
         }
@@ -3529,7 +3611,7 @@
     {
       "number": 8,
       "title": "Nombre e identidad del portal",
-      "updatedAt": "2026-10-11T01:59:25.504Z",
+      "updatedAt": "2026-10-11T02:27:00.455Z",
       "phase": "pendiente",
       "approval": {
         "status": "pendiente",
@@ -3568,6 +3650,11 @@
         },
         {
           "at": "2026-10-11T01:59:25.504Z",
+          "action": "aceptacion_invalidada",
+          "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
+        },
+        {
+          "at": "2026-10-11T02:27:00.455Z",
           "action": "aceptacion_invalidada",
           "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
         }
@@ -3804,7 +3891,7 @@
     {
       "number": 9,
       "title": "Materiales y relación entre masa y energía",
-      "updatedAt": "2026-10-11T01:59:25.504Z",
+      "updatedAt": "2026-10-11T02:27:00.455Z",
       "phase": "pendiente",
       "approval": {
         "status": "pendiente",
@@ -3847,6 +3934,11 @@
         },
         {
           "at": "2026-10-11T01:59:25.504Z",
+          "action": "aceptacion_invalidada",
+          "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
+        },
+        {
+          "at": "2026-10-11T02:27:00.455Z",
           "action": "aceptacion_invalidada",
           "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
         }
@@ -4440,7 +4532,7 @@
     {
       "number": 10,
       "title": "Verificación integral y entrega",
-      "updatedAt": "2026-10-11T01:59:25.504Z",
+      "updatedAt": "2026-10-11T02:27:00.455Z",
       "phase": "pendiente",
       "approval": {
         "status": "pendiente",
@@ -4483,6 +4575,11 @@
         },
         {
           "at": "2026-10-11T01:59:25.504Z",
+          "action": "aceptacion_invalidada",
+          "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
+        },
+        {
+          "at": "2026-10-11T02:27:00.455Z",
           "action": "aceptacion_invalidada",
           "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
         }
