@@ -18,12 +18,12 @@
   "contextHash": "5cfe19a69b0798ce4ba0ba33b879a70e42c4edbe53fd69dee3a253f01aa072a4",
   "project": "ATLAS",
   "portal": "https://atlas-escenarios-hud.yerrybatista.chatgpt.site/",
-  "updatedAt": "2026-10-11T11:15:46.807Z",
+  "updatedAt": "2026-10-11T11:23:36.094Z",
   "sprints": [
     {
       "number": 1,
       "title": "Globo y experiencia del mapa",
-      "updatedAt": "2026-10-11T11:15:46.807Z",
+      "updatedAt": "2026-10-11T11:23:36.094Z",
       "phase": "en_curso",
       "approval": {
         "status": "pendiente",
@@ -1070,6 +1070,18 @@
           "action": "set",
           "pointId": "S01-1B-13",
           "reference": "Chrome154 y navegador integrado155 probados:320x568, ventanas amplias, texto200%, búsqueda homónima, selección y Escape/foco. Sin desborde horizontal; panel desplazable. Ambas implementaciones Chromium; no se atribuyen otros motores."
+        },
+        {
+          "at": "2026-10-11T11:21:43.782Z",
+          "action": "set",
+          "pointId": "S01-1B-13",
+          "reference": "Revisión adicional detecta que una tarjeta inferior puede tapar controles verticales en ventanas estrechas. Se corrige con agrupación compacta de controles, pendiente de comprobar y publicar."
+        },
+        {
+          "at": "2026-10-11T11:23:36.094Z",
+          "action": "set",
+          "pointId": "S01-1B-13",
+          "reference": "Nueva distribución comprobada en Chrome:320x568CSS efectivos, texto200%, cero intersecciones tarjeta/controles, sin desborde horizontal, panel desplazable y Escape. Pendiente comprobar en publicación."
         }
       ],
       "points": [
@@ -2303,8 +2315,8 @@
           "text": "Fijar la matriz autorizada por el usuario: Chrome y navegador integrado, registrando versiones y dimensiones de la ventana. Probar tamaño de texto al 200 %, ancho de 320 píxeles CSS, paneles desplazables, teclado y controles accesibles sin superposición. Las comprobaciones registran navegador, versión, tamaño de ventana y resultados; no requieren plataformas adicionales. Ambos entornos pueden compartir motor; no afirmar compatibilidad con motores no verificados.",
           "kind": "operacion",
           "status": "en_curso",
-          "evidence": "Chrome154 y navegador integrado155 probados:320x568, ventanas amplias, texto200%, búsqueda homónima, selección y Escape/foco. Sin desborde horizontal; panel desplazable. Ambas implementaciones Chromium; no se atribuyen otros motores.",
-          "updatedAt": "2026-10-11T11:15:46.807Z",
+          "evidence": "Nueva distribución comprobada en Chrome:320x568CSS efectivos, texto200%, cero intersecciones tarjeta/controles, sin desborde horizontal, panel desplazable y Escape. Pendiente comprobar en publicación.",
+          "updatedAt": "2026-10-11T11:23:36.094Z",
           "history": [
             {
               "at": "2026-10-11T02:21:44.543Z",
@@ -2335,6 +2347,16 @@
               "at": "2026-10-11T11:15:46.807Z",
               "status": "en_curso",
               "evidence": "Chrome154 y navegador integrado155 probados:320x568, ventanas amplias, texto200%, búsqueda homónima, selección y Escape/foco. Sin desborde horizontal; panel desplazable. Ambas implementaciones Chromium; no se atribuyen otros motores."
+            },
+            {
+              "at": "2026-10-11T11:21:43.782Z",
+              "status": "en_curso",
+              "evidence": "Revisión adicional detecta que una tarjeta inferior puede tapar controles verticales en ventanas estrechas. Se corrige con agrupación compacta de controles, pendiente de comprobar y publicar."
+            },
+            {
+              "at": "2026-10-11T11:23:36.094Z",
+              "status": "en_curso",
+              "evidence": "Nueva distribución comprobada en Chrome:320x568CSS efectivos, texto200%, cero intersecciones tarjeta/controles, sin desborde horizontal, panel desplazable y Escape. Pendiente comprobar en publicación."
             }
           ]
         },
