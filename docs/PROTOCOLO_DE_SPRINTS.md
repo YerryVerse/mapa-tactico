@@ -4,6 +4,8 @@ Instrucción persistente del usuario, establecida el 10 de octubre de 2026, vige
 
 ## Estados de los puntos
 
+El producto es exclusivamente una web app responsiva. En los diez sprints, verificar navegadores web y tamaños de ventana; no exigir plataformas adicionales, aplicaciones nativas ni equipos específicos. Registrar navegador, versión, ancho y alto CSS, ratón, teclado y texto ampliado. La adaptación responsiva sigue siendo obligatoria.
+
 Requisito vigente desde el 11 de octubre de 2026: el buscador geográfico solo ofrece países y ciudades, con exclusión de calles, direcciones, edificios, barrios y puntos de interés en proveedor, servidor y caché. Los nombres de calles visibles en el mapa conservan su requisito independiente. La restricción se desarrolla y comprueba en 1B, y se mantiene en traducciones y recorridos posteriores; documentarla no equivale a tener el proveedor integrado.
 
 | Color | Estado | Condición |

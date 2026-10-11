@@ -4,6 +4,8 @@ Estas instrucciones se mantienen hasta finalizar el proyecto completo. Antes de 
 
 ## Ejecución y aprobación de sprints
 
+- El producto es exclusivamente una web app responsiva. Verificar navegadores web, ventanas de320CSS a formatos amplios, ratón, teclado y texto200%. No exigir sistemas operativos adicionales, aplicaciones nativas ni equipos específicos en ningún sprint.
+
 - El buscador geográfico se limita a países y ciudades. Excluir calles, direcciones, edificios, barrios y puntos de interés mediante tipos permitidos del proveedor y validación en servidor, también en caché; no basta con ocultarlos en el cliente. Esta restricción no elimina los nombres de calles del mapa acordado.
 - Trabajar por los bloques funcionales completos del plan. Las veinte soluciones iniciales y las doce de la auditoría final forman parte de sus operaciones y del control documental; su inclusión en el plan no significa que las funciones del portal ya estén implementadas.
 - El plan de trabajo y los HTML son documentos de control del cumplimiento. Ante un cambio de requisitos o reglas, actualizar el plan y sincronizar todos los HTML afectados; no limitarse a cambiar el mecanismo de actualización de la pantalla. Los HTML deben mostrar la versión del plan, sus reglas de control vigentes y todas las operaciones y criterios del sprint.

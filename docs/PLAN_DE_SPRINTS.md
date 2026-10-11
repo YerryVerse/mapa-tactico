@@ -2,11 +2,13 @@
 
 Fecha: 10 de octubre de 2026. ATLAS es el nombre provisional. Este plan convierte los requisitos acordados en diez entregas funcionales para las IA que desarrollarán el portal. La prioridad es que el usuario pueda explorar el mundo y acceder a información útil sin que paneles, mensajes o decoración dificulten el mapa.
 
-Revisión técnica: versión 13 del plan, del 11 de octubre de 2026. Conserva las veinte soluciones iniciales y los doce hallazgos de la auditoría final, junto con la presentación del seguimiento acordada. El fondo exterior de la aplicación es negro #000000 con pequeñas estrellas discretas; el globo conserva sus azules y componentes blancos. La búsqueda geográfica se limita a países y ciudades; excluye calles, direcciones y puntos de interés tanto en el proveedor como en el servidor. Los diez HTML reflejan operaciones, criterios y reglas vigentes; documentar una solución no acredita su implementación. El detalle de los hallazgos está en [Revisión técnica de los sprints](REVISION_TECNICA_SPRINTS.md); la regla persistente de ejecución está en [Seguimiento y aprobación de los sprints](PROTOCOLO_DE_SPRINTS.md) y en AGENTS.md.
+Revisión técnica: versión 14 del plan, del 11 de octubre de 2026. Conserva las veinte soluciones iniciales y los doce hallazgos de la auditoría final, junto con la presentación del seguimiento acordada. El fondo exterior de la aplicación es negro #000000 con pequeñas estrellas discretas; el globo conserva sus azules y componentes blancos. La búsqueda geográfica se limita a países y ciudades; excluye calles, direcciones y puntos de interés tanto en el proveedor como en el servidor. Los diez HTML reflejan operaciones, criterios y reglas vigentes; documentar una solución no acredita su implementación. El detalle de los hallazgos está en [Revisión técnica de los sprints](REVISION_TECNICA_SPRINTS.md); la regla persistente de ejecución está en [Seguimiento y aprobación de los sprints](PROTOCOLO_DE_SPRINTS.md) y en AGENTS.md.
 
 El usuario autorizó iniciar el sprint 1 el 10 de octubre de 2026. Su ejecución y las publicaciones parciales se registran en el HTML y en estado.json; una publicación parcial no constituye una entrega aceptada ni el cierre del sprint. Se conserva la aprobación humana al final de cada sprint.
 
 ## Reglas de ejecución
+
+El portal es exclusivamente una web app responsiva. Las verificaciones se realizan en navegadores web y distintos tamaños de ventana, sin requerir sistemas operativos adicionales, aplicaciones nativas ni equipos específicos. Esta regla se aplica a los diez sprints.
 
 1. Cada sprint entrega una función completa: interfaz, comportamiento, datos cuando correspondan, traducciones, errores y validación. No se cierra una tarea con botones sin función, datos de prueba presentados como definitivos o integraciones pendientes de otro sprint.
 2. Los sprints pueden utilizar funciones terminadas en entregas anteriores. Sus dependencias deben estar resueltas antes de comenzar; no se crean puntos cuyo cierre dependa de una entrega futura.
@@ -14,7 +16,7 @@ El usuario autorizó iniciar el sprint 1 el 10 de octubre de 2026. Su ejecución
 4. Antes de comenzar, leer el código, las instrucciones del repositorio y este plan. Las IA deben conservar el trabajo existente y no introducir funciones ajenas al alcance, como cuentas, pagos, una comunidad o un sistema de publicación de escenarios.
 5. Cada elemento visible debe responder a una acción, un dato, una unidad, una fuente o una decisión del usuario. Eliminar títulos repetidos, numeraciones decorativas, subtítulos genéricos, indicadores de versión y mensajes que narran acciones evidentes.
 6. Los estados de carga y los errores sí tienen utilidad. Mostrarlos solamente donde ocurre el problema, con una acción de recuperación cuando exista; no llenar la pantalla con mensajes permanentes.
-7. Las funciones nuevas deben ser utilizables con ratón, teclado y pantalla táctil. La accesibilidad, los textos y el manejo de errores se terminan en el sprint que incorpora la función.
+7. Las funciones nuevas deben ser utilizables con ratón y teclado. La accesibilidad, los textos y el manejo de errores se terminan en el sprint que incorpora la función.
 8. Desde el sprint 2, cada función nueva se entrega en los veinte idiomas. No trasladar sus traducciones a una fase posterior.
 9. Conservar el identificador del proyecto Sites y su audiencia al implementar. Los cambios de nombre no crean otro sitio ni cambian su acceso automáticamente.
 10. No fijar fechas o velocidad de desarrollo sin conocer la capacidad del equipo, los servicios contratados y los resultados de las decisiones técnicas. Los números indican orden, no semanas.
@@ -40,6 +42,8 @@ Para accidentes y fenómenos naturales, este plan entrega consulta de antecedent
 El propósito del portal y sus limitaciones extensas estarán en el disclaimer. La interfaz no repetirá avisos sobre simulación o uso educativo. Cada cifra conservará su significado mediante una etiqueta breve, por ejemplo «Población en el área», «Víctimas registradas» o «Estimación». Los resultados arbitrarios del prototipo se retiran en el sprint 1; la limpieza visual no se realiza ocultando su naturaleza. Los resultados nuevos utilizan fuentes y definiciones verificables.
 
 ## Documento de control del cumplimiento
+
+Alcance web vigente: comprobar adaptación a ventanas estrechas y amplias, ratón, teclado y texto ampliado. No exigir plataformas adicionales ni aplicaciones nativas en ningún sprint.
 
 El plan define lo que se debe desarrollar; el HTML de cada sprint permite vigilar que se cumple. Ambos deben reflejar las instrucciones del usuario. Actualizar el contenido del plan y regenerar los HTML cuando cambien requisitos o reglas; actualizar la tabla durante la ejecución cuando cambie el estado de un punto. La actualización automática de la pantalla facilita la consulta, pero no sustituye el registro de requisitos, evidencias ni aprobación. Estas reglas se incluyen en todos los HTML y permanecen vigentes hasta finalizar el proyecto.
 
@@ -185,10 +189,10 @@ El usuario encuentra el globo como superficie principal, puede llegar al nivel d
 
 1. Eliminar completamente el encabezado actual: barra, navegación, subtítulo, indicador de entorno, versión y línea divisoria. Retirar también mensajes promocionales y títulos decorativos superpuestos al mapa.
 2. Mantener solamente el icono y el nombre provisional flotando sobre el globo. La marca no reserva una franja de pantalla ni intercepta gestos fuera de su área real.
-3. Hacer que el mapa ocupe todo el espacio visible, con adaptación al navegador móvil y sus áreas seguras. Al acercar, el globo puede extenderse más allá de los bordes de la pantalla.
+3. Hacer que el mapa ocupe todo el espacio visible, con adaptación al tamaño de la ventana del navegador. Al acercar, el globo puede extenderse más allá de los bordes de la pantalla.
 4. Disponer controles flotantes para acercar, alejar, recuperar la vista global, buscar un lugar y abrir escenarios. Agrupar idioma, información y disclaimer en un menú accesible; no reconstruir una barra superior.
 5. Incorporar búsqueda exclusivamente de países y ciudades. Las sugerencias indican su tipo y ubicación administrativa para distinguir nombres repetidos. No buscar ni ofrecer calles, direcciones, edificios, barrios, negocios u otros puntos de interés. El campo se identifica como «País o ciudad» y no ofrece búsqueda detallada alternativa. Mantener la búsqueda cerrada hasta que se solicite.
-6. Permitir selección de ubicación con clic o toque y movimiento posterior del punto. Diferenciar arrastrar el mapa de seleccionar: soltar un arrastre no debe crear un punto.
+6. Permitir selección de ubicación con clic y movimiento posterior del punto. Diferenciar arrastrar el mapa de seleccionar: soltar un arrastre no debe crear un punto.
 7. Conservar controles por teclado y proporcionar una alternativa accesible al gesto de colocar un punto. No capturar teclas de navegación cuando el foco está en un campo de texto.
 8. Retirar rotación automática inicial, coordenadas permanentes y leyendas decorativas. Las coordenadas aparecen solamente al consultar o editar una ubicación; la escala aparece cuando ayuda a entender la distancia.
 9. Mantener la atribución cartográfica exigida por el proveedor en una posición discreta y legible. No ocultarla para cumplir el minimalismo.
@@ -196,11 +200,11 @@ El usuario encuentra el globo como superficie principal, puede llegar al nivel d
 11. Detectar WebGL2 no disponible o pérdida de contexto. Permitir reintento y conservar búsqueda y fichas accesibles; no sustituir el mapa por una pantalla vacía ni presentar una vista textual como un globo funcional.
 
 12. Completar el adaptador servidor del buscador con esquema validado, límites de longitud y resultados, tiempo máximo, cancelación y protección de cuota. Limitar la consulta del proveedor a países y ciudades y filtrar su respuesta mediante una lista permitida de tipos; rechazar calles, direcciones, edificios, barrios, POI y tipos desconocidos también al leer la caché. No deducir el tipo por el texto del nombre ni depender únicamente del cliente. Definir comportamiento ante 429 y fallos del proveedor, sin reintentos ilimitados. Cachear únicamente respuestas permitidas por licencia, idioma y audiencia; las restricciones deben seguir funcionando en la versión revisable.
-13. Fijar una matriz de navegadores y dispositivos reales para las comprobaciones: Chromium y Firefox en escritorio, Safari en iOS y Chrome en Android, registrando versiones. Probar tamaño de texto al 200 %, ancho de 320 píxeles CSS, áreas seguras, teclado y controles táctiles sin superposición. Una emulación no se registra como prueba ejecutada en un dispositivo real.
+13. Fijar una matriz de navegadores web para las comprobaciones: Chromium y Firefox, registrando versiones y dimensiones de la ventana. Probar tamaño de texto al 200 %, ancho de 320 píxeles CSS, paneles desplazables, teclado y controles accesibles sin superposición. Las comprobaciones registran navegador, versión, tamaño de ventana y resultados; no requieren plataformas adicionales.
 
 #### Criterios de aceptación del bloque 1B
 
-- En móvil y escritorio, nombre e icono flotan sin reservar una cabecera; controles de zoom, búsqueda, selección y regreso global funcionan con ratón, teclado y toque.
+- En ventanas estrechas y amplias, nombre e icono flotan sin reservar una cabecera; controles de zoom, búsqueda, selección y regreso global funcionan con ratón y teclado.
 - El usuario alcanza escala de 5 metros, ve nombres de calles y recupera la vista global sin recargar.
 - La marca flota y el globo puede llenar toda la pantalla al acercar.
 - Las búsquedas solo ofrecen países y ciudades identificados como tales. Consultas de calles, direcciones, edificios, barrios y POI no devuelven esos objetos; respuestas de tipo desconocido se descartan. No hay comercios ni sus etiquetas en las capas; las calles con nombre permanecen en el mapa.
@@ -208,15 +212,15 @@ El usuario encuentra el globo como superficie principal, puede llegar al nivel d
 - Con teclado se puede recorrer y cerrar controles sin quedar atrapado. El mapa puede seguir utilizándose si un servicio auxiliar falla.
 - Pasan las medidas de zoom y presupuesto del bloque 1A; la ausencia de GPU tiene recuperación y lectura alternativa.
 - El buscador integrado pasa búsqueda de país, ciudad ambigua, ausencia de resultados, respuesta fuera de orden, entrada inválida, cuota y recuperación en el dominio revisable. El servidor excluye calles, direcciones, barrios, edificios, POI y tipos desconocidos, incluso en respuestas mixtas y caché. Sus límites, mapeo de tipos del proveedor y política de caché están documentados.
-- La matriz de navegadores y dispositivos tiene evidencias realmente ejecutadas; cualquier falta de acceso a un entorno queda pendiente y no se convierte en una prueba aprobada. Cambiar un objetivo de rendimiento requiere aceptación explícita del usuario.
+- La matriz de navegadores web tiene evidencias realmente ejecutadas; cualquier falta de acceso a un entorno queda pendiente y no se convierte en una prueba aprobada. Cambiar un objetivo de rendimiento requiere aceptación explícita del usuario.
 
 ### Bloque 1C Paneles bajo demanda
 
 1. Crear una gestión explícita de estados: exploración, búsqueda, configuración, ejecución, resultado y consulta de información. El estado inicial es exploración, sin tarjetas de resultados vacías.
 2. Abrir configuración al solicitar escenarios; cerrarla conserva la selección. El botón de ejecución vive en ese flujo y no necesita una tarjeta de resultados anticipada.
 3. Mostrar resultados solamente después de una operación terminada. Invalidar lo que dependa de una ubicación o configuración modificadas mediante una firma de entradas. Un registro histórico fijo no cambia cuando se mueve la cámara o el punto libre; una consulta demográfica sí depende de su área. No borrar resultados al cambiar solo el idioma.
-4. En móvil, utilizar un panel inferior con cierre y altura limitada. Mantener visible parte del mapa y permitir desplazamiento dentro del contenido sin mover accidentalmente el globo.
-5. En escritorio, usar un panel superpuesto que pueda cerrarse. Al solicitar otro panel, sustituir el anterior cuando su coexistencia no tenga utilidad.
+4. En ventanas estrechas, utilizar un panel inferior con cierre y altura limitada. Mantener visible parte del mapa y permitir desplazamiento dentro del contenido sin mover accidentalmente el globo.
+5. En ventanas amplias, usar un panel superpuesto que pueda cerrarse. Al solicitar otro panel, sustituir el anterior cuando su coexistencia no tenga utilidad.
 6. Aplicar Escape para cerrar, restauración del foco y tratamiento correcto de paneles modales. Un panel cerrado no conserva controles invisibles en el recorrido del teclado.
 7. Reubicar los textos extensos de alcance y metodología en el disclaimer accesible desde el menú. Suprimir subtítulos como «Cada evento cuenta una historia» y estados permanentes como «En espera».
 8. Retirar en este sprint la función fictionalOutcome, el selector de población ficticia, los multiplicadores de preparación, las cifras de juego y sus animaciones de impacto. Mantener las fichas de contexto existentes que sean utilizables y sus fuentes como recorrido de consulta completo. No dejar esta limpieza esperando al sprint 4 ni conservar resultados ficticios ocultando sus etiquetas.
@@ -304,7 +308,7 @@ Los identificadores y escrituras son decisiones técnicas propuestas para implem
 - Cantidades, fechas y plurales pasan casos de referencia; cualquier alternativa de Intl está documentada y no cambia idioma, unidades ni significado. Texto ampliado y traducciones largas no recortan acciones.
 - No hay claves de traducción expuestas, texto sin traducir accidentalmente ni caracteres ausentes.
 - La auditoría detecta claves faltantes antes de publicar. Cada idioma tiene una revisión lingüística identificada; un borrador automático no se declara revisado.
-- Los idiomas de derecha a izquierda funcionan en móvil y escritorio, con coordenadas y números legibles.
+- Los idiomas de derecha a izquierda funcionan en ventanas estrechas y amplias, con coordenadas y números legibles.
 
 ### Bloque 2C Países en el idioma elegido
 
@@ -545,7 +549,7 @@ El usuario accede a contexto de explosiones convencionales y nucleares, consecue
 
 #### Criterios de aceptación del bloque 6B
 
-- Abrir, cambiar y cerrar casos funciona con teclado, móvil y escritorio; las capas previas se limpian y el contexto humanitario mantiene fuentes y navegación útil.
+- Abrir, cambiar y cerrar casos funciona con teclado, ventanas estrechas y amplias; las capas previas se limpian y el contexto humanitario mantiene fuentes y navegación útil.
 - Seleccionar una ubicación libre no devuelve bajas de un ataque ni cambia víctimas históricas.
 - No existe un endpoint oculto o una operación accesible que calcule daño de armas sobre lugares reales.
 - La categoría completa funciona sin esperar al módulo de Tierra y evidencia.
@@ -663,7 +667,7 @@ Definir y aplicar un nombre atractivo que contenga al menos una palabra con sign
 - El nombre aprobado aparece coherentemente en todas las superficies correspondientes.
 - Español e inglés utilizan las variantes acordadas; el resto de los idiomas sigue una regla documentada.
 - No quedan referencias visibles accidentales al nombre provisional.
-- La identidad no añade una barra, es legible en móvil y conserva el acceso a los controles.
+- La identidad no añade una barra, es legible en ventanas estrechas y conserva el acceso a los controles.
 - La audiencia y el identificador del sitio no cambian por el trabajo de marca.
 
 ### Entregables y aceptación
@@ -758,7 +762,7 @@ CERN define la masa de reposo en la relación E = mc². DOE explica que la fisi�
 
 #### Criterios de aceptación del bloque 9D
 
-- Gráficos, controles, escalas y tablas accesibles funcionan con ratón, teclado y toque en móvil y escritorio; se mantienen unidades y significado en los veinte idiomas.
+- Gráficos, controles, escalas y tablas accesibles funcionan con ratón y teclado en ventanas estrechas y amplias; se mantienen unidades y significado en los veinte idiomas.
 - La visualización permite entender qué material participa, qué productos quedan y qué energía se libera; no muestra desaparición completa de la muestra.
 - Una escala logarítmica o un esquema ampliado se identifica y tiene alternativa accesible.
 - Cambiar de material conserva el contexto de navegación; cerrar la sección devuelve el mapa sin capas o tarjetas sobrantes.
@@ -790,7 +794,7 @@ Verificar que las entregas aceptadas funcionan juntas y publicar la versión cor
 #### Criterios de aceptación del bloque 10A
 
 - Mapa, búsqueda, población, categorías, Tierra, identidad y materiales completan recorridos integrados con versiones compatibles, sin trasladar trabajo pendiente de sprints ya aceptados.
-- Los recorridos anteriores pasan en móvil y escritorio con datos disponibles y fallos controlados.
+- Los recorridos anteriores pasan en ventanas estrechas y amplias con datos disponibles y fallos controlados.
 - Los veinte idiomas están completos y no se usa la verificación final para aplazar sus revisiones.
 - Las limitaciones reales de cobertura se explican al consultar el dato; no se presentan como funciones globales que todavía no existen.
 
@@ -805,7 +809,7 @@ Verificar que las entregas aceptadas funcionan juntas y publicar la versión cor
 #### Criterios de aceptación del bloque 10B
 
 - Las mediciones de carga, respuesta y navegación usan el dispositivo y red de referencia previamente fijados y cumplen los presupuestos; los fallos encontrados están resueltos y verificados.
-- La revisión de teclado, móvil, texto ampliado y tareas del usuario confirma que cada elemento visible tiene una función y que no hay títulos o mensajes redundantes.
+- La revisión de teclado, ventanas estrechas, texto ampliado y tareas del usuario confirma que cada elemento visible tiene una función y que no hay títulos o mensajes redundantes.
 - No existen controles sin efecto, paneles vacíos permanentes ni respuestas obsoletas presentadas como actuales.
 
 ### Bloque 10C Publicación y comprobación
@@ -876,7 +880,7 @@ El sprint 1 entrega búsqueda y lectura de fichas; el sprint 3 entrega áreas y 
 
 | Función | Prueba de cálculo o contrato | Recorrido y presentación |
 | --- | --- | --- |
-| Mapa y búsqueda | Formato de coordenadas, países y ciudades exclusivamente, rechazo servidor de calles/direcciones/POI/tipos desconocidos y descarte de respuesta antigua | Globo a calles, zoom medido, teclado, táctil, GPU ausente y carga de assets publicada |
+| Mapa y búsqueda | Formato de coordenadas, países y ciudades exclusivamente, rechazo servidor de calles/direcciones/POI/tipos desconocidos y descarte de respuesta antigua | Globo a calles, zoom medido, teclado, GPU ausente y carga de assets publicada |
 | Idiomas | Claves completas, selección persistente y alternativas Intl | Veinte idiomas, glifos del mapa, mezcla bidireccional, 200 % de texto y ancho de 320 píxeles CSS |
 | Población | Suma independiente, NoData, borde de celda, huecos, multipolígono y fecha | Consultar ciudad y área, límite de tamaño, cobertura parcial, fallo y nueva selección durante carga |
 | Casos históricos | Datos y fuentes validados; identificador canónico sin duplicados | Abrir, cambiar y cerrar caso; limpiar capas; conservar el hecho histórico al mover la cámara |

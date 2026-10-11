@@ -22,7 +22,7 @@ const phaseLabels = { pendiente: 'Pendiente', en_curso: 'En curso', esperando_ap
 
 const guides = {
   1: [
-    ['Abrir el portal en escritorio y móvil.', 'El mapa ocupa la pantalla; solo la marca y controles útiles flotan. No hay cabecera ni tarjetas de resultados iniciales.'],
+    ['Abrir el portal en ventanas amplias y estrechas.', 'El mapa ocupa la pantalla; solo la marca y controles útiles flotan. No hay cabecera ni tarjetas de resultados iniciales.'],
     ['Acercar hasta una calle de Santo Domingo y luego recuperar la vista global.', 'Se ven nombres de calles, sin satélite ni iconos o etiquetas de comercios. El globo puede llenar la pantalla. La evidencia técnica documenta la escala de 5 metros.'],
     ['Buscar una ciudad con nombre repetido, elegirla y seleccionar una ubicación.', 'Las sugerencias permiten distinguirla; arrastrar el mapa no coloca un punto.'],
     ['Abrir y cerrar configuración y una ficha disponible; repetir con teclado.', 'Solo aparecen paneles solicitados, el foco regresa y se conservan ubicación y zoom. No quedan población ficticia ni cifras arbitrarias.']
@@ -43,7 +43,7 @@ const guides = {
     ['Abrir Accidente y consultar gas doméstico, gas industrial y Beirut.', 'Las tres entradas están completas y diferenciadas, con información y fuentes pertinentes.'],
     ['Abrir el caso Beirut y consultar su ubicación y registros.', 'Fecha, lugar y víctimas históricas corresponden al acontecimiento original; no cambian al mover el punto libre.'],
     ['Consultar el contexto territorial disponible y cambiar de caso.', 'Población y registros históricos conservan etiquetas y fechas; se limpian capas previas y no se inventan cifras de víctimas.'],
-    ['Cerrar y reabrir la consulta en móvil y en otro idioma.', 'El flujo es utilizable, conserva la selección necesaria y no muestra resultados vacíos.']
+    ['Cerrar y reabrir la consulta en ventanas estrechas y en otro idioma.', 'El flujo es utilizable, conserva la selección necesaria y no muestra resultados vacíos.']
   ],
   5: [
     ['Abrir Natural y consultar los dos fenómenos documentados elegidos.', 'Incluye una erupción y otro fenómeno natural, con fichas y fuentes propias.'],
@@ -55,7 +55,7 @@ const guides = {
     ['Abrir Militar y consultar un caso convencional y uno nuclear históricos.', 'Hay al menos un caso completo de cada tipo con lugar, fecha, datos y fuentes.'],
     ['Mover la cámara o seleccionar otro punto libre mientras se consulta un caso.', 'Los hechos y víctimas históricas siguen vinculados al lugar original.'],
     ['Abrir sus detalles, cambiar de caso y regresar al mapa.', 'Las capas se limpian, los controles funcionan y el contexto humanitario es accesible.'],
-    ['Consultar el módulo en móvil y en otro idioma.', 'La misma información permanece legible y no aparece un cálculo de daño o bajas de un ataque en el punto libre.']
+    ['Consultar el módulo en ventanas estrechas y en otro idioma.', 'La misma información permanece legible y no aparece un cálculo de daño o bajas de un ataque en el punto libre.']
   ],
   7: [
     ['Abrir la sección Tierra y consultar diámetro, gravedad, masa y composición.', 'Cada cifra tiene unidad, definición y fuente; se distinguen medidas medias de otras referencias.'],
@@ -65,7 +65,7 @@ const guides = {
   ],
   8: [
     ['Revisar las propuestas antes de elegir un nombre.', 'Se muestran significado, pronunciación, escrituras comprobadas y coincidencias relevantes. La elección corresponde al usuario.'],
-    ['Una vez aplicada la opción elegida, abrir el portal en móvil y escritorio.', 'Nombre e icono flotan, son legibles y no crean una cabecera ni reducen el mapa.'],
+    ['Una vez aplicada la opción elegida, abrir el portal en ventanas estrechas y amplias.', 'Nombre e icono flotan, son legibles y no crean una cabecera ni reducen el mapa.'],
     ['Revisar título de pestaña, favicon, menú, información y disclaimer en varios idiomas.', 'La identidad aprobada es consistente y no quedan referencias provisionales accidentales.'],
     ['Comprobar la dirección y el acceso del portal.', 'Se mantiene el mismo proyecto y audiencia; cualquier dirección nueva responde a la decisión aprobada.']
   ],
@@ -74,10 +74,10 @@ const guides = {
     ['Usar la comparación visual y consultar los valores en tabla.', 'Las bases de comparación son compatibles; una escala logarítmica se identifica y existe lectura accesible.'],
     ['Recorrer la explicación de masa y energía.', 'Se distingue masa del sistema, diferencia de masa, material que participa y energía liberada; no se afirma que todo el material desaparece.'],
     ['Consultar la participación del material y el reparto de energía.', 'No se mezclan eficiencia y consumo ni aparecen porcentajes universales inventados o un cálculo de rendimiento de armas.'],
-    ['Repetir el recorrido con teclado, móvil y otro idioma.', 'Gráficos, unidades, leyendas y tablas conservan su significado y son utilizables.']
+    ['Repetir el recorrido con teclado, ventanas estrechas y otro idioma.', 'Gráficos, unidades, leyendas y tablas conservan su significado y son utilizables.']
   ],
   10: [
-    ['Abrir la versión entregada y recorrer mapa, búsqueda y selector de idiomas.', 'Las funciones aceptadas siguen operativas en móvil y escritorio; carga y navegación cumplen los presupuestos documentados.'],
+    ['Abrir la versión entregada y recorrer mapa, búsqueda y selector de idiomas.', 'Las funciones aceptadas siguen operativas en ventanas estrechas y amplias; carga y navegación cumplen los presupuestos documentados.'],
     ['Consultar una ciudad, dibujar un área y explorar las tres categorías.', 'Datos, fuentes, fechas y capas conservan coherencia; no se muestran respuestas antiguas ni paneles vacíos permanentes.'],
     ['Abrir Tierra y Materiales, revisar identidad y disclaimer.', 'Las secciones mantienen los veinte idiomas, el alcance y los contenidos aceptados.'],
     ['Revisar versión, incidencias y guía de mantenimiento y recuperación.', 'Se identifica la entrega exacta, cómo actualizar fuentes y cómo recuperar código y datos de manera compatible.'],
