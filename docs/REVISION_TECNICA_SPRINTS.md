@@ -8,6 +8,8 @@ La versión 6 del plan conserva las veinte soluciones iniciales e incorpora doce
 
 ## Hallazgos y correcciones
 
+Plan v18, 11oct2026: el usuario solicita retirar completamente el icono y el nombre flotantes del portal. Se actualizan 1B y 8B, sus criterios y guías para impedir su reintroducción. Se conserva Mapa Táctico en Sites, título, metadatos y disclaimer. Reabrir la revisión del sprint1 y comprobar la entrega publicada; no constituye aprobación ni inicio del sprint8.
+
 Plan v17, 11oct2026: el usuario elige «Mapa Táctico». La entrega actual aplica el nombre; el sprint8 verifica su uso internacional sin reabrir la elección. El cambio no aprueba ni inicia otro sprint. Proyecto Sites y URL conservados.
 
 Plan v16,11oct2026: el usuario elige explícitamente «Verificar Chrome y navegador integrado» al resolver la matriz de entornos disponibles. Sustituye la matriz previa de FIN-08 y S01-1B-13. Se conservan las medidas de ventana, teclado y texto al200%; ninguna prueba de otro motor se atribuye a estos entornos.

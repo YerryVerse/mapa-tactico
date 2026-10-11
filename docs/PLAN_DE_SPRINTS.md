@@ -2,7 +2,7 @@
 
 Fecha: 10 de octubre de 2026. El usuario eligió explícitamente «Mapa Táctico» el 11 de octubre de 2026, sustituyendo el nombre provisional. Esta elección se aplica a la entrega actual sin aprobar ningún sprint ni iniciar el sprint 8. Este plan convierte los requisitos acordados en diez entregas funcionales para las IA que desarrollarán el portal. La prioridad es que el usuario pueda explorar el mundo y acceder a información útil sin que paneles, mensajes o decoración dificulten el mapa.
 
-Revisión técnica: versión 17 del plan, del 11 de octubre de 2026. Por decisión explícita del usuario, la matriz del sprint 1 comprende Chrome y el navegador integrado disponible, registrando sus versiones y tamaños de ventana; no se atribuyen pruebas a otros motores. Portal público en Sites, sin cuentas, registro, inicio de sesión, contraseñas ni claves aportadas por visitantes. Todas sus consultas funcionan anónimamente. Conserva las veinte soluciones iniciales y los doce hallazgos de la auditoría final, junto con la presentación del seguimiento acordada. El fondo exterior de la aplicación es negro #000000 con pequeñas estrellas discretas; el globo conserva sus azules y componentes blancos. La búsqueda geográfica se limita a países y ciudades; excluye calles, direcciones y puntos de interés tanto en el proveedor como en el servidor. Los diez HTML reflejan operaciones, criterios y reglas vigentes; documentar una solución no acredita su implementación. El detalle de los hallazgos está en [Revisión técnica de los sprints](REVISION_TECNICA_SPRINTS.md); la regla persistente de ejecución está en [Seguimiento y aprobación de los sprints](PROTOCOLO_DE_SPRINTS.md) y en AGENTS.md.
+Revisión técnica: versión 18 del plan, del 11 de octubre de 2026. Por decisión explícita del usuario, la matriz del sprint 1 comprende Chrome y el navegador integrado disponible, registrando sus versiones y tamaños de ventana; no se atribuyen pruebas a otros motores. Portal público en Sites, sin cuentas, registro, inicio de sesión, contraseñas ni claves aportadas por visitantes. Todas sus consultas funcionan anónimamente. Conserva las veinte soluciones iniciales y los doce hallazgos de la auditoría final, junto con la presentación del seguimiento acordada. El fondo exterior de la aplicación es negro #000000 con pequeñas estrellas discretas; el globo conserva sus azules y componentes blancos. La búsqueda geográfica se limita a países y ciudades; excluye calles, direcciones y puntos de interés tanto en el proveedor como en el servidor. Los diez HTML reflejan operaciones, criterios y reglas vigentes; documentar una solución no acredita su implementación. El detalle de los hallazgos está en [Revisión técnica de los sprints](REVISION_TECNICA_SPRINTS.md); la regla persistente de ejecución está en [Seguimiento y aprobación de los sprints](PROTOCOLO_DE_SPRINTS.md) y en AGENTS.md.
 
 El usuario autorizó iniciar el sprint 1 el 10 de octubre de 2026. Su ejecución y las publicaciones parciales se registran en el HTML y en estado.json; una publicación parcial no constituye una entrega aceptada ni el cierre del sprint. Se conserva la aprobación humana al final de cada sprint.
 
@@ -188,7 +188,7 @@ El usuario encuentra el globo como superficie principal, puede llegar al nivel d
 ### Bloque 1B Pantalla y controles
 
 1. Eliminar completamente el encabezado actual: barra, navegación, subtítulo, indicador de entorno, versión y línea divisoria. Retirar también mensajes promocionales y títulos decorativos superpuestos al mapa.
-2. Mantener solamente el icono y el nombre elegido «Mapa Táctico» flotando sobre el globo. Aplicar el nombre al título del navegador, proyecto Sites, metadatos y disclaimer. La marca no reserva una franja de pantalla ni intercepta gestos fuera de su área real.
+2. Eliminar completamente el icono y el nombre flotantes sobre el globo, sin sustituirlos por otra cabecera, enlace, espacio reservado ni marca superpuesta. Conservar «Mapa Táctico» en el título del navegador, proyecto Sites, metadatos y disclaimer; el favicon pertenece a la pestaña, no al mapa.
 3. Hacer que el mapa ocupe todo el espacio visible, con adaptación al tamaño de la ventana del navegador. Al acercar, el globo puede extenderse más allá de los bordes de la pantalla.
 4. Disponer controles flotantes para acercar, alejar, recuperar la vista global, buscar un lugar y abrir escenarios. Agrupar idioma, información y disclaimer en un menú accesible; no reconstruir una barra superior.
 5. Incorporar búsqueda exclusivamente de países y ciudades. Las sugerencias indican su tipo y ubicación administrativa para distinguir nombres repetidos. No buscar ni ofrecer calles, direcciones, edificios, barrios, negocios u otros puntos de interés. El campo se identifica como «País o ciudad» y no ofrece búsqueda detallada alternativa. Mantener la búsqueda cerrada hasta que se solicite.
@@ -204,9 +204,9 @@ El usuario encuentra el globo como superficie principal, puede llegar al nivel d
 
 #### Criterios de aceptación del bloque 1B
 
-- En ventanas estrechas y amplias, nombre e icono flotan sin reservar una cabecera; controles de zoom, búsqueda, selección y regreso global funcionan con ratón y teclado.
+- En ventanas estrechas y amplias no aparecen nombre, logo ni cabecera superpuestos al mapa; los controles de zoom, búsqueda, selección y regreso global funcionan con ratón y teclado.
 - El usuario alcanza escala de 5 metros, ve nombres de calles y recupera la vista global sin recargar.
-- La marca flota y el globo puede llenar toda la pantalla al acercar.
+- El globo puede llenar toda la pantalla al acercar, sin marca flotante ni franja reservada.
 - Las búsquedas solo ofrecen países y ciudades identificados como tales. Consultas de calles, direcciones, edificios, barrios y POI no devuelven esos objetos; respuestas de tipo desconocido se descartan. No hay comercios ni sus etiquetas en las capas; las calles con nombre permanecen en el mapa.
 - Una búsqueda ambigua permite elegir la ciudad correcta. Cero resultados y fallo del servicio tienen una recuperación comprensible.
 - Con teclado se puede recorrer y cerrar controles sin quedar atrapado. El mapa puede seguir utilizándose si un servicio auxiliar falla.
@@ -657,9 +657,9 @@ Verificar la identidad elegida «Mapa Táctico» en las veinte versiones lingü�
 ### Bloque 8B Aplicación completa
 
 1. Configurar nombre principal, variantes aprobadas y reglas de selección. Los veinte idiomas no implican veinte marcas diferentes.
-2. Crear o adaptar el icono vectorial, favicon y marca flotante. Mantener fondo azul #003876 y componentes blancos.
+2. Crear o adaptar el favicon para la pestaña. No introducir icono ni nombre flotantes sobre el mapa. Conservar fondo exterior negro, globo azul y componentes blancos.
 3. Aplicar identidad a título del navegador, metadatos, disclaimer, vistas informativas, documentación y todos los catálogos de traducción.
-4. Evitar un subtítulo permanente o una nueva cabecera. La marca no reduce el espacio del mapa ni añade mensajes publicitarios.
+4. Mantener el mapa libre de nombre, logo, subtítulo permanente y cabecera. Aplicar la identidad en metadatos y vistas de información solicitadas, sin reducir el espacio del mapa ni añadir mensajes publicitarios.
 5. Conservar el proyecto Sites. Cambiar slug o dominio solamente si forma parte de la identidad aprobada y después de revisar el comportamiento de la dirección anterior; no asumir redirecciones automáticas.
 
 #### Criterios de aceptación del bloque 8B
@@ -667,7 +667,7 @@ Verificar la identidad elegida «Mapa Táctico» en las veinte versiones lingü�
 - El nombre aprobado aparece coherentemente en todas las superficies correspondientes.
 - Español e inglés utilizan las variantes acordadas; el resto de los idiomas sigue una regla documentada.
 - No quedan referencias visibles accidentales al nombre provisional.
-- La identidad no añade una barra, es legible en ventanas estrechas y conserva el acceso a los controles.
+- No aparecen nombre, icono ni cabecera superpuestos al mapa; la identidad en pestaña y vistas de información es legible en ventanas estrechas y conserva el acceso a los controles.
 - La audiencia y el identificador del sitio no cambian por el trabajo de marca.
 
 ### Entregables y aceptación
@@ -919,7 +919,7 @@ Estas comprobaciones se ejecutan al incorporar cada función. El sprint 10 repit
 | UI-002 Resultados bajo demanda y sin tarjetas de espera | 1, sprints 3 a 7 y 9 |
 | UI-003 Textos extensos en disclaimer y etiquetas de datos necesarias | 1 y cada función posterior |
 | UI-004 Eliminar encabezado | 1 |
-| UI-005 Nombre e icono flotantes | 1 y 8 |
+| UI-005 Retirar nombre e icono flotantes; conservar identidad en metadatos | 1 y 8 |
 | Población real por países, ciudades y áreas con procedencia | 3 |
 | ESC-001 Accidente, Militar y Natural | 4, 5 y 6 |
 | EDU-001 Medidas y composición terrestre | 7 |

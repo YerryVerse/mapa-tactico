@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "planVersion": 17,
+  "planVersion": 18,
   "controlRules": [
     "Correspondencia con el plan: cada HTML debe incluir todas las operaciones y criterios de su sprint, con identificadores estables, texto vigente y versión del plan. Ningún requisito se considera cumplido solo por estar documentado.",
     "Presentación del documento: fondo blanco; títulos de bloques y columnas en azul #003876 con letras blancas. Cada bloque tiene su propia tabla. Las filas «Terminado» tienen fondo verde y letras blancas; las filas «No completado», fondo rojo y letras blancas; las filas «Pendiente», sin relleno y letras negras. Las filas «En curso» conservan fondo naranja y texto negro. Los indicadores comparten exactamente el fondo y el color del texto de su fila, sin recuadro ni otro tono.",
@@ -14,16 +14,16 @@
     "Vigencia y separación: conservar estas reglas durante todo el proyecto y mantener el documento de control fuera del portal. La pantalla local debe reflejar el HTML actualizado sin recarga manual; las consultas periódicas no deben generar escrituras si no hay cambios reales."
   ],
   "controlScope": "Alcance web vigente: portal público, sin cuentas, registro, inicio de sesión, contraseñas ni claves del visitante. Verificar páginas y consultas como visitante anónimo. Comprobar adaptación a ventanas estrechas y amplias, ratón, teclado y texto ampliado. No exigir plataformas adicionales ni aplicaciones nativas en ningún sprint.",
-  "planHash": "60bb0ffc877c8868141227bab788accdd34ce654fa08bc27979c102b034499f6",
-  "contextHash": "2cf71c40c1180f0063df428ce468de5d3978dc032fb6d334c9fa592baccd9962",
+  "planHash": "53d60466dd9adff49e14bc20a42ec5b5b5a2b70aee7d0ce0c463c523701d2bc4",
+  "contextHash": "b1a430158192aab4c8575a739af00b719e0dbc5c74e803966e206bde1fc40a92",
   "project": "Mapa Táctico",
   "portal": "https://atlas-escenarios-hud.yerrybatista.chatgpt.site/",
-  "updatedAt": "2026-10-11T12:07:52.028Z",
+  "updatedAt": "2026-10-11T12:16:50.767Z",
   "sprints": [
     {
       "number": 1,
       "title": "Globo y experiencia del mapa",
-      "updatedAt": "2026-10-11T12:07:52.028Z",
+      "updatedAt": "2026-10-11T12:16:41.677Z",
       "phase": "en_curso",
       "approval": {
         "status": "pendiente",
@@ -33,8 +33,8 @@
       "delivery": null,
       "reviewSteps": [
         {
-          "action": "Abrir el portal y cambiar el tamaño de la ventana; comprobar también el título de la pestaña y Menú→Disclaimer.",
-          "expected": "Nombre Mapa Táctico coherente en marca, pestaña y disclaimer. Espacio negro con estrellas, globo azul y controles flotantes; mapa ocupa toda la vista, sin cabecera ni tarjetas iniciales."
+          "action": "Abrir el portal en ventanas amplias y estrechas; comprobar la pestaña y Menú → Disclaimer.",
+          "expected": "No aparecen logo, nombre ni cabecera sobre el mapa. El título de pestaña y disclaimer conservan Mapa Táctico. El fondo es negro con estrellas y el globo azul ocupa todo el espacio visible."
         },
         {
           "action": "Buscar lugar → escribir Santiago → Buscar; elegir Santiago, República Dominicana. Repetir con España.",
@@ -1422,6 +1422,166 @@
           "action": "guide",
           "pointId": null,
           "reference": null
+        },
+        {
+          "at": "2026-10-11T12:10:06.248Z",
+          "action": "set",
+          "pointId": "S01-1B-02",
+          "reference": "Sites18, commit170c258c96ccaf05283e7509d8015f40513f0cf0: proyecto Sites y título publicados Mapa Táctico. Chrome154320×568 y navegador integrado155: marca flotante correcta sin cabecera; ancho174px, sin overflow ni cruce con herramientas. Disclaimer nuevo, constanteSITE_NAME compartida; plan17 y10HTML sincronizados."
+        },
+        {
+          "at": "2026-10-11T12:10:06.769Z",
+          "action": "set",
+          "pointId": "S01-1B-AC-01",
+          "reference": "Sites18 verificada: Mapa Táctico en Sites, pestaña y marca; Chrome154320×568 sin overflow y ancho174px; integrado155 carga globo y controles. Compilación320CSScon200%texto no cruza marca/herramientas;25pruebas y build pasan. Identidad/aplicación conservan ID y público. Revisión por impacto: este cambio solo modifica nombre/metadata y CSS de la marca; contratos y comportamiento conservados. Evidencia previa vigente para las funciones sin cambios, sin atribuirles una prueba nueva: Sites16: marca flotante, sin cabecera. Chrome e integrado: controles de zoom, búsqueda, ubicación y global por ratón/teclado;320CSS sin solapamiento tarjeta/controles."
+        },
+        {
+          "at": "2026-10-11T12:10:06.865Z",
+          "action": "set",
+          "pointId": "S01-1B-AC-02",
+          "reference": "Sites18 verificada: Mapa Táctico en Sites, pestaña y marca; Chrome154320×568 sin overflow y ancho174px; integrado155 carga globo y controles. Compilación320CSScon200%texto no cruza marca/herramientas;25pruebas y build pasan. Identidad/aplicación conservan ID y público. Revisión por impacto: este cambio solo modifica nombre/metadata y CSS de la marca; contratos y comportamiento conservados. Evidencia previa vigente para las funciones sin cambios, sin atribuirles una prueba nueva: Sites14/16 conserva motor/estilo. Repetición real de SantoDomingo(-69.8845,18.4737), zoom19,pitch0,5m=35.311237pxCSS; nombres ElConde/ArzobispoMeriño visibles, sin POI; global vuelve sin recarga."
+        },
+        {
+          "at": "2026-10-11T12:10:06.964Z",
+          "action": "set",
+          "pointId": "S01-1B-AC-03",
+          "reference": "Sites18 verificada: Mapa Táctico en Sites, pestaña y marca; Chrome154320×568 sin overflow y ancho174px; integrado155 carga globo y controles. Compilación320CSScon200%texto no cruza marca/herramientas;25pruebas y build pasan. Identidad/aplicación conservan ID y público. Revisión por impacto: este cambio solo modifica nombre/metadata y CSS de la marca; contratos y comportamiento conservados. Evidencia previa vigente para las funciones sin cambios, sin atribuirles una prueba nueva: DOM/Screenshot reales: marca absoluta sin franja; globo y vista local ocupan todo el viewport. Ventanas320x568 y1440x900 comprobadas; zoom19 llena pantalla."
+        },
+        {
+          "at": "2026-10-11T12:10:07.061Z",
+          "action": "set",
+          "pointId": "S01-1B-AC-04",
+          "reference": "Sites18 verificada: Mapa Táctico en Sites, pestaña y marca; Chrome154320×568 sin overflow y ancho174px; integrado155 carga globo y controles. Compilación320CSScon200%texto no cruza marca/herramientas;25pruebas y build pasan. Identidad/aplicación conservan ID y público. Revisión por impacto: este cambio solo modifica nombre/metadata y CSS de la marca; contratos y comportamiento conservados. Evidencia previa vigente para las funciones sin cambios, sin atribuirles una prueba nueva: Servicio público16: solo country/city. Queries CalleElConde,1600PennsylvaniaAvenue,TorreEiffel,Gazcue devolvieron0; tests de PPLX/ST/RD/BLDG/desconocidos y caché mixta descartan objetos. Estilo geográfico conserva nombres de calles y no tiene POI/satélite."
+        },
+        {
+          "at": "2026-10-11T12:10:07.161Z",
+          "action": "set",
+          "pointId": "S01-1B-AC-05",
+          "reference": "Sites18 verificada: Mapa Táctico en Sites, pestaña y marca; Chrome154320×568 sin overflow y ancho174px; integrado155 carga globo y controles. Compilación320CSScon200%texto no cruza marca/herramientas;25pruebas y build pasan. Identidad/aplicación conservan ID y público. Revisión por impacto: este cambio solo modifica nombre/metadata y CSS de la marca; contratos y comportamiento conservados. Evidencia previa vigente para las funciones sin cambios, sin atribuirles una prueba nueva: Santiago muestra Chile/RepúblicaDominicana/Cuba y regiones; elegir dominicana centra(-70.69085,19.45036). zzzzzzzz muestra vacío útil. Fallo503 inyectado sobre dominio14 muestra error; reintento real recupera Madrid."
+        },
+        {
+          "at": "2026-10-11T12:10:07.259Z",
+          "action": "set",
+          "pointId": "S01-1B-AC-06",
+          "reference": "Sites18 verificada: Mapa Táctico en Sites, pestaña y marca; Chrome154320×568 sin overflow y ancho174px; integrado155 carga globo y controles. Compilación320CSScon200%texto no cruza marca/herramientas;25pruebas y build pasan. Identidad/aplicación conservan ID y público. Revisión por impacto: este cambio solo modifica nombre/metadata y CSS de la marca; contratos y comportamiento conservados. Evidencia previa vigente para las funciones sin cambios, sin atribuirles una prueba nueva: Escape deja0paneles y foco BuscarLugar en integrado; Tab/campos/selección accesibles, coordenadas alternativa al clic. Error de catálogo conserva mapa y controles disponibles. Evidencia previa de1B07 preservada."
+        },
+        {
+          "at": "2026-10-11T12:10:07.380Z",
+          "action": "set",
+          "pointId": "S01-1B-AC-07",
+          "reference": "Sites18 verificada: Mapa Táctico en Sites, pestaña y marca; Chrome154320×568 sin overflow y ancho174px; integrado155 carga globo y controles. Compilación320CSScon200%texto no cruza marca/herramientas;25pruebas y build pasan. Identidad/aplicación conservan ID y público. Revisión por impacto: este cambio solo modifica nombre/metadata y CSS de la marca; contratos y comportamiento conservados. Evidencia previa vigente para las funciones sin cambios, sin atribuirles una prueba nueva: Escala real repetida35.311px/5m en zoom19. Motor/Globe sin cambios frente a mediciones y ensayo de pérdida de contexto previos, conservados en historial1A10/1B11 y DECISION_CARTOGRAFICA.md; reintento/lectura alternativa siguen presentes. No se atribuye una nueva medición GPU a esta revisión."
+        },
+        {
+          "at": "2026-10-11T12:10:07.487Z",
+          "action": "set",
+          "pointId": "S01-1B-AC-08",
+          "reference": "Sites18 verificada: Mapa Táctico en Sites, pestaña y marca; Chrome154320×568 sin overflow y ancho174px; integrado155 carga globo y controles. Compilación320CSScon200%texto no cruza marca/herramientas;25pruebas y build pasan. Identidad/aplicación conservan ID y público. Revisión por impacto: este cambio solo modifica nombre/metadata y CSS de la marca; contratos y comportamiento conservados. Evidencia previa vigente para las funciones sin cambios, sin atribuirles una prueba nueva: Sites14–16: país/ciudad ambigua/vacío/400 real; límite120 y429 real y recuperación UI. Retardo real2s Madrid ignorado ante Santiago, sin sobrescribir.20 tests pasan, incluyendo caché validada/tipos mixtos/HTML inválido/concurrencia. Catálogo, caché, cuotas y versiones documentados; servidor sin identidad."
+        },
+        {
+          "at": "2026-10-11T12:10:07.605Z",
+          "action": "set",
+          "pointId": "S01-1B-AC-09",
+          "reference": "Sites18 verificada: Mapa Táctico en Sites, pestaña y marca; Chrome154320×568 sin overflow y ancho174px; integrado155 carga globo y controles. Compilación320CSScon200%texto no cruza marca/herramientas;25pruebas y build pasan. Identidad/aplicación conservan ID y público. Revisión por impacto: este cambio solo modifica nombre/metadata y CSS de la marca; contratos y comportamiento conservados. Evidencia previa vigente para las funciones sin cambios, sin atribuirles una prueba nueva: Chrome154 e integrado155 según decisión explícita del usuario. Texto200% y320CSS: sin overflow, panel scroll y botones44px; Sites16 cero intersecciones.1440x900 y390x844 sin tarjetas iniciales; tamaños temporales y estilos de prueba restaurados."
+        },
+        {
+          "at": "2026-10-11T12:11:11.590Z",
+          "action": "set",
+          "pointId": "S01-1C-AC-01",
+          "reference": "Sites18: integrado155 comprueba Disclaimer con Mapa Táctico, ficha Beirut con fuentes,2capas→0trasCerrar, cámara[-30,20]/zoom1.25conservados y focoEscenarios. document.title sigue Mapa Táctico al regresar. Chrome154320CSSy200%texto verificado;25pruebas y build pasan. Revisión por impacto: este cambio solo modifica nombre/metadata y CSS de la marca; contratos y comportamiento conservados. Evidencia previa vigente para las funciones sin cambios, sin atribuirles una prueba nueva: Sites17, commit9dfbc386da401239eef92e6a4ec877843811fe08: Chrome154 e integrado155 abren paneles por solicitud; Escape/Cerrar/Atrás dejan0paneles y foco en Escenarios/Menú. Controles sustituidos desmontados. Texto200% compilado sin solapamientos."
+        },
+        {
+          "at": "2026-10-11T12:11:11.687Z",
+          "action": "set",
+          "pointId": "S01-1C-AC-02",
+          "reference": "Sites18: integrado155 comprueba Disclaimer con Mapa Táctico, ficha Beirut con fuentes,2capas→0trasCerrar, cámara[-30,20]/zoom1.25conservados y focoEscenarios. document.title sigue Mapa Táctico al regresar. Chrome154320CSSy200%texto verificado;25pruebas y build pasan. Revisión por impacto: este cambio solo modifica nombre/metadata y CSS de la marca; contratos y comportamiento conservados. Evidencia previa vigente para las funciones sin cambios, sin atribuirles una prueba nueva: Sites17: fichas Beirut/ONU y nuclear/CICR revisadas en ambos navegadores, sin población ficticia ni cifras arbitrarias. Búsqueda estática de fictionalOutcome y otros textos del prototipo en app/components/lib/content devuelve0coincidencias. Páginas públicas200sin autenticación."
+        },
+        {
+          "at": "2026-10-11T12:11:11.767Z",
+          "action": "set",
+          "pointId": "S01-1C-AC-03",
+          "reference": "Sites18: integrado155 comprueba Disclaimer con Mapa Táctico, ficha Beirut con fuentes,2capas→0trasCerrar, cámara[-30,20]/zoom1.25conservados y focoEscenarios. document.title sigue Mapa Táctico al regresar. Chrome154320CSSy200%texto verificado;25pruebas y build pasan. Revisión por impacto: este cambio solo modifica nombre/metadata y CSS de la marca; contratos y comportamiento conservados. Evidencia previa vigente para las funciones sin cambios, sin atribuirles una prueba nueva: Sites17: firmaBeirut context-20261011-2, referencia[35.50157,33.89332],2capas reales→0trasEscape, conserva puntoSantiago[-70.69085,19.45036]. Contratos/capacidades:25pruebas pasan. Respuesta tardía1500ms descartada al sustituir panel en compilación idéntica; fallo503HTML inyectado en publicada se recupera con España200y2resultados, intercepción restaurada."
+        },
+        {
+          "at": "2026-10-11T12:11:11.858Z",
+          "action": "set",
+          "pointId": "S01-1C-AC-04",
+          "reference": "Sites18: integrado155 comprueba Disclaimer con Mapa Táctico, ficha Beirut con fuentes,2capas→0trasCerrar, cámara[-30,20]/zoom1.25conservados y focoEscenarios. document.title sigue Mapa Táctico al regresar. Chrome154320CSSy200%texto verificado;25pruebas y build pasan. Revisión por impacto: este cambio solo modifica nombre/metadata y CSS de la marca; contratos y comportamiento conservados. Evidencia previa vigente para las funciones sin cambios, sin atribuirles una prueba nueva: Sites17: integrado155 con ventanas CSS390×844 y1440×900 medidas en DOM; mapa ocupa exactamente cada viewport,0paneles y0puntos iniciales. Chrome154 publicado1440×900 también0paneles. Compilación idéntica en320×568 con200%texto: sin overflow horizontal y panel desplazable sin cruzar herramientas."
+        },
+        {
+          "at": "2026-10-11T12:11:11.942Z",
+          "action": "set",
+          "pointId": "S01-1C-AC-05",
+          "reference": "Sites18: integrado155 comprueba Disclaimer con Mapa Táctico, ficha Beirut con fuentes,2capas→0trasCerrar, cámara[-30,20]/zoom1.25conservados y focoEscenarios. document.title sigue Mapa Táctico al regresar. Chrome154320CSSy200%texto verificado;25pruebas y build pasan. Revisión por impacto: este cambio solo modifica nombre/metadata y CSS de la marca; contratos y comportamiento conservados. Evidencia previa vigente para las funciones sin cambios, sin atribuirles una prueba nueva: Sites17 integrado155: puntoSantoDomingo[-69.8845,18.4737], abrir/Consultar/Cerrar conserva zoom19 y punto;5m=35.311237px CSS en390×844,pitch0. Chrome154 publicado: arrastre[300,300]→[420,350] conserva1marcador y puntoSantiago. Referencia explícitaBeirut conserva punto libre y al cerrar mantiene cámaraBeirutzoom12."
+        },
+        {
+          "at": "2026-10-11T12:11:12.035Z",
+          "action": "review",
+          "pointId": null,
+          "reference": null
+        },
+        {
+          "at": "2026-10-11T12:15:09.421Z",
+          "action": "reject",
+          "pointId": null,
+          "reference": "Solicitud del usuario: eliminar completamente icono y nombre flotantes de la plataforma."
+        },
+        {
+          "at": "2026-10-11T12:15:42.608Z",
+          "action": "aceptacion_invalidada",
+          "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
+        },
+        {
+          "at": "2026-10-11T12:15:42.608Z",
+          "action": "requisito_modificado",
+          "reference": "Plan actualizado; revisión y aprobación anteriores retiradas."
+        },
+        {
+          "at": "2026-10-11T12:16:23.912Z",
+          "action": "start",
+          "pointId": null,
+          "reference": null
+        },
+        {
+          "at": "2026-10-11T12:16:24.125Z",
+          "action": "set",
+          "pointId": "S01-1A-AC-01",
+          "reference": "Plan18: revisadas diferencias de alcance; ningún cambio en Globe, proveedor, fuentes, worker, rendimiento ni rutas. Se conservan comprobaciones publicadas en Sites18. Revisión por impacto: retiro del enlace de marca y sus estilos; motor cartográfico, datos, consultas, paneles y contratos sin cambios. Evidencia anterior vigente para funciones sin cambios; no se atribuye una repetición de esas mediciones: Cambio17delplan: identidad Mapa Táctico. Build oficial y TypeScript pasan; Chrome154 compilado carga globo/teselas/rutas. Proveedor, versión, licencia, cobertura y secretos conservan las evidencias y documentos previos; no cambiaron sus parámetros."
+        },
+        {
+          "at": "2026-10-11T12:16:24.244Z",
+          "action": "set",
+          "pointId": "S01-1A-AC-02",
+          "reference": "Plan18: revisadas diferencias de alcance; ningún cambio en Globe, proveedor, fuentes, worker, rendimiento ni rutas. Se conservan comprobaciones publicadas en Sites18. Revisión por impacto: retiro del enlace de marca y sus estilos; motor cartográfico, datos, consultas, paneles y contratos sin cambios. Evidencia anterior vigente para funciones sin cambios; no se atribuye una repetición de esas mediciones: Revalidación por impacto del nombre: diff de estilo solo importa SITE_NAME y sustituye name; motor, proyección, fuentes y capas no cambian. Evidencias reales de escala/rendimiento/latitudes del historial1A y versión17 se conservan. No se atribuye una medición nueva a este cambio de marca."
+        },
+        {
+          "at": "2026-10-11T12:16:24.355Z",
+          "action": "set",
+          "pointId": "S01-1A-AC-03",
+          "reference": "Plan18: revisadas diferencias de alcance; ningún cambio en Globe, proveedor, fuentes, worker, rendimiento ni rutas. Se conservan comprobaciones publicadas en Sites18. Revisión por impacto: retiro del enlace de marca y sus estilos; motor cartográfico, datos, consultas, paneles y contratos sin cambios. Evidencia anterior vigente para funciones sin cambios; no se atribuye una repetición de esas mediciones: Worker, glifos y configuración no se modifican respecto a Sites17 ya comprobada. Build nuevo termina y Chrome154 compilado carga tilesLoaded=true, sin inicialización en servidor del motor.25pruebas pasan. Renombre pendiente de publicación, no afecta contrato del buscador."
+        },
+        {
+          "at": "2026-10-11T12:16:24.486Z",
+          "action": "set",
+          "pointId": "S01-1A-AC-04",
+          "reference": "Plan18: revisadas diferencias de alcance; ningún cambio en Globe, proveedor, fuentes, worker, rendimiento ni rutas. Se conservan comprobaciones publicadas en Sites18. Revisión por impacto: retiro del enlace de marca y sus estilos; motor cartográfico, datos, consultas, paneles y contratos sin cambios. Evidencia anterior vigente para funciones sin cambios; no se atribuye una repetición de esas mediciones: Build oficial11oct2026 completa5etapas. Worker6.13.0 y CSS del motor conservados sin cambio respecto a Sites17; compilación se sirve desde dist con globo funcional, sin rutas Vite de desarrollo."
+        },
+        {
+          "at": "2026-10-11T12:16:24.639Z",
+          "action": "set",
+          "pointId": "S01-1A-AC-05",
+          "reference": "Plan18: revisadas diferencias de alcance; ningún cambio en Globe, proveedor, fuentes, worker, rendimiento ni rutas. Se conservan comprobaciones publicadas en Sites18. Revisión por impacto: retiro del enlace de marca y sus estilos; motor cartográfico, datos, consultas, paneles y contratos sin cambios. Evidencia anterior vigente para funciones sin cambios; no se atribuye una repetición de esas mediciones: No cambiaron map-fonts, archivos de fuentes, glifos, shaping ni motor; diff limita estilo a nombre descriptivo. Se revalida compatibilidad por conservación de las20muestras reales y contratos previos, no como una nueva revisión lingüística.25pruebas de contratos/mapa pasan."
+        },
+        {
+          "at": "2026-10-11T12:16:24.806Z",
+          "action": "set",
+          "pointId": "S01-1B-02",
+          "reference": "Retirados logo y nombre superpuestos del código; comprobación y publicación en curso."
+        },
+        {
+          "at": "2026-10-11T12:16:41.677Z",
+          "action": "guide",
+          "pointId": null,
+          "reference": null
         }
       ],
       "points": [
@@ -1786,8 +1946,8 @@
           "text": "La aplicación compila y su versión revisable carga el globo vectorial, las calles y las rutas de servidor; proveedor, versión fijada, licencia, cobertura y modalidad de credenciales están documentados sin incluir valores secretos.",
           "kind": "aceptacion",
           "status": "terminado",
-          "evidence": "Cambio17delplan: identidad Mapa Táctico. Build oficial y TypeScript pasan; Chrome154 compilado carga globo/teselas/rutas. Proveedor, versión, licencia, cobertura y secretos conservan las evidencias y documentos previos; no cambiaron sus parámetros.",
-          "updatedAt": "2026-10-11T12:06:59.038Z",
+          "evidence": "Plan18: revisadas diferencias de alcance; ningún cambio en Globe, proveedor, fuentes, worker, rendimiento ni rutas. Se conservan comprobaciones publicadas en Sites18. Revisión por impacto: retiro del enlace de marca y sus estilos; motor cartográfico, datos, consultas, paneles y contratos sin cambios. Evidencia anterior vigente para funciones sin cambios; no se atribuye una repetición de esas mediciones: Cambio17delplan: identidad Mapa Táctico. Build oficial y TypeScript pasan; Chrome154 compilado carga globo/teselas/rutas. Proveedor, versión, licencia, cobertura y secretos conservan las evidencias y documentos previos; no cambiaron sus parámetros.",
+          "updatedAt": "2026-10-11T12:16:24.125Z",
           "history": [
             {
               "at": "2026-10-10T18:55:37.061Z",
@@ -1898,6 +2058,16 @@
               "at": "2026-10-11T12:06:59.038Z",
               "status": "terminado",
               "evidence": "Cambio17delplan: identidad Mapa Táctico. Build oficial y TypeScript pasan; Chrome154 compilado carga globo/teselas/rutas. Proveedor, versión, licencia, cobertura y secretos conservan las evidencias y documentos previos; no cambiaron sus parámetros."
+            },
+            {
+              "at": "2026-10-11T12:15:42.608Z",
+              "status": "pendiente",
+              "evidence": "Reverificar: cambiaron los requisitos del sprint."
+            },
+            {
+              "at": "2026-10-11T12:16:24.125Z",
+              "status": "terminado",
+              "evidence": "Plan18: revisadas diferencias de alcance; ningún cambio en Globe, proveedor, fuentes, worker, rendimiento ni rutas. Se conservan comprobaciones publicadas en Sites18. Revisión por impacto: retiro del enlace de marca y sus estilos; motor cartográfico, datos, consultas, paneles y contratos sin cambios. Evidencia anterior vigente para funciones sin cambios; no se atribuye una repetición de esas mediciones: Cambio17delplan: identidad Mapa Táctico. Build oficial y TypeScript pasan; Chrome154 compilado carga globo/teselas/rutas. Proveedor, versión, licencia, cobertura y secretos conservan las evidencias y documentos previos; no cambiaron sus parámetros."
             }
           ]
         },
@@ -1908,8 +2078,8 @@
           "text": "La transición globo a vista local conserva centro y ubicación; las pruebas reproducibles de escala, proyección, latitudes y rendimiento cumplen el bloque, sin sustituir detalle por ampliación de imagen.",
           "kind": "aceptacion",
           "status": "terminado",
-          "evidence": "Revalidación por impacto del nombre: diff de estilo solo importa SITE_NAME y sustituye name; motor, proyección, fuentes y capas no cambian. Evidencias reales de escala/rendimiento/latitudes del historial1A y versión17 se conservan. No se atribuye una medición nueva a este cambio de marca.",
-          "updatedAt": "2026-10-11T12:06:59.137Z",
+          "evidence": "Plan18: revisadas diferencias de alcance; ningún cambio en Globe, proveedor, fuentes, worker, rendimiento ni rutas. Se conservan comprobaciones publicadas en Sites18. Revisión por impacto: retiro del enlace de marca y sus estilos; motor cartográfico, datos, consultas, paneles y contratos sin cambios. Evidencia anterior vigente para funciones sin cambios; no se atribuye una repetición de esas mediciones: Revalidación por impacto del nombre: diff de estilo solo importa SITE_NAME y sustituye name; motor, proyección, fuentes y capas no cambian. Evidencias reales de escala/rendimiento/latitudes del historial1A y versión17 se conservan. No se atribuye una medición nueva a este cambio de marca.",
+          "updatedAt": "2026-10-11T12:16:24.244Z",
           "history": [
             {
               "at": "2026-10-11T02:16:29.036Z",
@@ -2015,6 +2185,16 @@
               "at": "2026-10-11T12:06:59.137Z",
               "status": "terminado",
               "evidence": "Revalidación por impacto del nombre: diff de estilo solo importa SITE_NAME y sustituye name; motor, proyección, fuentes y capas no cambian. Evidencias reales de escala/rendimiento/latitudes del historial1A y versión17 se conservan. No se atribuye una medición nueva a este cambio de marca."
+            },
+            {
+              "at": "2026-10-11T12:15:42.608Z",
+              "status": "pendiente",
+              "evidence": "Reverificar: cambiaron los requisitos del sprint."
+            },
+            {
+              "at": "2026-10-11T12:16:24.244Z",
+              "status": "terminado",
+              "evidence": "Plan18: revisadas diferencias de alcance; ningún cambio en Globe, proveedor, fuentes, worker, rendimiento ni rutas. Se conservan comprobaciones publicadas en Sites18. Revisión por impacto: retiro del enlace de marca y sus estilos; motor cartográfico, datos, consultas, paneles y contratos sin cambios. Evidencia anterior vigente para funciones sin cambios; no se atribuye una repetición de esas mediciones: Revalidación por impacto del nombre: diff de estilo solo importa SITE_NAME y sustituye name; motor, proyección, fuentes y capas no cambian. Evidencias reales de escala/rendimiento/latitudes del historial1A y versión17 se conservan. No se atribuye una medición nueva a este cambio de marca."
             }
           ]
         },
@@ -2025,8 +2205,8 @@
           "text": "El build publicado carga su motor, glifos y workers sin errores de origen o de inicialización en servidor. Las rutas de servidor de referencia responden; la integración y aceptación del buscador se completan en 1B, sin condicionar 1A a ese bloque futuro.",
           "kind": "aceptacion",
           "status": "terminado",
-          "evidence": "Worker, glifos y configuración no se modifican respecto a Sites17 ya comprobada. Build nuevo termina y Chrome154 compilado carga tilesLoaded=true, sin inicialización en servidor del motor.25pruebas pasan. Renombre pendiente de publicación, no afecta contrato del buscador.",
-          "updatedAt": "2026-10-11T12:06:59.232Z",
+          "evidence": "Plan18: revisadas diferencias de alcance; ningún cambio en Globe, proveedor, fuentes, worker, rendimiento ni rutas. Se conservan comprobaciones publicadas en Sites18. Revisión por impacto: retiro del enlace de marca y sus estilos; motor cartográfico, datos, consultas, paneles y contratos sin cambios. Evidencia anterior vigente para funciones sin cambios; no se atribuye una repetición de esas mediciones: Worker, glifos y configuración no se modifican respecto a Sites17 ya comprobada. Build nuevo termina y Chrome154 compilado carga tilesLoaded=true, sin inicialización en servidor del motor.25pruebas pasan. Renombre pendiente de publicación, no afecta contrato del buscador.",
+          "updatedAt": "2026-10-11T12:16:24.355Z",
           "history": [
             {
               "at": "2026-10-10T18:55:37.061Z",
@@ -2137,6 +2317,16 @@
               "at": "2026-10-11T12:06:59.232Z",
               "status": "terminado",
               "evidence": "Worker, glifos y configuración no se modifican respecto a Sites17 ya comprobada. Build nuevo termina y Chrome154 compilado carga tilesLoaded=true, sin inicialización en servidor del motor.25pruebas pasan. Renombre pendiente de publicación, no afecta contrato del buscador."
+            },
+            {
+              "at": "2026-10-11T12:15:42.608Z",
+              "status": "pendiente",
+              "evidence": "Reverificar: cambiaron los requisitos del sprint."
+            },
+            {
+              "at": "2026-10-11T12:16:24.355Z",
+              "status": "terminado",
+              "evidence": "Plan18: revisadas diferencias de alcance; ningún cambio en Globe, proveedor, fuentes, worker, rendimiento ni rutas. Se conservan comprobaciones publicadas en Sites18. Revisión por impacto: retiro del enlace de marca y sus estilos; motor cartográfico, datos, consultas, paneles y contratos sin cambios. Evidencia anterior vigente para funciones sin cambios; no se atribuye una repetición de esas mediciones: Worker, glifos y configuración no se modifican respecto a Sites17 ya comprobada. Build nuevo termina y Chrome154 compilado carga tilesLoaded=true, sin inicialización en servidor del motor.25pruebas pasan. Renombre pendiente de publicación, no afecta contrato del buscador."
             }
           ]
         },
@@ -2147,8 +2337,8 @@
           "text": "El worker y CSS del motor se incluyen correctamente en el build de Vite/Sites; no hay dependencia de rutas del servidor de desarrollo ni de una importación en servidor.",
           "kind": "aceptacion",
           "status": "terminado",
-          "evidence": "Build oficial11oct2026 completa5etapas. Worker6.13.0 y CSS del motor conservados sin cambio respecto a Sites17; compilación se sirve desde dist con globo funcional, sin rutas Vite de desarrollo.",
-          "updatedAt": "2026-10-11T12:06:59.322Z",
+          "evidence": "Plan18: revisadas diferencias de alcance; ningún cambio en Globe, proveedor, fuentes, worker, rendimiento ni rutas. Se conservan comprobaciones publicadas en Sites18. Revisión por impacto: retiro del enlace de marca y sus estilos; motor cartográfico, datos, consultas, paneles y contratos sin cambios. Evidencia anterior vigente para funciones sin cambios; no se atribuye una repetición de esas mediciones: Build oficial11oct2026 completa5etapas. Worker6.13.0 y CSS del motor conservados sin cambio respecto a Sites17; compilación se sirve desde dist con globo funcional, sin rutas Vite de desarrollo.",
+          "updatedAt": "2026-10-11T12:16:24.486Z",
           "history": [
             {
               "at": "2026-10-11T02:16:29.225Z",
@@ -2254,6 +2444,16 @@
               "at": "2026-10-11T12:06:59.322Z",
               "status": "terminado",
               "evidence": "Build oficial11oct2026 completa5etapas. Worker6.13.0 y CSS del motor conservados sin cambio respecto a Sites17; compilación se sirve desde dist con globo funcional, sin rutas Vite de desarrollo."
+            },
+            {
+              "at": "2026-10-11T12:15:42.608Z",
+              "status": "pendiente",
+              "evidence": "Reverificar: cambiaron los requisitos del sprint."
+            },
+            {
+              "at": "2026-10-11T12:16:24.486Z",
+              "status": "terminado",
+              "evidence": "Plan18: revisadas diferencias de alcance; ningún cambio en Globe, proveedor, fuentes, worker, rendimiento ni rutas. Se conservan comprobaciones publicadas en Sites18. Revisión por impacto: retiro del enlace de marca y sus estilos; motor cartográfico, datos, consultas, paneles y contratos sin cambios. Evidencia anterior vigente para funciones sin cambios; no se atribuye una repetición de esas mediciones: Build oficial11oct2026 completa5etapas. Worker6.13.0 y CSS del motor conservados sin cambio respecto a Sites17; compilación se sirve desde dist con globo funcional, sin rutas Vite de desarrollo."
             }
           ]
         },
@@ -2264,8 +2464,8 @@
           "text": "La selección de motor, estilo y fuentes pasa muestras de composición de las escrituras requeridas; no se traslada al sprint 2 una incompatibilidad conocida que obligue a reemplazar el mapa.",
           "kind": "aceptacion",
           "status": "terminado",
-          "evidence": "No cambiaron map-fonts, archivos de fuentes, glifos, shaping ni motor; diff limita estilo a nombre descriptivo. Se revalida compatibilidad por conservación de las20muestras reales y contratos previos, no como una nueva revisión lingüística.25pruebas de contratos/mapa pasan.",
-          "updatedAt": "2026-10-11T12:06:59.427Z",
+          "evidence": "Plan18: revisadas diferencias de alcance; ningún cambio en Globe, proveedor, fuentes, worker, rendimiento ni rutas. Se conservan comprobaciones publicadas en Sites18. Revisión por impacto: retiro del enlace de marca y sus estilos; motor cartográfico, datos, consultas, paneles y contratos sin cambios. Evidencia anterior vigente para funciones sin cambios; no se atribuye una repetición de esas mediciones: No cambiaron map-fonts, archivos de fuentes, glifos, shaping ni motor; diff limita estilo a nombre descriptivo. Se revalida compatibilidad por conservación de las20muestras reales y contratos previos, no como una nueva revisión lingüística.25pruebas de contratos/mapa pasan.",
+          "updatedAt": "2026-10-11T12:16:24.639Z",
           "history": [
             {
               "at": "2026-10-11T02:16:29.309Z",
@@ -2371,6 +2571,16 @@
               "at": "2026-10-11T12:06:59.427Z",
               "status": "terminado",
               "evidence": "No cambiaron map-fonts, archivos de fuentes, glifos, shaping ni motor; diff limita estilo a nombre descriptivo. Se revalida compatibilidad por conservación de las20muestras reales y contratos previos, no como una nueva revisión lingüística.25pruebas de contratos/mapa pasan."
+            },
+            {
+              "at": "2026-10-11T12:15:42.608Z",
+              "status": "pendiente",
+              "evidence": "Reverificar: cambiaron los requisitos del sprint."
+            },
+            {
+              "at": "2026-10-11T12:16:24.639Z",
+              "status": "terminado",
+              "evidence": "Plan18: revisadas diferencias de alcance; ningún cambio en Globe, proveedor, fuentes, worker, rendimiento ni rutas. Se conservan comprobaciones publicadas en Sites18. Revisión por impacto: retiro del enlace de marca y sus estilos; motor cartográfico, datos, consultas, paneles y contratos sin cambios. Evidencia anterior vigente para funciones sin cambios; no se atribuye una repetición de esas mediciones: No cambiaron map-fonts, archivos de fuentes, glifos, shaping ni motor; diff limita estilo a nombre descriptivo. Se revalida compatibilidad por conservación de las20muestras reales y contratos previos, no como una nueva revisión lingüística.25pruebas de contratos/mapa pasan."
             }
           ]
         },
@@ -2400,11 +2610,11 @@
           "id": "S01-1B-02",
           "blockId": "1B",
           "group": "Bloque 1B Pantalla y controles",
-          "text": "Mantener solamente el icono y el nombre elegido «Mapa Táctico» flotando sobre el globo. Aplicar el nombre al título del navegador, proyecto Sites, metadatos y disclaimer. La marca no reserva una franja de pantalla ni intercepta gestos fuera de su área real.",
+          "text": "Eliminar completamente el icono y el nombre flotantes sobre el globo, sin sustituirlos por otra cabecera, enlace, espacio reservado ni marca superpuesta. Conservar «Mapa Táctico» en el título del navegador, proyecto Sites, metadatos y disclaimer; el favicon pertenece a la pestaña, no al mapa.",
           "kind": "operacion",
           "status": "en_curso",
-          "evidence": "Nombre elegido Mapa Táctico aplicado a fuente/metadatos/Sites/seguimiento. Prueba visual responsiva y publicación en curso.",
-          "updatedAt": "2026-10-11T12:06:59.523Z",
+          "evidence": "Retirados logo y nombre superpuestos del código; comprobación y publicación en curso.",
+          "updatedAt": "2026-10-11T12:16:24.806Z",
           "history": [
             {
               "at": "2026-10-11T02:21:43.774Z",
@@ -2425,6 +2635,21 @@
               "at": "2026-10-11T12:06:59.523Z",
               "status": "en_curso",
               "evidence": "Nombre elegido Mapa Táctico aplicado a fuente/metadatos/Sites/seguimiento. Prueba visual responsiva y publicación en curso."
+            },
+            {
+              "at": "2026-10-11T12:10:06.248Z",
+              "status": "terminado",
+              "evidence": "Sites18, commit170c258c96ccaf05283e7509d8015f40513f0cf0: proyecto Sites y título publicados Mapa Táctico. Chrome154320×568 y navegador integrado155: marca flotante correcta sin cabecera; ancho174px, sin overflow ni cruce con herramientas. Disclaimer nuevo, constanteSITE_NAME compartida; plan17 y10HTML sincronizados."
+            },
+            {
+              "at": "2026-10-11T12:15:42.608Z",
+              "status": "pendiente",
+              "evidence": "Cambió el requisito en el plan; necesita nueva verificación."
+            },
+            {
+              "at": "2026-10-11T12:16:24.806Z",
+              "status": "en_curso",
+              "evidence": "Retirados logo y nombre superpuestos del código; comprobación y publicación en curso."
             }
           ]
         },
@@ -2779,11 +3004,11 @@
           "id": "S01-1B-AC-01",
           "blockId": "1B",
           "group": "Bloque 1B Pantalla y controles",
-          "text": "En ventanas estrechas y amplias, nombre e icono flotan sin reservar una cabecera; controles de zoom, búsqueda, selección y regreso global funcionan con ratón y teclado.",
+          "text": "En ventanas estrechas y amplias no aparecen nombre, logo ni cabecera superpuestos al mapa; los controles de zoom, búsqueda, selección y regreso global funcionan con ratón y teclado.",
           "kind": "aceptacion",
           "status": "pendiente",
-          "evidence": "Reverificar: cambiaron los requisitos del sprint.",
-          "updatedAt": "2026-10-11T12:05:08.582Z",
+          "evidence": "",
+          "updatedAt": "2026-10-11T12:15:42.608Z",
           "history": [
             {
               "at": "2026-10-11T11:26:36.892Z",
@@ -2794,6 +3019,16 @@
               "at": "2026-10-11T12:05:08.582Z",
               "status": "pendiente",
               "evidence": "Reverificar: cambiaron los requisitos del sprint."
+            },
+            {
+              "at": "2026-10-11T12:10:06.769Z",
+              "status": "terminado",
+              "evidence": "Sites18 verificada: Mapa Táctico en Sites, pestaña y marca; Chrome154320×568 sin overflow y ancho174px; integrado155 carga globo y controles. Compilación320CSScon200%texto no cruza marca/herramientas;25pruebas y build pasan. Identidad/aplicación conservan ID y público. Revisión por impacto: este cambio solo modifica nombre/metadata y CSS de la marca; contratos y comportamiento conservados. Evidencia previa vigente para las funciones sin cambios, sin atribuirles una prueba nueva: Sites16: marca flotante, sin cabecera. Chrome e integrado: controles de zoom, búsqueda, ubicación y global por ratón/teclado;320CSS sin solapamiento tarjeta/controles."
+            },
+            {
+              "at": "2026-10-11T12:15:42.608Z",
+              "status": "pendiente",
+              "evidence": "Cambió el requisito en el plan; necesita nueva verificación."
             }
           ]
         },
@@ -2804,7 +3039,7 @@
           "kind": "aceptacion",
           "status": "pendiente",
           "evidence": "Reverificar: cambiaron los requisitos del sprint.",
-          "updatedAt": "2026-10-11T12:05:08.582Z",
+          "updatedAt": "2026-10-11T12:15:42.608Z",
           "history": [
             {
               "at": "2026-10-11T02:34:48.932Z",
@@ -2820,18 +3055,29 @@
               "at": "2026-10-11T12:05:08.582Z",
               "status": "pendiente",
               "evidence": "Reverificar: cambiaron los requisitos del sprint."
+            },
+            {
+              "at": "2026-10-11T12:10:06.865Z",
+              "status": "terminado",
+              "evidence": "Sites18 verificada: Mapa Táctico en Sites, pestaña y marca; Chrome154320×568 sin overflow y ancho174px; integrado155 carga globo y controles. Compilación320CSScon200%texto no cruza marca/herramientas;25pruebas y build pasan. Identidad/aplicación conservan ID y público. Revisión por impacto: este cambio solo modifica nombre/metadata y CSS de la marca; contratos y comportamiento conservados. Evidencia previa vigente para las funciones sin cambios, sin atribuirles una prueba nueva: Sites14/16 conserva motor/estilo. Repetición real de SantoDomingo(-69.8845,18.4737), zoom19,pitch0,5m=35.311237pxCSS; nombres ElConde/ArzobispoMeriño visibles, sin POI; global vuelve sin recarga."
+            },
+            {
+              "at": "2026-10-11T12:15:42.608Z",
+              "status": "pendiente",
+              "evidence": "Reverificar: cambiaron los requisitos del sprint."
             }
           ],
           "blockId": "1B"
         },
         {
           "id": "S01-1B-AC-03",
+          "blockId": "1B",
           "group": "Bloque 1B Pantalla y controles",
-          "text": "La marca flota y el globo puede llenar toda la pantalla al acercar.",
+          "text": "El globo puede llenar toda la pantalla al acercar, sin marca flotante ni franja reservada.",
           "kind": "aceptacion",
           "status": "pendiente",
-          "evidence": "Reverificar: cambiaron los requisitos del sprint.",
-          "updatedAt": "2026-10-11T12:05:08.582Z",
+          "evidence": "",
+          "updatedAt": "2026-10-11T12:15:42.608Z",
           "history": [
             {
               "at": "2026-10-11T02:34:49.022Z",
@@ -2847,9 +3093,18 @@
               "at": "2026-10-11T12:05:08.582Z",
               "status": "pendiente",
               "evidence": "Reverificar: cambiaron los requisitos del sprint."
+            },
+            {
+              "at": "2026-10-11T12:10:06.964Z",
+              "status": "terminado",
+              "evidence": "Sites18 verificada: Mapa Táctico en Sites, pestaña y marca; Chrome154320×568 sin overflow y ancho174px; integrado155 carga globo y controles. Compilación320CSScon200%texto no cruza marca/herramientas;25pruebas y build pasan. Identidad/aplicación conservan ID y público. Revisión por impacto: este cambio solo modifica nombre/metadata y CSS de la marca; contratos y comportamiento conservados. Evidencia previa vigente para las funciones sin cambios, sin atribuirles una prueba nueva: DOM/Screenshot reales: marca absoluta sin franja; globo y vista local ocupan todo el viewport. Ventanas320x568 y1440x900 comprobadas; zoom19 llena pantalla."
+            },
+            {
+              "at": "2026-10-11T12:15:42.608Z",
+              "status": "pendiente",
+              "evidence": "Cambió el requisito en el plan; necesita nueva verificación."
             }
-          ],
-          "blockId": "1B"
+          ]
         },
         {
           "id": "S01-1B-AC-04",
@@ -2859,7 +3114,7 @@
           "kind": "aceptacion",
           "status": "pendiente",
           "evidence": "Reverificar: cambiaron los requisitos del sprint.",
-          "updatedAt": "2026-10-11T12:05:08.582Z",
+          "updatedAt": "2026-10-11T12:15:42.608Z",
           "history": [
             {
               "at": "2026-10-11T10:11:13.951Z",
@@ -2875,6 +3130,16 @@
               "at": "2026-10-11T12:05:08.582Z",
               "status": "pendiente",
               "evidence": "Reverificar: cambiaron los requisitos del sprint."
+            },
+            {
+              "at": "2026-10-11T12:10:07.061Z",
+              "status": "terminado",
+              "evidence": "Sites18 verificada: Mapa Táctico en Sites, pestaña y marca; Chrome154320×568 sin overflow y ancho174px; integrado155 carga globo y controles. Compilación320CSScon200%texto no cruza marca/herramientas;25pruebas y build pasan. Identidad/aplicación conservan ID y público. Revisión por impacto: este cambio solo modifica nombre/metadata y CSS de la marca; contratos y comportamiento conservados. Evidencia previa vigente para las funciones sin cambios, sin atribuirles una prueba nueva: Servicio público16: solo country/city. Queries CalleElConde,1600PennsylvaniaAvenue,TorreEiffel,Gazcue devolvieron0; tests de PPLX/ST/RD/BLDG/desconocidos y caché mixta descartan objetos. Estilo geográfico conserva nombres de calles y no tiene POI/satélite."
+            },
+            {
+              "at": "2026-10-11T12:15:42.608Z",
+              "status": "pendiente",
+              "evidence": "Reverificar: cambiaron los requisitos del sprint."
             }
           ]
         },
@@ -2885,7 +3150,7 @@
           "kind": "aceptacion",
           "status": "pendiente",
           "evidence": "Reverificar: cambiaron los requisitos del sprint.",
-          "updatedAt": "2026-10-11T12:05:08.582Z",
+          "updatedAt": "2026-10-11T12:15:42.608Z",
           "history": [
             {
               "at": "2026-10-11T02:34:49.290Z",
@@ -2901,6 +3166,16 @@
               "at": "2026-10-11T12:05:08.582Z",
               "status": "pendiente",
               "evidence": "Reverificar: cambiaron los requisitos del sprint."
+            },
+            {
+              "at": "2026-10-11T12:10:07.161Z",
+              "status": "terminado",
+              "evidence": "Sites18 verificada: Mapa Táctico en Sites, pestaña y marca; Chrome154320×568 sin overflow y ancho174px; integrado155 carga globo y controles. Compilación320CSScon200%texto no cruza marca/herramientas;25pruebas y build pasan. Identidad/aplicación conservan ID y público. Revisión por impacto: este cambio solo modifica nombre/metadata y CSS de la marca; contratos y comportamiento conservados. Evidencia previa vigente para las funciones sin cambios, sin atribuirles una prueba nueva: Santiago muestra Chile/RepúblicaDominicana/Cuba y regiones; elegir dominicana centra(-70.69085,19.45036). zzzzzzzz muestra vacío útil. Fallo503 inyectado sobre dominio14 muestra error; reintento real recupera Madrid."
+            },
+            {
+              "at": "2026-10-11T12:15:42.608Z",
+              "status": "pendiente",
+              "evidence": "Reverificar: cambiaron los requisitos del sprint."
             }
           ],
           "blockId": "1B"
@@ -2912,7 +3187,7 @@
           "kind": "aceptacion",
           "status": "pendiente",
           "evidence": "Reverificar: cambiaron los requisitos del sprint.",
-          "updatedAt": "2026-10-11T12:05:08.582Z",
+          "updatedAt": "2026-10-11T12:15:42.608Z",
           "history": [
             {
               "at": "2026-10-11T02:34:49.110Z",
@@ -2928,6 +3203,16 @@
               "at": "2026-10-11T12:05:08.582Z",
               "status": "pendiente",
               "evidence": "Reverificar: cambiaron los requisitos del sprint."
+            },
+            {
+              "at": "2026-10-11T12:10:07.259Z",
+              "status": "terminado",
+              "evidence": "Sites18 verificada: Mapa Táctico en Sites, pestaña y marca; Chrome154320×568 sin overflow y ancho174px; integrado155 carga globo y controles. Compilación320CSScon200%texto no cruza marca/herramientas;25pruebas y build pasan. Identidad/aplicación conservan ID y público. Revisión por impacto: este cambio solo modifica nombre/metadata y CSS de la marca; contratos y comportamiento conservados. Evidencia previa vigente para las funciones sin cambios, sin atribuirles una prueba nueva: Escape deja0paneles y foco BuscarLugar en integrado; Tab/campos/selección accesibles, coordenadas alternativa al clic. Error de catálogo conserva mapa y controles disponibles. Evidencia previa de1B07 preservada."
+            },
+            {
+              "at": "2026-10-11T12:15:42.608Z",
+              "status": "pendiente",
+              "evidence": "Reverificar: cambiaron los requisitos del sprint."
             }
           ],
           "blockId": "1B"
@@ -2939,7 +3224,7 @@
           "kind": "aceptacion",
           "status": "pendiente",
           "evidence": "Reverificar: cambiaron los requisitos del sprint.",
-          "updatedAt": "2026-10-11T12:05:08.582Z",
+          "updatedAt": "2026-10-11T12:15:42.608Z",
           "history": [
             {
               "at": "2026-10-11T02:34:49.196Z",
@@ -2955,6 +3240,16 @@
               "at": "2026-10-11T12:05:08.582Z",
               "status": "pendiente",
               "evidence": "Reverificar: cambiaron los requisitos del sprint."
+            },
+            {
+              "at": "2026-10-11T12:10:07.380Z",
+              "status": "terminado",
+              "evidence": "Sites18 verificada: Mapa Táctico en Sites, pestaña y marca; Chrome154320×568 sin overflow y ancho174px; integrado155 carga globo y controles. Compilación320CSScon200%texto no cruza marca/herramientas;25pruebas y build pasan. Identidad/aplicación conservan ID y público. Revisión por impacto: este cambio solo modifica nombre/metadata y CSS de la marca; contratos y comportamiento conservados. Evidencia previa vigente para las funciones sin cambios, sin atribuirles una prueba nueva: Escala real repetida35.311px/5m en zoom19. Motor/Globe sin cambios frente a mediciones y ensayo de pérdida de contexto previos, conservados en historial1A10/1B11 y DECISION_CARTOGRAFICA.md; reintento/lectura alternativa siguen presentes. No se atribuye una nueva medición GPU a esta revisión."
+            },
+            {
+              "at": "2026-10-11T12:15:42.608Z",
+              "status": "pendiente",
+              "evidence": "Reverificar: cambiaron los requisitos del sprint."
             }
           ],
           "blockId": "1B"
@@ -2967,7 +3262,7 @@
           "kind": "aceptacion",
           "status": "pendiente",
           "evidence": "Reverificar: cambiaron los requisitos del sprint.",
-          "updatedAt": "2026-10-11T12:05:08.582Z",
+          "updatedAt": "2026-10-11T12:15:42.608Z",
           "history": [
             {
               "at": "2026-10-11T02:34:49.383Z",
@@ -2988,6 +3283,16 @@
               "at": "2026-10-11T12:05:08.582Z",
               "status": "pendiente",
               "evidence": "Reverificar: cambiaron los requisitos del sprint."
+            },
+            {
+              "at": "2026-10-11T12:10:07.487Z",
+              "status": "terminado",
+              "evidence": "Sites18 verificada: Mapa Táctico en Sites, pestaña y marca; Chrome154320×568 sin overflow y ancho174px; integrado155 carga globo y controles. Compilación320CSScon200%texto no cruza marca/herramientas;25pruebas y build pasan. Identidad/aplicación conservan ID y público. Revisión por impacto: este cambio solo modifica nombre/metadata y CSS de la marca; contratos y comportamiento conservados. Evidencia previa vigente para las funciones sin cambios, sin atribuirles una prueba nueva: Sites14–16: país/ciudad ambigua/vacío/400 real; límite120 y429 real y recuperación UI. Retardo real2s Madrid ignorado ante Santiago, sin sobrescribir.20 tests pasan, incluyendo caché validada/tipos mixtos/HTML inválido/concurrencia. Catálogo, caché, cuotas y versiones documentados; servidor sin identidad."
+            },
+            {
+              "at": "2026-10-11T12:15:42.608Z",
+              "status": "pendiente",
+              "evidence": "Reverificar: cambiaron los requisitos del sprint."
             }
           ]
         },
@@ -2999,7 +3304,7 @@
           "kind": "aceptacion",
           "status": "pendiente",
           "evidence": "Reverificar: cambiaron los requisitos del sprint.",
-          "updatedAt": "2026-10-11T12:05:08.582Z",
+          "updatedAt": "2026-10-11T12:15:42.608Z",
           "history": [
             {
               "at": "2026-10-11T02:34:49.470Z",
@@ -3018,6 +3323,16 @@
             },
             {
               "at": "2026-10-11T12:05:08.582Z",
+              "status": "pendiente",
+              "evidence": "Reverificar: cambiaron los requisitos del sprint."
+            },
+            {
+              "at": "2026-10-11T12:10:07.605Z",
+              "status": "terminado",
+              "evidence": "Sites18 verificada: Mapa Táctico en Sites, pestaña y marca; Chrome154320×568 sin overflow y ancho174px; integrado155 carga globo y controles. Compilación320CSScon200%texto no cruza marca/herramientas;25pruebas y build pasan. Identidad/aplicación conservan ID y público. Revisión por impacto: este cambio solo modifica nombre/metadata y CSS de la marca; contratos y comportamiento conservados. Evidencia previa vigente para las funciones sin cambios, sin atribuirles una prueba nueva: Chrome154 e integrado155 según decisión explícita del usuario. Texto200% y320CSS: sin overflow, panel scroll y botones44px; Sites16 cero intersecciones.1440x900 y390x844 sin tarjetas iniciales; tamaños temporales y estilos de prueba restaurados."
+            },
+            {
+              "at": "2026-10-11T12:15:42.608Z",
               "status": "pendiente",
               "evidence": "Reverificar: cambiaron los requisitos del sprint."
             }
@@ -3273,7 +3588,7 @@
           "kind": "aceptacion",
           "status": "pendiente",
           "evidence": "Reverificar: cambiaron los requisitos del sprint.",
-          "updatedAt": "2026-10-11T12:05:08.582Z",
+          "updatedAt": "2026-10-11T12:15:42.608Z",
           "history": [
             {
               "at": "2026-10-11T11:51:35.817Z",
@@ -3289,6 +3604,16 @@
               "at": "2026-10-11T12:05:08.582Z",
               "status": "pendiente",
               "evidence": "Reverificar: cambiaron los requisitos del sprint."
+            },
+            {
+              "at": "2026-10-11T12:11:11.590Z",
+              "status": "terminado",
+              "evidence": "Sites18: integrado155 comprueba Disclaimer con Mapa Táctico, ficha Beirut con fuentes,2capas→0trasCerrar, cámara[-30,20]/zoom1.25conservados y focoEscenarios. document.title sigue Mapa Táctico al regresar. Chrome154320CSSy200%texto verificado;25pruebas y build pasan. Revisión por impacto: este cambio solo modifica nombre/metadata y CSS de la marca; contratos y comportamiento conservados. Evidencia previa vigente para las funciones sin cambios, sin atribuirles una prueba nueva: Sites17, commit9dfbc386da401239eef92e6a4ec877843811fe08: Chrome154 e integrado155 abren paneles por solicitud; Escape/Cerrar/Atrás dejan0paneles y foco en Escenarios/Menú. Controles sustituidos desmontados. Texto200% compilado sin solapamientos."
+            },
+            {
+              "at": "2026-10-11T12:15:42.608Z",
+              "status": "pendiente",
+              "evidence": "Reverificar: cambiaron los requisitos del sprint."
             }
           ]
         },
@@ -3300,7 +3625,7 @@
           "kind": "aceptacion",
           "status": "pendiente",
           "evidence": "Reverificar: cambiaron los requisitos del sprint.",
-          "updatedAt": "2026-10-11T12:05:08.582Z",
+          "updatedAt": "2026-10-11T12:15:42.608Z",
           "history": [
             {
               "at": "2026-10-11T11:51:36.024Z",
@@ -3316,6 +3641,16 @@
               "at": "2026-10-11T12:05:08.582Z",
               "status": "pendiente",
               "evidence": "Reverificar: cambiaron los requisitos del sprint."
+            },
+            {
+              "at": "2026-10-11T12:11:11.687Z",
+              "status": "terminado",
+              "evidence": "Sites18: integrado155 comprueba Disclaimer con Mapa Táctico, ficha Beirut con fuentes,2capas→0trasCerrar, cámara[-30,20]/zoom1.25conservados y focoEscenarios. document.title sigue Mapa Táctico al regresar. Chrome154320CSSy200%texto verificado;25pruebas y build pasan. Revisión por impacto: este cambio solo modifica nombre/metadata y CSS de la marca; contratos y comportamiento conservados. Evidencia previa vigente para las funciones sin cambios, sin atribuirles una prueba nueva: Sites17: fichas Beirut/ONU y nuclear/CICR revisadas en ambos navegadores, sin población ficticia ni cifras arbitrarias. Búsqueda estática de fictionalOutcome y otros textos del prototipo en app/components/lib/content devuelve0coincidencias. Páginas públicas200sin autenticación."
+            },
+            {
+              "at": "2026-10-11T12:15:42.608Z",
+              "status": "pendiente",
+              "evidence": "Reverificar: cambiaron los requisitos del sprint."
             }
           ]
         },
@@ -3327,7 +3662,7 @@
           "kind": "aceptacion",
           "status": "pendiente",
           "evidence": "Reverificar: cambiaron los requisitos del sprint.",
-          "updatedAt": "2026-10-11T12:05:08.582Z",
+          "updatedAt": "2026-10-11T12:15:42.608Z",
           "history": [
             {
               "at": "2026-10-11T11:51:36.208Z",
@@ -3343,6 +3678,16 @@
               "at": "2026-10-11T12:05:08.582Z",
               "status": "pendiente",
               "evidence": "Reverificar: cambiaron los requisitos del sprint."
+            },
+            {
+              "at": "2026-10-11T12:11:11.767Z",
+              "status": "terminado",
+              "evidence": "Sites18: integrado155 comprueba Disclaimer con Mapa Táctico, ficha Beirut con fuentes,2capas→0trasCerrar, cámara[-30,20]/zoom1.25conservados y focoEscenarios. document.title sigue Mapa Táctico al regresar. Chrome154320CSSy200%texto verificado;25pruebas y build pasan. Revisión por impacto: este cambio solo modifica nombre/metadata y CSS de la marca; contratos y comportamiento conservados. Evidencia previa vigente para las funciones sin cambios, sin atribuirles una prueba nueva: Sites17: firmaBeirut context-20261011-2, referencia[35.50157,33.89332],2capas reales→0trasEscape, conserva puntoSantiago[-70.69085,19.45036]. Contratos/capacidades:25pruebas pasan. Respuesta tardía1500ms descartada al sustituir panel en compilación idéntica; fallo503HTML inyectado en publicada se recupera con España200y2resultados, intercepción restaurada."
+            },
+            {
+              "at": "2026-10-11T12:15:42.608Z",
+              "status": "pendiente",
+              "evidence": "Reverificar: cambiaron los requisitos del sprint."
             }
           ]
         },
@@ -3353,7 +3698,7 @@
           "kind": "aceptacion",
           "status": "pendiente",
           "evidence": "Reverificar: cambiaron los requisitos del sprint.",
-          "updatedAt": "2026-10-11T12:05:08.582Z",
+          "updatedAt": "2026-10-11T12:15:42.608Z",
           "history": [
             {
               "at": "2026-10-11T11:51:36.370Z",
@@ -3369,6 +3714,16 @@
               "at": "2026-10-11T12:05:08.582Z",
               "status": "pendiente",
               "evidence": "Reverificar: cambiaron los requisitos del sprint."
+            },
+            {
+              "at": "2026-10-11T12:11:11.858Z",
+              "status": "terminado",
+              "evidence": "Sites18: integrado155 comprueba Disclaimer con Mapa Táctico, ficha Beirut con fuentes,2capas→0trasCerrar, cámara[-30,20]/zoom1.25conservados y focoEscenarios. document.title sigue Mapa Táctico al regresar. Chrome154320CSSy200%texto verificado;25pruebas y build pasan. Revisión por impacto: este cambio solo modifica nombre/metadata y CSS de la marca; contratos y comportamiento conservados. Evidencia previa vigente para las funciones sin cambios, sin atribuirles una prueba nueva: Sites17: integrado155 con ventanas CSS390×844 y1440×900 medidas en DOM; mapa ocupa exactamente cada viewport,0paneles y0puntos iniciales. Chrome154 publicado1440×900 también0paneles. Compilación idéntica en320×568 con200%texto: sin overflow horizontal y panel desplazable sin cruzar herramientas."
+            },
+            {
+              "at": "2026-10-11T12:15:42.608Z",
+              "status": "pendiente",
+              "evidence": "Reverificar: cambiaron los requisitos del sprint."
             }
           ],
           "blockId": "1C"
@@ -3380,7 +3735,7 @@
           "kind": "aceptacion",
           "status": "pendiente",
           "evidence": "Reverificar: cambiaron los requisitos del sprint.",
-          "updatedAt": "2026-10-11T12:05:08.582Z",
+          "updatedAt": "2026-10-11T12:15:42.608Z",
           "history": [
             {
               "at": "2026-10-11T11:51:36.483Z",
@@ -3396,6 +3751,16 @@
               "at": "2026-10-11T12:05:08.582Z",
               "status": "pendiente",
               "evidence": "Reverificar: cambiaron los requisitos del sprint."
+            },
+            {
+              "at": "2026-10-11T12:11:11.942Z",
+              "status": "terminado",
+              "evidence": "Sites18: integrado155 comprueba Disclaimer con Mapa Táctico, ficha Beirut con fuentes,2capas→0trasCerrar, cámara[-30,20]/zoom1.25conservados y focoEscenarios. document.title sigue Mapa Táctico al regresar. Chrome154320CSSy200%texto verificado;25pruebas y build pasan. Revisión por impacto: este cambio solo modifica nombre/metadata y CSS de la marca; contratos y comportamiento conservados. Evidencia previa vigente para las funciones sin cambios, sin atribuirles una prueba nueva: Sites17 integrado155: puntoSantoDomingo[-69.8845,18.4737], abrir/Consultar/Cerrar conserva zoom19 y punto;5m=35.311237px CSS en390×844,pitch0. Chrome154 publicado: arrastre[300,300]→[420,350] conserva1marcador y puntoSantiago. Referencia explícitaBeirut conserva punto libre y al cerrar mantiene cámaraBeirutzoom12."
+            },
+            {
+              "at": "2026-10-11T12:15:42.608Z",
+              "status": "pendiente",
+              "evidence": "Reverificar: cambiaron los requisitos del sprint."
             }
           ],
           "blockId": "1C"
@@ -3405,7 +3770,7 @@
     {
       "number": 2,
       "title": "Idiomas y nombres geográficos",
-      "updatedAt": "2026-10-11T12:05:08.582Z",
+      "updatedAt": "2026-10-11T12:15:42.608Z",
       "phase": "pendiente",
       "approval": {
         "status": "pendiente",
@@ -3494,6 +3859,11 @@
         },
         {
           "at": "2026-10-11T12:05:08.582Z",
+          "action": "aceptacion_invalidada",
+          "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
+        },
+        {
+          "at": "2026-10-11T12:15:42.608Z",
           "action": "aceptacion_invalidada",
           "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
         }
@@ -3906,7 +4276,7 @@
     {
       "number": 3,
       "title": "Población y consulta territorial",
-      "updatedAt": "2026-10-11T12:05:08.582Z",
+      "updatedAt": "2026-10-11T12:15:42.608Z",
       "phase": "pendiente",
       "approval": {
         "status": "pendiente",
@@ -3995,6 +4365,11 @@
         },
         {
           "at": "2026-10-11T12:05:08.582Z",
+          "action": "aceptacion_invalidada",
+          "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
+        },
+        {
+          "at": "2026-10-11T12:15:42.608Z",
           "action": "aceptacion_invalidada",
           "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
         }
@@ -4600,7 +4975,7 @@
     {
       "number": 4,
       "title": "Accidentes",
-      "updatedAt": "2026-10-11T12:05:08.582Z",
+      "updatedAt": "2026-10-11T12:15:42.608Z",
       "phase": "pendiente",
       "approval": {
         "status": "pendiente",
@@ -4689,6 +5064,11 @@
         },
         {
           "at": "2026-10-11T12:05:08.582Z",
+          "action": "aceptacion_invalidada",
+          "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
+        },
+        {
+          "at": "2026-10-11T12:15:42.608Z",
           "action": "aceptacion_invalidada",
           "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
         }
@@ -4941,7 +5321,7 @@
     {
       "number": 5,
       "title": "Fenómenos naturales",
-      "updatedAt": "2026-10-11T12:05:08.582Z",
+      "updatedAt": "2026-10-11T12:15:42.608Z",
       "phase": "pendiente",
       "approval": {
         "status": "pendiente",
@@ -5030,6 +5410,11 @@
         },
         {
           "at": "2026-10-11T12:05:08.582Z",
+          "action": "aceptacion_invalidada",
+          "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
+        },
+        {
+          "at": "2026-10-11T12:15:42.608Z",
           "action": "aceptacion_invalidada",
           "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
         }
@@ -5255,7 +5640,7 @@
     {
       "number": 6,
       "title": "Escenarios militares históricos",
-      "updatedAt": "2026-10-11T12:05:08.582Z",
+      "updatedAt": "2026-10-11T12:15:42.608Z",
       "phase": "pendiente",
       "approval": {
         "status": "pendiente",
@@ -5344,6 +5729,11 @@
         },
         {
           "at": "2026-10-11T12:05:08.582Z",
+          "action": "aceptacion_invalidada",
+          "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
+        },
+        {
+          "at": "2026-10-11T12:15:42.608Z",
           "action": "aceptacion_invalidada",
           "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
         }
@@ -5530,7 +5920,7 @@
     {
       "number": 7,
       "title": "Tierra y evidencia científica",
-      "updatedAt": "2026-10-11T12:05:08.582Z",
+      "updatedAt": "2026-10-11T12:15:42.608Z",
       "phase": "pendiente",
       "approval": {
         "status": "pendiente",
@@ -5619,6 +6009,11 @@
         },
         {
           "at": "2026-10-11T12:05:08.582Z",
+          "action": "aceptacion_invalidada",
+          "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
+        },
+        {
+          "at": "2026-10-11T12:15:42.608Z",
           "action": "aceptacion_invalidada",
           "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
         }
@@ -5970,7 +6365,7 @@
     {
       "number": 8,
       "title": "Nombre e identidad del portal",
-      "updatedAt": "2026-10-11T12:05:08.582Z",
+      "updatedAt": "2026-10-11T12:16:50.767Z",
       "phase": "pendiente",
       "approval": {
         "status": "pendiente",
@@ -5985,7 +6380,7 @@
         },
         {
           "action": "Una vez aplicada la opción elegida, abrir el portal en ventanas estrechas y amplias.",
-          "expected": "Nombre e icono flotan, son legibles y no crean una cabecera ni reducen el mapa."
+          "expected": "No hay nombre ni icono flotantes sobre el mapa; la identidad permanece en la pestaña y las vistas de información solicitadas."
         },
         {
           "action": "Revisar título de pestaña, favicon, menú, información y disclaimer en varios idiomas.",
@@ -6061,6 +6456,16 @@
           "at": "2026-10-11T12:05:08.582Z",
           "action": "aceptacion_invalidada",
           "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
+        },
+        {
+          "at": "2026-10-11T12:15:42.608Z",
+          "action": "aceptacion_invalidada",
+          "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
+        },
+        {
+          "at": "2026-10-11T12:16:50.767Z",
+          "action": "aceptacion_invalidada",
+          "reference": "Cambio de requisitos o contratos desde el sprint 8; verificar de nuevo antes de continuar."
         }
       ],
       "points": [
@@ -6222,14 +6627,20 @@
         },
         {
           "id": "S08-8B-02",
+          "blockId": "8B",
           "group": "Bloque 8B Aplicación completa",
-          "text": "Crear o adaptar el icono vectorial, favicon y marca flotante. Mantener fondo azul #003876 y componentes blancos.",
+          "text": "Crear o adaptar el favicon para la pestaña. No introducir icono ni nombre flotantes sobre el mapa. Conservar fondo exterior negro, globo azul y componentes blancos.",
           "kind": "operacion",
           "status": "pendiente",
           "evidence": "",
-          "updatedAt": "2026-10-10T13:47:29.679Z",
-          "history": [],
-          "blockId": "8B"
+          "updatedAt": "2026-10-11T12:15:42.608Z",
+          "history": [
+            {
+              "at": "2026-10-11T12:15:42.608Z",
+              "status": "pendiente",
+              "evidence": "Cambió el requisito en el plan; necesita nueva verificación."
+            }
+          ]
         },
         {
           "id": "S08-8B-03",
@@ -6244,14 +6655,20 @@
         },
         {
           "id": "S08-8B-04",
+          "blockId": "8B",
           "group": "Bloque 8B Aplicación completa",
-          "text": "Evitar un subtítulo permanente o una nueva cabecera. La marca no reduce el espacio del mapa ni añade mensajes publicitarios.",
+          "text": "Mantener el mapa libre de nombre, logo, subtítulo permanente y cabecera. Aplicar la identidad en metadatos y vistas de información solicitadas, sin reducir el espacio del mapa ni añadir mensajes publicitarios.",
           "kind": "operacion",
           "status": "pendiente",
           "evidence": "",
-          "updatedAt": "2026-10-10T13:47:29.679Z",
-          "history": [],
-          "blockId": "8B"
+          "updatedAt": "2026-10-11T12:15:42.608Z",
+          "history": [
+            {
+              "at": "2026-10-11T12:15:42.608Z",
+              "status": "pendiente",
+              "evidence": "Cambió el requisito en el plan; necesita nueva verificación."
+            }
+          ]
         },
         {
           "id": "S08-8B-05",
@@ -6299,14 +6716,20 @@
         },
         {
           "id": "S08-8B-AC-04",
+          "blockId": "8B",
           "group": "Bloque 8B Aplicación completa",
-          "text": "La identidad no añade una barra, es legible en ventanas estrechas y conserva el acceso a los controles.",
+          "text": "No aparecen nombre, icono ni cabecera superpuestos al mapa; la identidad en pestaña y vistas de información es legible en ventanas estrechas y conserva el acceso a los controles.",
           "kind": "aceptacion",
           "status": "pendiente",
           "evidence": "",
-          "updatedAt": "2026-10-10T13:47:29.679Z",
-          "history": [],
-          "blockId": "8B"
+          "updatedAt": "2026-10-11T12:16:50.767Z",
+          "history": [
+            {
+              "at": "2026-10-11T12:16:50.767Z",
+              "status": "pendiente",
+              "evidence": "Cambió el requisito en el plan; necesita nueva verificación."
+            }
+          ]
         },
         {
           "id": "S08-8B-AC-05",
@@ -6324,7 +6747,7 @@
     {
       "number": 9,
       "title": "Materiales y relación entre masa y energía",
-      "updatedAt": "2026-10-11T12:05:08.582Z",
+      "updatedAt": "2026-10-11T12:16:50.767Z",
       "phase": "pendiente",
       "approval": {
         "status": "pendiente",
@@ -6419,6 +6842,16 @@
           "at": "2026-10-11T12:05:08.582Z",
           "action": "aceptacion_invalidada",
           "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
+        },
+        {
+          "at": "2026-10-11T12:15:42.608Z",
+          "action": "aceptacion_invalidada",
+          "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
+        },
+        {
+          "at": "2026-10-11T12:16:50.767Z",
+          "action": "aceptacion_invalidada",
+          "reference": "Cambio de requisitos o contratos desde el sprint 8; verificar de nuevo antes de continuar."
         }
       ],
       "points": [
@@ -7010,7 +7443,7 @@
     {
       "number": 10,
       "title": "Verificación integral y entrega",
-      "updatedAt": "2026-10-11T12:05:08.582Z",
+      "updatedAt": "2026-10-11T12:16:50.767Z",
       "phase": "pendiente",
       "approval": {
         "status": "pendiente",
@@ -7105,6 +7538,16 @@
           "at": "2026-10-11T12:05:08.582Z",
           "action": "aceptacion_invalidada",
           "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
+        },
+        {
+          "at": "2026-10-11T12:15:42.608Z",
+          "action": "aceptacion_invalidada",
+          "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
+        },
+        {
+          "at": "2026-10-11T12:16:50.767Z",
+          "action": "aceptacion_invalidada",
+          "reference": "Cambio de requisitos o contratos desde el sprint 8; verificar de nuevo antes de continuar."
         }
       ],
       "points": [

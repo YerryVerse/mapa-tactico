@@ -3,7 +3,6 @@ import {useCallback,useEffect,useRef,useState} from 'react';
 import type {Map,Marker} from 'maplibre-gl';
 import Globe from './Globe';
 import Starfield from './Starfield';
-import {SITE_NAME} from '../../lib/identity';
 import ContextCard from '../ContextCard';
 import InformationContent from '../InformationContent';
 import DisclaimerContent from '../DisclaimerContent';
@@ -48,7 +47,7 @@ export default function Portal(){
  const changeEntry=(id:string)=>{stopRequest();setSelectedId(id);setResult(null);};
  const title=panel==='search'?'Buscar lugar':panel==='location'?'Ubicación':panel==='menu'?'Menú':panel==='configuration'?'Escenarios':panel==='execution'?'Consulta':panel==='result'?activeResult?.title??'Ficha':panel==='information'?'Información':'Disclaimer';
  return <main className="portal" data-ui-state={panel??'exploration'} data-result-signature={activeResult?result?.signature:''} data-selected-point={point?JSON.stringify(point):''}>
-  <Starfield/><Globe onReady={ready}/><a className="brand" href="/" aria-label={`${SITE_NAME}, inicio`} onClick={e=>{if(e.metaKey||e.ctrlKey||e.shiftKey)return;e.preventDefault();if(panel)close();}}><img src="/favicon.svg" alt="" width="32" height="32"/><strong>{SITE_NAME}</strong></a>
+  <Starfield/><Globe onReady={ready}/>
   <nav className="tools" aria-label="Herramientas del mapa">
    <button title="Acercar" aria-label="Acercar" disabled={!map} onClick={()=>changeZoom(1)}><Icon name="plus"/></button><button title="Alejar" aria-label="Alejar" disabled={!map} onClick={()=>changeZoom(-1)}><Icon name="minus"/></button><button title="Vista global" aria-label="Vista global" disabled={!map} onClick={()=>map?.easeTo({center:[-30,20],zoom:1.25,pitch:0,duration:650})}><Icon name="global"/></button>
    <button title="Buscar lugar" aria-label="Buscar lugar" aria-expanded={panel==='search'} onClick={e=>open('search',e.currentTarget)}><Icon name="search"/></button><button title="Elegir ubicación" aria-label="Elegir ubicación" aria-expanded={panel==='location'} onClick={e=>open('location',e.currentTarget)}><Icon name="location"/></button><button title="Escenarios" aria-label="Escenarios" aria-expanded={['configuration','execution','result'].includes(panel??'')} onClick={e=>open('configuration',e.currentTarget)}><Icon name="scenarios"/></button><button title="Menú" aria-label="Menú" aria-expanded={panel==='menu'} onClick={e=>open('menu',e.currentTarget)}><Icon name="menu"/></button>

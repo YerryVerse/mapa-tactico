@@ -22,7 +22,7 @@ const phaseLabels = { pendiente: 'Pendiente', en_curso: 'En curso', esperando_ap
 
 const guides = {
   1: [
-    ['Abrir el portal en ventanas amplias y estrechas.', 'El mapa ocupa la pantalla; solo la marca y controles útiles flotan. No hay cabecera ni tarjetas de resultados iniciales.'],
+    ['Abrir el portal en ventanas amplias y estrechas.', 'El mapa ocupa la pantalla; solo flotan controles útiles. No hay nombre, logo, cabecera ni tarjetas de resultados iniciales.'],
     ['Acercar hasta una calle de Santo Domingo y luego recuperar la vista global.', 'Se ven nombres de calles, sin satélite ni iconos o etiquetas de comercios. El globo puede llenar la pantalla. La evidencia técnica documenta la escala de 5 metros.'],
     ['Buscar una ciudad con nombre repetido, elegirla y seleccionar una ubicación.', 'Las sugerencias permiten distinguirla; arrastrar el mapa no coloca un punto.'],
     ['Abrir y cerrar configuración y una ficha disponible; repetir con teclado.', 'Solo aparecen paneles solicitados, el foco regresa y se conservan ubicación y zoom. No quedan población ficticia ni cifras arbitrarias.']
@@ -65,7 +65,7 @@ const guides = {
   ],
   8: [
     ['Revisar las propuestas antes de elegir un nombre.', 'Se muestran significado, pronunciación, escrituras comprobadas y coincidencias relevantes. La elección corresponde al usuario.'],
-    ['Una vez aplicada la opción elegida, abrir el portal en ventanas estrechas y amplias.', 'Nombre e icono flotan, son legibles y no crean una cabecera ni reducen el mapa.'],
+    ['Una vez aplicada la opción elegida, abrir el portal en ventanas estrechas y amplias.', 'No hay nombre ni icono flotantes sobre el mapa; la identidad permanece en la pestaña y las vistas de información solicitadas.'],
     ['Revisar título de pestaña, favicon, menú, información y disclaimer en varios idiomas.', 'La identidad aprobada es consistente y no quedan referencias provisionales accidentales.'],
     ['Comprobar la dirección y el acceso del portal.', 'Se mantiene el mismo proyecto y audiencia; cualquier dirección nueva responde a la decisión aprobada.']
   ],
@@ -166,7 +166,7 @@ async function sync() {
       phase: changed ? 'pendiente' : previous?.phase ?? 'pendiente',
       approval: changed ? { status: 'pendiente', at: null, reference: null } : previous?.approval ?? { status: 'pendiente', at: null, reference: null },
       delivery: changed ? null : previous?.delivery ?? null,
-      reviewSteps: previous?.reviewSteps?.map(step => step.expected === 'La versión publicada conserva proyecto, audiencia y credenciales; no se ha abierto acceso anónimo sin autorización.' ? { action: guides[10].at(-1)[0], expected: guides[10].at(-1)[1] } : step) ?? guides[source.number].map(([action, expected]) => ({ action, expected })),
+      reviewSteps: previous?.reviewSteps?.map(step => source.number === 8 && step.expected === 'Nombre e icono flotan, son legibles y no crean una cabecera ni reducen el mapa.' ? { action: guides[8][1][0], expected: guides[8][1][1] } : step.expected === 'La versión publicada conserva proyecto, audiencia y credenciales; no se ha abierto acceso anónimo sin autorización.' ? { action: guides[10].at(-1)[0], expected: guides[10].at(-1)[1] } : step) ?? guides[source.number].map(([action, expected]) => ({ action, expected })),
       history: previous?.history ?? [], points
     };
   });
