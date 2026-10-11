@@ -17,12 +17,12 @@
   "contextHash": "b8e7b9b938872c2d5f600a8c974c32c6e3013ecab105ac3000de2b7298bce941",
   "project": "ATLAS",
   "portal": "https://atlas-escenarios-hud.yerrybatista.chatgpt.site/",
-  "updatedAt": "2026-10-11T02:03:50.082Z",
+  "updatedAt": "2026-10-11T02:21:44.633Z",
   "sprints": [
     {
       "number": 1,
       "title": "Globo y experiencia del mapa",
-      "updatedAt": "2026-10-11T02:03:50.082Z",
+      "updatedAt": "2026-10-11T02:21:44.633Z",
       "phase": "en_curso",
       "approval": {
         "status": "pendiente",
@@ -224,6 +224,156 @@
           "action": "set",
           "pointId": "S01-1A-02",
           "reference": "renderWorldCopies=true corrigió restricción Mercator durante transición: retorno local a global ahora[-30,20],zoom1.25 exactos en1280x720. Añadida comprobación técnica con puntoGeoJSON de referencia y cambios de zoom sin cambiar centro; se repetirá en Sites."
+        },
+        {
+          "at": "2026-10-11T02:16:28.308Z",
+          "action": "set",
+          "pointId": "S01-1A-10",
+          "reference": "Entorno predefinido Windows Ryzen97900X RTX3060 Chromium155 red real,1280×720 caché fría:2558,9ms carga,143,86fps,5,6ms respuesta. Todos los presupuestos pasan."
+        },
+        {
+          "at": "2026-10-11T02:16:28.392Z",
+          "action": "set",
+          "pointId": "S01-1A-11",
+          "reference": "setWorkerUrl activo exacto MapLibre6.13.0 desde paquete; CSS incluido. Sites200 text/javascript CSP worker-src self; build sin rutas HMR. TypeScript y pruebas de hash pasan."
+        },
+        {
+          "at": "2026-10-11T02:16:28.479Z",
+          "action": "set",
+          "pointId": "S01-1A-01",
+          "reference": "Migración al starter servidor completada; contenido utilizable conservado en content/context.json, API /api/health 200. Build oficial y Sites owner-private version f579ac345a808191b46d66fd818aa6f1, commit 0f2d03f08ed2f18bd9c4e64390ed7c7a0a4e32bb."
+        },
+        {
+          "at": "2026-10-11T02:16:28.568Z",
+          "action": "set",
+          "pointId": "S01-1A-02",
+          "reference": "Tres transiciones 19→1,25→19 verificadas en Sites: centros SD/Quito/Madrid y referencias originales conservados, getData público. Reparación renderWorldCopies; evidencia docs/DECISION_CARTOGRAFICA.md."
+        },
+        {
+          "at": "2026-10-11T02:16:28.653Z",
+          "action": "set",
+          "pointId": "S01-1A-06",
+          "reference": "Sites viewport1280×720,pitch0,zoom19:5m SD35,311px,Quito33,492px,Madrid43,990px; ≥25px. Centros y proyección registrados en docs/DECISION_CARTOGRAFICA.md."
+        },
+        {
+          "at": "2026-10-11T02:16:28.744Z",
+          "action": "set",
+          "pointId": "S01-1A-08",
+          "reference": "Teselas cargadas Tokio,Nairobi,Sídney,ruralRD,Islandia y meridiano180; cruce normaliza -179,99. Vista polar global válida con límite Mercator85,0511 explicado. Evidencia cartográfica registrada."
+        },
+        {
+          "at": "2026-10-11T02:16:28.861Z",
+          "action": "set",
+          "pointId": "S01-1A-09",
+          "reference": "Build publicado ESM/WebGL2, importación cliente, glifos CORS*, fuentes locales y worker sin nuevos errores. HTML/API200 CSP, JS/CSS200. Sin sprites porque no hay iconos."
+        },
+        {
+          "at": "2026-10-11T02:16:28.948Z",
+          "action": "set",
+          "pointId": "S01-1A-AC-01",
+          "reference": "Criterio comprobado en Sites versión f579ac345a808191b46d66fd818aa6f1; operaciones 1A verificadas, evidencia de build, API, escala, continuidad, cobertura, rendimiento y veinte escrituras en docs/DECISION_CARTOGRAFICA.md."
+        },
+        {
+          "at": "2026-10-11T02:16:29.036Z",
+          "action": "set",
+          "pointId": "S01-1A-AC-02",
+          "reference": "Criterio comprobado en Sites versión f579ac345a808191b46d66fd818aa6f1; operaciones 1A verificadas, evidencia de build, API, escala, continuidad, cobertura, rendimiento y veinte escrituras en docs/DECISION_CARTOGRAFICA.md."
+        },
+        {
+          "at": "2026-10-11T02:16:29.135Z",
+          "action": "set",
+          "pointId": "S01-1A-AC-03",
+          "reference": "Criterio comprobado en Sites versión f579ac345a808191b46d66fd818aa6f1; operaciones 1A verificadas, evidencia de build, API, escala, continuidad, cobertura, rendimiento y veinte escrituras en docs/DECISION_CARTOGRAFICA.md."
+        },
+        {
+          "at": "2026-10-11T02:16:29.225Z",
+          "action": "set",
+          "pointId": "S01-1A-AC-04",
+          "reference": "Criterio comprobado en Sites versión f579ac345a808191b46d66fd818aa6f1; operaciones 1A verificadas, evidencia de build, API, escala, continuidad, cobertura, rendimiento y veinte escrituras en docs/DECISION_CARTOGRAFICA.md."
+        },
+        {
+          "at": "2026-10-11T02:16:29.309Z",
+          "action": "set",
+          "pointId": "S01-1A-AC-05",
+          "reference": "Criterio comprobado en Sites versión f579ac345a808191b46d66fd818aa6f1; operaciones 1A verificadas, evidencia de build, API, escala, continuidad, cobertura, rendimiento y veinte escrituras en docs/DECISION_CARTOGRAFICA.md."
+        },
+        {
+          "at": "2026-10-11T02:16:41.867Z",
+          "action": "set",
+          "pointId": "S01-1B-01",
+          "reference": "Bloque1A completado y verificado; comienza retiro del encabezado y controles flotantes."
+        },
+        {
+          "at": "2026-10-11T02:19:44.410Z",
+          "action": "set",
+          "pointId": "S01-1B-10",
+          "reference": "Se detectó que el cierre del editor cancelaba el acercamiento al punto. Corrección aplicada; se repite prueba antes de marcar terminado."
+        },
+        {
+          "at": "2026-10-11T02:21:43.774Z",
+          "action": "set",
+          "pointId": "S01-1B-02",
+          "reference": "Implementación y comprobación en curso: controles flotantes, coordenadas, atribución, lectura accesible y contrato de búsqueda. Pendientes prueba publicada y entornos reales."
+        },
+        {
+          "at": "2026-10-11T02:21:43.854Z",
+          "action": "set",
+          "pointId": "S01-1B-03",
+          "reference": "Implementación y comprobación en curso: controles flotantes, coordenadas, atribución, lectura accesible y contrato de búsqueda. Pendientes prueba publicada y entornos reales."
+        },
+        {
+          "at": "2026-10-11T02:21:43.941Z",
+          "action": "set",
+          "pointId": "S01-1B-04",
+          "reference": "Implementación y comprobación en curso: controles flotantes, coordenadas, atribución, lectura accesible y contrato de búsqueda. Pendientes prueba publicada y entornos reales."
+        },
+        {
+          "at": "2026-10-11T02:21:44.031Z",
+          "action": "set",
+          "pointId": "S01-1B-06",
+          "reference": "Implementación y comprobación en curso: controles flotantes, coordenadas, atribución, lectura accesible y contrato de búsqueda. Pendientes prueba publicada y entornos reales."
+        },
+        {
+          "at": "2026-10-11T02:21:44.123Z",
+          "action": "set",
+          "pointId": "S01-1B-07",
+          "reference": "Implementación y comprobación en curso: controles flotantes, coordenadas, atribución, lectura accesible y contrato de búsqueda. Pendientes prueba publicada y entornos reales."
+        },
+        {
+          "at": "2026-10-11T02:21:44.210Z",
+          "action": "set",
+          "pointId": "S01-1B-08",
+          "reference": "Implementación y comprobación en curso: controles flotantes, coordenadas, atribución, lectura accesible y contrato de búsqueda. Pendientes prueba publicada y entornos reales."
+        },
+        {
+          "at": "2026-10-11T02:21:44.293Z",
+          "action": "set",
+          "pointId": "S01-1B-09",
+          "reference": "Implementación y comprobación en curso: controles flotantes, coordenadas, atribución, lectura accesible y contrato de búsqueda. Pendientes prueba publicada y entornos reales."
+        },
+        {
+          "at": "2026-10-11T02:21:44.375Z",
+          "action": "set",
+          "pointId": "S01-1B-11",
+          "reference": "Implementación y comprobación en curso: controles flotantes, coordenadas, atribución, lectura accesible y contrato de búsqueda. Pendientes prueba publicada y entornos reales."
+        },
+        {
+          "at": "2026-10-11T02:21:44.454Z",
+          "action": "set",
+          "pointId": "S01-1B-12",
+          "reference": "Implementación y comprobación en curso: controles flotantes, coordenadas, atribución, lectura accesible y contrato de búsqueda. Pendientes prueba publicada y entornos reales."
+        },
+        {
+          "at": "2026-10-11T02:21:44.543Z",
+          "action": "set",
+          "pointId": "S01-1B-13",
+          "reference": "Implementación y comprobación en curso: controles flotantes, coordenadas, atribución, lectura accesible y contrato de búsqueda. Pendientes prueba publicada y entornos reales."
+        },
+        {
+          "at": "2026-10-11T02:21:44.633Z",
+          "action": "set",
+          "pointId": "S01-1B-05",
+          "reference": "Proveedor pendiente de elección del usuario; no se usa Photon demo ni Nominatim público sin decisión informada. El endpoint responde 503 recuperable y el mapa/edición de coordenadas siguen disponibles."
         }
       ],
       "points": [
@@ -233,9 +383,9 @@
           "group": "Bloque 1A Cartografía y acercamiento",
           "text": "Auditar el globo actual y migrar al starter de servidor de Sites definido en la arquitectura. Conservar proyecto, audiencia y fuentes del contenido utilizable; integrar el mapa y rutas de servidor de referencia en una aplicación que compile y se publique. La integración completa del buscador y del recorrido de fichas se verifica respectivamente en 1B y 1C; no condiciona el cierre de 1A a bloques futuros. El prototipo usa un dibujo de países de baja resolución; aumentar su escala no incorporará calles.",
           "kind": "operacion",
-          "status": "en_curso",
-          "evidence": "Planv7 corrigió dependencia circular: mapa+rutasreferencia en1A; búsqueda1B y fichas1C. Fuentes útiles preservadas en content/context.json. Publicación privada del mapa funciona; CSP de respuestasWorker añadida tras auditoría. Revalidación en curso.",
-          "updatedAt": "2026-10-11T01:59:51.593Z",
+          "status": "terminado",
+          "evidence": "Migración al starter servidor completada; contenido utilizable conservado en content/context.json, API /api/health 200. Build oficial y Sites owner-private version f579ac345a808191b46d66fd818aa6f1, commit 0f2d03f08ed2f18bd9c4e64390ed7c7a0a4e32bb.",
+          "updatedAt": "2026-10-11T02:16:28.479Z",
           "history": [
             {
               "at": "2026-10-11T01:39:20.505Z",
@@ -256,6 +406,11 @@
               "at": "2026-10-11T01:59:51.593Z",
               "status": "en_curso",
               "evidence": "Planv7 corrigió dependencia circular: mapa+rutasreferencia en1A; búsqueda1B y fichas1C. Fuentes útiles preservadas en content/context.json. Publicación privada del mapa funciona; CSP de respuestasWorker añadida tras auditoría. Revalidación en curso."
+            },
+            {
+              "at": "2026-10-11T02:16:28.479Z",
+              "status": "terminado",
+              "evidence": "Migración al starter servidor completada; contenido utilizable conservado en content/context.json, API /api/health 200. Build oficial y Sites owner-private version f579ac345a808191b46d66fd818aa6f1, commit 0f2d03f08ed2f18bd9c4e64390ed7c7a0a4e32bb."
             }
           ]
         },
@@ -264,9 +419,9 @@
           "group": "Bloque 1A Cartografía y acercamiento",
           "text": "Validar MapLibre con vista de globo y navegación continua hasta cartografía local. Si necesita cambiar de proyección al acercar, conservar el centro, el punto seleccionado y la continuidad visual. Resolver esta transición y sus eventos en este bloque.",
           "kind": "operacion",
-          "status": "en_curso",
-          "evidence": "renderWorldCopies=true corrigió restricción Mercator durante transición: retorno local a global ahora[-30,20],zoom1.25 exactos en1280x720. Añadida comprobación técnica con puntoGeoJSON de referencia y cambios de zoom sin cambiar centro; se repetirá en Sites.",
-          "updatedAt": "2026-10-11T02:03:50.082Z",
+          "status": "terminado",
+          "evidence": "Tres transiciones 19→1,25→19 verificadas en Sites: centros SD/Quito/Madrid y referencias originales conservados, getData público. Reparación renderWorldCopies; evidencia docs/DECISION_CARTOGRAFICA.md.",
+          "updatedAt": "2026-10-11T02:16:28.568Z",
           "history": [
             {
               "at": "2026-10-11T01:43:16.095Z",
@@ -282,6 +437,11 @@
               "at": "2026-10-11T02:03:50.082Z",
               "status": "en_curso",
               "evidence": "renderWorldCopies=true corrigió restricción Mercator durante transición: retorno local a global ahora[-30,20],zoom1.25 exactos en1280x720. Añadida comprobación técnica con puntoGeoJSON de referencia y cambios de zoom sin cambiar centro; se repetirá en Sites."
+            },
+            {
+              "at": "2026-10-11T02:16:28.568Z",
+              "status": "terminado",
+              "evidence": "Tres transiciones 19→1,25→19 verificadas en Sites: centros SD/Quito/Madrid y referencias originales conservados, getData público. Reparación renderWorldCopies; evidencia docs/DECISION_CARTOGRAFICA.md."
             }
           ],
           "blockId": "1A"
@@ -357,14 +517,19 @@
           "group": "Bloque 1A Cartografía y acercamiento",
           "text": "Medir el acercamiento con un criterio reproducible: un segmento geográfico de 5 metros debe ocupar al menos 25 píxeles CSS cerca del centro de la vista local sin inclinación, equivalente a un máximo de 0,2 metros por píxel CSS. Verificar en Santo Domingo, una ciudad cercana al ecuador y una ciudad de latitud media. Registrar viewport, coordenadas, zoom, proyección y resultado. Este es un criterio de escala de visualización, no una promesa de precisión de datos.",
           "kind": "operacion",
-          "status": "en_curso",
-          "evidence": "Primeras medidas reales via Map.project a zoom19 en IAB1280x720: SantoDomingo5m=35.311px; Quito5m=33.492px, superan25px. Medición de Madrid y repetición en build publicado pendientes. Fuente nativa14 documentada como overscale.",
-          "updatedAt": "2026-10-11T01:50:44.984Z",
+          "status": "terminado",
+          "evidence": "Sites viewport1280×720,pitch0,zoom19:5m SD35,311px,Quito33,492px,Madrid43,990px; ≥25px. Centros y proyección registrados en docs/DECISION_CARTOGRAFICA.md.",
+          "updatedAt": "2026-10-11T02:16:28.653Z",
           "history": [
             {
               "at": "2026-10-11T01:50:44.984Z",
               "status": "en_curso",
               "evidence": "Primeras medidas reales via Map.project a zoom19 en IAB1280x720: SantoDomingo5m=35.311px; Quito5m=33.492px, superan25px. Medición de Madrid y repetición en build publicado pendientes. Fuente nativa14 documentada como overscale."
+            },
+            {
+              "at": "2026-10-11T02:16:28.653Z",
+              "status": "terminado",
+              "evidence": "Sites viewport1280×720,pitch0,zoom19:5m SD35,311px,Quito33,492px,Madrid43,990px; ≥25px. Centros y proyección registrados en docs/DECISION_CARTOGRAFICA.md."
             }
           ],
           "blockId": "1A"
@@ -391,14 +556,19 @@
           "group": "Bloque 1A Cartografía y acercamiento",
           "text": "Probar zonas urbanas de varios continentes, áreas rurales, islas, proximidad a polos y cruce del meridiano 180. Conservar exploración global y documentar límites de proyección o cobertura: no prometer calles ni zoom local donde el proveedor no tiene datos. Fuera de cobertura, la navegación mantiene una vista válida y explica el límite al solicitar el detalle.",
           "kind": "operacion",
-          "status": "en_curso",
-          "evidence": "Preparado recorrido real SantoDomingo,Quito,Madrid,Tokio,Nairobi,Sídney,rural,Islandia,polo y180 en /qa/map. Se verifican carga de teselas, cámara válida y límites locales; ejecución en curso.",
-          "updatedAt": "2026-10-11T01:50:45.379Z",
+          "status": "terminado",
+          "evidence": "Teselas cargadas Tokio,Nairobi,Sídney,ruralRD,Islandia y meridiano180; cruce normaliza -179,99. Vista polar global válida con límite Mercator85,0511 explicado. Evidencia cartográfica registrada.",
+          "updatedAt": "2026-10-11T02:16:28.744Z",
           "history": [
             {
               "at": "2026-10-11T01:50:45.379Z",
               "status": "en_curso",
               "evidence": "Preparado recorrido real SantoDomingo,Quito,Madrid,Tokio,Nairobi,Sídney,rural,Islandia,polo y180 en /qa/map. Se verifican carga de teselas, cámara válida y límites locales; ejecución en curso."
+            },
+            {
+              "at": "2026-10-11T02:16:28.744Z",
+              "status": "terminado",
+              "evidence": "Teselas cargadas Tokio,Nairobi,Sídney,ruralRD,Islandia y meridiano180; cruce normaliza -179,99. Vista polar global válida con límite Mercator85,0511 explicado. Evidencia cartográfica registrada."
             }
           ],
           "blockId": "1A"
@@ -408,9 +578,9 @@
           "group": "Bloque 1A Cartografía y acercamiento",
           "text": "Comprobar ESM, WebGL2, importación solo en cliente, carga del worker cartográfico, glifos, sprites, CORS y política de seguridad del contenido. Una prueba local no sustituye la prueba del build y del dominio Sites.",
           "kind": "operacion",
-          "status": "en_curso",
-          "evidence": "Sites publicó commitdfadef5c,despliegueappgdep_6acaed041e848191b0b1cb21d92b1324 con éxito. Carga fría892ms y glifos200CORS*. Auditoría de headers detectó que _headers no aplica a HTML dinámico: añadida CSP al Worker; se republicará y verificará, sin dar este punto por terminado aún.",
-          "updatedAt": "2026-10-11T01:58:22.226Z",
+          "status": "terminado",
+          "evidence": "Build publicado ESM/WebGL2, importación cliente, glifos CORS*, fuentes locales y worker sin nuevos errores. HTML/API200 CSP, JS/CSS200. Sin sprites porque no hay iconos.",
+          "updatedAt": "2026-10-11T02:16:28.861Z",
           "history": [
             {
               "at": "2026-10-11T01:53:56.531Z",
@@ -421,6 +591,11 @@
               "at": "2026-10-11T01:58:22.226Z",
               "status": "en_curso",
               "evidence": "Sites publicó commitdfadef5c,despliegueappgdep_6acaed041e848191b0b1cb21d92b1324 con éxito. Carga fría892ms y glifos200CORS*. Auditoría de headers detectó que _headers no aplica a HTML dinámico: añadida CSP al Worker; se republicará y verificará, sin dar este punto por terminado aún."
+            },
+            {
+              "at": "2026-10-11T02:16:28.861Z",
+              "status": "terminado",
+              "evidence": "Build publicado ESM/WebGL2, importación cliente, glifos CORS*, fuentes locales y worker sin nuevos errores. HTML/API200 CSP, JS/CSS200. Sin sprites porque no hay iconos."
             }
           ],
           "blockId": "1A"
@@ -431,9 +606,9 @@
           "group": "Bloque 1A Cartografía y acercamiento",
           "text": "Registrar dispositivo y navegador de prueba, red de referencia y presupuesto antes de medir. Objetivos de implementación: controles locales responden en 200 ms, mapa utilizable en 5 segundos con caché fría en la red fijada e interacción sostenida de al menos 30 fotogramas por segundo en el dispositivo de referencia. Si no se alcanzan, optimizar o presentar al usuario una propuesta concreta de ajuste del objetivo antes de cerrar el bloque; no reducirlo por decisión de la IA ni cambiar el entorno para esconder el fallo.",
           "kind": "operacion",
-          "status": "en_curso",
-          "evidence": "Antes de medir: dispositivo Windows del usuario, Ryzen9 7900X y RTX3060; navegador IAB Chromium (versión por registrar); conexión real actual sin throttling artificial. Caché fría mediante CDP. Presupuestos: mapa <=5s, controles <=200ms, interacción >=30fps. No se han ejecutado aún medidas.",
-          "updatedAt": "2026-10-11T01:41:04.968Z",
+          "status": "terminado",
+          "evidence": "Entorno predefinido Windows Ryzen97900X RTX3060 Chromium155 red real,1280×720 caché fría:2558,9ms carga,143,86fps,5,6ms respuesta. Todos los presupuestos pasan.",
+          "updatedAt": "2026-10-11T02:16:28.308Z",
           "history": [
             {
               "at": "2026-10-10T18:55:37.061Z",
@@ -444,6 +619,11 @@
               "at": "2026-10-11T01:41:04.968Z",
               "status": "en_curso",
               "evidence": "Antes de medir: dispositivo Windows del usuario, Ryzen9 7900X y RTX3060; navegador IAB Chromium (versión por registrar); conexión real actual sin throttling artificial. Caché fría mediante CDP. Presupuestos: mapa <=5s, controles <=200ms, interacción >=30fps. No se han ejecutado aún medidas."
+            },
+            {
+              "at": "2026-10-11T02:16:28.308Z",
+              "status": "terminado",
+              "evidence": "Entorno predefinido Windows Ryzen97900X RTX3060 Chromium155 red real,1280×720 caché fría:2558,9ms carga,143,86fps,5,6ms respuesta. Todos los presupuestos pasan."
             }
           ]
         },
@@ -453,9 +633,9 @@
           "group": "Bloque 1A Cartografía y acercamiento",
           "text": "Integrar explícitamente el worker de MapLibre con Vite usando la API pública setWorkerUrl y un archivo del paquete servido por el build; importar su CSS. Verificar ruta, MIME y CSP de ese worker en el dominio revisable. Conservar sites() del starter y no editar un wrangler.jsonc inexistente ni usar propiedades internas como map.transform. Fijar la versión exacta tras esta prueba; v6.13.0 es una candidata verificada en la revisión, no una instalación ya realizada.",
           "kind": "operacion",
-          "status": "en_curso",
-          "evidence": "El fallo dev persiste por inyección de /@vite/client en imports del worker ESM. Reparación: script predev/prebuild copia exactamente worker oficial6.13.0 a activo estático mismo origen y setWorkerUrl lo usa. Así evita transformación HMR, conserva paquete fijado y Sites. Revalidando MIME, hash y dibujo.",
-          "updatedAt": "2026-10-11T01:48:52.462Z",
+          "status": "terminado",
+          "evidence": "setWorkerUrl activo exacto MapLibre6.13.0 desde paquete; CSS incluido. Sites200 text/javascript CSP worker-src self; build sin rutas HMR. TypeScript y pruebas de hash pasan.",
+          "updatedAt": "2026-10-11T02:16:28.392Z",
           "history": [
             {
               "at": "2026-10-11T01:43:17.227Z",
@@ -476,6 +656,11 @@
               "at": "2026-10-11T01:48:52.462Z",
               "status": "en_curso",
               "evidence": "El fallo dev persiste por inyección de /@vite/client en imports del worker ESM. Reparación: script predev/prebuild copia exactamente worker oficial6.13.0 a activo estático mismo origen y setWorkerUrl lo usa. Así evita transformación HMR, conserva paquete fijado y Sites. Revalidando MIME, hash y dibujo."
+            },
+            {
+              "at": "2026-10-11T02:16:28.392Z",
+              "status": "terminado",
+              "evidence": "setWorkerUrl activo exacto MapLibre6.13.0 desde paquete; CSS incluido. Sites200 text/javascript CSP worker-src self; build sin rutas HMR. TypeScript y pruebas de hash pasan."
             }
           ]
         },
@@ -507,14 +692,19 @@
           "group": "Bloque 1A Cartografía y acercamiento",
           "text": "La aplicación compila y su versión revisable carga el globo vectorial, las calles y las rutas de servidor; proveedor, versión fijada, licencia, cobertura y modalidad de credenciales están documentados sin incluir valores secretos.",
           "kind": "aceptacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-10T18:55:37.061Z",
+          "status": "terminado",
+          "evidence": "Criterio comprobado en Sites versión f579ac345a808191b46d66fd818aa6f1; operaciones 1A verificadas, evidencia de build, API, escala, continuidad, cobertura, rendimiento y veinte escrituras en docs/DECISION_CARTOGRAFICA.md.",
+          "updatedAt": "2026-10-11T02:16:28.948Z",
           "history": [
             {
               "at": "2026-10-10T18:55:37.061Z",
               "status": "pendiente",
               "evidence": "Cambió el requisito en el plan; necesita nueva verificación."
+            },
+            {
+              "at": "2026-10-11T02:16:28.948Z",
+              "status": "terminado",
+              "evidence": "Criterio comprobado en Sites versión f579ac345a808191b46d66fd818aa6f1; operaciones 1A verificadas, evidencia de build, API, escala, continuidad, cobertura, rendimiento y veinte escrituras en docs/DECISION_CARTOGRAFICA.md."
             }
           ]
         },
@@ -524,10 +714,16 @@
           "group": "Bloque 1A Cartografía y acercamiento",
           "text": "La transición globo a vista local conserva centro y ubicación; las pruebas reproducibles de escala, proyección, latitudes y rendimiento cumplen el bloque, sin sustituir detalle por ampliación de imagen.",
           "kind": "aceptacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-10T18:28:51.099Z",
-          "history": []
+          "status": "terminado",
+          "evidence": "Criterio comprobado en Sites versión f579ac345a808191b46d66fd818aa6f1; operaciones 1A verificadas, evidencia de build, API, escala, continuidad, cobertura, rendimiento y veinte escrituras en docs/DECISION_CARTOGRAFICA.md.",
+          "updatedAt": "2026-10-11T02:16:29.036Z",
+          "history": [
+            {
+              "at": "2026-10-11T02:16:29.036Z",
+              "status": "terminado",
+              "evidence": "Criterio comprobado en Sites versión f579ac345a808191b46d66fd818aa6f1; operaciones 1A verificadas, evidencia de build, API, escala, continuidad, cobertura, rendimiento y veinte escrituras en docs/DECISION_CARTOGRAFICA.md."
+            }
+          ]
         },
         {
           "id": "S01-1A-AC-03",
@@ -535,14 +731,19 @@
           "group": "Bloque 1A Cartografía y acercamiento",
           "text": "El build publicado carga su motor, glifos y workers sin errores de origen o de inicialización en servidor. Las rutas de servidor de referencia responden; la integración y aceptación del buscador se completan en 1B, sin condicionar 1A a ese bloque futuro.",
           "kind": "aceptacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-10T18:55:37.061Z",
+          "status": "terminado",
+          "evidence": "Criterio comprobado en Sites versión f579ac345a808191b46d66fd818aa6f1; operaciones 1A verificadas, evidencia de build, API, escala, continuidad, cobertura, rendimiento y veinte escrituras en docs/DECISION_CARTOGRAFICA.md.",
+          "updatedAt": "2026-10-11T02:16:29.135Z",
           "history": [
             {
               "at": "2026-10-10T18:55:37.061Z",
               "status": "pendiente",
               "evidence": "Cambió el requisito en el plan; necesita nueva verificación."
+            },
+            {
+              "at": "2026-10-11T02:16:29.135Z",
+              "status": "terminado",
+              "evidence": "Criterio comprobado en Sites versión f579ac345a808191b46d66fd818aa6f1; operaciones 1A verificadas, evidencia de build, API, escala, continuidad, cobertura, rendimiento y veinte escrituras en docs/DECISION_CARTOGRAFICA.md."
             }
           ]
         },
@@ -552,10 +753,16 @@
           "group": "Bloque 1A Cartografía y acercamiento",
           "text": "El worker y CSS del motor se incluyen correctamente en el build de Vite/Sites; no hay dependencia de rutas del servidor de desarrollo ni de una importación en servidor.",
           "kind": "aceptacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-10T18:55:37.061Z",
-          "history": []
+          "status": "terminado",
+          "evidence": "Criterio comprobado en Sites versión f579ac345a808191b46d66fd818aa6f1; operaciones 1A verificadas, evidencia de build, API, escala, continuidad, cobertura, rendimiento y veinte escrituras en docs/DECISION_CARTOGRAFICA.md.",
+          "updatedAt": "2026-10-11T02:16:29.225Z",
+          "history": [
+            {
+              "at": "2026-10-11T02:16:29.225Z",
+              "status": "terminado",
+              "evidence": "Criterio comprobado en Sites versión f579ac345a808191b46d66fd818aa6f1; operaciones 1A verificadas, evidencia de build, API, escala, continuidad, cobertura, rendimiento y veinte escrituras en docs/DECISION_CARTOGRAFICA.md."
+            }
+          ]
         },
         {
           "id": "S01-1A-AC-05",
@@ -563,20 +770,32 @@
           "group": "Bloque 1A Cartografía y acercamiento",
           "text": "La selección de motor, estilo y fuentes pasa muestras de composición de las escrituras requeridas; no se traslada al sprint 2 una incompatibilidad conocida que obligue a reemplazar el mapa.",
           "kind": "aceptacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-10T18:55:37.061Z",
-          "history": []
+          "status": "terminado",
+          "evidence": "Criterio comprobado en Sites versión f579ac345a808191b46d66fd818aa6f1; operaciones 1A verificadas, evidencia de build, API, escala, continuidad, cobertura, rendimiento y veinte escrituras en docs/DECISION_CARTOGRAFICA.md.",
+          "updatedAt": "2026-10-11T02:16:29.309Z",
+          "history": [
+            {
+              "at": "2026-10-11T02:16:29.309Z",
+              "status": "terminado",
+              "evidence": "Criterio comprobado en Sites versión f579ac345a808191b46d66fd818aa6f1; operaciones 1A verificadas, evidencia de build, API, escala, continuidad, cobertura, rendimiento y veinte escrituras en docs/DECISION_CARTOGRAFICA.md."
+            }
+          ]
         },
         {
           "id": "S01-1B-01",
           "group": "Bloque 1B Pantalla y controles",
           "text": "Eliminar completamente el encabezado actual: barra, navegación, subtítulo, indicador de entorno, versión y línea divisoria. Retirar también mensajes promocionales y títulos decorativos superpuestos al mapa.",
           "kind": "operacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-10T13:47:29.679Z",
-          "history": [],
+          "status": "en_curso",
+          "evidence": "Bloque1A completado y verificado; comienza retiro del encabezado y controles flotantes.",
+          "updatedAt": "2026-10-11T02:16:41.867Z",
+          "history": [
+            {
+              "at": "2026-10-11T02:16:41.867Z",
+              "status": "en_curso",
+              "evidence": "Bloque1A completado y verificado; comienza retiro del encabezado y controles flotantes."
+            }
+          ],
           "blockId": "1B"
         },
         {
@@ -584,10 +803,16 @@
           "group": "Bloque 1B Pantalla y controles",
           "text": "Mantener solamente el icono y el nombre provisional flotando sobre el globo. La marca no reserva una franja de pantalla ni intercepta gestos fuera de su área real.",
           "kind": "operacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-10T13:47:29.679Z",
-          "history": [],
+          "status": "en_curso",
+          "evidence": "Implementación y comprobación en curso: controles flotantes, coordenadas, atribución, lectura accesible y contrato de búsqueda. Pendientes prueba publicada y entornos reales.",
+          "updatedAt": "2026-10-11T02:21:43.774Z",
+          "history": [
+            {
+              "at": "2026-10-11T02:21:43.774Z",
+              "status": "en_curso",
+              "evidence": "Implementación y comprobación en curso: controles flotantes, coordenadas, atribución, lectura accesible y contrato de búsqueda. Pendientes prueba publicada y entornos reales."
+            }
+          ],
           "blockId": "1B"
         },
         {
@@ -595,10 +820,16 @@
           "group": "Bloque 1B Pantalla y controles",
           "text": "Hacer que el mapa ocupe todo el espacio visible, con adaptación al navegador móvil y sus áreas seguras. Al acercar, el globo puede extenderse más allá de los bordes de la pantalla.",
           "kind": "operacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-10T13:47:29.679Z",
-          "history": [],
+          "status": "en_curso",
+          "evidence": "Implementación y comprobación en curso: controles flotantes, coordenadas, atribución, lectura accesible y contrato de búsqueda. Pendientes prueba publicada y entornos reales.",
+          "updatedAt": "2026-10-11T02:21:43.854Z",
+          "history": [
+            {
+              "at": "2026-10-11T02:21:43.854Z",
+              "status": "en_curso",
+              "evidence": "Implementación y comprobación en curso: controles flotantes, coordenadas, atribución, lectura accesible y contrato de búsqueda. Pendientes prueba publicada y entornos reales."
+            }
+          ],
           "blockId": "1B"
         },
         {
@@ -606,10 +837,16 @@
           "group": "Bloque 1B Pantalla y controles",
           "text": "Disponer controles flotantes para acercar, alejar, recuperar la vista global, buscar un lugar y abrir escenarios. Agrupar idioma, información y disclaimer en un menú accesible; no reconstruir una barra superior.",
           "kind": "operacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-10T13:47:29.679Z",
-          "history": [],
+          "status": "en_curso",
+          "evidence": "Implementación y comprobación en curso: controles flotantes, coordenadas, atribución, lectura accesible y contrato de búsqueda. Pendientes prueba publicada y entornos reales.",
+          "updatedAt": "2026-10-11T02:21:43.941Z",
+          "history": [
+            {
+              "at": "2026-10-11T02:21:43.941Z",
+              "status": "en_curso",
+              "evidence": "Implementación y comprobación en curso: controles flotantes, coordenadas, atribución, lectura accesible y contrato de búsqueda. Pendientes prueba publicada y entornos reales."
+            }
+          ],
           "blockId": "1B"
         },
         {
@@ -617,10 +854,16 @@
           "group": "Bloque 1B Pantalla y controles",
           "text": "Incorporar búsqueda de países, ciudades y calles. Las sugerencias muestran ubicación administrativa para distinguir nombres repetidos y no incorporan negocios ni puntos de interés. Mantener la búsqueda cerrada hasta que se solicite.",
           "kind": "operacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-10T13:47:29.679Z",
-          "history": [],
+          "status": "no_completado",
+          "evidence": "Proveedor pendiente de elección del usuario; no se usa Photon demo ni Nominatim público sin decisión informada. El endpoint responde 503 recuperable y el mapa/edición de coordenadas siguen disponibles.",
+          "updatedAt": "2026-10-11T02:21:44.633Z",
+          "history": [
+            {
+              "at": "2026-10-11T02:21:44.633Z",
+              "status": "no_completado",
+              "evidence": "Proveedor pendiente de elección del usuario; no se usa Photon demo ni Nominatim público sin decisión informada. El endpoint responde 503 recuperable y el mapa/edición de coordenadas siguen disponibles."
+            }
+          ],
           "blockId": "1B"
         },
         {
@@ -628,10 +871,16 @@
           "group": "Bloque 1B Pantalla y controles",
           "text": "Permitir selección de ubicación con clic o toque y movimiento posterior del punto. Diferenciar arrastrar el mapa de seleccionar: soltar un arrastre no debe crear un punto.",
           "kind": "operacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-10T13:47:29.679Z",
-          "history": [],
+          "status": "en_curso",
+          "evidence": "Implementación y comprobación en curso: controles flotantes, coordenadas, atribución, lectura accesible y contrato de búsqueda. Pendientes prueba publicada y entornos reales.",
+          "updatedAt": "2026-10-11T02:21:44.031Z",
+          "history": [
+            {
+              "at": "2026-10-11T02:21:44.031Z",
+              "status": "en_curso",
+              "evidence": "Implementación y comprobación en curso: controles flotantes, coordenadas, atribución, lectura accesible y contrato de búsqueda. Pendientes prueba publicada y entornos reales."
+            }
+          ],
           "blockId": "1B"
         },
         {
@@ -639,10 +888,16 @@
           "group": "Bloque 1B Pantalla y controles",
           "text": "Conservar controles por teclado y proporcionar una alternativa accesible al gesto de colocar un punto. No capturar teclas de navegación cuando el foco está en un campo de texto.",
           "kind": "operacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-10T13:47:29.679Z",
-          "history": [],
+          "status": "en_curso",
+          "evidence": "Implementación y comprobación en curso: controles flotantes, coordenadas, atribución, lectura accesible y contrato de búsqueda. Pendientes prueba publicada y entornos reales.",
+          "updatedAt": "2026-10-11T02:21:44.123Z",
+          "history": [
+            {
+              "at": "2026-10-11T02:21:44.123Z",
+              "status": "en_curso",
+              "evidence": "Implementación y comprobación en curso: controles flotantes, coordenadas, atribución, lectura accesible y contrato de búsqueda. Pendientes prueba publicada y entornos reales."
+            }
+          ],
           "blockId": "1B"
         },
         {
@@ -650,10 +905,16 @@
           "group": "Bloque 1B Pantalla y controles",
           "text": "Retirar rotación automática inicial, coordenadas permanentes y leyendas decorativas. Las coordenadas aparecen solamente al consultar o editar una ubicación; la escala aparece cuando ayuda a entender la distancia.",
           "kind": "operacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-10T13:47:29.679Z",
-          "history": [],
+          "status": "en_curso",
+          "evidence": "Implementación y comprobación en curso: controles flotantes, coordenadas, atribución, lectura accesible y contrato de búsqueda. Pendientes prueba publicada y entornos reales.",
+          "updatedAt": "2026-10-11T02:21:44.210Z",
+          "history": [
+            {
+              "at": "2026-10-11T02:21:44.210Z",
+              "status": "en_curso",
+              "evidence": "Implementación y comprobación en curso: controles flotantes, coordenadas, atribución, lectura accesible y contrato de búsqueda. Pendientes prueba publicada y entornos reales."
+            }
+          ],
           "blockId": "1B"
         },
         {
@@ -661,10 +922,16 @@
           "group": "Bloque 1B Pantalla y controles",
           "text": "Mantener la atribución cartográfica exigida por el proveedor en una posición discreta y legible. No ocultarla para cumplir el minimalismo.",
           "kind": "operacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-10T13:47:29.679Z",
-          "history": [],
+          "status": "en_curso",
+          "evidence": "Implementación y comprobación en curso: controles flotantes, coordenadas, atribución, lectura accesible y contrato de búsqueda. Pendientes prueba publicada y entornos reales.",
+          "updatedAt": "2026-10-11T02:21:44.293Z",
+          "history": [
+            {
+              "at": "2026-10-11T02:21:44.293Z",
+              "status": "en_curso",
+              "evidence": "Implementación y comprobación en curso: controles flotantes, coordenadas, atribución, lectura accesible y contrato de búsqueda. Pendientes prueba publicada y entornos reales."
+            }
+          ],
           "blockId": "1B"
         },
         {
@@ -672,10 +939,16 @@
           "group": "Bloque 1B Pantalla y controles",
           "text": "Mantener una sola ubicación seleccionada y diferenciar centro de cámara de punto elegido. No crear el punto inicial del prototipo ni iniciar un resultado automáticamente. Ajustar encuadre al abrir un panel sin cambiar la ubicación y sin permitir que quede oculta tras la tarjeta.",
           "kind": "operacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-10T13:47:29.679Z",
-          "history": [],
+          "status": "en_curso",
+          "evidence": "Se detectó que el cierre del editor cancelaba el acercamiento al punto. Corrección aplicada; se repite prueba antes de marcar terminado.",
+          "updatedAt": "2026-10-11T02:19:44.410Z",
+          "history": [
+            {
+              "at": "2026-10-11T02:19:44.410Z",
+              "status": "en_curso",
+              "evidence": "Se detectó que el cierre del editor cancelaba el acercamiento al punto. Corrección aplicada; se repite prueba antes de marcar terminado."
+            }
+          ],
           "blockId": "1B"
         },
         {
@@ -683,10 +956,16 @@
           "group": "Bloque 1B Pantalla y controles",
           "text": "Detectar WebGL2 no disponible o pérdida de contexto. Permitir reintento y conservar búsqueda y fichas accesibles; no sustituir el mapa por una pantalla vacía ni presentar una vista textual como un globo funcional.",
           "kind": "operacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-10T13:47:29.679Z",
-          "history": [],
+          "status": "en_curso",
+          "evidence": "Implementación y comprobación en curso: controles flotantes, coordenadas, atribución, lectura accesible y contrato de búsqueda. Pendientes prueba publicada y entornos reales.",
+          "updatedAt": "2026-10-11T02:21:44.375Z",
+          "history": [
+            {
+              "at": "2026-10-11T02:21:44.375Z",
+              "status": "en_curso",
+              "evidence": "Implementación y comprobación en curso: controles flotantes, coordenadas, atribución, lectura accesible y contrato de búsqueda. Pendientes prueba publicada y entornos reales."
+            }
+          ],
           "blockId": "1B"
         },
         {
@@ -695,10 +974,16 @@
           "group": "Bloque 1B Pantalla y controles",
           "text": "Completar el adaptador servidor del buscador con esquema validado, límites de longitud y resultados, tiempo máximo, cancelación, protección de cuota y rechazo de POI. Definir comportamiento ante 429 y fallos del proveedor, sin reintentos ilimitados. Cachear únicamente respuestas permitidas por licencia, idioma y audiencia; las restricciones deben seguir funcionando en la versión revisable.",
           "kind": "operacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-10T18:55:37.061Z",
-          "history": []
+          "status": "en_curso",
+          "evidence": "Implementación y comprobación en curso: controles flotantes, coordenadas, atribución, lectura accesible y contrato de búsqueda. Pendientes prueba publicada y entornos reales.",
+          "updatedAt": "2026-10-11T02:21:44.454Z",
+          "history": [
+            {
+              "at": "2026-10-11T02:21:44.454Z",
+              "status": "en_curso",
+              "evidence": "Implementación y comprobación en curso: controles flotantes, coordenadas, atribución, lectura accesible y contrato de búsqueda. Pendientes prueba publicada y entornos reales."
+            }
+          ]
         },
         {
           "id": "S01-1B-13",
@@ -706,10 +991,16 @@
           "group": "Bloque 1B Pantalla y controles",
           "text": "Fijar una matriz de navegadores y dispositivos reales para las comprobaciones: Chromium y Firefox en escritorio, Safari en iOS y Chrome en Android, registrando versiones. Probar tamaño de texto al 200 %, ancho de 320 píxeles CSS, áreas seguras, teclado y controles táctiles sin superposición. Una emulación no se registra como prueba ejecutada en un dispositivo real.",
           "kind": "operacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-10T18:55:37.061Z",
-          "history": []
+          "status": "en_curso",
+          "evidence": "Implementación y comprobación en curso: controles flotantes, coordenadas, atribución, lectura accesible y contrato de búsqueda. Pendientes prueba publicada y entornos reales.",
+          "updatedAt": "2026-10-11T02:21:44.543Z",
+          "history": [
+            {
+              "at": "2026-10-11T02:21:44.543Z",
+              "status": "en_curso",
+              "evidence": "Implementación y comprobación en curso: controles flotantes, coordenadas, atribución, lectura accesible y contrato de búsqueda. Pendientes prueba publicada y entornos reales."
+            }
+          ]
         },
         {
           "id": "S01-1B-AC-01",
