@@ -1,8 +1,8 @@
 # Ejecución del sprint 1
 
-Actualización: 11 de octubre de 2026 UTC. Plan v8. El sprint está en curso, sin aprobación del usuario. Este documento registra una publicación parcial; no constituye una entrega completa.
+Actualización: 11 de octubre de 2026 UTC. Plan v12. El sprint está en curso, sin aprobación del usuario. Este documento registra una publicación parcial; no constituye una entrega completa.
 
-Portal: https://atlas-escenarios-hud.yerrybatista.chatgpt.site/ . Última publicación probada: commit c6cef19c48c40c58b3ece727690a51af5ac3f7df, versión appgprj_6aca23222ed881919537ddd318f39d79~appgver_82c931ddf3b881919ae0f976061b1a65, estado succeeded a las 02:32:34 UTC. Mismo proyecto y audiencia privada del propietario. El código publicado no requiere el servidor local del PC. Los informes locales son exclusivamente de seguimiento.
+Portal: https://atlas-escenarios-hud.yerrybatista.chatgpt.site/ . Última publicación probada: commit 148140903c6799223c94c8730a33eebca703b248, versión appgprj_6aca23222ed881919537ddd318f39d79~appgver_2c3fe6bd22dc8191b1166b0279631eb6, estado succeeded a las 10:15:20 UTC. Mismo proyecto y audiencia privada del propietario. El código publicado no requiere el servidor local del PC. Los informes locales son exclusivamente de seguimiento.
 
 ## Bloque 1A
 
@@ -28,3 +28,7 @@ TypeScript, siete pruebas automatizadas del portal y build oficial de Sites pasa
 Los puntos de búsqueda y matriz permanecen rojos. Los criterios completos de1B no pueden aprobarse mientras sus operaciones sigan incompletas. El bloque1C permanece pendiente según el orden de aceptación; todavía falta su recorrido de paneles, registro de capacidades, renderizador común y revisión completa. Las fichas simples actuales sirven como lectura accesible de1B, sin presentarse como ese recorrido final.
 
 El seguimiento HTML tiene la fuente autoritativa en estado.json. No se ha ejecutado review ni approve y no se ha iniciado el sprint2. La guía parcial describe exactamente lo que ahora puede comprobarse; se sustituirá por la guía completa cuando los55puntos del sprint estén verificados.
+
+## Fondo exterior negro · 11 de octubre de 2026
+
+Publicado fondo CSS y cielo cartográfico #000000; el océano conserva #003876 y la tierra sus tonos azules. Vista global publicada comprobada en Chromium Windows a1247×764, sin cabecera, panel ni punto inicial. Calles y selección siguen funcionando: zoom19 en Santo Domingo,5m=35,311px, regreso global correcto. Siete tests, TypeScript y build oficial Sites pasan. Proveedor, geometría, fuentes, worker y controles no cambian. Mediciones de rendimiento y escrituras anteriores son evidencias anteriores, no nuevas ejecuciones. El sprint sigue abierto, sin aprobación humana.

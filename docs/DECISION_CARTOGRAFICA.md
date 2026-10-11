@@ -33,3 +33,5 @@ Pitch cero. El motor declara proyección globe y realiza su transición automát
 Tokio, Nairobi, Sídney, área rural dominicana e Islandia cargaron sus teselas. Cruce 179,99 → 180,01 se normaliza a -179,99 sin romper la vista. Solicitar 89° conserva una vista global válida: el motor limita el centro según la escala y la herramienta de comprobación explica que no existe detalle Mercator más allá de ±85,0511°.
 
 En el dominio Sites: HTML y /api/health HTTP 200 con CSP; worker oficial HTTP 200 text/javascript; CSS y JS del build HTTP 200. Glifos remotos HTTP 200 con CORS *, cuatro fuentes locales y veinte muestras revisadas dentro del mapa. No se usan sprites, pues no hay iconos cartográficos. No se observaron errores nuevos de inicialización, CSP ni origen en esta versión. Cinco pruebas automatizadas de estilo, capas, fuentes, versión y copia exacta del worker pasaron; TypeScript y build oficial pasaron.
+
+Actualización visual del11oct2026: fondo exterior y cielo negros #000000, océano azul #003876 y tierra azul. Versión publicada2c3fe6bd22dc8191b1166b0279631eb6; colores son la única modificación cartográfica.
