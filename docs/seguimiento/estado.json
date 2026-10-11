@@ -18,12 +18,12 @@
   "contextHash": "5cfe19a69b0798ce4ba0ba33b879a70e42c4edbe53fd69dee3a253f01aa072a4",
   "project": "ATLAS",
   "portal": "https://atlas-escenarios-hud.yerrybatista.chatgpt.site/",
-  "updatedAt": "2026-10-11T10:56:25.923Z",
+  "updatedAt": "2026-10-11T11:15:46.807Z",
   "sprints": [
     {
       "number": 1,
       "title": "Globo y experiencia del mapa",
-      "updatedAt": "2026-10-11T10:56:25.923Z",
+      "updatedAt": "2026-10-11T11:15:46.807Z",
       "phase": "en_curso",
       "approval": {
         "status": "pendiente",
@@ -1052,6 +1052,24 @@
           "action": "set",
           "pointId": "S01-1B-13",
           "reference": "Usuario elige Chrome y navegador integrado; plan16 y diez HTML sincronizados. Verificaciones reales pendientes."
+        },
+        {
+          "at": "2026-10-11T11:15:46.464Z",
+          "action": "set",
+          "pointId": "S01-1B-05",
+          "reference": "Sites versión14: país España/francia/EEUU con punto cartográfico correcto; Santiago devuelve ocho ciudades identificadas por región/país; calle El Conde, Gazcue, Torre Eiffel y dirección consultadas sin resultados. Verificación final del bloque en preparación."
+        },
+        {
+          "at": "2026-10-11T11:15:46.630Z",
+          "action": "set",
+          "pointId": "S01-1B-12",
+          "reference": "Cuota real D1 en Sites v14:120 respuestas200 y exceso429; mensaje en UI y reintento exitoso tras nueva ventana. Prueba fuera de orden Madrid→Santiago descarta antigua; fallo503 inyectado recupera sin recarga.20 pruebas Vitest y TypeScript pasan; límite de concurrencia4 en publicación."
+        },
+        {
+          "at": "2026-10-11T11:15:46.807Z",
+          "action": "set",
+          "pointId": "S01-1B-13",
+          "reference": "Chrome154 y navegador integrado155 probados:320x568, ventanas amplias, texto200%, búsqueda homónima, selección y Escape/foco. Sin desborde horizontal; panel desplazable. Ambas implementaciones Chromium; no se atribuyen otros motores."
         }
       ],
       "points": [
@@ -2054,8 +2072,8 @@
           "text": "Incorporar búsqueda exclusivamente de países y ciudades. Las sugerencias indican su tipo y ubicación administrativa para distinguir nombres repetidos. No buscar ni ofrecer calles, direcciones, edificios, barrios, negocios u otros puntos de interés. El campo se identifica como «País o ciudad» y no ofrece búsqueda detallada alternativa. Mantener la búsqueda cerrada hasta que se solicite.",
           "kind": "operacion",
           "status": "en_curso",
-          "evidence": "Catálogo GeoNames abierto en preparación, solamente países y ciudades; integración aún no verificada.",
-          "updatedAt": "2026-10-11T10:56:25.727Z",
+          "evidence": "Sites versión14: país España/francia/EEUU con punto cartográfico correcto; Santiago devuelve ocho ciudades identificadas por región/país; calle El Conde, Gazcue, Torre Eiffel y dirección consultadas sin resultados. Verificación final del bloque en preparación.",
+          "updatedAt": "2026-10-11T11:15:46.464Z",
           "history": [
             {
               "at": "2026-10-11T02:21:44.633Z",
@@ -2086,6 +2104,11 @@
               "at": "2026-10-11T10:56:25.727Z",
               "status": "en_curso",
               "evidence": "Catálogo GeoNames abierto en preparación, solamente países y ciudades; integración aún no verificada."
+            },
+            {
+              "at": "2026-10-11T11:15:46.464Z",
+              "status": "en_curso",
+              "evidence": "Sites versión14: país España/francia/EEUU con punto cartográfico correcto; Santiago devuelve ocho ciudades identificadas por región/país; calle El Conde, Gazcue, Torre Eiffel y dirección consultadas sin resultados. Verificación final del bloque en preparación."
             }
           ]
         },
@@ -2228,8 +2251,8 @@
           "text": "Completar el adaptador servidor del buscador con esquema validado, límites de longitud y resultados, tiempo máximo, cancelación y protección de cuota. Limitar la consulta del proveedor a países y ciudades y filtrar su respuesta mediante una lista permitida de tipos; rechazar calles, direcciones, edificios, barrios, POI y tipos desconocidos también al leer la caché. No deducir el tipo por el texto del nombre ni depender únicamente del cliente. Definir comportamiento ante 429 y fallos del proveedor, sin reintentos ilimitados. Cachear únicamente respuestas permitidas por licencia, idioma y audiencia; las restricciones deben seguir funcionando en la versión revisable.",
           "kind": "operacion",
           "status": "en_curso",
-          "evidence": "Preparando catálogo acotado, caché por edición y presupuesto distribuido de consulta anónima en Sites.",
-          "updatedAt": "2026-10-11T10:56:25.823Z",
+          "evidence": "Cuota real D1 en Sites v14:120 respuestas200 y exceso429; mensaje en UI y reintento exitoso tras nueva ventana. Prueba fuera de orden Madrid→Santiago descarta antigua; fallo503 inyectado recupera sin recarga.20 pruebas Vitest y TypeScript pasan; límite de concurrencia4 en publicación.",
+          "updatedAt": "2026-10-11T11:15:46.630Z",
           "history": [
             {
               "at": "2026-10-11T02:21:44.454Z",
@@ -2265,6 +2288,11 @@
               "at": "2026-10-11T10:56:25.823Z",
               "status": "en_curso",
               "evidence": "Preparando catálogo acotado, caché por edición y presupuesto distribuido de consulta anónima en Sites."
+            },
+            {
+              "at": "2026-10-11T11:15:46.630Z",
+              "status": "en_curso",
+              "evidence": "Cuota real D1 en Sites v14:120 respuestas200 y exceso429; mensaje en UI y reintento exitoso tras nueva ventana. Prueba fuera de orden Madrid→Santiago descarta antigua; fallo503 inyectado recupera sin recarga.20 pruebas Vitest y TypeScript pasan; límite de concurrencia4 en publicación."
             }
           ]
         },
@@ -2275,8 +2303,8 @@
           "text": "Fijar la matriz autorizada por el usuario: Chrome y navegador integrado, registrando versiones y dimensiones de la ventana. Probar tamaño de texto al 200 %, ancho de 320 píxeles CSS, paneles desplazables, teclado y controles accesibles sin superposición. Las comprobaciones registran navegador, versión, tamaño de ventana y resultados; no requieren plataformas adicionales. Ambos entornos pueden compartir motor; no afirmar compatibilidad con motores no verificados.",
           "kind": "operacion",
           "status": "en_curso",
-          "evidence": "Usuario elige Chrome y navegador integrado; plan16 y diez HTML sincronizados. Verificaciones reales pendientes.",
-          "updatedAt": "2026-10-11T10:56:25.923Z",
+          "evidence": "Chrome154 y navegador integrado155 probados:320x568, ventanas amplias, texto200%, búsqueda homónima, selección y Escape/foco. Sin desborde horizontal; panel desplazable. Ambas implementaciones Chromium; no se atribuyen otros motores.",
+          "updatedAt": "2026-10-11T11:15:46.807Z",
           "history": [
             {
               "at": "2026-10-11T02:21:44.543Z",
@@ -2302,6 +2330,11 @@
               "at": "2026-10-11T10:56:25.923Z",
               "status": "en_curso",
               "evidence": "Usuario elige Chrome y navegador integrado; plan16 y diez HTML sincronizados. Verificaciones reales pendientes."
+            },
+            {
+              "at": "2026-10-11T11:15:46.807Z",
+              "status": "en_curso",
+              "evidence": "Chrome154 y navegador integrado155 probados:320x568, ventanas amplias, texto200%, búsqueda homónima, selección y Escape/foco. Sin desborde horizontal; panel desplazable. Ambas implementaciones Chromium; no se atribuyen otros motores."
             }
           ]
         },
