@@ -18,7 +18,7 @@
   "contextHash": "b1a430158192aab4c8575a739af00b719e0dbc5c74e803966e206bde1fc40a92",
   "project": "Mapa Táctico",
   "portal": "https://atlas-escenarios-hud.yerrybatista.chatgpt.site/",
-  "updatedAt": "2026-10-11T13:12:39.650Z",
+  "updatedAt": "2026-10-11T13:16:06.242Z",
   "sprints": [
     {
       "number": 1,
@@ -3951,7 +3951,7 @@
     {
       "number": 2,
       "title": "Idiomas y nombres geográficos",
-      "updatedAt": "2026-10-11T13:12:39.650Z",
+      "updatedAt": "2026-10-11T13:16:06.242Z",
       "phase": "en_curso",
       "approval": {
         "status": "pendiente",
@@ -4461,6 +4461,72 @@
           "action": "set",
           "pointId": "S02-2C-AC-05",
           "reference": "IAB cambia veinte idiomas conservando punto9.678348/50.961733 zoom3 y country-DE; controles/resultados, Beirut firma context-20261011-2 y disclaimer traducidos. API veinte nombres Alemania devuelve country-DE mismas coordenadas; país de ficha country-LB localizado. Calles expresión oficial preservada. 39pruebas."
+        },
+        {
+          "at": "2026-10-11T13:15:26.377Z",
+          "action": "set",
+          "pointId": "S02-2B-01",
+          "reference": "Revisión de entrega detectó respuesta 503 sin traducción cuando falta DB/ASSETS. Se corrige la rama de error y se vuelve a verificar antes de presentar aceptación."
+        },
+        {
+          "at": "2026-10-11T13:16:05.206Z",
+          "action": "set",
+          "pointId": "S02-2B-01",
+          "reference": "Rama 503 sin DB/ASSETS traducida en veinte idiomas; nuevo test recorre20 mensajes y mantiene503/no-store. Edición84claves revisada; 40pruebas, TypeScript y compilación pasan. docs/DECISION_IDIOMAS.md."
+        },
+        {
+          "at": "2026-10-11T13:16:05.355Z",
+          "action": "set",
+          "pointId": "S02-2B-AC-01",
+          "reference": "Reverificación tras corrección503: 40pruebas pasan, auditoría20*84claves; veinte formatos y nombres estables. UI/RTL/fuentes sin cambios respecto a recorrido20idiomas Chrome/IAB,320CSS/texto200%. Rama de servicio ausente ahora conserva lengua. Revisiones identificadas y evidencia docs/DECISION_IDIOMAS.md."
+        },
+        {
+          "at": "2026-10-11T13:16:05.450Z",
+          "action": "set",
+          "pointId": "S02-2B-AC-02",
+          "reference": "Reverificación tras corrección503: 40pruebas pasan, auditoría20*84claves; veinte formatos y nombres estables. UI/RTL/fuentes sin cambios respecto a recorrido20idiomas Chrome/IAB,320CSS/texto200%. Rama de servicio ausente ahora conserva lengua. Revisiones identificadas y evidencia docs/DECISION_IDIOMAS.md."
+        },
+        {
+          "at": "2026-10-11T13:16:05.549Z",
+          "action": "set",
+          "pointId": "S02-2B-AC-03",
+          "reference": "Reverificación tras corrección503: 40pruebas pasan, auditoría20*84claves; veinte formatos y nombres estables. UI/RTL/fuentes sin cambios respecto a recorrido20idiomas Chrome/IAB,320CSS/texto200%. Rama de servicio ausente ahora conserva lengua. Revisiones identificadas y evidencia docs/DECISION_IDIOMAS.md."
+        },
+        {
+          "at": "2026-10-11T13:16:05.674Z",
+          "action": "set",
+          "pointId": "S02-2B-AC-04",
+          "reference": "Reverificación tras corrección503: 40pruebas pasan, auditoría20*84claves; veinte formatos y nombres estables. UI/RTL/fuentes sin cambios respecto a recorrido20idiomas Chrome/IAB,320CSS/texto200%. Rama de servicio ausente ahora conserva lengua. Revisiones identificadas y evidencia docs/DECISION_IDIOMAS.md."
+        },
+        {
+          "at": "2026-10-11T13:16:05.855Z",
+          "action": "set",
+          "pointId": "S02-2C-AC-01",
+          "reference": "Reverificación tras corrección exclusiva de mensaje503: 40pruebas y compilación pasan; sin cambios en nombres, estilo, alias, geometría o cliente. Recorridos20idiomas Chrome/IAB de09:12 siguen acreditados; búsqueda pública20: shahmukhi country-DE HTTP200; árabe labels/RTL. Evidencia final docs/DECISION_IDIOMAS.md."
+        },
+        {
+          "at": "2026-10-11T13:16:05.959Z",
+          "action": "set",
+          "pointId": "S02-2C-AC-02",
+          "reference": "Reverificación tras corrección exclusiva de mensaje503: 40pruebas y compilación pasan; sin cambios en nombres, estilo, alias, geometría o cliente. Recorridos20idiomas Chrome/IAB de09:12 siguen acreditados; búsqueda pública20: shahmukhi country-DE HTTP200; árabe labels/RTL. Evidencia final docs/DECISION_IDIOMAS.md."
+        },
+        {
+          "at": "2026-10-11T13:16:06.055Z",
+          "action": "set",
+          "pointId": "S02-2C-AC-03",
+          "reference": "Reverificación tras corrección exclusiva de mensaje503: 40pruebas y compilación pasan; sin cambios en nombres, estilo, alias, geometría o cliente. Recorridos20idiomas Chrome/IAB de09:12 siguen acreditados; búsqueda pública20: shahmukhi country-DE HTTP200; árabe labels/RTL. Evidencia final docs/DECISION_IDIOMAS.md."
+        },
+        {
+          "at": "2026-10-11T13:16:06.149Z",
+          "action": "set",
+          "pointId": "S02-2C-AC-04",
+          "reference": "Reverificación tras corrección exclusiva de mensaje503: 40pruebas y compilación pasan; sin cambios en nombres, estilo, alias, geometría o cliente. Recorridos20idiomas Chrome/IAB de09:12 siguen acreditados; búsqueda pública20: shahmukhi country-DE HTTP200; árabe labels/RTL. Evidencia final docs/DECISION_IDIOMAS.md."
+        },
+        {
+          "at": "2026-10-11T13:16:06.242Z",
+          "action": "set",
+          "pointId": "S02-2C-AC-05",
+          "reference": "Reverificación tras corrección exclusiva de mensaje503: 40pruebas y compilación pasan; sin cambios en nombres, estilo, alias, geometría o cliente. Recorridos20idiomas Chrome/IAB de09:12 siguen acreditados; búsqueda pública20: shahmukhi country-DE HTTP200; árabe labels/RTL. Evidencia final docs/DECISION_IDIOMAS.md."
         }
       ],
       "points": [
@@ -4655,8 +4721,8 @@
           "text": "Completar y revisar las traducciones de todo el producto existente. No concatenar fragmentos que impidan concordancia; permitir traducciones de frases y plurales completos.",
           "kind": "operacion",
           "status": "terminado",
-          "evidence": "Edición final 84 claves por idioma, incluida countryOriginal revisada en veinte lenguas; auditoría y 39 pruebas pasan. Revisiones identificadas docs/i18n y comprobación final local docs/DECISION_IDIOMAS.md.",
-          "updatedAt": "2026-10-11T13:12:15.541Z",
+          "evidence": "Rama 503 sin DB/ASSETS traducida en veinte idiomas; nuevo test recorre20 mensajes y mantiene503/no-store. Edición84claves revisada; 40pruebas, TypeScript y compilación pasan. docs/DECISION_IDIOMAS.md.",
+          "updatedAt": "2026-10-11T13:16:05.206Z",
           "history": [
             {
               "at": "2026-10-11T12:26:32.512Z",
@@ -4672,6 +4738,16 @@
               "at": "2026-10-11T13:12:15.541Z",
               "status": "terminado",
               "evidence": "Edición final 84 claves por idioma, incluida countryOriginal revisada en veinte lenguas; auditoría y 39 pruebas pasan. Revisiones identificadas docs/i18n y comprobación final local docs/DECISION_IDIOMAS.md."
+            },
+            {
+              "at": "2026-10-11T13:15:26.377Z",
+              "status": "en_curso",
+              "evidence": "Revisión de entrega detectó respuesta 503 sin traducción cuando falta DB/ASSETS. Se corrige la rama de error y se vuelve a verificar antes de presentar aceptación."
+            },
+            {
+              "at": "2026-10-11T13:16:05.206Z",
+              "status": "terminado",
+              "evidence": "Rama 503 sin DB/ASSETS traducida en veinte idiomas; nuevo test recorre20 mensajes y mantiene503/no-store. Edición84claves revisada; 40pruebas, TypeScript y compilación pasan. docs/DECISION_IDIOMAS.md."
             }
           ],
           "blockId": "2B"
@@ -4884,8 +4960,8 @@
           "text": "Cantidades, fechas y plurales pasan casos de referencia; cualquier alternativa de Intl está documentada y no cambia idioma, unidades ni significado. Texto ampliado y traducciones largas no recortan acciones.",
           "kind": "aceptacion",
           "status": "terminado",
-          "evidence": "Recomprobación edición 84 claves: formatos de veinte idiomas pasan referencias sin alterar significado. Chrome e IAB 320 CSS px y texto 200% alemán/árabe/urdu/shahmukhi/telugu sin recorte; fuentes y coordenadas RTL legibles, Escape y controles accesibles. Evidencia final docs/DECISION_IDIOMAS.md y 39 pruebas.",
-          "updatedAt": "2026-10-11T13:12:38.486Z",
+          "evidence": "Reverificación tras corrección503: 40pruebas pasan, auditoría20*84claves; veinte formatos y nombres estables. UI/RTL/fuentes sin cambios respecto a recorrido20idiomas Chrome/IAB,320CSS/texto200%. Rama de servicio ausente ahora conserva lengua. Revisiones identificadas y evidencia docs/DECISION_IDIOMAS.md.",
+          "updatedAt": "2026-10-11T13:16:05.355Z",
           "history": [
             {
               "at": "2026-10-11T12:46:16.541Z",
@@ -4901,6 +4977,16 @@
               "at": "2026-10-11T13:12:38.486Z",
               "status": "terminado",
               "evidence": "Recomprobación edición 84 claves: formatos de veinte idiomas pasan referencias sin alterar significado. Chrome e IAB 320 CSS px y texto 200% alemán/árabe/urdu/shahmukhi/telugu sin recorte; fuentes y coordenadas RTL legibles, Escape y controles accesibles. Evidencia final docs/DECISION_IDIOMAS.md y 39 pruebas."
+            },
+            {
+              "at": "2026-10-11T13:15:26.377Z",
+              "status": "pendiente",
+              "evidence": "Reverificar: cambió o quedó incompleto S02-2B-01."
+            },
+            {
+              "at": "2026-10-11T13:16:05.355Z",
+              "status": "terminado",
+              "evidence": "Reverificación tras corrección503: 40pruebas pasan, auditoría20*84claves; veinte formatos y nombres estables. UI/RTL/fuentes sin cambios respecto a recorrido20idiomas Chrome/IAB,320CSS/texto200%. Rama de servicio ausente ahora conserva lengua. Revisiones identificadas y evidencia docs/DECISION_IDIOMAS.md."
             }
           ]
         },
@@ -4910,8 +4996,8 @@
           "text": "No hay claves de traducción expuestas, texto sin traducir accidentalmente ni caracteres ausentes.",
           "kind": "aceptacion",
           "status": "terminado",
-          "evidence": "Edición final 84 claves por idioma, incluida countryOriginal revisada en veinte lenguas; auditoría y 39 pruebas pasan. Revisiones identificadas docs/i18n y comprobación final local docs/DECISION_IDIOMAS.md.",
-          "updatedAt": "2026-10-11T13:12:15.748Z",
+          "evidence": "Reverificación tras corrección503: 40pruebas pasan, auditoría20*84claves; veinte formatos y nombres estables. UI/RTL/fuentes sin cambios respecto a recorrido20idiomas Chrome/IAB,320CSS/texto200%. Rama de servicio ausente ahora conserva lengua. Revisiones identificadas y evidencia docs/DECISION_IDIOMAS.md.",
+          "updatedAt": "2026-10-11T13:16:05.450Z",
           "history": [
             {
               "at": "2026-10-11T12:46:16.625Z",
@@ -4927,6 +5013,16 @@
               "at": "2026-10-11T13:12:15.748Z",
               "status": "terminado",
               "evidence": "Edición final 84 claves por idioma, incluida countryOriginal revisada en veinte lenguas; auditoría y 39 pruebas pasan. Revisiones identificadas docs/i18n y comprobación final local docs/DECISION_IDIOMAS.md."
+            },
+            {
+              "at": "2026-10-11T13:15:26.377Z",
+              "status": "pendiente",
+              "evidence": "Reverificar: cambió o quedó incompleto S02-2B-01."
+            },
+            {
+              "at": "2026-10-11T13:16:05.450Z",
+              "status": "terminado",
+              "evidence": "Reverificación tras corrección503: 40pruebas pasan, auditoría20*84claves; veinte formatos y nombres estables. UI/RTL/fuentes sin cambios respecto a recorrido20idiomas Chrome/IAB,320CSS/texto200%. Rama de servicio ausente ahora conserva lengua. Revisiones identificadas y evidencia docs/DECISION_IDIOMAS.md."
             }
           ],
           "blockId": "2B"
@@ -4937,8 +5033,8 @@
           "text": "La auditoría detecta claves faltantes antes de publicar. Cada idioma tiene una revisión lingüística identificada; un borrador automático no se declara revisado.",
           "kind": "aceptacion",
           "status": "terminado",
-          "evidence": "Edición final 84 claves por idioma, incluida countryOriginal revisada en veinte lenguas; auditoría y 39 pruebas pasan. Revisiones identificadas docs/i18n y comprobación final local docs/DECISION_IDIOMAS.md.",
-          "updatedAt": "2026-10-11T13:12:15.839Z",
+          "evidence": "Reverificación tras corrección503: 40pruebas pasan, auditoría20*84claves; veinte formatos y nombres estables. UI/RTL/fuentes sin cambios respecto a recorrido20idiomas Chrome/IAB,320CSS/texto200%. Rama de servicio ausente ahora conserva lengua. Revisiones identificadas y evidencia docs/DECISION_IDIOMAS.md.",
+          "updatedAt": "2026-10-11T13:16:05.549Z",
           "history": [
             {
               "at": "2026-10-11T12:46:16.716Z",
@@ -4954,6 +5050,16 @@
               "at": "2026-10-11T13:12:15.839Z",
               "status": "terminado",
               "evidence": "Edición final 84 claves por idioma, incluida countryOriginal revisada en veinte lenguas; auditoría y 39 pruebas pasan. Revisiones identificadas docs/i18n y comprobación final local docs/DECISION_IDIOMAS.md."
+            },
+            {
+              "at": "2026-10-11T13:15:26.377Z",
+              "status": "pendiente",
+              "evidence": "Reverificar: cambió o quedó incompleto S02-2B-01."
+            },
+            {
+              "at": "2026-10-11T13:16:05.549Z",
+              "status": "terminado",
+              "evidence": "Reverificación tras corrección503: 40pruebas pasan, auditoría20*84claves; veinte formatos y nombres estables. UI/RTL/fuentes sin cambios respecto a recorrido20idiomas Chrome/IAB,320CSS/texto200%. Rama de servicio ausente ahora conserva lengua. Revisiones identificadas y evidencia docs/DECISION_IDIOMAS.md."
             }
           ],
           "blockId": "2B"
@@ -4964,8 +5070,8 @@
           "text": "Los idiomas de derecha a izquierda funcionan en ventanas estrechas y amplias, con coordenadas y números legibles.",
           "kind": "aceptacion",
           "status": "terminado",
-          "evidence": "Recomprobación edición 84 claves: formatos de veinte idiomas pasan referencias sin alterar significado. Chrome e IAB 320 CSS px y texto 200% alemán/árabe/urdu/shahmukhi/telugu sin recorte; fuentes y coordenadas RTL legibles, Escape y controles accesibles. Evidencia final docs/DECISION_IDIOMAS.md y 39 pruebas.",
-          "updatedAt": "2026-10-11T13:12:38.583Z",
+          "evidence": "Reverificación tras corrección503: 40pruebas pasan, auditoría20*84claves; veinte formatos y nombres estables. UI/RTL/fuentes sin cambios respecto a recorrido20idiomas Chrome/IAB,320CSS/texto200%. Rama de servicio ausente ahora conserva lengua. Revisiones identificadas y evidencia docs/DECISION_IDIOMAS.md.",
+          "updatedAt": "2026-10-11T13:16:05.674Z",
           "history": [
             {
               "at": "2026-10-11T12:46:17.114Z",
@@ -4981,6 +5087,16 @@
               "at": "2026-10-11T13:12:38.583Z",
               "status": "terminado",
               "evidence": "Recomprobación edición 84 claves: formatos de veinte idiomas pasan referencias sin alterar significado. Chrome e IAB 320 CSS px y texto 200% alemán/árabe/urdu/shahmukhi/telugu sin recorte; fuentes y coordenadas RTL legibles, Escape y controles accesibles. Evidencia final docs/DECISION_IDIOMAS.md y 39 pruebas."
+            },
+            {
+              "at": "2026-10-11T13:15:26.377Z",
+              "status": "pendiente",
+              "evidence": "Reverificar: cambió o quedó incompleto S02-2B-01."
+            },
+            {
+              "at": "2026-10-11T13:16:05.674Z",
+              "status": "terminado",
+              "evidence": "Reverificación tras corrección503: 40pruebas pasan, auditoría20*84claves; veinte formatos y nombres estables. UI/RTL/fuentes sin cambios respecto a recorrido20idiomas Chrome/IAB,320CSS/texto200%. Rama de servicio ausente ahora conserva lengua. Revisiones identificadas y evidencia docs/DECISION_IDIOMAS.md."
             }
           ],
           "blockId": "2B"
@@ -5183,13 +5299,23 @@
           "text": "Cada país tiene identificador estable y nombre revisado en los veinte idiomas; al cambiar idioma no aparecen etiquetas duplicadas ni se alteran coordenadas o resultados.",
           "kind": "aceptacion",
           "status": "terminado",
-          "evidence": "239 códigos y 19 entidades propias con mismos anclajes en20idiomas; 271 nombres por idioma auditados con fuentes fijas y revisiones identificadas. Chrome/IAB20idiomas renderizados, sin duplicación de capa ni movimiento de centro/zoom. 39 pruebas; docs/DECISION_PAISES.md y docs/DECISION_IDIOMAS.md.",
-          "updatedAt": "2026-10-11T13:12:39.224Z",
+          "evidence": "Reverificación tras corrección exclusiva de mensaje503: 40pruebas y compilación pasan; sin cambios en nombres, estilo, alias, geometría o cliente. Recorridos20idiomas Chrome/IAB de09:12 siguen acreditados; búsqueda pública20: shahmukhi country-DE HTTP200; árabe labels/RTL. Evidencia final docs/DECISION_IDIOMAS.md.",
+          "updatedAt": "2026-10-11T13:16:05.855Z",
           "history": [
             {
               "at": "2026-10-11T13:12:39.224Z",
               "status": "terminado",
               "evidence": "239 códigos y 19 entidades propias con mismos anclajes en20idiomas; 271 nombres por idioma auditados con fuentes fijas y revisiones identificadas. Chrome/IAB20idiomas renderizados, sin duplicación de capa ni movimiento de centro/zoom. 39 pruebas; docs/DECISION_PAISES.md y docs/DECISION_IDIOMAS.md."
+            },
+            {
+              "at": "2026-10-11T13:15:26.377Z",
+              "status": "pendiente",
+              "evidence": "Reverificar: cambió o quedó incompleto S02-2B-01."
+            },
+            {
+              "at": "2026-10-11T13:16:05.855Z",
+              "status": "terminado",
+              "evidence": "Reverificación tras corrección exclusiva de mensaje503: 40pruebas y compilación pasan; sin cambios en nombres, estilo, alias, geometría o cliente. Recorridos20idiomas Chrome/IAB de09:12 siguen acreditados; búsqueda pública20: shahmukhi country-DE HTTP200; árabe labels/RTL. Evidencia final docs/DECISION_IDIOMAS.md."
             }
           ]
         },
@@ -5200,13 +5326,23 @@
           "text": "Los glifos y la composición se comprueban dentro del mapa en las veinte escrituras, con una alternativa de nombres explícita donde el proveedor no tenga traducción.",
           "kind": "aceptacion",
           "status": "terminado",
-          "evidence": "239 códigos y 19 entidades propias con mismos anclajes en20idiomas; 271 nombres por idioma auditados con fuentes fijas y revisiones identificadas. Chrome/IAB20idiomas renderizados, sin duplicación de capa ni movimiento de centro/zoom. 39 pruebas; docs/DECISION_PAISES.md y docs/DECISION_IDIOMAS.md.",
-          "updatedAt": "2026-10-11T13:12:39.316Z",
+          "evidence": "Reverificación tras corrección exclusiva de mensaje503: 40pruebas y compilación pasan; sin cambios en nombres, estilo, alias, geometría o cliente. Recorridos20idiomas Chrome/IAB de09:12 siguen acreditados; búsqueda pública20: shahmukhi country-DE HTTP200; árabe labels/RTL. Evidencia final docs/DECISION_IDIOMAS.md.",
+          "updatedAt": "2026-10-11T13:16:05.959Z",
           "history": [
             {
               "at": "2026-10-11T13:12:39.316Z",
               "status": "terminado",
               "evidence": "239 códigos y 19 entidades propias con mismos anclajes en20idiomas; 271 nombres por idioma auditados con fuentes fijas y revisiones identificadas. Chrome/IAB20idiomas renderizados, sin duplicación de capa ni movimiento de centro/zoom. 39 pruebas; docs/DECISION_PAISES.md y docs/DECISION_IDIOMAS.md."
+            },
+            {
+              "at": "2026-10-11T13:15:26.377Z",
+              "status": "pendiente",
+              "evidence": "Reverificar: cambió o quedó incompleto S02-2B-01."
+            },
+            {
+              "at": "2026-10-11T13:16:05.959Z",
+              "status": "terminado",
+              "evidence": "Reverificación tras corrección exclusiva de mensaje503: 40pruebas y compilación pasan; sin cambios en nombres, estilo, alias, geometría o cliente. Recorridos20idiomas Chrome/IAB de09:12 siguen acreditados; búsqueda pública20: shahmukhi country-DE HTTP200; árabe labels/RTL. Evidencia final docs/DECISION_IDIOMAS.md."
             }
           ]
         },
@@ -5216,13 +5352,23 @@
           "text": "Cambiar entre los veinte idiomas actualiza país, controles, disclaimer y resultados existentes, manteniendo el punto y el zoom.",
           "kind": "aceptacion",
           "status": "terminado",
-          "evidence": "IAB cambia veinte idiomas conservando punto9.678348/50.961733 zoom3 y country-DE; controles/resultados, Beirut firma context-20261011-2 y disclaimer traducidos. API veinte nombres Alemania devuelve country-DE mismas coordenadas; país de ficha country-LB localizado. Calles expresión oficial preservada. 39pruebas.",
-          "updatedAt": "2026-10-11T13:12:39.554Z",
+          "evidence": "Reverificación tras corrección exclusiva de mensaje503: 40pruebas y compilación pasan; sin cambios en nombres, estilo, alias, geometría o cliente. Recorridos20idiomas Chrome/IAB de09:12 siguen acreditados; búsqueda pública20: shahmukhi country-DE HTTP200; árabe labels/RTL. Evidencia final docs/DECISION_IDIOMAS.md.",
+          "updatedAt": "2026-10-11T13:16:06.055Z",
           "history": [
             {
               "at": "2026-10-11T13:12:39.554Z",
               "status": "terminado",
               "evidence": "IAB cambia veinte idiomas conservando punto9.678348/50.961733 zoom3 y country-DE; controles/resultados, Beirut firma context-20261011-2 y disclaimer traducidos. API veinte nombres Alemania devuelve country-DE mismas coordenadas; país de ficha country-LB localizado. Calles expresión oficial preservada. 39pruebas."
+            },
+            {
+              "at": "2026-10-11T13:15:26.377Z",
+              "status": "pendiente",
+              "evidence": "Reverificar: cambió o quedó incompleto S02-2B-01."
+            },
+            {
+              "at": "2026-10-11T13:16:06.055Z",
+              "status": "terminado",
+              "evidence": "Reverificación tras corrección exclusiva de mensaje503: 40pruebas y compilación pasan; sin cambios en nombres, estilo, alias, geometría o cliente. Recorridos20idiomas Chrome/IAB de09:12 siguen acreditados; búsqueda pública20: shahmukhi country-DE HTTP200; árabe labels/RTL. Evidencia final docs/DECISION_IDIOMAS.md."
             }
           ],
           "blockId": "2C"
@@ -5233,13 +5379,23 @@
           "text": "Las etiquetas del mapa pasan revisión de composición y glifos en las veinte escrituras. La ausencia de datos Intl no cambia el idioma del contenido.",
           "kind": "aceptacion",
           "status": "terminado",
-          "evidence": "239 códigos y 19 entidades propias con mismos anclajes en20idiomas; 271 nombres por idioma auditados con fuentes fijas y revisiones identificadas. Chrome/IAB20idiomas renderizados, sin duplicación de capa ni movimiento de centro/zoom. 39 pruebas; docs/DECISION_PAISES.md y docs/DECISION_IDIOMAS.md.",
-          "updatedAt": "2026-10-11T13:12:39.404Z",
+          "evidence": "Reverificación tras corrección exclusiva de mensaje503: 40pruebas y compilación pasan; sin cambios en nombres, estilo, alias, geometría o cliente. Recorridos20idiomas Chrome/IAB de09:12 siguen acreditados; búsqueda pública20: shahmukhi country-DE HTTP200; árabe labels/RTL. Evidencia final docs/DECISION_IDIOMAS.md.",
+          "updatedAt": "2026-10-11T13:16:06.149Z",
           "history": [
             {
               "at": "2026-10-11T13:12:39.404Z",
               "status": "terminado",
               "evidence": "239 códigos y 19 entidades propias con mismos anclajes en20idiomas; 271 nombres por idioma auditados con fuentes fijas y revisiones identificadas. Chrome/IAB20idiomas renderizados, sin duplicación de capa ni movimiento de centro/zoom. 39 pruebas; docs/DECISION_PAISES.md y docs/DECISION_IDIOMAS.md."
+            },
+            {
+              "at": "2026-10-11T13:15:26.377Z",
+              "status": "pendiente",
+              "evidence": "Reverificar: cambió o quedó incompleto S02-2B-01."
+            },
+            {
+              "at": "2026-10-11T13:16:06.149Z",
+              "status": "terminado",
+              "evidence": "Reverificación tras corrección exclusiva de mensaje503: 40pruebas y compilación pasan; sin cambios en nombres, estilo, alias, geometría o cliente. Recorridos20idiomas Chrome/IAB de09:12 siguen acreditados; búsqueda pública20: shahmukhi country-DE HTTP200; árabe labels/RTL. Evidencia final docs/DECISION_IDIOMAS.md."
             }
           ],
           "blockId": "2C"
@@ -5251,13 +5407,23 @@
           "text": "Se puede buscar un país con su nombre en cada idioma aunque el proveedor no soporte ese locale; sugerencia, etiqueta y ficha comparten identificador y nombre de país sin alterar los nombres oficiales de calles.",
           "kind": "aceptacion",
           "status": "terminado",
-          "evidence": "IAB cambia veinte idiomas conservando punto9.678348/50.961733 zoom3 y country-DE; controles/resultados, Beirut firma context-20261011-2 y disclaimer traducidos. API veinte nombres Alemania devuelve country-DE mismas coordenadas; país de ficha country-LB localizado. Calles expresión oficial preservada. 39pruebas.",
-          "updatedAt": "2026-10-11T13:12:39.650Z",
+          "evidence": "Reverificación tras corrección exclusiva de mensaje503: 40pruebas y compilación pasan; sin cambios en nombres, estilo, alias, geometría o cliente. Recorridos20idiomas Chrome/IAB de09:12 siguen acreditados; búsqueda pública20: shahmukhi country-DE HTTP200; árabe labels/RTL. Evidencia final docs/DECISION_IDIOMAS.md.",
+          "updatedAt": "2026-10-11T13:16:06.242Z",
           "history": [
             {
               "at": "2026-10-11T13:12:39.650Z",
               "status": "terminado",
               "evidence": "IAB cambia veinte idiomas conservando punto9.678348/50.961733 zoom3 y country-DE; controles/resultados, Beirut firma context-20261011-2 y disclaimer traducidos. API veinte nombres Alemania devuelve country-DE mismas coordenadas; país de ficha country-LB localizado. Calles expresión oficial preservada. 39pruebas."
+            },
+            {
+              "at": "2026-10-11T13:15:26.377Z",
+              "status": "pendiente",
+              "evidence": "Reverificar: cambió o quedó incompleto S02-2B-01."
+            },
+            {
+              "at": "2026-10-11T13:16:06.242Z",
+              "status": "terminado",
+              "evidence": "Reverificación tras corrección exclusiva de mensaje503: 40pruebas y compilación pasan; sin cambios en nombres, estilo, alias, geometría o cliente. Recorridos20idiomas Chrome/IAB de09:12 siguen acreditados; búsqueda pública20: shahmukhi country-DE HTTP200; árabe labels/RTL. Evidencia final docs/DECISION_IDIOMAS.md."
             }
           ]
         }

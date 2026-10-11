@@ -41,3 +41,7 @@ La búsqueda HTTP local acepta los veinte nombres de Alemania con respuesta 200 
 La excepción Spratly se comprueba sobre la etiqueta real del mapa en maratí: el panel de ubicación presenta Spratly Islands y explica que procede de la lista original y carece de traducción verificada. Al usar promoteId y properties.id, la etiqueta conserva ne-PGA; se corrigió el identificador secuencial que MapLibre asignaba sin promoteId. Los cambios de idioma no alteran clasificaciones ni anclajes; el número de etiquetas visibles puede variar por las colisiones entre textos de distinto ancho.
 
 Esta sección acredita la compilación local. La URL, versión y comprobación pública se registrarán por separado en la guía y en el seguimiento antes de solicitar aprobación.
+
+### Corrección de la comprobación pública · 09:16 Santo Domingo
+
+La rama 503 de app/api/search/route.ts cuando faltan DB/ASSETS conservaba texto español. Se localizó con el mismo catálogo y política de idioma, sin cambiar códigos HTTP, bindings ni acceso. Una prueba nueva ejecuta los veinte idiomas con servicios ausentes y comprueba mensaje, 503 y no-store. TypeScript, auditoría, compilación y 40 pruebas pasan. La versión 20 publicó correctamente las funciones, pero se sustituye por una versión posterior que incluye esta corrección; no se solicita aprobación de la 20.
