@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "planVersion": 19,
+  "planVersion": 20,
   "controlRules": [
     "Correspondencia con el plan: cada HTML debe incluir todas las operaciones y criterios de su sprint, con identificadores estables, texto vigente y versión del plan. Ningún requisito se considera cumplido solo por estar documentado.",
     "Presentación del documento: fondo blanco; títulos de bloques y columnas en azul #003876 con letras blancas. Cada bloque tiene su propia tabla. Las filas «Terminado» tienen fondo verde y letras blancas; las filas «No completado», fondo rojo y letras blancas; las filas «Pendiente», sin relleno y letras negras. Las filas «En curso» conservan fondo naranja y texto negro. Los indicadores comparten exactamente el fondo y el color del texto de su fila, sin recuadro ni otro tono.",
@@ -13,28 +13,24 @@
     "Aprobación del usuario: solo el usuario puede aprobar el cierre de un sprint. Registrar su mensaje como evidencia y no comenzar el siguiente sprint antes de esa aprobación. Si pide cambios, mantener abierto el sprint y actualizar los puntos afectados.",
     "Vigencia y separación: conservar estas reglas durante todo el proyecto y mantener el documento de control fuera del portal. La pantalla local debe reflejar el HTML actualizado sin recarga manual; las consultas periódicas no deben generar escrituras si no hay cambios reales."
   ],
-  "controlScope": "Alcance web vigente: portal público, sin cuentas, registro, inicio de sesión, contraseñas ni claves del visitante. Verificar páginas y consultas como visitante anónimo. Comprobar adaptación a ventanas estrechas y amplias, ratón, teclado y texto ampliado. No exigir plataformas adicionales ni aplicaciones nativas en ningún sprint.",
-  "planHash": "092c641ec01b336c6faca2c33074c7dd2a80459c1cd0b28e723e18e215bb8da6",
-  "contextHash": "b1a430158192aab4c8575a739af00b719e0dbc5c74e803966e206bde1fc40a92",
+  "controlScope": "Alcance web vigente: portal público, sin cuentas, registro, inicio de sesión, contraseñas ni claves del visitante. Verificar páginas y consultas como visitante anónimo. Comprobar adaptación a ventanas estrechas y amplias, ratón, teclado y texto ampliado. Durante el desarrollo probar en el navegador integrado; Chrome se reserva para el final. Explorar y buscar ubicaciones no genera marcadores de detonación; los eventos y su cantidad se eligen explícitamente en sus flujos. No exigir plataformas adicionales ni aplicaciones nativas en ningún sprint.",
+  "planHash": "07aefefb5fa899e275b6676ee2a11daa64481d2153a64f1a6d021ddec6dfc318",
+  "contextHash": "3f0488730cc8487553295c934da319ca54b6637532839fefebf45d9ccd4ba0cc",
   "project": "Mapa Táctico",
   "portal": "https://atlas-escenarios-hud.yerrybatista.chatgpt.site/",
-  "updatedAt": "2026-10-11T14:44:17.192Z",
+  "updatedAt": "2026-10-11T16:24:43.727Z",
   "sprints": [
     {
       "number": 1,
       "title": "Globo y experiencia del mapa",
-      "updatedAt": "2026-10-11T14:14:42.717Z",
-      "phase": "aprobado",
+      "updatedAt": "2026-10-11T16:24:43.727Z",
+      "phase": "en_curso",
       "approval": {
-        "status": "aprobado",
-        "at": "2026-10-11T14:14:42.717Z",
-        "reference": "Mensaje del usuario recibido en esta conversación: Apruebo el Sprint 1 y continuar el Sprint 2. Aprobación explícita de Sites22, a8d62202c3453d086d43079ee8f66f866835e69a."
+        "status": "pendiente",
+        "at": null,
+        "reference": null
       },
-      "delivery": {
-        "url": "https://atlas-escenarios-hud.yerrybatista.chatgpt.site/",
-        "version": "Sites22 · a8d62202c3453d086d43079ee8f66f866835e69a · búsqueda persistente verificada11/10/2026",
-        "preparedAt": "2026-10-11T13:45:06.804Z"
-      },
+      "delivery": null,
       "reviewSteps": [
         {
           "action": "Buscar Santiago y elegir varias ciudades desde la misma lista; después cerrar con X o clic fuera.",
@@ -1863,6 +1859,39 @@
           "action": "approve",
           "pointId": null,
           "reference": "Mensaje del usuario recibido en esta conversación: Apruebo el Sprint 1 y continuar el Sprint 2. Aprobación explícita de Sites22, a8d62202c3453d086d43079ee8f66f866835e69a."
+        },
+        {
+          "at": "2026-10-11T16:22:19.802Z",
+          "action": "reabierto",
+          "reference": "Mensaje del usuario de esta conversación, 11/10/2026: evitar que al hacer clic en el mapa se coloque el marcador de detonación; los marcadores deben depender de la elección de explosiones y de cuántas ejecutar. Cambio del contrato de exploración y ubicación del Sprint 1."
+        },
+        {
+          "at": "2026-10-11T16:22:19.802Z",
+          "action": "reopen",
+          "pointId": null,
+          "reference": "Mensaje del usuario de esta conversación, 11/10/2026: evitar que al hacer clic en el mapa se coloque el marcador de detonación; los marcadores deben depender de la elección de explosiones y de cuántas ejecutar. Cambio del contrato de exploración y ubicación del Sprint 1."
+        },
+        {
+          "at": "2026-10-11T16:23:55.295Z",
+          "action": "aceptacion_invalidada",
+          "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
+        },
+        {
+          "at": "2026-10-11T16:23:55.295Z",
+          "action": "requisito_modificado",
+          "reference": "Plan actualizado; revisión y aprobación anteriores retiradas."
+        },
+        {
+          "at": "2026-10-11T16:23:55.405Z",
+          "action": "start",
+          "pointId": null,
+          "reference": null
+        },
+        {
+          "at": "2026-10-11T16:24:43.727Z",
+          "action": "set",
+          "pointId": "S01-1A-AC-01",
+          "reference": "Plan20: reverificando compilación, cartografía y servidor en el navegador integrado antes de avanzar al bloque1B."
         }
       ],
       "points": [
@@ -2226,9 +2255,9 @@
           "group": "Bloque 1A Cartografía y acercamiento",
           "text": "La aplicación compila y su versión revisable carga el globo vectorial, las calles y las rutas de servidor; proveedor, versión fijada, licencia, cobertura y modalidad de credenciales están documentados sin incluir valores secretos.",
           "kind": "aceptacion",
-          "status": "terminado",
-          "evidence": "Revalidación planv19: TypeScript, auditoría20catálogos,40pruebas y build de producción pasan. Mapa/worker/estilo/fuentes sin cambios de código frente a Sites21. QA local actual:20muestras renderizadas; SD zoom19 escala5m35,311px, referencia y centro exactos al volver1,25;143,71fps y7,4ms. Fuentes/proveedores documentados; pruebas históricas de otras latitudes no se atribuyen a esta ejecución.",
-          "updatedAt": "2026-10-11T13:38:08.693Z",
+          "status": "en_curso",
+          "evidence": "Plan20: reverificando compilación, cartografía y servidor en el navegador integrado antes de avanzar al bloque1B.",
+          "updatedAt": "2026-10-11T16:24:43.727Z",
           "history": [
             {
               "at": "2026-10-10T18:55:37.061Z",
@@ -2359,6 +2388,16 @@
               "at": "2026-10-11T13:38:08.693Z",
               "status": "terminado",
               "evidence": "Revalidación planv19: TypeScript, auditoría20catálogos,40pruebas y build de producción pasan. Mapa/worker/estilo/fuentes sin cambios de código frente a Sites21. QA local actual:20muestras renderizadas; SD zoom19 escala5m35,311px, referencia y centro exactos al volver1,25;143,71fps y7,4ms. Fuentes/proveedores documentados; pruebas históricas de otras latitudes no se atribuyen a esta ejecución."
+            },
+            {
+              "at": "2026-10-11T16:22:19.802Z",
+              "status": "pendiente",
+              "evidence": "Reverificar: se reabrió el sprint 1."
+            },
+            {
+              "at": "2026-10-11T16:24:43.727Z",
+              "status": "en_curso",
+              "evidence": "Plan20: reverificando compilación, cartografía y servidor en el navegador integrado antes de avanzar al bloque1B."
             }
           ]
         },
@@ -2368,9 +2407,9 @@
           "group": "Bloque 1A Cartografía y acercamiento",
           "text": "La transición globo a vista local conserva centro y ubicación; las pruebas reproducibles de escala, proyección, latitudes y rendimiento cumplen el bloque, sin sustituir detalle por ampliación de imagen.",
           "kind": "aceptacion",
-          "status": "terminado",
-          "evidence": "Revalidación planv19: TypeScript, auditoría20catálogos,40pruebas y build de producción pasan. Mapa/worker/estilo/fuentes sin cambios de código frente a Sites21. QA local actual:20muestras renderizadas; SD zoom19 escala5m35,311px, referencia y centro exactos al volver1,25;143,71fps y7,4ms. Fuentes/proveedores documentados; pruebas históricas de otras latitudes no se atribuyen a esta ejecución.",
-          "updatedAt": "2026-10-11T13:38:08.773Z",
+          "status": "pendiente",
+          "evidence": "Reverificar: se reabrió el sprint 1.",
+          "updatedAt": "2026-10-11T16:22:19.802Z",
           "history": [
             {
               "at": "2026-10-11T02:16:29.036Z",
@@ -2496,6 +2535,11 @@
               "at": "2026-10-11T13:38:08.773Z",
               "status": "terminado",
               "evidence": "Revalidación planv19: TypeScript, auditoría20catálogos,40pruebas y build de producción pasan. Mapa/worker/estilo/fuentes sin cambios de código frente a Sites21. QA local actual:20muestras renderizadas; SD zoom19 escala5m35,311px, referencia y centro exactos al volver1,25;143,71fps y7,4ms. Fuentes/proveedores documentados; pruebas históricas de otras latitudes no se atribuyen a esta ejecución."
+            },
+            {
+              "at": "2026-10-11T16:22:19.802Z",
+              "status": "pendiente",
+              "evidence": "Reverificar: se reabrió el sprint 1."
             }
           ]
         },
@@ -2505,9 +2549,9 @@
           "group": "Bloque 1A Cartografía y acercamiento",
           "text": "El build publicado carga su motor, glifos y workers sin errores de origen o de inicialización en servidor. Las rutas de servidor de referencia responden; la integración y aceptación del buscador se completan en 1B, sin condicionar 1A a ese bloque futuro.",
           "kind": "aceptacion",
-          "status": "terminado",
-          "evidence": "Revalidación planv19: TypeScript, auditoría20catálogos,40pruebas y build de producción pasan. Mapa/worker/estilo/fuentes sin cambios de código frente a Sites21. QA local actual:20muestras renderizadas; SD zoom19 escala5m35,311px, referencia y centro exactos al volver1,25;143,71fps y7,4ms. Fuentes/proveedores documentados; pruebas históricas de otras latitudes no se atribuyen a esta ejecución.",
-          "updatedAt": "2026-10-11T13:38:08.859Z",
+          "status": "pendiente",
+          "evidence": "Reverificar: se reabrió el sprint 1.",
+          "updatedAt": "2026-10-11T16:22:19.802Z",
           "history": [
             {
               "at": "2026-10-10T18:55:37.061Z",
@@ -2638,6 +2682,11 @@
               "at": "2026-10-11T13:38:08.859Z",
               "status": "terminado",
               "evidence": "Revalidación planv19: TypeScript, auditoría20catálogos,40pruebas y build de producción pasan. Mapa/worker/estilo/fuentes sin cambios de código frente a Sites21. QA local actual:20muestras renderizadas; SD zoom19 escala5m35,311px, referencia y centro exactos al volver1,25;143,71fps y7,4ms. Fuentes/proveedores documentados; pruebas históricas de otras latitudes no se atribuyen a esta ejecución."
+            },
+            {
+              "at": "2026-10-11T16:22:19.802Z",
+              "status": "pendiente",
+              "evidence": "Reverificar: se reabrió el sprint 1."
             }
           ]
         },
@@ -2647,9 +2696,9 @@
           "group": "Bloque 1A Cartografía y acercamiento",
           "text": "El worker y CSS del motor se incluyen correctamente en el build de Vite/Sites; no hay dependencia de rutas del servidor de desarrollo ni de una importación en servidor.",
           "kind": "aceptacion",
-          "status": "terminado",
-          "evidence": "Revalidación planv19: TypeScript, auditoría20catálogos,40pruebas y build de producción pasan. Mapa/worker/estilo/fuentes sin cambios de código frente a Sites21. QA local actual:20muestras renderizadas; SD zoom19 escala5m35,311px, referencia y centro exactos al volver1,25;143,71fps y7,4ms. Fuentes/proveedores documentados; pruebas históricas de otras latitudes no se atribuyen a esta ejecución.",
-          "updatedAt": "2026-10-11T13:38:08.941Z",
+          "status": "pendiente",
+          "evidence": "Reverificar: se reabrió el sprint 1.",
+          "updatedAt": "2026-10-11T16:22:19.802Z",
           "history": [
             {
               "at": "2026-10-11T02:16:29.225Z",
@@ -2775,6 +2824,11 @@
               "at": "2026-10-11T13:38:08.941Z",
               "status": "terminado",
               "evidence": "Revalidación planv19: TypeScript, auditoría20catálogos,40pruebas y build de producción pasan. Mapa/worker/estilo/fuentes sin cambios de código frente a Sites21. QA local actual:20muestras renderizadas; SD zoom19 escala5m35,311px, referencia y centro exactos al volver1,25;143,71fps y7,4ms. Fuentes/proveedores documentados; pruebas históricas de otras latitudes no se atribuyen a esta ejecución."
+            },
+            {
+              "at": "2026-10-11T16:22:19.802Z",
+              "status": "pendiente",
+              "evidence": "Reverificar: se reabrió el sprint 1."
             }
           ]
         },
@@ -2784,9 +2838,9 @@
           "group": "Bloque 1A Cartografía y acercamiento",
           "text": "La selección de motor, estilo y fuentes pasa muestras de composición de las escrituras requeridas; no se traslada al sprint 2 una incompatibilidad conocida que obligue a reemplazar el mapa.",
           "kind": "aceptacion",
-          "status": "terminado",
-          "evidence": "Revalidación planv19: TypeScript, auditoría20catálogos,40pruebas y build de producción pasan. Mapa/worker/estilo/fuentes sin cambios de código frente a Sites21. QA local actual:20muestras renderizadas; SD zoom19 escala5m35,311px, referencia y centro exactos al volver1,25;143,71fps y7,4ms. Fuentes/proveedores documentados; pruebas históricas de otras latitudes no se atribuyen a esta ejecución.",
-          "updatedAt": "2026-10-11T13:38:09.048Z",
+          "status": "pendiente",
+          "evidence": "Reverificar: se reabrió el sprint 1.",
+          "updatedAt": "2026-10-11T16:22:19.802Z",
           "history": [
             {
               "at": "2026-10-11T02:16:29.309Z",
@@ -2912,6 +2966,11 @@
               "at": "2026-10-11T13:38:09.048Z",
               "status": "terminado",
               "evidence": "Revalidación planv19: TypeScript, auditoría20catálogos,40pruebas y build de producción pasan. Mapa/worker/estilo/fuentes sin cambios de código frente a Sites21. QA local actual:20muestras renderizadas; SD zoom19 escala5m35,311px, referencia y centro exactos al volver1,25;143,71fps y7,4ms. Fuentes/proveedores documentados; pruebas históricas de otras latitudes no se atribuyen a esta ejecución."
+            },
+            {
+              "at": "2026-10-11T16:22:19.802Z",
+              "status": "pendiente",
+              "evidence": "Reverificar: se reabrió el sprint 1."
             }
           ]
         },
@@ -3107,12 +3166,13 @@
         },
         {
           "id": "S01-1B-06",
+          "blockId": "1B",
           "group": "Bloque 1B Pantalla y controles",
-          "text": "Permitir selección de ubicación con clic y movimiento posterior del punto. Diferenciar arrastrar el mapa de seleccionar: soltar un arrastre no debe crear un punto.",
+          "text": "Explorar el mapa con clic, arrastre o teclado sin colocar ni mover un marcador ni elegir una detonación. Retirar el círculo con + del punto libre, también después de buscar o editar coordenadas. Mantener la referencia geográfica interna para consultas. En Elegir ubicación se puede consultar una etiqueta de país explícitamente, sin crear un marcador de evento; fuera de ese panel, pulsar el mapa no cambia la referencia elegida.",
           "kind": "operacion",
-          "status": "terminado",
-          "evidence": "Click selecciona un punto, arrastre del mapa conserva el punto o no crea uno cuando no existe; marcador arrastrable cambia coordenadas y mantiene count1. Editor permite quitar o sustituir ubicación. Gestos publicados verificados.",
-          "updatedAt": "2026-10-11T02:34:48.379Z",
+          "status": "pendiente",
+          "evidence": "",
+          "updatedAt": "2026-10-11T16:23:55.295Z",
           "history": [
             {
               "at": "2026-10-11T02:21:44.031Z",
@@ -3123,18 +3183,23 @@
               "at": "2026-10-11T02:34:48.379Z",
               "status": "terminado",
               "evidence": "Click selecciona un punto, arrastre del mapa conserva el punto o no crea uno cuando no existe; marcador arrastrable cambia coordenadas y mantiene count1. Editor permite quitar o sustituir ubicación. Gestos publicados verificados."
+            },
+            {
+              "at": "2026-10-11T16:23:55.295Z",
+              "status": "pendiente",
+              "evidence": "Cambió el requisito en el plan; necesita nueva verificación."
             }
-          ],
-          "blockId": "1B"
+          ]
         },
         {
           "id": "S01-1B-07",
+          "blockId": "1B",
           "group": "Bloque 1B Pantalla y controles",
-          "text": "Conservar controles por teclado y proporcionar una alternativa accesible al gesto de colocar un punto. No capturar teclas de navegación cuando el foco está en un campo de texto.",
+          "text": "Conservar controles por teclado y selección explícita de referencia mediante búsqueda, coordenadas o centro de cámara. No capturar teclas de navegación cuando el foco está en un campo de texto. La referencia geográfica no determina cuántos eventos existen.",
           "kind": "operacion",
-          "status": "terminado",
-          "evidence": "Coordenadas por teclado validadas y usables; Tab y Escape no atrapan, foco vuelve al control. Flechas nativas limitadas al canvas, sin handler global de navegación que capture campos.",
-          "updatedAt": "2026-10-11T02:34:48.476Z",
+          "status": "pendiente",
+          "evidence": "",
+          "updatedAt": "2026-10-11T16:23:55.295Z",
           "history": [
             {
               "at": "2026-10-11T02:21:44.123Z",
@@ -3145,9 +3210,13 @@
               "at": "2026-10-11T02:34:48.476Z",
               "status": "terminado",
               "evidence": "Coordenadas por teclado validadas y usables; Tab y Escape no atrapan, foco vuelve al control. Flechas nativas limitadas al canvas, sin handler global de navegación que capture campos."
+            },
+            {
+              "at": "2026-10-11T16:23:55.295Z",
+              "status": "pendiente",
+              "evidence": "Cambió el requisito en el plan; necesita nueva verificación."
             }
-          ],
-          "blockId": "1B"
+          ]
         },
         {
           "id": "S01-1B-08",
@@ -3195,12 +3264,13 @@
         },
         {
           "id": "S01-1B-10",
+          "blockId": "1B",
           "group": "Bloque 1B Pantalla y controles",
-          "text": "Mantener una sola ubicación seleccionada y diferenciar centro de cámara de punto elegido. No crear el punto inicial del prototipo ni iniciar un resultado automáticamente. Ajustar encuadre al abrir un panel sin cambiar la ubicación y sin permitir que quede oculta tras la tarjeta.",
+          "text": "Mantener una referencia geográfica de navegación, independiente del centro de cámara y de los eventos solicitados. No crear un marcador inicial ni iniciar resultados automáticamente. Ajustar encuadre al abrir un panel sin cambiar esa referencia. Una referencia geográfica no limita a un único evento ni genera marcadores; los flujos de casos gestionan su propia selección y cantidad cuando se desarrollan.",
           "kind": "operacion",
-          "status": "terminado",
-          "evidence": "Sin punto inicial ni ejecución automática. Solo un marcador; coordenadas se conservan al mover cámara/abrir/cerrar panel. Editor y padding mantienen punto fuera de la tarjeta; zoom de edición y retorno global comprobados.",
-          "updatedAt": "2026-10-11T02:34:47.793Z",
+          "status": "pendiente",
+          "evidence": "",
+          "updatedAt": "2026-10-11T16:23:55.295Z",
           "history": [
             {
               "at": "2026-10-11T02:19:44.410Z",
@@ -3211,9 +3281,13 @@
               "at": "2026-10-11T02:34:47.793Z",
               "status": "terminado",
               "evidence": "Sin punto inicial ni ejecución automática. Solo un marcador; coordenadas se conservan al mover cámara/abrir/cerrar panel. Editor y padding mantienen punto fuera de la tarjeta; zoom de edición y retorno global comprobados."
+            },
+            {
+              "at": "2026-10-11T16:23:55.295Z",
+              "status": "pendiente",
+              "evidence": "Cambió el requisito en el plan; necesita nueva verificación."
             }
-          ],
-          "blockId": "1B"
+          ]
         },
         {
           "id": "S01-1B-11",
@@ -3298,11 +3372,11 @@
           "id": "S01-1B-13",
           "blockId": "1B",
           "group": "Bloque 1B Pantalla y controles",
-          "text": "Fijar la matriz autorizada por el usuario: Chrome y navegador integrado, registrando versiones y dimensiones de la ventana. Probar tamaño de texto al 200 %, ancho de 320 píxeles CSS, paneles desplazables, teclado y controles accesibles sin superposición. Las comprobaciones registran navegador, versión, tamaño de ventana y resultados; no requieren plataformas adicionales. Ambos entornos pueden compartir motor; no afirmar compatibilidad con motores no verificados.",
+          "text": "Durante el desarrollo usar el navegador integrado; reservar Chrome para la comprobación final del desarrollo, conforme a la instrucción del usuario. Registrar versiones y dimensiones de ventana. Probar texto al 200 %, ancho de 320 píxeles CSS, paneles desplazables, teclado y controles accesibles sin superposición. No atribuir verificaciones de otros motores ni exigir plataformas adicionales.",
           "kind": "operacion",
-          "status": "terminado",
-          "evidence": "Matriz autorizada Chrome154 e integrado155. Ventanas CSS320x568,390x844,1440x900 y amplias; texto200%, navegación teclado y Escape. Corrección compacta probada en build y Sites16:0 intersecciones controles/tarjeta, sin desborde horizontal, desplazamiento interno. Solo estos entornos Chromium están probados.",
-          "updatedAt": "2026-10-11T11:26:36.794Z",
+          "status": "pendiente",
+          "evidence": "",
+          "updatedAt": "2026-10-11T16:23:55.295Z",
           "history": [
             {
               "at": "2026-10-11T02:21:44.543Z",
@@ -3348,6 +3422,11 @@
               "at": "2026-10-11T11:26:36.794Z",
               "status": "terminado",
               "evidence": "Matriz autorizada Chrome154 e integrado155. Ventanas CSS320x568,390x844,1440x900 y amplias; texto200%, navegación teclado y Escape. Corrección compacta probada en build y Sites16:0 intersecciones controles/tarjeta, sin desborde horizontal, desplazamiento interno. Solo estos entornos Chromium están probados."
+            },
+            {
+              "at": "2026-10-11T16:23:55.295Z",
+              "status": "pendiente",
+              "evidence": "Cambió el requisito en el plan; necesita nueva verificación."
             }
           ]
         },
@@ -3357,9 +3436,9 @@
           "group": "Bloque 1B Pantalla y controles",
           "text": "En ventanas estrechas y amplias no aparecen nombre, logo ni cabecera superpuestos al mapa; los controles de zoom, búsqueda, selección y regreso global funcionan con ratón y teclado.",
           "kind": "aceptacion",
-          "status": "terminado",
-          "evidence": "Revalidación plan19:40pruebas/TypeScript/build pasan, API y whitelist sin cambios; búsqueda pública22 Santiago ocho ciudades y selección sucesiva/X correctas. Clic fuera, Escape, foco, arrastre y390x844 verificados localmente; escalaSD5m35,311px, referencia y143,71fps. Motor/estilo/recuperación gráfica sin cambios; pruebas históricas no se atribuyen a nueva ejecución. docs/CAMBIO_BUSQUEDA_PERSISTENTE.md.",
-          "updatedAt": "2026-10-11T13:42:33.880Z",
+          "status": "pendiente",
+          "evidence": "Reverificar: se reabrió el sprint 1.",
+          "updatedAt": "2026-10-11T16:22:19.802Z",
           "history": [
             {
               "at": "2026-10-11T11:26:36.892Z",
@@ -3395,6 +3474,11 @@
               "at": "2026-10-11T13:42:33.880Z",
               "status": "terminado",
               "evidence": "Revalidación plan19:40pruebas/TypeScript/build pasan, API y whitelist sin cambios; búsqueda pública22 Santiago ocho ciudades y selección sucesiva/X correctas. Clic fuera, Escape, foco, arrastre y390x844 verificados localmente; escalaSD5m35,311px, referencia y143,71fps. Motor/estilo/recuperación gráfica sin cambios; pruebas históricas no se atribuyen a nueva ejecución. docs/CAMBIO_BUSQUEDA_PERSISTENTE.md."
+            },
+            {
+              "at": "2026-10-11T16:22:19.802Z",
+              "status": "pendiente",
+              "evidence": "Reverificar: se reabrió el sprint 1."
             }
           ]
         },
@@ -3403,9 +3487,9 @@
           "group": "Bloque 1B Pantalla y controles",
           "text": "El usuario alcanza escala de 5 metros, ve nombres de calles y recupera la vista global sin recargar.",
           "kind": "aceptacion",
-          "status": "terminado",
-          "evidence": "Revalidación plan19:40pruebas/TypeScript/build pasan, API y whitelist sin cambios; búsqueda pública22 Santiago ocho ciudades y selección sucesiva/X correctas. Clic fuera, Escape, foco, arrastre y390x844 verificados localmente; escalaSD5m35,311px, referencia y143,71fps. Motor/estilo/recuperación gráfica sin cambios; pruebas históricas no se atribuyen a nueva ejecución. docs/CAMBIO_BUSQUEDA_PERSISTENTE.md.",
-          "updatedAt": "2026-10-11T13:42:33.958Z",
+          "status": "pendiente",
+          "evidence": "Reverificar: se reabrió el sprint 1.",
+          "updatedAt": "2026-10-11T16:22:19.802Z",
           "history": [
             {
               "at": "2026-10-11T02:34:48.932Z",
@@ -3446,6 +3530,11 @@
               "at": "2026-10-11T13:42:33.958Z",
               "status": "terminado",
               "evidence": "Revalidación plan19:40pruebas/TypeScript/build pasan, API y whitelist sin cambios; búsqueda pública22 Santiago ocho ciudades y selección sucesiva/X correctas. Clic fuera, Escape, foco, arrastre y390x844 verificados localmente; escalaSD5m35,311px, referencia y143,71fps. Motor/estilo/recuperación gráfica sin cambios; pruebas históricas no se atribuyen a nueva ejecución. docs/CAMBIO_BUSQUEDA_PERSISTENTE.md."
+            },
+            {
+              "at": "2026-10-11T16:22:19.802Z",
+              "status": "pendiente",
+              "evidence": "Reverificar: se reabrió el sprint 1."
             }
           ],
           "blockId": "1B"
@@ -3456,9 +3545,9 @@
           "group": "Bloque 1B Pantalla y controles",
           "text": "El globo puede llenar toda la pantalla al acercar, sin marca flotante ni franja reservada.",
           "kind": "aceptacion",
-          "status": "terminado",
-          "evidence": "Revalidación plan19:40pruebas/TypeScript/build pasan, API y whitelist sin cambios; búsqueda pública22 Santiago ocho ciudades y selección sucesiva/X correctas. Clic fuera, Escape, foco, arrastre y390x844 verificados localmente; escalaSD5m35,311px, referencia y143,71fps. Motor/estilo/recuperación gráfica sin cambios; pruebas históricas no se atribuyen a nueva ejecución. docs/CAMBIO_BUSQUEDA_PERSISTENTE.md.",
-          "updatedAt": "2026-10-11T13:42:34.040Z",
+          "status": "pendiente",
+          "evidence": "Reverificar: se reabrió el sprint 1.",
+          "updatedAt": "2026-10-11T16:22:19.802Z",
           "history": [
             {
               "at": "2026-10-11T02:34:49.022Z",
@@ -3499,6 +3588,11 @@
               "at": "2026-10-11T13:42:34.040Z",
               "status": "terminado",
               "evidence": "Revalidación plan19:40pruebas/TypeScript/build pasan, API y whitelist sin cambios; búsqueda pública22 Santiago ocho ciudades y selección sucesiva/X correctas. Clic fuera, Escape, foco, arrastre y390x844 verificados localmente; escalaSD5m35,311px, referencia y143,71fps. Motor/estilo/recuperación gráfica sin cambios; pruebas históricas no se atribuyen a nueva ejecución. docs/CAMBIO_BUSQUEDA_PERSISTENTE.md."
+            },
+            {
+              "at": "2026-10-11T16:22:19.802Z",
+              "status": "pendiente",
+              "evidence": "Reverificar: se reabrió el sprint 1."
             }
           ]
         },
@@ -3508,9 +3602,9 @@
           "group": "Bloque 1B Pantalla y controles",
           "text": "Las búsquedas solo ofrecen países y ciudades identificados como tales. Consultas de calles, direcciones, edificios, barrios y POI no devuelven esos objetos; respuestas de tipo desconocido se descartan. No hay comercios ni sus etiquetas en las capas; las calles con nombre permanecen en el mapa.",
           "kind": "aceptacion",
-          "status": "terminado",
-          "evidence": "Revalidación plan19:40pruebas/TypeScript/build pasan, API y whitelist sin cambios; búsqueda pública22 Santiago ocho ciudades y selección sucesiva/X correctas. Clic fuera, Escape, foco, arrastre y390x844 verificados localmente; escalaSD5m35,311px, referencia y143,71fps. Motor/estilo/recuperación gráfica sin cambios; pruebas históricas no se atribuyen a nueva ejecución. docs/CAMBIO_BUSQUEDA_PERSISTENTE.md.",
-          "updatedAt": "2026-10-11T13:42:34.132Z",
+          "status": "pendiente",
+          "evidence": "Reverificar: se reabrió el sprint 1.",
+          "updatedAt": "2026-10-11T16:22:19.802Z",
           "history": [
             {
               "at": "2026-10-11T10:11:13.951Z",
@@ -3551,6 +3645,11 @@
               "at": "2026-10-11T13:42:34.132Z",
               "status": "terminado",
               "evidence": "Revalidación plan19:40pruebas/TypeScript/build pasan, API y whitelist sin cambios; búsqueda pública22 Santiago ocho ciudades y selección sucesiva/X correctas. Clic fuera, Escape, foco, arrastre y390x844 verificados localmente; escalaSD5m35,311px, referencia y143,71fps. Motor/estilo/recuperación gráfica sin cambios; pruebas históricas no se atribuyen a nueva ejecución. docs/CAMBIO_BUSQUEDA_PERSISTENTE.md."
+            },
+            {
+              "at": "2026-10-11T16:22:19.802Z",
+              "status": "pendiente",
+              "evidence": "Reverificar: se reabrió el sprint 1."
             }
           ]
         },
@@ -3560,9 +3659,9 @@
           "group": "Bloque 1B Pantalla y controles",
           "text": "Una búsqueda ambigua permite elegir sucesivamente varias ciudades desde la misma lista, sin cerrar la tarjeta ni perder consulta, resultados o posición de lectura. La X y un clic fuera la cierran conservando el último punto; un arrastre del mapa no la cierra ni cambia la selección. Escape y navegación entre herramientas siguen operativos. Cero resultados y fallo del servicio tienen una recuperación comprensible.",
           "kind": "aceptacion",
-          "status": "terminado",
-          "evidence": "Revalidación plan19:40pruebas/TypeScript/build pasan, API y whitelist sin cambios; búsqueda pública22 Santiago ocho ciudades y selección sucesiva/X correctas. Clic fuera, Escape, foco, arrastre y390x844 verificados localmente; escalaSD5m35,311px, referencia y143,71fps. Motor/estilo/recuperación gráfica sin cambios; pruebas históricas no se atribuyen a nueva ejecución. docs/CAMBIO_BUSQUEDA_PERSISTENTE.md.",
-          "updatedAt": "2026-10-11T13:42:34.241Z",
+          "status": "pendiente",
+          "evidence": "Reverificar: se reabrió el sprint 1.",
+          "updatedAt": "2026-10-11T16:22:19.802Z",
           "history": [
             {
               "at": "2026-10-11T02:34:49.290Z",
@@ -3608,6 +3707,11 @@
               "at": "2026-10-11T13:42:34.241Z",
               "status": "terminado",
               "evidence": "Revalidación plan19:40pruebas/TypeScript/build pasan, API y whitelist sin cambios; búsqueda pública22 Santiago ocho ciudades y selección sucesiva/X correctas. Clic fuera, Escape, foco, arrastre y390x844 verificados localmente; escalaSD5m35,311px, referencia y143,71fps. Motor/estilo/recuperación gráfica sin cambios; pruebas históricas no se atribuyen a nueva ejecución. docs/CAMBIO_BUSQUEDA_PERSISTENTE.md."
+            },
+            {
+              "at": "2026-10-11T16:22:19.802Z",
+              "status": "pendiente",
+              "evidence": "Reverificar: se reabrió el sprint 1."
             }
           ]
         },
@@ -3616,9 +3720,9 @@
           "group": "Bloque 1B Pantalla y controles",
           "text": "Con teclado se puede recorrer y cerrar controles sin quedar atrapado. El mapa puede seguir utilizándose si un servicio auxiliar falla.",
           "kind": "aceptacion",
-          "status": "terminado",
-          "evidence": "Revalidación plan19:40pruebas/TypeScript/build pasan, API y whitelist sin cambios; búsqueda pública22 Santiago ocho ciudades y selección sucesiva/X correctas. Clic fuera, Escape, foco, arrastre y390x844 verificados localmente; escalaSD5m35,311px, referencia y143,71fps. Motor/estilo/recuperación gráfica sin cambios; pruebas históricas no se atribuyen a nueva ejecución. docs/CAMBIO_BUSQUEDA_PERSISTENTE.md.",
-          "updatedAt": "2026-10-11T13:42:34.340Z",
+          "status": "pendiente",
+          "evidence": "Reverificar: se reabrió el sprint 1.",
+          "updatedAt": "2026-10-11T16:22:19.802Z",
           "history": [
             {
               "at": "2026-10-11T02:34:49.110Z",
@@ -3659,6 +3763,11 @@
               "at": "2026-10-11T13:42:34.340Z",
               "status": "terminado",
               "evidence": "Revalidación plan19:40pruebas/TypeScript/build pasan, API y whitelist sin cambios; búsqueda pública22 Santiago ocho ciudades y selección sucesiva/X correctas. Clic fuera, Escape, foco, arrastre y390x844 verificados localmente; escalaSD5m35,311px, referencia y143,71fps. Motor/estilo/recuperación gráfica sin cambios; pruebas históricas no se atribuyen a nueva ejecución. docs/CAMBIO_BUSQUEDA_PERSISTENTE.md."
+            },
+            {
+              "at": "2026-10-11T16:22:19.802Z",
+              "status": "pendiente",
+              "evidence": "Reverificar: se reabrió el sprint 1."
             }
           ],
           "blockId": "1B"
@@ -3668,9 +3777,9 @@
           "group": "Bloque 1B Pantalla y controles",
           "text": "Pasan las medidas de zoom y presupuesto del bloque 1A; la ausencia de GPU tiene recuperación y lectura alternativa.",
           "kind": "aceptacion",
-          "status": "terminado",
-          "evidence": "Revalidación plan19:40pruebas/TypeScript/build pasan, API y whitelist sin cambios; búsqueda pública22 Santiago ocho ciudades y selección sucesiva/X correctas. Clic fuera, Escape, foco, arrastre y390x844 verificados localmente; escalaSD5m35,311px, referencia y143,71fps. Motor/estilo/recuperación gráfica sin cambios; pruebas históricas no se atribuyen a nueva ejecución. docs/CAMBIO_BUSQUEDA_PERSISTENTE.md.",
-          "updatedAt": "2026-10-11T13:42:34.445Z",
+          "status": "pendiente",
+          "evidence": "Reverificar: se reabrió el sprint 1.",
+          "updatedAt": "2026-10-11T16:22:19.802Z",
           "history": [
             {
               "at": "2026-10-11T02:34:49.196Z",
@@ -3711,6 +3820,11 @@
               "at": "2026-10-11T13:42:34.445Z",
               "status": "terminado",
               "evidence": "Revalidación plan19:40pruebas/TypeScript/build pasan, API y whitelist sin cambios; búsqueda pública22 Santiago ocho ciudades y selección sucesiva/X correctas. Clic fuera, Escape, foco, arrastre y390x844 verificados localmente; escalaSD5m35,311px, referencia y143,71fps. Motor/estilo/recuperación gráfica sin cambios; pruebas históricas no se atribuyen a nueva ejecución. docs/CAMBIO_BUSQUEDA_PERSISTENTE.md."
+            },
+            {
+              "at": "2026-10-11T16:22:19.802Z",
+              "status": "pendiente",
+              "evidence": "Reverificar: se reabrió el sprint 1."
             }
           ],
           "blockId": "1B"
@@ -3721,9 +3835,9 @@
           "group": "Bloque 1B Pantalla y controles",
           "text": "El buscador integrado pasa búsqueda de país, ciudad ambigua, ausencia de resultados, respuesta fuera de orden, entrada inválida, cuota y recuperación en el dominio revisable. El servidor excluye calles, direcciones, barrios, edificios, POI y tipos desconocidos, incluso en respuestas mixtas y caché. Sus límites, mapeo de tipos del proveedor y política de caché están documentados.",
           "kind": "aceptacion",
-          "status": "terminado",
-          "evidence": "Revalidación plan19:40pruebas/TypeScript/build pasan, API y whitelist sin cambios; búsqueda pública22 Santiago ocho ciudades y selección sucesiva/X correctas. Clic fuera, Escape, foco, arrastre y390x844 verificados localmente; escalaSD5m35,311px, referencia y143,71fps. Motor/estilo/recuperación gráfica sin cambios; pruebas históricas no se atribuyen a nueva ejecución. docs/CAMBIO_BUSQUEDA_PERSISTENTE.md.",
-          "updatedAt": "2026-10-11T13:42:34.562Z",
+          "status": "pendiente",
+          "evidence": "Reverificar: se reabrió el sprint 1.",
+          "updatedAt": "2026-10-11T16:22:19.802Z",
           "history": [
             {
               "at": "2026-10-11T02:34:49.383Z",
@@ -3769,6 +3883,11 @@
               "at": "2026-10-11T13:42:34.562Z",
               "status": "terminado",
               "evidence": "Revalidación plan19:40pruebas/TypeScript/build pasan, API y whitelist sin cambios; búsqueda pública22 Santiago ocho ciudades y selección sucesiva/X correctas. Clic fuera, Escape, foco, arrastre y390x844 verificados localmente; escalaSD5m35,311px, referencia y143,71fps. Motor/estilo/recuperación gráfica sin cambios; pruebas históricas no se atribuyen a nueva ejecución. docs/CAMBIO_BUSQUEDA_PERSISTENTE.md."
+            },
+            {
+              "at": "2026-10-11T16:22:19.802Z",
+              "status": "pendiente",
+              "evidence": "Reverificar: se reabrió el sprint 1."
             }
           ]
         },
@@ -3778,9 +3897,9 @@
           "group": "Bloque 1B Pantalla y controles",
           "text": "La matriz de navegadores web tiene evidencias realmente ejecutadas; cualquier falta de acceso a un entorno queda pendiente y no se convierte en una prueba aprobada. Cambiar un objetivo de rendimiento requiere aceptación explícita del usuario.",
           "kind": "aceptacion",
-          "status": "terminado",
-          "evidence": "Revalidación plan19:40pruebas/TypeScript/build pasan, API y whitelist sin cambios; búsqueda pública22 Santiago ocho ciudades y selección sucesiva/X correctas. Clic fuera, Escape, foco, arrastre y390x844 verificados localmente; escalaSD5m35,311px, referencia y143,71fps. Motor/estilo/recuperación gráfica sin cambios; pruebas históricas no se atribuyen a nueva ejecución. docs/CAMBIO_BUSQUEDA_PERSISTENTE.md.",
-          "updatedAt": "2026-10-11T13:42:34.653Z",
+          "status": "pendiente",
+          "evidence": "Reverificar: se reabrió el sprint 1.",
+          "updatedAt": "2026-10-11T16:22:19.802Z",
           "history": [
             {
               "at": "2026-10-11T02:34:49.470Z",
@@ -3826,6 +3945,11 @@
               "at": "2026-10-11T13:42:34.653Z",
               "status": "terminado",
               "evidence": "Revalidación plan19:40pruebas/TypeScript/build pasan, API y whitelist sin cambios; búsqueda pública22 Santiago ocho ciudades y selección sucesiva/X correctas. Clic fuera, Escape, foco, arrastre y390x844 verificados localmente; escalaSD5m35,311px, referencia y143,71fps. Motor/estilo/recuperación gráfica sin cambios; pruebas históricas no se atribuyen a nueva ejecución. docs/CAMBIO_BUSQUEDA_PERSISTENTE.md."
+            },
+            {
+              "at": "2026-10-11T16:22:19.802Z",
+              "status": "pendiente",
+              "evidence": "Reverificar: se reabrió el sprint 1."
             }
           ]
         },
@@ -4077,9 +4201,9 @@
           "group": "Bloque 1C Paneles bajo demanda",
           "text": "Los paneles solo aparecen al solicitarlos; Escape, Atrás cuando corresponda, cierre y restauración del foco funcionan sin controles invisibles en el recorrido del teclado.",
           "kind": "aceptacion",
-          "status": "terminado",
-          "evidence": "Revalidación Sites22 SHA a8d62202c3453d086d43079ee8f66f866835e69a: fichaBeirut/fuenteONU y firma context-20261011-2 mantienen puntoCuba; cierre/selección/Escape/Atrás/foco verificados. Inicial390x844 y1440x900: cero paneles, viewportcompleto,sin overflow. API/registro/modelo sin cambios;40pruebas. Arrastre y cierres conservan última ubicación. docs/CAMBIO_BUSQUEDA_PERSISTENTE.md.",
-          "updatedAt": "2026-10-11T13:45:06.396Z",
+          "status": "pendiente",
+          "evidence": "Reverificar: se reabrió el sprint 1.",
+          "updatedAt": "2026-10-11T16:22:19.802Z",
           "history": [
             {
               "at": "2026-10-11T11:51:35.817Z",
@@ -4120,6 +4244,11 @@
               "at": "2026-10-11T13:45:06.396Z",
               "status": "terminado",
               "evidence": "Revalidación Sites22 SHA a8d62202c3453d086d43079ee8f66f866835e69a: fichaBeirut/fuenteONU y firma context-20261011-2 mantienen puntoCuba; cierre/selección/Escape/Atrás/foco verificados. Inicial390x844 y1440x900: cero paneles, viewportcompleto,sin overflow. API/registro/modelo sin cambios;40pruebas. Arrastre y cierres conservan última ubicación. docs/CAMBIO_BUSQUEDA_PERSISTENTE.md."
+            },
+            {
+              "at": "2026-10-11T16:22:19.802Z",
+              "status": "pendiente",
+              "evidence": "Reverificar: se reabrió el sprint 1."
             }
           ]
         },
@@ -4129,9 +4258,9 @@
           "group": "Bloque 1C Paneles bajo demanda",
           "text": "Se retiraron fictionalOutcome, población ficticia, multiplicadores de preparación, cifras arbitrarias y sus animaciones; las fichas utilizables siguen accesibles con fuentes.",
           "kind": "aceptacion",
-          "status": "terminado",
-          "evidence": "Revalidación Sites22 SHA a8d62202c3453d086d43079ee8f66f866835e69a: fichaBeirut/fuenteONU y firma context-20261011-2 mantienen puntoCuba; cierre/selección/Escape/Atrás/foco verificados. Inicial390x844 y1440x900: cero paneles, viewportcompleto,sin overflow. API/registro/modelo sin cambios;40pruebas. Arrastre y cierres conservan última ubicación. docs/CAMBIO_BUSQUEDA_PERSISTENTE.md.",
-          "updatedAt": "2026-10-11T13:45:06.477Z",
+          "status": "pendiente",
+          "evidence": "Reverificar: se reabrió el sprint 1.",
+          "updatedAt": "2026-10-11T16:22:19.802Z",
           "history": [
             {
               "at": "2026-10-11T11:51:36.024Z",
@@ -4172,6 +4301,11 @@
               "at": "2026-10-11T13:45:06.477Z",
               "status": "terminado",
               "evidence": "Revalidación Sites22 SHA a8d62202c3453d086d43079ee8f66f866835e69a: fichaBeirut/fuenteONU y firma context-20261011-2 mantienen puntoCuba; cierre/selección/Escape/Atrás/foco verificados. Inicial390x844 y1440x900: cero paneles, viewportcompleto,sin overflow. API/registro/modelo sin cambios;40pruebas. Arrastre y cierres conservan última ubicación. docs/CAMBIO_BUSQUEDA_PERSISTENTE.md."
+            },
+            {
+              "at": "2026-10-11T16:22:19.802Z",
+              "status": "pendiente",
+              "evidence": "Reverificar: se reabrió el sprint 1."
             }
           ]
         },
@@ -4181,9 +4315,9 @@
           "group": "Bloque 1C Paneles bajo demanda",
           "text": "El registro de capacidades y el renderizador de fichas funcionan con el contenido disponible; cambio de consulta, respuesta obsoleta y cierre limpian los datos y capas dependientes.",
           "kind": "aceptacion",
-          "status": "terminado",
-          "evidence": "Revalidación Sites22 SHA a8d62202c3453d086d43079ee8f66f866835e69a: fichaBeirut/fuenteONU y firma context-20261011-2 mantienen puntoCuba; cierre/selección/Escape/Atrás/foco verificados. Inicial390x844 y1440x900: cero paneles, viewportcompleto,sin overflow. API/registro/modelo sin cambios;40pruebas. Arrastre y cierres conservan última ubicación. docs/CAMBIO_BUSQUEDA_PERSISTENTE.md.",
-          "updatedAt": "2026-10-11T13:45:06.561Z",
+          "status": "pendiente",
+          "evidence": "Reverificar: se reabrió el sprint 1.",
+          "updatedAt": "2026-10-11T16:22:19.802Z",
           "history": [
             {
               "at": "2026-10-11T11:51:36.208Z",
@@ -4224,6 +4358,11 @@
               "at": "2026-10-11T13:45:06.561Z",
               "status": "terminado",
               "evidence": "Revalidación Sites22 SHA a8d62202c3453d086d43079ee8f66f866835e69a: fichaBeirut/fuenteONU y firma context-20261011-2 mantienen puntoCuba; cierre/selección/Escape/Atrás/foco verificados. Inicial390x844 y1440x900: cero paneles, viewportcompleto,sin overflow. API/registro/modelo sin cambios;40pruebas. Arrastre y cierres conservan última ubicación. docs/CAMBIO_BUSQUEDA_PERSISTENTE.md."
+            },
+            {
+              "at": "2026-10-11T16:22:19.802Z",
+              "status": "pendiente",
+              "evidence": "Reverificar: se reabrió el sprint 1."
             }
           ]
         },
@@ -4232,9 +4371,9 @@
           "group": "Bloque 1C Paneles bajo demanda",
           "text": "Al abrir en 390 × 844 y 1440 × 900, el mapa ocupa el área visible y ninguna tarjeta de resultados está abierta.",
           "kind": "aceptacion",
-          "status": "terminado",
-          "evidence": "Revalidación Sites22 SHA a8d62202c3453d086d43079ee8f66f866835e69a: fichaBeirut/fuenteONU y firma context-20261011-2 mantienen puntoCuba; cierre/selección/Escape/Atrás/foco verificados. Inicial390x844 y1440x900: cero paneles, viewportcompleto,sin overflow. API/registro/modelo sin cambios;40pruebas. Arrastre y cierres conservan última ubicación. docs/CAMBIO_BUSQUEDA_PERSISTENTE.md.",
-          "updatedAt": "2026-10-11T13:45:06.639Z",
+          "status": "pendiente",
+          "evidence": "Reverificar: se reabrió el sprint 1.",
+          "updatedAt": "2026-10-11T16:22:19.802Z",
           "history": [
             {
               "at": "2026-10-11T11:51:36.370Z",
@@ -4275,18 +4414,24 @@
               "at": "2026-10-11T13:45:06.639Z",
               "status": "terminado",
               "evidence": "Revalidación Sites22 SHA a8d62202c3453d086d43079ee8f66f866835e69a: fichaBeirut/fuenteONU y firma context-20261011-2 mantienen puntoCuba; cierre/selección/Escape/Atrás/foco verificados. Inicial390x844 y1440x900: cero paneles, viewportcompleto,sin overflow. API/registro/modelo sin cambios;40pruebas. Arrastre y cierres conservan última ubicación. docs/CAMBIO_BUSQUEDA_PERSISTENTE.md."
+            },
+            {
+              "at": "2026-10-11T16:22:19.802Z",
+              "status": "pendiente",
+              "evidence": "Reverificar: se reabrió el sprint 1."
             }
           ],
           "blockId": "1C"
         },
         {
           "id": "S01-1C-AC-05",
+          "blockId": "1C",
           "group": "Bloque 1C Paneles bajo demanda",
-          "text": "Abrir, ejecutar y cerrar conserva la ubicación y el acercamiento; arrastrar no crea puntos.",
+          "text": "Abrir, consultar y cerrar conserva la referencia geográfica y el acercamiento. Clic y arrastre de exploración no crean marcadores ni cambian la referencia; búsqueda y coordenadas tampoco colocan el círculo con +. La capa de un caso solo aparece tras consultarlo y se retira al cerrar.",
           "kind": "aceptacion",
-          "status": "terminado",
-          "evidence": "Revalidación Sites22 SHA a8d62202c3453d086d43079ee8f66f866835e69a: fichaBeirut/fuenteONU y firma context-20261011-2 mantienen puntoCuba; cierre/selección/Escape/Atrás/foco verificados. Inicial390x844 y1440x900: cero paneles, viewportcompleto,sin overflow. API/registro/modelo sin cambios;40pruebas. Arrastre y cierres conservan última ubicación. docs/CAMBIO_BUSQUEDA_PERSISTENTE.md.",
-          "updatedAt": "2026-10-11T13:45:06.716Z",
+          "status": "pendiente",
+          "evidence": "",
+          "updatedAt": "2026-10-11T16:23:55.295Z",
           "history": [
             {
               "at": "2026-10-11T11:51:36.483Z",
@@ -4327,17 +4472,26 @@
               "at": "2026-10-11T13:45:06.716Z",
               "status": "terminado",
               "evidence": "Revalidación Sites22 SHA a8d62202c3453d086d43079ee8f66f866835e69a: fichaBeirut/fuenteONU y firma context-20261011-2 mantienen puntoCuba; cierre/selección/Escape/Atrás/foco verificados. Inicial390x844 y1440x900: cero paneles, viewportcompleto,sin overflow. API/registro/modelo sin cambios;40pruebas. Arrastre y cierres conservan última ubicación. docs/CAMBIO_BUSQUEDA_PERSISTENTE.md."
+            },
+            {
+              "at": "2026-10-11T16:22:19.802Z",
+              "status": "pendiente",
+              "evidence": "Reverificar: se reabrió el sprint 1."
+            },
+            {
+              "at": "2026-10-11T16:23:55.295Z",
+              "status": "pendiente",
+              "evidence": "Cambió el requisito en el plan; necesita nueva verificación."
             }
-          ],
-          "blockId": "1C"
+          ]
         }
       ]
     },
     {
       "number": 2,
       "title": "Idiomas y nombres geográficos",
-      "updatedAt": "2026-10-11T14:44:17.192Z",
-      "phase": "en_curso",
+      "updatedAt": "2026-10-11T16:23:55.295Z",
+      "phase": "pendiente",
       "approval": {
         "status": "pendiente",
         "at": null,
@@ -4371,7 +4525,7 @@
         },
         {
           "action": "Abrir las flechas de los bloques del seguimiento del Sprint 2.",
-          "expected": "Revisar operaciones, criterios y sus evidencias actuales. El avance técnico y la aprobación del usuario aparecen por separado; solo un mensaje explícito puede aprobar el cierre."
+          "expected": "36 terminados, cero pendientes y cero no completados. Revisar operaciones, criterios y evidencias de Sites23; la URL y versión realmente probadas están registradas. La aprobación del usuario sigue pendiente hasta recibir su mensaje explícito."
         }
       ],
       "history": [
@@ -5156,6 +5310,70 @@
           "action": "set",
           "pointId": "S02-2C-AC-05",
           "reference": "Reverificación actual con Worker compilado: API anónima y mapa20idiomas, country-DE, anclaje9.678348/50.961733, centro y zoom3 constantes; sugerencia/etiqueta/ficha coinciden. Disclaimer20textos de5párrafos; excepción Spratly ne-PGA comprobada en maratí con explicación traducida. Muestras20escrituras en IAB155/Chrome154, texto200%. 41pruebas, TypeScript y build pasan; 4780pares país/idioma y filtros servidor/caché. Evidencia docs/REVERIFICACION_SPRINT_02.md y docs/seguimiento/evidencia-paises-20.json."
+        },
+        {
+          "at": "2026-10-11T14:52:54.794Z",
+          "action": "set",
+          "pointId": "S02-2C-AC-01",
+          "reference": "Entrega Sites23, SHA8f825f6d19459f0a30c26b50f69eaa3228805772, publicada11/10/2026 10:48SD. API anónima20nombres HTTP200 con country-DE/anclaje constante. Mapa público20idiomas: sugerencia/etiqueta coinciden, misma identidad/punto/centro/zoom3, consulta y lista conservadas. X conserva punto. Hausa Información localizada sin excepción. Chrome154/IAB155,320CSS/texto200%, glifos20escrituras, fallback Spratly revisados. 41pruebas, TypeScript/build/auditoría pasan. Registros actuales docs/REVERIFICACION_SPRINT_02.md, docs/ACEPTACION_SPRINT_02.md y evidencia-api-sites23.json/evidencia-mapa-sites23.json."
+        },
+        {
+          "at": "2026-10-11T14:52:54.891Z",
+          "action": "set",
+          "pointId": "S02-2C-AC-02",
+          "reference": "Entrega Sites23, SHA8f825f6d19459f0a30c26b50f69eaa3228805772, publicada11/10/2026 10:48SD. API anónima20nombres HTTP200 con country-DE/anclaje constante. Mapa público20idiomas: sugerencia/etiqueta coinciden, misma identidad/punto/centro/zoom3, consulta y lista conservadas. X conserva punto. Hausa Información localizada sin excepción. Chrome154/IAB155,320CSS/texto200%, glifos20escrituras, fallback Spratly revisados. 41pruebas, TypeScript/build/auditoría pasan. Registros actuales docs/REVERIFICACION_SPRINT_02.md, docs/ACEPTACION_SPRINT_02.md y evidencia-api-sites23.json/evidencia-mapa-sites23.json."
+        },
+        {
+          "at": "2026-10-11T14:52:54.974Z",
+          "action": "set",
+          "pointId": "S02-2C-AC-03",
+          "reference": "Entrega Sites23, SHA8f825f6d19459f0a30c26b50f69eaa3228805772, publicada11/10/2026 10:48SD. API anónima20nombres HTTP200 con country-DE/anclaje constante. Mapa público20idiomas: sugerencia/etiqueta coinciden, misma identidad/punto/centro/zoom3, consulta y lista conservadas. X conserva punto. Hausa Información localizada sin excepción. Chrome154/IAB155,320CSS/texto200%, glifos20escrituras, fallback Spratly revisados. 41pruebas, TypeScript/build/auditoría pasan. Registros actuales docs/REVERIFICACION_SPRINT_02.md, docs/ACEPTACION_SPRINT_02.md y evidencia-api-sites23.json/evidencia-mapa-sites23.json."
+        },
+        {
+          "at": "2026-10-11T14:52:55.063Z",
+          "action": "set",
+          "pointId": "S02-2C-AC-04",
+          "reference": "Entrega Sites23, SHA8f825f6d19459f0a30c26b50f69eaa3228805772, publicada11/10/2026 10:48SD. API anónima20nombres HTTP200 con country-DE/anclaje constante. Mapa público20idiomas: sugerencia/etiqueta coinciden, misma identidad/punto/centro/zoom3, consulta y lista conservadas. X conserva punto. Hausa Información localizada sin excepción. Chrome154/IAB155,320CSS/texto200%, glifos20escrituras, fallback Spratly revisados. 41pruebas, TypeScript/build/auditoría pasan. Registros actuales docs/REVERIFICACION_SPRINT_02.md, docs/ACEPTACION_SPRINT_02.md y evidencia-api-sites23.json/evidencia-mapa-sites23.json."
+        },
+        {
+          "at": "2026-10-11T14:52:55.152Z",
+          "action": "set",
+          "pointId": "S02-2C-AC-05",
+          "reference": "Entrega Sites23, SHA8f825f6d19459f0a30c26b50f69eaa3228805772, publicada11/10/2026 10:48SD. API anónima20nombres HTTP200 con country-DE/anclaje constante. Mapa público20idiomas: sugerencia/etiqueta coinciden, misma identidad/punto/centro/zoom3, consulta y lista conservadas. X conserva punto. Hausa Información localizada sin excepción. Chrome154/IAB155,320CSS/texto200%, glifos20escrituras, fallback Spratly revisados. 41pruebas, TypeScript/build/auditoría pasan. Registros actuales docs/REVERIFICACION_SPRINT_02.md, docs/ACEPTACION_SPRINT_02.md y evidencia-api-sites23.json/evidencia-mapa-sites23.json."
+        },
+        {
+          "at": "2026-10-11T14:52:55.261Z",
+          "action": "review",
+          "pointId": null,
+          "reference": null
+        },
+        {
+          "at": "2026-10-11T14:53:56.022Z",
+          "action": "set",
+          "pointId": "S02-2C-AC-05",
+          "reference": "Entrega Sites23, SHA8f825f6d19459f0a30c26b50f69eaa3228805772, publicada11/10/2026 10:48SD. API anónima20nombres HTTP200 con country-DE/anclaje constante. Mapa público20idiomas: sugerencia/etiqueta coinciden, misma identidad/punto/centro/zoom3, consulta y lista conservadas. X conserva punto. Hausa Información localizada sin excepción. Chrome154/IAB155,320CSS/texto200%, glifos20escrituras, fallback Spratly revisados. 41pruebas, TypeScript/build/auditoría pasan. Registros actuales docs/REVERIFICACION_SPRINT_02.md, docs/ACEPTACION_SPRINT_02.md y evidencia-api-sites23.json/evidencia-mapa-sites23.json. Búsquedas públicas Calle El Conde y Torre Eiffel: HTTP200, cero resultados."
+        },
+        {
+          "at": "2026-10-11T14:53:56.110Z",
+          "action": "guide",
+          "pointId": null,
+          "reference": null
+        },
+        {
+          "at": "2026-10-11T14:53:56.203Z",
+          "action": "review",
+          "pointId": null,
+          "reference": null
+        },
+        {
+          "at": "2026-10-11T16:22:19.802Z",
+          "action": "reabierto",
+          "reference": "Mensaje del usuario de esta conversación, 11/10/2026: evitar que al hacer clic en el mapa se coloque el marcador de detonación; los marcadores deben depender de la elección de explosiones y de cuántas ejecutar. Cambio del contrato de exploración y ubicación del Sprint 1."
+        },
+        {
+          "at": "2026-10-11T16:23:55.295Z",
+          "action": "aceptacion_invalidada",
+          "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
         }
       ],
       "points": [
@@ -5282,9 +5500,9 @@
           "group": "Bloque 2A Registro de idiomas y selección",
           "text": "El selector contiene los veinte idiomas con nombres nativos, búsqueda y prioridad documentada: elección manual, navegador compatible y español como alternativa.",
           "kind": "aceptacion",
-          "status": "terminado",
-          "evidence": "Sites22 público: 20 opciones nativas sin banderas; filtro arab deja solo العربية. Cambio inmediato a árabe con panel y coordenadas intactos. Tests de prioridad manual/navegador/español y variantes pasan; lib/languages.ts y docs/DECISION_IDIOMAS.md.",
-          "updatedAt": "2026-10-11T14:16:01.783Z",
+          "status": "pendiente",
+          "evidence": "Reverificar: se reabrió el sprint 1.",
+          "updatedAt": "2026-10-11T16:22:19.802Z",
           "history": [
             {
               "at": "2026-10-11T12:26:32.145Z",
@@ -5305,6 +5523,11 @@
               "at": "2026-10-11T14:16:01.783Z",
               "status": "terminado",
               "evidence": "Sites22 público: 20 opciones nativas sin banderas; filtro arab deja solo العربية. Cambio inmediato a árabe con panel y coordenadas intactos. Tests de prioridad manual/navegador/español y variantes pasan; lib/languages.ts y docs/DECISION_IDIOMAS.md."
+            },
+            {
+              "at": "2026-10-11T16:22:19.802Z",
+              "status": "pendiente",
+              "evidence": "Reverificar: se reabrió el sprint 1."
             }
           ]
         },
@@ -5314,9 +5537,9 @@
           "group": "Bloque 2A Registro de idiomas y selección",
           "text": "La detección no pide ubicación precisa; la elección manual cambia el estado de idioma sin perder punto, zoom o configuración y se conserva durante la sesión aunque el almacenamiento esté bloqueado.",
           "kind": "aceptacion",
-          "status": "terminado",
-          "evidence": "IAB155,1280x720: Storage.getItem/setItem bloqueados; elegir ur conserva punto -69.8845/18.4737, zoom15, ficha Beirut y firma context-20261011-2; RTL correcto, sin geolocalización. Métodos restaurados; docs/REVERIFICACION_SPRINT_02.md.",
-          "updatedAt": "2026-10-11T14:18:04.762Z",
+          "status": "pendiente",
+          "evidence": "Reverificar: se reabrió el sprint 1.",
+          "updatedAt": "2026-10-11T16:22:19.802Z",
           "history": [
             {
               "at": "2026-10-11T12:26:32.233Z",
@@ -5337,6 +5560,11 @@
               "at": "2026-10-11T14:18:04.762Z",
               "status": "terminado",
               "evidence": "IAB155,1280x720: Storage.getItem/setItem bloqueados; elegir ur conserva punto -69.8845/18.4737, zoom15, ficha Beirut y firma context-20261011-2; RTL correcto, sin geolocalización. Métodos restaurados; docs/REVERIFICACION_SPRINT_02.md."
+            },
+            {
+              "at": "2026-10-11T16:22:19.802Z",
+              "status": "pendiente",
+              "evidence": "Reverificar: se reabrió el sprint 1."
             }
           ]
         },
@@ -5346,9 +5574,9 @@
           "group": "Bloque 2A Registro de idiomas y selección",
           "text": "Las claves de todos los textos existentes están extraídas y el selector está conectado a catálogos locales; el cambio de idioma no necesita un servicio de traducción por renderizado.",
           "kind": "aceptacion",
-          "status": "terminado",
-          "evidence": "20 catálogos locales de84claves auditados; imports y React sin traductor por render. Ficha y controles cambian es/ur/pt; 40pruebas, TypeScript y build pasan. docs/REVERIFICACION_SPRINT_02.md.",
-          "updatedAt": "2026-10-11T14:18:04.843Z",
+          "status": "pendiente",
+          "evidence": "Reverificar: se reabrió el sprint 1.",
+          "updatedAt": "2026-10-11T16:22:19.802Z",
           "history": [
             {
               "at": "2026-10-11T12:26:32.324Z",
@@ -5364,6 +5592,11 @@
               "at": "2026-10-11T14:18:04.843Z",
               "status": "terminado",
               "evidence": "20 catálogos locales de84claves auditados; imports y React sin traductor por render. Ficha y controles cambian es/ur/pt; 40pruebas, TypeScript y build pasan. docs/REVERIFICACION_SPRINT_02.md."
+            },
+            {
+              "at": "2026-10-11T16:22:19.802Z",
+              "status": "pendiente",
+              "evidence": "Reverificar: se reabrió el sprint 1."
             }
           ]
         },
@@ -5372,9 +5605,9 @@
           "group": "Bloque 2A Registro de idiomas y selección",
           "text": "Al regresar, se conserva la elección manual aunque el navegador prefiera otro idioma.",
           "kind": "aceptacion",
-          "status": "terminado",
-          "evidence": "Compilación actual IAB: selección manual pt sobre navegador en-US conserva pt al recargar; sin preferencia guardada selecciona en. Tests de prioridad/variantes/español pasan; almacenamiento restaurado. docs/REVERIFICACION_SPRINT_02.md.",
-          "updatedAt": "2026-10-11T14:18:04.919Z",
+          "status": "pendiente",
+          "evidence": "Reverificar: se reabrió el sprint 1.",
+          "updatedAt": "2026-10-11T16:22:19.802Z",
           "history": [
             {
               "at": "2026-10-11T12:26:32.417Z",
@@ -5390,6 +5623,11 @@
               "at": "2026-10-11T14:18:04.919Z",
               "status": "terminado",
               "evidence": "Compilación actual IAB: selección manual pt sobre navegador en-US conserva pt al recargar; sin preferencia guardada selecciona en. Tests de prioridad/variantes/español pasan; almacenamiento restaurado. docs/REVERIFICACION_SPRINT_02.md."
+            },
+            {
+              "at": "2026-10-11T16:22:19.802Z",
+              "status": "pendiente",
+              "evidence": "Reverificar: se reabrió el sprint 1."
             }
           ],
           "blockId": "2A"
@@ -5658,9 +5896,9 @@
           "group": "Bloque 2B Traducción y composición",
           "text": "Cantidades, fechas y plurales pasan casos de referencia; cualquier alternativa de Intl está documentada y no cambia idioma, unidades ni significado. Texto ampliado y traducciones largas no recortan acciones.",
           "kind": "aceptacion",
-          "status": "terminado",
-          "evidence": "41pruebas y build/TS pasan. Ambos navegadores20fechas; fallback hausa corregido/CLDR48 y shahmukhi conservado. 320x720CSS,texto32px(200%),de/ar/ur/pnb/te/ja: cero overflowhorizontal ni recorte de botones/inputs. Coordenadas árabes por teclado mantienen valor. Evidencia docs/REVERIFICACION_SPRINT_02.md.",
-          "updatedAt": "2026-10-11T14:28:26.013Z",
+          "status": "pendiente",
+          "evidence": "Reverificar: se reabrió el sprint 1.",
+          "updatedAt": "2026-10-11T16:22:19.802Z",
           "history": [
             {
               "at": "2026-10-11T12:46:16.541Z",
@@ -5706,6 +5944,11 @@
               "at": "2026-10-11T14:28:26.013Z",
               "status": "terminado",
               "evidence": "41pruebas y build/TS pasan. Ambos navegadores20fechas; fallback hausa corregido/CLDR48 y shahmukhi conservado. 320x720CSS,texto32px(200%),de/ar/ur/pnb/te/ja: cero overflowhorizontal ni recorte de botones/inputs. Coordenadas árabes por teclado mantienen valor. Evidencia docs/REVERIFICACION_SPRINT_02.md."
+            },
+            {
+              "at": "2026-10-11T16:22:19.802Z",
+              "status": "pendiente",
+              "evidence": "Reverificar: se reabrió el sprint 1."
             }
           ]
         },
@@ -5714,9 +5957,9 @@
           "group": "Bloque 2B Traducción y composición",
           "text": "No hay claves de traducción expuestas, texto sin traducir accidentalmente ni caracteres ausentes.",
           "kind": "aceptacion",
-          "status": "terminado",
-          "evidence": "Auditoría20catálogos84claves y nombres Unicode pasa; fichas/Información20idiomas localizadas; IAB1551280x720 y Chrome1541536x722 muestran20muestras de MapLibre, scriptCount20, glifos/composición inspeccionados. No claves expuestas ni cuadros ausentes. docs/REVERIFICACION_SPRINT_02.md.",
-          "updatedAt": "2026-10-11T14:28:26.104Z",
+          "status": "pendiente",
+          "evidence": "Reverificar: se reabrió el sprint 1.",
+          "updatedAt": "2026-10-11T16:22:19.802Z",
           "history": [
             {
               "at": "2026-10-11T12:46:16.625Z",
@@ -5752,6 +5995,11 @@
               "at": "2026-10-11T14:28:26.104Z",
               "status": "terminado",
               "evidence": "Auditoría20catálogos84claves y nombres Unicode pasa; fichas/Información20idiomas localizadas; IAB1551280x720 y Chrome1541536x722 muestran20muestras de MapLibre, scriptCount20, glifos/composición inspeccionados. No claves expuestas ni cuadros ausentes. docs/REVERIFICACION_SPRINT_02.md."
+            },
+            {
+              "at": "2026-10-11T16:22:19.802Z",
+              "status": "pendiente",
+              "evidence": "Reverificar: se reabrió el sprint 1."
             }
           ],
           "blockId": "2B"
@@ -5761,9 +6009,9 @@
           "group": "Bloque 2B Traducción y composición",
           "text": "La auditoría detecta claves faltantes antes de publicar. Cada idioma tiene una revisión lingüística identificada; un borrador automático no se declara revisado.",
           "kind": "aceptacion",
-          "status": "terminado",
-          "evidence": "npm build ejecuta auditoría antes de compilar; fixture temporal con close eliminado en en.json rechazado con salida1, fuente real intacta. Revisiones IA identificadas en docs/i18n para20catálogos y nombres, más revisión formatos hausa CLDR48; no se atribuye certificación humana.",
-          "updatedAt": "2026-10-11T14:28:26.191Z",
+          "status": "pendiente",
+          "evidence": "Reverificar: se reabrió el sprint 1.",
+          "updatedAt": "2026-10-11T16:22:19.802Z",
           "history": [
             {
               "at": "2026-10-11T12:46:16.716Z",
@@ -5799,6 +6047,11 @@
               "at": "2026-10-11T14:28:26.191Z",
               "status": "terminado",
               "evidence": "npm build ejecuta auditoría antes de compilar; fixture temporal con close eliminado en en.json rechazado con salida1, fuente real intacta. Revisiones IA identificadas en docs/i18n para20catálogos y nombres, más revisión formatos hausa CLDR48; no se atribuye certificación humana."
+            },
+            {
+              "at": "2026-10-11T16:22:19.802Z",
+              "status": "pendiente",
+              "evidence": "Reverificar: se reabrió el sprint 1."
             }
           ],
           "blockId": "2B"
@@ -5808,9 +6061,9 @@
           "group": "Bloque 2B Traducción y composición",
           "text": "Los idiomas de derecha a izquierda funcionan en ventanas estrechas y amplias, con coordenadas y números legibles.",
           "kind": "aceptacion",
-          "status": "terminado",
-          "evidence": "IAB155 y Chrome154: ar/ur/pnb RTL en320x720CSS con texto200%, sin overflowhorizontal, inputs coordenadas LTR; capturaIABguardada. Reglas emulación/CSS retiradas. Campos árabes −٦٩٫٨٨٤٥/١٨٫٤٧٣٧ aceptados conTab+Enter sin invertir signo/posición. docs/REVERIFICACION_SPRINT_02.md.",
-          "updatedAt": "2026-10-11T14:28:26.274Z",
+          "status": "pendiente",
+          "evidence": "Reverificar: se reabrió el sprint 1.",
+          "updatedAt": "2026-10-11T16:22:19.802Z",
           "history": [
             {
               "at": "2026-10-11T12:46:17.114Z",
@@ -5846,6 +6099,11 @@
               "at": "2026-10-11T14:28:26.274Z",
               "status": "terminado",
               "evidence": "IAB155 y Chrome154: ar/ur/pnb RTL en320x720CSS con texto200%, sin overflowhorizontal, inputs coordenadas LTR; capturaIABguardada. Reglas emulación/CSS retiradas. Campos árabes −٦٩٫٨٨٤٥/١٨٫٤٧٣٧ aceptados conTab+Enter sin invertir signo/posición. docs/REVERIFICACION_SPRINT_02.md."
+            },
+            {
+              "at": "2026-10-11T16:22:19.802Z",
+              "status": "pendiente",
+              "evidence": "Reverificar: se reabrió el sprint 1."
             }
           ],
           "blockId": "2B"
@@ -6077,9 +6335,9 @@
           "group": "Bloque 2C Países en el idioma elegido",
           "text": "Cada país tiene identificador estable y nombre revisado en los veinte idiomas; al cambiar idioma no aparecen etiquetas duplicadas ni se alteran coordenadas o resultados.",
           "kind": "aceptacion",
-          "status": "terminado",
-          "evidence": "Reverificación actual con Worker compilado: API anónima y mapa20idiomas, country-DE, anclaje9.678348/50.961733, centro y zoom3 constantes; sugerencia/etiqueta/ficha coinciden. Disclaimer20textos de5párrafos; excepción Spratly ne-PGA comprobada en maratí con explicación traducida. Muestras20escrituras en IAB155/Chrome154, texto200%. 41pruebas, TypeScript y build pasan; 4780pares país/idioma y filtros servidor/caché. Evidencia docs/REVERIFICACION_SPRINT_02.md y docs/seguimiento/evidencia-paises-20.json.",
-          "updatedAt": "2026-10-11T14:44:16.869Z",
+          "status": "pendiente",
+          "evidence": "Reverificar: se reabrió el sprint 1.",
+          "updatedAt": "2026-10-11T16:22:19.802Z",
           "history": [
             {
               "at": "2026-10-11T13:12:39.224Z",
@@ -6120,6 +6378,16 @@
               "at": "2026-10-11T14:44:16.869Z",
               "status": "terminado",
               "evidence": "Reverificación actual con Worker compilado: API anónima y mapa20idiomas, country-DE, anclaje9.678348/50.961733, centro y zoom3 constantes; sugerencia/etiqueta/ficha coinciden. Disclaimer20textos de5párrafos; excepción Spratly ne-PGA comprobada en maratí con explicación traducida. Muestras20escrituras en IAB155/Chrome154, texto200%. 41pruebas, TypeScript y build pasan; 4780pares país/idioma y filtros servidor/caché. Evidencia docs/REVERIFICACION_SPRINT_02.md y docs/seguimiento/evidencia-paises-20.json."
+            },
+            {
+              "at": "2026-10-11T14:52:54.794Z",
+              "status": "terminado",
+              "evidence": "Entrega Sites23, SHA8f825f6d19459f0a30c26b50f69eaa3228805772, publicada11/10/2026 10:48SD. API anónima20nombres HTTP200 con country-DE/anclaje constante. Mapa público20idiomas: sugerencia/etiqueta coinciden, misma identidad/punto/centro/zoom3, consulta y lista conservadas. X conserva punto. Hausa Información localizada sin excepción. Chrome154/IAB155,320CSS/texto200%, glifos20escrituras, fallback Spratly revisados. 41pruebas, TypeScript/build/auditoría pasan. Registros actuales docs/REVERIFICACION_SPRINT_02.md, docs/ACEPTACION_SPRINT_02.md y evidencia-api-sites23.json/evidencia-mapa-sites23.json."
+            },
+            {
+              "at": "2026-10-11T16:22:19.802Z",
+              "status": "pendiente",
+              "evidence": "Reverificar: se reabrió el sprint 1."
             }
           ]
         },
@@ -6129,9 +6397,9 @@
           "group": "Bloque 2C Países en el idioma elegido",
           "text": "Los glifos y la composición se comprueban dentro del mapa en las veinte escrituras, con una alternativa de nombres explícita donde el proveedor no tenga traducción.",
           "kind": "aceptacion",
-          "status": "terminado",
-          "evidence": "Reverificación actual con Worker compilado: API anónima y mapa20idiomas, country-DE, anclaje9.678348/50.961733, centro y zoom3 constantes; sugerencia/etiqueta/ficha coinciden. Disclaimer20textos de5párrafos; excepción Spratly ne-PGA comprobada en maratí con explicación traducida. Muestras20escrituras en IAB155/Chrome154, texto200%. 41pruebas, TypeScript y build pasan; 4780pares país/idioma y filtros servidor/caché. Evidencia docs/REVERIFICACION_SPRINT_02.md y docs/seguimiento/evidencia-paises-20.json.",
-          "updatedAt": "2026-10-11T14:44:16.956Z",
+          "status": "pendiente",
+          "evidence": "Reverificar: se reabrió el sprint 1.",
+          "updatedAt": "2026-10-11T16:22:19.802Z",
           "history": [
             {
               "at": "2026-10-11T13:12:39.316Z",
@@ -6167,6 +6435,16 @@
               "at": "2026-10-11T14:44:16.956Z",
               "status": "terminado",
               "evidence": "Reverificación actual con Worker compilado: API anónima y mapa20idiomas, country-DE, anclaje9.678348/50.961733, centro y zoom3 constantes; sugerencia/etiqueta/ficha coinciden. Disclaimer20textos de5párrafos; excepción Spratly ne-PGA comprobada en maratí con explicación traducida. Muestras20escrituras en IAB155/Chrome154, texto200%. 41pruebas, TypeScript y build pasan; 4780pares país/idioma y filtros servidor/caché. Evidencia docs/REVERIFICACION_SPRINT_02.md y docs/seguimiento/evidencia-paises-20.json."
+            },
+            {
+              "at": "2026-10-11T14:52:54.891Z",
+              "status": "terminado",
+              "evidence": "Entrega Sites23, SHA8f825f6d19459f0a30c26b50f69eaa3228805772, publicada11/10/2026 10:48SD. API anónima20nombres HTTP200 con country-DE/anclaje constante. Mapa público20idiomas: sugerencia/etiqueta coinciden, misma identidad/punto/centro/zoom3, consulta y lista conservadas. X conserva punto. Hausa Información localizada sin excepción. Chrome154/IAB155,320CSS/texto200%, glifos20escrituras, fallback Spratly revisados. 41pruebas, TypeScript/build/auditoría pasan. Registros actuales docs/REVERIFICACION_SPRINT_02.md, docs/ACEPTACION_SPRINT_02.md y evidencia-api-sites23.json/evidencia-mapa-sites23.json."
+            },
+            {
+              "at": "2026-10-11T16:22:19.802Z",
+              "status": "pendiente",
+              "evidence": "Reverificar: se reabrió el sprint 1."
             }
           ]
         },
@@ -6175,9 +6453,9 @@
           "group": "Bloque 2C Países en el idioma elegido",
           "text": "Cambiar entre los veinte idiomas actualiza país, controles, disclaimer y resultados existentes, manteniendo el punto y el zoom.",
           "kind": "aceptacion",
-          "status": "terminado",
-          "evidence": "Reverificación actual con Worker compilado: API anónima y mapa20idiomas, country-DE, anclaje9.678348/50.961733, centro y zoom3 constantes; sugerencia/etiqueta/ficha coinciden. Disclaimer20textos de5párrafos; excepción Spratly ne-PGA comprobada en maratí con explicación traducida. Muestras20escrituras en IAB155/Chrome154, texto200%. 41pruebas, TypeScript y build pasan; 4780pares país/idioma y filtros servidor/caché. Evidencia docs/REVERIFICACION_SPRINT_02.md y docs/seguimiento/evidencia-paises-20.json.",
-          "updatedAt": "2026-10-11T14:44:17.034Z",
+          "status": "pendiente",
+          "evidence": "Reverificar: se reabrió el sprint 1.",
+          "updatedAt": "2026-10-11T16:22:19.802Z",
           "history": [
             {
               "at": "2026-10-11T13:12:39.554Z",
@@ -6213,6 +6491,16 @@
               "at": "2026-10-11T14:44:17.034Z",
               "status": "terminado",
               "evidence": "Reverificación actual con Worker compilado: API anónima y mapa20idiomas, country-DE, anclaje9.678348/50.961733, centro y zoom3 constantes; sugerencia/etiqueta/ficha coinciden. Disclaimer20textos de5párrafos; excepción Spratly ne-PGA comprobada en maratí con explicación traducida. Muestras20escrituras en IAB155/Chrome154, texto200%. 41pruebas, TypeScript y build pasan; 4780pares país/idioma y filtros servidor/caché. Evidencia docs/REVERIFICACION_SPRINT_02.md y docs/seguimiento/evidencia-paises-20.json."
+            },
+            {
+              "at": "2026-10-11T14:52:54.974Z",
+              "status": "terminado",
+              "evidence": "Entrega Sites23, SHA8f825f6d19459f0a30c26b50f69eaa3228805772, publicada11/10/2026 10:48SD. API anónima20nombres HTTP200 con country-DE/anclaje constante. Mapa público20idiomas: sugerencia/etiqueta coinciden, misma identidad/punto/centro/zoom3, consulta y lista conservadas. X conserva punto. Hausa Información localizada sin excepción. Chrome154/IAB155,320CSS/texto200%, glifos20escrituras, fallback Spratly revisados. 41pruebas, TypeScript/build/auditoría pasan. Registros actuales docs/REVERIFICACION_SPRINT_02.md, docs/ACEPTACION_SPRINT_02.md y evidencia-api-sites23.json/evidencia-mapa-sites23.json."
+            },
+            {
+              "at": "2026-10-11T16:22:19.802Z",
+              "status": "pendiente",
+              "evidence": "Reverificar: se reabrió el sprint 1."
             }
           ],
           "blockId": "2C"
@@ -6222,9 +6510,9 @@
           "group": "Bloque 2C Países en el idioma elegido",
           "text": "Las etiquetas del mapa pasan revisión de composición y glifos en las veinte escrituras. La ausencia de datos Intl no cambia el idioma del contenido.",
           "kind": "aceptacion",
-          "status": "terminado",
-          "evidence": "Reverificación actual con Worker compilado: API anónima y mapa20idiomas, country-DE, anclaje9.678348/50.961733, centro y zoom3 constantes; sugerencia/etiqueta/ficha coinciden. Disclaimer20textos de5párrafos; excepción Spratly ne-PGA comprobada en maratí con explicación traducida. Muestras20escrituras en IAB155/Chrome154, texto200%. 41pruebas, TypeScript y build pasan; 4780pares país/idioma y filtros servidor/caché. Evidencia docs/REVERIFICACION_SPRINT_02.md y docs/seguimiento/evidencia-paises-20.json.",
-          "updatedAt": "2026-10-11T14:44:17.112Z",
+          "status": "pendiente",
+          "evidence": "Reverificar: se reabrió el sprint 1.",
+          "updatedAt": "2026-10-11T16:22:19.802Z",
           "history": [
             {
               "at": "2026-10-11T13:12:39.404Z",
@@ -6260,6 +6548,16 @@
               "at": "2026-10-11T14:44:17.112Z",
               "status": "terminado",
               "evidence": "Reverificación actual con Worker compilado: API anónima y mapa20idiomas, country-DE, anclaje9.678348/50.961733, centro y zoom3 constantes; sugerencia/etiqueta/ficha coinciden. Disclaimer20textos de5párrafos; excepción Spratly ne-PGA comprobada en maratí con explicación traducida. Muestras20escrituras en IAB155/Chrome154, texto200%. 41pruebas, TypeScript y build pasan; 4780pares país/idioma y filtros servidor/caché. Evidencia docs/REVERIFICACION_SPRINT_02.md y docs/seguimiento/evidencia-paises-20.json."
+            },
+            {
+              "at": "2026-10-11T14:52:55.063Z",
+              "status": "terminado",
+              "evidence": "Entrega Sites23, SHA8f825f6d19459f0a30c26b50f69eaa3228805772, publicada11/10/2026 10:48SD. API anónima20nombres HTTP200 con country-DE/anclaje constante. Mapa público20idiomas: sugerencia/etiqueta coinciden, misma identidad/punto/centro/zoom3, consulta y lista conservadas. X conserva punto. Hausa Información localizada sin excepción. Chrome154/IAB155,320CSS/texto200%, glifos20escrituras, fallback Spratly revisados. 41pruebas, TypeScript/build/auditoría pasan. Registros actuales docs/REVERIFICACION_SPRINT_02.md, docs/ACEPTACION_SPRINT_02.md y evidencia-api-sites23.json/evidencia-mapa-sites23.json."
+            },
+            {
+              "at": "2026-10-11T16:22:19.802Z",
+              "status": "pendiente",
+              "evidence": "Reverificar: se reabrió el sprint 1."
             }
           ],
           "blockId": "2C"
@@ -6270,9 +6568,9 @@
           "group": "Bloque 2C Países en el idioma elegido",
           "text": "Se puede buscar un país con su nombre en cada idioma aunque el proveedor no soporte ese locale; sugerencia, etiqueta y ficha comparten identificador y nombre de país sin alterar los nombres oficiales de calles.",
           "kind": "aceptacion",
-          "status": "terminado",
-          "evidence": "Reverificación actual con Worker compilado: API anónima y mapa20idiomas, country-DE, anclaje9.678348/50.961733, centro y zoom3 constantes; sugerencia/etiqueta/ficha coinciden. Disclaimer20textos de5párrafos; excepción Spratly ne-PGA comprobada en maratí con explicación traducida. Muestras20escrituras en IAB155/Chrome154, texto200%. 41pruebas, TypeScript y build pasan; 4780pares país/idioma y filtros servidor/caché. Evidencia docs/REVERIFICACION_SPRINT_02.md y docs/seguimiento/evidencia-paises-20.json.",
-          "updatedAt": "2026-10-11T14:44:17.192Z",
+          "status": "pendiente",
+          "evidence": "Reverificar: se reabrió el sprint 1.",
+          "updatedAt": "2026-10-11T16:22:19.802Z",
           "history": [
             {
               "at": "2026-10-11T13:12:39.650Z",
@@ -6308,6 +6606,21 @@
               "at": "2026-10-11T14:44:17.192Z",
               "status": "terminado",
               "evidence": "Reverificación actual con Worker compilado: API anónima y mapa20idiomas, country-DE, anclaje9.678348/50.961733, centro y zoom3 constantes; sugerencia/etiqueta/ficha coinciden. Disclaimer20textos de5párrafos; excepción Spratly ne-PGA comprobada en maratí con explicación traducida. Muestras20escrituras en IAB155/Chrome154, texto200%. 41pruebas, TypeScript y build pasan; 4780pares país/idioma y filtros servidor/caché. Evidencia docs/REVERIFICACION_SPRINT_02.md y docs/seguimiento/evidencia-paises-20.json."
+            },
+            {
+              "at": "2026-10-11T14:52:55.152Z",
+              "status": "terminado",
+              "evidence": "Entrega Sites23, SHA8f825f6d19459f0a30c26b50f69eaa3228805772, publicada11/10/2026 10:48SD. API anónima20nombres HTTP200 con country-DE/anclaje constante. Mapa público20idiomas: sugerencia/etiqueta coinciden, misma identidad/punto/centro/zoom3, consulta y lista conservadas. X conserva punto. Hausa Información localizada sin excepción. Chrome154/IAB155,320CSS/texto200%, glifos20escrituras, fallback Spratly revisados. 41pruebas, TypeScript/build/auditoría pasan. Registros actuales docs/REVERIFICACION_SPRINT_02.md, docs/ACEPTACION_SPRINT_02.md y evidencia-api-sites23.json/evidencia-mapa-sites23.json."
+            },
+            {
+              "at": "2026-10-11T14:53:56.022Z",
+              "status": "terminado",
+              "evidence": "Entrega Sites23, SHA8f825f6d19459f0a30c26b50f69eaa3228805772, publicada11/10/2026 10:48SD. API anónima20nombres HTTP200 con country-DE/anclaje constante. Mapa público20idiomas: sugerencia/etiqueta coinciden, misma identidad/punto/centro/zoom3, consulta y lista conservadas. X conserva punto. Hausa Información localizada sin excepción. Chrome154/IAB155,320CSS/texto200%, glifos20escrituras, fallback Spratly revisados. 41pruebas, TypeScript/build/auditoría pasan. Registros actuales docs/REVERIFICACION_SPRINT_02.md, docs/ACEPTACION_SPRINT_02.md y evidencia-api-sites23.json/evidencia-mapa-sites23.json. Búsquedas públicas Calle El Conde y Torre Eiffel: HTTP200, cero resultados."
+            },
+            {
+              "at": "2026-10-11T16:22:19.802Z",
+              "status": "pendiente",
+              "evidence": "Reverificar: se reabrió el sprint 1."
             }
           ]
         }
@@ -6316,7 +6629,7 @@
     {
       "number": 3,
       "title": "Población y consulta territorial",
-      "updatedAt": "2026-10-11T13:33:28.522Z",
+      "updatedAt": "2026-10-11T16:23:55.295Z",
       "phase": "pendiente",
       "approval": {
         "status": "pendiente",
@@ -6420,6 +6733,16 @@
         },
         {
           "at": "2026-10-11T13:33:28.522Z",
+          "action": "aceptacion_invalidada",
+          "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
+        },
+        {
+          "at": "2026-10-11T16:22:19.802Z",
+          "action": "reabierto",
+          "reference": "Mensaje del usuario de esta conversación, 11/10/2026: evitar que al hacer clic en el mapa se coloque el marcador de detonación; los marcadores deben depender de la elección de explosiones y de cuántas ejecutar. Cambio del contrato de exploración y ubicación del Sprint 1."
+        },
+        {
+          "at": "2026-10-11T16:23:55.295Z",
           "action": "aceptacion_invalidada",
           "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
         }
@@ -7025,7 +7348,7 @@
     {
       "number": 4,
       "title": "Accidentes",
-      "updatedAt": "2026-10-11T13:33:28.522Z",
+      "updatedAt": "2026-10-11T16:24:43.562Z",
       "phase": "pendiente",
       "approval": {
         "status": "pendiente",
@@ -7131,6 +7454,21 @@
           "at": "2026-10-11T13:33:28.522Z",
           "action": "aceptacion_invalidada",
           "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
+        },
+        {
+          "at": "2026-10-11T16:22:19.802Z",
+          "action": "reabierto",
+          "reference": "Mensaje del usuario de esta conversación, 11/10/2026: evitar que al hacer clic en el mapa se coloque el marcador de detonación; los marcadores deben depender de la elección de explosiones y de cuántas ejecutar. Cambio del contrato de exploración y ubicación del Sprint 1."
+        },
+        {
+          "at": "2026-10-11T16:23:55.295Z",
+          "action": "aceptacion_invalidada",
+          "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
+        },
+        {
+          "at": "2026-10-11T16:24:43.562Z",
+          "action": "aceptacion_invalidada",
+          "reference": "Cambio de requisitos o contratos desde el sprint 4; verificar de nuevo antes de continuar."
         }
       ],
       "points": [
@@ -7246,14 +7584,20 @@
         },
         {
           "id": "S04-4B-02",
+          "blockId": "4B",
           "group": "Bloque 4B Ejecución y resultados",
-          "text": "Definir para cada entrada qué hace el botón principal. La etiqueta puede ser «Explorar caso» o «Consultar área» según la operación real. No llamar «Detonar» a una consulta que no calcula una detonación.",
+          "text": "Definir para cada entrada qué hace el botón principal. La etiqueta puede ser «Explorar caso» o «Consultar área» según la operación real. Permitir elegir explícitamente los casos y cuántos mostrar, gestionando una colección de eventos con identidad propia; solo esa selección solicitada genera sus marcadores. No utilizar la referencia única del buscador como una lista de detonaciones. No llamar «Detonar» a una consulta que no calcula una detonación.",
           "kind": "operacion",
           "status": "pendiente",
           "evidence": "",
-          "updatedAt": "2026-10-10T13:47:29.679Z",
-          "history": [],
-          "blockId": "4B"
+          "updatedAt": "2026-10-11T16:24:43.562Z",
+          "history": [
+            {
+              "at": "2026-10-11T16:24:43.562Z",
+              "status": "pendiente",
+              "evidence": "Cambió el requisito en el plan; necesita nueva verificación."
+            }
+          ]
         },
         {
           "id": "S04-4B-03",
@@ -7381,7 +7725,7 @@
     {
       "number": 5,
       "title": "Fenómenos naturales",
-      "updatedAt": "2026-10-11T13:33:28.522Z",
+      "updatedAt": "2026-10-11T16:24:43.562Z",
       "phase": "pendiente",
       "approval": {
         "status": "pendiente",
@@ -7487,6 +7831,21 @@
           "at": "2026-10-11T13:33:28.522Z",
           "action": "aceptacion_invalidada",
           "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
+        },
+        {
+          "at": "2026-10-11T16:22:19.802Z",
+          "action": "reabierto",
+          "reference": "Mensaje del usuario de esta conversación, 11/10/2026: evitar que al hacer clic en el mapa se coloque el marcador de detonación; los marcadores deben depender de la elección de explosiones y de cuántas ejecutar. Cambio del contrato de exploración y ubicación del Sprint 1."
+        },
+        {
+          "at": "2026-10-11T16:23:55.295Z",
+          "action": "aceptacion_invalidada",
+          "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
+        },
+        {
+          "at": "2026-10-11T16:24:43.562Z",
+          "action": "aceptacion_invalidada",
+          "reference": "Cambio de requisitos o contratos desde el sprint 4; verificar de nuevo antes de continuar."
         }
       ],
       "points": [
@@ -7586,14 +7945,20 @@
         },
         {
           "id": "S05-5B-01",
+          "blockId": "5B",
           "group": "Bloque 5B Capas y consulta",
-          "text": "Mostrar capas del fenómeno únicamente cuando el usuario abra ese caso. Los marcadores específicos de un caso solicitado no son puntos de interés comerciales de la cartografía base.",
+          "text": "Mostrar capas del fenómeno únicamente cuando el usuario seleccione explícitamente los casos y cuántos mostrar. Gestionar sus marcadores como una colección de eventos independientes de la referencia de navegación; permitir varios casos con su identidad y geometría propias. Los marcadores específicos de un caso solicitado no son puntos de interés comerciales de la cartografía base.",
           "kind": "operacion",
           "status": "pendiente",
           "evidence": "",
-          "updatedAt": "2026-10-10T13:47:29.679Z",
-          "history": [],
-          "blockId": "5B"
+          "updatedAt": "2026-10-11T16:24:43.562Z",
+          "history": [
+            {
+              "at": "2026-10-11T16:24:43.562Z",
+              "status": "pendiente",
+              "evidence": "Cambió el requisito en el plan; necesita nueva verificación."
+            }
+          ]
         },
         {
           "id": "S05-5B-02",
@@ -7710,7 +8075,7 @@
     {
       "number": 6,
       "title": "Escenarios militares históricos",
-      "updatedAt": "2026-10-11T13:33:28.522Z",
+      "updatedAt": "2026-10-11T16:24:43.562Z",
       "phase": "pendiente",
       "approval": {
         "status": "pendiente",
@@ -7816,6 +8181,21 @@
           "at": "2026-10-11T13:33:28.522Z",
           "action": "aceptacion_invalidada",
           "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
+        },
+        {
+          "at": "2026-10-11T16:22:19.802Z",
+          "action": "reabierto",
+          "reference": "Mensaje del usuario de esta conversación, 11/10/2026: evitar que al hacer clic en el mapa se coloque el marcador de detonación; los marcadores deben depender de la elección de explosiones y de cuántas ejecutar. Cambio del contrato de exploración y ubicación del Sprint 1."
+        },
+        {
+          "at": "2026-10-11T16:23:55.295Z",
+          "action": "aceptacion_invalidada",
+          "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
+        },
+        {
+          "at": "2026-10-11T16:24:43.562Z",
+          "action": "aceptacion_invalidada",
+          "reference": "Cambio de requisitos o contratos desde el sprint 4; verificar de nuevo antes de continuar."
         }
       ],
       "points": [
@@ -8000,7 +8380,7 @@
     {
       "number": 7,
       "title": "Tierra y evidencia científica",
-      "updatedAt": "2026-10-11T13:33:28.522Z",
+      "updatedAt": "2026-10-11T16:24:43.562Z",
       "phase": "pendiente",
       "approval": {
         "status": "pendiente",
@@ -8106,6 +8486,21 @@
           "at": "2026-10-11T13:33:28.522Z",
           "action": "aceptacion_invalidada",
           "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
+        },
+        {
+          "at": "2026-10-11T16:22:19.802Z",
+          "action": "reabierto",
+          "reference": "Mensaje del usuario de esta conversación, 11/10/2026: evitar que al hacer clic en el mapa se coloque el marcador de detonación; los marcadores deben depender de la elección de explosiones y de cuántas ejecutar. Cambio del contrato de exploración y ubicación del Sprint 1."
+        },
+        {
+          "at": "2026-10-11T16:23:55.295Z",
+          "action": "aceptacion_invalidada",
+          "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
+        },
+        {
+          "at": "2026-10-11T16:24:43.562Z",
+          "action": "aceptacion_invalidada",
+          "reference": "Cambio de requisitos o contratos desde el sprint 4; verificar de nuevo antes de continuar."
         }
       ],
       "points": [
@@ -8455,7 +8850,7 @@
     {
       "number": 8,
       "title": "Nombre e identidad del portal",
-      "updatedAt": "2026-10-11T13:33:28.522Z",
+      "updatedAt": "2026-10-11T16:24:43.562Z",
       "phase": "pendiente",
       "approval": {
         "status": "pendiente",
@@ -8566,6 +8961,21 @@
           "at": "2026-10-11T13:33:28.522Z",
           "action": "aceptacion_invalidada",
           "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
+        },
+        {
+          "at": "2026-10-11T16:22:19.802Z",
+          "action": "reabierto",
+          "reference": "Mensaje del usuario de esta conversación, 11/10/2026: evitar que al hacer clic en el mapa se coloque el marcador de detonación; los marcadores deben depender de la elección de explosiones y de cuántas ejecutar. Cambio del contrato de exploración y ubicación del Sprint 1."
+        },
+        {
+          "at": "2026-10-11T16:23:55.295Z",
+          "action": "aceptacion_invalidada",
+          "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
+        },
+        {
+          "at": "2026-10-11T16:24:43.562Z",
+          "action": "aceptacion_invalidada",
+          "reference": "Cambio de requisitos o contratos desde el sprint 4; verificar de nuevo antes de continuar."
         }
       ],
       "points": [
@@ -8847,7 +9257,7 @@
     {
       "number": 9,
       "title": "Materiales y relación entre masa y energía",
-      "updatedAt": "2026-10-11T13:33:28.522Z",
+      "updatedAt": "2026-10-11T16:24:43.562Z",
       "phase": "pendiente",
       "approval": {
         "status": "pendiente",
@@ -8962,6 +9372,21 @@
           "at": "2026-10-11T13:33:28.522Z",
           "action": "aceptacion_invalidada",
           "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
+        },
+        {
+          "at": "2026-10-11T16:22:19.802Z",
+          "action": "reabierto",
+          "reference": "Mensaje del usuario de esta conversación, 11/10/2026: evitar que al hacer clic en el mapa se coloque el marcador de detonación; los marcadores deben depender de la elección de explosiones y de cuántas ejecutar. Cambio del contrato de exploración y ubicación del Sprint 1."
+        },
+        {
+          "at": "2026-10-11T16:23:55.295Z",
+          "action": "aceptacion_invalidada",
+          "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
+        },
+        {
+          "at": "2026-10-11T16:24:43.562Z",
+          "action": "aceptacion_invalidada",
+          "reference": "Cambio de requisitos o contratos desde el sprint 4; verificar de nuevo antes de continuar."
         }
       ],
       "points": [
@@ -9553,7 +9978,7 @@
     {
       "number": 10,
       "title": "Verificación integral y entrega",
-      "updatedAt": "2026-10-11T13:33:28.522Z",
+      "updatedAt": "2026-10-11T16:24:43.562Z",
       "phase": "pendiente",
       "approval": {
         "status": "pendiente",
@@ -9668,19 +10093,40 @@
           "at": "2026-10-11T13:33:28.522Z",
           "action": "aceptacion_invalidada",
           "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
+        },
+        {
+          "at": "2026-10-11T16:22:19.802Z",
+          "action": "reabierto",
+          "reference": "Mensaje del usuario de esta conversación, 11/10/2026: evitar que al hacer clic en el mapa se coloque el marcador de detonación; los marcadores deben depender de la elección de explosiones y de cuántas ejecutar. Cambio del contrato de exploración y ubicación del Sprint 1."
+        },
+        {
+          "at": "2026-10-11T16:23:55.295Z",
+          "action": "aceptacion_invalidada",
+          "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
+        },
+        {
+          "at": "2026-10-11T16:24:43.562Z",
+          "action": "aceptacion_invalidada",
+          "reference": "Cambio de requisitos o contratos desde el sprint 4; verificar de nuevo antes de continuar."
         }
       ],
       "points": [
         {
           "id": "S10-10A-01",
+          "blockId": "10A",
           "group": "Bloque 10A Recorridos completos",
-          "text": "Comprobar exploración global, búsqueda de una ciudad, acercamiento a calles, selección de punto, consulta territorial y cierre de paneles.",
+          "text": "Comprobar exploración global, búsqueda de una ciudad, acercamiento a calles, elección explícita de referencia sin marcador de detonación, consulta territorial y cierre de paneles. Verificar los recorridos finales en navegador integrado y Chrome, registrando versiones, dimensiones y resultados reales.",
           "kind": "operacion",
           "status": "pendiente",
           "evidence": "",
-          "updatedAt": "2026-10-10T13:47:29.679Z",
-          "history": [],
-          "blockId": "10A"
+          "updatedAt": "2026-10-11T16:24:43.562Z",
+          "history": [
+            {
+              "at": "2026-10-11T16:24:43.562Z",
+              "status": "pendiente",
+              "evidence": "Cambió el requisito en el plan; necesita nueva verificación."
+            }
+          ]
         },
         {
           "id": "S10-10A-02",

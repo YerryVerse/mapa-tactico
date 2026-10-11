@@ -1,6 +1,27 @@
-# Revisión del Sprint 2 · Mapa Táctico
+# Revisión vigente del Sprint 2 · Plan 19
 
-**Registro histórico de la entrega 21.** La solicitud posterior de conservar abierta la búsqueda modifica el contrato de 1B en el plan19. La aceptación de esta entrega se retiró y sus criterios volvieron a pendiente; el desarrollo y las pruebas anteriores se conservan como historial. Se requiere aprobación vigente de la nueva entrega del Sprint1 y nueva comprobación del Sprint2 antes de presentar otra aceptación. Consultar docs/CAMBIO_BUSQUEDA_PERSISTENTE.md y los HTML actuales.
+Entrega **Sites23**, publicada el11/10/2026 a las 10:48:17 de Santo Domingo: https://atlas-escenarios-hud.yerrybatista.chatgpt.site/. Fuente `8f825f6d19459f0a30c26b50f69eaa3228805772`. Versión `appgprj_6aca23222ed881919537ddd318f39d79~appgver_e30a44fce8e48191b558ca5e817fb14c`; despliegue `appgdep_6acba1a739008191b5d196d160260d31`. Se conserva el proyecto y su audiencia pública.
+
+**36/36 puntos terminados y verificados; aprobación del usuario pendiente.** Sprint1 aprobado con el mensaje «Apruebo el Sprint 1 y continuar el Sprint 2». Sprint 3 no comienza hasta aprobar Sprint 2. Evidencias actuales: docs/REVERIFICACION_SPRINT_02.md y docs/seguimiento/evidencia-api-sites23.json / evidencia-mapa-sites23.json.
+
+Comprobación:41 pruebas en 8 archivos, TypeScript, auditoría y build correctos; Chrome154 e IAB155,320CSS y texto200%. API y mapa públicos en20idiomas conservan country-DE, punto9.678348/50.961733, centro y zoom3. Información Hausa muestra11 Oktoba, 2026 con Intl incompleto. Selector y ficha continúan funcionando con Storage bloqueado. La revisión lingüística identificada es IA; no se atribuye certificación humana.
+
+## Pasos de revisión de Sites23
+
+1. Menú → Idioma:20 opciones nativas, sin banderas. Buscar English o العربية filtra la lista; seleccionar cambia los controles.
+2. Lupa → Alemania → Alemania · País. Cambiar idioma desde la misma tarjeta: resultados y etiquetas se localizan, mientras punto y zoom se conservan. X o clic fuera cierra sin perder la ubicación. Buscar ألمانيا o جرمنی también devuelve el mismo país.
+3. Elegir العربية, اردو o پنجابی y abrir Elegir ubicación: panel RTL, coordenadas LTR. Reducir ventana y ampliar texto al 200%: controles alcanzables con desplazamiento vertical.
+4. Escenarios → Accidente → Beirut, 2020 → Consultar. Cambiar idioma: contenido localizado, mismos datos y fuentes. En Menú → Información, elegir Hausa: fecha en hausa sin error. Revisar también Disclaimer.
+5. Elegir Português y recargar: preferencia manual conservada cuando el navegador permite almacenamiento.
+6. Abrir http://127.0.0.1:4174/sprint-02.html:36 terminados, 0 pendientes, 0 no completados. Las flechas permiten revisar operaciones, criterios y evidencia; reapertura manual conservada durante las actualizaciones.
+
+El cierre exige aprobación explícita del usuario conforme a docs/PROTOCOLO_DE_SPRINTS.md. Esta entrega está lista para esa revisión.
+
+---
+
+# Historial: revisión anterior del Sprint 2
+
+**Registro histórico de la entrega 21.** La solicitud posterior de conservar abierta la búsqueda modifica el contrato de 1B en el plan19. La aceptación de esta entrega se retiró y sus criterios volvieron a pendiente; el desarrollo y las pruebas anteriores se conservan como historial. Se requiere aprobación vigente de la nueva entrega del Sprint1 y nueva comprobación del Sprint 2 antes de presentar otra aceptación. Consultar docs/CAMBIO_BUSQUEDA_PERSISTENTE.md y los HTML actuales.
 
 Entrega pública: https://atlas-escenarios-hud.yerrybatista.chatgpt.site/
 

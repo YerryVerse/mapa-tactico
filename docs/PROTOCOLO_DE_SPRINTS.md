@@ -1,5 +1,7 @@
 # Seguimiento y aprobación de los sprints
 
+Durante el desarrollo, las pruebas de la plataforma se realizan en el navegador integrado. Chrome se reserva para la verificación final del desarrollo, conforme a la instrucción del usuario del11/10/2026. Conservar las evidencias anteriores como historial, sin atribuirlas a cambios nuevos.
+
 Instrucción persistente del usuario, establecida el 10 de octubre de 2026, vigente hasta finalizar el proyecto completo. El desarrollo sigue los diez sprints del [plan](PLAN_DE_SPRINTS.md) y las soluciones de la [revisión técnica](REVISION_TECNICA_SPRINTS.md). Cada sprint entrega una función completa, una tabla HTML actualizada durante el trabajo y una versión del portal que el usuario pueda revisar antes de aprobar su cierre.
 
 ## Estados de los puntos

@@ -65,7 +65,7 @@
   "nuclearTitle": "Humanitarian consequences of nuclear weapons",
   "nuclearDescription": "The International Committee of the Red Cross describes the humanitarian consequences of using nuclear weapons.",
   "nuclearSource": "ICRC — Frequently asked questions about nuclear weapons",
-  "infoExplore": "Explore countries, cities and streets. Use the zoom controls or scroll wheel; drag to move the map. Click to choose a location and drag its marker to move it.",
+  "infoExplore": "Explore countries, cities and streets. Use the zoom controls or scroll wheel; drag to move the map.",
   "infoKeyboard": "Tab moves through controls. Arrow keys move the map when it has focus. Choose location lets you enter coordinates. Escape or Back closes the panel.",
   "infoMap": "Map detail varies by region. Local detail is unavailable beyond ±85.0511° latitude.",
   "cartography": "Cartography",

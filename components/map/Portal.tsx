@@ -1,6 +1,6 @@
 'use client';
 import {useCallback,useEffect,useRef,useState} from 'react';
-import type {Map,Marker} from 'maplibre-gl';
+import type {Map} from 'maplibre-gl';
 import Globe from './Globe';
 import Starfield from './Starfield';
 import {useLanguage} from '../LanguageProvider';
@@ -31,7 +31,7 @@ export default function Portal(){
  const [selectedId,setSelectedId]=useState(entries[0]?.id??''),[result,setResult]=useState<Result|null>(null);
  const opener=useRef<HTMLElement|null>(null),panelRef=useRef<HTMLElement>(null),pointRef=useRef(point),panelStateRef=useRef(panel),requestRef=useRef<{id:number,controller?:AbortController}>({id:0});
  pointRef.current=point;panelStateRef.current=panel;
- useEffect(()=>{if(panelStateRef.current==='search'){requestRef.current.controller?.abort();requestRef.current.id++;setSearching(false);}document.querySelector('.selected-point')?.setAttribute('aria-label',t('editLocation'));},[language]);
+ useEffect(()=>{if(panelStateRef.current==='search'){requestRef.current.controller?.abort();requestRef.current.id++;setSearching(false);}},[language]);
  const selected=entries.find(e=>e.id===selectedId);
  const activeResult=panel==='result'&&result&&selected&&result.signature===resultSignature(selected)?result.entry:null;
  const hasPanel=panel!==null;
@@ -60,8 +60,14 @@ export default function Portal(){
   document.addEventListener('pointerdown',down,true);document.addEventListener('pointermove',move,true);document.addEventListener('click',outside,true);
   return()=>{document.removeEventListener('pointerdown',down,true);document.removeEventListener('pointermove',move,true);document.removeEventListener('click',outside,true);};
  },[panel,close]);
- useEffect(()=>{if(!map)return;let dragged=false;const down=()=>{dragged=false;},drag=()=>{dragged=true;},click=(e:any)=>{if(!dragged){setPoint({lng:((e.lngLat.lng+180)%360+360)%360-180,lat:e.lngLat.lat});const label=map.queryRenderedFeatures(e.point,{layers:['countries']})[0];setSelectedCountry(typeof label?.properties?.id==='string'?label.properties.id:null);}};map.on('mousedown',down);map.on('touchstart',down);map.on('dragstart',drag);map.on('click',click);return()=>{map.off('mousedown',down);map.off('touchstart',down);map.off('dragstart',drag);map.off('click',click);};},[map]);
- useEffect(()=>{if(!map||!point)return;let marker:Marker|undefined,cancelled=false;(async()=>{const ml=await import('maplibre-gl');if(cancelled)return;const el=document.createElement('button');el.className='selected-point';el.type='button';el.setAttribute('aria-label',t('editLocation'));el.innerHTML='<span aria-hidden="true">+</span>';el.onclick=e=>{e.stopPropagation();open('location',el);};marker=new ml.Marker({element:el,draggable:true}).setLngLat(point).addTo(map);marker.on('dragend',()=>{const p=marker!.getLngLat();setPoint({lng:((p.lng+180)%360+360)%360-180,lat:p.lat});setSelectedCountry(null);});})();return()=>{cancelled=true;marker?.remove();};},[map,point,open]);
+ // Geographic references belong to location/search, never to an explosion.
+ // Explore clicks and drags do not select a location or create a marker.
+ useEffect(()=>{if(!map)return;let dragged=false;const down=()=>{dragged=false;},drag=()=>{dragged=true;},click=(e:any)=>{
+  if(dragged||panelStateRef.current!=='location')return;
+  const label=map.queryRenderedFeatures(e.point,{layers:['countries']})[0];
+  if(typeof label?.properties?.id!=='string'||label.geometry.type!=='Point')return;
+  const [x,y]=label.geometry.coordinates;setPoint({lng:x,lat:y});setSelectedCountry(label.properties.id);setLng(String(x.toFixed(6)));setLat(String(y.toFixed(6)));
+ };map.on('mousedown',down);map.on('touchstart',down);map.on('dragstart',drag);map.on('click',click);return()=>{map.off('mousedown',down);map.off('touchstart',down);map.off('dragstart',drag);map.off('click',click);};},[map]);
  useEffect(()=>{if(!map)return;const frame=()=>{const small=window.matchMedia('(max-width:600px)').matches;const padding=hasPanel?(small?{top:0,bottom:Math.min(window.innerHeight*.48,380)+38,left:0,right:0}:{top:0,bottom:0,left:0,right:380}):{top:0,bottom:0,left:0,right:0};const p=pointRef.current;map.easeTo({center:hasPanel&&p&&Math.abs(p.lat)<=85.05112878?p:map.getCenter(),padding,duration:250,essential:true});};frame();window.addEventListener('resize',frame);return()=>window.removeEventListener('resize',frame);},[map,hasPanel]);
  useEffect(()=>{if(!map||!activeResult)return;return mountContextLayer(map,{...activeResult,...(activeResult.location?{location:{...activeResult.location,label:t('beirutLocation')}}:{})});},[map,activeResult,language]);
  useEffect(()=>()=>requestRef.current.controller?.abort(),[]);

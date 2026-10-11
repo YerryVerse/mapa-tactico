@@ -1,0 +1,362 @@
+[
+  {
+    "id": "country-DE",
+    "lang": "es",
+    "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+    "query": "ألمانيا",
+    "result": "Alemania",
+    "state": "search",
+    "center": [
+      9.678348000000028,
+      50.961733
+    ],
+    "zoom": 3,
+    "label": {
+      "engineId": "country-DE",
+      "id": "country-DE",
+      "name": "Alemania"
+    }
+  },
+  {
+    "id": "country-DE",
+    "lang": "en",
+    "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+    "query": "ألمانيا",
+    "result": "Germany",
+    "state": "search",
+    "center": [
+      9.678348000000028,
+      50.961733
+    ],
+    "zoom": 3,
+    "label": {
+      "engineId": "country-DE",
+      "id": "country-DE",
+      "name": "Germany"
+    }
+  },
+  {
+    "id": "country-DE",
+    "lang": "zh-Hans",
+    "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+    "query": "ألمانيا",
+    "result": "德国",
+    "state": "search",
+    "center": [
+      9.678348000000028,
+      50.961733
+    ],
+    "zoom": 3,
+    "label": {
+      "engineId": "country-DE",
+      "id": "country-DE",
+      "name": "德国"
+    }
+  },
+  {
+    "id": "country-DE",
+    "lang": "hi",
+    "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+    "query": "ألمانيا",
+    "result": "जर्मनी",
+    "state": "search",
+    "center": [
+      9.678348000000028,
+      50.961733
+    ],
+    "zoom": 3,
+    "label": {
+      "engineId": "country-DE",
+      "id": "country-DE",
+      "name": "जर्मनी"
+    }
+  },
+  {
+    "id": "country-DE",
+    "lang": "ar",
+    "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+    "query": "ألمانيا",
+    "result": "ألمانيا",
+    "state": "search",
+    "center": [
+      9.678348000000028,
+      50.961733
+    ],
+    "zoom": 3,
+    "label": {
+      "engineId": "country-DE",
+      "id": "country-DE",
+      "name": "ألمانيا"
+    }
+  },
+  {
+    "id": "country-DE",
+    "lang": "fr",
+    "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+    "query": "ألمانيا",
+    "result": "Allemagne",
+    "state": "search",
+    "center": [
+      9.678348000000028,
+      50.961733
+    ],
+    "zoom": 3,
+    "label": {
+      "engineId": "country-DE",
+      "id": "country-DE",
+      "name": "Allemagne"
+    }
+  },
+  {
+    "id": "country-DE",
+    "lang": "bn",
+    "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+    "query": "ألمانيا",
+    "result": "জার্মানি",
+    "state": "search",
+    "center": [
+      9.678348000000028,
+      50.961733
+    ],
+    "zoom": 3,
+    "label": {
+      "engineId": "country-DE",
+      "id": "country-DE",
+      "name": "জার্মানি"
+    }
+  },
+  {
+    "id": "country-DE",
+    "lang": "pt",
+    "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+    "query": "ألمانيا",
+    "result": "Alemanha",
+    "state": "search",
+    "center": [
+      9.678348000000028,
+      50.961733
+    ],
+    "zoom": 3,
+    "label": {
+      "engineId": "country-DE",
+      "id": "country-DE",
+      "name": "Alemanha"
+    }
+  },
+  {
+    "id": "country-DE",
+    "lang": "ru",
+    "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+    "query": "ألمانيا",
+    "result": "Германия",
+    "state": "search",
+    "center": [
+      9.678348000000028,
+      50.961733
+    ],
+    "zoom": 3,
+    "label": {
+      "engineId": "country-DE",
+      "id": "country-DE",
+      "name": "Германия"
+    }
+  },
+  {
+    "id": "country-DE",
+    "lang": "id",
+    "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+    "query": "ألمانيا",
+    "result": "Jerman",
+    "state": "search",
+    "center": [
+      9.678348000000028,
+      50.961733
+    ],
+    "zoom": 3,
+    "label": {
+      "engineId": "country-DE",
+      "id": "country-DE",
+      "name": "Jerman"
+    }
+  },
+  {
+    "id": "country-DE",
+    "lang": "ur",
+    "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+    "query": "ألمانيا",
+    "result": "جرمنی",
+    "state": "search",
+    "center": [
+      9.678348000000028,
+      50.961733
+    ],
+    "zoom": 3,
+    "label": {
+      "engineId": "country-DE",
+      "id": "country-DE",
+      "name": "جرمنی"
+    }
+  },
+  {
+    "id": "country-DE",
+    "lang": "de",
+    "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+    "query": "ألمانيا",
+    "result": "Deutschland",
+    "state": "search",
+    "center": [
+      9.678348000000028,
+      50.961733
+    ],
+    "zoom": 3,
+    "label": {
+      "engineId": "country-DE",
+      "id": "country-DE",
+      "name": "Deutschland"
+    }
+  },
+  {
+    "id": "country-DE",
+    "lang": "ja",
+    "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+    "query": "ألمانيا",
+    "result": "ドイツ",
+    "state": "search",
+    "center": [
+      9.678348000000028,
+      50.961733
+    ],
+    "zoom": 3,
+    "label": {
+      "engineId": "country-DE",
+      "id": "country-DE",
+      "name": "ドイツ"
+    }
+  },
+  {
+    "id": "country-DE",
+    "lang": "mr",
+    "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+    "query": "ألمانيا",
+    "result": "जर्मनी",
+    "state": "search",
+    "center": [
+      9.678348000000028,
+      50.961733
+    ],
+    "zoom": 3,
+    "label": {
+      "engineId": "country-DE",
+      "id": "country-DE",
+      "name": "जर्मनी"
+    }
+  },
+  {
+    "id": "country-DE",
+    "lang": "vi",
+    "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+    "query": "ألمانيا",
+    "result": "Đức",
+    "state": "search",
+    "center": [
+      9.678348000000028,
+      50.961733
+    ],
+    "zoom": 3,
+    "label": {
+      "engineId": "country-DE",
+      "id": "country-DE",
+      "name": "Đức"
+    }
+  },
+  {
+    "id": "country-DE",
+    "lang": "te",
+    "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+    "query": "ألمانيا",
+    "result": "జర్మనీ",
+    "state": "search",
+    "center": [
+      9.678348000000028,
+      50.961733
+    ],
+    "zoom": 3,
+    "label": {
+      "engineId": "country-DE",
+      "id": "country-DE",
+      "name": "జర్మనీ"
+    }
+  },
+  {
+    "id": "country-DE",
+    "lang": "sw",
+    "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+    "query": "ألمانيا",
+    "result": "Ujerumani",
+    "state": "search",
+    "center": [
+      9.678348000000028,
+      50.961733
+    ],
+    "zoom": 3,
+    "label": {
+      "engineId": "country-DE",
+      "id": "country-DE",
+      "name": "Ujerumani"
+    }
+  },
+  {
+    "id": "country-DE",
+    "lang": "ha-Latn",
+    "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+    "query": "ألمانيا",
+    "result": "Jamus",
+    "state": "search",
+    "center": [
+      9.678348000000028,
+      50.961733
+    ],
+    "zoom": 3,
+    "label": {
+      "engineId": "country-DE",
+      "id": "country-DE",
+      "name": "Jamus"
+    }
+  },
+  {
+    "id": "country-DE",
+    "lang": "tr",
+    "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+    "query": "ألمانيا",
+    "result": "Almanya",
+    "state": "search",
+    "center": [
+      9.678348000000028,
+      50.961733
+    ],
+    "zoom": 3,
+    "label": {
+      "engineId": "country-DE",
+      "id": "country-DE",
+      "name": "Almanya"
+    }
+  },
+  {
+    "id": "country-DE",
+    "lang": "pnb-Arab",
+    "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+    "query": "ألمانيا",
+    "result": "جرمنی",
+    "state": "search",
+    "center": [
+      9.678348000000028,
+      50.961733
+    ],
+    "zoom": 3,
+    "label": {
+      "engineId": "country-DE",
+      "id": "country-DE",
+      "name": "جرمنی"
+    }
+  }
+]

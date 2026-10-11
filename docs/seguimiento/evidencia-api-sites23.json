@@ -1,0 +1,162 @@
+[
+  {
+    "lang": "es",
+    "status": 200,
+    "id": "country-DE",
+    "name": "Alemania",
+    "lng": 9.678348,
+    "lat": 50.961733
+  },
+  {
+    "lang": "en",
+    "status": 200,
+    "id": "country-DE",
+    "name": "Germany",
+    "lng": 9.678348,
+    "lat": 50.961733
+  },
+  {
+    "lang": "zh-Hans",
+    "status": 200,
+    "id": "country-DE",
+    "name": "德国",
+    "lng": 9.678348,
+    "lat": 50.961733
+  },
+  {
+    "lang": "hi",
+    "status": 200,
+    "id": "country-DE",
+    "name": "जर्मनी",
+    "lng": 9.678348,
+    "lat": 50.961733
+  },
+  {
+    "lang": "ar",
+    "status": 200,
+    "id": "country-DE",
+    "name": "ألمانيا",
+    "lng": 9.678348,
+    "lat": 50.961733
+  },
+  {
+    "lang": "fr",
+    "status": 200,
+    "id": "country-DE",
+    "name": "Allemagne",
+    "lng": 9.678348,
+    "lat": 50.961733
+  },
+  {
+    "lang": "bn",
+    "status": 200,
+    "id": "country-DE",
+    "name": "জার্মানি",
+    "lng": 9.678348,
+    "lat": 50.961733
+  },
+  {
+    "lang": "pt",
+    "status": 200,
+    "id": "country-DE",
+    "name": "Alemanha",
+    "lng": 9.678348,
+    "lat": 50.961733
+  },
+  {
+    "lang": "ru",
+    "status": 200,
+    "id": "country-DE",
+    "name": "Германия",
+    "lng": 9.678348,
+    "lat": 50.961733
+  },
+  {
+    "lang": "id",
+    "status": 200,
+    "id": "country-DE",
+    "name": "Jerman",
+    "lng": 9.678348,
+    "lat": 50.961733
+  },
+  {
+    "lang": "ur",
+    "status": 200,
+    "id": "country-DE",
+    "name": "جرمنی",
+    "lng": 9.678348,
+    "lat": 50.961733
+  },
+  {
+    "lang": "de",
+    "status": 200,
+    "id": "country-DE",
+    "name": "Deutschland",
+    "lng": 9.678348,
+    "lat": 50.961733
+  },
+  {
+    "lang": "ja",
+    "status": 200,
+    "id": "country-DE",
+    "name": "ドイツ",
+    "lng": 9.678348,
+    "lat": 50.961733
+  },
+  {
+    "lang": "mr",
+    "status": 200,
+    "id": "country-DE",
+    "name": "जर्मनी",
+    "lng": 9.678348,
+    "lat": 50.961733
+  },
+  {
+    "lang": "vi",
+    "status": 200,
+    "id": "country-DE",
+    "name": "Đức",
+    "lng": 9.678348,
+    "lat": 50.961733
+  },
+  {
+    "lang": "te",
+    "status": 200,
+    "id": "country-DE",
+    "name": "జర్మనీ",
+    "lng": 9.678348,
+    "lat": 50.961733
+  },
+  {
+    "lang": "sw",
+    "status": 200,
+    "id": "country-DE",
+    "name": "Ujerumani",
+    "lng": 9.678348,
+    "lat": 50.961733
+  },
+  {
+    "lang": "ha-Latn",
+    "status": 200,
+    "id": "country-DE",
+    "name": "Jamus",
+    "lng": 9.678348,
+    "lat": 50.961733
+  },
+  {
+    "lang": "tr",
+    "status": 200,
+    "id": "country-DE",
+    "name": "Almanya",
+    "lng": 9.678348,
+    "lat": 50.961733
+  },
+  {
+    "lang": "pnb-Arab",
+    "status": 200,
+    "id": "country-DE",
+    "name": "جرمنی",
+    "lng": 9.678348,
+    "lat": 50.961733
+  }
+]

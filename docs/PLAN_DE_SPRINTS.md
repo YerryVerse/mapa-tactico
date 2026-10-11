@@ -2,7 +2,7 @@
 
 Fecha: 10 de octubre de 2026. El usuario eligió explícitamente «Mapa Táctico» el 11 de octubre de 2026, sustituyendo el nombre provisional. Esta elección se aplica a la entrega actual sin aprobar ningún sprint ni iniciar el sprint 8. Este plan convierte los requisitos acordados en diez entregas funcionales para las IA que desarrollarán el portal. La prioridad es que el usuario pueda explorar el mundo y acceder a información útil sin que paneles, mensajes o decoración dificulten el mapa.
 
-Revisión técnica: versión 19 del plan, del 11 de octubre de 2026. Por decisión explícita del usuario, la matriz del sprint 1 comprende Chrome y el navegador integrado disponible, registrando sus versiones y tamaños de ventana; no se atribuyen pruebas a otros motores. Portal público en Sites, sin cuentas, registro, inicio de sesión, contraseñas ni claves aportadas por visitantes. Todas sus consultas funcionan anónimamente. Conserva las veinte soluciones iniciales y los doce hallazgos de la auditoría final, junto con la presentación del seguimiento acordada. El fondo exterior de la aplicación es negro #000000 con pequeñas estrellas discretas; el globo conserva sus azules y componentes blancos. La búsqueda geográfica se limita a países y ciudades; excluye calles, direcciones y puntos de interés tanto en el proveedor como en el servidor. Los diez HTML reflejan operaciones, criterios y reglas vigentes; documentar una solución no acredita su implementación. El detalle de los hallazgos está en [Revisión técnica de los sprints](REVISION_TECNICA_SPRINTS.md); la regla persistente de ejecución está en [Seguimiento y aprobación de los sprints](PROTOCOLO_DE_SPRINTS.md) y en AGENTS.md.
+Revisión técnica: versión 20 del plan, del 11 de octubre de 2026. Por decisión explícita del usuario, las pruebas durante el desarrollo se realizan en el navegador integrado; Chrome se reserva para la verificación final del desarrollo. Registrar versiones y tamaños de ventana sin atribuir pruebas a otros motores. Explorar, buscar o consultar una ubicación no coloca marcadores de detonación. Los marcadores de casos dependen de una selección explícita de qué eventos consultar y cuántos; la referencia geográfica y el centro de cámara son independientes de esa colección. Portal público en Sites, sin cuentas, registro, inicio de sesión, contraseñas ni claves aportadas por visitantes. Todas sus consultas funcionan anónimamente. Conserva las veinte soluciones iniciales y los doce hallazgos de la auditoría final, junto con la presentación del seguimiento acordada. El fondo exterior de la aplicación es negro #000000 con pequeñas estrellas discretas; el globo conserva sus azules y componentes blancos. La búsqueda geográfica se limita a países y ciudades; excluye calles, direcciones y puntos de interés tanto en el proveedor como en el servidor. Los diez HTML reflejan operaciones, criterios y reglas vigentes; documentar una solución no acredita su implementación. El detalle de los hallazgos está en [Revisión técnica de los sprints](REVISION_TECNICA_SPRINTS.md); la regla persistente de ejecución está en [Seguimiento y aprobación de los sprints](PROTOCOLO_DE_SPRINTS.md) y en AGENTS.md.
 
 El usuario autorizó iniciar el sprint 1 el 10 de octubre de 2026. Su ejecución y las publicaciones parciales se registran en el HTML y en estado.json; una publicación parcial no constituye una entrega aceptada ni el cierre del sprint. Se conserva la aprobación humana al final de cada sprint.
 
@@ -43,7 +43,7 @@ El propósito del portal y sus limitaciones extensas estarán en el disclaimer. 
 
 ## Documento de control del cumplimiento
 
-Alcance web vigente: portal público, sin cuentas, registro, inicio de sesión, contraseñas ni claves del visitante. Verificar páginas y consultas como visitante anónimo. Comprobar adaptación a ventanas estrechas y amplias, ratón, teclado y texto ampliado. No exigir plataformas adicionales ni aplicaciones nativas en ningún sprint.
+Alcance web vigente: portal público, sin cuentas, registro, inicio de sesión, contraseñas ni claves del visitante. Verificar páginas y consultas como visitante anónimo. Comprobar adaptación a ventanas estrechas y amplias, ratón, teclado y texto ampliado. Durante el desarrollo probar en el navegador integrado; Chrome se reserva para el final. Explorar y buscar ubicaciones no genera marcadores de detonación; los eventos y su cantidad se eligen explícitamente en sus flujos. No exigir plataformas adicionales ni aplicaciones nativas en ningún sprint.
 
 El plan define lo que se debe desarrollar; el HTML de cada sprint permite vigilar que se cumple. Ambos deben reflejar las instrucciones del usuario. Actualizar el contenido del plan y regenerar los HTML cuando cambien requisitos o reglas; actualizar la tabla durante la ejecución cuando cambie el estado de un punto. La actualización automática de la pantalla facilita la consulta, pero no sustituye el registro de requisitos, evidencias ni aprobación. Estas reglas se incluyen en todos los HTML y permanecen vigentes hasta finalizar el proyecto.
 
@@ -192,15 +192,15 @@ El usuario encuentra el globo como superficie principal, puede llegar al nivel d
 3. Hacer que el mapa ocupe todo el espacio visible, con adaptación al tamaño de la ventana del navegador. Al acercar, el globo puede extenderse más allá de los bordes de la pantalla.
 4. Disponer controles flotantes para acercar, alejar, recuperar la vista global, buscar un lugar y abrir escenarios. Agrupar idioma, información y disclaimer en un menú accesible; no reconstruir una barra superior.
 5. Incorporar búsqueda exclusivamente de países y ciudades. Las sugerencias indican su tipo y ubicación administrativa para distinguir nombres repetidos. No buscar ni ofrecer calles, direcciones, edificios, barrios, negocios u otros puntos de interés. El campo se identifica como «País o ciudad» y no ofrece búsqueda detallada alternativa. Mantener la búsqueda cerrada hasta que se solicite. Seleccionar un resultado mueve el mapa y el punto sin cerrar la tarjeta ni borrar consulta, resultados o posición de lectura; permitir seleccionar sucesivamente otros resultados. Cerrar la tarjeta con la X o un clic fuera, conservando el último punto elegido. Arrastrar el mapa para explorar no equivale a clic fuera ni cambia ese punto. Conservar Escape y navegación entre herramientas.
-6. Permitir selección de ubicación con clic y movimiento posterior del punto. Diferenciar arrastrar el mapa de seleccionar: soltar un arrastre no debe crear un punto.
-7. Conservar controles por teclado y proporcionar una alternativa accesible al gesto de colocar un punto. No capturar teclas de navegación cuando el foco está en un campo de texto.
+6. Explorar el mapa con clic, arrastre o teclado sin colocar ni mover un marcador ni elegir una detonación. Retirar el círculo con + del punto libre, también después de buscar o editar coordenadas. Mantener la referencia geográfica interna para consultas. En Elegir ubicación se puede consultar una etiqueta de país explícitamente, sin crear un marcador de evento; fuera de ese panel, pulsar el mapa no cambia la referencia elegida.
+7. Conservar controles por teclado y selección explícita de referencia mediante búsqueda, coordenadas o centro de cámara. No capturar teclas de navegación cuando el foco está en un campo de texto. La referencia geográfica no determina cuántos eventos existen.
 8. Retirar rotación automática inicial, coordenadas permanentes y leyendas decorativas. Las coordenadas aparecen solamente al consultar o editar una ubicación; la escala aparece cuando ayuda a entender la distancia.
 9. Mantener la atribución cartográfica exigida por el proveedor en una posición discreta y legible. No ocultarla para cumplir el minimalismo.
-10. Mantener una sola ubicación seleccionada y diferenciar centro de cámara de punto elegido. No crear el punto inicial del prototipo ni iniciar un resultado automáticamente. Ajustar encuadre al abrir un panel sin cambiar la ubicación y sin permitir que quede oculta tras la tarjeta.
+10. Mantener una referencia geográfica de navegación, independiente del centro de cámara y de los eventos solicitados. No crear un marcador inicial ni iniciar resultados automáticamente. Ajustar encuadre al abrir un panel sin cambiar esa referencia. Una referencia geográfica no limita a un único evento ni genera marcadores; los flujos de casos gestionan su propia selección y cantidad cuando se desarrollan.
 11. Detectar WebGL2 no disponible o pérdida de contexto. Permitir reintento y conservar búsqueda y fichas accesibles; no sustituir el mapa por una pantalla vacía ni presentar una vista textual como un globo funcional.
 
 12. Completar el adaptador servidor del buscador con esquema validado, límites de longitud y resultados, tiempo máximo, cancelación y protección de cuota. Limitar la consulta del proveedor a países y ciudades y filtrar su respuesta mediante una lista permitida de tipos; rechazar calles, direcciones, edificios, barrios, POI y tipos desconocidos también al leer la caché. No deducir el tipo por el texto del nombre ni depender únicamente del cliente. Definir comportamiento ante 429 y fallos del proveedor, sin reintentos ilimitados. Cachear únicamente respuestas permitidas por licencia, idioma y audiencia; las restricciones deben seguir funcionando en la versión revisable.
-13. Fijar la matriz autorizada por el usuario: Chrome y navegador integrado, registrando versiones y dimensiones de la ventana. Probar tamaño de texto al 200 %, ancho de 320 píxeles CSS, paneles desplazables, teclado y controles accesibles sin superposición. Las comprobaciones registran navegador, versión, tamaño de ventana y resultados; no requieren plataformas adicionales. Ambos entornos pueden compartir motor; no afirmar compatibilidad con motores no verificados.
+13. Durante el desarrollo usar el navegador integrado; reservar Chrome para la comprobación final del desarrollo, conforme a la instrucción del usuario. Registrar versiones y dimensiones de ventana. Probar texto al 200 %, ancho de 320 píxeles CSS, paneles desplazables, teclado y controles accesibles sin superposición. No atribuir verificaciones de otros motores ni exigir plataformas adicionales.
 
 #### Criterios de aceptación del bloque 1B
 
@@ -234,7 +234,7 @@ El usuario encuentra el globo como superficie principal, puede llegar al nivel d
 - Se retiraron fictionalOutcome, población ficticia, multiplicadores de preparación, cifras arbitrarias y sus animaciones; las fichas utilizables siguen accesibles con fuentes.
 - El registro de capacidades y el renderizador de fichas funcionan con el contenido disponible; cambio de consulta, respuesta obsoleta y cierre limpian los datos y capas dependientes.
 - Al abrir en 390 × 844 y 1440 × 900, el mapa ocupa el área visible y ninguna tarjeta de resultados está abierta.
-- Abrir, ejecutar y cerrar conserva la ubicación y el acercamiento; arrastrar no crea puntos.
+- Abrir, consultar y cerrar conserva la referencia geográfica y el acercamiento. Clic y arrastre de exploración no crean marcadores ni cambian la referencia; búsqueda y coordenadas tampoco colocan el círculo con +. La capa de un caso solo aparece tras consultarlo y se retira al cerrar.
 
 ### Entregables y aceptación
 
@@ -450,7 +450,7 @@ El usuario puede escoger Accidente y explorar gas doméstico, gas industrial y B
 ### Bloque 4B Ejecución y resultados
 
 1. Verificar que siguen retiradas la función fictionalOutcome y la población ficticia desde el sprint 1. No reintroducir el ajuste de «preparación» como multiplicador arbitrario de muertes.
-2. Definir para cada entrada qué hace el botón principal. La etiqueta puede ser «Explorar caso» o «Consultar área» según la operación real. No llamar «Detonar» a una consulta que no calcula una detonación.
+2. Definir para cada entrada qué hace el botón principal. La etiqueta puede ser «Explorar caso» o «Consultar área» según la operación real. Permitir elegir explícitamente los casos y cuántos mostrar, gestionando una colección de eventos con identidad propia; solo esa selección solicitada genera sus marcadores. No utilizar la referencia única del buscador como una lista de detonaciones. No llamar «Detonar» a una consulta que no calcula una detonación.
 3. Si se reproduce una secuencia visual del accidente, debe corresponder al contenido del caso y no dibujar anillos arbitrarios como distancias físicas verificadas.
 4. El resultado reúne solamente los datos relevantes: población consultada, contexto del lugar y, en casos históricos, cifras documentadas. Las víctimas históricas mantienen el vínculo con el evento original.
 5. Un área observada del accidente puede utilizarse para consultar población dentro de ella únicamente si existe geometría publicada y procedencia. No inventar una huella para completar una tarjeta.
@@ -497,7 +497,7 @@ El usuario puede explorar erupciones explosivas y otros fenómenos naturales doc
 
 ### Bloque 5B Capas y consulta
 
-1. Mostrar capas del fenómeno únicamente cuando el usuario abra ese caso. Los marcadores específicos de un caso solicitado no son puntos de interés comerciales de la cartografía base.
+1. Mostrar capas del fenómeno únicamente cuando el usuario seleccione explícitamente los casos y cuántos mostrar. Gestionar sus marcadores como una colección de eventos independientes de la referencia de navegación; permitir varios casos con su identidad y geometría propias. Los marcadores específicos de un caso solicitado no son puntos de interés comerciales de la cartografía base.
 2. Utilizar límites o áreas publicados con fecha y procedencia. Si faltan, entregar la consulta del caso sin inventarlos.
 3. Si el área documentada permite consulta demográfica, calcular población dentro de ella usando el servicio del sprint 3. Indicar por separado la fecha del área y la del conjunto poblacional.
 4. Mostrar víctimas históricas solamente como registros del evento. No aplicar tasas de víctimas a la población seleccionada.
@@ -784,7 +784,7 @@ Verificar que las entregas aceptadas funcionan juntas y publicar la versión cor
 
 ### Bloque 10A Recorridos completos
 
-1. Comprobar exploración global, búsqueda de una ciudad, acercamiento a calles, selección de punto, consulta territorial y cierre de paneles.
+1. Comprobar exploración global, búsqueda de una ciudad, acercamiento a calles, elección explícita de referencia sin marcador de detonación, consulta territorial y cierre de paneles. Verificar los recorridos finales en navegador integrado y Chrome, registrando versiones, dimensiones y resultados reales.
 2. Comprobar cada categoría, apertura del resultado pertinente, cambio de caso y retorno al mapa. Verificar que ninguna cifra pertenece a una selección anterior.
 3. Cambiar idioma antes y después de una consulta, durante una carga y con un panel abierto. Ningún cambio pierde ubicación, área o definición de los datos.
 4. Verificar recuperación frente a servicio de mapa, búsqueda o población no disponible, solicitudes fuera de orden, datos parciales y almacenamiento bloqueado.
@@ -843,9 +843,9 @@ Instrucción para la IA: verificar y entregar el conjunto terminado. No añadir 
 
 ### Estado y datos
 
-- Ubicación: coordenadas con orden explícito, identificador estable y descripción independiente del idioma. Las coordenadas no cambian al traducir.
+- Ubicación: referencia geográfica con coordenadas de orden explícito, identificador estable y descripción independiente del idioma. Las coordenadas no cambian al traducir. La referencia de navegación no crea un marcador de detonación ni equivale a un evento.
 - Área: geometría, sistema de referencia, origen manual o publicado y fecha si corresponde. No confundir área demográfica con zona de daño.
-- Escenario: identificador, categoría, nombres traducidos, tipo de contenido, ubicación histórica cuando corresponda, capacidades, fuentes y versión.
+- Escenario: identificador, categoría, nombres traducidos, tipo de contenido, ubicación histórica cuando corresponda, capacidades, fuentes y versión. Los flujos de casos gestionan una colección de eventos solicitados y su cantidad, con identificadores propios; la referencia geográfica del buscador no limita esa colección a uno. Solo una elección explícita de casos y cantidad permite mostrar sus marcadores. Seleccionar varios registros conserva lugares y hechos documentados; no suma víctimas ni los traslada a otra ubicación. La selección múltiple y su interfaz se desarrollan en los bloques funcionales de los catálogos, no se atribuyen a la retirada del marcador libre de Sprint1.
 - Población: cantidad, unidad, año, fuente, resolución, método, geometría consultada y estado de cobertura.
 - Registro histórico: evento, fecha, indicador, valor o intervalo, definición, fuente y versión. No mezclarlo con una predicción de otra ubicación.
 - Material y proceso: identificador de sustancia, estado y composición de referencia, proceso descrito, propiedad energética, unidad, base del denominador, condiciones, fuente y versión. Un material no constituye por sí mismo un modelo de explosión.
