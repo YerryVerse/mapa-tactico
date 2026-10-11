@@ -5,12 +5,12 @@ import {placeSchema,validatedPlaces,type SearchPlace} from './search-contract';
 export const normalizePlace=(s:string)=>s.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase().replace(/[^\p{L}\p{N}]+/gu,' ').trim();
 const rowSchema=z.tuple([z.string().regex(/^\d+$/),z.string().min(1).max(200),z.string().regex(/^[A-Z]{2}$/),z.string().min(1).max(160),z.number().min(-180).max(180),z.number().min(-90).max(90),z.number().finite().nonnegative(),z.string(),z.array(z.string().max(200)).max(1000)]);
 const allowed=new Set(manifest.allowedFeatures);
-export const SEARCH_EDITION=manifest.version;
+export const SEARCH_EDITION=manifest.version+'-'+manifest.sourceHashes['country-labels.geojson'].slice(0,8);
 export const SHARD_BYTES=2_500_000;
 export async function shardPath(q:string){
  const prefix=[...normalizePlace(q)].slice(0,2).join('');
  const hash=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(prefix));
- return '/gazetteer/'+SEARCH_EDITION+'/'+new Uint8Array(hash)[0].toString(16).padStart(2,'0')+'.json';
+ return '/gazetteer/'+manifest.version+'/'+new Uint8Array(hash)[0].toString(16).padStart(2,'0')+'.json';
 }
 function countryName(code:string,lang:string){try{return new Intl.DisplayNames([lang],{type:'region'}).of(code)??code;}catch{return code;}}
 export function searchCountries(q:string,lang:string):SearchPlace[]{

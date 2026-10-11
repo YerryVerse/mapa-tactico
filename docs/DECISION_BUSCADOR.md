@@ -2,7 +2,7 @@
 
 Proveedor seleccionado: GeoNames cities1000 (descarga11oct2026), distribuido como activos de Sites, más puntos de etiqueta Natural Earth para países. No se usa Nominatim público, servicios de direcciones, cuentas ni claves. No hay peticiones externas por consulta. Metadatos/SHA256: content/search/manifest.json. Natural Earth fijado al commit ca96624a56bd078437bca8184e78163e5039ad19. Generador reproducible scripts/preparar-buscador.mjs; entrada fuera del repositorio.
 
-Cobertura:161060 localidades actuales (centros poblados/cabeceras) con población superior a1000 o cabeceras administrativas incluidas en cities1000;234 países/territorios con punto disponible. No es exhaustivo para localidades pequeñas ni certificación de su categoría municipal legal. Alias de la localidad, nunca otros objetos geográficos. La población solo ordena relevancia; no se devuelve ni se usa para calcular población o víctimas.
+Cobertura:161060 localidades actuales (centros poblados/cabeceras) con población superior a1000 o cabeceras administrativas incluidas en cities1000;239 países/territorios con punto disponible. No es exhaustivo para localidades pequeñas ni certificación de su categoría municipal legal. Alias de la localidad, nunca otros objetos geográficos. La población solo ordena relevancia; no se devuelve ni se usa para calcular población o víctimas.
 
 Lista positiva: clase P y códigos PPL,PPLA,PPLA2,PPLA3,PPLA4,PPLA5,PPLC,PPLCD,PPLG. Se excluyen PPLX (barrios/secciones), localidades abandonadas/históricas y calles, edificios, negocios, POI o tipos desconocidos. Países por ISO2. El servidor repite lista y esquema al leer fragmentos; caché solo de resultados transformados, validados nuevamente al leer. No se infiere tipo por nombre. Calles del mapa independientes.
 

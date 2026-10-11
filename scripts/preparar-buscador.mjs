@@ -5,11 +5,11 @@ const input=process.argv[2];
 if(!input)throw new Error('Indicar carpeta de descargas GeoNames y Natural Earth');
 const normalize=s=>s.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase().replace(/[^\p{L}\p{N}]+/gu,' ').trim();
 const digest=s=>createHash('sha256').update(s).digest('hex');
-const names=['cities1000.txt','admin1CodesASCII.txt','countryInfo.txt','countries.geojson'];
+const names=['cities1000.txt','admin1CodesASCII.txt','countryInfo.txt','country-labels.geojson'];
 const files=Object.fromEntries(await Promise.all(names.map(async n=>[n,await fs.readFile(path.join(input,n),'utf8')])));
 const countries=files['countryInfo.txt'].split(/\r?\n/).filter(s=>s&&!s.startsWith('#')).map(s=>s.split('\t'));
 const regions=new Map(files['admin1CodesASCII.txt'].split(/\r?\n/).map(s=>s.split('\t')).map(s=>[s[0],s[1]]));
-const labels=JSON.parse(files['countries.geojson']).features;
+const labels=JSON.parse(files['country-labels.geojson']).features;
 const allowed=new Set(['PPL','PPLA','PPLA2','PPLA3','PPLA4','PPLA5','PPLC','PPLCD','PPLG']);
 const shards=new Map();let cities=0,rejected=0;
 for(const line of files['cities1000.txt'].split(/\r?\n/)){
@@ -23,11 +23,12 @@ for(const line of files['cities1000.txt'].split(/\r?\n/)){
  }cities++;
 }
 const countryRows=countries.flatMap(c=>{
- const label=labels.find(f=>f.properties.sr_adm0_a3===c[1]&&f.properties.scalerank===0)??labels.find(f=>f.properties.sr_adm0_a3===c[1]);
- if(!label)return [];return [{id:'country-'+c[0],kind:'country',name:c[4],countryCode:c[0],countryName:c[4],lng:label.geometry.coordinates[0],lat:label.geometry.coordinates[1]}];
+ const label=labels.find(f=>f.properties.ISO_A2_EH===c[0])??labels.find(f=>f.properties.ADM0_A3===c[1]);
+ if(!label||!Number.isFinite(label.properties.LABEL_X)||!Number.isFinite(label.properties.LABEL_Y))return [];return [{id:'country-'+c[0],kind:'country',name:c[4],countryCode:c[0],countryName:c[4],lng:label.properties.LABEL_X,lat:label.properties.LABEL_Y}];
 });
 const version='geonames-20261011';const out='public/gazetteer/'+version;await fs.mkdir(out,{recursive:true});let total=0,max=0;
-for(const [id,rows]of shards){rows.sort((a,b)=>b[6]-a[6]);const body=JSON.stringify(rows);const size=Buffer.byteLength(body);if(size>8_000_000)throw new Error('Fragmento supera presupuesto8MB');max=Math.max(max,size);total+=size;await fs.writeFile(out+'/'+id+'.json',body);}
+async function writeChanged(file,body){if(await fs.readFile(file,'utf8').catch(()=>null)!==body)await fs.writeFile(file,body);}
+for(const [id,rows]of shards){rows.sort((a,b)=>b[6]-a[6]);const body=JSON.stringify(rows);const size=Buffer.byteLength(body);if(size>2_500_000||rows.length>30000)throw new Error('Fragmento supera presupuesto');max=Math.max(max,size);total+=size;await writeChanged(out+'/'+id+'.json',body);}
 await fs.mkdir('content/search',{recursive:true});await fs.writeFile('content/search/countries.json',JSON.stringify(countryRows));
 const manifest={version,cities,rejected,countries:countryRows.length,shards:shards.size,bytes:total,maxShardBytes:max,allowedFeatures:[...allowed],sourceHashes:Object.fromEntries(names.map(n=>[n,digest(files[n])])),naturalEarthCommit:'ca96624a56bd078437bca8184e78163e5039ad19',licenses:{GeoNames:'CC BY 4.0',NaturalEarth:'Public domain'},generatedAt:new Date().toISOString()};
 await fs.writeFile('content/search/manifest.json',JSON.stringify(manifest,null,2));console.log(manifest);
