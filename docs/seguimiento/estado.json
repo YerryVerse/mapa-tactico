@@ -18,19 +18,23 @@
   "contextHash": "b1a430158192aab4c8575a739af00b719e0dbc5c74e803966e206bde1fc40a92",
   "project": "Mapa Táctico",
   "portal": "https://atlas-escenarios-hud.yerrybatista.chatgpt.site/",
-  "updatedAt": "2026-10-11T12:16:50.767Z",
+  "updatedAt": "2026-10-11T13:12:39.650Z",
   "sprints": [
     {
       "number": 1,
       "title": "Globo y experiencia del mapa",
-      "updatedAt": "2026-10-11T12:16:41.677Z",
-      "phase": "en_curso",
+      "updatedAt": "2026-10-11T12:19:44.124Z",
+      "phase": "aprobado",
       "approval": {
-        "status": "pendiente",
-        "at": null,
-        "reference": null
+        "status": "aprobado",
+        "at": "2026-10-11T12:19:44.124Z",
+        "reference": "Mensaje explícito del usuario del11oct2026: bien, apruebo el Sprint1, comencemos con el Sprint2 de manera autónoma y ve actualizando su HTML mientras trabajas."
       },
-      "delivery": null,
+      "delivery": {
+        "url": "https://atlas-escenarios-hud.yerrybatista.chatgpt.site/",
+        "version": "Sites19 · SHA2b9e2982a847fd2ee046ccd3b5c31c695e5d1286 · Plan18 · Sin marca flotante",
+        "preparedAt": "2026-10-11T12:18:44.759Z"
+      },
       "reviewSteps": [
         {
           "action": "Abrir el portal en ventanas amplias y estrechas; comprobar la pestaña y Menú → Disclaimer.",
@@ -1582,6 +1586,108 @@
           "action": "guide",
           "pointId": null,
           "reference": null
+        },
+        {
+          "at": "2026-10-11T12:18:42.973Z",
+          "action": "set",
+          "pointId": "S01-1B-02",
+          "reference": "Sites19 publicado el11oct2026 08:17:43: SHA2b9e2982a847fd2ee046ccd3b5c31c695e5d1286. DOM: cero .brand y cero imágenes en portal; eliminado enlace y CSS asociado. Chrome1920x959 y320x568; integrado1247x764 y320x568: mapa ocupa viewport, sin desbordamiento, logo ni nombre; zoom, Menú, Disclaimer y Escape funcionan. Título y disclaimer Mapa Táctico. TypeScript, build y25pruebas aprobados. Captura T:/tmp/mapa-tactico-sin-marca.png."
+        },
+        {
+          "at": "2026-10-11T12:18:43.176Z",
+          "action": "set",
+          "pointId": "S01-1B-AC-01",
+          "reference": "Sites19 comprobado: sin marca, mapa a pantalla completa en Chrome e integrado, ventanas amplias y320x568. Zoom, menú y Escape probados;25tests, TypeScript y build correctos. Revisión por impacto: retiro del enlace de marca y sus estilos; motor cartográfico, datos, consultas, paneles y contratos sin cambios. Evidencia anterior vigente para funciones sin cambios; no se atribuye una repetición de esas mediciones: Sites18 verificada: Mapa Táctico en Sites, pestaña y marca; Chrome154320×568 sin overflow y ancho174px; integrado155 carga globo y controles. Compilación320CSScon200%texto no cruza marca/herramientas;25pruebas y build pasan. Identidad/aplicación conservan ID y público. Revisión por impacto: este cambio solo modifica nombre/metadata y CSS de la marca; contratos y comportamiento conservados. Evidencia previa vigente para las funciones sin cambios, sin atribuirles una prueba nueva: Sites16: marca flotante, sin cabecera. Chrome e integrado: controles de zoom, búsqueda, ubicación y global por ratón/teclado;320CSS sin solapamiento tarjeta/controles."
+        },
+        {
+          "at": "2026-10-11T12:18:43.297Z",
+          "action": "set",
+          "pointId": "S01-1B-AC-02",
+          "reference": "Sites19 comprobado: sin marca, mapa a pantalla completa en Chrome e integrado, ventanas amplias y320x568. Zoom, menú y Escape probados;25tests, TypeScript y build correctos. Revisión por impacto: retiro del enlace de marca y sus estilos; motor cartográfico, datos, consultas, paneles y contratos sin cambios. Evidencia anterior vigente para funciones sin cambios; no se atribuye una repetición de esas mediciones: Sites18 verificada: Mapa Táctico en Sites, pestaña y marca; Chrome154320×568 sin overflow y ancho174px; integrado155 carga globo y controles. Compilación320CSScon200%texto no cruza marca/herramientas;25pruebas y build pasan. Identidad/aplicación conservan ID y público. Revisión por impacto: este cambio solo modifica nombre/metadata y CSS de la marca; contratos y comportamiento conservados. Evidencia previa vigente para las funciones sin cambios, sin atribuirles una prueba nueva: Sites14/16 conserva motor/estilo. Repetición real de SantoDomingo(-69.8845,18.4737), zoom19,pitch0,5m=35.311237pxCSS; nombres ElConde/ArzobispoMeriño visibles, sin POI; global vuelve sin recarga."
+        },
+        {
+          "at": "2026-10-11T12:18:43.401Z",
+          "action": "set",
+          "pointId": "S01-1B-AC-03",
+          "reference": "Sites19 comprobado: sin marca, mapa a pantalla completa en Chrome e integrado, ventanas amplias y320x568. Zoom, menú y Escape probados;25tests, TypeScript y build correctos. Revisión por impacto: retiro del enlace de marca y sus estilos; motor cartográfico, datos, consultas, paneles y contratos sin cambios. Evidencia anterior vigente para funciones sin cambios; no se atribuye una repetición de esas mediciones: Sites18 verificada: Mapa Táctico en Sites, pestaña y marca; Chrome154320×568 sin overflow y ancho174px; integrado155 carga globo y controles. Compilación320CSScon200%texto no cruza marca/herramientas;25pruebas y build pasan. Identidad/aplicación conservan ID y público. Revisión por impacto: este cambio solo modifica nombre/metadata y CSS de la marca; contratos y comportamiento conservados. Evidencia previa vigente para las funciones sin cambios, sin atribuirles una prueba nueva: DOM/Screenshot reales: marca absoluta sin franja; globo y vista local ocupan todo el viewport. Ventanas320x568 y1440x900 comprobadas; zoom19 llena pantalla."
+        },
+        {
+          "at": "2026-10-11T12:18:43.496Z",
+          "action": "set",
+          "pointId": "S01-1B-AC-04",
+          "reference": "Sites19 comprobado: sin marca, mapa a pantalla completa en Chrome e integrado, ventanas amplias y320x568. Zoom, menú y Escape probados;25tests, TypeScript y build correctos. Revisión por impacto: retiro del enlace de marca y sus estilos; motor cartográfico, datos, consultas, paneles y contratos sin cambios. Evidencia anterior vigente para funciones sin cambios; no se atribuye una repetición de esas mediciones: Sites18 verificada: Mapa Táctico en Sites, pestaña y marca; Chrome154320×568 sin overflow y ancho174px; integrado155 carga globo y controles. Compilación320CSScon200%texto no cruza marca/herramientas;25pruebas y build pasan. Identidad/aplicación conservan ID y público. Revisión por impacto: este cambio solo modifica nombre/metadata y CSS de la marca; contratos y comportamiento conservados. Evidencia previa vigente para las funciones sin cambios, sin atribuirles una prueba nueva: Servicio público16: solo country/city. Queries CalleElConde,1600PennsylvaniaAvenue,TorreEiffel,Gazcue devolvieron0; tests de PPLX/ST/RD/BLDG/desconocidos y caché mixta descartan objetos. Estilo geográfico conserva nombres de calles y no tiene POI/satélite."
+        },
+        {
+          "at": "2026-10-11T12:18:43.592Z",
+          "action": "set",
+          "pointId": "S01-1B-AC-05",
+          "reference": "Sites19 comprobado: sin marca, mapa a pantalla completa en Chrome e integrado, ventanas amplias y320x568. Zoom, menú y Escape probados;25tests, TypeScript y build correctos. Revisión por impacto: retiro del enlace de marca y sus estilos; motor cartográfico, datos, consultas, paneles y contratos sin cambios. Evidencia anterior vigente para funciones sin cambios; no se atribuye una repetición de esas mediciones: Sites18 verificada: Mapa Táctico en Sites, pestaña y marca; Chrome154320×568 sin overflow y ancho174px; integrado155 carga globo y controles. Compilación320CSScon200%texto no cruza marca/herramientas;25pruebas y build pasan. Identidad/aplicación conservan ID y público. Revisión por impacto: este cambio solo modifica nombre/metadata y CSS de la marca; contratos y comportamiento conservados. Evidencia previa vigente para las funciones sin cambios, sin atribuirles una prueba nueva: Santiago muestra Chile/RepúblicaDominicana/Cuba y regiones; elegir dominicana centra(-70.69085,19.45036). zzzzzzzz muestra vacío útil. Fallo503 inyectado sobre dominio14 muestra error; reintento real recupera Madrid."
+        },
+        {
+          "at": "2026-10-11T12:18:43.689Z",
+          "action": "set",
+          "pointId": "S01-1B-AC-06",
+          "reference": "Sites19 comprobado: sin marca, mapa a pantalla completa en Chrome e integrado, ventanas amplias y320x568. Zoom, menú y Escape probados;25tests, TypeScript y build correctos. Revisión por impacto: retiro del enlace de marca y sus estilos; motor cartográfico, datos, consultas, paneles y contratos sin cambios. Evidencia anterior vigente para funciones sin cambios; no se atribuye una repetición de esas mediciones: Sites18 verificada: Mapa Táctico en Sites, pestaña y marca; Chrome154320×568 sin overflow y ancho174px; integrado155 carga globo y controles. Compilación320CSScon200%texto no cruza marca/herramientas;25pruebas y build pasan. Identidad/aplicación conservan ID y público. Revisión por impacto: este cambio solo modifica nombre/metadata y CSS de la marca; contratos y comportamiento conservados. Evidencia previa vigente para las funciones sin cambios, sin atribuirles una prueba nueva: Escape deja0paneles y foco BuscarLugar en integrado; Tab/campos/selección accesibles, coordenadas alternativa al clic. Error de catálogo conserva mapa y controles disponibles. Evidencia previa de1B07 preservada."
+        },
+        {
+          "at": "2026-10-11T12:18:43.803Z",
+          "action": "set",
+          "pointId": "S01-1B-AC-07",
+          "reference": "Sites19 comprobado: sin marca, mapa a pantalla completa en Chrome e integrado, ventanas amplias y320x568. Zoom, menú y Escape probados;25tests, TypeScript y build correctos. Revisión por impacto: retiro del enlace de marca y sus estilos; motor cartográfico, datos, consultas, paneles y contratos sin cambios. Evidencia anterior vigente para funciones sin cambios; no se atribuye una repetición de esas mediciones: Sites18 verificada: Mapa Táctico en Sites, pestaña y marca; Chrome154320×568 sin overflow y ancho174px; integrado155 carga globo y controles. Compilación320CSScon200%texto no cruza marca/herramientas;25pruebas y build pasan. Identidad/aplicación conservan ID y público. Revisión por impacto: este cambio solo modifica nombre/metadata y CSS de la marca; contratos y comportamiento conservados. Evidencia previa vigente para las funciones sin cambios, sin atribuirles una prueba nueva: Escala real repetida35.311px/5m en zoom19. Motor/Globe sin cambios frente a mediciones y ensayo de pérdida de contexto previos, conservados en historial1A10/1B11 y DECISION_CARTOGRAFICA.md; reintento/lectura alternativa siguen presentes. No se atribuye una nueva medición GPU a esta revisión."
+        },
+        {
+          "at": "2026-10-11T12:18:43.906Z",
+          "action": "set",
+          "pointId": "S01-1B-AC-08",
+          "reference": "Sites19 comprobado: sin marca, mapa a pantalla completa en Chrome e integrado, ventanas amplias y320x568. Zoom, menú y Escape probados;25tests, TypeScript y build correctos. Revisión por impacto: retiro del enlace de marca y sus estilos; motor cartográfico, datos, consultas, paneles y contratos sin cambios. Evidencia anterior vigente para funciones sin cambios; no se atribuye una repetición de esas mediciones: Sites18 verificada: Mapa Táctico en Sites, pestaña y marca; Chrome154320×568 sin overflow y ancho174px; integrado155 carga globo y controles. Compilación320CSScon200%texto no cruza marca/herramientas;25pruebas y build pasan. Identidad/aplicación conservan ID y público. Revisión por impacto: este cambio solo modifica nombre/metadata y CSS de la marca; contratos y comportamiento conservados. Evidencia previa vigente para las funciones sin cambios, sin atribuirles una prueba nueva: Sites14–16: país/ciudad ambigua/vacío/400 real; límite120 y429 real y recuperación UI. Retardo real2s Madrid ignorado ante Santiago, sin sobrescribir.20 tests pasan, incluyendo caché validada/tipos mixtos/HTML inválido/concurrencia. Catálogo, caché, cuotas y versiones documentados; servidor sin identidad."
+        },
+        {
+          "at": "2026-10-11T12:18:44.010Z",
+          "action": "set",
+          "pointId": "S01-1B-AC-09",
+          "reference": "Sites19 comprobado: sin marca, mapa a pantalla completa en Chrome e integrado, ventanas amplias y320x568. Zoom, menú y Escape probados;25tests, TypeScript y build correctos. Revisión por impacto: retiro del enlace de marca y sus estilos; motor cartográfico, datos, consultas, paneles y contratos sin cambios. Evidencia anterior vigente para funciones sin cambios; no se atribuye una repetición de esas mediciones: Sites18 verificada: Mapa Táctico en Sites, pestaña y marca; Chrome154320×568 sin overflow y ancho174px; integrado155 carga globo y controles. Compilación320CSScon200%texto no cruza marca/herramientas;25pruebas y build pasan. Identidad/aplicación conservan ID y público. Revisión por impacto: este cambio solo modifica nombre/metadata y CSS de la marca; contratos y comportamiento conservados. Evidencia previa vigente para las funciones sin cambios, sin atribuirles una prueba nueva: Chrome154 e integrado155 según decisión explícita del usuario. Texto200% y320CSS: sin overflow, panel scroll y botones44px; Sites16 cero intersecciones.1440x900 y390x844 sin tarjetas iniciales; tamaños temporales y estilos de prueba restaurados."
+        },
+        {
+          "at": "2026-10-11T12:18:44.246Z",
+          "action": "set",
+          "pointId": "S01-1C-AC-01",
+          "reference": "Sites19: Disclaimer desde Menú y cierre Escape conservan navegación y foco. Cambio limitado al overlay eliminado;25tests existentes aprobados. Fichas y contratos sin cambios. Revisión por impacto: retiro del enlace de marca y sus estilos; motor cartográfico, datos, consultas, paneles y contratos sin cambios. Evidencia anterior vigente para funciones sin cambios; no se atribuye una repetición de esas mediciones: Sites18: integrado155 comprueba Disclaimer con Mapa Táctico, ficha Beirut con fuentes,2capas→0trasCerrar, cámara[-30,20]/zoom1.25conservados y focoEscenarios. document.title sigue Mapa Táctico al regresar. Chrome154320CSSy200%texto verificado;25pruebas y build pasan. Revisión por impacto: este cambio solo modifica nombre/metadata y CSS de la marca; contratos y comportamiento conservados. Evidencia previa vigente para las funciones sin cambios, sin atribuirles una prueba nueva: Sites17, commit9dfbc386da401239eef92e6a4ec877843811fe08: Chrome154 e integrado155 abren paneles por solicitud; Escape/Cerrar/Atrás dejan0paneles y foco en Escenarios/Menú. Controles sustituidos desmontados. Texto200% compilado sin solapamientos."
+        },
+        {
+          "at": "2026-10-11T12:18:44.343Z",
+          "action": "set",
+          "pointId": "S01-1C-AC-02",
+          "reference": "Sites19: Disclaimer desde Menú y cierre Escape conservan navegación y foco. Cambio limitado al overlay eliminado;25tests existentes aprobados. Fichas y contratos sin cambios. Revisión por impacto: retiro del enlace de marca y sus estilos; motor cartográfico, datos, consultas, paneles y contratos sin cambios. Evidencia anterior vigente para funciones sin cambios; no se atribuye una repetición de esas mediciones: Sites18: integrado155 comprueba Disclaimer con Mapa Táctico, ficha Beirut con fuentes,2capas→0trasCerrar, cámara[-30,20]/zoom1.25conservados y focoEscenarios. document.title sigue Mapa Táctico al regresar. Chrome154320CSSy200%texto verificado;25pruebas y build pasan. Revisión por impacto: este cambio solo modifica nombre/metadata y CSS de la marca; contratos y comportamiento conservados. Evidencia previa vigente para las funciones sin cambios, sin atribuirles una prueba nueva: Sites17: fichas Beirut/ONU y nuclear/CICR revisadas en ambos navegadores, sin población ficticia ni cifras arbitrarias. Búsqueda estática de fictionalOutcome y otros textos del prototipo en app/components/lib/content devuelve0coincidencias. Páginas públicas200sin autenticación."
+        },
+        {
+          "at": "2026-10-11T12:18:44.441Z",
+          "action": "set",
+          "pointId": "S01-1C-AC-03",
+          "reference": "Sites19: Disclaimer desde Menú y cierre Escape conservan navegación y foco. Cambio limitado al overlay eliminado;25tests existentes aprobados. Fichas y contratos sin cambios. Revisión por impacto: retiro del enlace de marca y sus estilos; motor cartográfico, datos, consultas, paneles y contratos sin cambios. Evidencia anterior vigente para funciones sin cambios; no se atribuye una repetición de esas mediciones: Sites18: integrado155 comprueba Disclaimer con Mapa Táctico, ficha Beirut con fuentes,2capas→0trasCerrar, cámara[-30,20]/zoom1.25conservados y focoEscenarios. document.title sigue Mapa Táctico al regresar. Chrome154320CSSy200%texto verificado;25pruebas y build pasan. Revisión por impacto: este cambio solo modifica nombre/metadata y CSS de la marca; contratos y comportamiento conservados. Evidencia previa vigente para las funciones sin cambios, sin atribuirles una prueba nueva: Sites17: firmaBeirut context-20261011-2, referencia[35.50157,33.89332],2capas reales→0trasEscape, conserva puntoSantiago[-70.69085,19.45036]. Contratos/capacidades:25pruebas pasan. Respuesta tardía1500ms descartada al sustituir panel en compilación idéntica; fallo503HTML inyectado en publicada se recupera con España200y2resultados, intercepción restaurada."
+        },
+        {
+          "at": "2026-10-11T12:18:44.541Z",
+          "action": "set",
+          "pointId": "S01-1C-AC-04",
+          "reference": "Sites19: Disclaimer desde Menú y cierre Escape conservan navegación y foco. Cambio limitado al overlay eliminado;25tests existentes aprobados. Fichas y contratos sin cambios. Revisión por impacto: retiro del enlace de marca y sus estilos; motor cartográfico, datos, consultas, paneles y contratos sin cambios. Evidencia anterior vigente para funciones sin cambios; no se atribuye una repetición de esas mediciones: Sites18: integrado155 comprueba Disclaimer con Mapa Táctico, ficha Beirut con fuentes,2capas→0trasCerrar, cámara[-30,20]/zoom1.25conservados y focoEscenarios. document.title sigue Mapa Táctico al regresar. Chrome154320CSSy200%texto verificado;25pruebas y build pasan. Revisión por impacto: este cambio solo modifica nombre/metadata y CSS de la marca; contratos y comportamiento conservados. Evidencia previa vigente para las funciones sin cambios, sin atribuirles una prueba nueva: Sites17: integrado155 con ventanas CSS390×844 y1440×900 medidas en DOM; mapa ocupa exactamente cada viewport,0paneles y0puntos iniciales. Chrome154 publicado1440×900 también0paneles. Compilación idéntica en320×568 con200%texto: sin overflow horizontal y panel desplazable sin cruzar herramientas."
+        },
+        {
+          "at": "2026-10-11T12:18:44.642Z",
+          "action": "set",
+          "pointId": "S01-1C-AC-05",
+          "reference": "Sites19: Disclaimer desde Menú y cierre Escape conservan navegación y foco. Cambio limitado al overlay eliminado;25tests existentes aprobados. Fichas y contratos sin cambios. Revisión por impacto: retiro del enlace de marca y sus estilos; motor cartográfico, datos, consultas, paneles y contratos sin cambios. Evidencia anterior vigente para funciones sin cambios; no se atribuye una repetición de esas mediciones: Sites18: integrado155 comprueba Disclaimer con Mapa Táctico, ficha Beirut con fuentes,2capas→0trasCerrar, cámara[-30,20]/zoom1.25conservados y focoEscenarios. document.title sigue Mapa Táctico al regresar. Chrome154320CSSy200%texto verificado;25pruebas y build pasan. Revisión por impacto: este cambio solo modifica nombre/metadata y CSS de la marca; contratos y comportamiento conservados. Evidencia previa vigente para las funciones sin cambios, sin atribuirles una prueba nueva: Sites17 integrado155: puntoSantoDomingo[-69.8845,18.4737], abrir/Consultar/Cerrar conserva zoom19 y punto;5m=35.311237px CSS en390×844,pitch0. Chrome154 publicado: arrastre[300,300]→[420,350] conserva1marcador y puntoSantiago. Referencia explícitaBeirut conserva punto libre y al cerrar mantiene cámaraBeirutzoom12."
+        },
+        {
+          "at": "2026-10-11T12:18:44.759Z",
+          "action": "review",
+          "pointId": null,
+          "reference": null
+        },
+        {
+          "at": "2026-10-11T12:19:44.124Z",
+          "action": "approve",
+          "pointId": null,
+          "reference": "Mensaje explícito del usuario del11oct2026: bien, apruebo el Sprint1, comencemos con el Sprint2 de manera autónoma y ve actualizando su HTML mientras trabajas."
         }
       ],
       "points": [
@@ -2612,9 +2718,9 @@
           "group": "Bloque 1B Pantalla y controles",
           "text": "Eliminar completamente el icono y el nombre flotantes sobre el globo, sin sustituirlos por otra cabecera, enlace, espacio reservado ni marca superpuesta. Conservar «Mapa Táctico» en el título del navegador, proyecto Sites, metadatos y disclaimer; el favicon pertenece a la pestaña, no al mapa.",
           "kind": "operacion",
-          "status": "en_curso",
-          "evidence": "Retirados logo y nombre superpuestos del código; comprobación y publicación en curso.",
-          "updatedAt": "2026-10-11T12:16:24.806Z",
+          "status": "terminado",
+          "evidence": "Sites19 publicado el11oct2026 08:17:43: SHA2b9e2982a847fd2ee046ccd3b5c31c695e5d1286. DOM: cero .brand y cero imágenes en portal; eliminado enlace y CSS asociado. Chrome1920x959 y320x568; integrado1247x764 y320x568: mapa ocupa viewport, sin desbordamiento, logo ni nombre; zoom, Menú, Disclaimer y Escape funcionan. Título y disclaimer Mapa Táctico. TypeScript, build y25pruebas aprobados. Captura T:/tmp/mapa-tactico-sin-marca.png.",
+          "updatedAt": "2026-10-11T12:18:42.973Z",
           "history": [
             {
               "at": "2026-10-11T02:21:43.774Z",
@@ -2650,6 +2756,11 @@
               "at": "2026-10-11T12:16:24.806Z",
               "status": "en_curso",
               "evidence": "Retirados logo y nombre superpuestos del código; comprobación y publicación en curso."
+            },
+            {
+              "at": "2026-10-11T12:18:42.973Z",
+              "status": "terminado",
+              "evidence": "Sites19 publicado el11oct2026 08:17:43: SHA2b9e2982a847fd2ee046ccd3b5c31c695e5d1286. DOM: cero .brand y cero imágenes en portal; eliminado enlace y CSS asociado. Chrome1920x959 y320x568; integrado1247x764 y320x568: mapa ocupa viewport, sin desbordamiento, logo ni nombre; zoom, Menú, Disclaimer y Escape funcionan. Título y disclaimer Mapa Táctico. TypeScript, build y25pruebas aprobados. Captura T:/tmp/mapa-tactico-sin-marca.png."
             }
           ]
         },
@@ -3006,9 +3117,9 @@
           "group": "Bloque 1B Pantalla y controles",
           "text": "En ventanas estrechas y amplias no aparecen nombre, logo ni cabecera superpuestos al mapa; los controles de zoom, búsqueda, selección y regreso global funcionan con ratón y teclado.",
           "kind": "aceptacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-11T12:15:42.608Z",
+          "status": "terminado",
+          "evidence": "Sites19 comprobado: sin marca, mapa a pantalla completa en Chrome e integrado, ventanas amplias y320x568. Zoom, menú y Escape probados;25tests, TypeScript y build correctos. Revisión por impacto: retiro del enlace de marca y sus estilos; motor cartográfico, datos, consultas, paneles y contratos sin cambios. Evidencia anterior vigente para funciones sin cambios; no se atribuye una repetición de esas mediciones: Sites18 verificada: Mapa Táctico en Sites, pestaña y marca; Chrome154320×568 sin overflow y ancho174px; integrado155 carga globo y controles. Compilación320CSScon200%texto no cruza marca/herramientas;25pruebas y build pasan. Identidad/aplicación conservan ID y público. Revisión por impacto: este cambio solo modifica nombre/metadata y CSS de la marca; contratos y comportamiento conservados. Evidencia previa vigente para las funciones sin cambios, sin atribuirles una prueba nueva: Sites16: marca flotante, sin cabecera. Chrome e integrado: controles de zoom, búsqueda, ubicación y global por ratón/teclado;320CSS sin solapamiento tarjeta/controles.",
+          "updatedAt": "2026-10-11T12:18:43.176Z",
           "history": [
             {
               "at": "2026-10-11T11:26:36.892Z",
@@ -3029,6 +3140,11 @@
               "at": "2026-10-11T12:15:42.608Z",
               "status": "pendiente",
               "evidence": "Cambió el requisito en el plan; necesita nueva verificación."
+            },
+            {
+              "at": "2026-10-11T12:18:43.176Z",
+              "status": "terminado",
+              "evidence": "Sites19 comprobado: sin marca, mapa a pantalla completa en Chrome e integrado, ventanas amplias y320x568. Zoom, menú y Escape probados;25tests, TypeScript y build correctos. Revisión por impacto: retiro del enlace de marca y sus estilos; motor cartográfico, datos, consultas, paneles y contratos sin cambios. Evidencia anterior vigente para funciones sin cambios; no se atribuye una repetición de esas mediciones: Sites18 verificada: Mapa Táctico en Sites, pestaña y marca; Chrome154320×568 sin overflow y ancho174px; integrado155 carga globo y controles. Compilación320CSScon200%texto no cruza marca/herramientas;25pruebas y build pasan. Identidad/aplicación conservan ID y público. Revisión por impacto: este cambio solo modifica nombre/metadata y CSS de la marca; contratos y comportamiento conservados. Evidencia previa vigente para las funciones sin cambios, sin atribuirles una prueba nueva: Sites16: marca flotante, sin cabecera. Chrome e integrado: controles de zoom, búsqueda, ubicación y global por ratón/teclado;320CSS sin solapamiento tarjeta/controles."
             }
           ]
         },
@@ -3037,9 +3153,9 @@
           "group": "Bloque 1B Pantalla y controles",
           "text": "El usuario alcanza escala de 5 metros, ve nombres de calles y recupera la vista global sin recargar.",
           "kind": "aceptacion",
-          "status": "pendiente",
-          "evidence": "Reverificar: cambiaron los requisitos del sprint.",
-          "updatedAt": "2026-10-11T12:15:42.608Z",
+          "status": "terminado",
+          "evidence": "Sites19 comprobado: sin marca, mapa a pantalla completa en Chrome e integrado, ventanas amplias y320x568. Zoom, menú y Escape probados;25tests, TypeScript y build correctos. Revisión por impacto: retiro del enlace de marca y sus estilos; motor cartográfico, datos, consultas, paneles y contratos sin cambios. Evidencia anterior vigente para funciones sin cambios; no se atribuye una repetición de esas mediciones: Sites18 verificada: Mapa Táctico en Sites, pestaña y marca; Chrome154320×568 sin overflow y ancho174px; integrado155 carga globo y controles. Compilación320CSScon200%texto no cruza marca/herramientas;25pruebas y build pasan. Identidad/aplicación conservan ID y público. Revisión por impacto: este cambio solo modifica nombre/metadata y CSS de la marca; contratos y comportamiento conservados. Evidencia previa vigente para las funciones sin cambios, sin atribuirles una prueba nueva: Sites14/16 conserva motor/estilo. Repetición real de SantoDomingo(-69.8845,18.4737), zoom19,pitch0,5m=35.311237pxCSS; nombres ElConde/ArzobispoMeriño visibles, sin POI; global vuelve sin recarga.",
+          "updatedAt": "2026-10-11T12:18:43.297Z",
           "history": [
             {
               "at": "2026-10-11T02:34:48.932Z",
@@ -3065,6 +3181,11 @@
               "at": "2026-10-11T12:15:42.608Z",
               "status": "pendiente",
               "evidence": "Reverificar: cambiaron los requisitos del sprint."
+            },
+            {
+              "at": "2026-10-11T12:18:43.297Z",
+              "status": "terminado",
+              "evidence": "Sites19 comprobado: sin marca, mapa a pantalla completa en Chrome e integrado, ventanas amplias y320x568. Zoom, menú y Escape probados;25tests, TypeScript y build correctos. Revisión por impacto: retiro del enlace de marca y sus estilos; motor cartográfico, datos, consultas, paneles y contratos sin cambios. Evidencia anterior vigente para funciones sin cambios; no se atribuye una repetición de esas mediciones: Sites18 verificada: Mapa Táctico en Sites, pestaña y marca; Chrome154320×568 sin overflow y ancho174px; integrado155 carga globo y controles. Compilación320CSScon200%texto no cruza marca/herramientas;25pruebas y build pasan. Identidad/aplicación conservan ID y público. Revisión por impacto: este cambio solo modifica nombre/metadata y CSS de la marca; contratos y comportamiento conservados. Evidencia previa vigente para las funciones sin cambios, sin atribuirles una prueba nueva: Sites14/16 conserva motor/estilo. Repetición real de SantoDomingo(-69.8845,18.4737), zoom19,pitch0,5m=35.311237pxCSS; nombres ElConde/ArzobispoMeriño visibles, sin POI; global vuelve sin recarga."
             }
           ],
           "blockId": "1B"
@@ -3075,9 +3196,9 @@
           "group": "Bloque 1B Pantalla y controles",
           "text": "El globo puede llenar toda la pantalla al acercar, sin marca flotante ni franja reservada.",
           "kind": "aceptacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-11T12:15:42.608Z",
+          "status": "terminado",
+          "evidence": "Sites19 comprobado: sin marca, mapa a pantalla completa en Chrome e integrado, ventanas amplias y320x568. Zoom, menú y Escape probados;25tests, TypeScript y build correctos. Revisión por impacto: retiro del enlace de marca y sus estilos; motor cartográfico, datos, consultas, paneles y contratos sin cambios. Evidencia anterior vigente para funciones sin cambios; no se atribuye una repetición de esas mediciones: Sites18 verificada: Mapa Táctico en Sites, pestaña y marca; Chrome154320×568 sin overflow y ancho174px; integrado155 carga globo y controles. Compilación320CSScon200%texto no cruza marca/herramientas;25pruebas y build pasan. Identidad/aplicación conservan ID y público. Revisión por impacto: este cambio solo modifica nombre/metadata y CSS de la marca; contratos y comportamiento conservados. Evidencia previa vigente para las funciones sin cambios, sin atribuirles una prueba nueva: DOM/Screenshot reales: marca absoluta sin franja; globo y vista local ocupan todo el viewport. Ventanas320x568 y1440x900 comprobadas; zoom19 llena pantalla.",
+          "updatedAt": "2026-10-11T12:18:43.401Z",
           "history": [
             {
               "at": "2026-10-11T02:34:49.022Z",
@@ -3103,6 +3224,11 @@
               "at": "2026-10-11T12:15:42.608Z",
               "status": "pendiente",
               "evidence": "Cambió el requisito en el plan; necesita nueva verificación."
+            },
+            {
+              "at": "2026-10-11T12:18:43.401Z",
+              "status": "terminado",
+              "evidence": "Sites19 comprobado: sin marca, mapa a pantalla completa en Chrome e integrado, ventanas amplias y320x568. Zoom, menú y Escape probados;25tests, TypeScript y build correctos. Revisión por impacto: retiro del enlace de marca y sus estilos; motor cartográfico, datos, consultas, paneles y contratos sin cambios. Evidencia anterior vigente para funciones sin cambios; no se atribuye una repetición de esas mediciones: Sites18 verificada: Mapa Táctico en Sites, pestaña y marca; Chrome154320×568 sin overflow y ancho174px; integrado155 carga globo y controles. Compilación320CSScon200%texto no cruza marca/herramientas;25pruebas y build pasan. Identidad/aplicación conservan ID y público. Revisión por impacto: este cambio solo modifica nombre/metadata y CSS de la marca; contratos y comportamiento conservados. Evidencia previa vigente para las funciones sin cambios, sin atribuirles una prueba nueva: DOM/Screenshot reales: marca absoluta sin franja; globo y vista local ocupan todo el viewport. Ventanas320x568 y1440x900 comprobadas; zoom19 llena pantalla."
             }
           ]
         },
@@ -3112,9 +3238,9 @@
           "group": "Bloque 1B Pantalla y controles",
           "text": "Las búsquedas solo ofrecen países y ciudades identificados como tales. Consultas de calles, direcciones, edificios, barrios y POI no devuelven esos objetos; respuestas de tipo desconocido se descartan. No hay comercios ni sus etiquetas en las capas; las calles con nombre permanecen en el mapa.",
           "kind": "aceptacion",
-          "status": "pendiente",
-          "evidence": "Reverificar: cambiaron los requisitos del sprint.",
-          "updatedAt": "2026-10-11T12:15:42.608Z",
+          "status": "terminado",
+          "evidence": "Sites19 comprobado: sin marca, mapa a pantalla completa en Chrome e integrado, ventanas amplias y320x568. Zoom, menú y Escape probados;25tests, TypeScript y build correctos. Revisión por impacto: retiro del enlace de marca y sus estilos; motor cartográfico, datos, consultas, paneles y contratos sin cambios. Evidencia anterior vigente para funciones sin cambios; no se atribuye una repetición de esas mediciones: Sites18 verificada: Mapa Táctico en Sites, pestaña y marca; Chrome154320×568 sin overflow y ancho174px; integrado155 carga globo y controles. Compilación320CSScon200%texto no cruza marca/herramientas;25pruebas y build pasan. Identidad/aplicación conservan ID y público. Revisión por impacto: este cambio solo modifica nombre/metadata y CSS de la marca; contratos y comportamiento conservados. Evidencia previa vigente para las funciones sin cambios, sin atribuirles una prueba nueva: Servicio público16: solo country/city. Queries CalleElConde,1600PennsylvaniaAvenue,TorreEiffel,Gazcue devolvieron0; tests de PPLX/ST/RD/BLDG/desconocidos y caché mixta descartan objetos. Estilo geográfico conserva nombres de calles y no tiene POI/satélite.",
+          "updatedAt": "2026-10-11T12:18:43.496Z",
           "history": [
             {
               "at": "2026-10-11T10:11:13.951Z",
@@ -3140,6 +3266,11 @@
               "at": "2026-10-11T12:15:42.608Z",
               "status": "pendiente",
               "evidence": "Reverificar: cambiaron los requisitos del sprint."
+            },
+            {
+              "at": "2026-10-11T12:18:43.496Z",
+              "status": "terminado",
+              "evidence": "Sites19 comprobado: sin marca, mapa a pantalla completa en Chrome e integrado, ventanas amplias y320x568. Zoom, menú y Escape probados;25tests, TypeScript y build correctos. Revisión por impacto: retiro del enlace de marca y sus estilos; motor cartográfico, datos, consultas, paneles y contratos sin cambios. Evidencia anterior vigente para funciones sin cambios; no se atribuye una repetición de esas mediciones: Sites18 verificada: Mapa Táctico en Sites, pestaña y marca; Chrome154320×568 sin overflow y ancho174px; integrado155 carga globo y controles. Compilación320CSScon200%texto no cruza marca/herramientas;25pruebas y build pasan. Identidad/aplicación conservan ID y público. Revisión por impacto: este cambio solo modifica nombre/metadata y CSS de la marca; contratos y comportamiento conservados. Evidencia previa vigente para las funciones sin cambios, sin atribuirles una prueba nueva: Servicio público16: solo country/city. Queries CalleElConde,1600PennsylvaniaAvenue,TorreEiffel,Gazcue devolvieron0; tests de PPLX/ST/RD/BLDG/desconocidos y caché mixta descartan objetos. Estilo geográfico conserva nombres de calles y no tiene POI/satélite."
             }
           ]
         },
@@ -3148,9 +3279,9 @@
           "group": "Bloque 1B Pantalla y controles",
           "text": "Una búsqueda ambigua permite elegir la ciudad correcta. Cero resultados y fallo del servicio tienen una recuperación comprensible.",
           "kind": "aceptacion",
-          "status": "pendiente",
-          "evidence": "Reverificar: cambiaron los requisitos del sprint.",
-          "updatedAt": "2026-10-11T12:15:42.608Z",
+          "status": "terminado",
+          "evidence": "Sites19 comprobado: sin marca, mapa a pantalla completa en Chrome e integrado, ventanas amplias y320x568. Zoom, menú y Escape probados;25tests, TypeScript y build correctos. Revisión por impacto: retiro del enlace de marca y sus estilos; motor cartográfico, datos, consultas, paneles y contratos sin cambios. Evidencia anterior vigente para funciones sin cambios; no se atribuye una repetición de esas mediciones: Sites18 verificada: Mapa Táctico en Sites, pestaña y marca; Chrome154320×568 sin overflow y ancho174px; integrado155 carga globo y controles. Compilación320CSScon200%texto no cruza marca/herramientas;25pruebas y build pasan. Identidad/aplicación conservan ID y público. Revisión por impacto: este cambio solo modifica nombre/metadata y CSS de la marca; contratos y comportamiento conservados. Evidencia previa vigente para las funciones sin cambios, sin atribuirles una prueba nueva: Santiago muestra Chile/RepúblicaDominicana/Cuba y regiones; elegir dominicana centra(-70.69085,19.45036). zzzzzzzz muestra vacío útil. Fallo503 inyectado sobre dominio14 muestra error; reintento real recupera Madrid.",
+          "updatedAt": "2026-10-11T12:18:43.592Z",
           "history": [
             {
               "at": "2026-10-11T02:34:49.290Z",
@@ -3176,6 +3307,11 @@
               "at": "2026-10-11T12:15:42.608Z",
               "status": "pendiente",
               "evidence": "Reverificar: cambiaron los requisitos del sprint."
+            },
+            {
+              "at": "2026-10-11T12:18:43.592Z",
+              "status": "terminado",
+              "evidence": "Sites19 comprobado: sin marca, mapa a pantalla completa en Chrome e integrado, ventanas amplias y320x568. Zoom, menú y Escape probados;25tests, TypeScript y build correctos. Revisión por impacto: retiro del enlace de marca y sus estilos; motor cartográfico, datos, consultas, paneles y contratos sin cambios. Evidencia anterior vigente para funciones sin cambios; no se atribuye una repetición de esas mediciones: Sites18 verificada: Mapa Táctico en Sites, pestaña y marca; Chrome154320×568 sin overflow y ancho174px; integrado155 carga globo y controles. Compilación320CSScon200%texto no cruza marca/herramientas;25pruebas y build pasan. Identidad/aplicación conservan ID y público. Revisión por impacto: este cambio solo modifica nombre/metadata y CSS de la marca; contratos y comportamiento conservados. Evidencia previa vigente para las funciones sin cambios, sin atribuirles una prueba nueva: Santiago muestra Chile/RepúblicaDominicana/Cuba y regiones; elegir dominicana centra(-70.69085,19.45036). zzzzzzzz muestra vacío útil. Fallo503 inyectado sobre dominio14 muestra error; reintento real recupera Madrid."
             }
           ],
           "blockId": "1B"
@@ -3185,9 +3321,9 @@
           "group": "Bloque 1B Pantalla y controles",
           "text": "Con teclado se puede recorrer y cerrar controles sin quedar atrapado. El mapa puede seguir utilizándose si un servicio auxiliar falla.",
           "kind": "aceptacion",
-          "status": "pendiente",
-          "evidence": "Reverificar: cambiaron los requisitos del sprint.",
-          "updatedAt": "2026-10-11T12:15:42.608Z",
+          "status": "terminado",
+          "evidence": "Sites19 comprobado: sin marca, mapa a pantalla completa en Chrome e integrado, ventanas amplias y320x568. Zoom, menú y Escape probados;25tests, TypeScript y build correctos. Revisión por impacto: retiro del enlace de marca y sus estilos; motor cartográfico, datos, consultas, paneles y contratos sin cambios. Evidencia anterior vigente para funciones sin cambios; no se atribuye una repetición de esas mediciones: Sites18 verificada: Mapa Táctico en Sites, pestaña y marca; Chrome154320×568 sin overflow y ancho174px; integrado155 carga globo y controles. Compilación320CSScon200%texto no cruza marca/herramientas;25pruebas y build pasan. Identidad/aplicación conservan ID y público. Revisión por impacto: este cambio solo modifica nombre/metadata y CSS de la marca; contratos y comportamiento conservados. Evidencia previa vigente para las funciones sin cambios, sin atribuirles una prueba nueva: Escape deja0paneles y foco BuscarLugar en integrado; Tab/campos/selección accesibles, coordenadas alternativa al clic. Error de catálogo conserva mapa y controles disponibles. Evidencia previa de1B07 preservada.",
+          "updatedAt": "2026-10-11T12:18:43.689Z",
           "history": [
             {
               "at": "2026-10-11T02:34:49.110Z",
@@ -3213,6 +3349,11 @@
               "at": "2026-10-11T12:15:42.608Z",
               "status": "pendiente",
               "evidence": "Reverificar: cambiaron los requisitos del sprint."
+            },
+            {
+              "at": "2026-10-11T12:18:43.689Z",
+              "status": "terminado",
+              "evidence": "Sites19 comprobado: sin marca, mapa a pantalla completa en Chrome e integrado, ventanas amplias y320x568. Zoom, menú y Escape probados;25tests, TypeScript y build correctos. Revisión por impacto: retiro del enlace de marca y sus estilos; motor cartográfico, datos, consultas, paneles y contratos sin cambios. Evidencia anterior vigente para funciones sin cambios; no se atribuye una repetición de esas mediciones: Sites18 verificada: Mapa Táctico en Sites, pestaña y marca; Chrome154320×568 sin overflow y ancho174px; integrado155 carga globo y controles. Compilación320CSScon200%texto no cruza marca/herramientas;25pruebas y build pasan. Identidad/aplicación conservan ID y público. Revisión por impacto: este cambio solo modifica nombre/metadata y CSS de la marca; contratos y comportamiento conservados. Evidencia previa vigente para las funciones sin cambios, sin atribuirles una prueba nueva: Escape deja0paneles y foco BuscarLugar en integrado; Tab/campos/selección accesibles, coordenadas alternativa al clic. Error de catálogo conserva mapa y controles disponibles. Evidencia previa de1B07 preservada."
             }
           ],
           "blockId": "1B"
@@ -3222,9 +3363,9 @@
           "group": "Bloque 1B Pantalla y controles",
           "text": "Pasan las medidas de zoom y presupuesto del bloque 1A; la ausencia de GPU tiene recuperación y lectura alternativa.",
           "kind": "aceptacion",
-          "status": "pendiente",
-          "evidence": "Reverificar: cambiaron los requisitos del sprint.",
-          "updatedAt": "2026-10-11T12:15:42.608Z",
+          "status": "terminado",
+          "evidence": "Sites19 comprobado: sin marca, mapa a pantalla completa en Chrome e integrado, ventanas amplias y320x568. Zoom, menú y Escape probados;25tests, TypeScript y build correctos. Revisión por impacto: retiro del enlace de marca y sus estilos; motor cartográfico, datos, consultas, paneles y contratos sin cambios. Evidencia anterior vigente para funciones sin cambios; no se atribuye una repetición de esas mediciones: Sites18 verificada: Mapa Táctico en Sites, pestaña y marca; Chrome154320×568 sin overflow y ancho174px; integrado155 carga globo y controles. Compilación320CSScon200%texto no cruza marca/herramientas;25pruebas y build pasan. Identidad/aplicación conservan ID y público. Revisión por impacto: este cambio solo modifica nombre/metadata y CSS de la marca; contratos y comportamiento conservados. Evidencia previa vigente para las funciones sin cambios, sin atribuirles una prueba nueva: Escala real repetida35.311px/5m en zoom19. Motor/Globe sin cambios frente a mediciones y ensayo de pérdida de contexto previos, conservados en historial1A10/1B11 y DECISION_CARTOGRAFICA.md; reintento/lectura alternativa siguen presentes. No se atribuye una nueva medición GPU a esta revisión.",
+          "updatedAt": "2026-10-11T12:18:43.803Z",
           "history": [
             {
               "at": "2026-10-11T02:34:49.196Z",
@@ -3250,6 +3391,11 @@
               "at": "2026-10-11T12:15:42.608Z",
               "status": "pendiente",
               "evidence": "Reverificar: cambiaron los requisitos del sprint."
+            },
+            {
+              "at": "2026-10-11T12:18:43.803Z",
+              "status": "terminado",
+              "evidence": "Sites19 comprobado: sin marca, mapa a pantalla completa en Chrome e integrado, ventanas amplias y320x568. Zoom, menú y Escape probados;25tests, TypeScript y build correctos. Revisión por impacto: retiro del enlace de marca y sus estilos; motor cartográfico, datos, consultas, paneles y contratos sin cambios. Evidencia anterior vigente para funciones sin cambios; no se atribuye una repetición de esas mediciones: Sites18 verificada: Mapa Táctico en Sites, pestaña y marca; Chrome154320×568 sin overflow y ancho174px; integrado155 carga globo y controles. Compilación320CSScon200%texto no cruza marca/herramientas;25pruebas y build pasan. Identidad/aplicación conservan ID y público. Revisión por impacto: este cambio solo modifica nombre/metadata y CSS de la marca; contratos y comportamiento conservados. Evidencia previa vigente para las funciones sin cambios, sin atribuirles una prueba nueva: Escala real repetida35.311px/5m en zoom19. Motor/Globe sin cambios frente a mediciones y ensayo de pérdida de contexto previos, conservados en historial1A10/1B11 y DECISION_CARTOGRAFICA.md; reintento/lectura alternativa siguen presentes. No se atribuye una nueva medición GPU a esta revisión."
             }
           ],
           "blockId": "1B"
@@ -3260,9 +3406,9 @@
           "group": "Bloque 1B Pantalla y controles",
           "text": "El buscador integrado pasa búsqueda de país, ciudad ambigua, ausencia de resultados, respuesta fuera de orden, entrada inválida, cuota y recuperación en el dominio revisable. El servidor excluye calles, direcciones, barrios, edificios, POI y tipos desconocidos, incluso en respuestas mixtas y caché. Sus límites, mapeo de tipos del proveedor y política de caché están documentados.",
           "kind": "aceptacion",
-          "status": "pendiente",
-          "evidence": "Reverificar: cambiaron los requisitos del sprint.",
-          "updatedAt": "2026-10-11T12:15:42.608Z",
+          "status": "terminado",
+          "evidence": "Sites19 comprobado: sin marca, mapa a pantalla completa en Chrome e integrado, ventanas amplias y320x568. Zoom, menú y Escape probados;25tests, TypeScript y build correctos. Revisión por impacto: retiro del enlace de marca y sus estilos; motor cartográfico, datos, consultas, paneles y contratos sin cambios. Evidencia anterior vigente para funciones sin cambios; no se atribuye una repetición de esas mediciones: Sites18 verificada: Mapa Táctico en Sites, pestaña y marca; Chrome154320×568 sin overflow y ancho174px; integrado155 carga globo y controles. Compilación320CSScon200%texto no cruza marca/herramientas;25pruebas y build pasan. Identidad/aplicación conservan ID y público. Revisión por impacto: este cambio solo modifica nombre/metadata y CSS de la marca; contratos y comportamiento conservados. Evidencia previa vigente para las funciones sin cambios, sin atribuirles una prueba nueva: Sites14–16: país/ciudad ambigua/vacío/400 real; límite120 y429 real y recuperación UI. Retardo real2s Madrid ignorado ante Santiago, sin sobrescribir.20 tests pasan, incluyendo caché validada/tipos mixtos/HTML inválido/concurrencia. Catálogo, caché, cuotas y versiones documentados; servidor sin identidad.",
+          "updatedAt": "2026-10-11T12:18:43.906Z",
           "history": [
             {
               "at": "2026-10-11T02:34:49.383Z",
@@ -3293,6 +3439,11 @@
               "at": "2026-10-11T12:15:42.608Z",
               "status": "pendiente",
               "evidence": "Reverificar: cambiaron los requisitos del sprint."
+            },
+            {
+              "at": "2026-10-11T12:18:43.906Z",
+              "status": "terminado",
+              "evidence": "Sites19 comprobado: sin marca, mapa a pantalla completa en Chrome e integrado, ventanas amplias y320x568. Zoom, menú y Escape probados;25tests, TypeScript y build correctos. Revisión por impacto: retiro del enlace de marca y sus estilos; motor cartográfico, datos, consultas, paneles y contratos sin cambios. Evidencia anterior vigente para funciones sin cambios; no se atribuye una repetición de esas mediciones: Sites18 verificada: Mapa Táctico en Sites, pestaña y marca; Chrome154320×568 sin overflow y ancho174px; integrado155 carga globo y controles. Compilación320CSScon200%texto no cruza marca/herramientas;25pruebas y build pasan. Identidad/aplicación conservan ID y público. Revisión por impacto: este cambio solo modifica nombre/metadata y CSS de la marca; contratos y comportamiento conservados. Evidencia previa vigente para las funciones sin cambios, sin atribuirles una prueba nueva: Sites14–16: país/ciudad ambigua/vacío/400 real; límite120 y429 real y recuperación UI. Retardo real2s Madrid ignorado ante Santiago, sin sobrescribir.20 tests pasan, incluyendo caché validada/tipos mixtos/HTML inválido/concurrencia. Catálogo, caché, cuotas y versiones documentados; servidor sin identidad."
             }
           ]
         },
@@ -3302,9 +3453,9 @@
           "group": "Bloque 1B Pantalla y controles",
           "text": "La matriz de navegadores web tiene evidencias realmente ejecutadas; cualquier falta de acceso a un entorno queda pendiente y no se convierte en una prueba aprobada. Cambiar un objetivo de rendimiento requiere aceptación explícita del usuario.",
           "kind": "aceptacion",
-          "status": "pendiente",
-          "evidence": "Reverificar: cambiaron los requisitos del sprint.",
-          "updatedAt": "2026-10-11T12:15:42.608Z",
+          "status": "terminado",
+          "evidence": "Sites19 comprobado: sin marca, mapa a pantalla completa en Chrome e integrado, ventanas amplias y320x568. Zoom, menú y Escape probados;25tests, TypeScript y build correctos. Revisión por impacto: retiro del enlace de marca y sus estilos; motor cartográfico, datos, consultas, paneles y contratos sin cambios. Evidencia anterior vigente para funciones sin cambios; no se atribuye una repetición de esas mediciones: Sites18 verificada: Mapa Táctico en Sites, pestaña y marca; Chrome154320×568 sin overflow y ancho174px; integrado155 carga globo y controles. Compilación320CSScon200%texto no cruza marca/herramientas;25pruebas y build pasan. Identidad/aplicación conservan ID y público. Revisión por impacto: este cambio solo modifica nombre/metadata y CSS de la marca; contratos y comportamiento conservados. Evidencia previa vigente para las funciones sin cambios, sin atribuirles una prueba nueva: Chrome154 e integrado155 según decisión explícita del usuario. Texto200% y320CSS: sin overflow, panel scroll y botones44px; Sites16 cero intersecciones.1440x900 y390x844 sin tarjetas iniciales; tamaños temporales y estilos de prueba restaurados.",
+          "updatedAt": "2026-10-11T12:18:44.010Z",
           "history": [
             {
               "at": "2026-10-11T02:34:49.470Z",
@@ -3335,6 +3486,11 @@
               "at": "2026-10-11T12:15:42.608Z",
               "status": "pendiente",
               "evidence": "Reverificar: cambiaron los requisitos del sprint."
+            },
+            {
+              "at": "2026-10-11T12:18:44.010Z",
+              "status": "terminado",
+              "evidence": "Sites19 comprobado: sin marca, mapa a pantalla completa en Chrome e integrado, ventanas amplias y320x568. Zoom, menú y Escape probados;25tests, TypeScript y build correctos. Revisión por impacto: retiro del enlace de marca y sus estilos; motor cartográfico, datos, consultas, paneles y contratos sin cambios. Evidencia anterior vigente para funciones sin cambios; no se atribuye una repetición de esas mediciones: Sites18 verificada: Mapa Táctico en Sites, pestaña y marca; Chrome154320×568 sin overflow y ancho174px; integrado155 carga globo y controles. Compilación320CSScon200%texto no cruza marca/herramientas;25pruebas y build pasan. Identidad/aplicación conservan ID y público. Revisión por impacto: este cambio solo modifica nombre/metadata y CSS de la marca; contratos y comportamiento conservados. Evidencia previa vigente para las funciones sin cambios, sin atribuirles una prueba nueva: Chrome154 e integrado155 según decisión explícita del usuario. Texto200% y320CSS: sin overflow, panel scroll y botones44px; Sites16 cero intersecciones.1440x900 y390x844 sin tarjetas iniciales; tamaños temporales y estilos de prueba restaurados."
             }
           ]
         },
@@ -3586,9 +3742,9 @@
           "group": "Bloque 1C Paneles bajo demanda",
           "text": "Los paneles solo aparecen al solicitarlos; Escape, Atrás cuando corresponda, cierre y restauración del foco funcionan sin controles invisibles en el recorrido del teclado.",
           "kind": "aceptacion",
-          "status": "pendiente",
-          "evidence": "Reverificar: cambiaron los requisitos del sprint.",
-          "updatedAt": "2026-10-11T12:15:42.608Z",
+          "status": "terminado",
+          "evidence": "Sites19: Disclaimer desde Menú y cierre Escape conservan navegación y foco. Cambio limitado al overlay eliminado;25tests existentes aprobados. Fichas y contratos sin cambios. Revisión por impacto: retiro del enlace de marca y sus estilos; motor cartográfico, datos, consultas, paneles y contratos sin cambios. Evidencia anterior vigente para funciones sin cambios; no se atribuye una repetición de esas mediciones: Sites18: integrado155 comprueba Disclaimer con Mapa Táctico, ficha Beirut con fuentes,2capas→0trasCerrar, cámara[-30,20]/zoom1.25conservados y focoEscenarios. document.title sigue Mapa Táctico al regresar. Chrome154320CSSy200%texto verificado;25pruebas y build pasan. Revisión por impacto: este cambio solo modifica nombre/metadata y CSS de la marca; contratos y comportamiento conservados. Evidencia previa vigente para las funciones sin cambios, sin atribuirles una prueba nueva: Sites17, commit9dfbc386da401239eef92e6a4ec877843811fe08: Chrome154 e integrado155 abren paneles por solicitud; Escape/Cerrar/Atrás dejan0paneles y foco en Escenarios/Menú. Controles sustituidos desmontados. Texto200% compilado sin solapamientos.",
+          "updatedAt": "2026-10-11T12:18:44.246Z",
           "history": [
             {
               "at": "2026-10-11T11:51:35.817Z",
@@ -3614,6 +3770,11 @@
               "at": "2026-10-11T12:15:42.608Z",
               "status": "pendiente",
               "evidence": "Reverificar: cambiaron los requisitos del sprint."
+            },
+            {
+              "at": "2026-10-11T12:18:44.246Z",
+              "status": "terminado",
+              "evidence": "Sites19: Disclaimer desde Menú y cierre Escape conservan navegación y foco. Cambio limitado al overlay eliminado;25tests existentes aprobados. Fichas y contratos sin cambios. Revisión por impacto: retiro del enlace de marca y sus estilos; motor cartográfico, datos, consultas, paneles y contratos sin cambios. Evidencia anterior vigente para funciones sin cambios; no se atribuye una repetición de esas mediciones: Sites18: integrado155 comprueba Disclaimer con Mapa Táctico, ficha Beirut con fuentes,2capas→0trasCerrar, cámara[-30,20]/zoom1.25conservados y focoEscenarios. document.title sigue Mapa Táctico al regresar. Chrome154320CSSy200%texto verificado;25pruebas y build pasan. Revisión por impacto: este cambio solo modifica nombre/metadata y CSS de la marca; contratos y comportamiento conservados. Evidencia previa vigente para las funciones sin cambios, sin atribuirles una prueba nueva: Sites17, commit9dfbc386da401239eef92e6a4ec877843811fe08: Chrome154 e integrado155 abren paneles por solicitud; Escape/Cerrar/Atrás dejan0paneles y foco en Escenarios/Menú. Controles sustituidos desmontados. Texto200% compilado sin solapamientos."
             }
           ]
         },
@@ -3623,9 +3784,9 @@
           "group": "Bloque 1C Paneles bajo demanda",
           "text": "Se retiraron fictionalOutcome, población ficticia, multiplicadores de preparación, cifras arbitrarias y sus animaciones; las fichas utilizables siguen accesibles con fuentes.",
           "kind": "aceptacion",
-          "status": "pendiente",
-          "evidence": "Reverificar: cambiaron los requisitos del sprint.",
-          "updatedAt": "2026-10-11T12:15:42.608Z",
+          "status": "terminado",
+          "evidence": "Sites19: Disclaimer desde Menú y cierre Escape conservan navegación y foco. Cambio limitado al overlay eliminado;25tests existentes aprobados. Fichas y contratos sin cambios. Revisión por impacto: retiro del enlace de marca y sus estilos; motor cartográfico, datos, consultas, paneles y contratos sin cambios. Evidencia anterior vigente para funciones sin cambios; no se atribuye una repetición de esas mediciones: Sites18: integrado155 comprueba Disclaimer con Mapa Táctico, ficha Beirut con fuentes,2capas→0trasCerrar, cámara[-30,20]/zoom1.25conservados y focoEscenarios. document.title sigue Mapa Táctico al regresar. Chrome154320CSSy200%texto verificado;25pruebas y build pasan. Revisión por impacto: este cambio solo modifica nombre/metadata y CSS de la marca; contratos y comportamiento conservados. Evidencia previa vigente para las funciones sin cambios, sin atribuirles una prueba nueva: Sites17: fichas Beirut/ONU y nuclear/CICR revisadas en ambos navegadores, sin población ficticia ni cifras arbitrarias. Búsqueda estática de fictionalOutcome y otros textos del prototipo en app/components/lib/content devuelve0coincidencias. Páginas públicas200sin autenticación.",
+          "updatedAt": "2026-10-11T12:18:44.343Z",
           "history": [
             {
               "at": "2026-10-11T11:51:36.024Z",
@@ -3651,6 +3812,11 @@
               "at": "2026-10-11T12:15:42.608Z",
               "status": "pendiente",
               "evidence": "Reverificar: cambiaron los requisitos del sprint."
+            },
+            {
+              "at": "2026-10-11T12:18:44.343Z",
+              "status": "terminado",
+              "evidence": "Sites19: Disclaimer desde Menú y cierre Escape conservan navegación y foco. Cambio limitado al overlay eliminado;25tests existentes aprobados. Fichas y contratos sin cambios. Revisión por impacto: retiro del enlace de marca y sus estilos; motor cartográfico, datos, consultas, paneles y contratos sin cambios. Evidencia anterior vigente para funciones sin cambios; no se atribuye una repetición de esas mediciones: Sites18: integrado155 comprueba Disclaimer con Mapa Táctico, ficha Beirut con fuentes,2capas→0trasCerrar, cámara[-30,20]/zoom1.25conservados y focoEscenarios. document.title sigue Mapa Táctico al regresar. Chrome154320CSSy200%texto verificado;25pruebas y build pasan. Revisión por impacto: este cambio solo modifica nombre/metadata y CSS de la marca; contratos y comportamiento conservados. Evidencia previa vigente para las funciones sin cambios, sin atribuirles una prueba nueva: Sites17: fichas Beirut/ONU y nuclear/CICR revisadas en ambos navegadores, sin población ficticia ni cifras arbitrarias. Búsqueda estática de fictionalOutcome y otros textos del prototipo en app/components/lib/content devuelve0coincidencias. Páginas públicas200sin autenticación."
             }
           ]
         },
@@ -3660,9 +3826,9 @@
           "group": "Bloque 1C Paneles bajo demanda",
           "text": "El registro de capacidades y el renderizador de fichas funcionan con el contenido disponible; cambio de consulta, respuesta obsoleta y cierre limpian los datos y capas dependientes.",
           "kind": "aceptacion",
-          "status": "pendiente",
-          "evidence": "Reverificar: cambiaron los requisitos del sprint.",
-          "updatedAt": "2026-10-11T12:15:42.608Z",
+          "status": "terminado",
+          "evidence": "Sites19: Disclaimer desde Menú y cierre Escape conservan navegación y foco. Cambio limitado al overlay eliminado;25tests existentes aprobados. Fichas y contratos sin cambios. Revisión por impacto: retiro del enlace de marca y sus estilos; motor cartográfico, datos, consultas, paneles y contratos sin cambios. Evidencia anterior vigente para funciones sin cambios; no se atribuye una repetición de esas mediciones: Sites18: integrado155 comprueba Disclaimer con Mapa Táctico, ficha Beirut con fuentes,2capas→0trasCerrar, cámara[-30,20]/zoom1.25conservados y focoEscenarios. document.title sigue Mapa Táctico al regresar. Chrome154320CSSy200%texto verificado;25pruebas y build pasan. Revisión por impacto: este cambio solo modifica nombre/metadata y CSS de la marca; contratos y comportamiento conservados. Evidencia previa vigente para las funciones sin cambios, sin atribuirles una prueba nueva: Sites17: firmaBeirut context-20261011-2, referencia[35.50157,33.89332],2capas reales→0trasEscape, conserva puntoSantiago[-70.69085,19.45036]. Contratos/capacidades:25pruebas pasan. Respuesta tardía1500ms descartada al sustituir panel en compilación idéntica; fallo503HTML inyectado en publicada se recupera con España200y2resultados, intercepción restaurada.",
+          "updatedAt": "2026-10-11T12:18:44.441Z",
           "history": [
             {
               "at": "2026-10-11T11:51:36.208Z",
@@ -3688,6 +3854,11 @@
               "at": "2026-10-11T12:15:42.608Z",
               "status": "pendiente",
               "evidence": "Reverificar: cambiaron los requisitos del sprint."
+            },
+            {
+              "at": "2026-10-11T12:18:44.441Z",
+              "status": "terminado",
+              "evidence": "Sites19: Disclaimer desde Menú y cierre Escape conservan navegación y foco. Cambio limitado al overlay eliminado;25tests existentes aprobados. Fichas y contratos sin cambios. Revisión por impacto: retiro del enlace de marca y sus estilos; motor cartográfico, datos, consultas, paneles y contratos sin cambios. Evidencia anterior vigente para funciones sin cambios; no se atribuye una repetición de esas mediciones: Sites18: integrado155 comprueba Disclaimer con Mapa Táctico, ficha Beirut con fuentes,2capas→0trasCerrar, cámara[-30,20]/zoom1.25conservados y focoEscenarios. document.title sigue Mapa Táctico al regresar. Chrome154320CSSy200%texto verificado;25pruebas y build pasan. Revisión por impacto: este cambio solo modifica nombre/metadata y CSS de la marca; contratos y comportamiento conservados. Evidencia previa vigente para las funciones sin cambios, sin atribuirles una prueba nueva: Sites17: firmaBeirut context-20261011-2, referencia[35.50157,33.89332],2capas reales→0trasEscape, conserva puntoSantiago[-70.69085,19.45036]. Contratos/capacidades:25pruebas pasan. Respuesta tardía1500ms descartada al sustituir panel en compilación idéntica; fallo503HTML inyectado en publicada se recupera con España200y2resultados, intercepción restaurada."
             }
           ]
         },
@@ -3696,9 +3867,9 @@
           "group": "Bloque 1C Paneles bajo demanda",
           "text": "Al abrir en 390 × 844 y 1440 × 900, el mapa ocupa el área visible y ninguna tarjeta de resultados está abierta.",
           "kind": "aceptacion",
-          "status": "pendiente",
-          "evidence": "Reverificar: cambiaron los requisitos del sprint.",
-          "updatedAt": "2026-10-11T12:15:42.608Z",
+          "status": "terminado",
+          "evidence": "Sites19: Disclaimer desde Menú y cierre Escape conservan navegación y foco. Cambio limitado al overlay eliminado;25tests existentes aprobados. Fichas y contratos sin cambios. Revisión por impacto: retiro del enlace de marca y sus estilos; motor cartográfico, datos, consultas, paneles y contratos sin cambios. Evidencia anterior vigente para funciones sin cambios; no se atribuye una repetición de esas mediciones: Sites18: integrado155 comprueba Disclaimer con Mapa Táctico, ficha Beirut con fuentes,2capas→0trasCerrar, cámara[-30,20]/zoom1.25conservados y focoEscenarios. document.title sigue Mapa Táctico al regresar. Chrome154320CSSy200%texto verificado;25pruebas y build pasan. Revisión por impacto: este cambio solo modifica nombre/metadata y CSS de la marca; contratos y comportamiento conservados. Evidencia previa vigente para las funciones sin cambios, sin atribuirles una prueba nueva: Sites17: integrado155 con ventanas CSS390×844 y1440×900 medidas en DOM; mapa ocupa exactamente cada viewport,0paneles y0puntos iniciales. Chrome154 publicado1440×900 también0paneles. Compilación idéntica en320×568 con200%texto: sin overflow horizontal y panel desplazable sin cruzar herramientas.",
+          "updatedAt": "2026-10-11T12:18:44.541Z",
           "history": [
             {
               "at": "2026-10-11T11:51:36.370Z",
@@ -3724,6 +3895,11 @@
               "at": "2026-10-11T12:15:42.608Z",
               "status": "pendiente",
               "evidence": "Reverificar: cambiaron los requisitos del sprint."
+            },
+            {
+              "at": "2026-10-11T12:18:44.541Z",
+              "status": "terminado",
+              "evidence": "Sites19: Disclaimer desde Menú y cierre Escape conservan navegación y foco. Cambio limitado al overlay eliminado;25tests existentes aprobados. Fichas y contratos sin cambios. Revisión por impacto: retiro del enlace de marca y sus estilos; motor cartográfico, datos, consultas, paneles y contratos sin cambios. Evidencia anterior vigente para funciones sin cambios; no se atribuye una repetición de esas mediciones: Sites18: integrado155 comprueba Disclaimer con Mapa Táctico, ficha Beirut con fuentes,2capas→0trasCerrar, cámara[-30,20]/zoom1.25conservados y focoEscenarios. document.title sigue Mapa Táctico al regresar. Chrome154320CSSy200%texto verificado;25pruebas y build pasan. Revisión por impacto: este cambio solo modifica nombre/metadata y CSS de la marca; contratos y comportamiento conservados. Evidencia previa vigente para las funciones sin cambios, sin atribuirles una prueba nueva: Sites17: integrado155 con ventanas CSS390×844 y1440×900 medidas en DOM; mapa ocupa exactamente cada viewport,0paneles y0puntos iniciales. Chrome154 publicado1440×900 también0paneles. Compilación idéntica en320×568 con200%texto: sin overflow horizontal y panel desplazable sin cruzar herramientas."
             }
           ],
           "blockId": "1C"
@@ -3733,9 +3909,9 @@
           "group": "Bloque 1C Paneles bajo demanda",
           "text": "Abrir, ejecutar y cerrar conserva la ubicación y el acercamiento; arrastrar no crea puntos.",
           "kind": "aceptacion",
-          "status": "pendiente",
-          "evidence": "Reverificar: cambiaron los requisitos del sprint.",
-          "updatedAt": "2026-10-11T12:15:42.608Z",
+          "status": "terminado",
+          "evidence": "Sites19: Disclaimer desde Menú y cierre Escape conservan navegación y foco. Cambio limitado al overlay eliminado;25tests existentes aprobados. Fichas y contratos sin cambios. Revisión por impacto: retiro del enlace de marca y sus estilos; motor cartográfico, datos, consultas, paneles y contratos sin cambios. Evidencia anterior vigente para funciones sin cambios; no se atribuye una repetición de esas mediciones: Sites18: integrado155 comprueba Disclaimer con Mapa Táctico, ficha Beirut con fuentes,2capas→0trasCerrar, cámara[-30,20]/zoom1.25conservados y focoEscenarios. document.title sigue Mapa Táctico al regresar. Chrome154320CSSy200%texto verificado;25pruebas y build pasan. Revisión por impacto: este cambio solo modifica nombre/metadata y CSS de la marca; contratos y comportamiento conservados. Evidencia previa vigente para las funciones sin cambios, sin atribuirles una prueba nueva: Sites17 integrado155: puntoSantoDomingo[-69.8845,18.4737], abrir/Consultar/Cerrar conserva zoom19 y punto;5m=35.311237px CSS en390×844,pitch0. Chrome154 publicado: arrastre[300,300]→[420,350] conserva1marcador y puntoSantiago. Referencia explícitaBeirut conserva punto libre y al cerrar mantiene cámaraBeirutzoom12.",
+          "updatedAt": "2026-10-11T12:18:44.642Z",
           "history": [
             {
               "at": "2026-10-11T11:51:36.483Z",
@@ -3761,6 +3937,11 @@
               "at": "2026-10-11T12:15:42.608Z",
               "status": "pendiente",
               "evidence": "Reverificar: cambiaron los requisitos del sprint."
+            },
+            {
+              "at": "2026-10-11T12:18:44.642Z",
+              "status": "terminado",
+              "evidence": "Sites19: Disclaimer desde Menú y cierre Escape conservan navegación y foco. Cambio limitado al overlay eliminado;25tests existentes aprobados. Fichas y contratos sin cambios. Revisión por impacto: retiro del enlace de marca y sus estilos; motor cartográfico, datos, consultas, paneles y contratos sin cambios. Evidencia anterior vigente para funciones sin cambios; no se atribuye una repetición de esas mediciones: Sites18: integrado155 comprueba Disclaimer con Mapa Táctico, ficha Beirut con fuentes,2capas→0trasCerrar, cámara[-30,20]/zoom1.25conservados y focoEscenarios. document.title sigue Mapa Táctico al regresar. Chrome154320CSSy200%texto verificado;25pruebas y build pasan. Revisión por impacto: este cambio solo modifica nombre/metadata y CSS de la marca; contratos y comportamiento conservados. Evidencia previa vigente para las funciones sin cambios, sin atribuirles una prueba nueva: Sites17 integrado155: puntoSantoDomingo[-69.8845,18.4737], abrir/Consultar/Cerrar conserva zoom19 y punto;5m=35.311237px CSS en390×844,pitch0. Chrome154 publicado: arrastre[300,300]→[420,350] conserva1marcador y puntoSantiago. Referencia explícitaBeirut conserva punto libre y al cerrar mantiene cámaraBeirutzoom12."
             }
           ],
           "blockId": "1C"
@@ -3770,8 +3951,8 @@
     {
       "number": 2,
       "title": "Idiomas y nombres geográficos",
-      "updatedAt": "2026-10-11T12:15:42.608Z",
-      "phase": "pendiente",
+      "updatedAt": "2026-10-11T13:12:39.650Z",
+      "phase": "en_curso",
       "approval": {
         "status": "pendiente",
         "at": null,
@@ -3866,6 +4047,420 @@
           "at": "2026-10-11T12:15:42.608Z",
           "action": "aceptacion_invalidada",
           "reference": "Cambio de requisitos o contratos desde el sprint 1; verificar de nuevo antes de continuar."
+        },
+        {
+          "at": "2026-10-11T12:19:44.261Z",
+          "action": "start",
+          "pointId": null,
+          "reference": null
+        },
+        {
+          "at": "2026-10-11T12:20:30.103Z",
+          "action": "set",
+          "pointId": "S02-2A-01",
+          "reference": "Inventario de textos de portal, fichas, lectura, errores y mapa; preparando catálogos locales completos."
+        },
+        {
+          "at": "2026-10-11T12:25:18.800Z",
+          "action": "set",
+          "pointId": "S02-2A-01",
+          "reference": "Extraídas82claves de interfaz, errores, fichas, información, disclaimer y metadatos a content/i18n/es.json; componentes consumen MessageKey. Países/calles se localizan en2C; herramienta técnica QA no pertenece al producto. TypeScript correcto;30tests pasan."
+        },
+        {
+          "at": "2026-10-11T12:25:18.998Z",
+          "action": "set",
+          "pointId": "S02-2A-02",
+          "reference": "Detección navegador sin geolocalización implementada; verificando selector y persistencia en vista previa."
+        },
+        {
+          "at": "2026-10-11T12:26:31.553Z",
+          "action": "set",
+          "pointId": "S02-2A-01",
+          "reference": "83claves extraídas a catálogo local y consumidas por interfaz, fichas, errores, información, disclaimer y metadatos. TypeScript ybuild correctos;30tests. Traducciones provisionales se completan y revisan exclusivamente en2B, nombres geográficos en2C."
+        },
+        {
+          "at": "2026-10-11T12:26:31.687Z",
+          "action": "set",
+          "pointId": "S02-2A-02",
+          "reference": "Vista previa compilada127.0.0.1:5173, IAB1280x720:20opciones nativas sin banderas; filtro arab devuelve solo العربية; cambio ja conserva punto(-69.8845,18.4737), centro, zoom15 y firmaBeirut exactos. Urdu cambia aRTL con Storage.setItem bloqueado sin cerrar ficha. Recarga conserva elección manual; sin elección selecciona en del navegador. Prueba de fallos restaurada.5tests negociación/catálogos más25regresiones pasan. Reglas en docs/DECISION_IDIOMAS.md. Traducciones definitivas pendientes2B."
+        },
+        {
+          "at": "2026-10-11T12:26:31.772Z",
+          "action": "set",
+          "pointId": "S02-2A-03",
+          "reference": "Vista previa compilada127.0.0.1:5173, IAB1280x720:20opciones nativas sin banderas; filtro arab devuelve solo العربية; cambio ja conserva punto(-69.8845,18.4737), centro, zoom15 y firmaBeirut exactos. Urdu cambia aRTL con Storage.setItem bloqueado sin cerrar ficha. Recarga conserva elección manual; sin elección selecciona en del navegador. Prueba de fallos restaurada.5tests negociación/catálogos más25regresiones pasan. Reglas en docs/DECISION_IDIOMAS.md. Traducciones definitivas pendientes2B."
+        },
+        {
+          "at": "2026-10-11T12:26:31.863Z",
+          "action": "set",
+          "pointId": "S02-2A-04",
+          "reference": "Vista previa compilada127.0.0.1:5173, IAB1280x720:20opciones nativas sin banderas; filtro arab devuelve solo العربية; cambio ja conserva punto(-69.8845,18.4737), centro, zoom15 y firmaBeirut exactos. Urdu cambia aRTL con Storage.setItem bloqueado sin cerrar ficha. Recarga conserva elección manual; sin elección selecciona en del navegador. Prueba de fallos restaurada.5tests negociación/catálogos más25regresiones pasan. Reglas en docs/DECISION_IDIOMAS.md. Traducciones definitivas pendientes2B."
+        },
+        {
+          "at": "2026-10-11T12:26:31.956Z",
+          "action": "set",
+          "pointId": "S02-2A-05",
+          "reference": "Vista previa compilada127.0.0.1:5173, IAB1280x720:20opciones nativas sin banderas; filtro arab devuelve solo العربية; cambio ja conserva punto(-69.8845,18.4737), centro, zoom15 y firmaBeirut exactos. Urdu cambia aRTL con Storage.setItem bloqueado sin cerrar ficha. Recarga conserva elección manual; sin elección selecciona en del navegador. Prueba de fallos restaurada.5tests negociación/catálogos más25regresiones pasan. Reglas en docs/DECISION_IDIOMAS.md. Traducciones definitivas pendientes2B."
+        },
+        {
+          "at": "2026-10-11T12:26:32.047Z",
+          "action": "set",
+          "pointId": "S02-2A-06",
+          "reference": "Vista previa compilada127.0.0.1:5173, IAB1280x720:20opciones nativas sin banderas; filtro arab devuelve solo العربية; cambio ja conserva punto(-69.8845,18.4737), centro, zoom15 y firmaBeirut exactos. Urdu cambia aRTL con Storage.setItem bloqueado sin cerrar ficha. Recarga conserva elección manual; sin elección selecciona en del navegador. Prueba de fallos restaurada.5tests negociación/catálogos más25regresiones pasan. Reglas en docs/DECISION_IDIOMAS.md. Traducciones definitivas pendientes2B."
+        },
+        {
+          "at": "2026-10-11T12:26:32.145Z",
+          "action": "set",
+          "pointId": "S02-2A-AC-01",
+          "reference": "Vista previa compilada127.0.0.1:5173, IAB1280x720:20opciones nativas sin banderas; filtro arab devuelve solo العربية; cambio ja conserva punto(-69.8845,18.4737), centro, zoom15 y firmaBeirut exactos. Urdu cambia aRTL con Storage.setItem bloqueado sin cerrar ficha. Recarga conserva elección manual; sin elección selecciona en del navegador. Prueba de fallos restaurada.5tests negociación/catálogos más25regresiones pasan. Reglas en docs/DECISION_IDIOMAS.md. Traducciones definitivas pendientes2B."
+        },
+        {
+          "at": "2026-10-11T12:26:32.233Z",
+          "action": "set",
+          "pointId": "S02-2A-AC-02",
+          "reference": "Vista previa compilada127.0.0.1:5173, IAB1280x720:20opciones nativas sin banderas; filtro arab devuelve solo العربية; cambio ja conserva punto(-69.8845,18.4737), centro, zoom15 y firmaBeirut exactos. Urdu cambia aRTL con Storage.setItem bloqueado sin cerrar ficha. Recarga conserva elección manual; sin elección selecciona en del navegador. Prueba de fallos restaurada.5tests negociación/catálogos más25regresiones pasan. Reglas en docs/DECISION_IDIOMAS.md. Traducciones definitivas pendientes2B."
+        },
+        {
+          "at": "2026-10-11T12:26:32.324Z",
+          "action": "set",
+          "pointId": "S02-2A-AC-03",
+          "reference": "Vista previa compilada127.0.0.1:5173, IAB1280x720:20opciones nativas sin banderas; filtro arab devuelve solo العربية; cambio ja conserva punto(-69.8845,18.4737), centro, zoom15 y firmaBeirut exactos. Urdu cambia aRTL con Storage.setItem bloqueado sin cerrar ficha. Recarga conserva elección manual; sin elección selecciona en del navegador. Prueba de fallos restaurada.5tests negociación/catálogos más25regresiones pasan. Reglas en docs/DECISION_IDIOMAS.md. Traducciones definitivas pendientes2B."
+        },
+        {
+          "at": "2026-10-11T12:26:32.417Z",
+          "action": "set",
+          "pointId": "S02-2A-AC-04",
+          "reference": "Vista previa compilada127.0.0.1:5173, IAB1280x720:20opciones nativas sin banderas; filtro arab devuelve solo العربية; cambio ja conserva punto(-69.8845,18.4737), centro, zoom15 y firmaBeirut exactos. Urdu cambia aRTL con Storage.setItem bloqueado sin cerrar ficha. Recarga conserva elección manual; sin elección selecciona en del navegador. Prueba de fallos restaurada.5tests negociación/catálogos más25regresiones pasan. Reglas en docs/DECISION_IDIOMAS.md. Traducciones definitivas pendientes2B."
+        },
+        {
+          "at": "2026-10-11T12:26:32.512Z",
+          "action": "set",
+          "pointId": "S02-2B-01",
+          "reference": "Completar catálogos y revisión lingüística identificada; aún no se declaran terminadas las traducciones."
+        },
+        {
+          "at": "2026-10-11T12:28:22.604Z",
+          "action": "set",
+          "pointId": "S02-2B-02",
+          "reference": "FormateadoresIntl con calendario gregoriano/UTC, numerales y plurales completos; alternativa explícita para punyabí occidental sin sustituir su contenido."
+        },
+        {
+          "at": "2026-10-11T12:30:27.866Z",
+          "action": "set",
+          "pointId": "S02-2B-03",
+          "reference": "lang/dir de documento y composiciónRTL; mapa aisladoLTR, cifras y coordenadas aisladas. Se verificará en ventanas320CSS y texto200%."
+        },
+        {
+          "at": "2026-10-11T12:30:28.028Z",
+          "action": "set",
+          "pointId": "S02-2B-04",
+          "reference": "Cuatro fuentes Noto locales existentes aplicadas explícitamente en paneles; cifras Unicode aceptadas en coordenadas. Escala métrica medianteAPI pública y formatos locales."
+        },
+        {
+          "at": "2026-10-11T12:30:28.177Z",
+          "action": "set",
+          "pointId": "S02-2B-07",
+          "reference": "Pruebas formatos para20idiomas y alternativa explícita pnb-Arab con mesesPunjabi, gregorianoUTC y numeralesarabext; sin cambiar idioma decontenido."
+        },
+        {
+          "at": "2026-10-11T12:31:19.399Z",
+          "action": "set",
+          "pointId": "S02-2B-09",
+          "reference": "Consultas y caché incluyen idioma; cambio cancela respuesta de idioma previo sin borrar resultados existentes. Errores porclave traducidos cliente/servidor; cifras, escala y coordenadas aisladas."
+        },
+        {
+          "at": "2026-10-11T12:32:06.781Z",
+          "action": "set",
+          "pointId": "S02-2B-06",
+          "reference": "VeinteJSON locales conectados estáticamente; auditoría verifica83claves/idioma y variables. Continúa la revisión lingüística identificada por catálogo."
+        },
+        {
+          "at": "2026-10-11T12:32:06.916Z",
+          "action": "set",
+          "pointId": "S02-2B-08",
+          "reference": "Se conserva MapLibre6.13 y sus cuatro font-facesNoto; documentación oficial confirmaRTL incorporado sin plugin externo. Verificando muestras dentro del mapa."
+        },
+        {
+          "at": "2026-10-11T12:33:13.612Z",
+          "action": "set",
+          "pointId": "S02-2B-06",
+          "reference": "Comprobación parcial08:32: faltan archivosru,sw,ha-Latn todavía en elaboración. Importaciones estáticas impiden compilar/pruebas de3suites;16tests ajenos pasan. Completar esoscatálogos y repetir auditoría/TypeScript/tests antes de publicar. No esentrega terminada."
+        },
+        {
+          "at": "2026-10-11T12:34:14.666Z",
+          "action": "set",
+          "pointId": "S02-2B-06",
+          "reference": "Resuelta falta de archivos:20catálogos/83claves completos pasan auditoría; TypeScript y33tests correctos. Compilación y revisión contextual final en curso."
+        },
+        {
+          "at": "2026-10-11T12:34:14.776Z",
+          "action": "set",
+          "pointId": "S02-2B-05",
+          "reference": "Preparando pruebas de los20idiomas en paneles, ventanas320CSS,200%texto, cifras y enlacesRTL. No se declara acabado antes de comprobar."
+        },
+        {
+          "at": "2026-10-11T12:41:06.357Z",
+          "action": "set",
+          "pointId": "S02-2B-05",
+          "reference": "IAB, ventana 320 CSS px y texto 200%: enlace alemán del disclaimer excede el panel (276 px frente a 247 px); se corrige y repetirá la verificación."
+        },
+        {
+          "at": "2026-10-11T12:41:07.044Z",
+          "action": "set",
+          "pointId": "S02-2B-05",
+          "reference": "Corregida la composición del enlace alemán y el ancho mínimo del selector; verificación en compilación nueva pendiente."
+        },
+        {
+          "at": "2026-10-11T12:45:42.444Z",
+          "action": "set",
+          "pointId": "S02-2B-01",
+          "reference": "20 JSON de 83 claves completos; auditoría y 34 pruebas pasan. Revisiones identificadas por IA en docs/i18n, incluida lectura independiente y correcciones aplicadas; no se atribuye certificación humana."
+        },
+        {
+          "at": "2026-10-11T12:45:42.528Z",
+          "action": "set",
+          "pointId": "S02-2B-06",
+          "reference": "20 JSON de 83 claves completos; auditoría y 34 pruebas pasan. Revisiones identificadas por IA en docs/i18n, incluida lectura independiente y correcciones aplicadas; no se atribuye certificación humana."
+        },
+        {
+          "at": "2026-10-11T12:45:42.933Z",
+          "action": "set",
+          "pointId": "S02-2B-02",
+          "reference": "Intl comprobado en Chrome e IAB; alternativas explícitas ha/ur-PK numérico y meses shahmukhi. Tests verifican 20 números/fechas/plurales, coordenadas Unicode y escala; formatos sin modificar datos internos."
+        },
+        {
+          "at": "2026-10-11T12:45:43.022Z",
+          "action": "set",
+          "pointId": "S02-2B-07",
+          "reference": "Intl comprobado en Chrome e IAB; alternativas explícitas ha/ur-PK numérico y meses shahmukhi. Tests verifican 20 números/fechas/plurales, coordenadas Unicode y escala; formatos sin modificar datos internos."
+        },
+        {
+          "at": "2026-10-11T12:45:43.413Z",
+          "action": "set",
+          "pointId": "S02-2B-03",
+          "reference": "Chrome e IAB: lang/dir, RTL ar/ur/pnb, ventana 320 CSS px y texto 200% sin recortes; alemán corregido y repetido. CSS local Noto y campos coordenadas LTR; evidencia docs/DECISION_IDIOMAS.md."
+        },
+        {
+          "at": "2026-10-11T12:45:43.495Z",
+          "action": "set",
+          "pointId": "S02-2B-04",
+          "reference": "Chrome e IAB: lang/dir, RTL ar/ur/pnb, ventana 320 CSS px y texto 200% sin recortes; alemán corregido y repetido. CSS local Noto y campos coordenadas LTR; evidencia docs/DECISION_IDIOMAS.md."
+        },
+        {
+          "at": "2026-10-11T12:45:43.576Z",
+          "action": "set",
+          "pointId": "S02-2B-05",
+          "reference": "Chrome e IAB: lang/dir, RTL ar/ur/pnb, ventana 320 CSS px y texto 200% sin recortes; alemán corregido y repetido. CSS local Noto y campos coordenadas LTR; evidencia docs/DECISION_IDIOMAS.md."
+        },
+        {
+          "at": "2026-10-11T12:45:43.970Z",
+          "action": "set",
+          "pointId": "S02-2B-08",
+          "reference": "Chrome e IAB renderizan las 20 escrituras dentro de MapLibre, scriptCount 20, lectura visual sin cuadros ausentes ni errores. RTL nativo del motor; fuentes locales OFL y glifos Noto fijados en Sprint1."
+        },
+        {
+          "at": "2026-10-11T12:45:44.407Z",
+          "action": "set",
+          "pointId": "S02-2B-09",
+          "reference": "Test ejecutado de caché por lang es/ar/pnb con claves distintas. IAB: respuesta demorada que ignora abort se descarta al cambiar es a en, cero resultados antiguos, búsqueda desbloqueada; edition versionada existente."
+        },
+        {
+          "at": "2026-10-11T12:46:16.541Z",
+          "action": "set",
+          "pointId": "S02-2B-AC-01",
+          "reference": "34 pruebas, auditoría 20x83, compilación y TypeScript pasan. Texto 200% en 320 CSS px comprobado Chrome/IAB; formatos y alternativas documentados. Criterios verificados después de terminar las nueve operaciones."
+        },
+        {
+          "at": "2026-10-11T12:46:16.625Z",
+          "action": "set",
+          "pointId": "S02-2B-AC-02",
+          "reference": "34 pruebas, auditoría 20x83, compilación y TypeScript pasan. Texto 200% en 320 CSS px comprobado Chrome/IAB; formatos y alternativas documentados. Criterios verificados después de terminar las nueve operaciones."
+        },
+        {
+          "at": "2026-10-11T12:46:16.716Z",
+          "action": "set",
+          "pointId": "S02-2B-AC-03",
+          "reference": "34 pruebas, auditoría 20x83, compilación y TypeScript pasan. Texto 200% en 320 CSS px comprobado Chrome/IAB; formatos y alternativas documentados. Criterios verificados después de terminar las nueve operaciones."
+        },
+        {
+          "at": "2026-10-11T12:46:17.114Z",
+          "action": "set",
+          "pointId": "S02-2B-AC-04",
+          "reference": "Chrome/IAB RTL ar/ur/pnb en ventana 320 CSS px y amplia. IAB acepta −٦٩٫٨٨٤٥, ١٨٫٤٧٣٧ y conserva punto -69.8845,18.4737; al cambiar a ar, documento RTL y campos de coordenadas LTR correctos."
+        },
+        {
+          "at": "2026-10-11T12:46:17.499Z",
+          "action": "set",
+          "pointId": "S02-2C-01",
+          "reference": "Bloque 2B verificado; se prepara catálogo propio de países con códigos y anclajes estables, veinte nombres y procedencia/licencia fijada."
+        },
+        {
+          "at": "2026-10-11T12:48:23.781Z",
+          "action": "set",
+          "pointId": "S02-2C-03",
+          "reference": "CLDR48 fijado y licencia Unicode-3.0 descargada; pa-Arab solo aporta PK, se prepara catálogo específico shahmukhi revisado. 239 códigos ordinarios y 19 entidades NE propias; anclajes originales sin mover."
+        },
+        {
+          "at": "2026-10-11T12:48:23.870Z",
+          "action": "set",
+          "pointId": "S02-2C-04",
+          "reference": "CLDR48 fijado y licencia Unicode-3.0 descargada; pa-Arab solo aporta PK, se prepara catálogo específico shahmukhi revisado. 239 códigos ordinarios y 19 entidades NE propias; anclajes originales sin mover."
+        },
+        {
+          "at": "2026-10-11T12:48:23.952Z",
+          "action": "set",
+          "pointId": "S02-2C-07",
+          "reference": "CLDR48 fijado y licencia Unicode-3.0 descargada; pa-Arab solo aporta PK, se prepara catálogo específico shahmukhi revisado. 239 códigos ordinarios y 19 entidades NE propias; anclajes originales sin mover."
+        },
+        {
+          "at": "2026-10-11T12:48:24.038Z",
+          "action": "set",
+          "pointId": "S02-2C-08",
+          "reference": "CLDR48 fijado y licencia Unicode-3.0 descargada; pa-Arab solo aporta PK, se prepara catálogo específico shahmukhi revisado. 239 códigos ordinarios y 19 entidades NE propias; anclajes originales sin mover."
+        },
+        {
+          "at": "2026-10-11T12:52:18.122Z",
+          "action": "set",
+          "pointId": "S02-2C-02",
+          "reference": "Fuente GeoJSON fija 258 entidades; cambio de idioma actualiza únicamente text-field; resultados existentes y país de ubicación se relocalizan por código. No se refleja geografía ni se borran coordenadas."
+        },
+        {
+          "at": "2026-10-11T12:52:18.546Z",
+          "action": "set",
+          "pointId": "S02-2C-05",
+          "reference": "Se conserva el campo oficial name de calles y ciudades; se comprobará estilo y consulta negativa tras integrar países. No se añaden métricas de cobertura demográfica por idiomas."
+        },
+        {
+          "at": "2026-10-11T12:52:18.647Z",
+          "action": "set",
+          "pointId": "S02-2C-06",
+          "reference": "Se conserva el campo oficial name de calles y ciudades; se comprobará estilo y consulta negativa tras integrar países. No se añaden métricas de cobertura demográfica por idiomas."
+        },
+        {
+          "at": "2026-10-11T12:58:07.986Z",
+          "action": "set",
+          "pointId": "S02-2C-01",
+          "reference": "239 códigos de países del buscador, 258 entidades NE y 271 nombres por cada idioma. Los 4780 pares país/idioma se buscan con ID y anclaje original en tests; revisiones de activos IA identificadas y excepciones explícitas. Edición 554aaaf21aba."
+        },
+        {
+          "at": "2026-10-11T12:58:08.086Z",
+          "action": "set",
+          "pointId": "S02-2C-03",
+          "reference": "239 códigos de países del buscador, 258 entidades NE y 271 nombres por cada idioma. Los 4780 pares país/idioma se buscan con ID y anclaje original en tests; revisiones de activos IA identificadas y excepciones explícitas. Edición 554aaaf21aba."
+        },
+        {
+          "at": "2026-10-11T12:58:08.573Z",
+          "action": "set",
+          "pointId": "S02-2C-05",
+          "reference": "Estilo validado en los20idiomas: street-names usa únicamente name oficial o name:latin publicado; consultas reales excluyen calles, edificios y POI. Sin sumas de hablantes ni porcentajes de población por idioma en producto."
+        },
+        {
+          "at": "2026-10-11T12:58:08.688Z",
+          "action": "set",
+          "pointId": "S02-2C-06",
+          "reference": "Estilo validado en los20idiomas: street-names usa únicamente name oficial o name:latin publicado; consultas reales excluyen calles, edificios y POI. Sin sumas de hablantes ni porcentajes de población por idioma en producto."
+        },
+        {
+          "at": "2026-10-11T12:59:19.872Z",
+          "action": "set",
+          "pointId": "S02-2C-07",
+          "reference": "Verificación del navegador: MapLibre devuelve ID 0 para IDs GeoJSON de texto sin promoteId; la consulta de excepciones necesita preservar id de propiedades. Se corrige el adaptador y se repite."
+        },
+        {
+          "at": "2026-10-11T12:59:34.430Z",
+          "action": "set",
+          "pointId": "S02-2C-07",
+          "reference": "Fuente usa promoteId id y la selección utiliza properties.id; estilo válido en20idiomas, 39 pruebas y TypeScript pasan. Verificación de IDs renderizados pendiente en compilación nueva."
+        },
+        {
+          "at": "2026-10-11T13:12:15.541Z",
+          "action": "set",
+          "pointId": "S02-2B-01",
+          "reference": "Edición final 84 claves por idioma, incluida countryOriginal revisada en veinte lenguas; auditoría y 39 pruebas pasan. Revisiones identificadas docs/i18n y comprobación final local docs/DECISION_IDIOMAS.md."
+        },
+        {
+          "at": "2026-10-11T13:12:15.658Z",
+          "action": "set",
+          "pointId": "S02-2B-06",
+          "reference": "Edición final 84 claves por idioma, incluida countryOriginal revisada en veinte lenguas; auditoría y 39 pruebas pasan. Revisiones identificadas docs/i18n y comprobación final local docs/DECISION_IDIOMAS.md."
+        },
+        {
+          "at": "2026-10-11T13:12:15.748Z",
+          "action": "set",
+          "pointId": "S02-2B-AC-02",
+          "reference": "Edición final 84 claves por idioma, incluida countryOriginal revisada en veinte lenguas; auditoría y 39 pruebas pasan. Revisiones identificadas docs/i18n y comprobación final local docs/DECISION_IDIOMAS.md."
+        },
+        {
+          "at": "2026-10-11T13:12:15.839Z",
+          "action": "set",
+          "pointId": "S02-2B-AC-03",
+          "reference": "Edición final 84 claves por idioma, incluida countryOriginal revisada en veinte lenguas; auditoría y 39 pruebas pasan. Revisiones identificadas docs/i18n y comprobación final local docs/DECISION_IDIOMAS.md."
+        },
+        {
+          "at": "2026-10-11T13:12:38.486Z",
+          "action": "set",
+          "pointId": "S02-2B-AC-01",
+          "reference": "Recomprobación edición 84 claves: formatos de veinte idiomas pasan referencias sin alterar significado. Chrome e IAB 320 CSS px y texto 200% alemán/árabe/urdu/shahmukhi/telugu sin recorte; fuentes y coordenadas RTL legibles, Escape y controles accesibles. Evidencia final docs/DECISION_IDIOMAS.md y 39 pruebas."
+        },
+        {
+          "at": "2026-10-11T13:12:38.583Z",
+          "action": "set",
+          "pointId": "S02-2B-AC-04",
+          "reference": "Recomprobación edición 84 claves: formatos de veinte idiomas pasan referencias sin alterar significado. Chrome e IAB 320 CSS px y texto 200% alemán/árabe/urdu/shahmukhi/telugu sin recorte; fuentes y coordenadas RTL legibles, Escape y controles accesibles. Evidencia final docs/DECISION_IDIOMAS.md y 39 pruebas."
+        },
+        {
+          "at": "2026-10-11T13:12:38.721Z",
+          "action": "set",
+          "pointId": "S02-2C-02",
+          "reference": "Compilación local final 11/10 09:12 SD: IAB y Chrome recorren veinte countryField y etiquetas renderizadas, conservando centro/zoom; IAB además punto country-DE. Fichas y disclaimer en veinte lenguas, misma firma. Evidencia docs/DECISION_IDIOMAS.md."
+        },
+        {
+          "at": "2026-10-11T13:12:38.813Z",
+          "action": "set",
+          "pointId": "S02-2C-07",
+          "reference": "Compilación local final 11/10 09:12 SD: IAB y Chrome recorren veinte countryField y etiquetas renderizadas, conservando centro/zoom; IAB además punto country-DE. Fichas y disclaimer en veinte lenguas, misma firma. Evidencia docs/DECISION_IDIOMAS.md."
+        },
+        {
+          "at": "2026-10-11T13:12:38.952Z",
+          "action": "set",
+          "pointId": "S02-2C-04",
+          "reference": "Excepción real Spratly, ne-PGA: etiqueta pulsada en maratí y panel muestra nombre original más explicación traducida. Catálogos y manifest.fallbacks revisados; no se reemplaza un catálogo completo por inglés. promoteId y properties.id conservan identidad. docs/DECISION_PAISES.md."
+        },
+        {
+          "at": "2026-10-11T13:12:39.086Z",
+          "action": "set",
+          "pointId": "S02-2C-08",
+          "reference": "Búsqueda HTTP local en veinte idiomas: Alemania country-DE, HTTP200 y coordenadas idénticas; interfaz árabe relocalizada a shahmukhi y resultado seleccionado. Test 4780 nombres/identificadores, cache por idioma/edición, lista positiva país/ciudad; calles oficiales permanecen. 39 pruebas pasan."
+        },
+        {
+          "at": "2026-10-11T13:12:39.224Z",
+          "action": "set",
+          "pointId": "S02-2C-AC-01",
+          "reference": "239 códigos y 19 entidades propias con mismos anclajes en20idiomas; 271 nombres por idioma auditados con fuentes fijas y revisiones identificadas. Chrome/IAB20idiomas renderizados, sin duplicación de capa ni movimiento de centro/zoom. 39 pruebas; docs/DECISION_PAISES.md y docs/DECISION_IDIOMAS.md."
+        },
+        {
+          "at": "2026-10-11T13:12:39.316Z",
+          "action": "set",
+          "pointId": "S02-2C-AC-02",
+          "reference": "239 códigos y 19 entidades propias con mismos anclajes en20idiomas; 271 nombres por idioma auditados con fuentes fijas y revisiones identificadas. Chrome/IAB20idiomas renderizados, sin duplicación de capa ni movimiento de centro/zoom. 39 pruebas; docs/DECISION_PAISES.md y docs/DECISION_IDIOMAS.md."
+        },
+        {
+          "at": "2026-10-11T13:12:39.404Z",
+          "action": "set",
+          "pointId": "S02-2C-AC-04",
+          "reference": "239 códigos y 19 entidades propias con mismos anclajes en20idiomas; 271 nombres por idioma auditados con fuentes fijas y revisiones identificadas. Chrome/IAB20idiomas renderizados, sin duplicación de capa ni movimiento de centro/zoom. 39 pruebas; docs/DECISION_PAISES.md y docs/DECISION_IDIOMAS.md."
+        },
+        {
+          "at": "2026-10-11T13:12:39.554Z",
+          "action": "set",
+          "pointId": "S02-2C-AC-03",
+          "reference": "IAB cambia veinte idiomas conservando punto9.678348/50.961733 zoom3 y country-DE; controles/resultados, Beirut firma context-20261011-2 y disclaimer traducidos. API veinte nombres Alemania devuelve country-DE mismas coordenadas; país de ficha country-LB localizado. Calles expresión oficial preservada. 39pruebas."
+        },
+        {
+          "at": "2026-10-11T13:12:39.650Z",
+          "action": "set",
+          "pointId": "S02-2C-AC-05",
+          "reference": "IAB cambia veinte idiomas conservando punto9.678348/50.961733 zoom3 y country-DE; controles/resultados, Beirut firma context-20261011-2 y disclaimer traducidos. API veinte nombres Alemania devuelve country-DE mismas coordenadas; país de ficha country-LB localizado. Calles expresión oficial preservada. 39pruebas."
         }
       ],
       "points": [
@@ -3874,10 +4469,26 @@
           "group": "Bloque 2A Registro de idiomas y selección",
           "text": "Extraer todos los textos visibles y accesibles a catálogos de traducción: botones, errores, búsquedas, categorías, cifras, paneles, fuentes, disclaimer y metadatos del sitio.",
           "kind": "operacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-10T13:47:29.679Z",
-          "history": [],
+          "status": "terminado",
+          "evidence": "83claves extraídas a catálogo local y consumidas por interfaz, fichas, errores, información, disclaimer y metadatos. TypeScript ybuild correctos;30tests. Traducciones provisionales se completan y revisan exclusivamente en2B, nombres geográficos en2C.",
+          "updatedAt": "2026-10-11T12:26:31.553Z",
+          "history": [
+            {
+              "at": "2026-10-11T12:20:30.103Z",
+              "status": "en_curso",
+              "evidence": "Inventario de textos de portal, fichas, lectura, errores y mapa; preparando catálogos locales completos."
+            },
+            {
+              "at": "2026-10-11T12:25:18.800Z",
+              "status": "terminado",
+              "evidence": "Extraídas82claves de interfaz, errores, fichas, información, disclaimer y metadatos a content/i18n/es.json; componentes consumen MessageKey. Países/calles se localizan en2C; herramienta técnica QA no pertenece al producto. TypeScript correcto;30tests pasan."
+            },
+            {
+              "at": "2026-10-11T12:26:31.553Z",
+              "status": "terminado",
+              "evidence": "83claves extraídas a catálogo local y consumidas por interfaz, fichas, errores, información, disclaimer y metadatos. TypeScript ybuild correctos;30tests. Traducciones provisionales se completan y revisan exclusivamente en2B, nombres geográficos en2C."
+            }
+          ],
           "blockId": "2A"
         },
         {
@@ -3885,10 +4496,21 @@
           "group": "Bloque 2A Registro de idiomas y selección",
           "text": "Detectar inicialmente el idioma preferido del navegador. Usar la región como criterio complementario solamente cuando esté disponible y sea pertinente; no pedir localización precisa para elegir idioma.",
           "kind": "operacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-10T13:47:29.679Z",
-          "history": [],
+          "status": "terminado",
+          "evidence": "Vista previa compilada127.0.0.1:5173, IAB1280x720:20opciones nativas sin banderas; filtro arab devuelve solo العربية; cambio ja conserva punto(-69.8845,18.4737), centro, zoom15 y firmaBeirut exactos. Urdu cambia aRTL con Storage.setItem bloqueado sin cerrar ficha. Recarga conserva elección manual; sin elección selecciona en del navegador. Prueba de fallos restaurada.5tests negociación/catálogos más25regresiones pasan. Reglas en docs/DECISION_IDIOMAS.md. Traducciones definitivas pendientes2B.",
+          "updatedAt": "2026-10-11T12:26:31.687Z",
+          "history": [
+            {
+              "at": "2026-10-11T12:25:18.998Z",
+              "status": "en_curso",
+              "evidence": "Detección navegador sin geolocalización implementada; verificando selector y persistencia en vista previa."
+            },
+            {
+              "at": "2026-10-11T12:26:31.687Z",
+              "status": "terminado",
+              "evidence": "Vista previa compilada127.0.0.1:5173, IAB1280x720:20opciones nativas sin banderas; filtro arab devuelve solo العربية; cambio ja conserva punto(-69.8845,18.4737), centro, zoom15 y firmaBeirut exactos. Urdu cambia aRTL con Storage.setItem bloqueado sin cerrar ficha. Recarga conserva elección manual; sin elección selecciona en del navegador. Prueba de fallos restaurada.5tests negociación/catálogos más25regresiones pasan. Reglas en docs/DECISION_IDIOMAS.md. Traducciones definitivas pendientes2B."
+            }
+          ],
           "blockId": "2A"
         },
         {
@@ -3896,10 +4518,16 @@
           "group": "Bloque 2A Registro de idiomas y selección",
           "text": "Aplicar prioridad: elección manual guardada, preferencia compatible del navegador y español como alternativa predeterminada. Documentar el emparejamiento entre variantes como es-DO y es, así como variantes chinas de distinta escritura.",
           "kind": "operacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-10T13:47:29.679Z",
-          "history": [],
+          "status": "terminado",
+          "evidence": "Vista previa compilada127.0.0.1:5173, IAB1280x720:20opciones nativas sin banderas; filtro arab devuelve solo العربية; cambio ja conserva punto(-69.8845,18.4737), centro, zoom15 y firmaBeirut exactos. Urdu cambia aRTL con Storage.setItem bloqueado sin cerrar ficha. Recarga conserva elección manual; sin elección selecciona en del navegador. Prueba de fallos restaurada.5tests negociación/catálogos más25regresiones pasan. Reglas en docs/DECISION_IDIOMAS.md. Traducciones definitivas pendientes2B.",
+          "updatedAt": "2026-10-11T12:26:31.772Z",
+          "history": [
+            {
+              "at": "2026-10-11T12:26:31.772Z",
+              "status": "terminado",
+              "evidence": "Vista previa compilada127.0.0.1:5173, IAB1280x720:20opciones nativas sin banderas; filtro arab devuelve solo العربية; cambio ja conserva punto(-69.8845,18.4737), centro, zoom15 y firmaBeirut exactos. Urdu cambia aRTL con Storage.setItem bloqueado sin cerrar ficha. Recarga conserva elección manual; sin elección selecciona en del navegador. Prueba de fallos restaurada.5tests negociación/catálogos más25regresiones pasan. Reglas en docs/DECISION_IDIOMAS.md. Traducciones definitivas pendientes2B."
+            }
+          ],
           "blockId": "2A"
         },
         {
@@ -3907,10 +4535,16 @@
           "group": "Bloque 2A Registro de idiomas y selección",
           "text": "Hacer que el selector esté siempre disponible desde el menú flotante. Utilizar nombres nativos, permitir búsqueda y no representar idiomas mediante banderas.",
           "kind": "operacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-10T13:47:29.679Z",
-          "history": [],
+          "status": "terminado",
+          "evidence": "Vista previa compilada127.0.0.1:5173, IAB1280x720:20opciones nativas sin banderas; filtro arab devuelve solo العربية; cambio ja conserva punto(-69.8845,18.4737), centro, zoom15 y firmaBeirut exactos. Urdu cambia aRTL con Storage.setItem bloqueado sin cerrar ficha. Recarga conserva elección manual; sin elección selecciona en del navegador. Prueba de fallos restaurada.5tests negociación/catálogos más25regresiones pasan. Reglas en docs/DECISION_IDIOMAS.md. Traducciones definitivas pendientes2B.",
+          "updatedAt": "2026-10-11T12:26:31.863Z",
+          "history": [
+            {
+              "at": "2026-10-11T12:26:31.863Z",
+              "status": "terminado",
+              "evidence": "Vista previa compilada127.0.0.1:5173, IAB1280x720:20opciones nativas sin banderas; filtro arab devuelve solo العربية; cambio ja conserva punto(-69.8845,18.4737), centro, zoom15 y firmaBeirut exactos. Urdu cambia aRTL con Storage.setItem bloqueado sin cerrar ficha. Recarga conserva elección manual; sin elección selecciona en del navegador. Prueba de fallos restaurada.5tests negociación/catálogos más25regresiones pasan. Reglas en docs/DECISION_IDIOMAS.md. Traducciones definitivas pendientes2B."
+            }
+          ],
           "blockId": "2A"
         },
         {
@@ -3918,10 +4552,16 @@
           "group": "Bloque 2A Registro de idiomas y selección",
           "text": "Recordar la elección manual en el navegador. Si el almacenamiento está bloqueado, mantener el idioma durante la sesión sin interrumpir al usuario.",
           "kind": "operacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-10T13:47:29.679Z",
-          "history": [],
+          "status": "terminado",
+          "evidence": "Vista previa compilada127.0.0.1:5173, IAB1280x720:20opciones nativas sin banderas; filtro arab devuelve solo العربية; cambio ja conserva punto(-69.8845,18.4737), centro, zoom15 y firmaBeirut exactos. Urdu cambia aRTL con Storage.setItem bloqueado sin cerrar ficha. Recarga conserva elección manual; sin elección selecciona en del navegador. Prueba de fallos restaurada.5tests negociación/catálogos más25regresiones pasan. Reglas en docs/DECISION_IDIOMAS.md. Traducciones definitivas pendientes2B.",
+          "updatedAt": "2026-10-11T12:26:31.956Z",
+          "history": [
+            {
+              "at": "2026-10-11T12:26:31.956Z",
+              "status": "terminado",
+              "evidence": "Vista previa compilada127.0.0.1:5173, IAB1280x720:20opciones nativas sin banderas; filtro arab devuelve solo العربية; cambio ja conserva punto(-69.8845,18.4737), centro, zoom15 y firmaBeirut exactos. Urdu cambia aRTL con Storage.setItem bloqueado sin cerrar ficha. Recarga conserva elección manual; sin elección selecciona en del navegador. Prueba de fallos restaurada.5tests negociación/catálogos más25regresiones pasan. Reglas en docs/DECISION_IDIOMAS.md. Traducciones definitivas pendientes2B."
+            }
+          ],
           "blockId": "2A"
         },
         {
@@ -3929,10 +4569,16 @@
           "group": "Bloque 2A Registro de idiomas y selección",
           "text": "Cambiar inmediatamente la interfaz sin recargar, perder ubicación, cerrar un resultado vigente ni reiniciar la configuración.",
           "kind": "operacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-10T13:47:29.679Z",
-          "history": [],
+          "status": "terminado",
+          "evidence": "Vista previa compilada127.0.0.1:5173, IAB1280x720:20opciones nativas sin banderas; filtro arab devuelve solo العربية; cambio ja conserva punto(-69.8845,18.4737), centro, zoom15 y firmaBeirut exactos. Urdu cambia aRTL con Storage.setItem bloqueado sin cerrar ficha. Recarga conserva elección manual; sin elección selecciona en del navegador. Prueba de fallos restaurada.5tests negociación/catálogos más25regresiones pasan. Reglas en docs/DECISION_IDIOMAS.md. Traducciones definitivas pendientes2B.",
+          "updatedAt": "2026-10-11T12:26:32.047Z",
+          "history": [
+            {
+              "at": "2026-10-11T12:26:32.047Z",
+              "status": "terminado",
+              "evidence": "Vista previa compilada127.0.0.1:5173, IAB1280x720:20opciones nativas sin banderas; filtro arab devuelve solo العربية; cambio ja conserva punto(-69.8845,18.4737), centro, zoom15 y firmaBeirut exactos. Urdu cambia aRTL con Storage.setItem bloqueado sin cerrar ficha. Recarga conserva elección manual; sin elección selecciona en del navegador. Prueba de fallos restaurada.5tests negociación/catálogos más25regresiones pasan. Reglas en docs/DECISION_IDIOMAS.md. Traducciones definitivas pendientes2B."
+            }
+          ],
           "blockId": "2A"
         },
         {
@@ -3941,10 +4587,16 @@
           "group": "Bloque 2A Registro de idiomas y selección",
           "text": "El selector contiene los veinte idiomas con nombres nativos, búsqueda y prioridad documentada: elección manual, navegador compatible y español como alternativa.",
           "kind": "aceptacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-10T18:28:51.099Z",
-          "history": []
+          "status": "terminado",
+          "evidence": "Vista previa compilada127.0.0.1:5173, IAB1280x720:20opciones nativas sin banderas; filtro arab devuelve solo العربية; cambio ja conserva punto(-69.8845,18.4737), centro, zoom15 y firmaBeirut exactos. Urdu cambia aRTL con Storage.setItem bloqueado sin cerrar ficha. Recarga conserva elección manual; sin elección selecciona en del navegador. Prueba de fallos restaurada.5tests negociación/catálogos más25regresiones pasan. Reglas en docs/DECISION_IDIOMAS.md. Traducciones definitivas pendientes2B.",
+          "updatedAt": "2026-10-11T12:26:32.145Z",
+          "history": [
+            {
+              "at": "2026-10-11T12:26:32.145Z",
+              "status": "terminado",
+              "evidence": "Vista previa compilada127.0.0.1:5173, IAB1280x720:20opciones nativas sin banderas; filtro arab devuelve solo العربية; cambio ja conserva punto(-69.8845,18.4737), centro, zoom15 y firmaBeirut exactos. Urdu cambia aRTL con Storage.setItem bloqueado sin cerrar ficha. Recarga conserva elección manual; sin elección selecciona en del navegador. Prueba de fallos restaurada.5tests negociación/catálogos más25regresiones pasan. Reglas en docs/DECISION_IDIOMAS.md. Traducciones definitivas pendientes2B."
+            }
+          ]
         },
         {
           "id": "S02-2A-AC-02",
@@ -3952,10 +4604,16 @@
           "group": "Bloque 2A Registro de idiomas y selección",
           "text": "La detección no pide ubicación precisa; la elección manual cambia el estado de idioma sin perder punto, zoom o configuración y se conserva durante la sesión aunque el almacenamiento esté bloqueado.",
           "kind": "aceptacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-10T18:28:51.099Z",
-          "history": []
+          "status": "terminado",
+          "evidence": "Vista previa compilada127.0.0.1:5173, IAB1280x720:20opciones nativas sin banderas; filtro arab devuelve solo العربية; cambio ja conserva punto(-69.8845,18.4737), centro, zoom15 y firmaBeirut exactos. Urdu cambia aRTL con Storage.setItem bloqueado sin cerrar ficha. Recarga conserva elección manual; sin elección selecciona en del navegador. Prueba de fallos restaurada.5tests negociación/catálogos más25regresiones pasan. Reglas en docs/DECISION_IDIOMAS.md. Traducciones definitivas pendientes2B.",
+          "updatedAt": "2026-10-11T12:26:32.233Z",
+          "history": [
+            {
+              "at": "2026-10-11T12:26:32.233Z",
+              "status": "terminado",
+              "evidence": "Vista previa compilada127.0.0.1:5173, IAB1280x720:20opciones nativas sin banderas; filtro arab devuelve solo العربية; cambio ja conserva punto(-69.8845,18.4737), centro, zoom15 y firmaBeirut exactos. Urdu cambia aRTL con Storage.setItem bloqueado sin cerrar ficha. Recarga conserva elección manual; sin elección selecciona en del navegador. Prueba de fallos restaurada.5tests negociación/catálogos más25regresiones pasan. Reglas en docs/DECISION_IDIOMAS.md. Traducciones definitivas pendientes2B."
+            }
+          ]
         },
         {
           "id": "S02-2A-AC-03",
@@ -3963,20 +4621,32 @@
           "group": "Bloque 2A Registro de idiomas y selección",
           "text": "Las claves de todos los textos existentes están extraídas y el selector está conectado a catálogos locales; el cambio de idioma no necesita un servicio de traducción por renderizado.",
           "kind": "aceptacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-10T18:28:51.099Z",
-          "history": []
+          "status": "terminado",
+          "evidence": "Vista previa compilada127.0.0.1:5173, IAB1280x720:20opciones nativas sin banderas; filtro arab devuelve solo العربية; cambio ja conserva punto(-69.8845,18.4737), centro, zoom15 y firmaBeirut exactos. Urdu cambia aRTL con Storage.setItem bloqueado sin cerrar ficha. Recarga conserva elección manual; sin elección selecciona en del navegador. Prueba de fallos restaurada.5tests negociación/catálogos más25regresiones pasan. Reglas en docs/DECISION_IDIOMAS.md. Traducciones definitivas pendientes2B.",
+          "updatedAt": "2026-10-11T12:26:32.324Z",
+          "history": [
+            {
+              "at": "2026-10-11T12:26:32.324Z",
+              "status": "terminado",
+              "evidence": "Vista previa compilada127.0.0.1:5173, IAB1280x720:20opciones nativas sin banderas; filtro arab devuelve solo العربية; cambio ja conserva punto(-69.8845,18.4737), centro, zoom15 y firmaBeirut exactos. Urdu cambia aRTL con Storage.setItem bloqueado sin cerrar ficha. Recarga conserva elección manual; sin elección selecciona en del navegador. Prueba de fallos restaurada.5tests negociación/catálogos más25regresiones pasan. Reglas en docs/DECISION_IDIOMAS.md. Traducciones definitivas pendientes2B."
+            }
+          ]
         },
         {
           "id": "S02-2A-AC-04",
           "group": "Bloque 2A Registro de idiomas y selección",
           "text": "Al regresar, se conserva la elección manual aunque el navegador prefiera otro idioma.",
           "kind": "aceptacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-10T13:47:29.679Z",
-          "history": [],
+          "status": "terminado",
+          "evidence": "Vista previa compilada127.0.0.1:5173, IAB1280x720:20opciones nativas sin banderas; filtro arab devuelve solo العربية; cambio ja conserva punto(-69.8845,18.4737), centro, zoom15 y firmaBeirut exactos. Urdu cambia aRTL con Storage.setItem bloqueado sin cerrar ficha. Recarga conserva elección manual; sin elección selecciona en del navegador. Prueba de fallos restaurada.5tests negociación/catálogos más25regresiones pasan. Reglas en docs/DECISION_IDIOMAS.md. Traducciones definitivas pendientes2B.",
+          "updatedAt": "2026-10-11T12:26:32.417Z",
+          "history": [
+            {
+              "at": "2026-10-11T12:26:32.417Z",
+              "status": "terminado",
+              "evidence": "Vista previa compilada127.0.0.1:5173, IAB1280x720:20opciones nativas sin banderas; filtro arab devuelve solo العربية; cambio ja conserva punto(-69.8845,18.4737), centro, zoom15 y firmaBeirut exactos. Urdu cambia aRTL con Storage.setItem bloqueado sin cerrar ficha. Recarga conserva elección manual; sin elección selecciona en del navegador. Prueba de fallos restaurada.5tests negociación/catálogos más25regresiones pasan. Reglas en docs/DECISION_IDIOMAS.md. Traducciones definitivas pendientes2B."
+            }
+          ],
           "blockId": "2A"
         },
         {
@@ -3984,10 +4654,26 @@
           "group": "Bloque 2B Traducción y composición",
           "text": "Completar y revisar las traducciones de todo el producto existente. No concatenar fragmentos que impidan concordancia; permitir traducciones de frases y plurales completos.",
           "kind": "operacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-10T13:47:29.679Z",
-          "history": [],
+          "status": "terminado",
+          "evidence": "Edición final 84 claves por idioma, incluida countryOriginal revisada en veinte lenguas; auditoría y 39 pruebas pasan. Revisiones identificadas docs/i18n y comprobación final local docs/DECISION_IDIOMAS.md.",
+          "updatedAt": "2026-10-11T13:12:15.541Z",
+          "history": [
+            {
+              "at": "2026-10-11T12:26:32.512Z",
+              "status": "en_curso",
+              "evidence": "Completar catálogos y revisión lingüística identificada; aún no se declaran terminadas las traducciones."
+            },
+            {
+              "at": "2026-10-11T12:45:42.444Z",
+              "status": "terminado",
+              "evidence": "20 JSON de 83 claves completos; auditoría y 34 pruebas pasan. Revisiones identificadas por IA en docs/i18n, incluida lectura independiente y correcciones aplicadas; no se atribuye certificación humana."
+            },
+            {
+              "at": "2026-10-11T13:12:15.541Z",
+              "status": "terminado",
+              "evidence": "Edición final 84 claves por idioma, incluida countryOriginal revisada en veinte lenguas; auditoría y 39 pruebas pasan. Revisiones identificadas docs/i18n y comprobación final local docs/DECISION_IDIOMAS.md."
+            }
+          ],
           "blockId": "2B"
         },
         {
@@ -3995,10 +4681,21 @@
           "group": "Bloque 2B Traducción y composición",
           "text": "Formatear cantidades, fechas y unidades según el idioma. Mantener el significado de cada cifra aunque cambie su representación; evitar separadores decimales o fechas ambiguas.",
           "kind": "operacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-10T13:47:29.679Z",
-          "history": [],
+          "status": "terminado",
+          "evidence": "Intl comprobado en Chrome e IAB; alternativas explícitas ha/ur-PK numérico y meses shahmukhi. Tests verifican 20 números/fechas/plurales, coordenadas Unicode y escala; formatos sin modificar datos internos.",
+          "updatedAt": "2026-10-11T12:45:42.933Z",
+          "history": [
+            {
+              "at": "2026-10-11T12:28:22.604Z",
+              "status": "en_curso",
+              "evidence": "FormateadoresIntl con calendario gregoriano/UTC, numerales y plurales completos; alternativa explícita para punyabí occidental sin sustituir su contenido."
+            },
+            {
+              "at": "2026-10-11T12:45:42.933Z",
+              "status": "terminado",
+              "evidence": "Intl comprobado en Chrome e IAB; alternativas explícitas ha/ur-PK numérico y meses shahmukhi. Tests verifican 20 números/fechas/plurales, coordenadas Unicode y escala; formatos sin modificar datos internos."
+            }
+          ],
           "blockId": "2B"
         },
         {
@@ -4006,10 +4703,21 @@
           "group": "Bloque 2B Traducción y composición",
           "text": "Configurar lang y dirección de lectura en el documento. Adaptar paneles y controles al árabe, urdu y punyabí occidental. El mapa conserva el significado geográfico: no se refleja como una imagen.",
           "kind": "operacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-10T13:47:29.679Z",
-          "history": [],
+          "status": "terminado",
+          "evidence": "Chrome e IAB: lang/dir, RTL ar/ur/pnb, ventana 320 CSS px y texto 200% sin recortes; alemán corregido y repetido. CSS local Noto y campos coordenadas LTR; evidencia docs/DECISION_IDIOMAS.md.",
+          "updatedAt": "2026-10-11T12:45:43.413Z",
+          "history": [
+            {
+              "at": "2026-10-11T12:30:27.866Z",
+              "status": "en_curso",
+              "evidence": "lang/dir de documento y composiciónRTL; mapa aisladoLTR, cifras y coordenadas aisladas. Se verificará en ventanas320CSS y texto200%."
+            },
+            {
+              "at": "2026-10-11T12:45:43.413Z",
+              "status": "terminado",
+              "evidence": "Chrome e IAB: lang/dir, RTL ar/ur/pnb, ventana 320 CSS px y texto 200% sin recortes; alemán corregido y repetido. CSS local Noto y campos coordenadas LTR; evidencia docs/DECISION_IDIOMAS.md."
+            }
+          ],
           "blockId": "2B"
         },
         {
@@ -4017,10 +4725,21 @@
           "group": "Bloque 2B Traducción y composición",
           "text": "Utilizar fuentes que cubran todas las escrituras. Probar cifras mezcladas con texto de derecha a izquierda, coordenadas y enlaces para evitar reordenamientos incorrectos.",
           "kind": "operacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-10T13:47:29.679Z",
-          "history": [],
+          "status": "terminado",
+          "evidence": "Chrome e IAB: lang/dir, RTL ar/ur/pnb, ventana 320 CSS px y texto 200% sin recortes; alemán corregido y repetido. CSS local Noto y campos coordenadas LTR; evidencia docs/DECISION_IDIOMAS.md.",
+          "updatedAt": "2026-10-11T12:45:43.495Z",
+          "history": [
+            {
+              "at": "2026-10-11T12:30:28.028Z",
+              "status": "en_curso",
+              "evidence": "Cuatro fuentes Noto locales existentes aplicadas explícitamente en paneles; cifras Unicode aceptadas en coordenadas. Escala métrica medianteAPI pública y formatos locales."
+            },
+            {
+              "at": "2026-10-11T12:45:43.495Z",
+              "status": "terminado",
+              "evidence": "Chrome e IAB: lang/dir, RTL ar/ur/pnb, ventana 320 CSS px y texto 200% sin recortes; alemán corregido y repetido. CSS local Noto y campos coordenadas LTR; evidencia docs/DECISION_IDIOMAS.md."
+            }
+          ],
           "blockId": "2B"
         },
         {
@@ -4028,10 +4747,31 @@
           "group": "Bloque 2B Traducción y composición",
           "text": "Probar textos largos, caracteres compuestos y tamaños de letra ampliados. Los botones no deben recortar su acción ni depender de una traducción artificialmente corta.",
           "kind": "operacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-10T13:47:29.679Z",
-          "history": [],
+          "status": "terminado",
+          "evidence": "Chrome e IAB: lang/dir, RTL ar/ur/pnb, ventana 320 CSS px y texto 200% sin recortes; alemán corregido y repetido. CSS local Noto y campos coordenadas LTR; evidencia docs/DECISION_IDIOMAS.md.",
+          "updatedAt": "2026-10-11T12:45:43.576Z",
+          "history": [
+            {
+              "at": "2026-10-11T12:34:14.776Z",
+              "status": "en_curso",
+              "evidence": "Preparando pruebas de los20idiomas en paneles, ventanas320CSS,200%texto, cifras y enlacesRTL. No se declara acabado antes de comprobar."
+            },
+            {
+              "at": "2026-10-11T12:41:06.357Z",
+              "status": "no_completado",
+              "evidence": "IAB, ventana 320 CSS px y texto 200%: enlace alemán del disclaimer excede el panel (276 px frente a 247 px); se corrige y repetirá la verificación."
+            },
+            {
+              "at": "2026-10-11T12:41:07.044Z",
+              "status": "en_curso",
+              "evidence": "Corregida la composición del enlace alemán y el ancho mínimo del selector; verificación en compilación nueva pendiente."
+            },
+            {
+              "at": "2026-10-11T12:45:43.576Z",
+              "status": "terminado",
+              "evidence": "Chrome e IAB: lang/dir, RTL ar/ur/pnb, ventana 320 CSS px y texto 200% sin recortes; alemán corregido y repetido. CSS local Noto y campos coordenadas LTR; evidencia docs/DECISION_IDIOMAS.md."
+            }
+          ],
           "blockId": "2B"
         },
         {
@@ -4039,10 +4779,36 @@
           "group": "Bloque 2B Traducción y composición",
           "text": "No consultar un servicio de traducción cada vez que se pinta un control. Entregar catálogos versionados, revisables y disponibles aunque el servicio externo falle.",
           "kind": "operacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-10T13:47:29.679Z",
-          "history": [],
+          "status": "terminado",
+          "evidence": "Edición final 84 claves por idioma, incluida countryOriginal revisada en veinte lenguas; auditoría y 39 pruebas pasan. Revisiones identificadas docs/i18n y comprobación final local docs/DECISION_IDIOMAS.md.",
+          "updatedAt": "2026-10-11T13:12:15.658Z",
+          "history": [
+            {
+              "at": "2026-10-11T12:32:06.781Z",
+              "status": "en_curso",
+              "evidence": "VeinteJSON locales conectados estáticamente; auditoría verifica83claves/idioma y variables. Continúa la revisión lingüística identificada por catálogo."
+            },
+            {
+              "at": "2026-10-11T12:33:13.612Z",
+              "status": "no_completado",
+              "evidence": "Comprobación parcial08:32: faltan archivosru,sw,ha-Latn todavía en elaboración. Importaciones estáticas impiden compilar/pruebas de3suites;16tests ajenos pasan. Completar esoscatálogos y repetir auditoría/TypeScript/tests antes de publicar. No esentrega terminada."
+            },
+            {
+              "at": "2026-10-11T12:34:14.666Z",
+              "status": "en_curso",
+              "evidence": "Resuelta falta de archivos:20catálogos/83claves completos pasan auditoría; TypeScript y33tests correctos. Compilación y revisión contextual final en curso."
+            },
+            {
+              "at": "2026-10-11T12:45:42.528Z",
+              "status": "terminado",
+              "evidence": "20 JSON de 83 claves completos; auditoría y 34 pruebas pasan. Revisiones identificadas por IA en docs/i18n, incluida lectura independiente y correcciones aplicadas; no se atribuye certificación humana."
+            },
+            {
+              "at": "2026-10-11T13:12:15.658Z",
+              "status": "terminado",
+              "evidence": "Edición final 84 claves por idioma, incluida countryOriginal revisada en veinte lenguas; auditoría y 39 pruebas pasan. Revisiones identificadas docs/i18n y comprobación final local docs/DECISION_IDIOMAS.md."
+            }
+          ],
           "blockId": "2B"
         },
         {
@@ -4050,10 +4816,21 @@
           "group": "Bloque 2B Traducción y composición",
           "text": "Verificar supportedLocalesOf para cantidades, fechas y plurales en los navegadores objetivo. Si un identificador como pnb-Arab no está soportado, fijar formatos alternativos revisados o incorporar los datos de formato necesarios. No cambiar la traducción a otro idioma ni dejar que una alternativa silenciosa altere unidades o fechas.",
           "kind": "operacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-10T13:47:29.679Z",
-          "history": [],
+          "status": "terminado",
+          "evidence": "Intl comprobado en Chrome e IAB; alternativas explícitas ha/ur-PK numérico y meses shahmukhi. Tests verifican 20 números/fechas/plurales, coordenadas Unicode y escala; formatos sin modificar datos internos.",
+          "updatedAt": "2026-10-11T12:45:43.022Z",
+          "history": [
+            {
+              "at": "2026-10-11T12:30:28.177Z",
+              "status": "en_curso",
+              "evidence": "Pruebas formatos para20idiomas y alternativa explícita pnb-Arab con mesesPunjabi, gregorianoUTC y numeralesarabext; sin cambiar idioma decontenido."
+            },
+            {
+              "at": "2026-10-11T12:45:43.022Z",
+              "status": "terminado",
+              "evidence": "Intl comprobado en Chrome e IAB; alternativas explícitas ha/ur-PK numérico y meses shahmukhi. Tests verifican 20 números/fechas/plurales, coordenadas Unicode y escala; formatos sin modificar datos internos."
+            }
+          ],
           "blockId": "2B"
         },
         {
@@ -4061,10 +4838,21 @@
           "group": "Bloque 2B Traducción y composición",
           "text": "Probar glifos y composición de etiquetas dentro del mapa, no solo fuentes CSS de los paneles. MapLibre documenta composición bidireccional y árabe incorporada en versiones actuales; verificar la versión fijada y las escrituras índicas. No instalar automáticamente un plugin RTL obsoleto. [Composición RTL de MapLibre](https://maplibre.org/maplibre-gl-js/docs/API/functions/setRTLTextPlugin/).",
           "kind": "operacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-10T13:47:29.679Z",
-          "history": [],
+          "status": "terminado",
+          "evidence": "Chrome e IAB renderizan las 20 escrituras dentro de MapLibre, scriptCount 20, lectura visual sin cuadros ausentes ni errores. RTL nativo del motor; fuentes locales OFL y glifos Noto fijados en Sprint1.",
+          "updatedAt": "2026-10-11T12:45:43.970Z",
+          "history": [
+            {
+              "at": "2026-10-11T12:32:06.916Z",
+              "status": "en_curso",
+              "evidence": "Se conserva MapLibre6.13 y sus cuatro font-facesNoto; documentación oficial confirmaRTL incorporado sin plugin externo. Verificando muestras dentro del mapa."
+            },
+            {
+              "at": "2026-10-11T12:45:43.970Z",
+              "status": "terminado",
+              "evidence": "Chrome e IAB renderizan las 20 escrituras dentro de MapLibre, scriptCount 20, lectura visual sin cuadros ausentes ni errores. RTL nativo del motor; fuentes locales OFL y glifos Noto fijados en Sprint1."
+            }
+          ],
           "blockId": "2B"
         },
         {
@@ -4072,10 +4860,21 @@
           "group": "Bloque 2B Traducción y composición",
           "text": "Mantener una caché de búsqueda que incluya idioma y política de nombres. Un resultado de búsqueda español no reemplaza una respuesta pendiente en árabe. Configurar mezcla de coordenadas, cifras y enlaces con aislamiento bidireccional.",
           "kind": "operacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-10T13:47:29.679Z",
-          "history": [],
+          "status": "terminado",
+          "evidence": "Test ejecutado de caché por lang es/ar/pnb con claves distintas. IAB: respuesta demorada que ignora abort se descarta al cambiar es a en, cero resultados antiguos, búsqueda desbloqueada; edition versionada existente.",
+          "updatedAt": "2026-10-11T12:45:44.407Z",
+          "history": [
+            {
+              "at": "2026-10-11T12:31:19.399Z",
+              "status": "en_curso",
+              "evidence": "Consultas y caché incluyen idioma; cambio cancela respuesta de idioma previo sin borrar resultados existentes. Errores porclave traducidos cliente/servidor; cifras, escala y coordenadas aisladas."
+            },
+            {
+              "at": "2026-10-11T12:45:44.407Z",
+              "status": "terminado",
+              "evidence": "Test ejecutado de caché por lang es/ar/pnb con claves distintas. IAB: respuesta demorada que ignora abort se descarta al cambiar es a en, cero resultados antiguos, búsqueda desbloqueada; edition versionada existente."
+            }
+          ],
           "blockId": "2B"
         },
         {
@@ -4084,20 +4883,52 @@
           "group": "Bloque 2B Traducción y composición",
           "text": "Cantidades, fechas y plurales pasan casos de referencia; cualquier alternativa de Intl está documentada y no cambia idioma, unidades ni significado. Texto ampliado y traducciones largas no recortan acciones.",
           "kind": "aceptacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-10T18:28:51.099Z",
-          "history": []
+          "status": "terminado",
+          "evidence": "Recomprobación edición 84 claves: formatos de veinte idiomas pasan referencias sin alterar significado. Chrome e IAB 320 CSS px y texto 200% alemán/árabe/urdu/shahmukhi/telugu sin recorte; fuentes y coordenadas RTL legibles, Escape y controles accesibles. Evidencia final docs/DECISION_IDIOMAS.md y 39 pruebas.",
+          "updatedAt": "2026-10-11T13:12:38.486Z",
+          "history": [
+            {
+              "at": "2026-10-11T12:46:16.541Z",
+              "status": "terminado",
+              "evidence": "34 pruebas, auditoría 20x83, compilación y TypeScript pasan. Texto 200% en 320 CSS px comprobado Chrome/IAB; formatos y alternativas documentados. Criterios verificados después de terminar las nueve operaciones."
+            },
+            {
+              "at": "2026-10-11T13:12:15.541Z",
+              "status": "pendiente",
+              "evidence": "Reverificar: cambió o quedó incompleto S02-2B-01."
+            },
+            {
+              "at": "2026-10-11T13:12:38.486Z",
+              "status": "terminado",
+              "evidence": "Recomprobación edición 84 claves: formatos de veinte idiomas pasan referencias sin alterar significado. Chrome e IAB 320 CSS px y texto 200% alemán/árabe/urdu/shahmukhi/telugu sin recorte; fuentes y coordenadas RTL legibles, Escape y controles accesibles. Evidencia final docs/DECISION_IDIOMAS.md y 39 pruebas."
+            }
+          ]
         },
         {
           "id": "S02-2B-AC-02",
           "group": "Bloque 2B Traducción y composición",
           "text": "No hay claves de traducción expuestas, texto sin traducir accidentalmente ni caracteres ausentes.",
           "kind": "aceptacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-10T13:47:29.679Z",
-          "history": [],
+          "status": "terminado",
+          "evidence": "Edición final 84 claves por idioma, incluida countryOriginal revisada en veinte lenguas; auditoría y 39 pruebas pasan. Revisiones identificadas docs/i18n y comprobación final local docs/DECISION_IDIOMAS.md.",
+          "updatedAt": "2026-10-11T13:12:15.748Z",
+          "history": [
+            {
+              "at": "2026-10-11T12:46:16.625Z",
+              "status": "terminado",
+              "evidence": "34 pruebas, auditoría 20x83, compilación y TypeScript pasan. Texto 200% en 320 CSS px comprobado Chrome/IAB; formatos y alternativas documentados. Criterios verificados después de terminar las nueve operaciones."
+            },
+            {
+              "at": "2026-10-11T13:12:15.541Z",
+              "status": "pendiente",
+              "evidence": "Reverificar: cambió o quedó incompleto S02-2B-01."
+            },
+            {
+              "at": "2026-10-11T13:12:15.748Z",
+              "status": "terminado",
+              "evidence": "Edición final 84 claves por idioma, incluida countryOriginal revisada en veinte lenguas; auditoría y 39 pruebas pasan. Revisiones identificadas docs/i18n y comprobación final local docs/DECISION_IDIOMAS.md."
+            }
+          ],
           "blockId": "2B"
         },
         {
@@ -4105,10 +4936,26 @@
           "group": "Bloque 2B Traducción y composición",
           "text": "La auditoría detecta claves faltantes antes de publicar. Cada idioma tiene una revisión lingüística identificada; un borrador automático no se declara revisado.",
           "kind": "aceptacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-10T13:47:29.679Z",
-          "history": [],
+          "status": "terminado",
+          "evidence": "Edición final 84 claves por idioma, incluida countryOriginal revisada en veinte lenguas; auditoría y 39 pruebas pasan. Revisiones identificadas docs/i18n y comprobación final local docs/DECISION_IDIOMAS.md.",
+          "updatedAt": "2026-10-11T13:12:15.839Z",
+          "history": [
+            {
+              "at": "2026-10-11T12:46:16.716Z",
+              "status": "terminado",
+              "evidence": "34 pruebas, auditoría 20x83, compilación y TypeScript pasan. Texto 200% en 320 CSS px comprobado Chrome/IAB; formatos y alternativas documentados. Criterios verificados después de terminar las nueve operaciones."
+            },
+            {
+              "at": "2026-10-11T13:12:15.541Z",
+              "status": "pendiente",
+              "evidence": "Reverificar: cambió o quedó incompleto S02-2B-01."
+            },
+            {
+              "at": "2026-10-11T13:12:15.839Z",
+              "status": "terminado",
+              "evidence": "Edición final 84 claves por idioma, incluida countryOriginal revisada en veinte lenguas; auditoría y 39 pruebas pasan. Revisiones identificadas docs/i18n y comprobación final local docs/DECISION_IDIOMAS.md."
+            }
+          ],
           "blockId": "2B"
         },
         {
@@ -4116,10 +4963,26 @@
           "group": "Bloque 2B Traducción y composición",
           "text": "Los idiomas de derecha a izquierda funcionan en ventanas estrechas y amplias, con coordenadas y números legibles.",
           "kind": "aceptacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-10T13:47:29.679Z",
-          "history": [],
+          "status": "terminado",
+          "evidence": "Recomprobación edición 84 claves: formatos de veinte idiomas pasan referencias sin alterar significado. Chrome e IAB 320 CSS px y texto 200% alemán/árabe/urdu/shahmukhi/telugu sin recorte; fuentes y coordenadas RTL legibles, Escape y controles accesibles. Evidencia final docs/DECISION_IDIOMAS.md y 39 pruebas.",
+          "updatedAt": "2026-10-11T13:12:38.583Z",
+          "history": [
+            {
+              "at": "2026-10-11T12:46:17.114Z",
+              "status": "terminado",
+              "evidence": "Chrome/IAB RTL ar/ur/pnb en ventana 320 CSS px y amplia. IAB acepta −٦٩٫٨٨٤٥, ١٨٫٤٧٣٧ y conserva punto -69.8845,18.4737; al cambiar a ar, documento RTL y campos de coordenadas LTR correctos."
+            },
+            {
+              "at": "2026-10-11T13:12:15.541Z",
+              "status": "pendiente",
+              "evidence": "Reverificar: cambió o quedó incompleto S02-2B-01."
+            },
+            {
+              "at": "2026-10-11T13:12:38.583Z",
+              "status": "terminado",
+              "evidence": "Recomprobación edición 84 claves: formatos de veinte idiomas pasan referencias sin alterar significado. Chrome e IAB 320 CSS px y texto 200% alemán/árabe/urdu/shahmukhi/telugu sin recorte; fuentes y coordenadas RTL legibles, Escape y controles accesibles. Evidencia final docs/DECISION_IDIOMAS.md y 39 pruebas."
+            }
+          ],
           "blockId": "2B"
         },
         {
@@ -4127,10 +4990,21 @@
           "group": "Bloque 2C Países en el idioma elegido",
           "text": "Relacionar cada país con un identificador estable y su nombre en los veinte idiomas. Mantener nombres visibles separados de los identificadores internos.",
           "kind": "operacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-10T13:47:29.679Z",
-          "history": [],
+          "status": "terminado",
+          "evidence": "239 códigos de países del buscador, 258 entidades NE y 271 nombres por cada idioma. Los 4780 pares país/idioma se buscan con ID y anclaje original en tests; revisiones de activos IA identificadas y excepciones explícitas. Edición 554aaaf21aba.",
+          "updatedAt": "2026-10-11T12:58:07.986Z",
+          "history": [
+            {
+              "at": "2026-10-11T12:46:17.499Z",
+              "status": "en_curso",
+              "evidence": "Bloque 2B verificado; se prepara catálogo propio de países con códigos y anclajes estables, veinte nombres y procedencia/licencia fijada."
+            },
+            {
+              "at": "2026-10-11T12:58:07.986Z",
+              "status": "terminado",
+              "evidence": "239 códigos de países del buscador, 258 entidades NE y 271 nombres por cada idioma. Los 4780 pares país/idioma se buscan con ID y anclaje original en tests; revisiones de activos IA identificadas y excepciones explícitas. Edición 554aaaf21aba."
+            }
+          ],
           "blockId": "2C"
         },
         {
@@ -4138,10 +5012,21 @@
           "group": "Bloque 2C Países en el idioma elegido",
           "text": "Aplicar el idioma a las etiquetas del mapa, resultados de búsqueda y descripciones de ubicación. Actualizar etiquetas sin regenerar datos geográficos ni borrar la selección.",
           "kind": "operacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-10T13:47:29.679Z",
-          "history": [],
+          "status": "terminado",
+          "evidence": "Compilación local final 11/10 09:12 SD: IAB y Chrome recorren veinte countryField y etiquetas renderizadas, conservando centro/zoom; IAB además punto country-DE. Fichas y disclaimer en veinte lenguas, misma firma. Evidencia docs/DECISION_IDIOMAS.md.",
+          "updatedAt": "2026-10-11T13:12:38.721Z",
+          "history": [
+            {
+              "at": "2026-10-11T12:52:18.122Z",
+              "status": "en_curso",
+              "evidence": "Fuente GeoJSON fija 258 entidades; cambio de idioma actualiza únicamente text-field; resultados existentes y país de ubicación se relocalizan por código. No se refleja geografía ni se borran coordenadas."
+            },
+            {
+              "at": "2026-10-11T13:12:38.721Z",
+              "status": "terminado",
+              "evidence": "Compilación local final 11/10 09:12 SD: IAB y Chrome recorren veinte countryField y etiquetas renderizadas, conservando centro/zoom; IAB además punto country-DE. Fichas y disclaimer en veinte lenguas, misma firma. Evidencia docs/DECISION_IDIOMAS.md."
+            }
+          ],
           "blockId": "2C"
         },
         {
@@ -4149,10 +5034,21 @@
           "group": "Bloque 2C Países en el idioma elegido",
           "text": "Si el proveedor no incluye una lengua, completar la localización mediante el estilo o un catálogo propio compatible con sus condiciones. Resolver esa ausencia dentro del sprint.",
           "kind": "operacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-10T13:47:29.679Z",
-          "history": [],
+          "status": "terminado",
+          "evidence": "239 códigos de países del buscador, 258 entidades NE y 271 nombres por cada idioma. Los 4780 pares país/idioma se buscan con ID y anclaje original en tests; revisiones de activos IA identificadas y excepciones explícitas. Edición 554aaaf21aba.",
+          "updatedAt": "2026-10-11T12:58:08.086Z",
+          "history": [
+            {
+              "at": "2026-10-11T12:48:23.781Z",
+              "status": "en_curso",
+              "evidence": "CLDR48 fijado y licencia Unicode-3.0 descargada; pa-Arab solo aporta PK, se prepara catálogo específico shahmukhi revisado. 239 códigos ordinarios y 19 entidades NE propias; anclajes originales sin mover."
+            },
+            {
+              "at": "2026-10-11T12:58:08.086Z",
+              "status": "terminado",
+              "evidence": "239 códigos de países del buscador, 258 entidades NE y 271 nombres por cada idioma. Los 4780 pares país/idioma se buscan con ID y anclaje original en tests; revisiones de activos IA identificadas y excepciones explícitas. Edición 554aaaf21aba."
+            }
+          ],
           "blockId": "2C"
         },
         {
@@ -4160,10 +5056,21 @@
           "group": "Bloque 2C Países en el idioma elegido",
           "text": "Definir una alternativa controlada para una traducción excepcionalmente ausente: nombre local o inglés, con explicación disponible al consultar la ubicación. No cubrir silenciosamente un catálogo incompleto con inglés.",
           "kind": "operacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-10T13:47:29.679Z",
-          "history": [],
+          "status": "terminado",
+          "evidence": "Excepción real Spratly, ne-PGA: etiqueta pulsada en maratí y panel muestra nombre original más explicación traducida. Catálogos y manifest.fallbacks revisados; no se reemplaza un catálogo completo por inglés. promoteId y properties.id conservan identidad. docs/DECISION_PAISES.md.",
+          "updatedAt": "2026-10-11T13:12:38.952Z",
+          "history": [
+            {
+              "at": "2026-10-11T12:48:23.870Z",
+              "status": "en_curso",
+              "evidence": "CLDR48 fijado y licencia Unicode-3.0 descargada; pa-Arab solo aporta PK, se prepara catálogo específico shahmukhi revisado. 239 códigos ordinarios y 19 entidades NE propias; anclajes originales sin mover."
+            },
+            {
+              "at": "2026-10-11T13:12:38.952Z",
+              "status": "terminado",
+              "evidence": "Excepción real Spratly, ne-PGA: etiqueta pulsada en maratí y panel muestra nombre original más explicación traducida. Catálogos y manifest.fallbacks revisados; no se reemplaza un catálogo completo por inglés. promoteId y properties.id conservan identidad. docs/DECISION_PAISES.md."
+            }
+          ],
           "blockId": "2C"
         },
         {
@@ -4171,10 +5078,21 @@
           "group": "Bloque 2C Países en el idioma elegido",
           "text": "Mantener calles en su nombre oficial disponible. La traducción de todos los nombres de calles no fue solicitada; evitar inventar nombres o transliteraciones sin fundamento.",
           "kind": "operacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-10T13:47:29.679Z",
-          "history": [],
+          "status": "terminado",
+          "evidence": "Estilo validado en los20idiomas: street-names usa únicamente name oficial o name:latin publicado; consultas reales excluyen calles, edificios y POI. Sin sumas de hablantes ni porcentajes de población por idioma en producto.",
+          "updatedAt": "2026-10-11T12:58:08.573Z",
+          "history": [
+            {
+              "at": "2026-10-11T12:52:18.546Z",
+              "status": "en_curso",
+              "evidence": "Se conserva el campo oficial name de calles y ciudades; se comprobará estilo y consulta negativa tras integrar países. No se añaden métricas de cobertura demográfica por idiomas."
+            },
+            {
+              "at": "2026-10-11T12:58:08.573Z",
+              "status": "terminado",
+              "evidence": "Estilo validado en los20idiomas: street-names usa únicamente name oficial o name:latin publicado; consultas reales excluyen calles, edificios y POI. Sin sumas de hablantes ni porcentajes de población por idioma en producto."
+            }
+          ],
           "blockId": "2C"
         },
         {
@@ -4182,10 +5100,21 @@
           "group": "Bloque 2C Países en el idioma elegido",
           "text": "No sumar hablantes para afirmar cobertura mundial única. El multilingüismo produce solapamiento; el alcance comercial de los idiomas no forma parte de las métricas visibles del mapa.",
           "kind": "operacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-10T13:47:29.679Z",
-          "history": [],
+          "status": "terminado",
+          "evidence": "Estilo validado en los20idiomas: street-names usa únicamente name oficial o name:latin publicado; consultas reales excluyen calles, edificios y POI. Sin sumas de hablantes ni porcentajes de población por idioma en producto.",
+          "updatedAt": "2026-10-11T12:58:08.688Z",
+          "history": [
+            {
+              "at": "2026-10-11T12:52:18.647Z",
+              "status": "en_curso",
+              "evidence": "Se conserva el campo oficial name de calles y ciudades; se comprobará estilo y consulta negativa tras integrar países. No se añaden métricas de cobertura demográfica por idiomas."
+            },
+            {
+              "at": "2026-10-11T12:58:08.688Z",
+              "status": "terminado",
+              "evidence": "Estilo validado en los20idiomas: street-names usa únicamente name oficial o name:latin publicado; consultas reales excluyen calles, edificios y POI. Sin sumas de hablantes ni porcentajes de población por idioma en producto."
+            }
+          ],
           "blockId": "2C"
         },
         {
@@ -4193,10 +5122,31 @@
           "group": "Bloque 2C Países en el idioma elegido",
           "text": "Si las teselas no contienen los veinte nombres, añadir una capa propia de nombres de países con anclajes y códigos estables, suprimiendo la etiqueta duplicada del proveedor. Traducir el mismo conjunto de entidades, sin alterar su clasificación al cambiar de idioma; manejar territorios sin código ordinario mediante identificadores propios documentados.",
           "kind": "operacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-10T13:47:29.679Z",
-          "history": [],
+          "status": "terminado",
+          "evidence": "Compilación local final 11/10 09:12 SD: IAB y Chrome recorren veinte countryField y etiquetas renderizadas, conservando centro/zoom; IAB además punto country-DE. Fichas y disclaimer en veinte lenguas, misma firma. Evidencia docs/DECISION_IDIOMAS.md.",
+          "updatedAt": "2026-10-11T13:12:38.813Z",
+          "history": [
+            {
+              "at": "2026-10-11T12:48:23.952Z",
+              "status": "en_curso",
+              "evidence": "CLDR48 fijado y licencia Unicode-3.0 descargada; pa-Arab solo aporta PK, se prepara catálogo específico shahmukhi revisado. 239 códigos ordinarios y 19 entidades NE propias; anclajes originales sin mover."
+            },
+            {
+              "at": "2026-10-11T12:59:19.872Z",
+              "status": "no_completado",
+              "evidence": "Verificación del navegador: MapLibre devuelve ID 0 para IDs GeoJSON de texto sin promoteId; la consulta de excepciones necesita preservar id de propiedades. Se corrige el adaptador y se repite."
+            },
+            {
+              "at": "2026-10-11T12:59:34.430Z",
+              "status": "en_curso",
+              "evidence": "Fuente usa promoteId id y la selección utiliza properties.id; estilo válido en20idiomas, 39 pruebas y TypeScript pasan. Verificación de IDs renderizados pendiente en compilación nueva."
+            },
+            {
+              "at": "2026-10-11T13:12:38.813Z",
+              "status": "terminado",
+              "evidence": "Compilación local final 11/10 09:12 SD: IAB y Chrome recorren veinte countryField y etiquetas renderizadas, conservando centro/zoom; IAB además punto country-DE. Fichas y disclaimer en veinte lenguas, misma firma. Evidencia docs/DECISION_IDIOMAS.md."
+            }
+          ],
           "blockId": "2C"
         },
         {
@@ -4205,14 +5155,24 @@
           "group": "Bloque 2C Países en el idioma elegido",
           "text": "Normalizar countryId y countryCode del proveedor y traducir el componente país de cada sugerencia con el catálogo propio; conservar ciudades según sus nombres publicados. Entregar búsqueda de nombres y alias de países en los veinte idiomas sobre ese catálogo si el proveedor no reconoce una lengua. Mantener únicamente países y ciudades en todos los idiomas, sin ampliar los tipos a calles, direcciones o POI. No sustituir toda la descripción administrativa con una traducción inventada ni depender de que el proveedor acepte pnb-Arab.",
           "kind": "operacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-11T10:11:13.951Z",
+          "status": "terminado",
+          "evidence": "Búsqueda HTTP local en veinte idiomas: Alemania country-DE, HTTP200 y coordenadas idénticas; interfaz árabe relocalizada a shahmukhi y resultado seleccionado. Test 4780 nombres/identificadores, cache por idioma/edición, lista positiva país/ciudad; calles oficiales permanecen. 39 pruebas pasan.",
+          "updatedAt": "2026-10-11T13:12:39.086Z",
           "history": [
             {
               "at": "2026-10-11T10:11:13.951Z",
               "status": "pendiente",
               "evidence": "Cambió el requisito en el plan; necesita nueva verificación."
+            },
+            {
+              "at": "2026-10-11T12:48:24.038Z",
+              "status": "en_curso",
+              "evidence": "CLDR48 fijado y licencia Unicode-3.0 descargada; pa-Arab solo aporta PK, se prepara catálogo específico shahmukhi revisado. 239 códigos ordinarios y 19 entidades NE propias; anclajes originales sin mover."
+            },
+            {
+              "at": "2026-10-11T13:12:39.086Z",
+              "status": "terminado",
+              "evidence": "Búsqueda HTTP local en veinte idiomas: Alemania country-DE, HTTP200 y coordenadas idénticas; interfaz árabe relocalizada a shahmukhi y resultado seleccionado. Test 4780 nombres/identificadores, cache por idioma/edición, lista positiva país/ciudad; calles oficiales permanecen. 39 pruebas pasan."
             }
           ]
         },
@@ -4222,10 +5182,16 @@
           "group": "Bloque 2C Países en el idioma elegido",
           "text": "Cada país tiene identificador estable y nombre revisado en los veinte idiomas; al cambiar idioma no aparecen etiquetas duplicadas ni se alteran coordenadas o resultados.",
           "kind": "aceptacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-10T18:28:51.099Z",
-          "history": []
+          "status": "terminado",
+          "evidence": "239 códigos y 19 entidades propias con mismos anclajes en20idiomas; 271 nombres por idioma auditados con fuentes fijas y revisiones identificadas. Chrome/IAB20idiomas renderizados, sin duplicación de capa ni movimiento de centro/zoom. 39 pruebas; docs/DECISION_PAISES.md y docs/DECISION_IDIOMAS.md.",
+          "updatedAt": "2026-10-11T13:12:39.224Z",
+          "history": [
+            {
+              "at": "2026-10-11T13:12:39.224Z",
+              "status": "terminado",
+              "evidence": "239 códigos y 19 entidades propias con mismos anclajes en20idiomas; 271 nombres por idioma auditados con fuentes fijas y revisiones identificadas. Chrome/IAB20idiomas renderizados, sin duplicación de capa ni movimiento de centro/zoom. 39 pruebas; docs/DECISION_PAISES.md y docs/DECISION_IDIOMAS.md."
+            }
+          ]
         },
         {
           "id": "S02-2C-AC-02",
@@ -4233,20 +5199,32 @@
           "group": "Bloque 2C Países en el idioma elegido",
           "text": "Los glifos y la composición se comprueban dentro del mapa en las veinte escrituras, con una alternativa de nombres explícita donde el proveedor no tenga traducción.",
           "kind": "aceptacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-10T18:28:51.099Z",
-          "history": []
+          "status": "terminado",
+          "evidence": "239 códigos y 19 entidades propias con mismos anclajes en20idiomas; 271 nombres por idioma auditados con fuentes fijas y revisiones identificadas. Chrome/IAB20idiomas renderizados, sin duplicación de capa ni movimiento de centro/zoom. 39 pruebas; docs/DECISION_PAISES.md y docs/DECISION_IDIOMAS.md.",
+          "updatedAt": "2026-10-11T13:12:39.316Z",
+          "history": [
+            {
+              "at": "2026-10-11T13:12:39.316Z",
+              "status": "terminado",
+              "evidence": "239 códigos y 19 entidades propias con mismos anclajes en20idiomas; 271 nombres por idioma auditados con fuentes fijas y revisiones identificadas. Chrome/IAB20idiomas renderizados, sin duplicación de capa ni movimiento de centro/zoom. 39 pruebas; docs/DECISION_PAISES.md y docs/DECISION_IDIOMAS.md."
+            }
+          ]
         },
         {
           "id": "S02-2C-AC-03",
           "group": "Bloque 2C Países en el idioma elegido",
           "text": "Cambiar entre los veinte idiomas actualiza país, controles, disclaimer y resultados existentes, manteniendo el punto y el zoom.",
           "kind": "aceptacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-10T13:47:29.679Z",
-          "history": [],
+          "status": "terminado",
+          "evidence": "IAB cambia veinte idiomas conservando punto9.678348/50.961733 zoom3 y country-DE; controles/resultados, Beirut firma context-20261011-2 y disclaimer traducidos. API veinte nombres Alemania devuelve country-DE mismas coordenadas; país de ficha country-LB localizado. Calles expresión oficial preservada. 39pruebas.",
+          "updatedAt": "2026-10-11T13:12:39.554Z",
+          "history": [
+            {
+              "at": "2026-10-11T13:12:39.554Z",
+              "status": "terminado",
+              "evidence": "IAB cambia veinte idiomas conservando punto9.678348/50.961733 zoom3 y country-DE; controles/resultados, Beirut firma context-20261011-2 y disclaimer traducidos. API veinte nombres Alemania devuelve country-DE mismas coordenadas; país de ficha country-LB localizado. Calles expresión oficial preservada. 39pruebas."
+            }
+          ],
           "blockId": "2C"
         },
         {
@@ -4254,10 +5232,16 @@
           "group": "Bloque 2C Países en el idioma elegido",
           "text": "Las etiquetas del mapa pasan revisión de composición y glifos en las veinte escrituras. La ausencia de datos Intl no cambia el idioma del contenido.",
           "kind": "aceptacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-10T13:47:29.679Z",
-          "history": [],
+          "status": "terminado",
+          "evidence": "239 códigos y 19 entidades propias con mismos anclajes en20idiomas; 271 nombres por idioma auditados con fuentes fijas y revisiones identificadas. Chrome/IAB20idiomas renderizados, sin duplicación de capa ni movimiento de centro/zoom. 39 pruebas; docs/DECISION_PAISES.md y docs/DECISION_IDIOMAS.md.",
+          "updatedAt": "2026-10-11T13:12:39.404Z",
+          "history": [
+            {
+              "at": "2026-10-11T13:12:39.404Z",
+              "status": "terminado",
+              "evidence": "239 códigos y 19 entidades propias con mismos anclajes en20idiomas; 271 nombres por idioma auditados con fuentes fijas y revisiones identificadas. Chrome/IAB20idiomas renderizados, sin duplicación de capa ni movimiento de centro/zoom. 39 pruebas; docs/DECISION_PAISES.md y docs/DECISION_IDIOMAS.md."
+            }
+          ],
           "blockId": "2C"
         },
         {
@@ -4266,10 +5250,16 @@
           "group": "Bloque 2C Países en el idioma elegido",
           "text": "Se puede buscar un país con su nombre en cada idioma aunque el proveedor no soporte ese locale; sugerencia, etiqueta y ficha comparten identificador y nombre de país sin alterar los nombres oficiales de calles.",
           "kind": "aceptacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-10T18:55:37.061Z",
-          "history": []
+          "status": "terminado",
+          "evidence": "IAB cambia veinte idiomas conservando punto9.678348/50.961733 zoom3 y country-DE; controles/resultados, Beirut firma context-20261011-2 y disclaimer traducidos. API veinte nombres Alemania devuelve country-DE mismas coordenadas; país de ficha country-LB localizado. Calles expresión oficial preservada. 39pruebas.",
+          "updatedAt": "2026-10-11T13:12:39.650Z",
+          "history": [
+            {
+              "at": "2026-10-11T13:12:39.650Z",
+              "status": "terminado",
+              "evidence": "IAB cambia veinte idiomas conservando punto9.678348/50.961733 zoom3 y country-DE; controles/resultados, Beirut firma context-20261011-2 y disclaimer traducidos. API veinte nombres Alemania devuelve country-DE mismas coordenadas; país de ficha country-LB localizado. Calles expresión oficial preservada. 39pruebas."
+            }
+          ]
         }
       ]
     },

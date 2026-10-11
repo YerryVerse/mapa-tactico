@@ -1,0 +1,16 @@
+import {describe,it,expect} from 'vitest';
+import {languages} from '../../lib/languages';
+import {countryLabelData,countryId,countryLabel,localizePlace,originalCountryName,COUNTRY_EDITION} from '../../lib/country-names';
+import {searchCountries,searchCities,SEARCH_EDITION} from '../../lib/gazetteer';
+import {atlasStyle} from '../../lib/map-style';
+import {validateStyleMin} from '@maplibre/maplibre-gl-style-spec';
+import countries from '../../content/search/countries.json';
+import entities from '../../content/geography/entities.json';
+import manifest from '../../content/geography/manifest.json';
+describe('Twenty country names with stable geography',()=>{
+ it('resolves all239 catalog countries in all20 languages without Intl locale dependence',()=>{for(const lang of languages)for(const country of countries){const label=countryLabel(country.id,lang.id);expect(label).not.toBe(country.countryCode);expect(label.trim()).not.toBe('');const found=searchCountries(label,lang.id).find(p=>p.id===country.id);expect(found).toMatchObject({id:country.id,name:label,countryName:label,lng:country.lng,lat:country.lat,kind:'country'});}});
+ it('keeps258 unique anchors and classifications and uses one label layer for every language',()=>{const data=countryLabelData();expect(data.features).toHaveLength(258);expect(new Set(data.features.map(f=>f.id)).size).toBe(258);for(const lang of languages){const style=atlasStyle(lang.id);expect(validateStyleMin(style).map(e=>e.message)).toEqual([]);expect(style.layers.filter(l=>l.id==='countries')).toHaveLength(1);expect((style.sources['country-labels'] as any).data).toEqual(data);expect((style.layers.find(l=>l.id==='countries') as any).layout['text-field']).toEqual(['get','name_'+lang.id]);}for(const e of entities){expect(data.features.find(f=>f.id===e.id)).toMatchObject({geometry:{coordinates:[e.lng,e.lat]},properties:{classification:e.classification}});}});
+ it('preserves city name and coordinates while relocalizing the country component',()=>{const row=['123','Santiago','DO','Santiago',-70.7,19.45,1000,'PPLA',['santiago']];for(const lang of languages){const p=searchCities([row],'Santiago',lang.id,8)[0];expect(p).toMatchObject({id:'geonames-123',name:'Santiago',countryName:countryLabel('country-DO',lang.id),lng:-70.7,lat:19.45});expect(localizePlace(p,'pnb-Arab')).toMatchObject({name:'Santiago',id:p.id,lng:p.lng,countryName:countryLabel('country-DO','pnb-Arab')});}});
+ it('declares exceptional originals instead of misidentifying Spratly as Wake',()=>{for(const lang of languages){const label=countryLabel('ne-PGA',lang.id);expect(label).not.toMatch(/Wake|ویک|وےک|Isla Wake/);if(lang.id!=='pnb-Arab'&&lang.id!=='en'){expect(label).toBe('Spratly Islands');expect(originalCountryName('ne-PGA',lang.id)).toBe(true);}}expect(manifest.fallbacks['pnb-Arab']).toEqual([]);});
+ it('normalizes codes and versions cached names while leaving official street fields unchanged',()=>{expect(countryId(' do ')).toBe('country-DO');expect(SEARCH_EDITION).toContain(COUNTRY_EDITION);const streets=(atlasStyle().layers.find(l=>l.id==='street-names') as any).layout['text-field'];expect(streets).toEqual(['coalesce',['get','name'],['get','name:latin']]);});
+});

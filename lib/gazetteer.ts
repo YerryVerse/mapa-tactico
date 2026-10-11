@@ -2,22 +2,23 @@ import {z} from 'zod';
 import countries from '../content/search/countries.json';
 import manifest from '../content/search/manifest.json';
 import {placeSchema,validatedPlaces,type SearchPlace} from './search-contract';
+import {countryLabel,countryId,countryAliases,COUNTRY_EDITION} from './country-names';
 export const normalizePlace=(s:string)=>s.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase().replace(/[^\p{L}\p{N}]+/gu,' ').trim();
 const rowSchema=z.tuple([z.string().regex(/^\d+$/),z.string().min(1).max(200),z.string().regex(/^[A-Z]{2}$/),z.string().min(1).max(160),z.number().min(-180).max(180),z.number().min(-90).max(90),z.number().finite().nonnegative(),z.string(),z.array(z.string().max(200)).max(1000)]);
 const allowed=new Set(manifest.allowedFeatures);
-export const SEARCH_EDITION=manifest.version+'-'+manifest.sourceHashes['country-labels.geojson'].slice(0,8);
+export const SEARCH_EDITION=manifest.version+'-'+manifest.sourceHashes['country-labels.geojson'].slice(0,8)+'-'+COUNTRY_EDITION;
 export const SHARD_BYTES=2_500_000;
 export async function shardPath(q:string){
  const prefix=[...normalizePlace(q)].slice(0,2).join('');
  const hash=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(prefix));
  return '/gazetteer/'+manifest.version+'/'+new Uint8Array(hash)[0].toString(16).padStart(2,'0')+'.json';
 }
-function countryName(code:string,lang:string){try{return new Intl.DisplayNames([lang],{type:'region'}).of(code)??code;}catch{return code;}}
+function countryName(code:string,lang:string){return countryLabel(countryId(code),lang);}
+const countryIndex=countries.flatMap(raw=>{const p=placeSchema.safeParse(raw);return p.success?[{place:p.data,aliases:[raw.name,raw.countryCode,...countryAliases(raw.countryCode)].map(normalizePlace)}]:[];});
 export function searchCountries(q:string,lang:string):SearchPlace[]{
- const key=normalizePlace(q);return countries.flatMap(raw=>{
-  const p=placeSchema.safeParse(raw);if(!p.success)return [];const name=countryName(p.data.countryCode,lang);
-  const aliases=[name,raw.name,raw.countryCode,countryName(raw.countryCode,'es'),countryName(raw.countryCode,'en')].map(normalizePlace);
-  return aliases.some(a=>a.startsWith(key))?[{...p.data,name,countryName:name}]:[];
+ const key=normalizePlace(q);return countryIndex.flatMap(({place,aliases})=>{
+  const name=countryName(place.countryCode,lang);
+  return aliases.some(a=>a.startsWith(key))?[{...place,name,countryName:name}]:[];
  });
 }
 // Positive feature-code whitelist is enforced again on cached/sharded records.

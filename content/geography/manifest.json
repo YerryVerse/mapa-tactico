@@ -1,0 +1,238 @@
+{
+  "version": "countries-cldr48-ne20261011-554aaaf21aba",
+  "namesHash": "554aaaf21aba5fbaf2f3f5a61c7e6033debf80315cc350c9ad54fa518bee18cf",
+  "entitiesHash": "a9515c1ff8a2a2af9eab8615cc986fe3d88e17446389adf9e0078abdeddc663b",
+  "cldr": "48.0.0",
+  "cldrHashes": {
+    "es": "027b9c91d4e923d506b404415648691ef41ebde721aa454cee4d9f7f66b3ea62",
+    "en": "158c1d575308f7e46912edbeda435c8fe2ef5dad280798231f3a432e406b1807",
+    "zh-Hans": "de255a878dc85dbf801353e13e7d6685eccebe238b485818f129a6ad82212d43",
+    "hi": "f77f9c0c4f8bb7062dfe40edca416beae34e17b89714dabedca2f2b41ed77121",
+    "ar": "b78c4a11a9ad8358048998bcda2eb49e205d5ab281f85991ed097af7b972c3d7",
+    "fr": "42d67b78cb74ffe87380db1d702d06be995c3082d7f711ffd6e75a721133c5e0",
+    "bn": "865fa4ad38713a7b0e509cd2e58beda76f5f120b1042a319b569aa18386d96ea",
+    "pt": "89604c7cd2eecc83c7a7f65129e7e6fe70a04f2d52263345530d714146f99ee8",
+    "ru": "305ba1f9eecb1b0151ab081a111aaa8a5898d38c9d57bfbfa125734e508a2389",
+    "id": "e3842894fa28f3cab24aba190d1edc93f6a96fab5d25ce6fe6094fe83427b061",
+    "ur": "87982db5a45494fdd963d0535dbf55d15f3929d4868456188ddbf72a39f28d12",
+    "de": "e5b7a831cd70afeaad10a56360c08e2d970e9fe79f254ee8d937a7dfa13686b7",
+    "ja": "2e9976a1d5e6a02e48b5a5c18987bd6246b0a21369513386bb5874a6887056d2",
+    "mr": "414349c2f56da303d4db1eca67cac43ad415d41edde4246cc7766b9de6310688",
+    "vi": "1bf0ad4f7286b12b326f9d4387af6d4bcc4e1099a269c2ec9a6c9e5d6db20476",
+    "te": "3c35299d78be98da9211bf946b93882331faf8572395e1eaf9a04f9ac474d929",
+    "sw": "9ca6ab6db15b55606f75ecaee68c60a1cb8cb5b82ef890352333dc77c34a4195",
+    "ha": "54e7f6da4ca82de5926de087db2ee3e76de87f418a07b1b1240d78c54281dad2",
+    "tr": "4b9b52e756c79f8b4c81e7c2c5bd2c2ba9338f0c80f2dceeee53ba4561d872b5"
+  },
+  "naturalEarthCommit": "ca96624a56bd078437bca8184e78163e5039ad19",
+  "naturalEarthHash": "239eec57ac17f100a11e2536cffc56752c318b50ae765b0918ff7aab4ce8f255",
+  "entityCount": 258,
+  "ordinaryCodes": 239,
+  "additionalComponents": [
+    "BQ",
+    "BV",
+    "CC",
+    "CX",
+    "GF",
+    "GP",
+    "MQ",
+    "RE",
+    "SJ",
+    "TK",
+    "YT",
+    "CS",
+    "AN"
+  ],
+  "fallbacks": {
+    "es": [
+      "ne-PGA",
+      "country-CS",
+      "country-AN"
+    ],
+    "en": [],
+    "zh-Hans": [
+      "ne-SPI",
+      "ne-IOA",
+      "ne-PGA",
+      "country-CS",
+      "country-AN"
+    ],
+    "hi": [
+      "ne-PGA",
+      "country-CS",
+      "country-AN"
+    ],
+    "ar": [
+      "ne-SPI",
+      "ne-PGA",
+      "country-CS",
+      "country-AN"
+    ],
+    "fr": [
+      "ne-PGA",
+      "country-CS",
+      "country-AN"
+    ],
+    "bn": [
+      "ne-USG",
+      "ne-PGA",
+      "ne-CLP",
+      "country-CS",
+      "country-AN"
+    ],
+    "pt": [
+      "ne-PGA",
+      "country-CS",
+      "country-AN"
+    ],
+    "ru": [
+      "ne-PGA",
+      "country-CS",
+      "country-AN"
+    ],
+    "id": [
+      "ne-ESB",
+      "ne-BRI",
+      "ne-CNM",
+      "ne-KAS",
+      "ne-PGA",
+      "country-CS",
+      "country-AN"
+    ],
+    "ur": [
+      "ne-USG",
+      "ne-BRI",
+      "ne-IOA",
+      "ne-PGA",
+      "country-CS",
+      "country-AN"
+    ],
+    "de": [
+      "ne-USG",
+      "ne-PGA",
+      "country-CS",
+      "country-AN"
+    ],
+    "ja": [
+      "ne-PGA",
+      "country-CS",
+      "country-AN"
+    ],
+    "mr": [
+      "ne-ESB",
+      "ne-SOL",
+      "ne-USG",
+      "ne-BRI",
+      "ne-CYN",
+      "ne-CNM",
+      "ne-KAS",
+      "ne-KAB",
+      "ne-WSB",
+      "ne-SPI",
+      "ne-BRT",
+      "ne-IOA",
+      "ne-CSI",
+      "ne-PGA",
+      "ne-CLP",
+      "ne-ATC",
+      "ne-BJN",
+      "ne-SER",
+      "ne-SCR",
+      "country-CS",
+      "country-AN"
+    ],
+    "vi": [
+      "ne-PGA",
+      "ne-BJN",
+      "ne-SER",
+      "country-CS",
+      "country-AN"
+    ],
+    "te": [
+      "ne-ESB",
+      "ne-SOL",
+      "ne-USG",
+      "ne-BRI",
+      "ne-CYN",
+      "ne-CNM",
+      "ne-KAS",
+      "ne-KAB",
+      "ne-WSB",
+      "ne-SPI",
+      "ne-BRT",
+      "ne-IOA",
+      "ne-CSI",
+      "ne-PGA",
+      "ne-CLP",
+      "ne-ATC",
+      "ne-BJN",
+      "ne-SER",
+      "ne-SCR",
+      "country-CS",
+      "country-AN"
+    ],
+    "sw": [
+      "ne-ESB",
+      "ne-SOL",
+      "ne-USG",
+      "ne-BRI",
+      "ne-CYN",
+      "ne-CNM",
+      "ne-KAS",
+      "ne-KAB",
+      "ne-WSB",
+      "ne-SPI",
+      "ne-BRT",
+      "ne-IOA",
+      "ne-CSI",
+      "ne-PGA",
+      "ne-CLP",
+      "ne-ATC",
+      "ne-BJN",
+      "ne-SER",
+      "ne-SCR",
+      "country-CS",
+      "country-AN"
+    ],
+    "ha-Latn": [
+      "ne-ESB",
+      "ne-SOL",
+      "ne-USG",
+      "ne-BRI",
+      "ne-CYN",
+      "ne-CNM",
+      "ne-KAS",
+      "ne-KAB",
+      "ne-WSB",
+      "ne-SPI",
+      "ne-BRT",
+      "ne-IOA",
+      "ne-CSI",
+      "ne-PGA",
+      "ne-CLP",
+      "ne-ATC",
+      "ne-BJN",
+      "ne-SER",
+      "ne-SCR",
+      "country-CS",
+      "country-AN"
+    ],
+    "tr": [
+      "ne-USG",
+      "ne-SPI",
+      "ne-IOA",
+      "ne-PGA",
+      "ne-BJN",
+      "ne-SER",
+      "ne-SCR",
+      "country-CS",
+      "country-AN"
+    ],
+    "pnb-Arab": []
+  },
+  "licenses": {
+    "CLDR": "Unicode-3.0",
+    "NaturalEarth": "Public domain",
+    "OwnCatalog": "Project-authored, AI reviewed"
+  }
+}

@@ -1,5 +1,7 @@
 import {searchCountries,searchCities,shardPath,readShard,SEARCH_EDITION} from './gazetteer';
 import {searchQuerySchema,validatedPlaces} from './search-contract';
+import {matchLanguage} from './languages';
+import {message,type MessageKey} from './messages';
 export const SEARCH_BUDGET=120;
 export const SEARCH_CONCURRENCY=4;
 // Bounds heap work within each isolate; the shared minute quota lives in D1.
@@ -7,7 +9,9 @@ let active=0;
 type Services={db:D1Database;assetFetch:(request:Request)=>Promise<Response>;cache?:Cache;now?:()=>number};
 export async function searchResponse(request:Request,services:Services){
  const url=new URL(request.url),headers={'Cache-Control':'no-store','Content-Type':'application/json; charset=utf-8'};
- const fail=(status:number,error:string,message:string,retryAfter?:number)=>Response.json({error,message,...(retryAfter?{retryAfter}:{})},{status,headers:{...headers,...(retryAfter?{'Retry-After':String(retryAfter)}:{})}});
+ const errorLanguage=matchLanguage(url.searchParams.get('lang')??'es')??'es';
+ const errorKeys:Record<string,MessageKey>={invalid_query:'invalidQuery',quota_exceeded:'searchQuota',provider_unavailable:'searchUnavailable',provider_timeout:'searchTimeout'};
+ const fail=(status:number,error:string,_message:string,retryAfter?:number)=>Response.json({error,message:message(errorLanguage,errorKeys[error]??'searchUnavailable'),...(retryAfter?{retryAfter}:{})},{status,headers:{...headers,...(retryAfter?{'Retry-After':String(retryAfter)}:{})}});
  const parsed=searchQuerySchema.safeParse({q:url.searchParams.get('q'),lang:url.searchParams.get('lang')??undefined,limit:url.searchParams.get('limit')??undefined});
  if(!parsed.success||[...url.searchParams.keys()].some(k=>!['q','lang','limit'].includes(k)))return fail(400,'invalid_query','Escribe un país o ciudad entre 2 y 160 caracteres, sin caracteres de control.');
  const {q,lang,limit}=parsed.data;let timer:ReturnType<typeof setTimeout>|undefined,admitted=false;
