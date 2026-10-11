@@ -10,6 +10,8 @@ El producto es exclusivamente una web app responsiva. En los diez sprints, verif
 
 Requisito vigente desde el 11 de octubre de 2026: el buscador geográfico solo ofrece países y ciudades, con exclusión de calles, direcciones, edificios, barrios y puntos de interés en proveedor, servidor y caché. Los nombres de calles visibles en el mapa conservan su requisito independiente. La restricción se desarrolla y comprueba en 1B, y se mantiene en traducciones y recorridos posteriores; documentarla no equivale a tener el proveedor integrado.
 
+Selección revisada por el usuario el 11 de octubre de 2026: elegir un resultado del buscador conserva abierta la tarjeta, su consulta, lista y posición de lectura para probar otras ciudades. La X y el clic fuera cierran la tarjeta sin cambiar el último punto. Arrastrar el mapa no equivale a un clic fuera. Se mantienen Escape y navegación entre herramientas. El requisito se registra en 1B y se hereda en los recorridos multilingües; su cambio reabre la aceptación del buscador y de las entregas posteriores según el protocolo.
+
 | Color | Estado | Condición |
 | --- | --- | --- |
 | Verde y letras blancas | Terminado | Desarrollo y verificación correspondientes completos; evidencia registrada |

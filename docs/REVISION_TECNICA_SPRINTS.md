@@ -142,3 +142,7 @@ No encontré otra dependencia hacia un bloque futuro en los criterios revisados 
 ## Corrección de ejecución del bloque1A — plan versión7
 
 Al ejecutar el sprint se detectó que la primera operación aún decía integrar completamente búsqueda, mientras1B era responsable de su aceptación. Se corrigió1A-01 para entregar mapa y rutas de referencia, conservar fuentes del contenido y dejar la integración de búsqueda/fichas en sus bloques correspondientes. Conserva el alcance del sprint; elimina una dependencia circular que habría impedido pasar de1A a1B. Los diez HTML fueron sincronizados con la versión7; la corrección no acredita desarrollo de1B/1C.
+
+## Selección sucesiva de resultados — plan versión19
+
+El usuario solicita conservar abierta la búsqueda al elegir una ciudad. La operación 1B-05 y su criterio de ambigüedad especifican consulta/lista/posición de lectura persistentes, cierre con X o clic fuera y conservación de la última ubicación. Se distingue un arrastre de un clic para mantener la exploración con la lista visible. El clic de cierre sobre el mapa no debe crear otro punto; la navegación a otra herramienta mantiene su acción normal. Escape y devolución del foco se conservan. Se reabre la aceptación anterior del buscador y la del Sprint2 dependiente, con historial, sin conceder nuevas aprobaciones. Los diez HTML reflejan el plan19. La evidencia de ejecución se registra en docs/CAMBIO_BUSQUEDA_PERSISTENTE.md y en el seguimiento.
