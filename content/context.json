@@ -1,4 +1,51 @@
 [
- {"id":"beirut-2020-context","category":"Accidente","title":"Beirut, 2020","description":"El 4 de agosto de 2020 se produjo una explosión en el puerto de Beirut, Líbano.","sources":[{"title":"Associated Press — El puerto de Beirut","url":"https://apnews.com/article/415b95004a8e914ce53400900fa7392a"}]},
- {"id":"nuclear-humanitarian-context","category":"Militar","title":"Consecuencias humanitarias nucleares","description":"El Comité Internacional de la Cruz Roja describe las consecuencias humanitarias del uso de armas nucleares.","sources":[{"title":"CICR — Preguntas frecuentes sobre armas nucleares","url":"https://www.icrc.org/en/article/faq-nuclear-weapons"}]}
+  {
+    "id": "beirut-2020-context",
+    "eventId": "beirut-2020",
+    "version": "context-20261011-2",
+    "category": "Accidente",
+    "capabilities": [
+      "context"
+    ],
+    "dependencies": [
+      "entry"
+    ],
+    "title": "Beirut, 2020",
+    "description": "El 4 de agosto de 2020 se produjo una explosión en el puerto de Beirut, Líbano.",
+    "sources": [
+      {
+        "title": "ONU — Explosión en el puerto de Beirut (4 agosto 2020)",
+        "url": "https://peacekeeping.un.org/en/news/unifil-statement-on-the-explosion-in-beirut"
+      }
+    ],
+    "location": {
+      "label": "Beirut, Líbano",
+      "lng": 35.50157,
+      "lat": 33.89332,
+      "source": {
+        "title": "GeoNames — Beirut (ciudad)",
+        "url": "https://www.geonames.org/276781/beirut.html"
+      }
+    }
+  },
+  {
+    "id": "nuclear-humanitarian-context",
+    "eventId": "nuclear-humanitarian-context",
+    "version": "context-20261011",
+    "category": "Militar",
+    "capabilities": [
+      "context"
+    ],
+    "dependencies": [
+      "entry"
+    ],
+    "title": "Consecuencias humanitarias nucleares",
+    "description": "El Comité Internacional de la Cruz Roja describe las consecuencias humanitarias del uso de armas nucleares.",
+    "sources": [
+      {
+        "title": "CICR — Preguntas frecuentes sobre armas nucleares",
+        "url": "https://www.icrc.org/en/article/faq-nuclear-weapons"
+      }
+    ]
+  }
 ]

@@ -4,9 +4,9 @@ Portal de Sites en desarrollo por sprints. Identidad conservada: appgprj_6aca232
 
 ## Estado real
 
-Sprint1 en ejecución, bloque1A: migración TypeScript/React/Vinext, globo MapLibre6.13.0, estilo propio azul, calles vectoriales OpenFreeMap y fuentes para las20escrituras. Los controles completos, buscador y fichas se aceptan en1B/1C. Consultar estado y evidencias en docs/seguimiento/estado.json; no inferir finalización de este texto.
+Sprint1 implementado: TypeScript/React/Vinext, globo MapLibre6.13.0 azul sobre espacio negro con estrellas estáticas, calles vectoriales OpenFreeMap, búsqueda pública de países y ciudades y paneles/fichas bajo demanda. La publicación realmente verificada, sus evidencias y la aprobación humana se registran en docs/seguimiento/estado.json. Solo el usuario aprueba el cierre; este texto no concede aprobación ni inicia Sprint2.
 
-El prototipo D3 y sus porcentajes ficticios no forman parte de la nueva aplicación. Sus referencias de contexto se conservan en content/context.json; el recorrido de consulta se desarrolla en1C. La población real por área y catálogos completos pertenecen a sprints posteriores. Mantener el alcance documentado en el plan.
+El prototipo D3 y sus porcentajes ficticios no forman parte de la nueva aplicación. Las fichas de contexto disponibles se consultan desde Escenarios y usan el renderizador común, fuentes y limpieza de capas documentados en docs/CONTRATO_DE_FICHAS.md. La búsqueda y sus límites están en docs/DECISION_BUSCADOR.md. La población real por área, veinte idiomas y catálogos completos pertenecen a sprints posteriores. Mantener el alcance documentado en el plan.
 
 ## Ejecutar y comprobar
 

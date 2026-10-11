@@ -18,12 +18,12 @@
   "contextHash": "5cfe19a69b0798ce4ba0ba33b879a70e42c4edbe53fd69dee3a253f01aa072a4",
   "project": "ATLAS",
   "portal": "https://atlas-escenarios-hud.yerrybatista.chatgpt.site/",
-  "updatedAt": "2026-10-11T11:23:36.094Z",
+  "updatedAt": "2026-10-11T11:51:57.958Z",
   "sprints": [
     {
       "number": 1,
       "title": "Globo y experiencia del mapa",
-      "updatedAt": "2026-10-11T11:23:36.094Z",
+      "updatedAt": "2026-10-11T11:51:57.958Z",
       "phase": "en_curso",
       "approval": {
         "status": "pendiente",
@@ -33,32 +33,32 @@
       "delivery": null,
       "reviewSteps": [
         {
-          "action": "Abrir https://atlas-escenarios-hud.yerrybatista.chatgpt.site/ sin sesión iniciada.",
-          "expected": "Acceso público sin cuentas, registro, inicio de sesión, contraseñas ni claves. Fondo negro con estrellas, globo azul y controles flotantes. Versión12 comprobada; el sprint permanece abierto."
+          "action": "Abrir el portal y cambiar el tamaño de la ventana.",
+          "expected": "Espacio negro con estrellas discretas, globo azul y marca/controles flotantes; mapa ocupa toda la vista. No hay cabecera ni tarjetas de resultados iniciales."
         },
         {
-          "action": "Elegir ubicación → longitud -69.8845 y latitud 18.4737 → Usar ubicación. Pulsar Acercar cuatro veces.",
-          "expected": "Un solo marcador en Santo Domingo y nombres de calles, sin satélite ni POI. El zoom llega de15 a19; la comprobación técnica mide5m como35,311px CSS."
+          "action": "Buscar lugar → escribir Santiago → Buscar; elegir Santiago, República Dominicana. Repetir con España.",
+          "expected": "Solo países y ciudades. Santiago muestra país y región para distinguir homónimos; España centra la península. No se solicitan cuentas ni claves."
         },
         {
-          "action": "Pulsar Vista global; volver a Elegir ubicación.",
-          "expected": "Se recupera el globo sin recargar y las coordenadas seleccionadas se conservan. El centro de cámara puede cambiar sin cambiar el punto."
+          "action": "Buscar Calle El Conde o Torre Eiffel.",
+          "expected": "No ofrece la calle, dirección ni punto de interés. Las calles con nombre continúan visibles en el mapa al acercarse."
         },
         {
-          "action": "Cerrar el editor con Escape; arrastrar el mapa y después arrastrar el marcador.",
-          "expected": "Escape devuelve el foco al control. Arrastrar el mapa no crea ni mueve el punto; arrastrar el marcador sí cambia su ubicación. Quitar ubicación elimina el único marcador."
+          "action": "Elegir ubicación → longitud −69.8845 y latitud18.4737 → Usar ubicación. Acercar cuatro veces con + y después Vista global.",
+          "expected": "Un único marcador, calles con nombres y escala métrica al acercarse; sin satélite ni iconos de comercios. La vuelta global conserva el punto. Arrastrar el mapa no coloca otro punto."
         },
         {
-          "action": "Abrir Menú → Información o Disclaimer, y Escenarios.",
-          "expected": "Los textos se consultan a petición; las dos fichas de contexto existentes tienen sus fuentes. El recorrido final de paneles de1C permanece pendiente; estas vistas no se presentan como ese bloque terminado."
+          "action": "Escenarios → Accidente → Beirut,2020 → Consultar. Abrir Ubicación de referencia y Ver ubicación del registro.",
+          "expected": "Ficha con fuente ONU/UNIFIL y detalle GeoNames. La acción muestra la ciudad de Beirut y una referencia; el punto libre sigue independiente. No hay cifras ficticias."
         },
         {
-          "action": "Abrir Buscar lugar y enviar Madrid.",
-          "expected": "Se informa que falta configurar el proveedor, con alternativas de selección en mapa y coordenadas. No hay resultados inventados. Búsqueda real, cuota y recuperación del proveedor siguen pendientes, no aprobadas."
+          "action": "Cerrar con × o Escape; reabrir Escenarios → Militar → Consultar. Elegir otro escenario; cerrar y reabrir.",
+          "expected": "Ficha humanitaria con fuente CICR, sin acciones vacías. La selección se conserva al cerrar; el foco vuelve al control de apertura y no quedan capas de otra ficha."
         },
         {
-          "action": "Revisar la disponibilidad de Firefox para completar la matriz exigida.",
-          "expected": "Registrar navegador, versión, dimensiones de ventana y resultados. La comprobación a320CSS y texto200% forma parte de la revisión responsiva. El cierre del sprint se solicitará solo después de completarlas y terminar1B/1C."
+          "action": "Menú → Información o Disclaimer; usar Atrás para regresar al mapa.",
+          "expected": "Solo un panel solicitado. Los textos extensos están en Disclaimer; Atrás cierra la vista y conserva ubicación y acercamiento."
         }
       ],
       "history": [
@@ -1082,6 +1082,246 @@
           "action": "set",
           "pointId": "S01-1B-13",
           "reference": "Nueva distribución comprobada en Chrome:320x568CSS efectivos, texto200%, cero intersecciones tarjeta/controles, sin desborde horizontal, panel desplazable y Escape. Pendiente comprobar en publicación."
+        },
+        {
+          "at": "2026-10-11T11:26:36.590Z",
+          "action": "set",
+          "pointId": "S01-1B-05",
+          "reference": "Sites16, commitbdf51ded: país España y Santiago homónimo en Chrome154 e integrado155.8 resultados con tipo, región y país; selección Santiago dominicano crea marcador único. Calles, dirección, edificio y barrio: HTTP200 cero resultados."
+        },
+        {
+          "at": "2026-10-11T11:26:36.694Z",
+          "action": "set",
+          "pointId": "S01-1B-12",
+          "reference": "20 pruebas Vitest y TypeScript/build oficial pasan. GeoNames+NaturalEarth propios en ASSETS, DB provisionado en Sites. Cuota real120/min y exceso429, Retry-After, recuperación UI a Madrid tras nueva ventana. Fuera de orden Madrid→Santiago mantiene Santiago;503 inyectado recupera. Máximo4 consultas/isolate verificado con prueba concurrente; tipos mixtos/caché excluidos. Contrato y licencias en docs/DECISION_BUSCADOR.md."
+        },
+        {
+          "at": "2026-10-11T11:26:36.794Z",
+          "action": "set",
+          "pointId": "S01-1B-13",
+          "reference": "Matriz autorizada Chrome154 e integrado155. Ventanas CSS320x568,390x844,1440x900 y amplias; texto200%, navegación teclado y Escape. Corrección compacta probada en build y Sites16:0 intersecciones controles/tarjeta, sin desborde horizontal, desplazamiento interno. Solo estos entornos Chromium están probados."
+        },
+        {
+          "at": "2026-10-11T11:26:36.892Z",
+          "action": "set",
+          "pointId": "S01-1B-AC-01",
+          "reference": "Sites16: marca flotante, sin cabecera. Chrome e integrado: controles de zoom, búsqueda, ubicación y global por ratón/teclado;320CSS sin solapamiento tarjeta/controles."
+        },
+        {
+          "at": "2026-10-11T11:26:36.994Z",
+          "action": "set",
+          "pointId": "S01-1B-AC-02",
+          "reference": "Sites14/16 conserva motor/estilo. Repetición real de SantoDomingo(-69.8845,18.4737), zoom19,pitch0,5m=35.311237pxCSS; nombres ElConde/ArzobispoMeriño visibles, sin POI; global vuelve sin recarga."
+        },
+        {
+          "at": "2026-10-11T11:26:37.098Z",
+          "action": "set",
+          "pointId": "S01-1B-AC-03",
+          "reference": "DOM/Screenshot reales: marca absoluta sin franja; globo y vista local ocupan todo el viewport. Ventanas320x568 y1440x900 comprobadas; zoom19 llena pantalla."
+        },
+        {
+          "at": "2026-10-11T11:26:37.186Z",
+          "action": "set",
+          "pointId": "S01-1B-AC-04",
+          "reference": "Servicio público16: solo country/city. Queries CalleElConde,1600PennsylvaniaAvenue,TorreEiffel,Gazcue devolvieron0; tests de PPLX/ST/RD/BLDG/desconocidos y caché mixta descartan objetos. Estilo geográfico conserva nombres de calles y no tiene POI/satélite."
+        },
+        {
+          "at": "2026-10-11T11:26:37.283Z",
+          "action": "set",
+          "pointId": "S01-1B-AC-05",
+          "reference": "Santiago muestra Chile/RepúblicaDominicana/Cuba y regiones; elegir dominicana centra(-70.69085,19.45036). zzzzzzzz muestra vacío útil. Fallo503 inyectado sobre dominio14 muestra error; reintento real recupera Madrid."
+        },
+        {
+          "at": "2026-10-11T11:26:37.375Z",
+          "action": "set",
+          "pointId": "S01-1B-AC-06",
+          "reference": "Escape deja0paneles y foco BuscarLugar en integrado; Tab/campos/selección accesibles, coordenadas alternativa al clic. Error de catálogo conserva mapa y controles disponibles. Evidencia previa de1B07 preservada."
+        },
+        {
+          "at": "2026-10-11T11:26:37.463Z",
+          "action": "set",
+          "pointId": "S01-1B-AC-07",
+          "reference": "Escala real repetida35.311px/5m en zoom19. Motor/Globe sin cambios frente a mediciones y ensayo de pérdida de contexto previos, conservados en historial1A10/1B11 y DECISION_CARTOGRAFICA.md; reintento/lectura alternativa siguen presentes. No se atribuye una nueva medición GPU a esta revisión."
+        },
+        {
+          "at": "2026-10-11T11:26:37.554Z",
+          "action": "set",
+          "pointId": "S01-1B-AC-08",
+          "reference": "Sites14–16: país/ciudad ambigua/vacío/400 real; límite120 y429 real y recuperación UI. Retardo real2s Madrid ignorado ante Santiago, sin sobrescribir.20 tests pasan, incluyendo caché validada/tipos mixtos/HTML inválido/concurrencia. Catálogo, caché, cuotas y versiones documentados; servidor sin identidad."
+        },
+        {
+          "at": "2026-10-11T11:26:37.651Z",
+          "action": "set",
+          "pointId": "S01-1B-AC-09",
+          "reference": "Chrome154 e integrado155 según decisión explícita del usuario. Texto200% y320CSS: sin overflow, panel scroll y botones44px; Sites16 cero intersecciones.1440x900 y390x844 sin tarjetas iniciales; tamaños temporales y estilos de prueba restaurados."
+        },
+        {
+          "at": "2026-10-11T11:26:37.768Z",
+          "action": "set",
+          "pointId": "S01-1C-01",
+          "reference": "Iniciando estados explícitos de exploración, búsqueda, configuración, consulta y resultado."
+        },
+        {
+          "at": "2026-10-11T11:26:37.881Z",
+          "action": "set",
+          "pointId": "S01-1C-09",
+          "reference": "Preparando registro común validado para Accidente, Militar y Natural; mostrar solamente categorías con contenido disponible."
+        },
+        {
+          "at": "2026-10-11T11:26:37.995Z",
+          "action": "set",
+          "pointId": "S01-1C-10",
+          "reference": "Preparando renderizador común de fichas y fuentes con limpieza de capas y firmas de entradas."
+        },
+        {
+          "at": "2026-10-11T11:35:16.194Z",
+          "action": "set",
+          "pointId": "S01-1C-02",
+          "reference": "Configuración y consulta integradas sobre el mapa; conserva la selección y solo consulta contenido disponible. Verificación de flujo pendiente."
+        },
+        {
+          "at": "2026-10-11T11:35:16.296Z",
+          "action": "set",
+          "pointId": "S01-1C-03",
+          "reference": "Firma por entrada/edición; ficha histórica independiente de punto, cámara e idioma. Lectura validada y requestId; pruebas unitarias pasan."
+        },
+        {
+          "at": "2026-10-11T11:35:16.406Z",
+          "action": "set",
+          "pointId": "S01-1C-04",
+          "reference": "Panel inferior desplazable existente adaptado a fichas; comprobar390x844 y320CSS con texto200%."
+        },
+        {
+          "at": "2026-10-11T11:35:16.512Z",
+          "action": "set",
+          "pointId": "S01-1C-05",
+          "reference": "Panel superpuesto único conserva el globo; comprobar cambios entre búsqueda/configuración/fichas."
+        },
+        {
+          "at": "2026-10-11T11:35:16.622Z",
+          "action": "set",
+          "pointId": "S01-1C-06",
+          "reference": "Escape, foco y navegación de paneles no modales implementados; falta recorrido de teclado completo."
+        },
+        {
+          "at": "2026-10-11T11:35:16.736Z",
+          "action": "set",
+          "pointId": "S01-1C-07",
+          "reference": "Información y disclaimer bajo demanda, sin subtítulos/estados permanentes; validación visual pendiente."
+        },
+        {
+          "at": "2026-10-11T11:35:16.847Z",
+          "action": "set",
+          "pointId": "S01-1C-08",
+          "reference": "Búsqueda en app/components/lib/content no encontró fictionalOutcome, población ficticia ni multiplicadores. Fichas y fuentes en renderizador común; falta validación visual."
+        },
+        {
+          "at": "2026-10-11T11:35:16.956Z",
+          "action": "set",
+          "pointId": "S01-1C-11",
+          "reference": "Un estado de historial por panel: Atrás/Escape/cierre vuelven al mapa; sustitución reemplaza panel en historial; revisar navegación real."
+        },
+        {
+          "at": "2026-10-11T11:49:58.506Z",
+          "action": "set",
+          "pointId": "S01-1C-01",
+          "reference": "Estados explícitos del Portal compilado: exploración inicial sin panel, configuración, ejecución, ficha e información; Chrome154, 11oct2026. TypeScript y25 pruebas Vitest pasan."
+        },
+        {
+          "at": "2026-10-11T11:49:58.688Z",
+          "action": "set",
+          "pointId": "S01-1C-02",
+          "reference": "Chrome154: Escenarios→Militar→Consultar→Cerrar→Escenarios conserva Militar; una única sección bajo demanda, sin resultados anticipados. Firma y selección verificadas en DOM."
+        },
+        {
+          "at": "2026-10-11T11:49:58.799Z",
+          "action": "set",
+          "pointId": "S01-1C-03",
+          "reference": "Ficha histórica mantiene firma al cambiar punto libre y arrastrar mapa. Las25 pruebas incluyen invalidación por edición y por área dependiente; cámara y locale no forman parte de firma histórica. La consulta demográfica queda para Sprint3."
+        },
+        {
+          "at": "2026-10-11T11:49:58.909Z",
+          "action": "set",
+          "pointId": "S01-1C-06",
+          "reference": "Chrome154: Escape y Cerrar retiran panel; foco vuelve a Escenarios. Solo un panel no modal y controles cerrados desmontados. Atrás desde Disclaimer devuelve al mapa y al botón Menú."
+        },
+        {
+          "at": "2026-10-11T11:49:59.014Z",
+          "action": "set",
+          "pointId": "S01-1C-09",
+          "reference": "Registro Zod estricto con Accidente/Militar/Natural; interfaz muestra únicamente Accidente y Militar porque tienen fichas disponibles. Pruebas rechazan capacidades desconocidas, fuentes inválidas e IDs duplicados."
+        },
+        {
+          "at": "2026-10-11T11:49:59.124Z",
+          "action": "set",
+          "pointId": "S01-1C-10",
+          "reference": "ContextCard común con fuentes y detalle de ubicación. Chrome compilado: Beirut agrega context-point/context-label en referencia de ciudad y al cerrar quedan0capas; nuclear no agrega ubicación. SinWebGL2 ficha textual accesible y Reintentar recupera mapa."
+        },
+        {
+          "at": "2026-10-11T11:49:59.237Z",
+          "action": "set",
+          "pointId": "S01-1C-11",
+          "reference": "Chrome154: hash directo de ficha abre contenido; Atrás/cierre conserva punto. Respuesta real de búsqueda Madrid retrasada1500ms e ignorando abort no sustituye Información ni deja resultados ocultos. Intercepción restaurada."
+        },
+        {
+          "at": "2026-10-11T11:50:55.200Z",
+          "action": "set",
+          "pointId": "S01-1C-04",
+          "reference": "Chrome154 en320×568 CSS con fuente raíz32px(200%): panel inferior296×273px, scroll interno271/1021px, cero cruces con herramientas y sin desbordamiento horizontal. Inicio390×844 ocupa todo viewport sin panel."
+        },
+        {
+          "at": "2026-10-11T11:50:55.361Z",
+          "action": "set",
+          "pointId": "S01-1C-05",
+          "reference": "Chrome154 en1440×900 CSS: mapa1440×900, panel superpuesto340px y cierre. Cambiar Escenarios→Menú mantiene una sola sección y0radios ocultos; Atrás cierra superposición."
+        },
+        {
+          "at": "2026-10-11T11:50:55.509Z",
+          "action": "set",
+          "pointId": "S01-1C-07",
+          "reference": "Menú→Disclaimer concentra límites extensos y fuentes de servicios; Información contiene uso y créditos. Búsqueda estática en app/components/lib/content no encuentra Cada evento cuenta una historia ni En espera ni población ficticia."
+        },
+        {
+          "at": "2026-10-11T11:50:55.627Z",
+          "action": "set",
+          "pointId": "S01-1C-08",
+          "reference": "Búsqueda en código ejecutable no encuentra fictionalOutcome, población ficticia ni preparación de comunidad. Fichas Beirut/ONU y nuclear/CICR accesibles en compilación; fuente Beirut revisada a comunicado primario UNIFIL4agosto2020."
+        },
+        {
+          "at": "2026-10-11T11:51:35.817Z",
+          "action": "set",
+          "pointId": "S01-1C-AC-01",
+          "reference": "Recorridos Chrome compilado pasan apertura/cierre/Escape/Atrás/foco; falta verificar la misma entrega publicada en Sites."
+        },
+        {
+          "at": "2026-10-11T11:51:36.024Z",
+          "action": "set",
+          "pointId": "S01-1C-AC-02",
+          "reference": "Código y fichas compiladas sin cifras arbitrarias; falta revisión visual de versión final publicada."
+        },
+        {
+          "at": "2026-10-11T11:51:36.208Z",
+          "action": "set",
+          "pointId": "S01-1C-AC-03",
+          "reference": "25 pruebas y Chrome pasan contratos, capas0tras cierre y respuesta tardía descartada; falta comprobar resultado publicado."
+        },
+        {
+          "at": "2026-10-11T11:51:36.370Z",
+          "action": "set",
+          "pointId": "S01-1C-AC-04",
+          "reference": "Chrome compilado: mapa ocupa390×844 y1440×900 CSS sin tarjetas iniciales; pendiente repetir en Sites/navegador integrado."
+        },
+        {
+          "at": "2026-10-11T11:51:36.483Z",
+          "action": "set",
+          "pointId": "S01-1C-AC-05",
+          "reference": "Chrome compilado conserva punto y zoom15 al abrir/consultar/cerrar, drag no coloca puntos y referencia explícita conserva punto; pendiente repetir en Sites."
+        },
+        {
+          "at": "2026-10-11T11:51:57.958Z",
+          "action": "guide",
+          "pointId": null,
+          "reference": null
         }
       ],
       "points": [
@@ -2083,9 +2323,9 @@
           "group": "Bloque 1B Pantalla y controles",
           "text": "Incorporar búsqueda exclusivamente de países y ciudades. Las sugerencias indican su tipo y ubicación administrativa para distinguir nombres repetidos. No buscar ni ofrecer calles, direcciones, edificios, barrios, negocios u otros puntos de interés. El campo se identifica como «País o ciudad» y no ofrece búsqueda detallada alternativa. Mantener la búsqueda cerrada hasta que se solicite.",
           "kind": "operacion",
-          "status": "en_curso",
-          "evidence": "Sites versión14: país España/francia/EEUU con punto cartográfico correcto; Santiago devuelve ocho ciudades identificadas por región/país; calle El Conde, Gazcue, Torre Eiffel y dirección consultadas sin resultados. Verificación final del bloque en preparación.",
-          "updatedAt": "2026-10-11T11:15:46.464Z",
+          "status": "terminado",
+          "evidence": "Sites16, commitbdf51ded: país España y Santiago homónimo en Chrome154 e integrado155.8 resultados con tipo, región y país; selección Santiago dominicano crea marcador único. Calles, dirección, edificio y barrio: HTTP200 cero resultados.",
+          "updatedAt": "2026-10-11T11:26:36.590Z",
           "history": [
             {
               "at": "2026-10-11T02:21:44.633Z",
@@ -2121,6 +2361,11 @@
               "at": "2026-10-11T11:15:46.464Z",
               "status": "en_curso",
               "evidence": "Sites versión14: país España/francia/EEUU con punto cartográfico correcto; Santiago devuelve ocho ciudades identificadas por región/país; calle El Conde, Gazcue, Torre Eiffel y dirección consultadas sin resultados. Verificación final del bloque en preparación."
+            },
+            {
+              "at": "2026-10-11T11:26:36.590Z",
+              "status": "terminado",
+              "evidence": "Sites16, commitbdf51ded: país España y Santiago homónimo en Chrome154 e integrado155.8 resultados con tipo, región y país; selección Santiago dominicano crea marcador único. Calles, dirección, edificio y barrio: HTTP200 cero resultados."
             }
           ]
         },
@@ -2262,9 +2507,9 @@
           "group": "Bloque 1B Pantalla y controles",
           "text": "Completar el adaptador servidor del buscador con esquema validado, límites de longitud y resultados, tiempo máximo, cancelación y protección de cuota. Limitar la consulta del proveedor a países y ciudades y filtrar su respuesta mediante una lista permitida de tipos; rechazar calles, direcciones, edificios, barrios, POI y tipos desconocidos también al leer la caché. No deducir el tipo por el texto del nombre ni depender únicamente del cliente. Definir comportamiento ante 429 y fallos del proveedor, sin reintentos ilimitados. Cachear únicamente respuestas permitidas por licencia, idioma y audiencia; las restricciones deben seguir funcionando en la versión revisable.",
           "kind": "operacion",
-          "status": "en_curso",
-          "evidence": "Cuota real D1 en Sites v14:120 respuestas200 y exceso429; mensaje en UI y reintento exitoso tras nueva ventana. Prueba fuera de orden Madrid→Santiago descarta antigua; fallo503 inyectado recupera sin recarga.20 pruebas Vitest y TypeScript pasan; límite de concurrencia4 en publicación.",
-          "updatedAt": "2026-10-11T11:15:46.630Z",
+          "status": "terminado",
+          "evidence": "20 pruebas Vitest y TypeScript/build oficial pasan. GeoNames+NaturalEarth propios en ASSETS, DB provisionado en Sites. Cuota real120/min y exceso429, Retry-After, recuperación UI a Madrid tras nueva ventana. Fuera de orden Madrid→Santiago mantiene Santiago;503 inyectado recupera. Máximo4 consultas/isolate verificado con prueba concurrente; tipos mixtos/caché excluidos. Contrato y licencias en docs/DECISION_BUSCADOR.md.",
+          "updatedAt": "2026-10-11T11:26:36.694Z",
           "history": [
             {
               "at": "2026-10-11T02:21:44.454Z",
@@ -2305,6 +2550,11 @@
               "at": "2026-10-11T11:15:46.630Z",
               "status": "en_curso",
               "evidence": "Cuota real D1 en Sites v14:120 respuestas200 y exceso429; mensaje en UI y reintento exitoso tras nueva ventana. Prueba fuera de orden Madrid→Santiago descarta antigua; fallo503 inyectado recupera sin recarga.20 pruebas Vitest y TypeScript pasan; límite de concurrencia4 en publicación."
+            },
+            {
+              "at": "2026-10-11T11:26:36.694Z",
+              "status": "terminado",
+              "evidence": "20 pruebas Vitest y TypeScript/build oficial pasan. GeoNames+NaturalEarth propios en ASSETS, DB provisionado en Sites. Cuota real120/min y exceso429, Retry-After, recuperación UI a Madrid tras nueva ventana. Fuera de orden Madrid→Santiago mantiene Santiago;503 inyectado recupera. Máximo4 consultas/isolate verificado con prueba concurrente; tipos mixtos/caché excluidos. Contrato y licencias en docs/DECISION_BUSCADOR.md."
             }
           ]
         },
@@ -2314,9 +2564,9 @@
           "group": "Bloque 1B Pantalla y controles",
           "text": "Fijar la matriz autorizada por el usuario: Chrome y navegador integrado, registrando versiones y dimensiones de la ventana. Probar tamaño de texto al 200 %, ancho de 320 píxeles CSS, paneles desplazables, teclado y controles accesibles sin superposición. Las comprobaciones registran navegador, versión, tamaño de ventana y resultados; no requieren plataformas adicionales. Ambos entornos pueden compartir motor; no afirmar compatibilidad con motores no verificados.",
           "kind": "operacion",
-          "status": "en_curso",
-          "evidence": "Nueva distribución comprobada en Chrome:320x568CSS efectivos, texto200%, cero intersecciones tarjeta/controles, sin desborde horizontal, panel desplazable y Escape. Pendiente comprobar en publicación.",
-          "updatedAt": "2026-10-11T11:23:36.094Z",
+          "status": "terminado",
+          "evidence": "Matriz autorizada Chrome154 e integrado155. Ventanas CSS320x568,390x844,1440x900 y amplias; texto200%, navegación teclado y Escape. Corrección compacta probada en build y Sites16:0 intersecciones controles/tarjeta, sin desborde horizontal, desplazamiento interno. Solo estos entornos Chromium están probados.",
+          "updatedAt": "2026-10-11T11:26:36.794Z",
           "history": [
             {
               "at": "2026-10-11T02:21:44.543Z",
@@ -2357,6 +2607,11 @@
               "at": "2026-10-11T11:23:36.094Z",
               "status": "en_curso",
               "evidence": "Nueva distribución comprobada en Chrome:320x568CSS efectivos, texto200%, cero intersecciones tarjeta/controles, sin desborde horizontal, panel desplazable y Escape. Pendiente comprobar en publicación."
+            },
+            {
+              "at": "2026-10-11T11:26:36.794Z",
+              "status": "terminado",
+              "evidence": "Matriz autorizada Chrome154 e integrado155. Ventanas CSS320x568,390x844,1440x900 y amplias; texto200%, navegación teclado y Escape. Corrección compacta probada en build y Sites16:0 intersecciones controles/tarjeta, sin desborde horizontal, desplazamiento interno. Solo estos entornos Chromium están probados."
             }
           ]
         },
@@ -2366,24 +2621,35 @@
           "group": "Bloque 1B Pantalla y controles",
           "text": "En ventanas estrechas y amplias, nombre e icono flotan sin reservar una cabecera; controles de zoom, búsqueda, selección y regreso global funcionan con ratón y teclado.",
           "kind": "aceptacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-10T18:28:51.099Z",
-          "history": []
+          "status": "terminado",
+          "evidence": "Sites16: marca flotante, sin cabecera. Chrome e integrado: controles de zoom, búsqueda, ubicación y global por ratón/teclado;320CSS sin solapamiento tarjeta/controles.",
+          "updatedAt": "2026-10-11T11:26:36.892Z",
+          "history": [
+            {
+              "at": "2026-10-11T11:26:36.892Z",
+              "status": "terminado",
+              "evidence": "Sites16: marca flotante, sin cabecera. Chrome e integrado: controles de zoom, búsqueda, ubicación y global por ratón/teclado;320CSS sin solapamiento tarjeta/controles."
+            }
+          ]
         },
         {
           "id": "S01-1B-AC-02",
           "group": "Bloque 1B Pantalla y controles",
           "text": "El usuario alcanza escala de 5 metros, ve nombres de calles y recupera la vista global sin recargar.",
           "kind": "aceptacion",
-          "status": "en_curso",
-          "evidence": "Zoom19 SD5m35,311px, calles y vuelta global comprobados; criterio completo espera terminar operaciones restantes de1B.",
-          "updatedAt": "2026-10-11T02:34:48.932Z",
+          "status": "terminado",
+          "evidence": "Sites14/16 conserva motor/estilo. Repetición real de SantoDomingo(-69.8845,18.4737), zoom19,pitch0,5m=35.311237pxCSS; nombres ElConde/ArzobispoMeriño visibles, sin POI; global vuelve sin recarga.",
+          "updatedAt": "2026-10-11T11:26:36.994Z",
           "history": [
             {
               "at": "2026-10-11T02:34:48.932Z",
               "status": "en_curso",
               "evidence": "Zoom19 SD5m35,311px, calles y vuelta global comprobados; criterio completo espera terminar operaciones restantes de1B."
+            },
+            {
+              "at": "2026-10-11T11:26:36.994Z",
+              "status": "terminado",
+              "evidence": "Sites14/16 conserva motor/estilo. Repetición real de SantoDomingo(-69.8845,18.4737), zoom19,pitch0,5m=35.311237pxCSS; nombres ElConde/ArzobispoMeriño visibles, sin POI; global vuelve sin recarga."
             }
           ],
           "blockId": "1B"
@@ -2393,14 +2659,19 @@
           "group": "Bloque 1B Pantalla y controles",
           "text": "La marca flota y el globo puede llenar toda la pantalla al acercar.",
           "kind": "aceptacion",
-          "status": "en_curso",
-          "evidence": "Marca flotante y main1280×720 publicados, sin cabecera;320CSS emulado probado. Criterio completo pendiente de operaciones restantes.",
-          "updatedAt": "2026-10-11T02:34:49.022Z",
+          "status": "terminado",
+          "evidence": "DOM/Screenshot reales: marca absoluta sin franja; globo y vista local ocupan todo el viewport. Ventanas320x568 y1440x900 comprobadas; zoom19 llena pantalla.",
+          "updatedAt": "2026-10-11T11:26:37.098Z",
           "history": [
             {
               "at": "2026-10-11T02:34:49.022Z",
               "status": "en_curso",
               "evidence": "Marca flotante y main1280×720 publicados, sin cabecera;320CSS emulado probado. Criterio completo pendiente de operaciones restantes."
+            },
+            {
+              "at": "2026-10-11T11:26:37.098Z",
+              "status": "terminado",
+              "evidence": "DOM/Screenshot reales: marca absoluta sin franja; globo y vista local ocupan todo el viewport. Ventanas320x568 y1440x900 comprobadas; zoom19 llena pantalla."
             }
           ],
           "blockId": "1B"
@@ -2411,14 +2682,19 @@
           "group": "Bloque 1B Pantalla y controles",
           "text": "Las búsquedas solo ofrecen países y ciudades identificados como tales. Consultas de calles, direcciones, edificios, barrios y POI no devuelven esos objetos; respuestas de tipo desconocido se descartan. No hay comercios ni sus etiquetas en las capas; las calles con nombre permanecen en el mapa.",
           "kind": "aceptacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-11T10:11:13.951Z",
+          "status": "terminado",
+          "evidence": "Servicio público16: solo country/city. Queries CalleElConde,1600PennsylvaniaAvenue,TorreEiffel,Gazcue devolvieron0; tests de PPLX/ST/RD/BLDG/desconocidos y caché mixta descartan objetos. Estilo geográfico conserva nombres de calles y no tiene POI/satélite.",
+          "updatedAt": "2026-10-11T11:26:37.186Z",
           "history": [
             {
               "at": "2026-10-11T10:11:13.951Z",
               "status": "pendiente",
               "evidence": "Cambió el requisito en el plan; necesita nueva verificación."
+            },
+            {
+              "at": "2026-10-11T11:26:37.186Z",
+              "status": "terminado",
+              "evidence": "Servicio público16: solo country/city. Queries CalleElConde,1600PennsylvaniaAvenue,TorreEiffel,Gazcue devolvieron0; tests de PPLX/ST/RD/BLDG/desconocidos y caché mixta descartan objetos. Estilo geográfico conserva nombres de calles y no tiene POI/satélite."
             }
           ]
         },
@@ -2427,14 +2703,19 @@
           "group": "Bloque 1B Pantalla y controles",
           "text": "Una búsqueda ambigua permite elegir la ciudad correcta. Cero resultados y fallo del servicio tienen una recuperación comprensible.",
           "kind": "aceptacion",
-          "status": "no_completado",
-          "evidence": "Búsqueda real y desambiguación bloqueadas por proveedor pendiente de elección/configuración.",
-          "updatedAt": "2026-10-11T02:34:49.290Z",
+          "status": "terminado",
+          "evidence": "Santiago muestra Chile/RepúblicaDominicana/Cuba y regiones; elegir dominicana centra(-70.69085,19.45036). zzzzzzzz muestra vacío útil. Fallo503 inyectado sobre dominio14 muestra error; reintento real recupera Madrid.",
+          "updatedAt": "2026-10-11T11:26:37.283Z",
           "history": [
             {
               "at": "2026-10-11T02:34:49.290Z",
               "status": "no_completado",
               "evidence": "Búsqueda real y desambiguación bloqueadas por proveedor pendiente de elección/configuración."
+            },
+            {
+              "at": "2026-10-11T11:26:37.283Z",
+              "status": "terminado",
+              "evidence": "Santiago muestra Chile/RepúblicaDominicana/Cuba y regiones; elegir dominicana centra(-70.69085,19.45036). zzzzzzzz muestra vacío útil. Fallo503 inyectado sobre dominio14 muestra error; reintento real recupera Madrid."
             }
           ],
           "blockId": "1B"
@@ -2444,14 +2725,19 @@
           "group": "Bloque 1B Pantalla y controles",
           "text": "Con teclado se puede recorrer y cerrar controles sin quedar atrapado. El mapa puede seguir utilizándose si un servicio auxiliar falla.",
           "kind": "aceptacion",
-          "status": "en_curso",
-          "evidence": "Tab/Escape/foco y mapa ante503 comprobados; cierre de criterio pendiente de operaciones restantes de1B.",
-          "updatedAt": "2026-10-11T02:34:49.110Z",
+          "status": "terminado",
+          "evidence": "Escape deja0paneles y foco BuscarLugar en integrado; Tab/campos/selección accesibles, coordenadas alternativa al clic. Error de catálogo conserva mapa y controles disponibles. Evidencia previa de1B07 preservada.",
+          "updatedAt": "2026-10-11T11:26:37.375Z",
           "history": [
             {
               "at": "2026-10-11T02:34:49.110Z",
               "status": "en_curso",
               "evidence": "Tab/Escape/foco y mapa ante503 comprobados; cierre de criterio pendiente de operaciones restantes de1B."
+            },
+            {
+              "at": "2026-10-11T11:26:37.375Z",
+              "status": "terminado",
+              "evidence": "Escape deja0paneles y foco BuscarLugar en integrado; Tab/campos/selección accesibles, coordenadas alternativa al clic. Error de catálogo conserva mapa y controles disponibles. Evidencia previa de1B07 preservada."
             }
           ],
           "blockId": "1B"
@@ -2461,14 +2747,19 @@
           "group": "Bloque 1B Pantalla y controles",
           "text": "Pasan las medidas de zoom y presupuesto del bloque 1A; la ausencia de GPU tiene recuperación y lectura alternativa.",
           "kind": "aceptacion",
-          "status": "en_curso",
-          "evidence": "Presupuestos1A pasan y recuperación WebGL2 inducida funciona. Criterio completo pendiente del bloque.",
-          "updatedAt": "2026-10-11T02:34:49.196Z",
+          "status": "terminado",
+          "evidence": "Escala real repetida35.311px/5m en zoom19. Motor/Globe sin cambios frente a mediciones y ensayo de pérdida de contexto previos, conservados en historial1A10/1B11 y DECISION_CARTOGRAFICA.md; reintento/lectura alternativa siguen presentes. No se atribuye una nueva medición GPU a esta revisión.",
+          "updatedAt": "2026-10-11T11:26:37.463Z",
           "history": [
             {
               "at": "2026-10-11T02:34:49.196Z",
               "status": "en_curso",
               "evidence": "Presupuestos1A pasan y recuperación WebGL2 inducida funciona. Criterio completo pendiente del bloque."
+            },
+            {
+              "at": "2026-10-11T11:26:37.463Z",
+              "status": "terminado",
+              "evidence": "Escala real repetida35.311px/5m en zoom19. Motor/Globe sin cambios frente a mediciones y ensayo de pérdida de contexto previos, conservados en historial1A10/1B11 y DECISION_CARTOGRAFICA.md; reintento/lectura alternativa siguen presentes. No se atribuye una nueva medición GPU a esta revisión."
             }
           ],
           "blockId": "1B"
@@ -2479,9 +2770,9 @@
           "group": "Bloque 1B Pantalla y controles",
           "text": "El buscador integrado pasa búsqueda de país, ciudad ambigua, ausencia de resultados, respuesta fuera de orden, entrada inválida, cuota y recuperación en el dominio revisable. El servidor excluye calles, direcciones, barrios, edificios, POI y tipos desconocidos, incluso en respuestas mixtas y caché. Sus límites, mapeo de tipos del proveedor y política de caché están documentados.",
           "kind": "aceptacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-11T10:11:13.951Z",
+          "status": "terminado",
+          "evidence": "Sites14–16: país/ciudad ambigua/vacío/400 real; límite120 y429 real y recuperación UI. Retardo real2s Madrid ignorado ante Santiago, sin sobrescribir.20 tests pasan, incluyendo caché validada/tipos mixtos/HTML inválido/concurrencia. Catálogo, caché, cuotas y versiones documentados; servidor sin identidad.",
+          "updatedAt": "2026-10-11T11:26:37.554Z",
           "history": [
             {
               "at": "2026-10-11T02:34:49.383Z",
@@ -2492,6 +2783,11 @@
               "at": "2026-10-11T10:11:13.951Z",
               "status": "pendiente",
               "evidence": "Cambió el requisito en el plan; necesita nueva verificación."
+            },
+            {
+              "at": "2026-10-11T11:26:37.554Z",
+              "status": "terminado",
+              "evidence": "Sites14–16: país/ciudad ambigua/vacío/400 real; límite120 y429 real y recuperación UI. Retardo real2s Madrid ignorado ante Santiago, sin sobrescribir.20 tests pasan, incluyendo caché validada/tipos mixtos/HTML inválido/concurrencia. Catálogo, caché, cuotas y versiones documentados; servidor sin identidad."
             }
           ]
         },
@@ -2501,9 +2797,9 @@
           "group": "Bloque 1B Pantalla y controles",
           "text": "La matriz de navegadores web tiene evidencias realmente ejecutadas; cualquier falta de acceso a un entorno queda pendiente y no se convierte en una prueba aprobada. Cambiar un objetivo de rendimiento requiere aceptación explícita del usuario.",
           "kind": "aceptacion",
-          "status": "no_completado",
-          "evidence": "El criterio corresponde exclusivamente a Chromium y Firefox y tamaños de ventana. Chromium verificado; Firefox aún no probado. Ninguna plataforma adicional condiciona la aceptación.",
-          "updatedAt": "2026-10-11T10:37:41.907Z",
+          "status": "terminado",
+          "evidence": "Chrome154 e integrado155 según decisión explícita del usuario. Texto200% y320CSS: sin overflow, panel scroll y botones44px; Sites16 cero intersecciones.1440x900 y390x844 sin tarjetas iniciales; tamaños temporales y estilos de prueba restaurados.",
+          "updatedAt": "2026-10-11T11:26:37.651Z",
           "history": [
             {
               "at": "2026-10-11T02:34:49.470Z",
@@ -2514,6 +2810,11 @@
               "at": "2026-10-11T10:37:41.907Z",
               "status": "no_completado",
               "evidence": "El criterio corresponde exclusivamente a Chromium y Firefox y tamaños de ventana. Chromium verificado; Firefox aún no probado. Ninguna plataforma adicional condiciona la aceptación."
+            },
+            {
+              "at": "2026-10-11T11:26:37.651Z",
+              "status": "terminado",
+              "evidence": "Chrome154 e integrado155 según decisión explícita del usuario. Texto200% y320CSS: sin overflow, panel scroll y botones44px; Sites16 cero intersecciones.1440x900 y390x844 sin tarjetas iniciales; tamaños temporales y estilos de prueba restaurados."
             }
           ]
         },
@@ -2522,10 +2823,21 @@
           "group": "Bloque 1C Paneles bajo demanda",
           "text": "Crear una gestión explícita de estados: exploración, búsqueda, configuración, ejecución, resultado y consulta de información. El estado inicial es exploración, sin tarjetas de resultados vacías.",
           "kind": "operacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-10T13:47:29.679Z",
-          "history": [],
+          "status": "terminado",
+          "evidence": "Estados explícitos del Portal compilado: exploración inicial sin panel, configuración, ejecución, ficha e información; Chrome154, 11oct2026. TypeScript y25 pruebas Vitest pasan.",
+          "updatedAt": "2026-10-11T11:49:58.506Z",
+          "history": [
+            {
+              "at": "2026-10-11T11:26:37.768Z",
+              "status": "en_curso",
+              "evidence": "Iniciando estados explícitos de exploración, búsqueda, configuración, consulta y resultado."
+            },
+            {
+              "at": "2026-10-11T11:49:58.506Z",
+              "status": "terminado",
+              "evidence": "Estados explícitos del Portal compilado: exploración inicial sin panel, configuración, ejecución, ficha e información; Chrome154, 11oct2026. TypeScript y25 pruebas Vitest pasan."
+            }
+          ],
           "blockId": "1C"
         },
         {
@@ -2533,10 +2845,21 @@
           "group": "Bloque 1C Paneles bajo demanda",
           "text": "Abrir configuración al solicitar escenarios; cerrarla conserva la selección. El botón de ejecución vive en ese flujo y no necesita una tarjeta de resultados anticipada.",
           "kind": "operacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-10T13:47:29.679Z",
-          "history": [],
+          "status": "terminado",
+          "evidence": "Chrome154: Escenarios→Militar→Consultar→Cerrar→Escenarios conserva Militar; una única sección bajo demanda, sin resultados anticipados. Firma y selección verificadas en DOM.",
+          "updatedAt": "2026-10-11T11:49:58.688Z",
+          "history": [
+            {
+              "at": "2026-10-11T11:35:16.194Z",
+              "status": "en_curso",
+              "evidence": "Configuración y consulta integradas sobre el mapa; conserva la selección y solo consulta contenido disponible. Verificación de flujo pendiente."
+            },
+            {
+              "at": "2026-10-11T11:49:58.688Z",
+              "status": "terminado",
+              "evidence": "Chrome154: Escenarios→Militar→Consultar→Cerrar→Escenarios conserva Militar; una única sección bajo demanda, sin resultados anticipados. Firma y selección verificadas en DOM."
+            }
+          ],
           "blockId": "1C"
         },
         {
@@ -2544,10 +2867,21 @@
           "group": "Bloque 1C Paneles bajo demanda",
           "text": "Mostrar resultados solamente después de una operación terminada. Invalidar lo que dependa de una ubicación o configuración modificadas mediante una firma de entradas. Un registro histórico fijo no cambia cuando se mueve la cámara o el punto libre; una consulta demográfica sí depende de su área. No borrar resultados al cambiar solo el idioma.",
           "kind": "operacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-10T13:47:29.679Z",
-          "history": [],
+          "status": "terminado",
+          "evidence": "Ficha histórica mantiene firma al cambiar punto libre y arrastrar mapa. Las25 pruebas incluyen invalidación por edición y por área dependiente; cámara y locale no forman parte de firma histórica. La consulta demográfica queda para Sprint3.",
+          "updatedAt": "2026-10-11T11:49:58.799Z",
+          "history": [
+            {
+              "at": "2026-10-11T11:35:16.296Z",
+              "status": "en_curso",
+              "evidence": "Firma por entrada/edición; ficha histórica independiente de punto, cámara e idioma. Lectura validada y requestId; pruebas unitarias pasan."
+            },
+            {
+              "at": "2026-10-11T11:49:58.799Z",
+              "status": "terminado",
+              "evidence": "Ficha histórica mantiene firma al cambiar punto libre y arrastrar mapa. Las25 pruebas incluyen invalidación por edición y por área dependiente; cámara y locale no forman parte de firma histórica. La consulta demográfica queda para Sprint3."
+            }
+          ],
           "blockId": "1C"
         },
         {
@@ -2555,10 +2889,21 @@
           "group": "Bloque 1C Paneles bajo demanda",
           "text": "En ventanas estrechas, utilizar un panel inferior con cierre y altura limitada. Mantener visible parte del mapa y permitir desplazamiento dentro del contenido sin mover accidentalmente el globo.",
           "kind": "operacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-10T13:47:29.679Z",
-          "history": [],
+          "status": "terminado",
+          "evidence": "Chrome154 en320×568 CSS con fuente raíz32px(200%): panel inferior296×273px, scroll interno271/1021px, cero cruces con herramientas y sin desbordamiento horizontal. Inicio390×844 ocupa todo viewport sin panel.",
+          "updatedAt": "2026-10-11T11:50:55.200Z",
+          "history": [
+            {
+              "at": "2026-10-11T11:35:16.406Z",
+              "status": "en_curso",
+              "evidence": "Panel inferior desplazable existente adaptado a fichas; comprobar390x844 y320CSS con texto200%."
+            },
+            {
+              "at": "2026-10-11T11:50:55.200Z",
+              "status": "terminado",
+              "evidence": "Chrome154 en320×568 CSS con fuente raíz32px(200%): panel inferior296×273px, scroll interno271/1021px, cero cruces con herramientas y sin desbordamiento horizontal. Inicio390×844 ocupa todo viewport sin panel."
+            }
+          ],
           "blockId": "1C"
         },
         {
@@ -2566,10 +2911,21 @@
           "group": "Bloque 1C Paneles bajo demanda",
           "text": "En ventanas amplias, usar un panel superpuesto que pueda cerrarse. Al solicitar otro panel, sustituir el anterior cuando su coexistencia no tenga utilidad.",
           "kind": "operacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-10T13:47:29.679Z",
-          "history": [],
+          "status": "terminado",
+          "evidence": "Chrome154 en1440×900 CSS: mapa1440×900, panel superpuesto340px y cierre. Cambiar Escenarios→Menú mantiene una sola sección y0radios ocultos; Atrás cierra superposición.",
+          "updatedAt": "2026-10-11T11:50:55.361Z",
+          "history": [
+            {
+              "at": "2026-10-11T11:35:16.512Z",
+              "status": "en_curso",
+              "evidence": "Panel superpuesto único conserva el globo; comprobar cambios entre búsqueda/configuración/fichas."
+            },
+            {
+              "at": "2026-10-11T11:50:55.361Z",
+              "status": "terminado",
+              "evidence": "Chrome154 en1440×900 CSS: mapa1440×900, panel superpuesto340px y cierre. Cambiar Escenarios→Menú mantiene una sola sección y0radios ocultos; Atrás cierra superposición."
+            }
+          ],
           "blockId": "1C"
         },
         {
@@ -2577,10 +2933,21 @@
           "group": "Bloque 1C Paneles bajo demanda",
           "text": "Aplicar Escape para cerrar, restauración del foco y tratamiento correcto de paneles modales. Un panel cerrado no conserva controles invisibles en el recorrido del teclado.",
           "kind": "operacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-10T13:47:29.679Z",
-          "history": [],
+          "status": "terminado",
+          "evidence": "Chrome154: Escape y Cerrar retiran panel; foco vuelve a Escenarios. Solo un panel no modal y controles cerrados desmontados. Atrás desde Disclaimer devuelve al mapa y al botón Menú.",
+          "updatedAt": "2026-10-11T11:49:58.909Z",
+          "history": [
+            {
+              "at": "2026-10-11T11:35:16.622Z",
+              "status": "en_curso",
+              "evidence": "Escape, foco y navegación de paneles no modales implementados; falta recorrido de teclado completo."
+            },
+            {
+              "at": "2026-10-11T11:49:58.909Z",
+              "status": "terminado",
+              "evidence": "Chrome154: Escape y Cerrar retiran panel; foco vuelve a Escenarios. Solo un panel no modal y controles cerrados desmontados. Atrás desde Disclaimer devuelve al mapa y al botón Menú."
+            }
+          ],
           "blockId": "1C"
         },
         {
@@ -2588,10 +2955,21 @@
           "group": "Bloque 1C Paneles bajo demanda",
           "text": "Reubicar los textos extensos de alcance y metodología en el disclaimer accesible desde el menú. Suprimir subtítulos como «Cada evento cuenta una historia» y estados permanentes como «En espera».",
           "kind": "operacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-10T13:47:29.679Z",
-          "history": [],
+          "status": "terminado",
+          "evidence": "Menú→Disclaimer concentra límites extensos y fuentes de servicios; Información contiene uso y créditos. Búsqueda estática en app/components/lib/content no encuentra Cada evento cuenta una historia ni En espera ni población ficticia.",
+          "updatedAt": "2026-10-11T11:50:55.509Z",
+          "history": [
+            {
+              "at": "2026-10-11T11:35:16.736Z",
+              "status": "en_curso",
+              "evidence": "Información y disclaimer bajo demanda, sin subtítulos/estados permanentes; validación visual pendiente."
+            },
+            {
+              "at": "2026-10-11T11:50:55.509Z",
+              "status": "terminado",
+              "evidence": "Menú→Disclaimer concentra límites extensos y fuentes de servicios; Información contiene uso y créditos. Búsqueda estática en app/components/lib/content no encuentra Cada evento cuenta una historia ni En espera ni población ficticia."
+            }
+          ],
           "blockId": "1C"
         },
         {
@@ -2599,10 +2977,21 @@
           "group": "Bloque 1C Paneles bajo demanda",
           "text": "Retirar en este sprint la función fictionalOutcome, el selector de población ficticia, los multiplicadores de preparación, las cifras de juego y sus animaciones de impacto. Mantener las fichas de contexto existentes que sean utilizables y sus fuentes como recorrido de consulta completo. No dejar esta limpieza esperando al sprint 4 ni conservar resultados ficticios ocultando sus etiquetas.",
           "kind": "operacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-10T13:47:29.679Z",
-          "history": [],
+          "status": "terminado",
+          "evidence": "Búsqueda en código ejecutable no encuentra fictionalOutcome, población ficticia ni preparación de comunidad. Fichas Beirut/ONU y nuclear/CICR accesibles en compilación; fuente Beirut revisada a comunicado primario UNIFIL4agosto2020.",
+          "updatedAt": "2026-10-11T11:50:55.627Z",
+          "history": [
+            {
+              "at": "2026-10-11T11:35:16.847Z",
+              "status": "en_curso",
+              "evidence": "Búsqueda en app/components/lib/content no encontró fictionalOutcome, población ficticia ni multiplicadores. Fichas y fuentes en renderizador común; falta validación visual."
+            },
+            {
+              "at": "2026-10-11T11:50:55.627Z",
+              "status": "terminado",
+              "evidence": "Búsqueda en código ejecutable no encuentra fictionalOutcome, población ficticia ni preparación de comunidad. Fichas Beirut/ONU y nuclear/CICR accesibles en compilación; fuente Beirut revisada a comunicado primario UNIFIL4agosto2020."
+            }
+          ],
           "blockId": "1C"
         },
         {
@@ -2610,10 +2999,21 @@
           "group": "Bloque 1C Paneles bajo demanda",
           "text": "Preparar el registro común de entradas y capacidades con las categorías «Accidente», «Militar» y «Natural». La interfaz muestra únicamente categorías con contenido terminado. Esta estructura debe permitir agregar cada catálogo posterior sin requerir código de otro catálogo todavía pendiente.",
           "kind": "operacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-10T13:47:29.679Z",
-          "history": [],
+          "status": "terminado",
+          "evidence": "Registro Zod estricto con Accidente/Militar/Natural; interfaz muestra únicamente Accidente y Militar porque tienen fichas disponibles. Pruebas rechazan capacidades desconocidas, fuentes inválidas e IDs duplicados.",
+          "updatedAt": "2026-10-11T11:49:59.014Z",
+          "history": [
+            {
+              "at": "2026-10-11T11:26:37.881Z",
+              "status": "en_curso",
+              "evidence": "Preparando registro común validado para Accidente, Militar y Natural; mostrar solamente categorías con contenido disponible."
+            },
+            {
+              "at": "2026-10-11T11:49:59.014Z",
+              "status": "terminado",
+              "evidence": "Registro Zod estricto con Accidente/Militar/Natural; interfaz muestra únicamente Accidente y Militar porque tienen fichas disponibles. Pruebas rechazan capacidades desconocidas, fuentes inválidas e IDs duplicados."
+            }
+          ],
           "blockId": "1C"
         },
         {
@@ -2621,10 +3021,21 @@
           "group": "Bloque 1C Paneles bajo demanda",
           "text": "Entregar el renderizador común de fichas, fuentes, detalles y capas junto a los casos de contexto existentes. Validar sus datos y gestionar montaje, cierre y limpieza sin depender de un catálogo posterior. Los sprints 4 a 7 incorporan casos a esta función terminada.",
           "kind": "operacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-10T13:47:29.679Z",
-          "history": [],
+          "status": "terminado",
+          "evidence": "ContextCard común con fuentes y detalle de ubicación. Chrome compilado: Beirut agrega context-point/context-label en referencia de ciudad y al cerrar quedan0capas; nuclear no agrega ubicación. SinWebGL2 ficha textual accesible y Reintentar recupera mapa.",
+          "updatedAt": "2026-10-11T11:49:59.124Z",
+          "history": [
+            {
+              "at": "2026-10-11T11:26:37.995Z",
+              "status": "en_curso",
+              "evidence": "Preparando renderizador común de fichas y fuentes con limpieza de capas y firmas de entradas."
+            },
+            {
+              "at": "2026-10-11T11:49:59.124Z",
+              "status": "terminado",
+              "evidence": "ContextCard común con fuentes y detalle de ubicación. Chrome compilado: Beirut agrega context-point/context-label en referencia de ciudad y al cerrar quedan0capas; nuclear no agrega ubicación. SinWebGL2 ficha textual accesible y Reintentar recupera mapa."
+            }
+          ],
           "blockId": "1C"
         },
         {
@@ -2632,10 +3043,21 @@
           "group": "Bloque 1C Paneles bajo demanda",
           "text": "Definir regreso al mapa, cancelación y sustitución de paneles, con historial de navegación cuando sea necesario para que el botón Atrás cierre la vista esperada. No añadir funciones de compartir ni publicar escenarios.",
           "kind": "operacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-10T13:47:29.679Z",
-          "history": [],
+          "status": "terminado",
+          "evidence": "Chrome154: hash directo de ficha abre contenido; Atrás/cierre conserva punto. Respuesta real de búsqueda Madrid retrasada1500ms e ignorando abort no sustituye Información ni deja resultados ocultos. Intercepción restaurada.",
+          "updatedAt": "2026-10-11T11:49:59.237Z",
+          "history": [
+            {
+              "at": "2026-10-11T11:35:16.956Z",
+              "status": "en_curso",
+              "evidence": "Un estado de historial por panel: Atrás/Escape/cierre vuelven al mapa; sustitución reemplaza panel en historial; revisar navegación real."
+            },
+            {
+              "at": "2026-10-11T11:49:59.237Z",
+              "status": "terminado",
+              "evidence": "Chrome154: hash directo de ficha abre contenido; Atrás/cierre conserva punto. Respuesta real de búsqueda Madrid retrasada1500ms e ignorando abort no sustituye Información ni deja resultados ocultos. Intercepción restaurada."
+            }
+          ],
           "blockId": "1C"
         },
         {
@@ -2644,10 +3066,16 @@
           "group": "Bloque 1C Paneles bajo demanda",
           "text": "Los paneles solo aparecen al solicitarlos; Escape, Atrás cuando corresponda, cierre y restauración del foco funcionan sin controles invisibles en el recorrido del teclado.",
           "kind": "aceptacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-10T18:28:51.099Z",
-          "history": []
+          "status": "en_curso",
+          "evidence": "Recorridos Chrome compilado pasan apertura/cierre/Escape/Atrás/foco; falta verificar la misma entrega publicada en Sites.",
+          "updatedAt": "2026-10-11T11:51:35.817Z",
+          "history": [
+            {
+              "at": "2026-10-11T11:51:35.817Z",
+              "status": "en_curso",
+              "evidence": "Recorridos Chrome compilado pasan apertura/cierre/Escape/Atrás/foco; falta verificar la misma entrega publicada en Sites."
+            }
+          ]
         },
         {
           "id": "S01-1C-AC-02",
@@ -2655,10 +3083,16 @@
           "group": "Bloque 1C Paneles bajo demanda",
           "text": "Se retiraron fictionalOutcome, población ficticia, multiplicadores de preparación, cifras arbitrarias y sus animaciones; las fichas utilizables siguen accesibles con fuentes.",
           "kind": "aceptacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-10T18:28:51.099Z",
-          "history": []
+          "status": "en_curso",
+          "evidence": "Código y fichas compiladas sin cifras arbitrarias; falta revisión visual de versión final publicada.",
+          "updatedAt": "2026-10-11T11:51:36.024Z",
+          "history": [
+            {
+              "at": "2026-10-11T11:51:36.024Z",
+              "status": "en_curso",
+              "evidence": "Código y fichas compiladas sin cifras arbitrarias; falta revisión visual de versión final publicada."
+            }
+          ]
         },
         {
           "id": "S01-1C-AC-03",
@@ -2666,20 +3100,32 @@
           "group": "Bloque 1C Paneles bajo demanda",
           "text": "El registro de capacidades y el renderizador de fichas funcionan con el contenido disponible; cambio de consulta, respuesta obsoleta y cierre limpian los datos y capas dependientes.",
           "kind": "aceptacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-10T18:28:51.099Z",
-          "history": []
+          "status": "en_curso",
+          "evidence": "25 pruebas y Chrome pasan contratos, capas0tras cierre y respuesta tardía descartada; falta comprobar resultado publicado.",
+          "updatedAt": "2026-10-11T11:51:36.208Z",
+          "history": [
+            {
+              "at": "2026-10-11T11:51:36.208Z",
+              "status": "en_curso",
+              "evidence": "25 pruebas y Chrome pasan contratos, capas0tras cierre y respuesta tardía descartada; falta comprobar resultado publicado."
+            }
+          ]
         },
         {
           "id": "S01-1C-AC-04",
           "group": "Bloque 1C Paneles bajo demanda",
           "text": "Al abrir en 390 × 844 y 1440 × 900, el mapa ocupa el área visible y ninguna tarjeta de resultados está abierta.",
           "kind": "aceptacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-10T13:47:29.679Z",
-          "history": [],
+          "status": "en_curso",
+          "evidence": "Chrome compilado: mapa ocupa390×844 y1440×900 CSS sin tarjetas iniciales; pendiente repetir en Sites/navegador integrado.",
+          "updatedAt": "2026-10-11T11:51:36.370Z",
+          "history": [
+            {
+              "at": "2026-10-11T11:51:36.370Z",
+              "status": "en_curso",
+              "evidence": "Chrome compilado: mapa ocupa390×844 y1440×900 CSS sin tarjetas iniciales; pendiente repetir en Sites/navegador integrado."
+            }
+          ],
           "blockId": "1C"
         },
         {
@@ -2687,10 +3133,16 @@
           "group": "Bloque 1C Paneles bajo demanda",
           "text": "Abrir, ejecutar y cerrar conserva la ubicación y el acercamiento; arrastrar no crea puntos.",
           "kind": "aceptacion",
-          "status": "pendiente",
-          "evidence": "",
-          "updatedAt": "2026-10-10T13:47:29.679Z",
-          "history": [],
+          "status": "en_curso",
+          "evidence": "Chrome compilado conserva punto y zoom15 al abrir/consultar/cerrar, drag no coloca puntos y referencia explícita conserva punto; pendiente repetir en Sites.",
+          "updatedAt": "2026-10-11T11:51:36.483Z",
+          "history": [
+            {
+              "at": "2026-10-11T11:51:36.483Z",
+              "status": "en_curso",
+              "evidence": "Chrome compilado conserva punto y zoom15 al abrir/consultar/cerrar, drag no coloca puntos y referencia explícita conserva punto; pendiente repetir en Sites."
+            }
+          ],
           "blockId": "1C"
         }
       ]

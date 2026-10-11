@@ -28,7 +28,7 @@ export default function Globe({diagnostics=false,onReady}:{diagnostics?:boolean,
     if(cancelled||!map||map.isMoving())return;
     const c=map.getCenter(),z=map.getZoom(),d=5/(111319.49079327358*Math.cos(c.lat*Math.PI/180));
     const a=map.project(c),b=map.project([c.lng+d,c.lat]),px=Math.hypot(b.x-a.x,b.y-a.y);
-    const data={center:[c.lng,c.lat],zoom:z,projection:map.getProjection().type,viewport:[container.current?.clientWidth,container.current?.clientHeight],fiveMetersCssPx:px,tilesLoaded:map.areTilesLoaded(),reference:referenceData,scriptCount:map.getLayer('script-samples')?map.queryRenderedFeatures({layers:['script-samples']}).length:0};
+    const data={center:[c.lng,c.lat],zoom:z,projection:map.getProjection().type,viewport:[container.current?.clientWidth,container.current?.clientHeight],fiveMetersCssPx:px,tilesLoaded:map.areTilesLoaded(),reference:referenceData,scriptCount:map.getLayer('script-samples')?map.queryRenderedFeatures({layers:['script-samples']}).length:0,contextLayers:map.getStyle().layers.filter(l=>l.id.startsWith('context-')).map(l=>l.id)};
     container.current?.setAttribute('data-camera',JSON.stringify(data));setMetrics(JSON.stringify(data));
    };
    const markBusy=()=>container.current?.setAttribute('data-camera','{"tilesLoaded":false}');
