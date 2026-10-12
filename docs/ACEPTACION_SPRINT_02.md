@@ -1,4 +1,21 @@
-# Revisión vigente del Sprint 2 · Plan 19
+# Revisión del Sprint 2 · Plan 21
+
+Entrega vigente **Sites24**: https://atlas-escenarios-hud.yerrybatista.chatgpt.site/. Fuente `2b859c535a70e94e4b467348a75b7f1594a1f514`, versión `appgprj_6aca23222ed881919537ddd318f39d79~appgver_f3cded51449c8191afc6c32c15207472`. El portal publicado ya contiene las funcionalidades del Sprint2 y el contrato de marcadores explícitos. Su código funcional coincide con la vista local; esta reverificación no requiere otra publicación del mismo producto. Se conserva la audiencia pública.
+
+El usuario aprobó la revisión del Sprint1: «Apruebo la revisión del Sprint 1 y continuar el Sprint 2». Tras esa autorización se reverificaron, en orden, los cuatro criterios de2A, cuatro de2B y cinco de2C. **36/36 terminados y verificados; cierre del Sprint2 pendiente de aprobación humana.** Solo se utilizó el navegador integrado155 durante esta revisión.
+
+Comprobar en el portal:
+
+1. Buscar Alemania, elegir el país y cambiar el idioma desde Idioma: el nombre y los controles cambian; la ubicación y el zoom se conservan, sin marcador automático.
+2. Elegir العربية, اردو o پنجابی y abrir Elegir ubicación: panel RTL, coordenadas legibles LTR y controles utilizables en ventana estrecha y texto ampliado.
+3. Abrir Escenarios → Accidente → Beirut,2020 → Consultar y cambiar idioma: se conservan el registro y sus fuentes. Menú → Información muestra fecha hausa al elegir Hausa.
+4. Elegir Português y recargar: se conserva la preferencia manual si el almacenamiento está permitido.
+
+[Tabla y guía completa](http://127.0.0.1:4174/sprint-02.html). Evidencias: `evidencia-sprint02-plan21.json`, `evidencia-api-sprint02-sites24.json` y capturas `sprint-02-plan21-*.png`, en docs/seguimiento.41 pruebas, TypeScript y auditoría pasan; el auditor rechaza una clave ausente en copia aislada. Las revisiones lingüísticas identificadas son técnicas por IA, sin atribuir certificación humana.
+
+## Historial de revisión retirado · Plan 19
+
+**Revisión retirada por el plan20:** el11/10/2026 el usuario cambió el contrato de marcadores y exploración. Primero se reverifica y aprueba de nuevo Sprint1; después deben reverificarse los criterios de Sprint2. La entrega Sites23 y sus36puntos se conservan abajo como historial, no como aceptación vigente.
 
 Entrega **Sites23**, publicada el11/10/2026 a las 10:48:17 de Santo Domingo: https://atlas-escenarios-hud.yerrybatista.chatgpt.site/. Fuente `8f825f6d19459f0a30c26b50f69eaa3228805772`. Versión `appgprj_6aca23222ed881919537ddd318f39d79~appgver_e30a44fce8e48191b558ca5e817fb14c`; despliegue `appgdep_6acba1a739008191b5d196d160260d31`. Se conserva el proyecto y su audiencia pública.
 

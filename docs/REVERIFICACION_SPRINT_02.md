@@ -1,4 +1,17 @@
-# Reverificación del Sprint 2 · Plan 19
+# Reverificación del Sprint 2 · Plan 21
+
+Revisión vigente tras el mensaje «Apruebo la revisión del Sprint 1 y continuar el Sprint 2». Se verifican los bloques2A→2B→2C en orden, con estados registrados mediante seguimiento-sprints.mjs. Producto: Sites24, SHA `2b859c535a70e94e4b467348a75b7f1594a1f514`; código funcional sin cambios respecto a esa publicación. Entorno: navegador integrado Chromium155; no pruebas nuevas en Chrome.
+
+- **2A:** veinte nombres nativos y filtro العربية; cambio es→pt conserva Santiago y zoom12; pt persiste tras recargar pese a navegador en-US. Storage.setItem bloqueado temporalmente permite cambiar a ar conservando ficha/firma y cámara; el método se restaura. Catálogos locales completos, prioridad y fallos de almacenamiento cubiertos en pruebas. Selector público con Tab/Enter cambia a English; después se restituye español.
+- **2B:** ficha Beirut recorrida en20idiomas con firma intacta. RTL ar/ur/pnb-Arab a320×740 con texto200%, sin desbordamiento horizontal y campos LTR. Vista amplia1283×764; tamaños temporales restituidos. Información hausa muestra11 Oktoba,2026. MapLibre renderiza20 muestras reales con glifos inspeccionados y captura. Auditor válido salida0; copia temporal sin language en en.json salida1; origen intacto.41 pruebas y TypeScript pasan.
+- **2C:** país Alemania en20idiomas mantiene country-DE, referencia9.678348/50.961733, cámara y zoom3; etiquetas propias, sugerencias y Ubicación localizadas. Veinte Disclaimer distintos. Spratly Islands con maratí y Ubicación abierta muestra ne-PGA y explicación localizada del nombre original. Calles mantienen name/name:latin; pruebas verifican4780pares y validación positiva country/city en proveedor, servidor y caché.
+- **Publicación:** Sites confirma audiencia pública y versión24. API anónima20 consultas de Alemania devuelve200, la misma entidad/coordenadas y tipos permitidos. Recorrido cartográfico20idiomas en la publicación espera document.lang y campo name_<idioma>, evitando lecturas antes de actualizar la capa. Ficha japonesa y RTL320/texto200% comprobados también en Sites24. Cero marcadores automáticos en el recorrido geográfico.
+
+Registros actuales: docs/seguimiento/evidencia-sprint02-plan21.json y evidencia-api-sprint02-sites24.json. Capturas nuevas: sprint-02-plan21-escrituras.png, sprint-02-plan21-rtl.png, sprint-02-plan21-original.png y sprint-02-sites24-rtl-revision.png. Se conservan exactamente las pestañas1 (informe) y5 (portal). La supervisión local usa4174/5173; se mantiene activa. Sprint3 permanece pendiente hasta aprobación humana del Sprint2.
+
+## Historial anterior retirado · Plan 19
+
+**Historial retirado por plan20:** el cambio de marcadores del11/10/2026 reabre Sprint1 y retira la revisión posterior. Las comprobaciones de Sites23 se conservan como historial; los criterios de Sprint2 requieren nueva comprobación tras aprobar Sprint1.
 
 11 de octubre de 2026. El usuario aprobó explícitamente en esta conversación: «Apruebo el Sprint 1 y continuar el Sprint 2». La aprobación corresponde a Sites22, fuente `a8d62202c3453d086d43079ee8f66f866835e69a`. Se conserva el proyecto `appgprj_6aca23222ed881919537ddd318f39d79`, con audiencia pública comprobada mediante Sites.
 

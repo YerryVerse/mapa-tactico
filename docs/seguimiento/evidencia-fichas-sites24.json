@@ -1,0 +1,80 @@
+{
+  "initialLayouts": [
+    {
+      "map": {
+        "bottom": 844,
+        "height": 844,
+        "left": 0,
+        "right": 390,
+        "top": 0,
+        "width": 390,
+        "x": 0,
+        "y": 0
+      },
+      "markers": 0,
+      "panels": 0,
+      "viewport": [
+        390,
+        844
+      ]
+    },
+    {
+      "map": {
+        "bottom": 900,
+        "height": 900,
+        "left": 0,
+        "right": 1440,
+        "top": 0,
+        "width": 1440,
+        "x": 0,
+        "y": 0
+      },
+      "markers": 0,
+      "panels": 0,
+      "viewport": [
+        1440,
+        900
+      ]
+    }
+  ],
+  "caseAudit": [
+    {
+      "camera": {
+        "center": [
+          2.5543212890625,
+          46.69466730777313
+        ],
+        "zoom": 3.1251458695411856,
+        "contextLayers": [
+          "context-point",
+          "context-label"
+        ]
+      },
+      "focus": "Cerrar",
+      "markers": 0,
+      "panelCount": 1,
+      "point": "{\"lng\":2.5543212890625,\"lat\":46.69466730777313}",
+      "signature": "{\"id\":\"beirut-2020-context\",\"version\":\"context-20261011-2\"}",
+      "step": "Beirut consultado"
+    },
+    {
+      "camera": {
+        "center": [
+          2.5543212890625,
+          46.69466730777313
+        ],
+        "zoom": 3.1251458695411856,
+        "contextLayers": [
+          "context-point",
+          "context-label"
+        ]
+      },
+      "focus": "Mapa mundial. Flechas para mover y + o − para acercar o alejar.",
+      "markers": 0,
+      "panelCount": 1,
+      "point": "{\"lng\":2.5543212890625,\"lat\":46.69466730777313}",
+      "signature": "{\"id\":\"beirut-2020-context\",\"version\":\"context-20261011-2\"}",
+      "step": "Clic de exploración durante ficha conserva registro"
+    }
+  ]
+}

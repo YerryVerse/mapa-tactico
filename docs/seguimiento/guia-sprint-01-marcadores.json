@@ -1,0 +1,8 @@
+[
+  {"action":"Pulsar y arrastrar el mapa al abrir el portal.","expected":"Exploración sin círculo con + ni marcador de detonación. Tampoco se elige una ubicación con un clic de exploración."},
+  {"action":"Buscar Santiago y elegir sucesivamente dos ciudades; cerrar con X o clic fuera.","expected":"La lista y consulta permanecen al elegir. Cambia la referencia interna y el mapa se centra en la ciudad, sin crear marcadores. Cerrar conserva la última referencia; un clic posterior de exploración no la sustituye."},
+  {"action":"Abrir Elegir ubicación. Usar longitud −69.8845 y latitud18.4737; acercar con + y volver a Vista global.","expected":"Coordenadas y centro funcionan sin círculo con +. Las calles y la escala siguen disponibles. La referencia se conserva al mover la cámara."},
+  {"action":"Abrir Elegir ubicación y pulsar una etiqueta de país visible.","expected":"Se consulta explícitamente ese país y sus coordenadas, sin generar un marcador de evento. El clic normal fuera de Ubicación solo sirve para explorar o cerrar la búsqueda."},
+  {"action":"Escenarios → Accidente → Beirut,2020 → Consultar. Abrir sus fuentes y cerrar; repetir con Militar.","expected":"Las capas del caso aparecen solo después de consultar y desaparecen al cerrar o cambiar de caso. Conservan el lugar documentado y no convierten la referencia de búsqueda en una detonación. La interfaz de varios eventos y cantidad se desarrollará en los catálogos posteriores."},
+  {"action":"Menú → Información o Disclaimer. Probar Escape, Atrás, ventana estrecha y texto ampliado.","expected":"Información ya no indica que un clic coloque un marcador. Paneles y coordenadas siguen accesibles; cerrar restaura el foco. Los veinte catálogos conservan las instrucciones de navegación pertinentes."}
+]

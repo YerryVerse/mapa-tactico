@@ -1,0 +1,45 @@
+{
+  "browser": "Navegador integrado",
+  "tabs": [
+    "1",
+    "5"
+  ],
+  "hotBefore": {
+    "panels": 1,
+    "point": "{\"lng\":-70.69085,\"lat\":19.45036}",
+    "query": "Santiago",
+    "timeOrigin": 1791738085439.2
+  },
+  "hotAfter": {
+    "timeOrigin": 1791738085439.2,
+    "query": "Santiago",
+    "point": "{\"lng\":-70.69085,\"lat\":19.45036}",
+    "panels": 1,
+    "style": "ready"
+  },
+  "restoredHot": {
+    "panels": 1,
+    "point": "{\"lng\":-70.69085,\"lat\":19.45036}",
+    "probe": "",
+    "query": "Santiago",
+    "timeOrigin": 1791738085439.2
+  },
+  "reportBefore": {
+    "open": [
+      "section-S02-2A-01",
+      "section-S02-2B-01",
+      "section-S02-2C-01"
+    ],
+    "scrollY": 2417.333251953125,
+    "timeOrigin": 1791737921662.9
+  },
+  "restoredReport": {
+    "open": [
+      "section-S02-2A-01",
+      "section-S02-2B-01",
+      "section-S02-2C-01"
+    ],
+    "scrollY": 2417.333251953125,
+    "timeOrigin": 1791737921662.9
+  }
+}

@@ -8,6 +8,10 @@ La versión 6 del plan conserva las veinte soluciones iniciales e incorpora doce
 
 ## Hallazgos y correcciones
 
+Plan v22, 12/10/2026: por instrucción del usuario, las filas pendientes también usan fondo naranja y texto blanco, igual que las filas en curso; terminado sigue verde y no completado rojo, ambos con texto blanco. Se sincroniza la vista de seguimiento, su generador y los diez HTML. Es un ajuste visual administrativo sin cambios en el portal ni en sus criterios de aceptación.
+
+Plan v21, 11/10/2026: el usuario pide supervisión en tiempo real sin pestañas duplicadas. Se reutiliza una pestaña de seguimiento y otra del portal; servidores locales persistentes en4174/5173, HTML en vivo y actualización en caliente del portal. Los enlaces del informe no fuerzan pestañas nuevas. Este cambio del entorno de trabajo no altera contratos funcionales ni concede o retira aprobación del producto. Los diez HTML muestran el procedimiento vigente.
+
 Plan v20, 11 de octubre de 2026: el usuario retira el marcador libre de detonación que aparecía al pulsar el mapa. Explorar, buscar y editar una referencia no genera marcadores de eventos. El centro de cámara, la referencia geográfica y la selección de casos son conceptos independientes; cada flujo de casos debe gestionar qué eventos y cuántos solicita el usuario, incluida selección múltiple. Esta regla no implementa por sí sola los flujos futuros. Se reabre Sprint1 y se retira la aceptación posterior hasta verificar y aprobar de nuevo. Las pruebas de desarrollo se realizan en el navegador integrado; Chrome queda para la verificación final, por instrucción explícita del usuario.
 
 Plan v18, 11oct2026: el usuario solicita retirar completamente el icono y el nombre flotantes del portal. Se actualizan 1B y 8B, sus criterios y guías para impedir su reintroducción. Se conserva Mapa Táctico en Sites, título, metadatos y disclaimer. Reabrir la revisión del sprint1 y comprobar la entrega publicada; no constituye aprobación ni inicio del sprint8.

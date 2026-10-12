@@ -54,11 +54,16 @@ export default defineConfig(async ({ command }) => {
 
   return {
     server: {
+      host: "127.0.0.1",
+      port: 5173,
+      strictPort: true,
+      watch: {
+        // Report generation must not reload the portal or reset its state.
+        ignored: ["**/docs/seguimiento/**", "**/.sites-runtime/**", "**/.wrangler/**"],
+        ...(isCodexSeatbeltSandbox ? { useFsEvents: false, usePolling: true } : {}),
+      },
       ...(managedLinux
         ? { host: "0.0.0.0", allowedHosts: ["terminal.local"] }
-        : {}),
-      ...(isCodexSeatbeltSandbox
-        ? { watch: { useFsEvents: false, usePolling: true } }
         : {}),
     },
     plugins: [

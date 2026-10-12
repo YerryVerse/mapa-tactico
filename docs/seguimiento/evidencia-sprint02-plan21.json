@@ -1,0 +1,3438 @@
+{
+  "version": "Sites24 / código 2b859c535a70e94e4b467348a75b7f1594a1f514",
+  "localUrl": "http://127.0.0.1:5173/#search",
+  "browser": "Navegador integrado Chromium155",
+  "checks": [
+    {
+      "name": "Filtro nativo árabe",
+      "options": [
+        "العربية"
+      ]
+    },
+    {
+      "name": "Cambio inmediato portugués",
+      "before": {
+        "camera": {
+          "center": [
+            -70.69085000000001,
+            19.45036
+          ],
+          "contextLayers": [],
+          "countryField": [
+            "get",
+            "name_es"
+          ],
+          "countryLabels": [],
+          "fiveMetersCssPx": 0.277489523404995,
+          "projection": "globe",
+          "reference": null,
+          "scriptCount": 0,
+          "tilesLoaded": true,
+          "viewport": [
+            1283,
+            764
+          ],
+          "zoom": 12
+        },
+        "dir": "ltr",
+        "height": 764,
+        "lang": "es",
+        "overflow": false,
+        "point": "{\"lng\":-70.69085,\"lat\":19.45036}",
+        "query": "Santiago",
+        "result": "",
+        "width": 1283
+      },
+      "after": {
+        "camera": {
+          "center": [
+            -70.69085000000001,
+            19.45036
+          ],
+          "contextLayers": [],
+          "countryField": [
+            "get",
+            "name_es"
+          ],
+          "countryLabels": [],
+          "fiveMetersCssPx": 0.277489523404995,
+          "projection": "globe",
+          "reference": null,
+          "scriptCount": 0,
+          "tilesLoaded": true,
+          "viewport": [
+            1283,
+            764
+          ],
+          "zoom": 12
+        },
+        "dir": "ltr",
+        "height": 764,
+        "lang": "pt",
+        "overflow": false,
+        "point": "{\"lng\":-70.69085,\"lat\":19.45036}",
+        "query": "Santiago",
+        "result": "",
+        "width": 1283
+      }
+    },
+    {
+      "name": "Portugués manual sobre navegador en-US tras recarga",
+      "state": {
+        "camera": {
+          "center": [
+            -30,
+            20
+          ],
+          "contextLayers": [],
+          "countryField": [
+            "get",
+            "name_pt"
+          ],
+          "countryLabels": [
+            {
+              "engineId": "country-BM",
+              "id": "country-BM",
+              "name": "Bermudas"
+            },
+            {
+              "engineId": "country-GL",
+              "id": "country-GL",
+              "name": "Groenlândia"
+            },
+            {
+              "engineId": "country-PA",
+              "id": "country-PA",
+              "name": "Panamá"
+            },
+            {
+              "engineId": "country-MX",
+              "id": "country-MX",
+              "name": "México"
+            },
+            {
+              "engineId": "country-CA",
+              "id": "country-CA",
+              "name": "Canadá"
+            },
+            {
+              "engineId": "country-US",
+              "id": "country-US",
+              "name": "Estados Unidos"
+            },
+            {
+              "engineId": "country-CO",
+              "id": "country-CO",
+              "name": "Colômbia"
+            },
+            {
+              "engineId": "country-GT",
+              "id": "country-GT",
+              "name": "Guatemala"
+            },
+            {
+              "engineId": "country-ML",
+              "id": "country-ML",
+              "name": "Mali"
+            },
+            {
+              "engineId": "country-GN",
+              "id": "country-GN",
+              "name": "Guiné"
+            },
+            {
+              "engineId": "country-GB",
+              "id": "country-GB",
+              "name": "Reino Unido"
+            },
+            {
+              "engineId": "country-ES",
+              "id": "country-ES",
+              "name": "Espanha"
+            },
+            {
+              "engineId": "country-MA",
+              "id": "country-MA",
+              "name": "Marrocos"
+            },
+            {
+              "engineId": "country-YE",
+              "id": "country-YE",
+              "name": "Iêmen"
+            },
+            {
+              "engineId": "country-SA",
+              "id": "country-SA",
+              "name": "Arábia Saudita"
+            },
+            {
+              "engineId": "country-NG",
+              "id": "country-NG",
+              "name": "Nigéria"
+            },
+            {
+              "engineId": "country-TR",
+              "id": "country-TR",
+              "name": "Turquia"
+            },
+            {
+              "engineId": "country-RU",
+              "id": "country-RU",
+              "name": "Rússia"
+            },
+            {
+              "engineId": "country-UZ",
+              "id": "country-UZ",
+              "name": "Uzbequistão"
+            },
+            {
+              "engineId": "country-FR",
+              "id": "country-FR",
+              "name": "França"
+            },
+            {
+              "engineId": "country-KE",
+              "id": "country-KE",
+              "name": "Quênia"
+            },
+            {
+              "engineId": "country-ET",
+              "id": "country-ET",
+              "name": "Etiópia"
+            },
+            {
+              "engineId": "country-GS",
+              "id": "country-GS",
+              "name": "Ilhas Geórgia do Sul e Sandwich do Sul"
+            },
+            {
+              "engineId": "country-BR",
+              "id": "country-BR",
+              "name": "Brasil"
+            },
+            {
+              "engineId": "country-PE",
+              "id": "country-PE",
+              "name": "Peru"
+            },
+            {
+              "engineId": "country-CL",
+              "id": "country-CL",
+              "name": "Chile"
+            },
+            {
+              "engineId": "country-ZM",
+              "id": "country-ZM",
+              "name": "Zâmbia"
+            },
+            {
+              "engineId": "country-ZA",
+              "id": "country-ZA",
+              "name": "África do Sul"
+            },
+            {
+              "engineId": "country-TZ",
+              "id": "country-TZ",
+              "name": "Tanzânia"
+            }
+          ],
+          "fiveMetersCssPx": 0.00016168433012353652,
+          "projection": "globe",
+          "reference": null,
+          "scriptCount": 0,
+          "tilesLoaded": true,
+          "viewport": [
+            1283,
+            764
+          ],
+          "zoom": 1.25
+        },
+        "dir": "ltr",
+        "height": 764,
+        "lang": "pt",
+        "overflow": false,
+        "point": "",
+        "query": "",
+        "result": "",
+        "width": 1283
+      }
+    },
+    {
+      "name": "Almacenamiento bloqueado conserva consulta",
+      "before": {
+        "camera": {
+          "center": [
+            -30,
+            20
+          ],
+          "contextLayers": [
+            "context-point",
+            "context-label"
+          ],
+          "countryField": [
+            "get",
+            "name_es"
+          ],
+          "countryLabels": [
+            {
+              "engineId": "country-BM",
+              "id": "country-BM",
+              "name": "Bermudas"
+            },
+            {
+              "engineId": "country-GL",
+              "id": "country-GL",
+              "name": "Groenlandia"
+            },
+            {
+              "engineId": "country-PA",
+              "id": "country-PA",
+              "name": "Panamá"
+            },
+            {
+              "engineId": "country-MX",
+              "id": "country-MX",
+              "name": "México"
+            },
+            {
+              "engineId": "country-CA",
+              "id": "country-CA",
+              "name": "Canadá"
+            },
+            {
+              "engineId": "country-US",
+              "id": "country-US",
+              "name": "Estados Unidos"
+            },
+            {
+              "engineId": "country-CO",
+              "id": "country-CO",
+              "name": "Colombia"
+            },
+            {
+              "engineId": "country-GT",
+              "id": "country-GT",
+              "name": "Guatemala"
+            },
+            {
+              "engineId": "country-ML",
+              "id": "country-ML",
+              "name": "Mali"
+            },
+            {
+              "engineId": "country-GN",
+              "id": "country-GN",
+              "name": "Guinea"
+            },
+            {
+              "engineId": "country-GB",
+              "id": "country-GB",
+              "name": "Reino Unido"
+            },
+            {
+              "engineId": "country-ES",
+              "id": "country-ES",
+              "name": "España"
+            },
+            {
+              "engineId": "country-NG",
+              "id": "country-NG",
+              "name": "Nigeria"
+            },
+            {
+              "engineId": "country-ER",
+              "id": "country-ER",
+              "name": "Eritrea"
+            },
+            {
+              "engineId": "country-TR",
+              "id": "country-TR",
+              "name": "Turquía"
+            },
+            {
+              "engineId": "country-RU",
+              "id": "country-RU",
+              "name": "Rusia"
+            },
+            {
+              "engineId": "country-UZ",
+              "id": "country-UZ",
+              "name": "Uzbekistán"
+            },
+            {
+              "engineId": "country-FR",
+              "id": "country-FR",
+              "name": "Francia"
+            },
+            {
+              "engineId": "country-KE",
+              "id": "country-KE",
+              "name": "Kenia"
+            },
+            {
+              "engineId": "country-ET",
+              "id": "country-ET",
+              "name": "Etiopía"
+            },
+            {
+              "engineId": "country-IL",
+              "id": "country-IL",
+              "name": "Israel"
+            },
+            {
+              "engineId": "country-GS",
+              "id": "country-GS",
+              "name": "Islas Georgia del Sur y Sandwich del Sur"
+            },
+            {
+              "engineId": "country-BR",
+              "id": "country-BR",
+              "name": "Brasil"
+            },
+            {
+              "engineId": "country-PE",
+              "id": "country-PE",
+              "name": "Perú"
+            },
+            {
+              "engineId": "country-CL",
+              "id": "country-CL",
+              "name": "Chile"
+            },
+            {
+              "engineId": "country-ZM",
+              "id": "country-ZM",
+              "name": "Zambia"
+            },
+            {
+              "engineId": "country-ZA",
+              "id": "country-ZA",
+              "name": "Sudáfrica"
+            },
+            {
+              "engineId": "country-TZ",
+              "id": "country-TZ",
+              "name": "Tanzania"
+            }
+          ],
+          "fiveMetersCssPx": 0.00016168433012353652,
+          "projection": "globe",
+          "reference": null,
+          "scriptCount": 0,
+          "tilesLoaded": true,
+          "viewport": [
+            1283,
+            764
+          ],
+          "zoom": 1.25
+        },
+        "dir": "ltr",
+        "height": 764,
+        "lang": "es",
+        "overflow": false,
+        "point": "",
+        "result": "{\"id\":\"beirut-2020-context\",\"version\":\"context-20261011-2\"}",
+        "width": 1283
+      },
+      "after": {
+        "camera": {
+          "center": [
+            -30,
+            20
+          ],
+          "contextLayers": [
+            "context-point",
+            "context-label"
+          ],
+          "countryField": [
+            "get",
+            "name_es"
+          ],
+          "countryLabels": [
+            {
+              "engineId": "country-BM",
+              "id": "country-BM",
+              "name": "Bermudas"
+            },
+            {
+              "engineId": "country-GL",
+              "id": "country-GL",
+              "name": "Groenlandia"
+            },
+            {
+              "engineId": "country-PA",
+              "id": "country-PA",
+              "name": "Panamá"
+            },
+            {
+              "engineId": "country-MX",
+              "id": "country-MX",
+              "name": "México"
+            },
+            {
+              "engineId": "country-CA",
+              "id": "country-CA",
+              "name": "Canadá"
+            },
+            {
+              "engineId": "country-US",
+              "id": "country-US",
+              "name": "Estados Unidos"
+            },
+            {
+              "engineId": "country-CO",
+              "id": "country-CO",
+              "name": "Colombia"
+            },
+            {
+              "engineId": "country-GT",
+              "id": "country-GT",
+              "name": "Guatemala"
+            },
+            {
+              "engineId": "country-ML",
+              "id": "country-ML",
+              "name": "Mali"
+            },
+            {
+              "engineId": "country-GN",
+              "id": "country-GN",
+              "name": "Guinea"
+            },
+            {
+              "engineId": "country-GB",
+              "id": "country-GB",
+              "name": "Reino Unido"
+            },
+            {
+              "engineId": "country-ES",
+              "id": "country-ES",
+              "name": "España"
+            },
+            {
+              "engineId": "country-NG",
+              "id": "country-NG",
+              "name": "Nigeria"
+            },
+            {
+              "engineId": "country-ER",
+              "id": "country-ER",
+              "name": "Eritrea"
+            },
+            {
+              "engineId": "country-TR",
+              "id": "country-TR",
+              "name": "Turquía"
+            },
+            {
+              "engineId": "country-RU",
+              "id": "country-RU",
+              "name": "Rusia"
+            },
+            {
+              "engineId": "country-UZ",
+              "id": "country-UZ",
+              "name": "Uzbekistán"
+            },
+            {
+              "engineId": "country-FR",
+              "id": "country-FR",
+              "name": "Francia"
+            },
+            {
+              "engineId": "country-KE",
+              "id": "country-KE",
+              "name": "Kenia"
+            },
+            {
+              "engineId": "country-ET",
+              "id": "country-ET",
+              "name": "Etiopía"
+            },
+            {
+              "engineId": "country-IL",
+              "id": "country-IL",
+              "name": "Israel"
+            },
+            {
+              "engineId": "country-GS",
+              "id": "country-GS",
+              "name": "Islas Georgia del Sur y Sandwich del Sur"
+            },
+            {
+              "engineId": "country-BR",
+              "id": "country-BR",
+              "name": "Brasil"
+            },
+            {
+              "engineId": "country-PE",
+              "id": "country-PE",
+              "name": "Perú"
+            },
+            {
+              "engineId": "country-CL",
+              "id": "country-CL",
+              "name": "Chile"
+            },
+            {
+              "engineId": "country-ZM",
+              "id": "country-ZM",
+              "name": "Zambia"
+            },
+            {
+              "engineId": "country-ZA",
+              "id": "country-ZA",
+              "name": "Sudáfrica"
+            },
+            {
+              "engineId": "country-TZ",
+              "id": "country-TZ",
+              "name": "Tanzania"
+            }
+          ],
+          "fiveMetersCssPx": 0.00016168433012353652,
+          "projection": "globe",
+          "reference": null,
+          "scriptCount": 0,
+          "tilesLoaded": true,
+          "viewport": [
+            1283,
+            764
+          ],
+          "zoom": 1.25
+        },
+        "dir": "rtl",
+        "height": 764,
+        "lang": "ar",
+        "overflow": false,
+        "point": "",
+        "result": "{\"id\":\"beirut-2020-context\",\"version\":\"context-20261011-2\"}",
+        "width": 1283
+      }
+    },
+    {
+      "name": "Resultado consultado en veinte idiomas",
+      "rows": [
+        {
+          "id": "es",
+          "lang": "es",
+          "dir": "ltr",
+          "point": "",
+          "result": "{\"id\":\"beirut-2020-context\",\"version\":\"context-20261011-2\"}",
+          "text": "El 4 de agosto de 2020 se produjo una explosión en el puerto de Beirut, Líbano.\n\nVer ubicación del registro\nUbicación de referencia\nFuentes\nONU — Explosión en el puerto de Beirut (4 agosto 2020) ↗",
+          "overflow": false
+        },
+        {
+          "id": "en",
+          "lang": "en",
+          "dir": "ltr",
+          "point": "",
+          "result": "{\"id\":\"beirut-2020-context\",\"version\":\"context-20261011-2\"}",
+          "text": "An explosion occurred in the port of Beirut, Lebanon, on 4 August 2020.\n\nView record location\nReference location\nSources\nUN — Explosion in the port of Beirut (4 August 2020) ↗",
+          "overflow": false
+        },
+        {
+          "id": "zh-Hans",
+          "lang": "zh-Hans",
+          "dir": "ltr",
+          "point": "",
+          "result": "{\"id\":\"beirut-2020-context\",\"version\":\"context-20261011-2\"}",
+          "text": "2020 年 8 月 4 日，黎巴嫩贝鲁特港发生爆炸。\n\n查看记录的位置\n参考位置\n来源\n联合国 — 贝鲁特港爆炸（2020 年 8 月 4 日） ↗",
+          "overflow": false
+        },
+        {
+          "id": "hi",
+          "lang": "hi",
+          "dir": "ltr",
+          "point": "",
+          "result": "{\"id\":\"beirut-2020-context\",\"version\":\"context-20261011-2\"}",
+          "text": "4 अगस्त 2020 को लेबनान के बेरूत बंदरगाह में विस्फोट हुआ था।\n\nअभिलेख का स्थान देखें\nसंदर्भ स्थान\nस्रोत\nसंयुक्त राष्ट्र — बेरूत बंदरगाह में विस्फोट (4 अगस्त 2020) ↗",
+          "overflow": false
+        },
+        {
+          "id": "ar",
+          "lang": "ar",
+          "dir": "rtl",
+          "point": "",
+          "result": "{\"id\":\"beirut-2020-context\",\"version\":\"context-20261011-2\"}",
+          "text": "وقع انفجار في مرفأ بيروت، لبنان، في 4 أغسطس 2020.\n\nعرض موقع الحدث المسجل\nالموقع المرجعي\nالمصادر\nالأمم المتحدة — انفجار مرفأ بيروت (4 أغسطس 2020) ↗",
+          "overflow": false
+        },
+        {
+          "id": "fr",
+          "lang": "fr",
+          "dir": "ltr",
+          "point": "",
+          "result": "{\"id\":\"beirut-2020-context\",\"version\":\"context-20261011-2\"}",
+          "text": "Le 4 août 2020, une explosion s’est produite dans le port de Beyrouth, au Liban.\n\nVoir l’emplacement de la fiche\nEmplacement de référence\nSources\nONU — Explosion dans le port de Beyrouth (4 août 2020) ↗",
+          "overflow": false
+        },
+        {
+          "id": "bn",
+          "lang": "bn",
+          "dir": "ltr",
+          "point": "",
+          "result": "{\"id\":\"beirut-2020-context\",\"version\":\"context-20261011-2\"}",
+          "text": "4 আগস্ট 2020-এ লেবাননের বৈরুত বন্দরে একটি বিস্ফোরণ ঘটে।\n\nনথির স্থান দেখুন\nউল্লেখিত স্থান\nউৎস\nজাতিসংঘ — বৈরুত বন্দরের বিস্ফোরণ (4 আগস্ট 2020) ↗",
+          "overflow": false
+        },
+        {
+          "id": "pt",
+          "lang": "pt",
+          "dir": "ltr",
+          "point": "",
+          "result": "{\"id\":\"beirut-2020-context\",\"version\":\"context-20261011-2\"}",
+          "text": "Em 4 de agosto de 2020, ocorreu uma explosão no porto de Beirute, no Líbano.\n\nVer localização do registro\nLocalização de referência\nFontes\nONU — Explosão no porto de Beirute (4 de agosto de 2020) ↗",
+          "overflow": false
+        },
+        {
+          "id": "ru",
+          "lang": "ru",
+          "dir": "ltr",
+          "point": "",
+          "result": "{\"id\":\"beirut-2020-context\",\"version\":\"context-20261011-2\"}",
+          "text": "4 августа 2020 года в порту Бейрута, Ливан, произошёл взрыв.\n\nПоказать место зарегистрированного события\nМесто, указанное в источнике\nИсточники\nООН — Взрыв в порту Бейрута (4 августа 2020 года) ↗",
+          "overflow": false
+        },
+        {
+          "id": "id",
+          "lang": "id",
+          "dir": "ltr",
+          "point": "",
+          "result": "{\"id\":\"beirut-2020-context\",\"version\":\"context-20261011-2\"}",
+          "text": "Pada 4 Agustus 2020, terjadi ledakan di pelabuhan Beirut, Lebanon.\n\nLihat lokasi dalam catatan\nLokasi rujukan\nSumber\nPBB — Ledakan di pelabuhan Beirut (4 Agustus 2020) ↗",
+          "overflow": false
+        },
+        {
+          "id": "ur",
+          "lang": "ur",
+          "dir": "rtl",
+          "point": "",
+          "result": "{\"id\":\"beirut-2020-context\",\"version\":\"context-20261011-2\"}",
+          "text": "4 اگست 2020 کو لبنان کے شہر بیروت کی بندرگاہ پر دھماکا ہوا۔\n\nدرج شدہ واقعے کا مقام دیکھیں\nحوالہ جاتی مقام\nماخذ\nاقوام متحدہ — بیروت کی بندرگاہ پر دھماکا (4 اگست 2020) ↗",
+          "overflow": false
+        },
+        {
+          "id": "de",
+          "lang": "de",
+          "dir": "ltr",
+          "point": "",
+          "result": "{\"id\":\"beirut-2020-context\",\"version\":\"context-20261011-2\"}",
+          "text": "Am 4. August 2020 ereignete sich eine Explosion im Hafen von Beirut im Libanon.\n\nStandort des Eintrags anzeigen\nReferenzstandort\nQuellen\nUN — Explosion im Hafen von Beirut (4. August 2020) ↗",
+          "overflow": false
+        },
+        {
+          "id": "ja",
+          "lang": "ja",
+          "dir": "ltr",
+          "point": "",
+          "result": "{\"id\":\"beirut-2020-context\",\"version\":\"context-20261011-2\"}",
+          "text": "2020 年 8 月 4 日、レバノンのベイルート港で爆発が発生しました。\n\n記録の位置を表示\n参考位置\n出典\n国際連合 — ベイルート港の爆発（2020 年 8 月 4 日） ↗",
+          "overflow": false
+        },
+        {
+          "id": "mr",
+          "lang": "mr",
+          "dir": "ltr",
+          "point": "",
+          "result": "{\"id\":\"beirut-2020-context\",\"version\":\"context-20261011-2\"}",
+          "text": "4 ऑगस्ट 2020 रोजी लेबनॉनमधील बेरूत बंदरात स्फोट झाला.\n\nनोंदीतील ठिकाण पाहा\nसंदर्भातील ठिकाण\nस्रोत\nसंयुक्त राष्ट्र — बेरूत बंदरातील स्फोट (4 ऑगस्ट 2020) ↗",
+          "overflow": false
+        },
+        {
+          "id": "vi",
+          "lang": "vi",
+          "dir": "ltr",
+          "point": "",
+          "result": "{\"id\":\"beirut-2020-context\",\"version\":\"context-20261011-2\"}",
+          "text": "Ngày 4 tháng 8 năm 2020, một vụ nổ xảy ra tại cảng Beirut, Liban.\n\nXem vị trí trong hồ sơ\nVị trí tham chiếu\nNguồn\nLiên Hợp Quốc — Vụ nổ tại cảng Beirut (4 tháng 8 năm 2020) ↗",
+          "overflow": false
+        },
+        {
+          "id": "te",
+          "lang": "te",
+          "dir": "ltr",
+          "point": "",
+          "result": "{\"id\":\"beirut-2020-context\",\"version\":\"context-20261011-2\"}",
+          "text": "2020 ఆగస్టు 4న లెబనాన్‌లోని బీరూట్ నౌకాశ్రయంలో పేలుడు జరిగింది.\n\nనమోదులోని ప్రదేశాన్ని చూడండి\nసూచించిన ప్రదేశం\nమూలాలు\nఐక్యరాజ్యసమితి — బీరూట్ నౌకాశ్రయంలో పేలుడు (2020 ఆగస్టు 4) ↗",
+          "overflow": false
+        },
+        {
+          "id": "sw",
+          "lang": "sw",
+          "dir": "ltr",
+          "point": "",
+          "result": "{\"id\":\"beirut-2020-context\",\"version\":\"context-20261011-2\"}",
+          "text": "Tarehe 4 Agosti 2020, mlipuko ulitokea katika bandari ya Beirut, Lebanoni.\n\nAngalia eneo la tukio lililorekodiwa\nEneo la rejeleo\nVyanzo\nUmoja wa Mataifa — Mlipuko katika bandari ya Beirut (4 Agosti 2020) ↗",
+          "overflow": false
+        },
+        {
+          "id": "ha-Latn",
+          "lang": "ha-Latn",
+          "dir": "ltr",
+          "point": "",
+          "result": "{\"id\":\"beirut-2020-context\",\"version\":\"context-20261011-2\"}",
+          "text": "A ranar 4 ga Agusta 2020, an yi fashewa a tashar jiragen ruwa ta Beirut a Lebanon.\n\nDuba wurin abin da aka rubuta\nWurin da aka ambata\nMadogara\nMajalisar Ɗinkin Duniya — Fashewa a tashar jiragen ruwa ta Beirut (4 ga Agusta 2020) ↗",
+          "overflow": false
+        },
+        {
+          "id": "tr",
+          "lang": "tr",
+          "dir": "ltr",
+          "point": "",
+          "result": "{\"id\":\"beirut-2020-context\",\"version\":\"context-20261011-2\"}",
+          "text": "4 Ağustos 2020 tarihinde Lübnan’ın Beyrut limanında bir patlama meydana geldi.\n\nKaydın konumunu göster\nReferans konumu\nKaynaklar\nBM — Beyrut limanındaki patlama (4 Ağustos 2020) ↗",
+          "overflow": false
+        },
+        {
+          "id": "pnb-Arab",
+          "lang": "pnb-Arab",
+          "dir": "rtl",
+          "point": "",
+          "result": "{\"id\":\"beirut-2020-context\",\"version\":\"context-20261011-2\"}",
+          "text": "4 اگست 2020 نوں لبنان دے شہر بیروت دی بندرگاہ اُتے دھماکا ہویا۔\n\nدرج کیتے واقعے دی تھاں ویکھو\nحوالے دی تھاں\nماخذ\nاقوام متحدہ — بیروت دی بندرگاہ اُتے دھماکا (4 اگست 2020) ↗",
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "name": "RTL320 texto200%",
+      "rows": [
+        {
+          "id": "ar",
+          "state": {
+            "camera": {
+              "tilesLoaded": false
+            },
+            "dir": "rtl",
+            "height": 740,
+            "lang": "ar",
+            "overflow": false,
+            "point": "",
+            "result": "",
+            "width": 320
+          },
+          "coordinates": [
+            {
+              "dir": "ltr",
+              "value": "-30.000000",
+              "width": 247.33334350585935
+            },
+            {
+              "dir": "ltr",
+              "value": "20.000000",
+              "width": 247.33334350585935
+            }
+          ]
+        },
+        {
+          "id": "ur",
+          "state": {
+            "camera": {
+              "tilesLoaded": false
+            },
+            "dir": "rtl",
+            "height": 740,
+            "lang": "ur",
+            "overflow": false,
+            "point": "",
+            "result": "",
+            "width": 320
+          },
+          "coordinates": [
+            {
+              "dir": "ltr",
+              "value": "-30.000000",
+              "width": 247.33334350585935
+            },
+            {
+              "dir": "ltr",
+              "value": "20.000000",
+              "width": 247.33334350585935
+            }
+          ]
+        },
+        {
+          "id": "pnb-Arab",
+          "state": {
+            "camera": {
+              "tilesLoaded": false
+            },
+            "dir": "rtl",
+            "height": 740,
+            "lang": "pnb-Arab",
+            "overflow": false,
+            "point": "",
+            "result": "",
+            "width": 320
+          },
+          "coordinates": [
+            {
+              "dir": "ltr",
+              "value": "-30.000000",
+              "width": 247.33334350585935
+            },
+            {
+              "dir": "ltr",
+              "value": "20.000000",
+              "width": 247.33334350585935
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Fecha hausa revisada",
+      "text": "Bayani\nHarshe\nNemo harshe\nEspañol\nEnglish\n简体中文\nहिन्दी\nالعربية\nFrançais\nবাংলা\nPortuguês\nРусский\nBahasa Indonesia\nاردو\nDeutsch\n日本語\nमराठी\nTiếng Việt\nతెలుగు\nKiswahili\nHausa\n✓\nTürkçe\nپنجابی\n\nBincika ƙasashe, birane da tituna. Yi amfani da ƙarin girma ko dabaran linzamin kwamfuta; ja don motsa taswira.\n\nTab yana kaiwa daga wani maɓallin sarrafawa zuwa wani. Maɓallan kibiya suna motsa taswira idan tana da fokus. «Zaɓi wuri» yana ba da damar shigar da ƙimomin wuri. Escape ko maɓallin komawa yana rufe ɓangaren bayani.\n\nTaswirori: OpenFreeMap, OpenMapTiles, OpenStreetMap. Cikakken bayanin taswira yana bambanta bisa ga yanki. Babu cikakken bayanin yankin bayan faɗin ƙasa ±85.0511°.\n\nKundin bincike: GeoNames (CC BY 4.0), Bugu 11 Oktoba, 2026; Natural Earth (Mallakar jama'a); Unicode CLDR 48 (Unicode-3.0). Ƙasashe da birane tare da sauran sunayensu da yankinsu. Wasu ƙananan garuruwa na iya rasa."
+    },
+    {
+      "name": "MapLibre veinte muestras de escritura",
+      "camera": {
+        "center": [
+          0,
+          0
+        ],
+        "contextLayers": [],
+        "countryField": [
+          "get",
+          "name_es"
+        ],
+        "countryLabels": [
+          {
+            "engineId": "country-BM",
+            "id": "country-BM",
+            "name": "Bermudas"
+          },
+          {
+            "engineId": "country-PM",
+            "id": "country-PM",
+            "name": "San Pedro y Miquelón"
+          },
+          {
+            "engineId": "country-CW",
+            "id": "country-CW",
+            "name": "Curazao"
+          },
+          {
+            "engineId": "country-VE",
+            "id": "country-VE",
+            "name": "Venezuela"
+          },
+          {
+            "engineId": "country-HT",
+            "id": "country-HT",
+            "name": "Haití"
+          },
+          {
+            "engineId": "country-SN",
+            "id": "country-SN",
+            "name": "Senegal"
+          },
+          {
+            "engineId": "country-CI",
+            "id": "country-CI",
+            "name": "Côte d’Ivoire"
+          },
+          {
+            "engineId": "country-GN",
+            "id": "country-GN",
+            "name": "Guinea"
+          },
+          {
+            "engineId": "country-GB",
+            "id": "country-GB",
+            "name": "Reino Unido"
+          },
+          {
+            "engineId": "country-EH",
+            "id": "country-EH",
+            "name": "Sáhara Occidental"
+          },
+          {
+            "engineId": "country-YE",
+            "id": "country-YE",
+            "name": "Yemen"
+          },
+          {
+            "engineId": "country-EG",
+            "id": "country-EG",
+            "name": "Egipto"
+          },
+          {
+            "engineId": "country-DZ",
+            "id": "country-DZ",
+            "name": "Argelia"
+          },
+          {
+            "engineId": "country-TD",
+            "id": "country-TD",
+            "name": "Chad"
+          },
+          {
+            "engineId": "country-SA",
+            "id": "country-SA",
+            "name": "Arabia Saudí"
+          },
+          {
+            "engineId": "country-NG",
+            "id": "country-NG",
+            "name": "Nigeria"
+          },
+          {
+            "engineId": "country-IR",
+            "id": "country-IR",
+            "name": "Irán"
+          },
+          {
+            "engineId": "country-IT",
+            "id": "country-IT",
+            "name": "Italia"
+          },
+          {
+            "engineId": "country-IQ",
+            "id": "country-IQ",
+            "name": "Irak"
+          },
+          {
+            "engineId": "country-DJ",
+            "id": "country-DJ",
+            "name": "Yibuti"
+          },
+          {
+            "engineId": "country-GR",
+            "id": "country-GR",
+            "name": "Grecia"
+          },
+          {
+            "engineId": "country-PL",
+            "id": "country-PL",
+            "name": "Polonia"
+          },
+          {
+            "engineId": "country-RO",
+            "id": "country-RO",
+            "name": "Rumanía"
+          },
+          {
+            "engineId": "country-LY",
+            "id": "country-LY",
+            "name": "Libia"
+          },
+          {
+            "engineId": "country-GE",
+            "id": "country-GE",
+            "name": "Georgia"
+          },
+          {
+            "engineId": "country-FI",
+            "id": "country-FI",
+            "name": "Finlandia"
+          },
+          {
+            "engineId": "country-RU",
+            "id": "country-RU",
+            "name": "Rusia"
+          },
+          {
+            "engineId": "country-FR",
+            "id": "country-FR",
+            "name": "Francia"
+          },
+          {
+            "engineId": "country-ET",
+            "id": "country-ET",
+            "name": "Etiopía"
+          },
+          {
+            "engineId": "country-GS",
+            "id": "country-GS",
+            "name": "Islas Georgia del Sur y Sandwich del Sur"
+          },
+          {
+            "engineId": "country-PY",
+            "id": "country-PY",
+            "name": "Paraguay"
+          },
+          {
+            "engineId": "country-BO",
+            "id": "country-BO",
+            "name": "Bolivia"
+          },
+          {
+            "engineId": "country-IO",
+            "id": "country-IO",
+            "name": "Territorio Británico del Océano Índico"
+          },
+          {
+            "engineId": "country-MG",
+            "id": "country-MG",
+            "name": "Madagascar"
+          },
+          {
+            "engineId": "country-GA",
+            "id": "country-GA",
+            "name": "Gabón"
+          },
+          {
+            "engineId": "country-RW",
+            "id": "country-RW",
+            "name": "Ruanda"
+          },
+          {
+            "engineId": "country-ZW",
+            "id": "country-ZW",
+            "name": "Zimbabue"
+          },
+          {
+            "engineId": "country-NA",
+            "id": "country-NA",
+            "name": "Namibia"
+          },
+          {
+            "engineId": "country-TZ",
+            "id": "country-TZ",
+            "name": "Tanzania"
+          }
+        ],
+        "fiveMetersCssPx": 0.000361360969350244,
+        "projection": "globe",
+        "reference": null,
+        "scriptCount": 20,
+        "tilesLoaded": true,
+        "viewport": [
+          1283,
+          764
+        ],
+        "zoom": 2.5
+      }
+    },
+    {
+      "name": "País canónico Alemania en20 idiomas",
+      "rows": [
+        {
+          "id": "es",
+          "ready": true,
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+          "center": [
+            9.678348000000028,
+            50.961733
+          ],
+          "zoom": 3,
+          "country": "country-DE",
+          "query": "ألمانيا",
+          "result": "Alemania\nPaís",
+          "field": [
+            "get",
+            "name_es"
+          ],
+          "label": [
+            {
+              "engineId": "country-DE",
+              "id": "country-DE",
+              "name": "Alemania"
+            }
+          ],
+          "markers": 0
+        },
+        {
+          "id": "en",
+          "ready": true,
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+          "center": [
+            9.678348000000028,
+            50.961733
+          ],
+          "zoom": 3,
+          "country": "country-DE",
+          "query": "ألمانيا",
+          "result": "Germany\nCountry",
+          "field": [
+            "get",
+            "name_en"
+          ],
+          "label": [
+            {
+              "engineId": "country-DE",
+              "id": "country-DE",
+              "name": "Germany"
+            }
+          ],
+          "markers": 0
+        },
+        {
+          "id": "zh-Hans",
+          "ready": true,
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+          "center": [
+            9.678348000000028,
+            50.961733
+          ],
+          "zoom": 3,
+          "country": "country-DE",
+          "query": "ألمانيا",
+          "result": "德国\n国家",
+          "field": [
+            "get",
+            "name_zh-Hans"
+          ],
+          "label": [
+            {
+              "engineId": "country-DE",
+              "id": "country-DE",
+              "name": "德国"
+            }
+          ],
+          "markers": 0
+        },
+        {
+          "id": "hi",
+          "ready": true,
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+          "center": [
+            9.678348000000028,
+            50.961733
+          ],
+          "zoom": 3,
+          "country": "country-DE",
+          "query": "ألمانيا",
+          "result": "जर्मनी\nदेश",
+          "field": [
+            "get",
+            "name_hi"
+          ],
+          "label": [
+            {
+              "engineId": "country-DE",
+              "id": "country-DE",
+              "name": "जर्मनी"
+            }
+          ],
+          "markers": 0
+        },
+        {
+          "id": "ar",
+          "ready": true,
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+          "center": [
+            9.678348000000028,
+            50.961733
+          ],
+          "zoom": 3,
+          "country": "country-DE",
+          "query": "ألمانيا",
+          "result": "ألمانيا\nبلد",
+          "field": [
+            "get",
+            "name_ar"
+          ],
+          "label": [
+            {
+              "engineId": "country-DE",
+              "id": "country-DE",
+              "name": "ألمانيا"
+            }
+          ],
+          "markers": 0
+        },
+        {
+          "id": "fr",
+          "ready": true,
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+          "center": [
+            9.678348000000028,
+            50.961733
+          ],
+          "zoom": 3,
+          "country": "country-DE",
+          "query": "ألمانيا",
+          "result": "Allemagne\nPays",
+          "field": [
+            "get",
+            "name_fr"
+          ],
+          "label": [
+            {
+              "engineId": "country-DE",
+              "id": "country-DE",
+              "name": "Allemagne"
+            }
+          ],
+          "markers": 0
+        },
+        {
+          "id": "bn",
+          "ready": true,
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+          "center": [
+            9.678348000000028,
+            50.961733
+          ],
+          "zoom": 3,
+          "country": "country-DE",
+          "query": "ألمانيا",
+          "result": "জার্মানি\nদেশ",
+          "field": [
+            "get",
+            "name_bn"
+          ],
+          "label": [
+            {
+              "engineId": "country-DE",
+              "id": "country-DE",
+              "name": "জার্মানি"
+            }
+          ],
+          "markers": 0
+        },
+        {
+          "id": "pt",
+          "ready": true,
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+          "center": [
+            9.678348000000028,
+            50.961733
+          ],
+          "zoom": 3,
+          "country": "country-DE",
+          "query": "ألمانيا",
+          "result": "Alemanha\nPaís",
+          "field": [
+            "get",
+            "name_pt"
+          ],
+          "label": [
+            {
+              "engineId": "country-DE",
+              "id": "country-DE",
+              "name": "Alemanha"
+            }
+          ],
+          "markers": 0
+        },
+        {
+          "id": "ru",
+          "ready": true,
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+          "center": [
+            9.678348000000028,
+            50.961733
+          ],
+          "zoom": 3,
+          "country": "country-DE",
+          "query": "ألمانيا",
+          "result": "Германия\nСтрана",
+          "field": [
+            "get",
+            "name_ru"
+          ],
+          "label": [
+            {
+              "engineId": "country-DE",
+              "id": "country-DE",
+              "name": "Германия"
+            }
+          ],
+          "markers": 0
+        },
+        {
+          "id": "id",
+          "ready": true,
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+          "center": [
+            9.678348000000028,
+            50.961733
+          ],
+          "zoom": 3,
+          "country": "country-DE",
+          "query": "ألمانيا",
+          "result": "Jerman\nNegara",
+          "field": [
+            "get",
+            "name_id"
+          ],
+          "label": [
+            {
+              "engineId": "country-DE",
+              "id": "country-DE",
+              "name": "Jerman"
+            }
+          ],
+          "markers": 0
+        },
+        {
+          "id": "ur",
+          "ready": true,
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+          "center": [
+            9.678348000000028,
+            50.961733
+          ],
+          "zoom": 3,
+          "country": "country-DE",
+          "query": "ألمانيا",
+          "result": "جرمنی\nملک",
+          "field": [
+            "get",
+            "name_ur"
+          ],
+          "label": [
+            {
+              "engineId": "country-DE",
+              "id": "country-DE",
+              "name": "جرمنی"
+            }
+          ],
+          "markers": 0
+        },
+        {
+          "id": "de",
+          "ready": true,
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+          "center": [
+            9.678348000000028,
+            50.961733
+          ],
+          "zoom": 3,
+          "country": "country-DE",
+          "query": "ألمانيا",
+          "result": "Deutschland\nLand",
+          "field": [
+            "get",
+            "name_de"
+          ],
+          "label": [
+            {
+              "engineId": "country-DE",
+              "id": "country-DE",
+              "name": "Deutschland"
+            }
+          ],
+          "markers": 0
+        },
+        {
+          "id": "ja",
+          "ready": true,
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+          "center": [
+            9.678348000000028,
+            50.961733
+          ],
+          "zoom": 3,
+          "country": "country-DE",
+          "query": "ألمانيا",
+          "result": "ドイツ\n国",
+          "field": [
+            "get",
+            "name_ja"
+          ],
+          "label": [
+            {
+              "engineId": "country-DE",
+              "id": "country-DE",
+              "name": "ドイツ"
+            }
+          ],
+          "markers": 0
+        },
+        {
+          "id": "mr",
+          "ready": true,
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+          "center": [
+            9.678348000000028,
+            50.961733
+          ],
+          "zoom": 3,
+          "country": "country-DE",
+          "query": "ألمانيا",
+          "result": "जर्मनी\nदेश",
+          "field": [
+            "get",
+            "name_mr"
+          ],
+          "label": [
+            {
+              "engineId": "country-DE",
+              "id": "country-DE",
+              "name": "जर्मनी"
+            }
+          ],
+          "markers": 0
+        },
+        {
+          "id": "vi",
+          "ready": true,
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+          "center": [
+            9.678348000000028,
+            50.961733
+          ],
+          "zoom": 3,
+          "country": "country-DE",
+          "query": "ألمانيا",
+          "result": "Đức\nQuốc gia",
+          "field": [
+            "get",
+            "name_vi"
+          ],
+          "label": [
+            {
+              "engineId": "country-DE",
+              "id": "country-DE",
+              "name": "Đức"
+            }
+          ],
+          "markers": 0
+        },
+        {
+          "id": "te",
+          "ready": true,
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+          "center": [
+            9.678348000000028,
+            50.961733
+          ],
+          "zoom": 3,
+          "country": "country-DE",
+          "query": "ألمانيا",
+          "result": "జర్మనీ\nదేశం",
+          "field": [
+            "get",
+            "name_te"
+          ],
+          "label": [
+            {
+              "engineId": "country-DE",
+              "id": "country-DE",
+              "name": "జర్మనీ"
+            }
+          ],
+          "markers": 0
+        },
+        {
+          "id": "sw",
+          "ready": true,
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+          "center": [
+            9.678348000000028,
+            50.961733
+          ],
+          "zoom": 3,
+          "country": "country-DE",
+          "query": "ألمانيا",
+          "result": "Ujerumani\nNchi",
+          "field": [
+            "get",
+            "name_sw"
+          ],
+          "label": [
+            {
+              "engineId": "country-DE",
+              "id": "country-DE",
+              "name": "Ujerumani"
+            }
+          ],
+          "markers": 0
+        },
+        {
+          "id": "ha-Latn",
+          "ready": true,
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+          "center": [
+            9.678348000000028,
+            50.961733
+          ],
+          "zoom": 3,
+          "country": "country-DE",
+          "query": "ألمانيا",
+          "result": "Jamus\nƘasa",
+          "field": [
+            "get",
+            "name_ha-Latn"
+          ],
+          "label": [
+            {
+              "engineId": "country-DE",
+              "id": "country-DE",
+              "name": "Jamus"
+            }
+          ],
+          "markers": 0
+        },
+        {
+          "id": "tr",
+          "ready": true,
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+          "center": [
+            9.678348000000028,
+            50.961733
+          ],
+          "zoom": 3,
+          "country": "country-DE",
+          "query": "ألمانيا",
+          "result": "Almanya\nÜlke",
+          "field": [
+            "get",
+            "name_tr"
+          ],
+          "label": [
+            {
+              "engineId": "country-DE",
+              "id": "country-DE",
+              "name": "Almanya"
+            }
+          ],
+          "markers": 0
+        },
+        {
+          "id": "pnb-Arab",
+          "ready": true,
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+          "center": [
+            9.678348000000028,
+            50.961733
+          ],
+          "zoom": 3,
+          "country": "country-DE",
+          "query": "ألمانيا",
+          "result": "جرمنی\nملک",
+          "field": [
+            "get",
+            "name_pnb-Arab"
+          ],
+          "label": [
+            {
+              "engineId": "country-DE",
+              "id": "country-DE",
+              "name": "جرمنی"
+            }
+          ],
+          "markers": 0
+        }
+      ]
+    },
+    {
+      "name": "Ubicación veinte idiomas",
+      "rows": [
+        {
+          "id": "es",
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+          "zoom": 3,
+          "name": "Alemania"
+        },
+        {
+          "id": "en",
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+          "zoom": 3,
+          "name": "Germany"
+        },
+        {
+          "id": "zh-Hans",
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+          "zoom": 3,
+          "name": "德国"
+        },
+        {
+          "id": "hi",
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+          "zoom": 3,
+          "name": "जर्मनी"
+        },
+        {
+          "id": "ar",
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+          "zoom": 3,
+          "name": "ألمانيا"
+        },
+        {
+          "id": "fr",
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+          "zoom": 3,
+          "name": "Allemagne"
+        },
+        {
+          "id": "bn",
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+          "zoom": 3,
+          "name": "জার্মানি"
+        },
+        {
+          "id": "pt",
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+          "zoom": 3,
+          "name": "Alemanha"
+        },
+        {
+          "id": "ru",
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+          "zoom": 3,
+          "name": "Германия"
+        },
+        {
+          "id": "id",
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+          "zoom": 3,
+          "name": "Jerman"
+        },
+        {
+          "id": "ur",
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+          "zoom": 3,
+          "name": "جرمنی"
+        },
+        {
+          "id": "de",
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+          "zoom": 3,
+          "name": "Deutschland"
+        },
+        {
+          "id": "ja",
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+          "zoom": 3,
+          "name": "ドイツ"
+        },
+        {
+          "id": "mr",
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+          "zoom": 3,
+          "name": "जर्मनी"
+        },
+        {
+          "id": "vi",
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+          "zoom": 3,
+          "name": "Đức"
+        },
+        {
+          "id": "te",
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+          "zoom": 3,
+          "name": "జర్మనీ"
+        },
+        {
+          "id": "sw",
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+          "zoom": 3,
+          "name": "Ujerumani"
+        },
+        {
+          "id": "ha-Latn",
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+          "zoom": 3,
+          "name": "Jamus"
+        },
+        {
+          "id": "tr",
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+          "zoom": 3,
+          "name": "Almanya"
+        },
+        {
+          "id": "pnb-Arab",
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+          "zoom": 3,
+          "name": "جرمنی"
+        }
+      ]
+    },
+    {
+      "name": "Disclaimer veinte idiomas",
+      "rows": [
+        {
+          "id": "es",
+          "text": "Disclaimer\nIdioma\nBuscar idioma\nEspañol\n✓\nEnglish\n简体中文\nहिन्दी\nالعربية\nFrançais\nবাংলা\nPortuguês\nРусский\nBahasa Indonesia\nاردو\nDeutsch\n日本語\nमराठी\nTiếng Việt\nతెలుగు\nKiswahili\nHausa\nTürkçe\nپنجابی\n\nMapa Táctico permite consultar cartografía e información de contexto. Los datos geográficos pueden ser incompletos o estar desactualizados. La escala visual no equivale a precisión del dato.\n\nLa información histórica conserva sus fuentes. Una cifra de población en un área no constituye una predicción de heridos ni fallecidos. El portal no sustituye avisos oficiales ni decisiones de emergencia.\n\nLa consulta de acontecimientos militares y nucleares se limita a información histórica y humanitaria. El portal no calcula ataques sobre ubicaciones reales.\n\nCartografía: OpenFreeMap, OpenMapTiles, OpenStreetMap y sus colaboradores. Las consultas cartográficas transmiten las teselas necesarias para la vista.\n\nEl buscador utiliza un catálogo alojado en Sites. La aplicación no almacena perfiles ni consultas individuales; la cuota utiliza un contador global. Sites y los proveedores cartográficos tratan los datos técnicos de sus peticiones según sus políticas.",
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}"
+        },
+        {
+          "id": "en",
+          "text": "Disclaimer\nLanguage\nFind a language\nEspañol\nEnglish\n✓\n简体中文\nहिन्दी\nالعربية\nFrançais\nবাংলা\nPortuguês\nРусский\nBahasa Indonesia\nاردو\nDeutsch\n日本語\nमराठी\nTiếng Việt\nతెలుగు\nKiswahili\nHausa\nTürkçe\nپنجابی\n\nMapa Táctico provides maps and contextual information. Geographic data may be incomplete or outdated. Visual scale does not establish data accuracy.\n\nHistorical information retains its sources. An area's population count is not a prediction of injuries or deaths. The portal does not replace official warnings or emergency decisions.\n\nMilitary and nuclear events are covered through historical and humanitarian information. The portal does not calculate attacks on real locations.\n\nCartography: OpenFreeMap, OpenMapTiles, OpenStreetMap and its contributors. Map queries transmit the tiles required for the current view.\n\nThe search uses a catalogue hosted on Sites. The application does not store profiles or individual queries; its quota uses a global counter. Sites and map providers process technical request data according to their policies.",
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}"
+        },
+        {
+          "id": "zh-Hans",
+          "text": "免责声明\n语言\n搜索语言\nEspañol\nEnglish\n简体中文\n✓\nहिन्दी\nالعربية\nFrançais\nবাংলা\nPortuguês\nРусский\nBahasa Indonesia\nاردو\nDeutsch\n日本語\nमराठी\nTiếng Việt\nతెలుగు\nKiswahili\nHausa\nTürkçe\nپنجابی\n\nMapa Táctico 可用于查阅地图和背景信息。地理数据可能不完整或已过时。显示比例尺不代表数据精度。\n\n历史信息保留其来源。某区域的人口数量不能作为受伤或死亡人数的预测。本网站不能替代官方通告或应急决策。\n\n对军事和核事件的查询仅限历史与人道主义信息。本网站不计算针对真实地点的攻击。\n\n地图数据: OpenFreeMap, OpenMapTiles, OpenStreetMap 及其贡献者. 地图查询会传输当前视图所需的地图瓦片。\n\n搜索功能使用托管在 Sites 上的目录。应用不存储个人档案或单次查询；搜索限额使用全局计数器。Sites 和地图数据提供方按各自政策处理请求中的技术数据。",
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}"
+        },
+        {
+          "id": "hi",
+          "text": "अस्वीकरण\nभाषा\nभाषा खोजें\nEspañol\nEnglish\n简体中文\nहिन्दी\n✓\nالعربية\nFrançais\nবাংলা\nPortuguês\nРусский\nBahasa Indonesia\nاردو\nDeutsch\n日本語\nमराठी\nTiếng Việt\nతెలుగు\nKiswahili\nHausa\nTürkçe\nپنجابی\n\nMapa Táctico पर मानचित्र और संदर्भ जानकारी देखी जा सकती है। भौगोलिक डेटा अधूरा या पुराना हो सकता है। दिखने वाला पैमाना डेटा की सटीकता नहीं दर्शाता।\n\nऐतिहासिक जानकारी के स्रोत सुरक्षित रखे जाते हैं। किसी क्षेत्र की आबादी की संख्या घायल या मृत लोगों की भविष्यवाणी नहीं है। यह पोर्टल आधिकारिक चेतावनियों या आपातकालीन निर्णयों का विकल्प नहीं है।\n\nसैन्य और परमाणु घटनाओं की जानकारी ऐतिहासिक और मानवीय संदर्भ तक सीमित है। पोर्टल वास्तविक स्थानों पर हमलों की गणना नहीं करता।\n\nमानचित्रण: OpenFreeMap, OpenMapTiles, OpenStreetMap और उसके योगदानकर्ता. मानचित्र अनुरोधों में मौजूदा दृश्य के लिए आवश्यक मानचित्र टाइलें भेजी जाती हैं।\n\nखोज सुविधा Sites पर रखी गई सूची का उपयोग करती है। ऐप व्यक्तिगत प्रोफ़ाइल या अलग-अलग खोजों को संग्रहीत नहीं करता; सीमा के लिए एक वैश्विक काउंटर इस्तेमाल होता है। Sites और मानचित्र प्रदाता अपने अनुरोधों के तकनीकी डेटा को अपनी नीतियों के अनुसार संभालते हैं।",
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}"
+        },
+        {
+          "id": "ar",
+          "text": "إخلاء المسؤولية\nاللغة\nالبحث عن لغة\nEspañol\nEnglish\n简体中文\nहिन्दी\nالعربية\n✓\nFrançais\nবাংলা\nPortuguês\nРусский\nBahasa Indonesia\nاردو\nDeutsch\n日本語\nमराठी\nTiếng Việt\nతెలుగు\nKiswahili\nHausa\nTürkçe\nپنجابی\n\nيتيح Mapa Táctico الاطّلاع على الخرائط ومعلومات السياق. قد تكون البيانات الجغرافية ناقصة أو غير محدّثة. لا يعني المقياس المرئي أن البيانات تتمتع بالدقة نفسها.\n\nتحتفظ المعلومات التاريخية بمصادرها. لا يمثل عدد السكان في منطقة توقعًا لأعداد الجرحى أو الوفيات. لا يحل الموقع محل التنبيهات الرسمية أو القرارات المتعلقة بالطوارئ.\n\nتقتصر استعراضات الأحداث العسكرية والنووية على المعلومات التاريخية والإنسانية. لا يحسب الموقع نتائج هجمات على مواقع حقيقية.\n\nبيانات الخرائط: OpenFreeMap, OpenMapTiles, OpenStreetMap والمساهمون فيه. تنقل طلبات الخرائط البلاطات اللازمة للعرض.\n\nيستخدم محرك البحث فهرسًا مستضافًا على Sites. لا يخزن التطبيق ملفات شخصية أو استعلامات فردية؛ وتستخدم حصة البحث عدادًا عامًا. تعالج Sites ومزوّدو الخرائط البيانات التقنية للطلبات وفقًا لسياساتهم.",
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}"
+        },
+        {
+          "id": "fr",
+          "text": "Avertissement\nLangue\nRechercher une langue\nEspañol\nEnglish\n简体中文\nहिन्दी\nالعربية\nFrançais\n✓\nবাংলা\nPortuguês\nРусский\nBahasa Indonesia\nاردو\nDeutsch\n日本語\nमराठी\nTiếng Việt\nతెలుగు\nKiswahili\nHausa\nTürkçe\nپنجابی\n\nMapa Táctico permet de consulter des cartes et des informations de contexte. Les données géographiques peuvent être incomplètes ou obsolètes. L’échelle visuelle ne correspond pas à la précision des données.\n\nLes informations historiques conservent leurs sources. Un nombre d’habitants dans une zone ne constitue pas une prévision de blessés ou de décès. Le portail ne remplace ni les alertes officielles ni les décisions d’urgence.\n\nLa consultation d’événements militaires et nucléaires se limite aux informations historiques et humanitaires. Le portail ne calcule pas d’attaques sur des emplacements réels.\n\nCartographie: OpenFreeMap, OpenMapTiles, OpenStreetMap et ses contributeurs. Les requêtes cartographiques transmettent les tuiles nécessaires à la vue.\n\nLa recherche utilise un catalogue hébergé sur Sites. L’application ne stocke ni profils ni recherches individuelles ; le quota utilise un compteur global. Sites et les fournisseurs cartographiques traitent les données techniques de leurs requêtes conformément à leurs politiques.",
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}"
+        },
+        {
+          "id": "bn",
+          "text": "দায়বর্জন ঘোষণা\nভাষা\nভাষা খুঁজুন\nEspañol\nEnglish\n简体中文\nहिन्दी\nالعربية\nFrançais\nবাংলা\n✓\nPortuguês\nРусский\nBahasa Indonesia\nاردو\nDeutsch\n日本語\nमराठी\nTiếng Việt\nతెలుగు\nKiswahili\nHausa\nTürkçe\nپنجابی\n\nMapa Táctico-তে মানচিত্র ও প্রাসঙ্গিক তথ্য দেখা যায়। ভৌগোলিক তথ্য অসম্পূর্ণ বা পুরোনো হতে পারে। দৃশ্যমান স্কেল তথ্যের নির্ভুলতা নির্দেশ করে না।\n\nঐতিহাসিক তথ্যের উৎস রাখা হয়। কোনো এলাকার জনসংখ্যা আহত বা মৃতের সংখ্যার পূর্বাভাস নয়। এই পোর্টাল সরকারি সতর্কতা বা জরুরি সিদ্ধান্তের বিকল্প নয়।\n\nসামরিক ও পারমাণবিক ঘটনা সংক্রান্ত তথ্য ঐতিহাসিক ও মানবিক প্রেক্ষাপটে সীমাবদ্ধ। পোর্টাল বাস্তব স্থানের ওপর আক্রমণের হিসাব করে না।\n\nমানচিত্রায়ন: OpenFreeMap, OpenMapTiles, OpenStreetMap ও এর অবদানকারীরা. মানচিত্রের অনুরোধে বর্তমান দৃশ্যের জন্য প্রয়োজনীয় মানচিত্র টাইল পাঠানো হয়।\n\nঅনুসন্ধানে Sites-এ রাখা একটি তালিকা ব্যবহার করা হয়। অ্যাপ ব্যক্তিগত প্রোফাইল বা আলাদা অনুসন্ধান সংরক্ষণ করে না; সীমা নির্ধারণে একটি বৈশ্বিক কাউন্টার ব্যবহৃত হয়। Sites ও মানচিত্র প্রদানকারীরা অনুরোধের প্রযুক্তিগত তথ্য তাদের নিজস্ব নীতি অনুযায়ী প্রক্রিয়া করে।",
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}"
+        },
+        {
+          "id": "pt",
+          "text": "Aviso legal\nIdioma\nBuscar idioma\nEspañol\nEnglish\n简体中文\nहिन्दी\nالعربية\nFrançais\nবাংলা\nPortuguês\n✓\nРусский\nBahasa Indonesia\nاردو\nDeutsch\n日本語\nमराठी\nTiếng Việt\nతెలుగు\nKiswahili\nHausa\nTürkçe\nپنجابی\n\nMapa Táctico permite consultar mapas e informações de contexto. Os dados geográficos podem estar incompletos ou desatualizados. A escala visual não equivale à precisão dos dados.\n\nAs informações históricas mantêm suas fontes. Um número de habitantes em uma área não constitui uma previsão de feridos ou mortos. O portal não substitui alertas oficiais nem decisões de emergência.\n\nA consulta de acontecimentos militares e nucleares limita-se a informações históricas e humanitárias. O portal não calcula ataques em localizações reais.\n\nCartografia: OpenFreeMap, OpenMapTiles, OpenStreetMap e seus colaboradores. As consultas cartográficas transmitem os blocos de mapa necessários à visualização.\n\nO buscador usa um catálogo hospedado no Sites. A aplicação não armazena perfis nem consultas individuais; a cota usa um contador global. O Sites e os fornecedores cartográficos tratam os dados técnicos de suas requisições conforme suas políticas.",
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}"
+        },
+        {
+          "id": "ru",
+          "text": "Оговорка об ответственности\nЯзык\nНайти язык\nEspañol\nEnglish\n简体中文\nहिन्दी\nالعربية\nFrançais\nবাংলা\nPortuguês\nРусский\n✓\nBahasa Indonesia\nاردو\nDeutsch\n日本語\nमराठी\nTiếng Việt\nతెలుగు\nKiswahili\nHausa\nTürkçe\nپنجابی\n\nMapa Táctico позволяет просматривать карты и сопроводительные сведения. Географические данные могут быть неполными или устаревшими. Масштаб отображения не означает соответствующей точности данных.\n\nИсторические сведения сохраняют ссылки на источники. Численность населения в районе не является прогнозом числа раненых или погибших. Портал не заменяет официальные предупреждения или решения в чрезвычайных ситуациях.\n\nСведения о военных и ядерных событиях ограничиваются исторической и гуманитарной информацией. Портал не рассчитывает атаки на реальные места.\n\nКартография: OpenFreeMap, OpenMapTiles, OpenStreetMap и его участники. Картографические запросы передают фрагменты карты, необходимые для отображения.\n\nПоиск использует каталог, размещённый на Sites. Приложение не сохраняет профили или отдельные запросы; для лимита используется общий счётчик. Sites и поставщики картографических данных обрабатывают технические данные запросов согласно своим правилам.",
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}"
+        },
+        {
+          "id": "id",
+          "text": "Penafian\nBahasa\nCari bahasa\nEspañol\nEnglish\n简体中文\nहिन्दी\nالعربية\nFrançais\nবাংলা\nPortuguês\nРусский\nBahasa Indonesia\n✓\nاردو\nDeutsch\n日本語\nमराठी\nTiếng Việt\nతెలుగు\nKiswahili\nHausa\nTürkçe\nپنجابی\n\nMapa Táctico memungkinkan Anda mengakses peta dan informasi latar belakang. Data geografis mungkin tidak lengkap atau sudah kedaluwarsa. Skala visual tidak menunjukkan tingkat ketelitian data.\n\nInformasi sejarah tetap menyertakan sumbernya. Jumlah penduduk di suatu wilayah bukanlah prediksi jumlah orang yang terluka atau meninggal. Portal ini tidak menggantikan peringatan resmi ataupun keputusan dalam keadaan darurat.\n\nInformasi tentang peristiwa militer dan nuklir terbatas pada konteks sejarah dan kemanusiaan. Portal ini tidak menghitung serangan terhadap lokasi nyata.\n\nKartografi: OpenFreeMap, OpenMapTiles, OpenStreetMap dan para kontributornya. Permintaan peta mentransmisikan ubin peta yang diperlukan untuk tampilan.\n\nPencarian menggunakan katalog yang dihosting di Sites. Aplikasi tidak menyimpan profil atau pencarian individual; kuota menggunakan penghitung global. Sites dan penyedia peta memproses data teknis permintaan sesuai kebijakan masing-masing.",
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}"
+        },
+        {
+          "id": "ur",
+          "text": "دستبرداری\nزبان\nزبان تلاش کریں\nEspañol\nEnglish\n简体中文\nहिन्दी\nالعربية\nFrançais\nবাংলা\nPortuguês\nРусский\nBahasa Indonesia\nاردو\n✓\nDeutsch\n日本語\nमराठी\nTiếng Việt\nతెలుగు\nKiswahili\nHausa\nTürkçe\nپنجابی\n\nMapa Táctico نقشوں اور سیاق و سباق کی معلومات دیکھنے کی سہولت دیتا ہے۔ جغرافیائی معلومات نامکمل یا پرانی ہو سکتی ہیں۔ نظر آنے والا پیمانہ معلومات کی درستگی کے برابر نہیں ہے۔\n\nتاریخی معلومات کے ماخذ برقرار رکھے جاتے ہیں۔ کسی علاقے کی آبادی کی تعداد زخمیوں یا اموات کی پیش گوئی نہیں ہے۔ یہ پورٹل سرکاری انتباہات یا ہنگامی فیصلوں کا متبادل نہیں۔\n\nعسکری اور جوہری واقعات کی معلومات تاریخی اور انسانی پہلوؤں تک محدود ہیں۔ پورٹل حقیقی مقامات پر حملوں کے نتائج کا حساب نہیں لگاتا۔\n\nنقشہ سازی: OpenFreeMap, OpenMapTiles, OpenStreetMap اور اس کے معاونین. نقشے کی درخواستیں منظر کے لیے ضروری نقشے کی ٹائلیں منتقل کرتی ہیں۔\n\nتلاش کے لیے Sites پر موجود فہرست استعمال ہوتی ہے۔ ایپ ذاتی پروفائل یا انفرادی تلاشیں محفوظ نہیں کرتی؛ حد کے لیے مشترکہ شمارندہ استعمال ہوتا ہے۔ Sites اور نقشوں کے فراہم کنندگان درخواستوں کے تکنیکی ڈیٹا کو اپنی پالیسیوں کے مطابق سنبھالتے ہیں۔",
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}"
+        },
+        {
+          "id": "de",
+          "text": "Hinweise und Haftungsausschluss\nSprache\nSprache suchen\nEspañol\nEnglish\n简体中文\nहिन्दी\nالعربية\nFrançais\nবাংলা\nPortuguês\nРусский\nBahasa Indonesia\nاردو\nDeutsch\n✓\n日本語\nमराठी\nTiếng Việt\nతెలుగు\nKiswahili\nHausa\nTürkçe\nپنجابی\n\nMapa Táctico bietet Karten und Hintergrundinformationen. Die geografischen Daten können unvollständig oder veraltet sein. Der sichtbare Maßstab entspricht nicht der Genauigkeit der Daten.\n\nHistorische Informationen behalten ihre Quellenangaben. Die Bevölkerungszahl eines Gebiets ist keine Vorhersage über Verletzte oder Todesopfer. Das Portal ersetzt weder offizielle Warnungen noch Entscheidungen in Notfällen.\n\nDie Abfrage militärischer und nuklearer Ereignisse beschränkt sich auf historische und humanitäre Informationen. Das Portal berechnet keine Angriffe auf reale Standorte.\n\nKartografie: OpenFreeMap, OpenMapTiles, OpenStreetMap und seine Mitwirkenden. Kartenabfragen übertragen die für die Ansicht benötigten Kartenkacheln.\n\nDie Suche verwendet einen auf Sites gehosteten Katalog. Die Anwendung speichert weder Profile noch individuelle Abfragen; das Kontingent verwendet einen globalen Zähler. Sites und die Kartenanbieter verarbeiten die technischen Daten ihrer Anfragen gemäß ihren Richtlinien.",
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}"
+        },
+        {
+          "id": "ja",
+          "text": "免責事項\n言語\n言語を検索\nEspañol\nEnglish\n简体中文\nहिन्दी\nالعربية\nFrançais\nবাংলা\nPortuguês\nРусский\nBahasa Indonesia\nاردو\nDeutsch\n日本語\n✓\nमराठी\nTiếng Việt\nతెలుగు\nKiswahili\nHausa\nTürkçe\nپنجابی\n\nMapa Táctico では地図と背景情報を参照できます。地理データは不完全または古い場合があります。表示上の縮尺はデータの精度を示すものではありません。\n\n歴史情報には出典を保持しています。ある地域の人口は、負傷者数や死亡者数の予測ではありません。本サイトは公式の注意情報や緊急時の判断に代わるものではありません。\n\n軍事および核関連の出来事の参照は、歴史情報と人道上の情報に限定されます。本サイトは実在の場所への攻撃を計算しません。\n\n地図データ: OpenFreeMap, OpenMapTiles, OpenStreetMap とその貢献者. 地図の照会では、現在の表示に必要な地図タイルを送受信します。\n\n検索には Sites に保存されたデータを使用します。アプリは個人のプロフィールや個々の検索内容を保存しません。検索の制限には全体のカウンターを使用します。Sites と地図データの提供元は、それぞれの方針に従ってリクエストの技術データを扱います。",
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}"
+        },
+        {
+          "id": "mr",
+          "text": "अस्वीकरण\nभाषा\nभाषा शोधा\nEspañol\nEnglish\n简体中文\nहिन्दी\nالعربية\nFrançais\nবাংলা\nPortuguês\nРусский\nBahasa Indonesia\nاردو\nDeutsch\n日本語\nमराठी\n✓\nTiếng Việt\nతెలుగు\nKiswahili\nHausa\nTürkçe\nپنجابی\n\nMapa Táctico वर नकाशे आणि संदर्भातील माहिती पाहता येते. भौगोलिक डेटा अपूर्ण किंवा जुना असू शकतो. दिसणारे प्रमाण डेटा किती अचूक आहे हे दर्शवत नाही.\n\nऐतिहासिक माहितीचे स्रोत कायम ठेवले जातात. एखाद्या क्षेत्रातील लोकसंख्या हा जखमी किंवा मृत व्यक्तींच्या संख्येचा अंदाज नाही. हे पोर्टल अधिकृत सूचना किंवा आपत्कालीन निर्णयांना पर्याय नाही.\n\nलष्करी आणि अणुविषयक घटनांची माहिती ऐतिहासिक व मानवताविषयक संदर्भांपुरती मर्यादित आहे. पोर्टल वास्तविक ठिकाणांवरील हल्ल्यांची गणना करत नाही.\n\nनकाशांकन: OpenFreeMap, OpenMapTiles, OpenStreetMap आणि त्याचे योगदानकर्ते. नकाशाच्या विनंत्यांमधून सध्याच्या दृश्यासाठी आवश्यक नकाशा टाइल पाठवल्या जातात.\n\nशोधासाठी Sites वर ठेवलेली सूची वापरली जाते. ॲप वैयक्तिक प्रोफाइल किंवा स्वतंत्र शोध जतन करत नाही; मर्यादेसाठी एक जागतिक काउंटर वापरला जातो. Sites आणि नकाशा पुरवठादार विनंत्यांमधील तांत्रिक डेटा त्यांच्या धोरणांनुसार हाताळतात.",
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}"
+        },
+        {
+          "id": "vi",
+          "text": "Tuyên bố miễn trừ trách nhiệm\nNgôn ngữ\nTìm ngôn ngữ\nEspañol\nEnglish\n简体中文\nहिन्दी\nالعربية\nFrançais\nবাংলা\nPortuguês\nРусский\nBahasa Indonesia\nاردو\nDeutsch\n日本語\nमराठी\nTiếng Việt\n✓\nతెలుగు\nKiswahili\nHausa\nTürkçe\nپنجابی\n\nMapa Táctico cho phép tra cứu bản đồ và thông tin bối cảnh. Dữ liệu địa lý có thể không đầy đủ hoặc đã lỗi thời. Tỷ lệ hiển thị không tương đương với độ chính xác của dữ liệu.\n\nThông tin lịch sử được giữ nguyên nguồn tham khảo. Dân số trong một khu vực không phải là dự đoán số người bị thương hoặc tử vong. Cổng thông tin không thay thế cảnh báo chính thức hay quyết định trong tình huống khẩn cấp.\n\nViệc tra cứu các sự kiện quân sự và hạt nhân chỉ giới hạn ở thông tin lịch sử và nhân đạo. Cổng thông tin không tính toán các cuộc tấn công vào vị trí có thật.\n\nDữ liệu bản đồ: OpenFreeMap, OpenMapTiles, OpenStreetMap và những người đóng góp. Các yêu cầu bản đồ truyền những ô bản đồ cần thiết cho chế độ xem.\n\nCông cụ tìm kiếm sử dụng danh mục được lưu trữ trên Sites. Ứng dụng không lưu hồ sơ người dùng hay các truy vấn riêng lẻ; hạn mức sử dụng bộ đếm chung. Sites và các nhà cung cấp bản đồ xử lý dữ liệu kỹ thuật của các yêu cầu theo chính sách của họ.",
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}"
+        },
+        {
+          "id": "te",
+          "text": "బాధ్యతా నిరాకరణ\nభాష\nభాషను వెతకండి\nEspañol\nEnglish\n简体中文\nहिन्दी\nالعربية\nFrançais\nবাংলা\nPortuguês\nРусский\nBahasa Indonesia\nاردو\nDeutsch\n日本語\nमराठी\nTiếng Việt\nతెలుగు\n✓\nKiswahili\nHausa\nTürkçe\nپنجابی\n\nMapa Táctico ద్వారా మ్యాప్‌లు, సందర్భ సమాచారాన్ని చూడవచ్చు. భౌగోళిక డేటా అసంపూర్ణంగా లేదా పాతదిగా ఉండవచ్చు. కనిపించే కొలమానం డేటా ఖచ్చితత్వాన్ని సూచించదు.\n\nచారిత్రక సమాచారానికి సంబంధించిన మూలాలు అలాగే ఉంచబడతాయి. ఒక ప్రాంతపు జనాభా సంఖ్య గాయపడిన లేదా మరణించిన వారి సంఖ్యకు అంచనా కాదు. ఈ పోర్టల్ అధికారిక హెచ్చరికలు లేదా అత్యవసర నిర్ణయాలకు ప్రత్యామ్నాయం కాదు.\n\nసైనిక, అణు సంఘటనల సమాచారం చారిత్రక, మానవతా సందర్భాలకు మాత్రమే పరిమితం. ఈ పోర్టల్ వాస్తవ ప్రదేశాలపై దాడులను లెక్కించదు.\n\nమ్యాప్ సమాచారం: OpenFreeMap, OpenMapTiles, OpenStreetMap మరియు దాని సహకారులు. మ్యాప్ అభ్యర్థనల్లో ప్రస్తుత దృశ్యానికి అవసరమైన మ్యాప్ టైల్స్ పంపబడతాయి.\n\nశోధన Sites‌లో ఉంచిన జాబితాను ఉపయోగిస్తుంది. యాప్ వ్యక్తిగత ప్రొఫైల్‌లు లేదా విడివిడి శోధనలను నిల్వ చేయదు; పరిమితి కోసం ఒక ప్రపంచవ్యాప్త కౌంటర్ ఉపయోగించబడుతుంది. Sites, మ్యాప్ ప్రదాతలు అభ్యర్థనల సాంకేతిక డేటాను వారి విధానాల ప్రకారం నిర్వహిస్తారు.",
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}"
+        },
+        {
+          "id": "sw",
+          "text": "Kanusho\nLugha\nTafuta lugha\nEspañol\nEnglish\n简体中文\nहिन्दी\nالعربية\nFrançais\nবাংলা\nPortuguês\nРусский\nBahasa Indonesia\nاردو\nDeutsch\n日本語\nमराठी\nTiếng Việt\nతెలుగు\nKiswahili\n✓\nHausa\nTürkçe\nپنجابی\n\nMapa Táctico hukuwezesha kuangalia ramani na taarifa za muktadha. Data za kijiografia zinaweza kuwa pungufu au zimepitwa na wakati. Kipimo cha mwonekano hakimaanishi usahihi wa data.\n\nTaarifa za kihistoria zinahifadhi vyanzo vyake. Idadi ya watu katika eneo si utabiri wa waliojeruhiwa au waliofariki. Tovuti hii haichukui nafasi ya tahadhari rasmi au maamuzi ya dharura.\n\nTaarifa kuhusu matukio ya kijeshi na ya nyuklia zimewekewa mipaka ya historia na masuala ya kibinadamu. Tovuti hii haikokotoi mashambulizi kwenye maeneo halisi.\n\nUchoraji wa ramani: OpenFreeMap, OpenMapTiles, OpenStreetMap na wachangiaji wake. Maombi ya ramani huhamisha vigae vinavyohitajika kwa mwonekano.\n\nUtafutaji hutumia orodha inayohifadhiwa kwenye Sites. Programu haihifadhi wasifu wala utafutaji wa mtu mmoja mmoja; kikomo hutumia kihesabu cha pamoja. Sites na watoa huduma za ramani hushughulikia data za kiufundi za maombi kwa mujibu wa sera zao.",
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}"
+        },
+        {
+          "id": "ha-Latn",
+          "text": "Bayani kan iyakar alhaki\nHarshe\nNemo harshe\nEspañol\nEnglish\n简体中文\nहिन्दी\nالعربية\nFrançais\nবাংলা\nPortuguês\nРусский\nBahasa Indonesia\nاردو\nDeutsch\n日本語\nमराठी\nTiếng Việt\nతెలుగు\nKiswahili\nHausa\n✓\nTürkçe\nپنجابی\n\nMapa Táctico yana ba da damar duba taswira da bayanan mahallin abubuwa. Bayanan yanayin ƙasa na iya zama ba cikakku ba ko tsofaffi. Ma'aunin da ake gani ba ya nufin cewa bayanan suna da irin wannan daidaito.\n\nBayanan tarihi suna riƙe madogararsu. Adadin jama'a a yanki ba hasashen waɗanda za su ji rauni ko su mutu ba ne. Wannan shafi ba ya maye gurbin sanarwar hukuma ko shawarar gaggawa.\n\nDuba abubuwan soja da nukiliya ya takaita ga bayanan tarihi da na jin ƙai. Shafin ba ya lissafa hare-hare a wuraren da suke a zahiri.\n\nTaswirori: OpenFreeMap, OpenMapTiles, OpenStreetMap da masu ba da gudummawarsa. Buƙatun taswira suna aika sassan taswirar da ake buƙata don abin da ake gani.\n\nBinciken yana amfani da kundin da aka ajiye a Sites. Manhajar ba ta adana bayanan martaba ko binciken mutum ɗaya ɗaya; ana amfani da ma'aunin ƙidaya guda ɗaya na duk masu amfani wajen iyaka. Sites da masu samar da taswira suna sarrafa bayanan fasaha na buƙatunsu bisa manufofinsu.",
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}"
+        },
+        {
+          "id": "tr",
+          "text": "Sorumluluk reddi\nDil\nDil ara\nEspañol\nEnglish\n简体中文\nहिन्दी\nالعربية\nFrançais\nবাংলা\nPortuguês\nРусский\nBahasa Indonesia\nاردو\nDeutsch\n日本語\nमराठी\nTiếng Việt\nతెలుగు\nKiswahili\nHausa\nTürkçe\n✓\nپنجابی\n\nMapa Táctico, haritaları ve bağlamsal bilgileri incelemenizi sağlar. Coğrafi veriler eksik veya güncelliğini yitirmiş olabilir. Görsel ölçek, veri doğruluğuna eşdeğer değildir.\n\nTarihsel bilgiler kaynaklarıyla birlikte sunulur. Bir bölgenin nüfusu, yaralı veya ölü sayısına ilişkin bir tahmin değildir. Portal, resmî uyarıların veya acil durum kararlarının yerini tutmaz.\n\nAskerî ve nükleer olayların incelenmesi, tarihsel ve insani bilgilerle sınırlıdır. Portal, gerçek konumlara yönelik saldırıları hesaplamaz.\n\nHaritacılık: OpenFreeMap, OpenMapTiles, OpenStreetMap ve katkıda bulunanlar. Harita sorguları, görünüm için gerekli harita döşemelerini iletir.\n\nArama, Sites üzerinde barındırılan bir katalog kullanır. Uygulama, profilleri veya bireysel sorguları saklamaz; kota için küresel bir sayaç kullanılır. Sites ve harita sağlayıcıları, isteklerin teknik verilerini kendi politikalarına göre işler.",
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}"
+        },
+        {
+          "id": "pnb-Arab",
+          "text": "ذمہ واری توں دستبرداری\nبولی\nبولی لبھو\nEspañol\nEnglish\n简体中文\nहिन्दी\nالعربية\nFrançais\nবাংলা\nPortuguês\nРусский\nBahasa Indonesia\nاردو\nDeutsch\n日本語\nमराठी\nTiếng Việt\nతెలుగు\nKiswahili\nHausa\nTürkçe\nپنجابی\n✓\n\nMapa Táctico نقشے تے پس منظر دی معلومات ویکھن دی سہولت دیندا اے۔ جغرافیائی معلومات ادھوریاں یا پرانیاں ہو سکدیاں نیں۔ وکھائی دیندا پیمانہ معلومات دی درستگی دے برابر نئیں ہوندا۔\n\nتاریخی معلومات دے ماخذ رکھے جاندے نیں۔ کسے علاقے دی آبادی دی گنتی زخمی لوکاں یا موتاں دی پیش گوئی نئیں اے۔ ایہ پورٹل سرکاری چتاونیاں یا ہنگامی فیصلے دی تھاں نئیں لیندا۔\n\nفوجی تے جوہری واقعات دی جانکاری تاریخی تے انسانی معلومات تک محدود اے۔ پورٹل اصلی تھاواں اُتے حملیاں دے نتیجے دا حساب نئیں کردا۔\n\nنقشہ سازی: OpenFreeMap, OpenMapTiles, OpenStreetMap تے ایہدے حصہ پاؤن والے. نقشے دیاں درخواستاں منظر لئی لوڑ دیاں نقشے دیاں ٹائلیں بھیجدیاں نیں۔\n\nلبھن لئی Sites اُتے رکھی فہرست ورتی جاندی اے۔ ایپ ذاتی پروفائل یا اک اک تلاش محفوظ نئیں کردی؛ حد لئی سانجھا گنتی کار ورتیا جاندا اے۔ Sites تے نقشے دے فراہم کرن والے درخواستاں دے تکنیکی ڈیٹے نوں اپنی پالیسی دے مطابق ورتدے نیں۔",
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}"
+        }
+      ]
+    },
+    {
+      "name": "Excepción Spratly maratí",
+      "state": {
+        "camera": {
+          "center": [
+            115.81956000000002,
+            10.72954
+          ],
+          "contextLayers": [],
+          "countryField": [
+            "get",
+            "name_mr"
+          ],
+          "countryLabels": [
+            {
+              "engineId": "ne-SCR",
+              "id": "ne-SCR",
+              "name": "Scarborough Reef"
+            },
+            {
+              "engineId": "ne-PGA",
+              "id": "ne-PGA",
+              "name": "Spratly Islands"
+            },
+            {
+              "engineId": "country-MY",
+              "id": "country-MY",
+              "name": "मलेशिया"
+            }
+          ],
+          "fiveMetersCssPx": 0.002080540548149662,
+          "projection": "globe",
+          "reference": null,
+          "scriptCount": 0,
+          "tilesLoaded": true,
+          "viewport": [
+            1283,
+            764
+          ],
+          "zoom": 5.0000000000000275
+        },
+        "dir": "ltr",
+        "height": 764,
+        "lang": "mr",
+        "overflow": false,
+        "point": "{\"lng\":115.81924438476562,\"lat\":10.729429159098629}",
+        "result": "",
+        "width": 1283
+      },
+      "country": "ne-PGA",
+      "text": "Spratly Islands\nहे नाव मूळ यादीतील आहे; पडताळलेले भाषांतर उपलब्ध नाही."
+    },
+    {
+      "name": "Publicación Sites24 veinte idiomas",
+      "url": "https://atlas-escenarios-hud.yerrybatista.chatgpt.site/#search",
+      "rows": [
+        {
+          "id": "es",
+          "ready": true,
+          "lang": "es",
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+          "zoom": 3,
+          "center": [
+            9.678348000000028,
+            50.961733
+          ],
+          "field": [
+            "get",
+            "name_es"
+          ],
+          "label": [
+            {
+              "engineId": "country-DE",
+              "id": "country-DE",
+              "name": "Alemania"
+            }
+          ],
+          "markers": 0,
+          "result": "Alemania\nPaís"
+        },
+        {
+          "id": "en",
+          "ready": true,
+          "lang": "en",
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+          "zoom": 3,
+          "center": [
+            9.678348000000028,
+            50.961733
+          ],
+          "field": [
+            "get",
+            "name_en"
+          ],
+          "label": [
+            {
+              "engineId": "country-DE",
+              "id": "country-DE",
+              "name": "Germany"
+            }
+          ],
+          "markers": 0,
+          "result": "Germany\nCountry"
+        },
+        {
+          "id": "zh-Hans",
+          "ready": true,
+          "lang": "zh-Hans",
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+          "zoom": 3,
+          "center": [
+            9.678348000000028,
+            50.961733
+          ],
+          "field": [
+            "get",
+            "name_zh-Hans"
+          ],
+          "label": [
+            {
+              "engineId": "country-DE",
+              "id": "country-DE",
+              "name": "德国"
+            }
+          ],
+          "markers": 0,
+          "result": "德国\n国家"
+        },
+        {
+          "id": "hi",
+          "ready": true,
+          "lang": "hi",
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+          "zoom": 3,
+          "center": [
+            9.678348000000028,
+            50.961733
+          ],
+          "field": [
+            "get",
+            "name_hi"
+          ],
+          "label": [
+            {
+              "engineId": "country-DE",
+              "id": "country-DE",
+              "name": "जर्मनी"
+            }
+          ],
+          "markers": 0,
+          "result": "जर्मनी\nदेश"
+        },
+        {
+          "id": "ar",
+          "ready": true,
+          "lang": "ar",
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+          "zoom": 3,
+          "center": [
+            9.678348000000028,
+            50.961733
+          ],
+          "field": [
+            "get",
+            "name_ar"
+          ],
+          "label": [
+            {
+              "engineId": "country-DE",
+              "id": "country-DE",
+              "name": "ألمانيا"
+            }
+          ],
+          "markers": 0,
+          "result": "ألمانيا\nبلد"
+        },
+        {
+          "id": "fr",
+          "ready": true,
+          "lang": "fr",
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+          "zoom": 3,
+          "center": [
+            9.678348000000028,
+            50.961733
+          ],
+          "field": [
+            "get",
+            "name_fr"
+          ],
+          "label": [
+            {
+              "engineId": "country-DE",
+              "id": "country-DE",
+              "name": "Allemagne"
+            }
+          ],
+          "markers": 0,
+          "result": "Allemagne\nPays"
+        },
+        {
+          "id": "bn",
+          "ready": true,
+          "lang": "bn",
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+          "zoom": 3,
+          "center": [
+            9.678348000000028,
+            50.961733
+          ],
+          "field": [
+            "get",
+            "name_bn"
+          ],
+          "label": [
+            {
+              "engineId": "country-DE",
+              "id": "country-DE",
+              "name": "জার্মানি"
+            }
+          ],
+          "markers": 0,
+          "result": "জার্মানি\nদেশ"
+        },
+        {
+          "id": "pt",
+          "ready": true,
+          "lang": "pt",
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+          "zoom": 3,
+          "center": [
+            9.678348000000028,
+            50.961733
+          ],
+          "field": [
+            "get",
+            "name_pt"
+          ],
+          "label": [
+            {
+              "engineId": "country-DE",
+              "id": "country-DE",
+              "name": "Alemanha"
+            }
+          ],
+          "markers": 0,
+          "result": "Alemanha\nPaís"
+        },
+        {
+          "id": "ru",
+          "ready": true,
+          "lang": "ru",
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+          "zoom": 3,
+          "center": [
+            9.678348000000028,
+            50.961733
+          ],
+          "field": [
+            "get",
+            "name_ru"
+          ],
+          "label": [
+            {
+              "engineId": "country-DE",
+              "id": "country-DE",
+              "name": "Германия"
+            }
+          ],
+          "markers": 0,
+          "result": "Германия\nСтрана"
+        },
+        {
+          "id": "id",
+          "ready": true,
+          "lang": "id",
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+          "zoom": 3,
+          "center": [
+            9.678348000000028,
+            50.961733
+          ],
+          "field": [
+            "get",
+            "name_id"
+          ],
+          "label": [
+            {
+              "engineId": "country-DE",
+              "id": "country-DE",
+              "name": "Jerman"
+            }
+          ],
+          "markers": 0,
+          "result": "Jerman\nNegara"
+        },
+        {
+          "id": "ur",
+          "ready": true,
+          "lang": "ur",
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+          "zoom": 3,
+          "center": [
+            9.678348000000028,
+            50.961733
+          ],
+          "field": [
+            "get",
+            "name_ur"
+          ],
+          "label": [
+            {
+              "engineId": "country-DE",
+              "id": "country-DE",
+              "name": "جرمنی"
+            }
+          ],
+          "markers": 0,
+          "result": "جرمنی\nملک"
+        },
+        {
+          "id": "de",
+          "ready": true,
+          "lang": "de",
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+          "zoom": 3,
+          "center": [
+            9.678348000000028,
+            50.961733
+          ],
+          "field": [
+            "get",
+            "name_de"
+          ],
+          "label": [
+            {
+              "engineId": "country-DE",
+              "id": "country-DE",
+              "name": "Deutschland"
+            }
+          ],
+          "markers": 0,
+          "result": "Deutschland\nLand"
+        },
+        {
+          "id": "ja",
+          "ready": true,
+          "lang": "ja",
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+          "zoom": 3,
+          "center": [
+            9.678348000000028,
+            50.961733
+          ],
+          "field": [
+            "get",
+            "name_ja"
+          ],
+          "label": [
+            {
+              "engineId": "country-DE",
+              "id": "country-DE",
+              "name": "ドイツ"
+            }
+          ],
+          "markers": 0,
+          "result": "ドイツ\n国"
+        },
+        {
+          "id": "mr",
+          "ready": true,
+          "lang": "mr",
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+          "zoom": 3,
+          "center": [
+            9.678348000000028,
+            50.961733
+          ],
+          "field": [
+            "get",
+            "name_mr"
+          ],
+          "label": [
+            {
+              "engineId": "country-DE",
+              "id": "country-DE",
+              "name": "जर्मनी"
+            }
+          ],
+          "markers": 0,
+          "result": "जर्मनी\nदेश"
+        },
+        {
+          "id": "vi",
+          "ready": true,
+          "lang": "vi",
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+          "zoom": 3,
+          "center": [
+            9.678348000000028,
+            50.961733
+          ],
+          "field": [
+            "get",
+            "name_vi"
+          ],
+          "label": [
+            {
+              "engineId": "country-DE",
+              "id": "country-DE",
+              "name": "Đức"
+            }
+          ],
+          "markers": 0,
+          "result": "Đức\nQuốc gia"
+        },
+        {
+          "id": "te",
+          "ready": true,
+          "lang": "te",
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+          "zoom": 3,
+          "center": [
+            9.678348000000028,
+            50.961733
+          ],
+          "field": [
+            "get",
+            "name_te"
+          ],
+          "label": [
+            {
+              "engineId": "country-DE",
+              "id": "country-DE",
+              "name": "జర్మనీ"
+            }
+          ],
+          "markers": 0,
+          "result": "జర్మనీ\nదేశం"
+        },
+        {
+          "id": "sw",
+          "ready": true,
+          "lang": "sw",
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+          "zoom": 3,
+          "center": [
+            9.678348000000028,
+            50.961733
+          ],
+          "field": [
+            "get",
+            "name_sw"
+          ],
+          "label": [
+            {
+              "engineId": "country-DE",
+              "id": "country-DE",
+              "name": "Ujerumani"
+            }
+          ],
+          "markers": 0,
+          "result": "Ujerumani\nNchi"
+        },
+        {
+          "id": "ha-Latn",
+          "ready": true,
+          "lang": "ha-Latn",
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+          "zoom": 3,
+          "center": [
+            9.678348000000028,
+            50.961733
+          ],
+          "field": [
+            "get",
+            "name_ha-Latn"
+          ],
+          "label": [
+            {
+              "engineId": "country-DE",
+              "id": "country-DE",
+              "name": "Jamus"
+            }
+          ],
+          "markers": 0,
+          "result": "Jamus\nƘasa"
+        },
+        {
+          "id": "tr",
+          "ready": true,
+          "lang": "tr",
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+          "zoom": 3,
+          "center": [
+            9.678348000000028,
+            50.961733
+          ],
+          "field": [
+            "get",
+            "name_tr"
+          ],
+          "label": [
+            {
+              "engineId": "country-DE",
+              "id": "country-DE",
+              "name": "Almanya"
+            }
+          ],
+          "markers": 0,
+          "result": "Almanya\nÜlke"
+        },
+        {
+          "id": "pnb-Arab",
+          "ready": true,
+          "lang": "pnb-Arab",
+          "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+          "zoom": 3,
+          "center": [
+            9.678348000000028,
+            50.961733
+          ],
+          "field": [
+            "get",
+            "name_pnb-Arab"
+          ],
+          "label": [
+            {
+              "engineId": "country-DE",
+              "id": "country-DE",
+              "name": "جرمنی"
+            }
+          ],
+          "markers": 0,
+          "result": "جرمنی\nملک"
+        }
+      ]
+    },
+    {
+      "name": "Ficha pública Sites24 japonés",
+      "before": {
+        "camera": {
+          "center": [
+            9.678348000000028,
+            50.961733
+          ],
+          "contextLayers": [
+            "context-point",
+            "context-label"
+          ],
+          "countryField": [
+            "get",
+            "name_es"
+          ],
+          "countryLabels": [
+            {
+              "engineId": "country-FO",
+              "id": "country-FO",
+              "name": "Islas Feroe"
+            },
+            {
+              "engineId": "country-JE",
+              "id": "country-JE",
+              "name": "Jersey"
+            },
+            {
+              "engineId": "country-IS",
+              "id": "country-IS",
+              "name": "Islandia"
+            },
+            {
+              "engineId": "country-GB",
+              "id": "country-GB",
+              "name": "Reino Unido"
+            },
+            {
+              "engineId": "country-VA",
+              "id": "country-VA",
+              "name": "Ciudad del Vaticano"
+            },
+            {
+              "engineId": "country-MD",
+              "id": "country-MD",
+              "name": "Moldavia"
+            },
+            {
+              "engineId": "country-AD",
+              "id": "country-AD",
+              "name": "Andorra"
+            },
+            {
+              "engineId": "country-BG",
+              "id": "country-BG",
+              "name": "Bulgaria"
+            },
+            {
+              "engineId": "country-HR",
+              "id": "country-HR",
+              "name": "Croacia"
+            },
+            {
+              "engineId": "country-RS",
+              "id": "country-RS",
+              "name": "Serbia"
+            },
+            {
+              "engineId": "country-NL",
+              "id": "country-NL",
+              "name": "Países Bajos"
+            },
+            {
+              "engineId": "country-CH",
+              "id": "country-CH",
+              "name": "Suiza"
+            },
+            {
+              "engineId": "country-IT",
+              "id": "country-IT",
+              "name": "Italia"
+            },
+            {
+              "engineId": "country-AT",
+              "id": "country-AT",
+              "name": "Austria"
+            },
+            {
+              "engineId": "country-PL",
+              "id": "country-PL",
+              "name": "Polonia"
+            },
+            {
+              "engineId": "country-SK",
+              "id": "country-SK",
+              "name": "Eslovaquia"
+            },
+            {
+              "engineId": "country-HU",
+              "id": "country-HU",
+              "name": "Hungría"
+            },
+            {
+              "engineId": "country-RO",
+              "id": "country-RO",
+              "name": "Rumanía"
+            },
+            {
+              "engineId": "country-DK",
+              "id": "country-DK",
+              "name": "Dinamarca"
+            },
+            {
+              "engineId": "country-GE",
+              "id": "country-GE",
+              "name": "Georgia"
+            },
+            {
+              "engineId": "country-FI",
+              "id": "country-FI",
+              "name": "Finlandia"
+            },
+            {
+              "engineId": "country-SE",
+              "id": "country-SE",
+              "name": "Suecia"
+            },
+            {
+              "engineId": "country-NO",
+              "id": "country-NO",
+              "name": "Noruega"
+            },
+            {
+              "engineId": "country-LV",
+              "id": "country-LV",
+              "name": "Letonia"
+            },
+            {
+              "engineId": "country-EE",
+              "id": "country-EE",
+              "name": "Estonia"
+            },
+            {
+              "engineId": "country-DE",
+              "id": "country-DE",
+              "name": "Alemania"
+            },
+            {
+              "engineId": "country-RU",
+              "id": "country-RU",
+              "name": "Rusia"
+            },
+            {
+              "engineId": "country-BY",
+              "id": "country-BY",
+              "name": "Bielorrusia"
+            },
+            {
+              "engineId": "country-UA",
+              "id": "country-UA",
+              "name": "Ucrania"
+            },
+            {
+              "engineId": "country-FR",
+              "id": "country-FR",
+              "name": "Francia"
+            },
+            {
+              "engineId": "ne-KAB",
+              "id": "ne-KAB",
+              "name": "Baikonur"
+            },
+            {
+              "engineId": "country-KG",
+              "id": "country-KG",
+              "name": "Kirguistán"
+            },
+            {
+              "engineId": "country-KZ",
+              "id": "country-KZ",
+              "name": "Kazajistán"
+            },
+            {
+              "engineId": "country-UZ",
+              "id": "country-UZ",
+              "name": "Uzbekistán"
+            },
+            {
+              "engineId": "country-MN",
+              "id": "country-MN",
+              "name": "Mongolia"
+            },
+            {
+              "engineId": "country-CV",
+              "id": "country-CV",
+              "name": "Cabo Verde"
+            },
+            {
+              "engineId": "country-GI",
+              "id": "country-GI",
+              "name": "Gibraltar"
+            },
+            {
+              "engineId": "country-PT",
+              "id": "country-PT",
+              "name": "Portugal"
+            },
+            {
+              "engineId": "country-ES",
+              "id": "country-ES",
+              "name": "España"
+            },
+            {
+              "engineId": "country-EH",
+              "id": "country-EH",
+              "name": "Sáhara Occidental"
+            },
+            {
+              "engineId": "country-MA",
+              "id": "country-MA",
+              "name": "Marruecos"
+            },
+            {
+              "engineId": "country-MT",
+              "id": "country-MT",
+              "name": "Malta"
+            },
+            {
+              "engineId": "ne-BRT",
+              "id": "ne-BRT",
+              "name": "Bir Tawil"
+            },
+            {
+              "engineId": "country-EG",
+              "id": "country-EG",
+              "name": "Egipto"
+            },
+            {
+              "engineId": "country-DZ",
+              "id": "country-DZ",
+              "name": "Argelia"
+            },
+            {
+              "engineId": "country-SA",
+              "id": "country-SA",
+              "name": "Arabia Saudí"
+            },
+            {
+              "engineId": "country-IQ",
+              "id": "country-IQ",
+              "name": "Irak"
+            },
+            {
+              "engineId": "country-GR",
+              "id": "country-GR",
+              "name": "Grecia"
+            },
+            {
+              "engineId": "country-TN",
+              "id": "country-TN",
+              "name": "Túnez"
+            },
+            {
+              "engineId": "country-LY",
+              "id": "country-LY",
+              "name": "Libia"
+            },
+            {
+              "engineId": "country-TR",
+              "id": "country-TR",
+              "name": "Turquía"
+            },
+            {
+              "engineId": "country-SY",
+              "id": "country-SY",
+              "name": "Siria"
+            },
+            {
+              "engineId": "ne-ESB",
+              "id": "ne-ESB",
+              "name": "Dekelia"
+            },
+            {
+              "engineId": "country-BH",
+              "id": "country-BH",
+              "name": "Baréin"
+            },
+            {
+              "engineId": "country-YE",
+              "id": "country-YE",
+              "name": "Yemen"
+            },
+            {
+              "engineId": "country-NP",
+              "id": "country-NP",
+              "name": "Nepal"
+            },
+            {
+              "engineId": "country-TM",
+              "id": "country-TM",
+              "name": "Turkmenistán"
+            },
+            {
+              "engineId": "country-PK",
+              "id": "country-PK",
+              "name": "Pakistán"
+            },
+            {
+              "engineId": "country-IR",
+              "id": "country-IR",
+              "name": "Irán"
+            },
+            {
+              "engineId": "country-OM",
+              "id": "country-OM",
+              "name": "Omán"
+            },
+            {
+              "engineId": "country-IN",
+              "id": "country-IN",
+              "name": "India"
+            }
+          ],
+          "fiveMetersCssPx": 0.0008113840911506524,
+          "projection": "globe",
+          "reference": null,
+          "scriptCount": 0,
+          "tilesLoaded": true,
+          "viewport": [
+            1283,
+            764
+          ],
+          "zoom": 3
+        },
+        "dir": "ltr",
+        "height": 764,
+        "lang": "es",
+        "overflow": false,
+        "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+        "result": "{\"id\":\"beirut-2020-context\",\"version\":\"context-20261011-2\"}",
+        "width": 1283
+      },
+      "after": {
+        "camera": {
+          "center": [
+            9.678348000000028,
+            50.961733
+          ],
+          "contextLayers": [
+            "context-point",
+            "context-label"
+          ],
+          "countryField": [
+            "get",
+            "name_es"
+          ],
+          "countryLabels": [
+            {
+              "engineId": "country-FO",
+              "id": "country-FO",
+              "name": "Islas Feroe"
+            },
+            {
+              "engineId": "country-JE",
+              "id": "country-JE",
+              "name": "Jersey"
+            },
+            {
+              "engineId": "country-IS",
+              "id": "country-IS",
+              "name": "Islandia"
+            },
+            {
+              "engineId": "country-GB",
+              "id": "country-GB",
+              "name": "Reino Unido"
+            },
+            {
+              "engineId": "country-VA",
+              "id": "country-VA",
+              "name": "Ciudad del Vaticano"
+            },
+            {
+              "engineId": "country-MD",
+              "id": "country-MD",
+              "name": "Moldavia"
+            },
+            {
+              "engineId": "country-AD",
+              "id": "country-AD",
+              "name": "Andorra"
+            },
+            {
+              "engineId": "country-BG",
+              "id": "country-BG",
+              "name": "Bulgaria"
+            },
+            {
+              "engineId": "country-HR",
+              "id": "country-HR",
+              "name": "Croacia"
+            },
+            {
+              "engineId": "country-RS",
+              "id": "country-RS",
+              "name": "Serbia"
+            },
+            {
+              "engineId": "country-NL",
+              "id": "country-NL",
+              "name": "Países Bajos"
+            },
+            {
+              "engineId": "country-CH",
+              "id": "country-CH",
+              "name": "Suiza"
+            },
+            {
+              "engineId": "country-IT",
+              "id": "country-IT",
+              "name": "Italia"
+            },
+            {
+              "engineId": "country-AT",
+              "id": "country-AT",
+              "name": "Austria"
+            },
+            {
+              "engineId": "country-PL",
+              "id": "country-PL",
+              "name": "Polonia"
+            },
+            {
+              "engineId": "country-SK",
+              "id": "country-SK",
+              "name": "Eslovaquia"
+            },
+            {
+              "engineId": "country-HU",
+              "id": "country-HU",
+              "name": "Hungría"
+            },
+            {
+              "engineId": "country-RO",
+              "id": "country-RO",
+              "name": "Rumanía"
+            },
+            {
+              "engineId": "country-DK",
+              "id": "country-DK",
+              "name": "Dinamarca"
+            },
+            {
+              "engineId": "country-GE",
+              "id": "country-GE",
+              "name": "Georgia"
+            },
+            {
+              "engineId": "country-FI",
+              "id": "country-FI",
+              "name": "Finlandia"
+            },
+            {
+              "engineId": "country-SE",
+              "id": "country-SE",
+              "name": "Suecia"
+            },
+            {
+              "engineId": "country-NO",
+              "id": "country-NO",
+              "name": "Noruega"
+            },
+            {
+              "engineId": "country-LV",
+              "id": "country-LV",
+              "name": "Letonia"
+            },
+            {
+              "engineId": "country-EE",
+              "id": "country-EE",
+              "name": "Estonia"
+            },
+            {
+              "engineId": "country-DE",
+              "id": "country-DE",
+              "name": "Alemania"
+            },
+            {
+              "engineId": "country-RU",
+              "id": "country-RU",
+              "name": "Rusia"
+            },
+            {
+              "engineId": "country-BY",
+              "id": "country-BY",
+              "name": "Bielorrusia"
+            },
+            {
+              "engineId": "country-UA",
+              "id": "country-UA",
+              "name": "Ucrania"
+            },
+            {
+              "engineId": "country-FR",
+              "id": "country-FR",
+              "name": "Francia"
+            },
+            {
+              "engineId": "ne-KAB",
+              "id": "ne-KAB",
+              "name": "Baikonur"
+            },
+            {
+              "engineId": "country-KG",
+              "id": "country-KG",
+              "name": "Kirguistán"
+            },
+            {
+              "engineId": "country-KZ",
+              "id": "country-KZ",
+              "name": "Kazajistán"
+            },
+            {
+              "engineId": "country-UZ",
+              "id": "country-UZ",
+              "name": "Uzbekistán"
+            },
+            {
+              "engineId": "country-MN",
+              "id": "country-MN",
+              "name": "Mongolia"
+            },
+            {
+              "engineId": "country-CV",
+              "id": "country-CV",
+              "name": "Cabo Verde"
+            },
+            {
+              "engineId": "country-GI",
+              "id": "country-GI",
+              "name": "Gibraltar"
+            },
+            {
+              "engineId": "country-PT",
+              "id": "country-PT",
+              "name": "Portugal"
+            },
+            {
+              "engineId": "country-ES",
+              "id": "country-ES",
+              "name": "España"
+            },
+            {
+              "engineId": "country-EH",
+              "id": "country-EH",
+              "name": "Sáhara Occidental"
+            },
+            {
+              "engineId": "country-MA",
+              "id": "country-MA",
+              "name": "Marruecos"
+            },
+            {
+              "engineId": "country-MT",
+              "id": "country-MT",
+              "name": "Malta"
+            },
+            {
+              "engineId": "ne-BRT",
+              "id": "ne-BRT",
+              "name": "Bir Tawil"
+            },
+            {
+              "engineId": "country-EG",
+              "id": "country-EG",
+              "name": "Egipto"
+            },
+            {
+              "engineId": "country-DZ",
+              "id": "country-DZ",
+              "name": "Argelia"
+            },
+            {
+              "engineId": "country-SA",
+              "id": "country-SA",
+              "name": "Arabia Saudí"
+            },
+            {
+              "engineId": "country-IQ",
+              "id": "country-IQ",
+              "name": "Irak"
+            },
+            {
+              "engineId": "country-GR",
+              "id": "country-GR",
+              "name": "Grecia"
+            },
+            {
+              "engineId": "country-TN",
+              "id": "country-TN",
+              "name": "Túnez"
+            },
+            {
+              "engineId": "country-LY",
+              "id": "country-LY",
+              "name": "Libia"
+            },
+            {
+              "engineId": "country-TR",
+              "id": "country-TR",
+              "name": "Turquía"
+            },
+            {
+              "engineId": "country-SY",
+              "id": "country-SY",
+              "name": "Siria"
+            },
+            {
+              "engineId": "ne-ESB",
+              "id": "ne-ESB",
+              "name": "Dekelia"
+            },
+            {
+              "engineId": "country-BH",
+              "id": "country-BH",
+              "name": "Baréin"
+            },
+            {
+              "engineId": "country-YE",
+              "id": "country-YE",
+              "name": "Yemen"
+            },
+            {
+              "engineId": "country-NP",
+              "id": "country-NP",
+              "name": "Nepal"
+            },
+            {
+              "engineId": "country-TM",
+              "id": "country-TM",
+              "name": "Turkmenistán"
+            },
+            {
+              "engineId": "country-PK",
+              "id": "country-PK",
+              "name": "Pakistán"
+            },
+            {
+              "engineId": "country-IR",
+              "id": "country-IR",
+              "name": "Irán"
+            },
+            {
+              "engineId": "country-OM",
+              "id": "country-OM",
+              "name": "Omán"
+            },
+            {
+              "engineId": "country-IN",
+              "id": "country-IN",
+              "name": "India"
+            }
+          ],
+          "fiveMetersCssPx": 0.0008113840911506524,
+          "projection": "globe",
+          "reference": null,
+          "scriptCount": 0,
+          "tilesLoaded": true,
+          "viewport": [
+            1283,
+            764
+          ],
+          "zoom": 3
+        },
+        "dir": "ltr",
+        "height": 764,
+        "lang": "ja",
+        "overflow": false,
+        "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+        "result": "{\"id\":\"beirut-2020-context\",\"version\":\"context-20261011-2\"}",
+        "width": 1283
+      },
+      "text": "2020 年 8 月 4 日、レバノンのベイルート港で爆発が発生しました。\n\n記録の位置を表示\n参考位置\n出典\n国際連合 — ベイルート港の爆発（2020 年 8 月 4 日） ↗"
+    },
+    {
+      "name": "RTL200% público Sites24",
+      "state": {
+        "camera": {
+          "tilesLoaded": false
+        },
+        "dir": "rtl",
+        "height": 740,
+        "lang": "ar",
+        "overflow": false,
+        "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+        "result": "",
+        "width": 320
+      },
+      "coordinates": [
+        {
+          "dir": "ltr",
+          "value": "9.678348"
+        },
+        {
+          "dir": "ltr",
+          "value": "50.961733"
+        }
+      ]
+    },
+    {
+      "name": "Selector público teclado Tab y Enter",
+      "focus": "English",
+      "state": {
+        "camera": {
+          "center": [
+            9.678348000000028,
+            50.961733
+          ],
+          "contextLayers": [],
+          "countryField": [
+            "get",
+            "name_es"
+          ],
+          "countryLabels": [
+            {
+              "engineId": "country-FO",
+              "id": "country-FO",
+              "name": "Islas Feroe"
+            },
+            {
+              "engineId": "country-JE",
+              "id": "country-JE",
+              "name": "Jersey"
+            },
+            {
+              "engineId": "country-IS",
+              "id": "country-IS",
+              "name": "Islandia"
+            },
+            {
+              "engineId": "country-GB",
+              "id": "country-GB",
+              "name": "Reino Unido"
+            },
+            {
+              "engineId": "country-VA",
+              "id": "country-VA",
+              "name": "Ciudad del Vaticano"
+            },
+            {
+              "engineId": "country-MD",
+              "id": "country-MD",
+              "name": "Moldavia"
+            },
+            {
+              "engineId": "country-AD",
+              "id": "country-AD",
+              "name": "Andorra"
+            },
+            {
+              "engineId": "country-BG",
+              "id": "country-BG",
+              "name": "Bulgaria"
+            },
+            {
+              "engineId": "country-HR",
+              "id": "country-HR",
+              "name": "Croacia"
+            },
+            {
+              "engineId": "country-RS",
+              "id": "country-RS",
+              "name": "Serbia"
+            },
+            {
+              "engineId": "country-NL",
+              "id": "country-NL",
+              "name": "Países Bajos"
+            },
+            {
+              "engineId": "country-CH",
+              "id": "country-CH",
+              "name": "Suiza"
+            },
+            {
+              "engineId": "country-IT",
+              "id": "country-IT",
+              "name": "Italia"
+            },
+            {
+              "engineId": "country-AT",
+              "id": "country-AT",
+              "name": "Austria"
+            },
+            {
+              "engineId": "country-PL",
+              "id": "country-PL",
+              "name": "Polonia"
+            },
+            {
+              "engineId": "country-SK",
+              "id": "country-SK",
+              "name": "Eslovaquia"
+            },
+            {
+              "engineId": "country-HU",
+              "id": "country-HU",
+              "name": "Hungría"
+            },
+            {
+              "engineId": "country-RO",
+              "id": "country-RO",
+              "name": "Rumanía"
+            },
+            {
+              "engineId": "country-DK",
+              "id": "country-DK",
+              "name": "Dinamarca"
+            },
+            {
+              "engineId": "country-GE",
+              "id": "country-GE",
+              "name": "Georgia"
+            },
+            {
+              "engineId": "country-FI",
+              "id": "country-FI",
+              "name": "Finlandia"
+            },
+            {
+              "engineId": "country-SE",
+              "id": "country-SE",
+              "name": "Suecia"
+            },
+            {
+              "engineId": "country-NO",
+              "id": "country-NO",
+              "name": "Noruega"
+            },
+            {
+              "engineId": "country-LV",
+              "id": "country-LV",
+              "name": "Letonia"
+            },
+            {
+              "engineId": "country-EE",
+              "id": "country-EE",
+              "name": "Estonia"
+            },
+            {
+              "engineId": "country-DE",
+              "id": "country-DE",
+              "name": "Alemania"
+            },
+            {
+              "engineId": "country-RU",
+              "id": "country-RU",
+              "name": "Rusia"
+            },
+            {
+              "engineId": "country-BY",
+              "id": "country-BY",
+              "name": "Bielorrusia"
+            },
+            {
+              "engineId": "country-UA",
+              "id": "country-UA",
+              "name": "Ucrania"
+            },
+            {
+              "engineId": "country-FR",
+              "id": "country-FR",
+              "name": "Francia"
+            },
+            {
+              "engineId": "ne-KAB",
+              "id": "ne-KAB",
+              "name": "Baikonur"
+            },
+            {
+              "engineId": "country-KG",
+              "id": "country-KG",
+              "name": "Kirguistán"
+            },
+            {
+              "engineId": "country-KZ",
+              "id": "country-KZ",
+              "name": "Kazajistán"
+            },
+            {
+              "engineId": "country-UZ",
+              "id": "country-UZ",
+              "name": "Uzbekistán"
+            },
+            {
+              "engineId": "country-MN",
+              "id": "country-MN",
+              "name": "Mongolia"
+            },
+            {
+              "engineId": "country-CV",
+              "id": "country-CV",
+              "name": "Cabo Verde"
+            },
+            {
+              "engineId": "country-GI",
+              "id": "country-GI",
+              "name": "Gibraltar"
+            },
+            {
+              "engineId": "country-PT",
+              "id": "country-PT",
+              "name": "Portugal"
+            },
+            {
+              "engineId": "country-ES",
+              "id": "country-ES",
+              "name": "España"
+            },
+            {
+              "engineId": "country-EH",
+              "id": "country-EH",
+              "name": "Sáhara Occidental"
+            },
+            {
+              "engineId": "country-MA",
+              "id": "country-MA",
+              "name": "Marruecos"
+            },
+            {
+              "engineId": "country-MT",
+              "id": "country-MT",
+              "name": "Malta"
+            },
+            {
+              "engineId": "ne-BRT",
+              "id": "ne-BRT",
+              "name": "Bir Tawil"
+            },
+            {
+              "engineId": "country-EG",
+              "id": "country-EG",
+              "name": "Egipto"
+            },
+            {
+              "engineId": "country-DZ",
+              "id": "country-DZ",
+              "name": "Argelia"
+            },
+            {
+              "engineId": "country-SA",
+              "id": "country-SA",
+              "name": "Arabia Saudí"
+            },
+            {
+              "engineId": "country-IQ",
+              "id": "country-IQ",
+              "name": "Irak"
+            },
+            {
+              "engineId": "country-GR",
+              "id": "country-GR",
+              "name": "Grecia"
+            },
+            {
+              "engineId": "country-TN",
+              "id": "country-TN",
+              "name": "Túnez"
+            },
+            {
+              "engineId": "country-LY",
+              "id": "country-LY",
+              "name": "Libia"
+            },
+            {
+              "engineId": "country-TR",
+              "id": "country-TR",
+              "name": "Turquía"
+            },
+            {
+              "engineId": "country-SY",
+              "id": "country-SY",
+              "name": "Siria"
+            },
+            {
+              "engineId": "country-IL",
+              "id": "country-IL",
+              "name": "Israel"
+            },
+            {
+              "engineId": "ne-ESB",
+              "id": "ne-ESB",
+              "name": "Dekelia"
+            },
+            {
+              "engineId": "country-BH",
+              "id": "country-BH",
+              "name": "Baréin"
+            },
+            {
+              "engineId": "country-YE",
+              "id": "country-YE",
+              "name": "Yemen"
+            },
+            {
+              "engineId": "country-NP",
+              "id": "country-NP",
+              "name": "Nepal"
+            },
+            {
+              "engineId": "country-TM",
+              "id": "country-TM",
+              "name": "Turkmenistán"
+            },
+            {
+              "engineId": "country-PK",
+              "id": "country-PK",
+              "name": "Pakistán"
+            },
+            {
+              "engineId": "country-IR",
+              "id": "country-IR",
+              "name": "Irán"
+            },
+            {
+              "engineId": "country-OM",
+              "id": "country-OM",
+              "name": "Omán"
+            },
+            {
+              "engineId": "country-IN",
+              "id": "country-IN",
+              "name": "India"
+            }
+          ],
+          "fiveMetersCssPx": 0.0008113840911506524,
+          "projection": "globe",
+          "reference": null,
+          "scriptCount": 0,
+          "tilesLoaded": true,
+          "viewport": [
+            1283,
+            764
+          ],
+          "zoom": 3
+        },
+        "dir": "ltr",
+        "height": 764,
+        "lang": "en",
+        "overflow": false,
+        "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+        "result": "",
+        "width": 1283
+      }
+    }
+  ]
+}

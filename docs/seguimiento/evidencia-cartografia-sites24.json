@@ -1,0 +1,65 @@
+{
+  "cities": [
+    {
+      "city": "Santo Domingo",
+      "center": [
+        -69.8845,
+        18.4737
+      ],
+      "zoom": 19,
+      "projection": "globe",
+      "scale": 35.3112373775906,
+      "viewport": [
+        1280,
+        720
+      ],
+      "preserved": true,
+      "pass": true
+    },
+    {
+      "city": "Quito",
+      "center": [
+        -78.51300000000003,
+        -0.2202
+      ],
+      "zoom": 19,
+      "projection": "globe",
+      "scale": 33.49186857718007,
+      "viewport": [
+        1280,
+        720
+      ],
+      "preserved": true,
+      "pass": true
+    },
+    {
+      "city": "Madrid",
+      "center": [
+        -3.703800000000001,
+        40.4168
+      ],
+      "zoom": 19,
+      "projection": "globe",
+      "scale": 43.989884835702355,
+      "viewport": [
+        1280,
+        720
+      ],
+      "preserved": true,
+      "pass": true
+    }
+  ],
+  "performance": {
+    "controlRenderMs": 8.799999997019768,
+    "durationMs": 3006.70000000298,
+    "fps": 143.6791166393627,
+    "frames": 432
+  },
+  "loadMs": 2069.9,
+  "ua": "Chrome/155.0.0.0 integrado",
+  "viewport": [
+    1280,
+    720
+  ],
+  "scripts": 20
+}

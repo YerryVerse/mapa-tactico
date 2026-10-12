@@ -15,6 +15,19 @@ const args = Object.fromEntries(process.argv.slice(3).reduce((pairs, token, i, t
 }, []));
 const now = () => new Date().toISOString();
 const hash = text => createHash('sha256').update(text).digest('hex');
+function contextHashForAcceptance(plan, firstSprint, commonContracts) {
+  const previousLegend = 'Verde con letras blancas: terminado y verificado; naranja: en curso; rojo con letras blancas: no completado, fallo o bloqueo; sin relleno y letras negras: pendiente.';
+  const previousRows = 'Las filas «Terminado» tienen fondo verde y letras blancas; las filas «No completado», fondo rojo y letras blancas; las filas «Pendiente», sin relleno y letras negras. Las filas «En curso» conservan fondo naranja y texto negro.';
+  const previousMeaning = 'verde significa terminado y comprobado con evidencia; naranja significa en curso; rojo significa intento no completado, fallo o bloqueo; sin relleno y texto negro significa pendiente.';
+  const previousTemplate = 'verde con letras blancas para terminado y verificado con evidencia, naranja para en curso, rojo con letras blancas para no completado, fallo o bloqueo y sin relleno con letras negras para pendiente.';
+  const normalizeDisplay = text => text
+    .replace(/Verde con letras blancas: terminado y verificado; naranja(?: con letras blancas)?: (?:en curso|pendiente o en curso); rojo con letras blancas: no completado, fallo o bloqueo\./g, previousLegend)
+    .replace(/Las filas «Terminado» tienen fondo verde y letras blancas; las filas «No completado», fondo rojo y letras blancas; las filas «Pendiente» y «En curso», fondo naranja y letras blancas\./g, previousRows)
+    .replace(/verde significa terminado y comprobado con evidencia; naranja significa pendiente o en curso; rojo significa intento no completado, fallo o bloqueo\./g, previousMeaning)
+    .replace(/verde con letras blancas para terminado y verificado con evidencia; naranja con letras blancas para pendiente o en curso; rojo con letras blancas para no completado, fallo o bloqueo\./g, previousTemplate);
+  const context = normalizeDisplay(plan.slice(0, firstSprint).replace(/^Revisión técnica:.*$/m, '') + plan.slice(commonContracts));
+  return hash(context);
+}
 const escape = text => String(text ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const jsonInline = value => JSON.stringify(value).replace(/</g, '\\u003c');
 const labels = { pendiente: 'Pendiente', en_curso: 'En curso', terminado: 'Terminado', no_completado: 'No completado' };
@@ -140,7 +153,7 @@ async function sync() {
   const firstSprint = plan.indexOf('## Sprint 1 ');
   const commonContracts = plan.indexOf('## Contratos comunes');
   if (firstSprint < 0 || commonContracts < 0) throw new Error('Faltan sprints o contratos comunes.');
-  const contextHash = hash(plan.slice(0, firstSprint).replace(/^Revisión técnica:.*$/m, '') + plan.slice(commonContracts));
+  const contextHash = contextHashForAcceptance(plan, firstSprint, commonContracts);
   let firstAffected = old?.contextHash && old.contextHash !== contextHash ? 1 : null;
   const sprints = parsePlan(plan).map(source => {
     const previous = old?.sprints.find(s => s.number === source.number);
@@ -191,8 +204,9 @@ async function sync() {
   const controlSection = /## Documento de control del cumplimiento\r?\n([\s\S]*?)(?=\r?\n## |$)/.exec(plan)?.[1];
   const controlRules = [...(controlSection ?? '').matchAll(/^\d+\. (.+)$/gm)].map(match => match[1].trim());
   const controlScope = /^Alcance web vigente:.*$/m.exec(controlSection ?? '')?.[0]?.trim() ?? '';
+  const liveWorkflow = /^Supervisión en vivo:.*$/m.exec(plan)?.[0]?.trim() ?? '';
   if (!Number.isInteger(planVersion) || planVersion < 1 || controlRules.length !== 10) throw new Error('Faltan la versión del plan o sus diez reglas de control.');
-  const result = { schemaVersion: 1, planVersion, controlRules, controlScope, planHash: hash(plan), contextHash, project: 'Mapa Táctico', portal, updatedAt: old?.updatedAt ?? stamp, sprints };
+  const result = { schemaVersion: 1, planVersion, controlRules, controlScope, liveWorkflow, planHash: hash(plan), contextHash, project: 'Mapa Táctico', portal, updatedAt: old?.updatedAt ?? stamp, sprints };
   if (!old || JSON.stringify({ ...result, updatedAt: null }) !== JSON.stringify({ ...old, updatedAt: null })) result.updatedAt = stamp;
   for (const sprint of result.sprints) {
     const previous = old?.sprints.find(s => s.number === sprint.number);
@@ -200,6 +214,64 @@ async function sync() {
   }
   await save(result);
   console.log(`Sincronizados ${sprints.length} sprints y ${sprints.reduce((sum, s) => sum + s.points.length, 0)} puntos. Estados y evidencias conservados donde siguen vigentes.`);
+}
+
+async function restoreDisplayOnlyInvalidation() {
+  const [plan, state] = await Promise.all([
+    readFile(planPath, 'utf8'),
+    readFile(statePath, 'utf8').then(JSON.parse)
+  ]);
+  const firstSprint = plan.indexOf('## Sprint 1 ');
+  const commonContracts = plan.indexOf('## Contratos comunes');
+  if (firstSprint < 0 || commonContracts < 0 || !plan.includes('Revisión técnica: versión 22 del plan') || !plan.includes('Este ajuste administrativo no modifica los requisitos funcionales del portal ni requiere repetir su aceptación.')) {
+    throw new Error('La recuperación solo aplica al ajuste visual administrativo documentado en el plan v22.');
+  }
+  const unchangedContext = contextHashForAcceptance(plan, firstSprint, commonContracts);
+  const priorContextHash = '3f0488730cc8487553295c934da319ca54b6637532839fefebf45d9ccd4ba0cc';
+  if (unchangedContext !== priorContextHash) throw new Error('El contexto funcional también cambió; no se restaurarán aprobaciones automáticamente.');
+
+  const invalidationAt = state.updatedAt;
+  const sprintOneEvidence = await readFile(path.join(root, 'docs', 'REVERIFICACION_SPRINT_02.md'), 'utf8');
+  const sourceHash = /Producto: Sites24, SHA `([^`]+)`/.exec(sprintOneEvidence)?.[1];
+  const sprintTwoAcceptance = await readFile(path.join(root, 'docs', 'ACEPTACION_SPRINT_02.md'), 'utf8');
+  const published = /Entrega vigente \*\*Sites24\*\*: (https?:\/\/[^\s]+)\. Fuente `([^`]+)`, versión `([^`]+)`/.exec(sprintTwoAcceptance);
+  if (!sourceHash || !published) throw new Error('No se encontró la URL y la versión publicadas para restaurar la referencia de entrega.');
+
+  const stamp = now();
+  for (const sprint of state.sprints.filter(item => item.number <= 2)) {
+    const lastApproval = [...sprint.history].reverse().find(event => event.action === 'approve' && event.reference);
+    const invalidation = [...sprint.history].reverse().find(event => event.action === 'aceptacion_invalidada');
+    const laterReopen = sprint.history.some(event => ['reabierto', 'reject'].includes(event.action) && event.at > lastApproval?.at && event.at < invalidation?.at);
+    if (sprint.phase !== 'pendiente' || !lastApproval || !invalidation || invalidation.at !== invalidationAt || lastApproval.at >= invalidation.at || laterReopen) {
+      throw new Error(`Sprint ${sprint.number} no cumple las condiciones de una invalidación visual corregible.`);
+    }
+    for (const point of sprint.points) {
+      if (point.kind === 'operacion') {
+        if (point.status !== 'terminado' || !point.evidence.trim()) throw new Error(`Sprint ${sprint.number}: la operación ${point.id} no conserva su verificación.`);
+        continue;
+      }
+      if (point.status !== 'pendiente' || !point.evidence.startsWith('Reverificar: cambiaron los requisitos o contratos')) throw new Error(`Sprint ${sprint.number}: el criterio ${point.id} tiene un estado distinto al de la invalidación visual.`);
+      const priorVerification = [...point.history].reverse().find(event => event.status === 'terminado' && event.evidence?.trim() && Date.parse(event.at) <= Date.parse(lastApproval.at));
+      if (!priorVerification) throw new Error(`Sprint ${sprint.number}: falta evidencia histórica del criterio ${point.id}.`);
+      point.status = 'terminado';
+      point.evidence = priorVerification.evidence;
+      point.updatedAt = priorVerification.at;
+    }
+    const priorReview = [...sprint.history].reverse().find(event => event.action === 'review' && Date.parse(event.at) <= Date.parse(lastApproval.at));
+    if (!priorReview) throw new Error(`Sprint ${sprint.number}: falta la revisión de entrega anterior a su aprobación.`);
+    sprint.phase = 'aprobado';
+    sprint.approval = { status: 'aprobado', at: lastApproval.at, reference: lastApproval.reference };
+    sprint.delivery = sprint.number === 1
+      ? { url: portal, version: `Sites24 · fuente ${sourceHash} · sin marcador automático · revisión aprobada de Sprint 1`, preparedAt: priorReview.at }
+      : { url: published[1], version: `Sites24 · fuente ${published[2]} · versión ${published[3]}`, preparedAt: priorReview.at };
+    sprint.updatedAt = stamp;
+    sprint.history.push({ at: stamp, action: 'aceptacion_restaurada', reference: `Se corrige la invalidación automática por cambio administrativo de colores en Plan v22. Requisitos y evidencias funcionales preservados; aprobación explícita original de ${lastApproval.at}: ${lastApproval.reference}` });
+  }
+  state.planHash = hash(plan);
+  state.contextHash = unchangedContext;
+  state.updatedAt = stamp;
+  await save(state);
+  console.log('Aprobaciones y evidencias históricas de los sprints 1 y 2 restauradas; el cambio de colores no alteró el contexto funcional.');
 }
 
 function pointRows(points) {
@@ -244,7 +316,7 @@ function guideHtml(sprint) {
 }
 
 function controlHtml(state) {
-  return `<details class="control-rules" data-group="control-rules" data-complete="false"><summary><h2>Reglas de cumplimiento · Plan v${state.planVersion}</h2></summary>${state.controlScope ? `<p>${escape(state.controlScope)}</p>` : ''}<ol>${state.controlRules.map(rule => `<li>${escape(rule)}</li>`).join('')}</ol></details>`;
+  return `<details class="control-rules" data-group="control-rules" data-complete="false"><summary><h2>Reglas de cumplimiento · Plan v${state.planVersion}</h2></summary>${state.controlScope ? `<p>${escape(state.controlScope)}</p>` : ''}${state.liveWorkflow ? `<p class="live-workflow">${escape(state.liveWorkflow)}</p>` : ''}<ol>${state.controlRules.map(rule => `<li>${escape(rule)}</li>`).join('')}</ol></details>`;
 }
 
 function content(state, number) {
@@ -256,7 +328,7 @@ function content(state, number) {
   const sprint = state.sprints.find(s => s.number === number);
   const c = counts(sprint);
   const awaiting = sprint.phase === 'esperando_aprobacion';
-  return `<h1>Sprint ${String(number).padStart(2, '0')} · ${escape(sprint.title)}</h1><div class="summary"><span class="status terminado">${c.done} terminados</span><span class="status pendiente">${c.pending} pendientes / en curso</span><span class="status no_completado">${c.failed} no completados</span><span class="phase">${phaseLabels[sprint.phase]}</span></div><section class="approval" aria-label="Aprobación del sprint"><strong>Aprobación del usuario: ${sprint.approval.status === 'aprobado' ? 'registrada' : 'pendiente'}</strong><p>${sprint.approval.status === 'aprobado' ? escape(sprint.approval.reference) : awaiting ? 'La entrega está lista para tu revisión. El sprint permanece abierto hasta recibir tu aprobación explícita.' : 'El cierre requiere una entrega comprobada y tu aprobación explícita.'}</p></section>${controlHtml(state)}<div class="blocks">${groupSections(sprint)}</div><section class="review"><h2>Qué revisar en el portal</h2><p>${sprint.delivery ? `Entrega: <a href="${escape(sprint.delivery.url)}" target="_blank" rel="noopener noreferrer">Abrir versión para revisar</a> · Versión: ${escape(sprint.delivery.version)}` : 'Guía prevista. Las publicaciones parciales se documentan en las evidencias; la URL y versión de la entrega completa aparecerán aquí cuando todos los puntos estén verificados y el sprint esté preparado para revisión.'}</p><ol>${guideHtml(sprint)}</ol></section>`;
+  return `<h1>Sprint ${String(number).padStart(2, '0')} · ${escape(sprint.title)}</h1><div class="summary"><span class="status terminado">${c.done} terminados</span><span class="status pendiente">${c.pending} pendientes / en curso</span><span class="status no_completado">${c.failed} no completados</span><span class="phase">${phaseLabels[sprint.phase]}</span></div><section class="approval" aria-label="Aprobación del sprint"><strong>Aprobación del usuario: ${sprint.approval.status === 'aprobado' ? 'registrada' : 'pendiente'}</strong><p>${sprint.approval.status === 'aprobado' ? escape(sprint.approval.reference) : awaiting ? 'La entrega está lista para tu revisión. El sprint permanece abierto hasta recibir tu aprobación explícita.' : 'El cierre requiere una entrega comprobada y tu aprobación explícita.'}</p></section>${controlHtml(state)}<div class="blocks">${groupSections(sprint)}</div><section class="review"><h2>Qué revisar en el portal</h2><p>${sprint.delivery ? `Entrega: <a href="${escape(sprint.delivery.url)}">Abrir versión para revisar</a> · Versión: ${escape(sprint.delivery.version)}` : 'Guía prevista. Las publicaciones parciales se documentan en las evidencias; la URL y versión de la entrega completa aparecerán aquí cuando todos los puntos estén verificados y el sprint esté preparado para revisión.'}</p><ol>${guideHtml(sprint)}</ol></section>`;
 }
 
 async function save(state) {
@@ -267,7 +339,7 @@ async function save(state) {
     const snapshot = number ? { schemaVersion: state.schemaVersion, updatedAt: stamp, sprints: [current] } : { schemaVersion: state.schemaVersion, updatedAt: stamp, sprints: state.sprints.map(s => ({ ...s, points: s.points.map(p => ({ status: p.status })), reviewSteps: [] })) };
     const filename = number ? `sprint-${String(number).padStart(2, '0')}.html` : 'index.html';
     const title = number ? `Sprint ${number} · ${state.sprints.find(s => s.number === number).title}` : 'Seguimiento de sprints';
-    const html = `<!doctype html>\n<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>${escape(title)}</title><link rel="stylesheet" href="seguimiento.css"><script src="seguimiento.js" defer></script></head><body data-sprint="${number}"><header><a href="index.html">Sprints</a><a href="${portal}" target="_blank" rel="noopener noreferrer">Portal actual</a><span id="connection" role="status">Copia del informe · activar vista local para actualización en vivo</span></header><main id="report">${content(state, number)}</main><footer>Filas: verde y letras blancas = terminado y verificado · naranja = en curso · rojo y letras blancas = no completado, fallo o bloqueo · sin relleno y letras negras = pendiente.<br>Actualización de datos: <time id="updated">${escape(stamp)}</time>. El avance técnico no sustituye la aprobación del usuario.</footer><script id="snapshot" type="application/json">${jsonInline(snapshot)}</script></body></html>\n`;
+    const html = `<!doctype html>\n<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>${escape(title)}</title><link rel="stylesheet" href="seguimiento.css"><script src="seguimiento.js" defer></script></head><body data-sprint="${number}"><header><a href="index.html">Sprints</a><a href="${portal}">Portal actual</a><span id="connection" role="status">Copia del informe · activar vista local para actualización en vivo</span></header><main id="report">${content(state, number)}</main><footer>Filas: verde y letras blancas = terminado y verificado · naranja y letras blancas = pendiente o en curso · rojo y letras blancas = no completado, fallo o bloqueo.<br>Actualización de datos: <time id="updated">${escape(stamp)}</time>. El avance técnico no sustituye la aprobación del usuario.</footer><script id="snapshot" type="application/json">${jsonInline(snapshot)}</script></body></html>\n`;
     await writeChanged(path.join(folder, filename), html);
   }
 }
@@ -400,6 +472,7 @@ async function serve() {
 try {
   if (command === 'sync') await sync();
   else if (command === 'serve') await serve();
+  else if (command === 'restore-display-only-invalidation') await restoreDisplayOnlyInvalidation();
   else if (['start', 'set', 'review', 'guide', 'approve', 'reject', 'reopen'].includes(command)) await mutate();
   else console.log('Comandos: sync | serve [--port 4174] | start --sprint N | set --id ID --status ESTADO --evidence TEXTO | guide --sprint N --file JSON_DE_PASOS | review --sprint N --url URL --version VERSION | approve/reject/reopen --sprint N --reference MENSAJE_DEL_USUARIO');
 } catch (error) { console.error(error.message); process.exitCode = 1; }

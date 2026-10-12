@@ -1,0 +1,302 @@
+[
+  {
+    "lang": "es",
+    "q": "Alemania",
+    "status": 200,
+    "place": {
+      "id": "country-DE",
+      "kind": "country",
+      "name": "Alemania",
+      "countryCode": "DE",
+      "countryName": "Alemania",
+      "lng": 9.678348,
+      "lat": 50.961733
+    },
+    "allowed": true
+  },
+  {
+    "lang": "en",
+    "q": "Germany",
+    "status": 200,
+    "place": {
+      "id": "country-DE",
+      "kind": "country",
+      "name": "Germany",
+      "countryCode": "DE",
+      "countryName": "Germany",
+      "lng": 9.678348,
+      "lat": 50.961733
+    },
+    "allowed": true
+  },
+  {
+    "lang": "zh-Hans",
+    "q": "德国",
+    "status": 200,
+    "place": {
+      "id": "country-DE",
+      "kind": "country",
+      "name": "德国",
+      "countryCode": "DE",
+      "countryName": "德国",
+      "lng": 9.678348,
+      "lat": 50.961733
+    },
+    "allowed": true
+  },
+  {
+    "lang": "hi",
+    "q": "जर्मनी",
+    "status": 200,
+    "place": {
+      "id": "country-DE",
+      "kind": "country",
+      "name": "जर्मनी",
+      "countryCode": "DE",
+      "countryName": "जर्मनी",
+      "lng": 9.678348,
+      "lat": 50.961733
+    },
+    "allowed": true
+  },
+  {
+    "lang": "ar",
+    "q": "ألمانيا",
+    "status": 200,
+    "place": {
+      "id": "country-DE",
+      "kind": "country",
+      "name": "ألمانيا",
+      "countryCode": "DE",
+      "countryName": "ألمانيا",
+      "lng": 9.678348,
+      "lat": 50.961733
+    },
+    "allowed": true
+  },
+  {
+    "lang": "fr",
+    "q": "Allemagne",
+    "status": 200,
+    "place": {
+      "id": "country-DE",
+      "kind": "country",
+      "name": "Allemagne",
+      "countryCode": "DE",
+      "countryName": "Allemagne",
+      "lng": 9.678348,
+      "lat": 50.961733
+    },
+    "allowed": true
+  },
+  {
+    "lang": "bn",
+    "q": "জার্মানি",
+    "status": 200,
+    "place": {
+      "id": "country-DE",
+      "kind": "country",
+      "name": "জার্মানি",
+      "countryCode": "DE",
+      "countryName": "জার্মানি",
+      "lng": 9.678348,
+      "lat": 50.961733
+    },
+    "allowed": true
+  },
+  {
+    "lang": "pt",
+    "q": "Alemanha",
+    "status": 200,
+    "place": {
+      "id": "country-DE",
+      "kind": "country",
+      "name": "Alemanha",
+      "countryCode": "DE",
+      "countryName": "Alemanha",
+      "lng": 9.678348,
+      "lat": 50.961733
+    },
+    "allowed": true
+  },
+  {
+    "lang": "ru",
+    "q": "Германия",
+    "status": 200,
+    "place": {
+      "id": "country-DE",
+      "kind": "country",
+      "name": "Германия",
+      "countryCode": "DE",
+      "countryName": "Германия",
+      "lng": 9.678348,
+      "lat": 50.961733
+    },
+    "allowed": true
+  },
+  {
+    "lang": "id",
+    "q": "Jerman",
+    "status": 200,
+    "place": {
+      "id": "country-DE",
+      "kind": "country",
+      "name": "Jerman",
+      "countryCode": "DE",
+      "countryName": "Jerman",
+      "lng": 9.678348,
+      "lat": 50.961733
+    },
+    "allowed": true
+  },
+  {
+    "lang": "ur",
+    "q": "جرمنی",
+    "status": 200,
+    "place": {
+      "id": "country-DE",
+      "kind": "country",
+      "name": "جرمنی",
+      "countryCode": "DE",
+      "countryName": "جرمنی",
+      "lng": 9.678348,
+      "lat": 50.961733
+    },
+    "allowed": true
+  },
+  {
+    "lang": "de",
+    "q": "Deutschland",
+    "status": 200,
+    "place": {
+      "id": "country-DE",
+      "kind": "country",
+      "name": "Deutschland",
+      "countryCode": "DE",
+      "countryName": "Deutschland",
+      "lng": 9.678348,
+      "lat": 50.961733
+    },
+    "allowed": true
+  },
+  {
+    "lang": "ja",
+    "q": "ドイツ",
+    "status": 200,
+    "place": {
+      "id": "country-DE",
+      "kind": "country",
+      "name": "ドイツ",
+      "countryCode": "DE",
+      "countryName": "ドイツ",
+      "lng": 9.678348,
+      "lat": 50.961733
+    },
+    "allowed": true
+  },
+  {
+    "lang": "mr",
+    "q": "जर्मनी",
+    "status": 200,
+    "place": {
+      "id": "country-DE",
+      "kind": "country",
+      "name": "जर्मनी",
+      "countryCode": "DE",
+      "countryName": "जर्मनी",
+      "lng": 9.678348,
+      "lat": 50.961733
+    },
+    "allowed": true
+  },
+  {
+    "lang": "vi",
+    "q": "Đức",
+    "status": 200,
+    "place": {
+      "id": "country-DE",
+      "kind": "country",
+      "name": "Đức",
+      "countryCode": "DE",
+      "countryName": "Đức",
+      "lng": 9.678348,
+      "lat": 50.961733
+    },
+    "allowed": true
+  },
+  {
+    "lang": "te",
+    "q": "జర్మనీ",
+    "status": 200,
+    "place": {
+      "id": "country-DE",
+      "kind": "country",
+      "name": "జర్మనీ",
+      "countryCode": "DE",
+      "countryName": "జర్మనీ",
+      "lng": 9.678348,
+      "lat": 50.961733
+    },
+    "allowed": true
+  },
+  {
+    "lang": "sw",
+    "q": "Ujerumani",
+    "status": 200,
+    "place": {
+      "id": "country-DE",
+      "kind": "country",
+      "name": "Ujerumani",
+      "countryCode": "DE",
+      "countryName": "Ujerumani",
+      "lng": 9.678348,
+      "lat": 50.961733
+    },
+    "allowed": true
+  },
+  {
+    "lang": "ha-Latn",
+    "q": "Jamus",
+    "status": 200,
+    "place": {
+      "id": "country-DE",
+      "kind": "country",
+      "name": "Jamus",
+      "countryCode": "DE",
+      "countryName": "Jamus",
+      "lng": 9.678348,
+      "lat": 50.961733
+    },
+    "allowed": true
+  },
+  {
+    "lang": "tr",
+    "q": "Almanya",
+    "status": 200,
+    "place": {
+      "id": "country-DE",
+      "kind": "country",
+      "name": "Almanya",
+      "countryCode": "DE",
+      "countryName": "Almanya",
+      "lng": 9.678348,
+      "lat": 50.961733
+    },
+    "allowed": true
+  },
+  {
+    "lang": "pnb-Arab",
+    "q": "جرمنی",
+    "status": 200,
+    "place": {
+      "id": "country-DE",
+      "kind": "country",
+      "name": "جرمنی",
+      "countryCode": "DE",
+      "countryName": "جرمنی",
+      "lng": 9.678348,
+      "lat": 50.961733
+    },
+    "allowed": true
+  }
+]

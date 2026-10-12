@@ -8,6 +8,13 @@
       "when": 1791716262427,
       "tag": "0000_true_mikhail_rasputin",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1791804654961,
+      "tag": "0001_wide_scorpion",
+      "breakpoints": true
     }
   ]
 }

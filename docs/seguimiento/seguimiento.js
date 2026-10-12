@@ -63,6 +63,12 @@
     if (next.schemaVersion !== 1 || !Array.isArray(next.sprints)) throw new Error('Formato inválido');
     const position = { x:scrollX, y:scrollY };
     const focusedGroup = document.activeElement?.closest('.sprint-section')?.dataset.group;
+    const nextHeader = nextDocument.querySelector('header');
+    if (nextHeader && connection) {
+      // Keep the connection indicator and update navigation in the same tab.
+      const navigation = [...nextHeader.childNodes].filter(node => node.id !== 'connection');
+      document.querySelector('header').replaceChildren(...navigation, connection);
+    }
     report.replaceChildren(...nextReport.childNodes);
     const nextFooter = nextDocument.querySelector('footer');
     if (nextFooter?.querySelector('#updated')) {

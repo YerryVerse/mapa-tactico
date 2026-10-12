@@ -8,6 +8,7 @@
   "scripts": {
     "install:ci": "node scripts/install-ci.mjs",
     "dev": "node scripts/preparar-worker.mjs && node scripts/run-framework.mjs dev",
+    "preview:live": "node scripts/live-preview.mjs",
     "build": "node scripts/auditar-idiomas.mjs && node scripts/preparar-worker.mjs && node scripts/run-framework.mjs build",
     "start": "node --import ./scripts/sites-env.mjs ./node_modules/wrangler/bin/wrangler.js dev --config dist/server/wrangler.json --local --persist-to .wrangler/state --ip 127.0.0.1 --inspector-port 0",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
@@ -16,16 +17,19 @@
     "test": "vitest run"
   },
   "dependencies": {
+    "@turf/area": "7.4.0",
+    "@turf/boolean-valid": "7.4.0",
     "class-variance-authority": "0.7.1",
     "clsx": "2.1.1",
     "drizzle-orm": "0.45.2",
     "lucide-react": "1.31.0",
+    "maplibre-gl": "6.13.0",
     "next": "16.3.4",
+    "polygon-clipping": "0.15.7",
     "react": "19.2.6",
     "react-dom": "19.2.6",
     "tailwind-merge": "3.6.0",
-    "zod": "3.25.76",
-    "maplibre-gl": "6.13.0"
+    "zod": "3.25.76"
   },
   "devDependencies": {
     "@cloudflare/vite-plugin": "1.37.1",
@@ -46,8 +50,8 @@
     "typescript": "5.9.3",
     "vinext": "1.0.0-beta.5",
     "vite": "8.0.13",
-    "wrangler": "4.92.0",
-    "vitest": "4.0.18"
+    "vitest": "4.0.18",
+    "wrangler": "4.92.0"
   },
   "type": "module",
   "overrides": {

@@ -1,5 +1,7 @@
 # Idiomas del portal · Sprint 2
 
+Reverificación vigente Plan21/Sites24: veinte idiomas completos comprobados en el navegador integrado155, incluida capa cartográfica, ficha, Ubicación y Disclaimer. Se conservan271 nombres por idioma y258 entidades; auditor y41 pruebas pasan. Hausa usa fecha revisada11 Oktoba,2026; pnb-Arab mantiene su texto y convención numérica explícita. RTL verificado a320CSS y texto200%; revisiones identificadas en docs/i18n corresponden a IA. Evidencias actuales en docs/REVERIFICACION_SPRINT_02.md. Las pruebas de Chrome descritas abajo pertenecen al historial anterior; no se ejecutó Chrome en esta revisión.
+
 11 de octubre de 2026. Se conservan los veinte idiomas y las variedades del plan v18. `lib/languages.ts` registra identificador, nombre nativo y dirección. `content/i18n` contiene los mensajes versionados; no se consultan servicios de traducción al renderizar.
 
 ## Selección y conservación

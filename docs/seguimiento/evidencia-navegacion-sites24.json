@@ -1,0 +1,130 @@
+[
+  {
+    "country": "",
+    "markers": 0,
+    "panels": 0,
+    "point": "",
+    "state": "exploration",
+    "step": "clic inicial"
+  },
+  {
+    "country": "country-CL",
+    "markers": 0,
+    "panels": 1,
+    "point": "{\"lng\":-70.64827,\"lat\":-33.45694}",
+    "state": "search",
+    "step": "Santiago Chile"
+  },
+  {
+    "country": "country-DO",
+    "markers": 0,
+    "panels": 1,
+    "point": "{\"lng\":-70.69085,\"lat\":19.45036}",
+    "state": "search",
+    "step": "Santiago República Dominicana"
+  },
+  {
+    "country": "country-DO",
+    "markers": 0,
+    "panels": 0,
+    "point": "{\"lng\":-70.69085,\"lat\":19.45036}",
+    "state": "exploration",
+    "step": "cerrar X"
+  },
+  {
+    "country": "country-DO",
+    "markers": 0,
+    "panels": 0,
+    "point": "{\"lng\":-70.69085,\"lat\":19.45036}",
+    "state": "exploration",
+    "step": "Clic de exploración después de elegir Santiago"
+  },
+  {
+    "country": "country-DO",
+    "markers": 0,
+    "panels": 0,
+    "point": "{\"lng\":-70.69085,\"lat\":19.45036}",
+    "state": "exploration",
+    "step": "Arrastrar cámara conserva referencia"
+  },
+  {
+    "country": "",
+    "markers": 0,
+    "panels": 0,
+    "point": "{\"lng\":-69.8845,\"lat\":18.4737}",
+    "state": "exploration",
+    "step": "Coordenadas por teclado sin marcador"
+  },
+  {
+    "country": "",
+    "markers": 0,
+    "panels": 0,
+    "point": "{\"lng\":-69.8845,\"lat\":18.4737}",
+    "state": "exploration",
+    "step": "Zoom 19 conserva referencia sin marcador"
+  },
+  {
+    "country": "",
+    "markers": 0,
+    "panels": 0,
+    "point": "{\"lng\":-69.8845,\"lat\":18.4737}",
+    "state": "exploration",
+    "step": "Vista global conserva referencia"
+  },
+  {
+    "country": "country-DO",
+    "markers": 0,
+    "panels": 1,
+    "point": "{\"lng\":-70.69085,\"lat\":19.45036}",
+    "state": "search",
+    "step": "Arrastrar mientras búsqueda abierta"
+  },
+  {
+    "country": "country-DO",
+    "markers": 0,
+    "panels": 0,
+    "point": "{\"lng\":-70.69085,\"lat\":19.45036}",
+    "state": "exploration",
+    "step": "Clic fuera cierra sin cambiar referencia"
+  },
+  {
+    "country": "country-DE",
+    "markers": 0,
+    "panels": 0,
+    "point": "{\"lng\":9.678348,\"lat\":50.961733}",
+    "state": "exploration",
+    "step": "Recuperación tras fallo 503 simulado"
+  },
+  {
+    "country": "country-FR",
+    "markers": 0,
+    "panels": 1,
+    "point": "{\"lng\":2.5543212890625,\"lat\":46.69466730777313}",
+    "state": "location",
+    "step": "Etiqueta Francia elegida dentro de Ubicación"
+  },
+  {
+    "country": "country-FR",
+    "markers": 0,
+    "panels": 0,
+    "point": "{\"lng\":2.5543212890625,\"lat\":46.69466730777313}",
+    "state": "exploration",
+    "step": "Teclado mueve mapa sin sustituir referencia"
+  },
+  {
+    "country": "country-FR",
+    "markers": 0,
+    "panels": 0,
+    "point": "{\"lng\":2.5543212890625,\"lat\":46.69466730777313}",
+    "state": "exploration",
+    "step": "WebGL recuperado al restaurar contexto; buscador disponible durante pérdida"
+  },
+  {
+    "country": "",
+    "markers": 0,
+    "panels": 0,
+    "point": "{\"lng\":-69.8845,\"lat\":18.4737}",
+    "state": "exploration",
+    "step": "Comprobación final: clic sobre mapa urbano sin marcador"
+  }
+]
