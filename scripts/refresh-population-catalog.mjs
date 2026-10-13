@@ -86,11 +86,20 @@ const datasetCountries=new Set(datasets.map(item=>item.countryCode));
 if(datasetCountries.size!==datasets.length)throw new Error('WorldPop STAC returned duplicate 2025 country datasets');
 
 const adminLayers=[];
+const seenBoundarySources=new Set();
 for(const level of ['ADM0','ADM1','ADM2']){
   const reply=await getJson(`${boundaries}/${level}/`);
   if(!Array.isArray(reply))throw new Error(`geoBoundaries did not return the ${level} catalog`);
   for(const item of reply){
     if(item.boundaryType!==level||!/^[A-Z]{3}$/.test(item.boundaryISO??'')||!/^https:\/\//.test(item.gjDownloadURL??''))throw new Error(`Invalid geoBoundaries ${level} record`);
+    if(typeof item.boundaryID!=='string')throw new Error(`geoBoundaries ${level} record has no stable boundary ID`);
+    if(!item.boundaryID.startsWith(`${item.boundaryISO}-${level}-`)){
+      process.stdout.write(`Skipped inconsistent geoBoundaries ID ${item.boundaryID} for ${item.boundaryISO} ${level}; its prefix contradicts the declared level.\n`);
+      continue;
+    }
+    const sourceKey=`${item.boundaryISO}|${level}|${item.gjDownloadURL}`;
+    if(seenBoundarySources.has(sourceKey))throw new Error(`geoBoundaries repeats a source URL for ${item.boundaryISO} ${level}`);
+    seenBoundarySources.add(sourceKey);
     adminLayers.push({
       boundaryId:item.boundaryID,
       countryCode:item.boundaryISO,
@@ -110,6 +119,13 @@ for(const level of ['ADM0','ADM1','ADM2']){
 }
 adminLayers.sort((a,b)=>a.countryCode.localeCompare(b.countryCode)||a.level.localeCompare(b.level));
 const adm0Countries=new Set(adminLayers.filter(item=>item.level==='ADM0').map(item=>item.countryCode));
+const boundaryCountries=new Set(adminLayers.map(item=>item.countryCode).filter(code=>datasetCountries.has(code)));
+const boundaryCoverage={
+  populationDatasetCountryCount:datasetCountries.size,
+  countriesWithBoundaries:boundaryCountries.size,
+  countriesWithoutBoundariesCountryCodes:[...datasetCountries].filter(code=>!boundaryCountries.has(code)).sort(),
+  countriesWithoutADM0CountryCodes:[...datasetCountries].filter(code=>!adm0Countries.has(code)).sort()
+};
 const boundarySummary=Object.fromEntries(['ADM0','ADM1','ADM2'].map(level=>[level,adminLayers.filter(item=>item.level===level).length]));
 
 const catalog={
@@ -142,6 +158,7 @@ const catalog={
     licensePolicy:'gbOpen is the open CC-BY 4.0 release; preserve each source boundary license and attribution from the layer metadata.',
     countryLayers:adm0Countries.size,
     layerCounts:boundarySummary,
+    countryCoverage:boundaryCoverage,
     adminUnitDefinition:'An administrative unit is not automatically equivalent to a city. The UI must show the selected administrative level and boundary year.',
     layers:adminLayers
   }
@@ -166,12 +183,22 @@ const runtime={
     anonymousMaximumAreaKm2:catalog.population.anonymousMaximumAreaKm2,
     availableCountryDatasets:catalog.population.availableCountryDatasets,
     unavailableCountryCodes:catalog.population.unavailableCountryCodes,
-    datasets:catalog.population.datasets.map(item=>({countryCode:item.countryCode,datasetId:item.datasetId}))
+    datasets:catalog.population.datasets.map(item=>({
+      countryCode:item.countryCode,
+      datasetId:item.datasetId,
+      edition:item.edition,
+      year:item.year,
+      resolution:item.resolution,
+      dimensions:item.dimensions,
+      noDataValue:item.noDataValue,
+      crs:item.crs
+    }))
   },
   boundaries:{
     provider:catalog.boundaries.provider,
     releaseType:catalog.boundaries.releaseType,
     layerCounts:catalog.boundaries.layerCounts,
+    countryCoverage:catalog.boundaries.countryCoverage,
     adminLayers:catalog.boundaries.layers.map(item=>({
       boundaryId:item.boundaryId,
       countryCode:item.countryCode,

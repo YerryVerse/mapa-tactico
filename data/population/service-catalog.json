@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-12T11:40:42.396Z",
+  "generatedAt": "2026-10-12T12:31:54.594Z",
   "population": {
     "provider": "WorldPop Global 2",
     "api": "https://api.worldpop.org/v2",
@@ -28,967 +28,3136 @@
     "datasets": [
       {
         "countryCode": "ABW",
-        "datasetId": "abw_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "abw_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 238,
+          "height": 254
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "AFG",
-        "datasetId": "afg_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "afg_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 17245,
+          "height": 10935
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "AGO",
-        "datasetId": "ago_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "ago_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 14901,
+          "height": 16380
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "AIA",
-        "datasetId": "aia_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "aia_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 603,
+          "height": 528
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "ALA",
-        "datasetId": "ala_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "ala_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 2613,
+          "height": 1086
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "ALB",
-        "datasetId": "alb_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "alb_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 2151,
+          "height": 3619
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "AND",
-        "datasetId": "and_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "and_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 445,
+          "height": 271
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "ARE",
-        "datasetId": "are_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "are_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 5861,
+          "height": 4124
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "ARG",
-        "datasetId": "arg_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "arg_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 23906,
+          "height": 39936
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "ARM",
-        "datasetId": "arm_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "arm_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 3823,
+          "height": 2952
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "ASM",
-        "datasetId": "asm_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "asm_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 1713,
+          "height": 261
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "ATG",
-        "datasetId": "atg_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "atg_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 830,
+          "height": 956
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "AUS",
-        "datasetId": "aus_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "aus_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 55409,
+          "height": 54669
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "AUT",
-        "datasetId": "aut_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "aut_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 9153,
+          "height": 3177
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "AZE",
-        "datasetId": "aze_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "aze_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 7391,
+          "height": 4223
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "BDI",
-        "datasetId": "bdi_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "bdi_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 2215,
+          "height": 2590
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "BEL",
-        "datasetId": "bel_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "bel_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 4634,
+          "height": 2408
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "BEN",
-        "datasetId": "ben_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "ben_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 3680,
+          "height": 7408
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "BES",
-        "datasetId": "bes_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "bes_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 6570,
+          "height": 6750
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "BFA",
-        "datasetId": "bfa_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "bfa_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 9501,
+          "height": 6807
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "BGD",
-        "datasetId": "bgd_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "bgd_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 5604,
+          "height": 7269
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "BGR",
-        "datasetId": "bgr_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "bgr_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 7501,
+          "height": 3575
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "BHR",
-        "datasetId": "bhr_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "bhr_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 618,
+          "height": 1016
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "BHS",
-        "datasetId": "bhs_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "bhs_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 9311,
+          "height": 7630
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "BIH",
-        "datasetId": "bih_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "bih_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 4672,
+          "height": 3264
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "BLM",
-        "datasetId": "blm_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "blm_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 190,
+          "height": 122
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "BLR",
-        "datasetId": "blr_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "blr_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 11516,
+          "height": 5890
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "BLZ",
-        "datasetId": "blz_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "blz_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 2089,
+          "height": 3132
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "BMU",
-        "datasetId": "bmu_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "bmu_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 287,
+          "height": 172
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "BOL",
-        "datasetId": "bol_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "bol_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 14628,
+          "height": 15873
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "BRA",
-        "datasetId": "bra_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "bra_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 53607,
+          "height": 46827
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "BRB",
-        "datasetId": "brb_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "brb_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 277,
+          "height": 348
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "BRN",
-        "datasetId": "brn_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "brn_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 1545,
+          "height": 1251
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "BTN",
-        "datasetId": "btn_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "btn_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 4054,
+          "height": 1853
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "BWA",
-        "datasetId": "bwa_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "bwa_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 11248,
+          "height": 10953
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "CAF",
-        "datasetId": "caf_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "caf_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 15650,
+          "height": 10552
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "CAN",
-        "datasetId": "can_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "can_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 106059,
+          "height": 49719
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "CCK",
-        "datasetId": "cck_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "cck_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 135,
+          "height": 472
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "CHE",
-        "datasetId": "che_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "che_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 5442,
+          "height": 2387
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "CHL",
-        "datasetId": "chl_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "chl_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 51646,
+          "height": 46832
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "CHN",
-        "datasetId": "chn_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "chn_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 73530,
+          "height": 45337
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "CIV",
-        "datasetId": "civ_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "civ_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 7329,
+          "height": 7654
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "CMR",
-        "datasetId": "cmr_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "cmr_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 9236,
+          "height": 13712
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "COD",
-        "datasetId": "cod_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "cod_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 22935,
+          "height": 22621
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "COG",
-        "datasetId": "cog_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "cog_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 8997,
+          "height": 10499
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "COK",
-        "datasetId": "cok_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "cok_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 3020,
+          "height": 15651
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "COL",
-        "datasetId": "col_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "col_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 17867,
+          "height": 24030
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "COM",
-        "datasetId": "com_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "com_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 1573,
+          "height": 1269
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "CPV",
-        "datasetId": "cpv_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "cpv_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 3243,
+          "height": 2883
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "CRI",
-        "datasetId": "cri_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "cri_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 4089,
+          "height": 3814
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "CUB",
-        "datasetId": "cub_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "cub_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 12984,
+          "height": 4142
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "CUW",
-        "datasetId": "cuw_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "cuw_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 628,
+          "height": 498
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "CXR",
-        "datasetId": "cxr_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "cxr_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 215,
+          "height": 190
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "CYM",
-        "datasetId": "cym_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "cym_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 2037,
+          "height": 593
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "CYP",
-        "datasetId": "cyp_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "cyp_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 2805,
+          "height": 1378
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "CZE",
-        "datasetId": "cze_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "cze_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 8121,
+          "height": 3004
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "DEU",
-        "datasetId": "deu_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "deu_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 11010,
+          "height": 9347
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "DJI",
-        "datasetId": "dji_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "dji_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 2017,
+          "height": 2159
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "DMA",
-        "datasetId": "dma_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "dma_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 287,
+          "height": 518
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "DNK",
-        "datasetId": "dnk_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "dnk_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 8543,
+          "height": 3832
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "DOM",
-        "datasetId": "dom_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "dom_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 4420,
+          "height": 2953
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "DZA",
-        "datasetId": "dza_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "dza_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 24795,
+          "height": 21746
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "ECU",
-        "datasetId": "ecu_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "ecu_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 20184,
+          "height": 8078
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "EGY",
-        "datasetId": "egy_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "egy_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 14637,
+          "height": 11606
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "ERI",
-        "datasetId": "eri_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "eri_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 8044,
+          "height": 6798
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "ESH",
-        "datasetId": "esh_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "esh_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 10125,
+          "height": 8274
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "ESP",
-        "datasetId": "esp_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "esp_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 26986,
+          "height": 19383
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "EST",
-        "datasetId": "est_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "est_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 7734,
+          "height": 2772
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "ETH",
-        "datasetId": "eth_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "eth_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 18001,
+          "height": 13788
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "FIN",
-        "datasetId": "fin_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "fin_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 13243,
+          "height": 12443
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "FJI",
-        "datasetId": "fji_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "fji_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 432000,
+          "height": 10298
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "FLK",
-        "datasetId": "flk_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "flk_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 4489,
+          "height": 2305
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "FRA",
-        "datasetId": "fra_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "fra_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 17643,
+          "height": 11708
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "FRO",
-        "datasetId": "fro_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "fro_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 1720,
+          "height": 1203
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "FSM",
-        "datasetId": "fsm_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "fsm_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 29978,
+          "height": 5628
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "GAB",
-        "datasetId": "gab_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "gab_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 6994,
+          "height": 7535
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "GBR",
-        "datasetId": "gbr_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "gbr_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 12495,
+          "height": 13187
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "GEO",
-        "datasetId": "geo_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "geo_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 8075,
+          "height": 3037
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "GGY",
-        "datasetId": "ggy_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "ggy_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 621,
+          "height": 402
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "GHA",
-        "datasetId": "gha_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "gha_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 5352,
+          "height": 7723
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "GIB",
-        "datasetId": "gib_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "gib_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 34,
+          "height": 57
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "GIN",
-        "datasetId": "gin_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "gin_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 9257,
+          "height": 6579
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "GLP",
-        "datasetId": "glp_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "glp_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 969,
+          "height": 818
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "GMB",
-        "datasetId": "gmb_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "gmb_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 3627,
+          "height": 912
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "GNB",
-        "datasetId": "gnb_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "gnb_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 3707,
+          "height": 2187
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "GNQ",
-        "datasetId": "gnq_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "gnq_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 6852,
+          "height": 6300
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "GRC",
-        "datasetId": "grc_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "grc_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 10649,
+          "height": 8340
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "GRD",
-        "datasetId": "grd_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "grd_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 509,
+          "height": 652
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "GRL",
-        "datasetId": "grl_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "grl_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 74280,
+          "height": 28700
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "GTM",
-        "datasetId": "gtm_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "gtm_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 4796,
+          "height": 4889
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "GUF",
-        "datasetId": "guf_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "guf_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 3522,
+          "height": 4379
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "GUM",
-        "datasetId": "gum_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "gum_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 406,
+          "height": 504
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "GUY",
-        "datasetId": "guy_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "guy_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 5902,
+          "height": 8860
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "HKG",
-        "datasetId": "hkg_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "hkg_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 728,
+          "height": 491
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "HND",
-        "datasetId": "hnd_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "hnd_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 8129,
+          "height": 5323
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "HRV",
-        "datasetId": "hrv_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "hrv_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 7148,
+          "height": 5000
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "HTI",
-        "datasetId": "hti_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "hti_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 3430,
+          "height": 2482
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "HUN",
-        "datasetId": "hun_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "hun_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 8139,
+          "height": 3418
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "IDN",
-        "datasetId": "idn_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "idn_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 55238,
+          "height": 20502
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "IMN",
-        "datasetId": "imn_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "imn_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 626,
+          "height": 449
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "IND",
-        "datasetId": "ind_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "ind_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 35040,
+          "height": 34507
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "IRL",
-        "datasetId": "irl_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "irl_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 5600,
+          "height": 4816
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "IRN",
-        "datasetId": "irn_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "irn_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 23159,
+          "height": 17666
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "IRQ",
-        "datasetId": "irq_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "irq_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 11792,
+          "height": 9982
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "ISL",
-        "datasetId": "isl_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "isl_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 13512,
+          "height": 3925
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "ISR",
-        "datasetId": "isr_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "isr_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 1956,
+          "height": 4612
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "ITA",
-        "datasetId": "ita_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "ita_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 14273,
+          "height": 13920
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "JAM",
-        "datasetId": "jam_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "jam_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 2879,
+          "height": 1360
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "JEY",
-        "datasetId": "jey_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "jey_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 395,
+          "height": 395
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "JOR",
-        "datasetId": "jor_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "jor_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 5212,
+          "height": 5026
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "JPN",
-        "datasetId": "jpn_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "jpn_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 37258,
+          "height": 25773
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "KAZ",
-        "datasetId": "kaz_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "kaz_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 48983,
+          "height": 17847
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "KEN",
-        "datasetId": "ken_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "ken_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 9596,
+          "height": 11726
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "KGZ",
-        "datasetId": "kgz_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "kgz_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 13156,
+          "height": 4902
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "KHM",
-        "datasetId": "khm_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "khm_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 6351,
+          "height": 5732
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "KIR",
-        "datasetId": "kir_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "kir_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 418281,
+          "height": 19375
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "KNA",
-        "datasetId": "kna_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "kna_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 390,
+          "height": 389
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "KOR",
-        "datasetId": "kor_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "kor_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 7597,
+          "height": 6603
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "KWT",
-        "datasetId": "kwt_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "kwt_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 2521,
+          "height": 1895
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "LAO",
-        "datasetId": "lao_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "lao_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 9061,
+          "height": 10320
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "LBN",
-        "datasetId": "lbn_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "lbn_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 1823,
+          "height": 1964
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "LBR",
-        "datasetId": "lbr_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "lbr_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 4947,
+          "height": 5039
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "LBY",
-        "datasetId": "lby_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "lby_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 18911,
+          "height": 16398
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "LCA",
-        "datasetId": "lca_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "lca_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 247,
+          "height": 482
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "LIE",
-        "datasetId": "lie_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "lie_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 197,
+          "height": 267
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "LKA",
-        "datasetId": "lka_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "lka_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 2829,
+          "height": 4700
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "LSO",
-        "datasetId": "lso_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "lso_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 2933,
+          "height": 2527
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "LTU",
-        "datasetId": "ltu_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "ltu_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 7058,
+          "height": 3064
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "LUX",
-        "datasetId": "lux_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "lux_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 954,
+          "height": 883
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "LVA",
-        "datasetId": "lva_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "lva_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 8723,
+          "height": 2894
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "MAC",
-        "datasetId": "mac_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "mac_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 84,
+          "height": 130
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "MAF",
-        "datasetId": "maf_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "maf_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 219,
+          "height": 95
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "MAR",
-        "datasetId": "mar_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "mar_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 14611,
+          "height": 9907
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "MCO",
-        "datasetId": "mco_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "mco_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 38,
+          "height": 34
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "MDA",
-        "datasetId": "mda_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "mda_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 4253,
+          "height": 3629
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "MDG",
-        "datasetId": "mdg_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "mdg_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 8757,
+          "height": 16388
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "MDV",
-        "datasetId": "mdv_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "mdv_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 1344,
+          "height": 9372
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "MEX",
-        "datasetId": "mex_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "mex_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 37984,
+          "height": 21821
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "MHL",
-        "datasetId": "mhl_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "mhl_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 13648,
+          "height": 12121
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "MKD",
-        "datasetId": "mkd_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "mkd_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 3097,
+          "height": 1823
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "MLI",
-        "datasetId": "mli_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "mli_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 19808,
+          "height": 17829
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "MLT",
-        "datasetId": "mlt_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "mlt_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 472,
+          "height": 355
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "MMR",
-        "datasetId": "mmr_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "mmr_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 10799,
+          "height": 22739
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "MNE",
-        "datasetId": "mne_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "mne_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 2302,
+          "height": 2052
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "MNG",
-        "datasetId": "mng_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "mng_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 38637,
+          "height": 12680
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "MNP",
-        "datasetId": "mnp_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "mnp_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 1148,
+          "height": 7724
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "MOZ",
-        "datasetId": "moz_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "moz_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 12749,
+          "height": 19672
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "MRT",
-        "datasetId": "mrt_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "mrt_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 14683,
+          "height": 15115
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "MSR",
-        "datasetId": "msr_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "msr_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 117,
+          "height": 180
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "MTQ",
-        "datasetId": "mtq_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "mtq_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 503,
+          "height": 588
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "MUS",
-        "datasetId": "mus_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "mus_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 8295,
+          "height": 12218
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "MWI",
-        "datasetId": "mwi_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "mwi_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 3895,
+          "height": 9314
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "MYS",
-        "datasetId": "mys_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "mys_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 23554,
+          "height": 7832
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "MYT",
-        "datasetId": "myt_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "myt_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 338,
+          "height": 442
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "NAM",
-        "datasetId": "nam_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "nam_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 16230,
+          "height": 14408
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "NCL",
-        "datasetId": "ncl_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "ncl_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 16609,
+          "height": 5814
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "NER",
-        "datasetId": "ner_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "ner_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 19005,
+          "height": 14185
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "NFK",
-        "datasetId": "nfk_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "nfk_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 101,
+          "height": 171
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "NGA",
-        "datasetId": "nga_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "nga_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 14418,
+          "height": 11539
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "NIC",
-        "datasetId": "nic_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "nic_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 6010,
+          "height": 5187
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "NIU",
-        "datasetId": "niu_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "niu_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 211,
+          "height": 244
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "NLD",
-        "datasetId": "nld_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "nld_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 4643,
+          "height": 3364
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "NOR",
-        "datasetId": "nor_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "nor_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 31998,
+          "height": 15871
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "NPL",
-        "datasetId": "npl_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "npl_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 9773,
+          "height": 4921
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "NRU",
-        "datasetId": "nru_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "nru_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 60,
+          "height": 62
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "NZL",
-        "datasetId": "nzl_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "nzl_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 428128,
+          "height": 28051
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "OMN",
-        "datasetId": "omn_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "omn_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 9406,
+          "height": 11828
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "PAK",
-        "datasetId": "pak_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "pak_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 20341,
+          "height": 16104
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "PAN",
-        "datasetId": "pan_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "pan_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 7074,
+          "height": 2932
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "PCN",
-        "datasetId": "pcn_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "pcn_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 7174,
+          "height": 1390
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "PER",
-        "datasetId": "per_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "per_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 15212,
+          "height": 21976
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "PHL",
-        "datasetId": "phl_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "phl_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 11612,
+          "height": 19841
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "PLW",
-        "datasetId": "plw_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "plw_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 719,
+          "height": 1541
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "PNG",
-        "datasetId": "png_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "png_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 22381,
+          "height": 13079
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "POL",
-        "datasetId": "pol_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "pol_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 12027,
+          "height": 7001
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "PRI",
-        "datasetId": "pri_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "pri_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 3276,
+          "height": 761
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "PRK",
-        "datasetId": "prk_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "prk_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 7820,
+          "height": 6400
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "PRT",
-        "datasetId": "prt_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "prt_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 30095,
+          "height": 14549
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "PRY",
-        "datasetId": "pry_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "pry_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 10057,
+          "height": 9984
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "PSE",
-        "datasetId": "pse_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "pse_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 1627,
+          "height": 1599
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "PYF",
-        "datasetId": "pyf_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "pyf_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 24318,
+          "height": 24002
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "QAT",
-        "datasetId": "qat_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "qat_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 2023,
+          "height": 2054
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "REU",
-        "datasetId": "reu_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "reu_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 744,
+          "height": 621
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "ROU",
-        "datasetId": "rou_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "rou_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 11399,
+          "height": 5576
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "RUS",
-        "datasetId": "rus_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "rus_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 432000,
+          "height": 48924
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "RWA",
-        "datasetId": "rwa_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "rwa_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 2444,
+          "height": 2150
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "SAU",
-        "datasetId": "sau_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "sau_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 25407,
+          "height": 18930
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "SDN",
-        "datasetId": "sdn_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "sdn_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 20438,
+          "height": 16252
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "SEN",
-        "datasetId": "sen_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "sen_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 7422,
+          "height": 5264
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "SGP",
-        "datasetId": "sgp_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "sgp_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 579,
+          "height": 365
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "SHN",
-        "datasetId": "shn_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "shn_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 10547,
+          "height": 38978
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "SJM",
-        "datasetId": "sjm_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "sjm_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 51110,
+          "height": 12004
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "SLB",
-        "datasetId": "slb_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "slb_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 16001,
+          "height": 8738
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "SLE",
-        "datasetId": "sle_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "sle_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 3635,
+          "height": 3695
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "SLV",
-        "datasetId": "slv_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "slv_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 2937,
+          "height": 1555
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "SMR",
-        "datasetId": "smr_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "smr_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 137,
+          "height": 119
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "SOM",
-        "datasetId": "som_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "som_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 12509,
+          "height": 16381
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "SPM",
-        "datasetId": "spm_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "spm_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 335,
+          "height": 472
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "SRB",
-        "datasetId": "srb_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "srb_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 5002,
+          "height": 4752
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "SSD",
-        "datasetId": "ssd_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "ssd_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 14156,
+          "height": 10496
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "STP",
-        "datasetId": "stp_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "stp_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 1202,
+          "height": 2057
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "SUR",
-        "datasetId": "sur_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "sur_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 4911,
+          "height": 5021
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "SVK",
-        "datasetId": "svk_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "svk_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 6879,
+          "height": 2260
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "SVN",
-        "datasetId": "svn_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "svn_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 3867,
+          "height": 1748
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "SWE",
-        "datasetId": "swe_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "swe_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 15843,
+          "height": 16468
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "SWZ",
-        "datasetId": "swz_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "swz_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 1613,
+          "height": 1918
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "SXM",
-        "datasetId": "sxm_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "sxm_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 150,
+          "height": 71
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "SYC",
-        "datasetId": "syc_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "syc_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 12104,
+          "height": 7817
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "SYR",
-        "datasetId": "syr_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "syr_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 7992,
+          "height": 6011
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "TCA",
-        "datasetId": "tca_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "tca_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 1680,
+          "height": 941
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "TCD",
-        "datasetId": "tcd_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "tcd_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 12637,
+          "height": 19212
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "TGO",
-        "datasetId": "tgo_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "tgo_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 2344,
+          "height": 6033
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "THA",
-        "datasetId": "tha_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "tha_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 9953,
+          "height": 17824
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "TJK",
-        "datasetId": "tjk_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "tjk_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 9379,
+          "height": 5247
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "TKL",
-        "datasetId": "tkl_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "tkl_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 1607,
+          "height": 1093
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "TKM",
-        "datasetId": "tkm_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "tkm_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 17112,
+          "height": 9203
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "TLS",
-        "datasetId": "tls_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "tls_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 3961,
+          "height": 1653
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "TON",
-        "datasetId": "ton_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "ton_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 2332,
+          "height": 7089
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "TTO",
-        "datasetId": "tto_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "tto_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 1726,
+          "height": 1583
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "TUN",
-        "datasetId": "tun_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "tun_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 4894,
+          "height": 8798
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "TUR",
-        "datasetId": "tur_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "tur_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 22983,
+          "height": 7552
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "TUV",
-        "datasetId": "tuv_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "tuv_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 4511,
+          "height": 6179
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "TWN",
-        "datasetId": "twn_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "twn_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 6476,
+          "height": 6825
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "TZA",
-        "datasetId": "tza_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "tza_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 13327,
+          "height": 12932
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "UGA",
-        "datasetId": "uga_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "uga_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 6552,
+          "height": 6842
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "UKR",
-        "datasetId": "ukr_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "ukr_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 21710,
+          "height": 9593
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "URY",
-        "datasetId": "ury_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "ury_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 6434,
+          "height": 5936
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "USA",
-        "datasetId": "usa_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "usa_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 430706,
+          "height": 62971
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "UZB",
-        "datasetId": "uzb_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "uzb_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 20666,
+          "height": 10103
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "VCT",
-        "datasetId": "vct_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "vct_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 415,
+          "height": 1020
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "VEN",
-        "datasetId": "ven_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "ven_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 16275,
+          "height": 14206
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "VGB",
-        "datasetId": "vgb_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "vgb_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 696,
+          "height": 532
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "VIR",
-        "datasetId": "vir_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "vir_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 624,
+          "height": 887
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "VNM",
-        "datasetId": "vnm_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "vnm_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 8791,
+          "height": 17977
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "VUT",
-        "datasetId": "vut_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "vut_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 4436,
+          "height": 8616
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "WLF",
-        "datasetId": "wlf_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "wlf_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 2469,
+          "height": 1415
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "WSM",
-        "datasetId": "wsm_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "wsm_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 1687,
+          "height": 763
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "YEM",
-        "datasetId": "yem_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "yem_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 15263,
+          "height": 8271
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "ZAF",
-        "datasetId": "zaf_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "zaf_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 25857,
+          "height": 29827
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "ZMB",
-        "datasetId": "zmb_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "zmb_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 14052,
+          "height": 11849
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       },
       {
         "countryCode": "ZWE",
-        "datasetId": "zwe_pop_2025_CN_100m_R2025A_v1"
+        "datasetId": "zwe_pop_2025_CN_100m_R2025A_v1",
+        "edition": "R2025A-v1",
+        "year": 2025,
+        "resolution": "100m",
+        "dimensions": {
+          "width": 9398,
+          "height": 8176
+        },
+        "noDataValue": -99999,
+        "crs": "EPSG:4326"
       }
     ]
   },
@@ -997,7 +3166,7 @@
     "releaseType": "gbOpen",
     "layerCounts": {
       "ADM0": 230,
-      "ADM1": 199,
+      "ADM1": 198,
       "ADM2": 180
     },
     "adminLayers": [
@@ -3450,16 +5619,6 @@
         "source": "raster2polygon from Sentinel-2 10m Land Cover where Image Year = 2021 / exclude gridcode = 1 (water) / dissolve / processed by IMB",
         "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
         "geoJsonUrl": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/IMN/ADM0/geoBoundaries-IMN-ADM0.geojson"
-      },
-      {
-        "boundaryId": "IND-ADM0-90661403",
-        "countryCode": "IND",
-        "level": "ADM1",
-        "boundaryYear": "2011",
-        "name": "India",
-        "source": "DataMeet India community, Election Commission of India",
-        "license": "Creative Commons Attribution 2.5 India (CC BY 2.5 IN)",
-        "geoJsonUrl": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/IND/ADM1/geoBoundaries-IND-ADM1.geojson"
       },
       {
         "boundaryId": "IND-ADM1-1811400",
@@ -7091,7 +9250,42 @@
         "license": "Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
         "geoJsonUrl": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/ZWE/ADM2/geoBoundaries-ZWE-ADM2.geojson"
       }
-    ]
+    ],
+    "countryCoverage": {
+      "populationDatasetCountryCount": 241,
+      "countriesWithBoundaries": 229,
+      "countriesWithoutBoundariesCountryCodes": [
+        "ALA",
+        "CCK",
+        "CXR",
+        "ESH",
+        "HKG",
+        "JEY",
+        "MAC",
+        "MAF",
+        "NFK",
+        "SJM",
+        "SPM",
+        "SXM"
+      ],
+      "countriesWithoutADM0CountryCodes": [
+        "ALA",
+        "CCK",
+        "CXR",
+        "ESH",
+        "HKG",
+        "IND",
+        "JEY",
+        "MAC",
+        "MAF",
+        "NFK",
+        "PRI",
+        "SJM",
+        "SPM",
+        "SXM"
+      ]
+    },
+    "countryLayers": 230
   },
-  "manifestSha256": "a0d42b89527066221e9cd61c62bc08e4a6c078430e3dccdd69bf152051b0a75c"
+  "manifestSha256": "9e9c96808ce1ba9312eaac06b010234657dc96ac429f8df4d06cd38be33faea9"
 }

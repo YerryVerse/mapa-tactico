@@ -1,10 +1,8 @@
-import {area as geodesicArea} from '@turf/area';
-import {booleanValid} from '@turf/boolean-valid';
 import {z} from 'zod';
 import {adminLayer,adminLayerById,verifyPopulationCatalog} from './population-catalog';
-import {populationGeometrySchema,POPULATION_MAX_BODY_BYTES,POPULATION_MAX_VERTICES,type PopulationGeometry} from './population-contract';
-import {geometryVertexCount} from './population-contract';
-import {populationAreaResponse} from './population-service';
+import {geometryVertexCount,populationAdminBoundaryGeometrySchema,POPULATION_ADMIN_MAX_VERTICES} from './population-contract';
+import {loadActivePopulationCountryManifest} from './population-raster-service';
+import {populationAdminAggregateResponse} from './population-service';
 
 const JSON_HEADERS={'Cache-Control':'no-store','Content-Type':'application/json; charset=utf-8'};
 const MAX_BOUNDARY_FILE_BYTES=12_000_000;
@@ -14,7 +12,9 @@ const boundarySearchSchema=z.object({countryCode:z.string().regex(/^[A-Z]{3}$/),
 const boundarySelectionSchema=z.object({boundaryLayerId:z.string().regex(/^[A-Z]{3}-ADM[012]-[A-Za-z0-9-]{3,80}$/),featureId:z.string().min(1).max(160).regex(/^[A-Za-z0-9._:-]+$/)}).strict();
 type BoundaryLayer=NonNullable<ReturnType<typeof adminLayerById>>;
 type BoundaryFeature={type:'Feature';properties:Record<string,unknown>;geometry:unknown};
-type BoundaryServices={db?:D1Database;cache?:Cache;fetcher?:(input:string|URL,init?:RequestInit)=>Promise<Response>;now?:()=>number};
+type BoundaryIndexFeature={featureId:string;name:string;aliases:string[];geometryType:'Polygon'|'MultiPolygon';areaKm2:number;geometryOffset:number;geometryBytes:number;geometrySha256:string;geometrySimplified:boolean;sourceVertices:number;displayVertices:number;displayToleranceDegrees:number};
+type BoundaryIndex={features:BoundaryIndexFeature[];displayKey:string;displayBytes:number};
+type BoundaryServices={db?:D1Database;bucket?:R2Bucket;cache?:Cache;fetcher?:(input:string|URL,init?:RequestInit)=>Promise<Response>;now?:()=>number};
 
 function fail(status:number,error:string){return Response.json({status:error==='boundary_not_available'?'no_coverage':'error',error},{status,headers:JSON_HEADERS});}
 function normalizeName(value:string){return value.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase().replace(/[^\p{L}\p{N}]+/gu,' ').trim();}
@@ -77,6 +77,64 @@ function boundaryInfo(layer:BoundaryLayer,feature:BoundaryFeature){
     aliases:Array.isArray(alternate)?alternate.filter((value):value is string=>typeof value==='string').slice(0,10):typeof alternate==='string'?[alternate]:[]
   };
 }
+function indexedBoundaryInfo(layer:BoundaryLayer,feature:BoundaryIndexFeature){
+  return {boundaryLayerId:layer.boundaryId,featureId:feature.featureId,name:feature.name,countryCode:layer.countryCode,level:layer.level,boundaryYear:layer.boundaryYear,license:layer.license,source:layer.source,aliases:feature.aliases};
+}
+function sha256Hex(bytes:Uint8Array){return crypto.subtle.digest('SHA-256',bytes.slice().buffer).then(digest=>Array.from(new Uint8Array(digest),byte=>byte.toString(16).padStart(2,'0')).join(''));}
+async function readR2Bytes(object:R2ObjectBody,maxBytes:number){
+  const expected=object.range&&'length' in object.range&&typeof object.range.length==='number'?object.range.length:object.size;
+  if(expected>maxBytes)throw new Error('boundary_too_large');
+  const bytes=new Uint8Array(await object.arrayBuffer());
+  if(bytes.byteLength!==expected||bytes.byteLength>maxBytes)throw new Error('boundary_size_mismatch');
+  return bytes;
+}
+async function indexedBoundaryLayer(layer:BoundaryLayer,origin:string,services:BoundaryServices):Promise<BoundaryIndex|undefined>{
+  if(!services.bucket)return undefined;
+  let manifest;
+  try{manifest=await loadActivePopulationCountryManifest(services.bucket,layer.countryCode);}
+  catch(error){if((error as {populationError?:string})?.populationError==='provider_unavailable')return undefined;throw error;}
+  const aggregate=manifest?.administrativeAggregates.find(item=>item.boundaryLayerId===layer.boundaryId),assets=aggregate?.boundaryData;
+  if(!aggregate||!assets)return undefined;
+  const cacheKey=new Request(new URL(`/__population-boundary-index/${encodeURIComponent(layer.boundaryId)}/${assets.index.sha256}`,origin));
+  let raw:Uint8Array|undefined;
+  const cached=await services.cache?.match(cacheKey);
+  if(cached){
+    const bytes=new Uint8Array(await cached.arrayBuffer());
+    if(bytes.byteLength===assets.index.bytes&&await sha256Hex(bytes)===assets.index.sha256)raw=bytes;
+  }
+  if(!raw){
+    const object=await services.bucket.get(assets.index.key);
+    if(!object)throw new Error('boundary_provider_unavailable');
+    raw=await readR2Bytes(object,10_000_000);
+    if(raw.byteLength!==assets.index.bytes||await sha256Hex(raw)!==assets.index.sha256)throw new Error('boundary_index_integrity_error');
+    try{await services.cache?.put(cacheKey,new Response(raw.slice(),{headers:{'Content-Type':'application/json; charset=utf-8','Cache-Control':'public, max-age=86400'}}));}catch{/* indexed boundary metadata remains readable without cache storage */}
+  }
+  let parsed:unknown;try{parsed=JSON.parse(new TextDecoder('utf-8',{fatal:true}).decode(raw));}catch{throw new Error('boundary_index_incompatible');}
+  if(!parsed||typeof parsed!=='object')throw new Error('boundary_index_incompatible');
+  const index=parsed as Record<string,unknown>,features=index.features;
+  if(index.schemaVersion!==1||index.countryCode!==layer.countryCode||index.boundaryLayerId!==layer.boundaryId||index.boundaryYear!==layer.boundaryYear||index.boundarySourceSha256!==aggregate.sourceSha256||index.sourceBytes!==assets.sourceBytes||index.featureCount!==aggregate.featureCount||!Array.isArray(features)||features.length!==aggregate.featureCount)throw new Error('boundary_index_incompatible');
+  const seen=new Set<string>();let expectedOffset=0;
+  for(const rawFeature of features){
+    if(!rawFeature||typeof rawFeature!=='object')throw new Error('boundary_index_incompatible');
+    const feature=rawFeature as Record<string,unknown>;
+    if(typeof feature.featureId!=='string'||! /^[A-Za-z0-9._:-]{1,160}$/.test(feature.featureId)||seen.has(feature.featureId)||typeof feature.name!=='string'||!feature.name.trim()||feature.name.length>240||!Array.isArray(feature.aliases)||feature.aliases.length>10||feature.aliases.some(alias=>typeof alias!=='string'||alias.length>240)||!['Polygon','MultiPolygon'].includes(String(feature.geometryType))||typeof feature.areaKm2!=='number'||!Number.isFinite(feature.areaKm2)||feature.areaKm2<=0||feature.areaKm2>510_065_621||
+      !Number.isSafeInteger(feature.geometryOffset)||Number(feature.geometryOffset)!==expectedOffset||!Number.isSafeInteger(feature.geometryBytes)||Number(feature.geometryBytes)<2||Number(feature.geometryBytes)>2_000_000||Number(feature.geometryOffset)+Number(feature.geometryBytes)>assets.display.bytes||typeof feature.geometrySha256!=='string'||!/^[0-9a-f]{64}$/.test(feature.geometrySha256)||typeof feature.geometrySimplified!=='boolean'||!Number.isSafeInteger(feature.sourceVertices)||Number(feature.sourceVertices)<4||!Number.isSafeInteger(feature.displayVertices)||Number(feature.displayVertices)<4||Number(feature.displayVertices)>POPULATION_ADMIN_MAX_VERTICES||typeof feature.displayToleranceDegrees!=='number'||!Number.isFinite(feature.displayToleranceDegrees)||feature.displayToleranceDegrees<0)throw new Error('boundary_index_incompatible');
+    seen.add(feature.featureId);
+    expectedOffset+=Number(feature.geometryBytes);
+  }
+  if(expectedOffset!==assets.display.bytes)throw new Error('boundary_index_incompatible');
+  return {features:features as BoundaryIndexFeature[],displayKey:assets.display.key,displayBytes:assets.display.bytes};
+}
+async function readIndexedBoundaryGeometry(services:BoundaryServices,index:BoundaryIndex,feature:BoundaryIndexFeature){
+  if(!services.bucket)throw new Error('boundary_provider_unavailable');
+  const object=await services.bucket.get(index.displayKey,{range:{offset:feature.geometryOffset,length:feature.geometryBytes}});
+  if(!object)throw new Error('boundary_provider_unavailable');
+  const bytes=await readR2Bytes(object,2_000_000);
+  if(bytes.byteLength!==feature.geometryBytes||await sha256Hex(bytes)!==feature.geometrySha256)throw new Error('boundary_geometry_integrity_error');
+  let record:unknown;try{record=JSON.parse(new TextDecoder('utf-8',{fatal:true}).decode(bytes));}catch{throw new Error('boundary_geometry_incompatible');}
+  if(!record||typeof record!=='object'||(record as Record<string,unknown>).featureId!==feature.featureId||(record as Record<string,unknown>).geometry===undefined)throw new Error('boundary_geometry_incompatible');
+  return (record as {geometry:unknown}).geometry;
+}
 function boundaryError(error:unknown){
   const text=String(error).toLowerCase();
   if(/too_large/.test(text))return {status:413,error:'boundary_layer_too_large'};
@@ -95,12 +153,17 @@ export async function searchAdministrativeBoundaries(request:Request,services:Bo
   const layer=adminLayer(parsed.data.countryCode,parsed.data.level);
   if(!layer)return fail(404,'boundary_not_available');
   try{
-    const features=await readBoundaryLayer(layer,url.origin,services,request.signal),query=normalizeName(parsed.data.q);
-    const matches=features.flatMap(feature=>{
+    const query=normalizeName(parsed.data.q),indexed=await indexedBoundaryLayer(layer,url.origin,services);
+    const candidates=indexed?indexed.features.flatMap(feature=>{
+      const info=indexedBoundaryInfo(layer,feature),names=[info.name,...info.aliases].map(normalizeName);
+      if(!names.some(name=>name.includes(query)))return [];
+      return [{...info,geometryType:feature.geometryType,areaKm2:feature.areaKm2,geometrySimplified:feature.geometrySimplified}];
+    }):(await readBoundaryLayer(layer,url.origin,services,request.signal)).flatMap(feature=>{
       const info=boundaryInfo(layer,feature),names=[info.name,...info.aliases].map(normalizeName);
       if(!names.some(name=>name.includes(query)))return [];
       return [{...info,geometryType:(feature.geometry as {type?:unknown}).type}];
-    }).sort((a,b)=>{
+    });
+    const matches=candidates.sort((a,b)=>{
       const aName=normalizeName(a.name),bName=normalizeName(b.name),aRank=aName===query?0:aName.startsWith(query)?1:2,bRank=bName===query?0:bName.startsWith(query)?1:2;
       return aRank-bRank||a.name.localeCompare(b.name);
     }).slice(0,8);
@@ -110,26 +173,32 @@ export async function searchAdministrativeBoundaries(request:Request,services:Bo
 
 export async function populationAdminResponse(request:Request,services:BoundaryServices){
   if(request.method!=='POST')return fail(405,'boundary_query_failed');
-  if(!services.db)return fail(503,'population_provider_unavailable');
+  if(!services.db||!services.bucket)return fail(503,'population_provider_unavailable');
   if(!/^application\/json(?:\s*;|$)/i.test(request.headers.get('Content-Type')??''))return fail(415,'invalid_boundary_selection');
   let raw:string;try{raw=await readText(request,5_000);}catch{return fail(413,'invalid_boundary_selection');}
   let input:unknown;try{input=JSON.parse(raw);}catch{return fail(400,'invalid_boundary_selection');}
   const parsed=boundarySelectionSchema.safeParse(input);if(!parsed.success)return fail(400,'invalid_boundary_selection');
   if(!await verifyPopulationCatalog())return fail(503,'boundary_provider_incompatible');
   const layer=adminLayerById(parsed.data.boundaryLayerId);if(!layer)return fail(404,'boundary_not_available');
-  let feature:BoundaryFeature;
+  let feature:BoundaryFeature|undefined,indexedFeature:BoundaryIndexFeature|undefined,geometryValue:unknown;
   try{
-    const features=await readBoundaryLayer(layer,new URL(request.url).origin,services,request.signal);
-    const found=features.find(candidate=>candidate.properties.shapeID===parsed.data.featureId);
-    if(!found)return fail(404,'boundary_not_available');
-    feature=found;
+    const indexed=await indexedBoundaryLayer(layer,new URL(request.url).origin,services);
+    if(indexed){
+      indexedFeature=indexed.features.find(candidate=>candidate.featureId===parsed.data.featureId);
+      if(!indexedFeature)return fail(404,'boundary_not_available');
+      geometryValue=await readIndexedBoundaryGeometry(services,indexed,indexedFeature);
+    }else{
+      const features=await readBoundaryLayer(layer,new URL(request.url).origin,services,request.signal);
+      feature=features.find(candidate=>candidate.properties.shapeID===parsed.data.featureId);
+      if(!feature)return fail(404,'boundary_not_available');
+      geometryValue=feature.geometry;
+    }
   }catch(error){const issue=boundaryError(error);return fail(issue.status,issue.error);}
-  const geometry=populationGeometrySchema.safeParse(feature.geometry);
-  if(!geometry.success||!booleanValid(geometry.data))return fail(422,'invalid_boundary_geometry');
-  if(geometryVertexCount(geometry.data)>POPULATION_MAX_VERTICES||new TextEncoder().encode(JSON.stringify(geometry.data)).byteLength>POPULATION_MAX_BODY_BYTES)return fail(413,'boundary_too_complex');
-  const administrativeBoundary=boundaryInfo(layer,feature);
-  const internal=new Request(request.url,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({geometry:geometry.data,countryCodes:[layer.countryCode]}),signal:request.signal});
-  const population=await populationAreaResponse(internal,{...services,db:services.db});
-  let reply:unknown;try{reply=await population.json();}catch{return fail(503,'population_provider_unavailable');}
-  return Response.json({...(reply as Record<string,unknown>),boundary:{...administrativeBoundary,geometry:geometry.data}},{status:population.status,headers:JSON_HEADERS});
+  const geometry=populationAdminBoundaryGeometrySchema.safeParse(geometryValue);
+  if(!geometry.success)return fail(422,'invalid_boundary_geometry');
+  if(geometryVertexCount(geometry.data)>POPULATION_ADMIN_MAX_VERTICES||new TextEncoder().encode(JSON.stringify(geometry.data)).byteLength>MAX_BOUNDARY_FILE_BYTES)return fail(413,'boundary_too_complex');
+  if(indexedFeature&&((geometry.data as {type:string}).type!==indexedFeature.geometryType||geometryVertexCount(geometry.data)!==indexedFeature.displayVertices))return fail(503,'boundary_provider_incompatible');
+  const info=indexedFeature?indexedBoundaryInfo(layer,indexedFeature):boundaryInfo(layer,feature!);
+  const administrativeBoundary={...info,geometryType:(geometry.data as {type?:unknown}).type,geometry:geometry.data,geometryRole:'display_only',geometrySimplified:indexedFeature?.geometrySimplified??false,...(indexedFeature?{areaKm2:indexedFeature.areaKm2}: {})};
+  return populationAdminAggregateResponse(request,{...services,db:services.db,bucket:services.bucket},{countryCode:layer.countryCode,boundaryLayerId:layer.boundaryId,featureId:parsed.data.featureId,geometry:geometry.data,areaKm2:indexedFeature?.areaKm2,boundary:administrativeBoundary});
 }

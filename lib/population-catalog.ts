@@ -29,11 +29,14 @@ export const populationCatalogSummary={
   unavailableCountryCodes:serviceCatalog.population.unavailableCountryCodes,
   manifestSha256:serviceCatalog.manifestSha256
 };
+export const populationBoundaryCoverageSummary=serviceCatalog.boundaries.countryCoverage;
 
 export function populationDataset(countryCode:string):CountryDataset|undefined{return populationDatasets.get(countryCode);}
 export function adminLayer(countryCode:string,level:'ADM0'|'ADM1'|'ADM2'='ADM0'):AdminLayer|undefined{return adminLayersByKey.get(`${countryCode}:${level}`);}
 export function admin0Layer(countryCode:string):AdminLayer|undefined{return adminLayer(countryCode,'ADM0');}
 export function adminLayerById(boundaryId:string):AdminLayer|undefined{return adminLayersById.get(boundaryId);}
+export function adminLayersForCountry(countryCode:string){return serviceCatalog.boundaries.adminLayers.filter((record)=>record.countryCode===countryCode);}
+export function populationCountryCodes(){return [...populationDatasets.keys()].sort();}
 export function populationCountryAvailable(countryCode:string){return populationDatasets.has(countryCode);}
 
 export function verifyPopulationCatalog(){

@@ -15,6 +15,13 @@
       "when": 1791804654961,
       "tag": "0001_wide_scorpion",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1791809263805,
+      "tag": "0002_unknown_franklin_richards",
+      "breakpoints": true
     }
   ]
 }

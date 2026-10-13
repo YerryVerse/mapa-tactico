@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-12T11:40:42.396Z",
+  "generatedAt": "2026-10-12T12:31:54.594Z",
   "population": {
     "provider": "WorldPop Global 2",
     "api": "https://api.worldpop.org/v2",
@@ -7991,7 +7991,7 @@
     "countryLayers": 230,
     "layerCounts": {
       "ADM0": 230,
-      "ADM1": 199,
+      "ADM1": 198,
       "ADM2": 180
     },
     "adminUnitDefinition": "An administrative unit is not automatically equivalent to a city. The UI must show the selected administrative level and boundary year.",
@@ -11670,21 +11670,6 @@
         "unitCount": 1,
         "geoJsonUrl": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/IMN/ADM0/geoBoundaries-IMN-ADM0.geojson",
         "simplifiedGeoJsonUrl": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/IMN/ADM0/geoBoundaries-IMN-ADM0_simplified.geojson"
-      },
-      {
-        "boundaryId": "IND-ADM0-90661403",
-        "countryCode": "IND",
-        "level": "ADM1",
-        "boundaryYear": "2011",
-        "name": "India",
-        "source": "DataMeet India community, Election Commission of India",
-        "license": "Creative Commons Attribution 2.5 India (CC BY 2.5 IN)",
-        "licenseDetails": null,
-        "primarySourceUrl": "github.com/datameet/maps",
-        "buildDate": "Feb 21, 2024",
-        "unitCount": 1,
-        "geoJsonUrl": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/IND/ADM1/geoBoundaries-IND-ADM1.geojson",
-        "simplifiedGeoJsonUrl": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/IND/ADM1/geoBoundaries-IND-ADM1_simplified.geojson"
       },
       {
         "boundaryId": "IND-ADM1-1811400",
@@ -17131,7 +17116,41 @@
         "geoJsonUrl": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/ZWE/ADM2/geoBoundaries-ZWE-ADM2.geojson",
         "simplifiedGeoJsonUrl": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/ZWE/ADM2/geoBoundaries-ZWE-ADM2_simplified.geojson"
       }
-    ]
+    ],
+    "countryCoverage": {
+      "populationDatasetCountryCount": 241,
+      "countriesWithBoundaries": 229,
+      "countriesWithoutBoundariesCountryCodes": [
+        "ALA",
+        "CCK",
+        "CXR",
+        "ESH",
+        "HKG",
+        "JEY",
+        "MAC",
+        "MAF",
+        "NFK",
+        "SJM",
+        "SPM",
+        "SXM"
+      ],
+      "countriesWithoutADM0CountryCodes": [
+        "ALA",
+        "CCK",
+        "CXR",
+        "ESH",
+        "HKG",
+        "IND",
+        "JEY",
+        "MAC",
+        "MAF",
+        "NFK",
+        "PRI",
+        "SJM",
+        "SPM",
+        "SXM"
+      ]
+    }
   },
-  "manifestSha256": "159460592886661cbab7c5837d29e1e0535d1b246d1e2f9ed0c9d10134af9d49"
+  "manifestSha256": "20715e75e4c02dc9fb35789052599dc4710d65b27c26251b0ea9c454896ad151"
 }

@@ -1,78 +1,94 @@
-import {describe,it,expect,vi} from 'vitest';
+import {describe,it,expect} from 'vitest';
 import {area as geodesicArea} from '@turf/area';
 import {booleanValid} from '@turf/boolean-valid';
 import polygonClipping from 'polygon-clipping';
 import {canonicalGeometryKey,POPULATION_MAX_AREA_KM2,type PopulationGeometry} from '../../lib/population-contract';
 import {geodesicAreaKm2,toClippingGeometry,verifyPopulationGeometryRuntime} from '../../lib/population-geometry';
 import {populationAreaResponse} from '../../lib/population-service';
-import {verifyPopulationCatalog} from '../../lib/population-catalog';
+import {populationBoundaryCoverageSummary,verifyPopulationCatalog} from '../../lib/population-catalog';
+import {populationDatabase,populationMemoryCache,populationRasterFixture} from './population-raster-fixture';
 
 const london:PopulationGeometry={type:'Polygon',coordinates:[[[-0.15,51.50],[-0.10,51.50],[-0.10,51.48],[-0.15,51.48],[-0.15,51.50]]]};
-const success={status:'success',progress:100,result:{total_population:99049.27,area_km2:7.7275,data_year:2025,data_source:'worldpop_R2025A_2025_100m',processing_time_ms:74},error:null};
-const taskId='0d4cb0c6-c442-43f6-a2e1-7db2a3788aad';
-function services(){
-  const fetcher=vi.fn(async(input:string|URL,_init?:RequestInit)=>{
-    const url=String(input);
-    return url.endsWith('/population')?Response.json({task_id:taskId,status:'pending'}):Response.json(success);
-  });
-  const db={prepare:vi.fn(()=>({bind:()=>({first:async()=>({hits:1})})}))} as unknown as D1Database;
-  return {db,fetcher};
-}
-function request(geometry:PopulationGeometry=london,countryCodes=['GBR']){
-  return new Request('https://atlas.test/api/population/area',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({geometry,countryCodes})});
+function request(geometry:PopulationGeometry=london,countryCodes=['GBR'],signal?:AbortSignal){
+  return new Request('https://atlas.test/api/population/area',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({geometry,countryCodes}),signal});
 }
 function rectangle(west:number,south:number,east:number,north:number):PopulationGeometry{
   return {type:'Polygon',coordinates:[[[west,south],[east,south],[east,north],[west,north],[west,south]]]};
 }
 
-describe('WorldPop anonymous population service',()=>{
+describe('anonymous WorldPop raster query service',()=>{
+  it('tracks missing administrative boundaries separately from available population rasters',()=>{
+    expect(populationBoundaryCoverageSummary).toMatchObject({
+      populationDatasetCountryCount:241,
+      countriesWithBoundaries:229,
+      countriesWithoutBoundariesCountryCodes:['ALA','CCK','CXR','ESH','HKG','JEY','MAC','MAF','NFK','SJM','SPM','SXM'],
+      countriesWithoutADM0CountryCodes:['ALA','CCK','CXR','ESH','HKG','IND','JEY','MAC','MAF','NFK','PRI','SJM','SPM','SXM']
+    });
+  });
   it('checks the generated country and boundary manifest integrity',async()=>{expect(await verifyPopulationCatalog()).toBe(true);});
-  it('uses the pinned 2025 Global 2 source and validates the aggregate response',async()=>{
-    const s=services(),response=await populationAreaResponse(request(),{...s,now:()=>Date.UTC(2026,9,12)});
+  it('sums the active official raster, reports NoData coverage and source checksums',async()=>{
+    const fixture=await populationRasterFixture(),database=populationDatabase();
+    const response=await populationAreaResponse(request(),{...database,bucket:fixture.bucket,now:()=>Date.UTC(2026,9,12)});
+    const body=await response.json() as Record<string,any>;
     expect(response.status).toBe(200);
-    expect(await response.json()).toMatchObject({status:'available',population:99049.27,areaKm2:7.7275,year:2025,edition:'R2025A-v1',resolution:'100m',units:'people_per_grid_cell',coverage:'country_dataset_available_fraction_unreported',geometryHash:expect.stringMatching(/^[0-9a-f]{64}$/)});
-    expect(s.fetcher).toHaveBeenCalledTimes(2);
-    expect(String(s.fetcher.mock.calls[0][0])).toBe('https://api.worldpop.org/v2/population');
-    expect(String(s.fetcher.mock.calls[1][0])).toBe(`https://api.worldpop.org/v2/tasks/${taskId}`);
-    const upstreamBody=JSON.parse(String(s.fetcher.mock.calls[0][1]?.body));
-    expect(upstreamBody).toMatchObject({year:2025,resolution:'100m',geojson:london});
-    expect(s.db.prepare).toHaveBeenCalledTimes(2);
+    expect(body).toMatchObject({status:'available',year:2025,edition:'R2025A-v1',resolution:'100m',units:'people_per_grid_cell',source:'WorldPop Global 2',method:'cell_center_inside_polygon',coverage:{status:'partial',noDataGridCells:1},sourceDatasets:[{countryCode:'GBR',datasetId:'gbr_pop_2025_CN_100m_R2025A_v1',sourceSha256:'a'.repeat(64)}]});
+    expect(body.geometryHash).toMatch(/^[0-9a-f]{64}$/);
+    expect(body.coverage.intersectedGridCells).toBe(body.coverage.validGridCells+1);
+    expect(body.population).toBe(body.coverage.validGridCells-1);
+    expect(fixture.rangeReads).toHaveLength(1);
+    expect(fixture.rangeReads[0].length).toBeGreaterThan(0);
+    expect(database.prepare).toHaveBeenCalledTimes(1);
   });
-  it('caches by normalized geometry, country set, source and method without retaining the submitted polygon',async()=>{
-    const s=services(),entries=new Map<string,Response>();
-    const cache={match:vi.fn(async(key:Request)=>entries.get(key.url)?.clone()),put:vi.fn(async(key:Request,value:Response)=>{entries.set(key.url,value.clone());})} as unknown as Cache;
-    const first=await populationAreaResponse(request(),{...s,cache});
+  it('caches by normalized geometry and active release without retaining submitted geometry',async()=>{
+    const fixture=await populationRasterFixture(),database=populationDatabase(),memory=populationMemoryCache();
+    const first=await populationAreaResponse(request(),{...database,bucket:fixture.bucket,cache:memory.cache});
     const reverse:PopulationGeometry={type:'Polygon',coordinates:[[[-0.10,51.48],[-0.10,51.50],[-0.15,51.50],[-0.15,51.48],[-0.10,51.48]]]};
-    const second=await populationAreaResponse(request(reverse),{...services(),cache});
-    expect(first.status).toBe(200);expect(second.status).toBe(200);expect(cache.match).toHaveBeenCalledTimes(2);expect(cache.put).toHaveBeenCalledTimes(1);
+    const second=await populationAreaResponse(request(reverse),{...database,bucket:fixture.bucket,cache:memory.cache});
+    expect(first.status).toBe(200);expect(second.status).toBe(200);expect(memory.match).toHaveBeenCalledTimes(3);expect(memory.put).toHaveBeenCalledTimes(2);
+    expect(database.first).toHaveBeenCalledTimes(1);
+    expect(fixture.rangeReads).toHaveLength(1);
   });
-  it('distinguishes unsupported and partial country coverage without calling the provider',async()=>{
-    const unsupported=services(),noCoverage=await populationAreaResponse(request(london,['VAT']),unsupported);
-    expect(noCoverage.status).toBe(422);expect(await noCoverage.json()).toMatchObject({status:'no_coverage',error:'no_coverage',unsupportedCountryCodes:['VAT']});expect(unsupported.fetcher).not.toHaveBeenCalled();
-    const partial=services(),partialCoverage=await populationAreaResponse(request(london,['GBR','VAT']),partial);
-    expect(partialCoverage.status).toBe(422);expect(await partialCoverage.json()).toMatchObject({status:'partial_coverage',error:'partial_coverage',unsupportedCountryCodes:['VAT']});expect(partial.fetcher).not.toHaveBeenCalled();
+  it('distinguishes unsupported-country coverage from a geometry outside the raster',async()=>{
+    const fixture=await populationRasterFixture(),database=populationDatabase();
+    const unsupported=await populationAreaResponse(request(london,['VAT']),{...database,bucket:fixture.bucket});
+    expect(unsupported.status).toBe(422);expect(await unsupported.json()).toMatchObject({status:'no_coverage',error:'no_coverage',unsupportedCountryCodes:['VAT']});
+    const outside=await populationAreaResponse(request(rectangle(140,-35,140.1,-34.9)),{...database,bucket:fixture.bucket});
+    expect(outside.status).toBe(422);expect(await outside.json()).toMatchObject({status:'no_coverage',error:'no_coverage'});
   });
-  it('rejects invalid rings, self intersections, unclosed shapes and oversized areas before quota use',async()=>{
-    const s=services();
+  it('rejects malformed geometry and areas beyond the published limit before quota use',async()=>{
+    const fixture=await populationRasterFixture(),database=populationDatabase();
     const open:PopulationGeometry={type:'Polygon',coordinates:[[[-0.15,51.50],[-0.10,51.50],[-0.10,51.48],[-0.15,51.48]]]};
     const crossed:PopulationGeometry={type:'Polygon',coordinates:[[[0,0],[1,1],[0,1],[1,0],[0,0]]]};
-    expect((await populationAreaResponse(request(open),s)).status).toBe(400);
-    expect((await populationAreaResponse(request(crossed),s)).status).toBe(400);
-    expect((await populationAreaResponse(request(rectangle(-5,45,5,55)),s)).status).toBe(413);
-    expect(s.db.prepare).not.toHaveBeenCalled();expect(s.fetcher).not.toHaveBeenCalled();
+    expect((await populationAreaResponse(request(open),{...database,bucket:fixture.bucket})).status).toBe(400);
+    expect((await populationAreaResponse(request(crossed),{...database,bucket:fixture.bucket})).status).toBe(400);
+    expect((await populationAreaResponse(request(rectangle(-5,45,5,55)),{...database,bucket:fixture.bucket})).status).toBe(413);
+    expect(database.prepare).not.toHaveBeenCalled();
   });
-  it('rejects HTML, wrong editions and negative values from the GIS provider',async()=>{
-    const html=services();html.fetcher.mockResolvedValueOnce(new Response('<html>maintenance</html>',{headers:{'Content-Type':'text/html'}}));
-    const htmlReply=await populationAreaResponse(request(),html);expect(htmlReply.status).toBe(503);expect(await htmlReply.json()).toMatchObject({error:'provider_incompatible'});
-    const wrong=services();wrong.fetcher.mockResolvedValueOnce(Response.json({task_id:taskId})).mockResolvedValueOnce(Response.json({...success,result:{...success.result,data_source:'worldpop_R2024B_2025_100m'}}));
-    expect((await populationAreaResponse(request(),wrong)).status).toBe(503);
-    const negative=services();negative.fetcher.mockResolvedValueOnce(Response.json({task_id:taskId})).mockResolvedValueOnce(Response.json({...success,result:{...success.result,total_population:-1}}));
-    expect((await populationAreaResponse(request(),negative)).status).toBe(503);
+  it('applies the bounded R2 tile-read budget before loading a large raster window',async()=>{
+    const fixture=await populationRasterFixture(),database=populationDatabase();
+    const response=await populationAreaResponse(request(rectangle(-1,50,1,52)),{...database,bucket:fixture.bucket});
+    expect(response.status).toBe(413);expect(await response.json()).toMatchObject({error:'area_limit'});
+    expect(fixture.rangeReads).toHaveLength(0);
   });
-  it('enforces the project daily upstream-call budget without leaking visitor identity',async()=>{
-    const s=services();s.db.prepare=vi.fn(()=>({bind:()=>({first:async()=>null})})) as any;
-    const response=await populationAreaResponse(request(),{...s,now:()=>Date.UTC(2026,9,12)});
-    expect(response.status).toBe(429);expect(await response.json()).toMatchObject({error:'quota_exceeded'});expect(s.fetcher).not.toHaveBeenCalled();
+  it('rejects a corrupt block checksum as an incompatible dataset',async()=>{
+    const fixture=await populationRasterFixture({corruptCrc:true}),database=populationDatabase();
+    const response=await populationAreaResponse(request(),{...database,bucket:fixture.bucket});
+    expect(response.status).toBe(503);expect(await response.json()).toMatchObject({error:'provider_incompatible'});
+  });
+  it('enforces the global anonymous daily query budget without retaining visitor identity',async()=>{
+    const fixture=await populationRasterFixture(),database=populationDatabase({allow:false});
+    const response=await populationAreaResponse(request(),{...database,bucket:fixture.bucket,now:()=>Date.UTC(2026,9,12)});
+    expect(response.status).toBe(429);expect(await response.json()).toMatchObject({error:'quota_exceeded'});expect(fixture.rangeReads).toHaveLength(0);
+  });
+  it('returns a timeout result for an already cancelled anonymous request',async()=>{
+    const fixture=await populationRasterFixture(),database=populationDatabase(),controller=new AbortController();controller.abort();
+    const response=await populationAreaResponse(request(london,['GBR'],controller.signal),{...database,bucket:fixture.bucket});
+    expect(response.status).toBe(503);expect(await response.json()).toMatchObject({error:'provider_timeout'});expect(fixture.rangeReads).toHaveLength(0);
+  });
+  it('aborts raster work when its bounded service timeout expires',async()=>{
+    const fixture=await populationRasterFixture(),database=populationDatabase();
+    const response=await populationAreaResponse(request(),{...database,bucket:fixture.bucket,timeoutMs:0});
+    expect(response.status).toBe(503);expect(await response.json()).toMatchObject({error:'provider_timeout'});
   });
 });
 
