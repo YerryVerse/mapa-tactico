@@ -73,6 +73,16 @@ describe('operator-only resumable population upload',()=>{
     const response=await populationIngestResponse(new Request('https://atlas.test/api/ops/population/import?action=start',{method:'POST',headers:{'Content-Type':'application/json'},body:'{}'}),{db:db.db,bucket:r2.bucket,secret});
     expect(response.status).toBe(404);expect(db.prepare).not.toHaveBeenCalled();
   });
+  it.each(['index.json','display.ndjson'])('accepts pinned administrative boundary asset %s',async filename=>{
+    const db=database(),r2=bucket(),key=`population/releases/R2025A-v1/AGO/${'a'.repeat(64)}/boundary-data/AGO-ADM2-91424787/${filename}`,data=new TextEncoder().encode('boundary-asset'),fileHash=await sha256(data);
+    const response=await populationIngestResponse(authenticatedRequest('https://atlas.test/api/ops/population/import?action=start',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({key,sha256:fileHash,bytes:data.byteLength})}),{db:db.db,bucket:r2.bucket,secret});
+    expect(response.status).toBe(201);expect(await response.json()).toMatchObject({status:'uploading',key});
+  });
+  it('rejects unlisted administrative boundary asset paths',async()=>{
+    const db=database(),r2=bucket(),key=`population/releases/R2025A-v1/AGO/${'a'.repeat(64)}/boundary-data/AGO-ADM2-91424787/unbounded.bin`,data=new TextEncoder().encode('boundary-asset');
+    const response=await populationIngestResponse(authenticatedRequest('https://atlas.test/api/ops/population/import?action=start',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({key,sha256:await sha256(data),bytes:data.byteLength})}),{db:db.db,bucket:r2.bucket,secret});
+    expect(response.status).toBe(400);expect(await response.json()).toMatchObject({error:'invalid_import_request'});
+  });
   it('starts once, verifies each chunk, resumes idempotently and completes the immutable R2 object',async()=>{
     const db=database(),r2=bucket(),key=`population/releases/R2025A-v1/GBR/${'a'.repeat(64)}/data.bin`,data=new TextEncoder().encode('small-final-multipart-test'),fileHash=await sha256(data);
     const start=await populationIngestResponse(authenticatedRequest('https://atlas.test/api/ops/population/import?action=start',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({key,sha256:fileHash,bytes:data.byteLength})}),{db:db.db,bucket:r2.bucket,secret});

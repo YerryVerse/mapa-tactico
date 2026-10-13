@@ -9,6 +9,8 @@ const root=resolve(dirname(fileURLToPath(import.meta.url)),'..');
 const runtimeRoot=resolve(root,'.sites-runtime/population-work');
 const catalog=JSON.parse(await readFile(resolve(root,'data/population/catalog.json'),'utf8'));
 const endpoint=(process.env.POPULATION_INGEST_URL??'https://atlas-escenarios-hud.yerrybatista.chatgpt.site/api/ops/population/import').replace(/\/$/,'');
+const uploadConcurrency=Number(process.env.POPULATION_UPLOAD_CONCURRENCY??6);
+if(!Number.isSafeInteger(uploadConcurrency)||uploadConcurrency<1||uploadConcurrency>12)throw new Error('POPULATION_UPLOAD_CONCURRENCY must be an integer from 1 to 12.');
 const args=process.argv.slice(2),selected=[];
 for(let index=0;index<args.length;index++){
   if(args[index]==='--country'&&args[index+1])selected.push(args[++index].toUpperCase());
@@ -42,10 +44,16 @@ async function fileSha256(path){
 }
 async function saveProgress(){
   const serialized=JSON.stringify(progress,null,2)+'\n';
-  const old=await readFile(statePath,'utf8').catch(error=>{if(error.code==='ENOENT')return null;throw error;});
-  if(old===serialized)return;
-  const temporary=statePath+'.tmp';await writeFile(temporary,serialized,{encoding:'utf8'});await rename(temporary,statePath);
+  const write=async()=>{
+    const old=await readFile(statePath,'utf8').catch(error=>{if(error.code==='ENOENT')return null;throw error;});
+    if(old===serialized)return;
+    const temporary=statePath+'.tmp';await writeFile(temporary,serialized,{encoding:'utf8'});await rename(temporary,statePath);
+  };
+  const pending=progressWriteQueue.then(write);
+  progressWriteQueue=pending.catch(()=>{});
+  await pending;
 }
+let progressWriteQueue=Promise.resolve();
 async function requestJson(action,body){
   let lastError;
   for(let attempt=1;attempt<=5;attempt++){
@@ -137,11 +145,15 @@ async function uploadCountry(countryCode){
     {key:`population/releases/${manifest.edition}/${countryCode}/${manifest.sourceSha256}/manifest.json`,path:manifestPath,sha256:await fileSha256(manifestPath)}
   ];
   process.stdout.write(`${countryCode}: carga de ${files.length} archivos verificados\n`);
-  for(let index=0;index<files.length;index++){
-    const asset=files[index];
-    await uploadAsset(asset.key,asset.path,asset.sha256);
-    if(index===0||index===files.length-1||((index+1)%32===0))process.stdout.write(`${countryCode}: ${index+1}/${files.length} archivos\n`);
-  }
+  let nextFile=0,completedFiles=0;
+  await Promise.all(Array.from({length:Math.min(uploadConcurrency,files.length)},async()=>{
+    while(nextFile<files.length){
+      const index=nextFile++,asset=files[index];
+      await uploadAsset(asset.key,asset.path,asset.sha256);
+      completedFiles++;
+      if(index===0||completedFiles===files.length||completedFiles%32===0)process.stdout.write(`${countryCode}: ${completedFiles}/${files.length} archivos\n`);
+    }
+  }));
   const ready=await requestJson('verify-country',{countryCode,sourceSha256:manifest.sourceSha256});
   if(ready.status!=='country_ready')throw new Error(`Country asset verification failed for ${countryCode}.`);
   progress.countries[countryCode]={status:'country_ready',sourceSha256:manifest.sourceSha256,manifestSha256:ready.manifestSha256,assets:ready.assets,updatedAt:new Date().toISOString()};

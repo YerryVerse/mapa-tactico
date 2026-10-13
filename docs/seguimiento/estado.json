@@ -19,7 +19,7 @@
   "contextHash": "3f0488730cc8487553295c934da319ca54b6637532839fefebf45d9ccd4ba0cc",
   "project": "Mapa Táctico",
   "portal": "https://atlas-escenarios-hud.yerrybatista.chatgpt.site/",
-  "updatedAt": "2026-10-13T05:49:33.679Z",
+  "updatedAt": "2026-10-13T06:00:21.535Z",
   "sprints": [
     {
       "number": 1,
@@ -7379,7 +7379,7 @@
     {
       "number": 3,
       "title": "Población y consulta territorial",
-      "updatedAt": "2026-10-13T05:49:33.679Z",
+      "updatedAt": "2026-10-13T06:00:21.535Z",
       "phase": "en_curso",
       "approval": {
         "status": "pendiente",
@@ -8666,6 +8666,48 @@
           "action": "set",
           "pointId": "S03-3A-13",
           "reference": "Hallazgo: el ID multipart real de R2 mide 343 caracteres; ampliada la validación segura a 1.024 y añadida regresión de carga/reanudación. 3 pruebas focalizadas, 74 del conjunto y TypeScript pasan; esperando build y despliegue para reintentar la importación."
+        },
+        {
+          "at": "2026-10-13T05:53:49.781Z",
+          "action": "set",
+          "pointId": "S03-3A-13",
+          "reference": "Versión pública 27 desplegada desde 448f26c. Regresión de ID R2 de 343 caracteres y 74 pruebas pasan; carga anónima protegida. Prueba real ABW subió y verificó sus 4 objetos en R2 con salida country_ready; inicio la carga global 239/239 antes de activar."
+        },
+        {
+          "at": "2026-10-13T05:55:20.889Z",
+          "action": "set",
+          "pointId": "S03-3A-13",
+          "reference": "Versión Sites 27 activa y prueba ABW country_ready. La carga global quedó reanudable con 39 objetos completos y uno en curso; ajusto el cliente operador a seis activos independientes en paralelo con checkpoints serializados para reducir la transferencia de 22.215 objetos."
+        },
+        {
+          "at": "2026-10-13T05:56:03.298Z",
+          "action": "set",
+          "pointId": "S03-3A-13",
+          "reference": "Carga reanudada con seis archivos paralelos y checkpoints serializados. ABW permanece country_ready; AFG avanza con 32/237 objetos completos. La selección global contiene 241 conjuntos poblacionales entre 248 códigos; siete ausencias documentadas, activación aún no iniciada."
+        },
+        {
+          "at": "2026-10-13T05:56:57.871Z",
+          "action": "set",
+          "pointId": "S03-3A-13",
+          "reference": "Versión 27 pública; ABW y AFG están country_ready. Transferencia con 6 archivos paralelos y escrituras de progreso serializadas: 256/22.215 objetos completados, 3 en vuelo, 2 países verificados (checkpoint local). Sin activación antes de completar todos los países."
+        },
+        {
+          "at": "2026-10-13T05:57:42.484Z",
+          "action": "set",
+          "pointId": "S03-3A-10",
+          "reference": "Producción Sites v27 pública: .openai/hosting.json declara DB y BUCKET; overview anónimo del D1 DB muestra población_ingest_jobs/parts/ready además de presupuestos. El cargador aplicó 0002_unknown_franklin_richards.sql y ABW/AFG quedaron country_ready con manifest_sha256 en D1; objetos de datos permanecen en R2."
+        },
+        {
+          "at": "2026-10-13T05:59:10.642Z",
+          "action": "set",
+          "pointId": "S03-3A-13",
+          "reference": "La carga real en Sites alcanzó 377 objetos completos y 2 países country_ready; una tanda paralela obtuvo HTTP 400 en action=start y el proceso terminó sin activar la edición. D1/R2 conservan checkpoints; identifico las claves/cargas rechazadas antes de reanudar."
+        },
+        {
+          "at": "2026-10-13T06:00:21.535Z",
+          "action": "set",
+          "pointId": "S03-3A-13",
+          "reference": "Causa raíz confirmada en manif. AGO: boundary-data/<ID>/index.json y display.ndjson quedaban fuera de la lista segura del API. Ahora solo se admiten esos dos sufijos con ID geoBoundaries; pruebas positivas/negativa 6/6, suite 77/77, TypeScript y build pasan. La versión 27 aún está desplegada; debo publicar la corrección y reanudar desde 377 objetos verificados."
         }
       ],
       "points": [
@@ -9248,9 +9290,9 @@
           "group": "Bloque 3A Fuentes y servicio de consulta",
           "text": "Declarar y verificar los bindings d1: DB y r2: BUCKET en .openai/hosting.json, con tipos del entorno y esquema Drizzle. Generar y revisar migraciones con db:generate, aplicar solo las pendientes en el entorno local y publicar mediante Sites para las alojadas. Mantener SQL y metadatos aplicados inmutables; no cargar censos en migraciones ni crear tablas al atender una consulta.",
           "kind": "operacion",
-          "status": "en_curso",
-          "evidence": "En Sites, el proyecto conserva audiencia pública y el binding D1 DB está disponible; lectura anónima de esquema devuelve solo population_budget y search_budget. Falta aplicar/verificar la migración de población y confirmar R2 BUCKET en la versión que se publique con la edición completa.",
-          "updatedAt": "2026-10-13T03:44:32.961Z",
+          "status": "terminado",
+          "evidence": "Producción Sites v27 pública: .openai/hosting.json declara DB y BUCKET; overview anónimo del D1 DB muestra población_ingest_jobs/parts/ready además de presupuestos. El cargador aplicó 0002_unknown_franklin_richards.sql y ABW/AFG quedaron country_ready con manifest_sha256 en D1; objetos de datos permanecen en R2.",
+          "updatedAt": "2026-10-13T05:57:42.484Z",
           "history": [
             {
               "at": "2026-10-12T11:49:43.734Z",
@@ -9291,6 +9333,11 @@
               "at": "2026-10-13T03:44:32.961Z",
               "status": "en_curso",
               "evidence": "En Sites, el proyecto conserva audiencia pública y el binding D1 DB está disponible; lectura anónima de esquema devuelve solo population_budget y search_budget. Falta aplicar/verificar la migración de población y confirmar R2 BUCKET en la versión que se publique con la edición completa."
+            },
+            {
+              "at": "2026-10-13T05:57:42.484Z",
+              "status": "terminado",
+              "evidence": "Producción Sites v27 pública: .openai/hosting.json declara DB y BUCKET; overview anónimo del D1 DB muestra población_ingest_jobs/parts/ready además de presupuestos. El cargador aplicó 0002_unknown_franklin_richards.sql y ABW/AFG quedaron country_ready con manifest_sha256 en D1; objetos de datos permanecen en R2."
             }
           ]
         },
@@ -9355,8 +9402,8 @@
           "text": "Definir y demostrar el canal de carga real de archivos, agregados e índices de límites a R2: autorización exclusiva del operador, lotes acotados, reanudación idempotente, verificación de cada objeto y activación atómica del manifiesto solo al terminar. Las bases y buckets locales son distintos de los alojados. No habilitar consultas públicas hasta que la edición activada esté completa y verificada.",
           "kind": "operacion",
           "status": "en_curso",
-          "evidence": "Hallazgo: el ID multipart real de R2 mide 343 caracteres; ampliada la validación segura a 1.024 y añadida regresión de carga/reanudación. 3 pruebas focalizadas, 74 del conjunto y TypeScript pasan; esperando build y despliegue para reintentar la importación.",
-          "updatedAt": "2026-10-13T05:49:33.679Z",
+          "evidence": "Causa raíz confirmada en manif. AGO: boundary-data/<ID>/index.json y display.ndjson quedaban fuera de la lista segura del API. Ahora solo se admiten esos dos sufijos con ID geoBoundaries; pruebas positivas/negativa 6/6, suite 77/77, TypeScript y build pasan. La versión 27 aún está desplegada; debo publicar la corrección y reanudar desde 377 objetos verificados.",
+          "updatedAt": "2026-10-13T06:00:21.535Z",
           "history": [
             {
               "at": "2026-10-12T11:49:44.074Z",
@@ -9467,6 +9514,36 @@
               "at": "2026-10-13T05:49:33.679Z",
               "status": "en_curso",
               "evidence": "Hallazgo: el ID multipart real de R2 mide 343 caracteres; ampliada la validación segura a 1.024 y añadida regresión de carga/reanudación. 3 pruebas focalizadas, 74 del conjunto y TypeScript pasan; esperando build y despliegue para reintentar la importación."
+            },
+            {
+              "at": "2026-10-13T05:53:49.781Z",
+              "status": "en_curso",
+              "evidence": "Versión pública 27 desplegada desde 448f26c. Regresión de ID R2 de 343 caracteres y 74 pruebas pasan; carga anónima protegida. Prueba real ABW subió y verificó sus 4 objetos en R2 con salida country_ready; inicio la carga global 239/239 antes de activar."
+            },
+            {
+              "at": "2026-10-13T05:55:20.889Z",
+              "status": "en_curso",
+              "evidence": "Versión Sites 27 activa y prueba ABW country_ready. La carga global quedó reanudable con 39 objetos completos y uno en curso; ajusto el cliente operador a seis activos independientes en paralelo con checkpoints serializados para reducir la transferencia de 22.215 objetos."
+            },
+            {
+              "at": "2026-10-13T05:56:03.298Z",
+              "status": "en_curso",
+              "evidence": "Carga reanudada con seis archivos paralelos y checkpoints serializados. ABW permanece country_ready; AFG avanza con 32/237 objetos completos. La selección global contiene 241 conjuntos poblacionales entre 248 códigos; siete ausencias documentadas, activación aún no iniciada."
+            },
+            {
+              "at": "2026-10-13T05:56:57.871Z",
+              "status": "en_curso",
+              "evidence": "Versión 27 pública; ABW y AFG están country_ready. Transferencia con 6 archivos paralelos y escrituras de progreso serializadas: 256/22.215 objetos completados, 3 en vuelo, 2 países verificados (checkpoint local). Sin activación antes de completar todos los países."
+            },
+            {
+              "at": "2026-10-13T05:59:10.642Z",
+              "status": "no_completado",
+              "evidence": "La carga real en Sites alcanzó 377 objetos completos y 2 países country_ready; una tanda paralela obtuvo HTTP 400 en action=start y el proceso terminó sin activar la edición. D1/R2 conservan checkpoints; identifico las claves/cargas rechazadas antes de reanudar."
+            },
+            {
+              "at": "2026-10-13T06:00:21.535Z",
+              "status": "en_curso",
+              "evidence": "Causa raíz confirmada en manif. AGO: boundary-data/<ID>/index.json y display.ndjson quedaban fuera de la lista segura del API. Ahora solo se admiten esos dos sufijos con ID geoBoundaries; pruebas positivas/negativa 6/6, suite 77/77, TypeScript y build pasan. La versión 27 aún está desplegada; debo publicar la corrección y reanudar desde 377 objetos verificados."
             }
           ]
         },
