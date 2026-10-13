@@ -47,7 +47,7 @@ function parseAssetKey(key:unknown){
 }
 function isHash(value:unknown):value is string{return typeof value==='string'&&/^[0-9a-f]{64}$/.test(value);}
 function safeInteger(value:unknown,minimum=0,maximum=MAX_OBJECT_BYTES):value is number{return typeof value==='number'&&Number.isSafeInteger(value)&&value>=minimum&&value<=maximum;}
-function validUploadId(value:unknown):value is string{return typeof value==='string'&&value.length>=8&&value.length<=256&&/^[A-Za-z0-9_-]+$/.test(value);}
+function validUploadId(value:unknown):value is string{return typeof value==='string'&&value.length>=8&&value.length<=1024&&/^[A-Za-z0-9_-]+$/.test(value);}
 
 async function runPopulationMigration(db:D1Database){
   const statements=[

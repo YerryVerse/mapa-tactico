@@ -56,7 +56,7 @@ function bucket(){
     head:async(key:string)=>{const object=stored.get(key);return object?{key,size:object.bytes.byteLength,customMetadata:object.customMetadata}:null;},
     get:async()=>null,
     put:async(key:string,value:BodyInit,options?:R2PutOptions)=>{const bytes=new Uint8Array(await new Response(value).arrayBuffer());const customMetadata=options?.customMetadata??{};stored.set(key,{bytes,customMetadata});return {key,size:bytes.byteLength};},
-    createMultipartUpload:async(key:string,options?:R2MultipartOptions)=>{const uploadId=`upload_${++uploadSequence}`;const metadata=options?.customMetadata??{};uploads.set(uploadId,{key,metadata,parts:new Map()});return createUpload(key,uploadId,metadata);},
+    createMultipartUpload:async(key:string,options?:R2MultipartOptions)=>{const uploadId=`upload_${String(++uploadSequence).padStart(7,'0')}${'x'.repeat(329)}`;const metadata=options?.customMetadata??{};uploads.set(uploadId,{key,metadata,parts:new Map()});return createUpload(key,uploadId,metadata);},
     resumeMultipartUpload:(key:string,uploadId:string)=>createUpload(key,uploadId,uploads.get(uploadId)?.metadata??{})
   };
   return {bucket:r2 as unknown as R2Bucket,stored,uploads};
@@ -77,6 +77,7 @@ describe('operator-only resumable population upload',()=>{
     const db=database(),r2=bucket(),key=`population/releases/R2025A-v1/GBR/${'a'.repeat(64)}/data.bin`,data=new TextEncoder().encode('small-final-multipart-test'),fileHash=await sha256(data);
     const start=await populationIngestResponse(authenticatedRequest('https://atlas.test/api/ops/population/import?action=start',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({key,sha256:fileHash,bytes:data.byteLength})}),{db:db.db,bucket:r2.bucket,secret});
     const startBody=await start.json() as Record<string,any>;expect(start.status).toBe(201);expect(startBody.status).toBe('uploading');
+    expect(startBody.uploadId).toHaveLength(343);
     const retryStart=await populationIngestResponse(authenticatedRequest('https://atlas.test/api/ops/population/import?action=start',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({key,sha256:fileHash,bytes:data.byteLength})}),{db:db.db,bucket:r2.bucket,secret});
     const retryStartBody=await retryStart.json() as Record<string,unknown>;expect(retryStart.status).toBe(200);expect(retryStartBody.status).toBe('uploading');expect(r2.uploads.size).toBe(1);
     const partHash=await sha256(data),partRequest=authenticatedRequest('https://atlas.test/api/ops/population/import?action=part',{method:'POST',headers:{'Content-Type':'application/octet-stream','X-Population-Key':key,'X-Population-Upload-Id':startBody.uploadId,'X-Population-Part-Number':'1','X-Population-Part-Bytes':String(data.byteLength),'X-Population-Part-SHA256':partHash},body:data});

@@ -19,7 +19,7 @@
   "contextHash": "3f0488730cc8487553295c934da319ca54b6637532839fefebf45d9ccd4ba0cc",
   "project": "Mapa Táctico",
   "portal": "https://atlas-escenarios-hud.yerrybatista.chatgpt.site/",
-  "updatedAt": "2026-10-13T05:39:52.364Z",
+  "updatedAt": "2026-10-13T05:49:33.679Z",
   "sprints": [
     {
       "number": 1,
@@ -7379,7 +7379,7 @@
     {
       "number": 3,
       "title": "Población y consulta territorial",
-      "updatedAt": "2026-10-13T05:39:52.364Z",
+      "updatedAt": "2026-10-13T05:49:33.679Z",
       "phase": "en_curso",
       "approval": {
         "status": "pendiente",
@@ -8624,6 +8624,48 @@
           "action": "set",
           "pointId": "S03-3A-13",
           "reference": "Canal operador implementado: autorización exclusiva, cargas multipartes de 5–8 MB reanudables, hashes por archivo y país, verificación de objetos y activación atómica. Inventario completo local: 241 rasters (6.366 GB), 241 índices, 21.318 fragmentos agregados, 87 índices y 87 displays de límites (aprox. 9,2 GB en 22.215 objetos); checksums completos, carga y activación en Sites aún pendientes."
+        },
+        {
+          "at": "2026-10-13T05:42:34.051Z",
+          "action": "set",
+          "pointId": "S03-3A-13",
+          "reference": "El Site workflow recibió la fuente y llegó a empaquetar, pero el launcher Windows del plugin intentó ejecutar package-site.sh con una ruta Unix mal formada; no produjo el archive aceptable ni guardó una versión de Sites. El estado local y el commit se conservan; aplicar la recuperación documentada del packager oficial y volver a verificar el commit remoto antes de guardar/deploy."
+        },
+        {
+          "at": "2026-10-13T05:43:44.307Z",
+          "action": "set",
+          "pointId": "S03-3A-13",
+          "reference": "Se corrigió el empaquetado de Windows con el validador oficial prepare-site-build.cjs y tar.exe; archive Worker validado con entrypoint, hosting manifest y migraciones D1. 25.042.361 bytes, SHA-256 e30a32f1e24f0a42e2794b231cbcbb60fc3869ff6c8c25bd29904b94748958ab. El source helper alcanzó saveSource antes del fallo del wrapper y verificó el push exacto fbe73db; falta guardar/desplegar versión, cargar/verificar los 22.215 objetos y activar R2."
+        },
+        {
+          "at": "2026-10-13T05:46:17.363Z",
+          "action": "set",
+          "pointId": "S03-3A-13",
+          "reference": "La versión Sites 26 está publicada en el proyecto público y se verificó el mapa tras actualizar una vez la pestaña existente. El endpoint de importación rechaza POST anónimo con 404; la clave de operador se almacena como secreto, nunca en el portal. Inicia la carga autenticada y reanudable de los 22.215 objetos locales."
+        },
+        {
+          "at": "2026-10-13T05:46:46.001Z",
+          "action": "set",
+          "pointId": "S03-3A-13",
+          "reference": "El primer proceso del cargador salió antes de ejecutar la migración D1: exec sin PTY cerró stdin antes de recibir la clave; no se realizó ninguna petición de carga ni se subió un objeto. Se corrige usando un launcher interactivo en modo raw que envía la clave solo a memoria del proceso, sin eco, argv ni archivo."
+        },
+        {
+          "at": "2026-10-13T05:46:54.513Z",
+          "action": "set",
+          "pointId": "S03-3A-13",
+          "reference": "La ejecución anterior no inició transferencia: stdin se cerró antes de autenticación. El launcher corregido lee la clave en modo raw sin eco y solo la pasa como variable de entorno a la memoria del proceso; la versión 26 ya rechazó el POST anónimo con 404. Reintentando ahora la migración D1 y la carga multipart reanudable."
+        },
+        {
+          "at": "2026-10-13T05:47:24.135Z",
+          "action": "set",
+          "pointId": "S03-3A-13",
+          "reference": "La clave autenticó la versión 26 y la migración D1 se aplicó; ABW creó un trabajo multipart pero el primer fragmento fue rechazado como invalid_import_part. No se subió ni activó ningún conjunto. Comparo los nombres/tamaños de cabeceras del uploader y el endpoint; el progreso R2 sigue cerrado hasta una verificación final."
+        },
+        {
+          "at": "2026-10-13T05:49:33.679Z",
+          "action": "set",
+          "pointId": "S03-3A-13",
+          "reference": "Hallazgo: el ID multipart real de R2 mide 343 caracteres; ampliada la validación segura a 1.024 y añadida regresión de carga/reanudación. 3 pruebas focalizadas, 74 del conjunto y TypeScript pasan; esperando build y despliegue para reintentar la importación."
         }
       ],
       "points": [
@@ -9313,8 +9355,8 @@
           "text": "Definir y demostrar el canal de carga real de archivos, agregados e índices de límites a R2: autorización exclusiva del operador, lotes acotados, reanudación idempotente, verificación de cada objeto y activación atómica del manifiesto solo al terminar. Las bases y buckets locales son distintos de los alojados. No habilitar consultas públicas hasta que la edición activada esté completa y verificada.",
           "kind": "operacion",
           "status": "en_curso",
-          "evidence": "Canal operador implementado: autorización exclusiva, cargas multipartes de 5–8 MB reanudables, hashes por archivo y país, verificación de objetos y activación atómica. Inventario completo local: 241 rasters (6.366 GB), 241 índices, 21.318 fragmentos agregados, 87 índices y 87 displays de límites (aprox. 9,2 GB en 22.215 objetos); checksums completos, carga y activación en Sites aún pendientes.",
-          "updatedAt": "2026-10-13T05:39:52.364Z",
+          "evidence": "Hallazgo: el ID multipart real de R2 mide 343 caracteres; ampliada la validación segura a 1.024 y añadida regresión de carga/reanudación. 3 pruebas focalizadas, 74 del conjunto y TypeScript pasan; esperando build y despliegue para reintentar la importación.",
+          "updatedAt": "2026-10-13T05:49:33.679Z",
           "history": [
             {
               "at": "2026-10-12T11:49:44.074Z",
@@ -9390,6 +9432,41 @@
               "at": "2026-10-13T05:39:52.364Z",
               "status": "en_curso",
               "evidence": "Canal operador implementado: autorización exclusiva, cargas multipartes de 5–8 MB reanudables, hashes por archivo y país, verificación de objetos y activación atómica. Inventario completo local: 241 rasters (6.366 GB), 241 índices, 21.318 fragmentos agregados, 87 índices y 87 displays de límites (aprox. 9,2 GB en 22.215 objetos); checksums completos, carga y activación en Sites aún pendientes."
+            },
+            {
+              "at": "2026-10-13T05:42:34.051Z",
+              "status": "no_completado",
+              "evidence": "El Site workflow recibió la fuente y llegó a empaquetar, pero el launcher Windows del plugin intentó ejecutar package-site.sh con una ruta Unix mal formada; no produjo el archive aceptable ni guardó una versión de Sites. El estado local y el commit se conservan; aplicar la recuperación documentada del packager oficial y volver a verificar el commit remoto antes de guardar/deploy."
+            },
+            {
+              "at": "2026-10-13T05:43:44.307Z",
+              "status": "en_curso",
+              "evidence": "Se corrigió el empaquetado de Windows con el validador oficial prepare-site-build.cjs y tar.exe; archive Worker validado con entrypoint, hosting manifest y migraciones D1. 25.042.361 bytes, SHA-256 e30a32f1e24f0a42e2794b231cbcbb60fc3869ff6c8c25bd29904b94748958ab. El source helper alcanzó saveSource antes del fallo del wrapper y verificó el push exacto fbe73db; falta guardar/desplegar versión, cargar/verificar los 22.215 objetos y activar R2."
+            },
+            {
+              "at": "2026-10-13T05:46:17.363Z",
+              "status": "en_curso",
+              "evidence": "La versión Sites 26 está publicada en el proyecto público y se verificó el mapa tras actualizar una vez la pestaña existente. El endpoint de importación rechaza POST anónimo con 404; la clave de operador se almacena como secreto, nunca en el portal. Inicia la carga autenticada y reanudable de los 22.215 objetos locales."
+            },
+            {
+              "at": "2026-10-13T05:46:46.001Z",
+              "status": "no_completado",
+              "evidence": "El primer proceso del cargador salió antes de ejecutar la migración D1: exec sin PTY cerró stdin antes de recibir la clave; no se realizó ninguna petición de carga ni se subió un objeto. Se corrige usando un launcher interactivo en modo raw que envía la clave solo a memoria del proceso, sin eco, argv ni archivo."
+            },
+            {
+              "at": "2026-10-13T05:46:54.513Z",
+              "status": "en_curso",
+              "evidence": "La ejecución anterior no inició transferencia: stdin se cerró antes de autenticación. El launcher corregido lee la clave en modo raw sin eco y solo la pasa como variable de entorno a la memoria del proceso; la versión 26 ya rechazó el POST anónimo con 404. Reintentando ahora la migración D1 y la carga multipart reanudable."
+            },
+            {
+              "at": "2026-10-13T05:47:24.135Z",
+              "status": "no_completado",
+              "evidence": "La clave autenticó la versión 26 y la migración D1 se aplicó; ABW creó un trabajo multipart pero el primer fragmento fue rechazado como invalid_import_part. No se subió ni activó ningún conjunto. Comparo los nombres/tamaños de cabeceras del uploader y el endpoint; el progreso R2 sigue cerrado hasta una verificación final."
+            },
+            {
+              "at": "2026-10-13T05:49:33.679Z",
+              "status": "en_curso",
+              "evidence": "Hallazgo: el ID multipart real de R2 mide 343 caracteres; ampliada la validación segura a 1.024 y añadida regresión de carga/reanudación. 3 pruebas focalizadas, 74 del conjunto y TypeScript pasan; esperando build y despliegue para reintentar la importación."
             }
           ]
         },
