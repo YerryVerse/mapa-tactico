@@ -189,7 +189,7 @@ export default function PopulationAreaTool({map,open,onClose}:{map:Map|null;open
       if(unfinished.length)draw.removeFeatures(unfinished);
       draw.setMode(RENDER_MODE);setMode(RENDER_MODE);
     }
-    restoreMapDoubleClick();syncCompletedFeatures();
+    restoreMapDoubleClick();syncCompletedFeatures();setDraftVertices([]);setCoordinateLng('');setCoordinateLat('');
   },[restoreMapDoubleClick,syncCompletedFeatures]);
 
   useEffect(()=>{

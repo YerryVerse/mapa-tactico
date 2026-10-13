@@ -19,7 +19,7 @@
   "contextHash": "3f0488730cc8487553295c934da319ca54b6637532839fefebf45d9ccd4ba0cc",
   "project": "Mapa Táctico",
   "portal": "https://atlas-escenarios-hud.yerrybatista.chatgpt.site/",
-  "updatedAt": "2026-10-13T23:34:16.878Z",
+  "updatedAt": "2026-10-13T23:45:44.975Z",
   "sprints": [
     {
       "number": 1,
@@ -7379,7 +7379,7 @@
     {
       "number": 3,
       "title": "Población y consulta territorial",
-      "updatedAt": "2026-10-13T23:34:16.878Z",
+      "updatedAt": "2026-10-13T23:45:44.975Z",
       "phase": "en_curso",
       "approval": {
         "status": "pendiente",
@@ -9792,6 +9792,30 @@
           "action": "set",
           "pointId": "S03-3B-02",
           "reference": "Verificación fallida en Sites 31, IAB: Londres→Westminster ADM2 entrega 206.028 personas, 22,9 km², fuente/año y cobertura parcial; el contorno geográfico no aparece aunque se marcó POLYGON_MODE. El punto permanece rojo mientras sustituyo la capa ilustrativa de Terra Draw por una capa GeoJSON de MapLibre y repito la prueba."
+        },
+        {
+          "at": "2026-10-13T23:41:00.840Z",
+          "action": "set",
+          "pointId": "S03-3B-01",
+          "reference": "Sites 32, IAB, consulta anónima: seleccioné London, Reino Unido → Westminster ADM2 (2019, Office for National Statistics Open Geography Portal). El mapa muestra el perímetro en una capa GeoJSON independiente del dibujo/cálculo; la respuesta muestra 206.028 personas, 22,9 km², licencia Open Government Licence v3.0 y 4.103/4.292 celdas válidas con aviso de cobertura parcial. También comprobé Andorra la Vella (sin capa ADM2) y London + NoSuchDistrictXYZ (sin coincidencia): ambos explican la causa y mantienen disponible "
+        },
+        {
+          "at": "2026-10-13T23:41:25.538Z",
+          "action": "set",
+          "pointId": "S03-3B-02",
+          "reference": "Sites 32, IAB, área dibujada sin sesión ni cabeceras de autorización: introduje tres vértices por teclado en Londres, cerré el polígono y la interfaz calculó 3,8 km²; la consulta anónima devolvió 49.017 personas y 677/720 celdas válidas con aviso de cobertura parcial. La selección ADM2 produce el agregado del servidor en la misma herramienta."
+        },
+        {
+          "at": "2026-10-13T23:43:45.611Z",
+          "action": "set",
+          "pointId": "S03-3B-03",
+          "reference": "Verificación publicada Sites 32: el dibujo por coordenadas produce el perímetro y la limpieza elimina área/resultado; al intentar arrastrar un vértice con el mapa a 320 CSS, el mapa se desplazó y la superficie quedó igual. Hay evidencia previa de edición en la vista local, pero el gesto publicado no quedó validado; investigar alcance/selección y repetir antes de marcar terminado."
+        },
+        {
+          "at": "2026-10-13T23:45:44.975Z",
+          "action": "set",
+          "pointId": "S03-3B-03",
+          "reference": "Sites 32, IAB: al activar Editar área, primero seleccioné el interior del polígono y luego arrastré un vértice; el área geodésica cambió de 0,192385 a 0,266614 km², sin mover el mapa. El intento previo arrastró el mapa antes de seleccionar el polígono y queda en historial. Falta verificar cancelar un dibujo incompleto y que no habilite consulta ni cifra."
         }
       ],
       "points": [
@@ -11773,9 +11797,9 @@
           "group": "Bloque 3B Área y cálculo",
           "text": "Permitir seleccionar una unidad administrativa local de geoBoundaries y consultar su población. Por decisión del usuario, preferir ADM2; mostrar el nombre, nivel, fuente y año del perímetro seleccionado. Si el país no tiene ADM2 publicado o la búsqueda no encuentra una unidad, explicar la falta y permitir dibujar un área manual.",
           "kind": "operacion",
-          "status": "no_completado",
-          "evidence": "Verificación fallida en Sites 31, IAB: Londres→Westminster ADM2 entrega 206.028 personas, 22,9 km², fuente/año y cobertura parcial; el contorno geográfico no aparece aunque se marcó POLYGON_MODE. El punto permanece rojo mientras sustituyo la capa ilustrativa de Terra Draw por una capa GeoJSON de MapLibre y repito la prueba.",
-          "updatedAt": "2026-10-13T23:34:16.503Z",
+          "status": "terminado",
+          "evidence": "Sites 32, IAB, consulta anónima: seleccioné London, Reino Unido → Westminster ADM2 (2019, Office for National Statistics Open Geography Portal). El mapa muestra el perímetro en una capa GeoJSON independiente del dibujo/cálculo; la respuesta muestra 206.028 personas, 22,9 km², licencia Open Government Licence v3.0 y 4.103/4.292 celdas válidas con aviso de cobertura parcial. También comprobé Andorra la Vella (sin capa ADM2) y London + NoSuchDistrictXYZ (sin coincidencia): ambos explican la causa y mantienen disponible",
+          "updatedAt": "2026-10-13T23:41:00.840Z",
           "history": [
             {
               "at": "2026-10-13T22:13:20.406Z",
@@ -11841,6 +11865,11 @@
               "at": "2026-10-13T23:34:16.503Z",
               "status": "no_completado",
               "evidence": "Verificación fallida en Sites 31, IAB: Londres→Westminster ADM2 entrega 206.028 personas, 22,9 km², fuente/año y cobertura parcial; el contorno geográfico no aparece aunque se marcó POLYGON_MODE. El punto permanece rojo mientras sustituyo la capa ilustrativa de Terra Draw por una capa GeoJSON de MapLibre y repito la prueba."
+            },
+            {
+              "at": "2026-10-13T23:41:00.840Z",
+              "status": "terminado",
+              "evidence": "Sites 32, IAB, consulta anónima: seleccioné London, Reino Unido → Westminster ADM2 (2019, Office for National Statistics Open Geography Portal). El mapa muestra el perímetro en una capa GeoJSON independiente del dibujo/cálculo; la respuesta muestra 206.028 personas, 22,9 km², licencia Open Government Licence v3.0 y 4.103/4.292 celdas válidas con aviso de cobertura parcial. También comprobé Andorra la Vella (sin capa ADM2) y London + NoSuchDistrictXYZ (sin coincidencia): ambos explican la causa y mantienen disponible"
             }
           ]
         },
@@ -11849,9 +11878,9 @@
           "group": "Bloque 3B Área y cálculo",
           "text": "Añadir una herramienta de área demográfica, mediante dibujo de un polígono o selección de un límite disponible. No se trata de un radio de daño ni de la huella de un arma.",
           "kind": "operacion",
-          "status": "no_completado",
-          "evidence": "Verificación fallida en Sites 31, IAB: Londres→Westminster ADM2 entrega 206.028 personas, 22,9 km², fuente/año y cobertura parcial; el contorno geográfico no aparece aunque se marcó POLYGON_MODE. El punto permanece rojo mientras sustituyo la capa ilustrativa de Terra Draw por una capa GeoJSON de MapLibre y repito la prueba.",
-          "updatedAt": "2026-10-13T23:34:16.878Z",
+          "status": "terminado",
+          "evidence": "Sites 32, IAB, área dibujada sin sesión ni cabeceras de autorización: introduje tres vértices por teclado en Londres, cerré el polígono y la interfaz calculó 3,8 km²; la consulta anónima devolvió 49.017 personas y 677/720 celdas válidas con aviso de cobertura parcial. La selección ADM2 produce el agregado del servidor en la misma herramienta.",
+          "updatedAt": "2026-10-13T23:41:25.538Z",
           "history": [
             {
               "at": "2026-10-13T22:15:26.304Z",
@@ -11902,6 +11931,11 @@
               "at": "2026-10-13T23:34:16.878Z",
               "status": "no_completado",
               "evidence": "Verificación fallida en Sites 31, IAB: Londres→Westminster ADM2 entrega 206.028 personas, 22,9 km², fuente/año y cobertura parcial; el contorno geográfico no aparece aunque se marcó POLYGON_MODE. El punto permanece rojo mientras sustituyo la capa ilustrativa de Terra Draw por una capa GeoJSON de MapLibre y repito la prueba."
+            },
+            {
+              "at": "2026-10-13T23:41:25.538Z",
+              "status": "terminado",
+              "evidence": "Sites 32, IAB, área dibujada sin sesión ni cabeceras de autorización: introduje tres vértices por teclado en Londres, cerré el polígono y la interfaz calculó 3,8 km²; la consulta anónima devolvió 49.017 personas y 677/720 celdas válidas con aviso de cobertura parcial. La selección ADM2 produce el agregado del servidor en la misma herramienta."
             }
           ],
           "blockId": "3B"
@@ -11912,8 +11946,8 @@
           "text": "Permitir modificar y borrar el área. Cancelar un dibujo incompleto no crea una consulta ni una cifra aparentemente definitiva.",
           "kind": "operacion",
           "status": "en_curso",
-          "evidence": "Verificado en IAB a 320 CSS: las coordenadas por teclado crean un polígono de 0,769614 km² con seis decimales; Escape sale de edición conservando el área terminada y Borrar limpia el polígono y el cálculo. Una consulta de 2.460.333,6 km² muestra el límite y ofrece dibujar menos o seleccionar ADM2.",
-          "updatedAt": "2026-10-13T23:12:05.707Z",
+          "evidence": "Sites 32, IAB: al activar Editar área, primero seleccioné el interior del polígono y luego arrastré un vértice; el área geodésica cambió de 0,192385 a 0,266614 km², sin mover el mapa. El intento previo arrastró el mapa antes de seleccionar el polígono y queda en historial. Falta verificar cancelar un dibujo incompleto y que no habilite consulta ni cifra.",
+          "updatedAt": "2026-10-13T23:45:44.975Z",
           "history": [
             {
               "at": "2026-10-13T22:21:01.640Z",
@@ -11934,6 +11968,16 @@
               "at": "2026-10-13T23:12:05.707Z",
               "status": "en_curso",
               "evidence": "Verificado en IAB a 320 CSS: las coordenadas por teclado crean un polígono de 0,769614 km² con seis decimales; Escape sale de edición conservando el área terminada y Borrar limpia el polígono y el cálculo. Una consulta de 2.460.333,6 km² muestra el límite y ofrece dibujar menos o seleccionar ADM2."
+            },
+            {
+              "at": "2026-10-13T23:43:45.611Z",
+              "status": "no_completado",
+              "evidence": "Verificación publicada Sites 32: el dibujo por coordenadas produce el perímetro y la limpieza elimina área/resultado; al intentar arrastrar un vértice con el mapa a 320 CSS, el mapa se desplazó y la superficie quedó igual. Hay evidencia previa de edición en la vista local, pero el gesto publicado no quedó validado; investigar alcance/selección y repetir antes de marcar terminado."
+            },
+            {
+              "at": "2026-10-13T23:45:44.975Z",
+              "status": "en_curso",
+              "evidence": "Sites 32, IAB: al activar Editar área, primero seleccioné el interior del polígono y luego arrastré un vértice; el área geodésica cambió de 0,192385 a 0,266614 km², sin mover el mapa. El intento previo arrastró el mapa antes de seleccionar el polígono y queda en historial. Falta verificar cancelar un dibujo incompleto y que no habilite consulta ni cifra."
             }
           ],
           "blockId": "3B"
