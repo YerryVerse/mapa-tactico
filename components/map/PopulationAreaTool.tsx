@@ -106,16 +106,25 @@ export default function PopulationAreaTool({map,open,onClose}:{map:Map|null;open
         return;
       }
       const boundary=reply.data.boundary;
-      drawRef.current?.clear();completedIds.current.clear();drawRef.current?.setMode(RENDER_MODE);setMode(RENDER_MODE);restoreMapDoubleClick();
+      const draw=drawRef.current;
+      try{draw?.clear();}catch{}
+      completedIds.current.clear();
+      try{draw?.setMode(RENDER_MODE);}catch{}
+      setMode(RENDER_MODE);
+      restoreMapDoubleClick();
       let outlineDisplayed=false;
-      if(boundary.geometry&&drawRef.current){
+      if(boundary.geometry&&draw){
         const polygons=boundary.geometry.type==='Polygon'?[boundary.geometry.coordinates]:boundary.geometry.coordinates;
         const vertexCount=polygons.reduce((sum,polygon)=>sum+polygon.reduce((subtotal,ring)=>subtotal+ring.length,0),0);
         if(vertexCount<=POPULATION_ADMIN_DISPLAY_MAX_VERTICES&&polygons.length<=POPULATION_ADMIN_DISPLAY_MAX_POLYGONS){
-          const features=polygons.map(coordinates=>({type:'Feature' as const,id:crypto.randomUUID(),properties:{mode:RENDER_MODE},geometry:{type:'Polygon' as const,coordinates}}));
-          const validation=drawRef.current.addFeatures(features);
-          if(validation.every(entry=>entry.valid)){completedIds.current=new Set(features.map(feature=>feature.id));outlineDisplayed=true;}
-          else drawRef.current.removeFeatures(features.map(feature=>feature.id));
+          let featureIds:string[]=[];
+          try{
+            const features=polygons.map(coordinates=>({type:'Feature' as const,id:crypto.randomUUID(),properties:{mode:RENDER_MODE},geometry:{type:'Polygon' as const,coordinates}}));
+            featureIds=features.map(feature=>String(feature.id));
+            const validation=draw.addFeatures(features);
+            if(validation.every(entry=>entry.valid)){completedIds.current=new Set(features.map(feature=>feature.id));outlineDisplayed=true;}
+            else draw.removeFeatures(featureIds);
+          }catch{completedIds.current.clear();try{draw.removeFeatures(featureIds);}catch{}}
         }
       }
       setGeometryIfChanged(null);

@@ -19,7 +19,7 @@
   "contextHash": "3f0488730cc8487553295c934da319ca54b6637532839fefebf45d9ccd4ba0cc",
   "project": "Mapa Táctico",
   "portal": "https://atlas-escenarios-hud.yerrybatista.chatgpt.site/",
-  "updatedAt": "2026-10-13T23:14:30.300Z",
+  "updatedAt": "2026-10-13T23:22:32.622Z",
   "sprints": [
     {
       "number": 1,
@@ -7379,7 +7379,7 @@
     {
       "number": 3,
       "title": "Población y consulta territorial",
-      "updatedAt": "2026-10-13T23:14:30.300Z",
+      "updatedAt": "2026-10-13T23:22:32.622Z",
       "phase": "en_curso",
       "approval": {
         "status": "pendiente",
@@ -9708,6 +9708,30 @@
           "action": "set",
           "pointId": "S03-3B-13",
           "reference": "En IAB a 320 CSS se verificó doble clic de cierre sin zoom y con geometría visible. Comprobé además el flujo real de teclado: Tab avanza de longitud a latitud y a Añadir vértice; Enter agrega el primer vértice. Escape termina edición; faltan controles en Sites."
+        },
+        {
+          "at": "2026-10-13T23:20:39.857Z",
+          "action": "set",
+          "pointId": "S03-3B-01",
+          "reference": "Verificación Sites 29 fallida: la búsqueda anónima encuentra Westminster ADM2 (2019, ONS), pero al seleccionarlo la interfaz muestra un error genérico y no presenta el resultado. El POST anónimo directo responde 200 con agregado y cobertura parcial; investigar discrepancia cliente/runtime antes de repetir."
+        },
+        {
+          "at": "2026-10-13T23:20:40.216Z",
+          "action": "set",
+          "pointId": "S03-3B-02",
+          "reference": "Verificación Sites 29 fallida: la interfaz de área carga y encuentra Westminster, pero la selección de la unidad termina en error genérico aunque el endpoint POST anónimo responde 200. El bloque permanece abierto hasta corregir y repetir el flujo completo."
+        },
+        {
+          "at": "2026-10-13T23:22:32.221Z",
+          "action": "set",
+          "pointId": "S03-3B-01",
+          "reference": "Selección de Westminster funciona en la búsqueda pública y el endpoint anónimo entrega 200 con agregado. Cambié la interfaz para que un fallo al dibujar el contorno ilustrativo no cancele el resultado demográfico; repetir el flujo Sites después de publicar la corrección."
+        },
+        {
+          "at": "2026-10-13T23:22:32.622Z",
+          "action": "set",
+          "pointId": "S03-3B-02",
+          "reference": "El endpoint POST público y su respuesta pasan el contrato Zod en producción, pero el cliente fallaba tras recibirlos. El dibujo del contorno ahora se trata como mejora visual opcional y no bloquea el agregado; falta repetir la consulta en Sites 30."
         }
       ],
       "points": [
@@ -11690,8 +11714,8 @@
           "text": "Permitir seleccionar una unidad administrativa local de geoBoundaries y consultar su población. Por decisión del usuario, preferir ADM2; mostrar el nombre, nivel, fuente y año del perímetro seleccionado. Si el país no tiene ADM2 publicado o la búsqueda no encuentra una unidad, explicar la falta y permitir dibujar un área manual.",
           "kind": "operacion",
           "status": "en_curso",
-          "evidence": "La búsqueda de London muestra resultados de ciudades distinguidos por región/país; al elegir Inglaterra se busca solo ADM2 y la API local encuentra Westminster (2019, fuente ONS). La consulta local falla por bindings D1/R2 ausentes y ofrece dibujo alternativo; producción anónima y fallback sin capa quedan pendientes.",
-          "updatedAt": "2026-10-13T23:04:50.566Z",
+          "evidence": "Selección de Westminster funciona en la búsqueda pública y el endpoint anónimo entrega 200 con agregado. Cambié la interfaz para que un fallo al dibujar el contorno ilustrativo no cancele el resultado demográfico; repetir el flujo Sites después de publicar la corrección.",
+          "updatedAt": "2026-10-13T23:22:32.221Z",
           "history": [
             {
               "at": "2026-10-13T22:13:20.406Z",
@@ -11717,6 +11741,16 @@
               "at": "2026-10-13T23:04:50.566Z",
               "status": "en_curso",
               "evidence": "La búsqueda de London muestra resultados de ciudades distinguidos por región/país; al elegir Inglaterra se busca solo ADM2 y la API local encuentra Westminster (2019, fuente ONS). La consulta local falla por bindings D1/R2 ausentes y ofrece dibujo alternativo; producción anónima y fallback sin capa quedan pendientes."
+            },
+            {
+              "at": "2026-10-13T23:20:39.857Z",
+              "status": "no_completado",
+              "evidence": "Verificación Sites 29 fallida: la búsqueda anónima encuentra Westminster ADM2 (2019, ONS), pero al seleccionarlo la interfaz muestra un error genérico y no presenta el resultado. El POST anónimo directo responde 200 con agregado y cobertura parcial; investigar discrepancia cliente/runtime antes de repetir."
+            },
+            {
+              "at": "2026-10-13T23:22:32.221Z",
+              "status": "en_curso",
+              "evidence": "Selección de Westminster funciona en la búsqueda pública y el endpoint anónimo entrega 200 con agregado. Cambié la interfaz para que un fallo al dibujar el contorno ilustrativo no cancele el resultado demográfico; repetir el flujo Sites después de publicar la corrección."
             }
           ]
         },
@@ -11726,8 +11760,8 @@
           "text": "Añadir una herramienta de área demográfica, mediante dibujo de un polígono o selección de un límite disponible. No se trata de un radio de daño ni de la huella de un arma.",
           "kind": "operacion",
           "status": "en_curso",
-          "evidence": "Panel integrado: búsqueda país/ciudad, selección de ADM2 y consulta por featureId, más dibujo manual y coordenadas. En IAB 320 CSS, London produjo ocho ciudades diferenciadas; Westminster ADM2 aparece con fuente y año. Consulta local reporta provider_unavailable sin borrar área anterior.",
-          "updatedAt": "2026-10-13T23:04:50.691Z",
+          "evidence": "El endpoint POST público y su respuesta pasan el contrato Zod en producción, pero el cliente fallaba tras recibirlos. El dibujo del contorno ahora se trata como mejora visual opcional y no bloquea el agregado; falta repetir la consulta en Sites 30.",
+          "updatedAt": "2026-10-13T23:22:32.622Z",
           "history": [
             {
               "at": "2026-10-13T22:15:26.304Z",
@@ -11748,6 +11782,16 @@
               "at": "2026-10-13T23:04:50.691Z",
               "status": "en_curso",
               "evidence": "Panel integrado: búsqueda país/ciudad, selección de ADM2 y consulta por featureId, más dibujo manual y coordenadas. En IAB 320 CSS, London produjo ocho ciudades diferenciadas; Westminster ADM2 aparece con fuente y año. Consulta local reporta provider_unavailable sin borrar área anterior."
+            },
+            {
+              "at": "2026-10-13T23:20:40.216Z",
+              "status": "no_completado",
+              "evidence": "Verificación Sites 29 fallida: la interfaz de área carga y encuentra Westminster, pero la selección de la unidad termina en error genérico aunque el endpoint POST anónimo responde 200. El bloque permanece abierto hasta corregir y repetir el flujo completo."
+            },
+            {
+              "at": "2026-10-13T23:22:32.622Z",
+              "status": "en_curso",
+              "evidence": "El endpoint POST público y su respuesta pasan el contrato Zod en producción, pero el cliente fallaba tras recibirlos. El dibujo del contorno ahora se trata como mejora visual opcional y no bloquea el agregado; falta repetir la consulta en Sites 30."
             }
           ],
           "blockId": "3B"
