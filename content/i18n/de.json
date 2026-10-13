@@ -54,6 +54,7 @@
   "populationEstimate": "Geschätzte Bevölkerung",
   "populationAreaLabel": "Abgefragtes Gebiet",
   "populationMethod": "WorldPop-Schätzung für 2025; 100-m-Zellen in Personen je Zelle.",
+  "populationSamplingMethod": "Eine Zelle geht mit ihrem vollen Wert ein, wenn ihr Mittelpunkt im Gebiet liegt; andernfalls wird sie ausgeschlossen, auch wenn die Grenze sie teilweise schneidet. Wasser wird nur ausgeschlossen, wenn die Quelle es als NoData markiert. Das Raster nutzt geografische Koordinaten (EPSG:4326); die Fläche wird geodätisch berechnet.",
   "populationSmallAreaResolution": "Dieses Gebiet ist kleiner als eine nominale 100-m-Rasterzelle; der Wert ist eine Schätzung in Rasterauflösung und keine straßenweise Zählung.",
   "populationDataGaps": "Die Summe berücksichtigt nur Zellen mit Daten und bildet nicht das gesamte Gebiet ab.",
   "populationQueryFailed": "Die Bevölkerung konnte nicht berechnet werden. Versuche es erneut.",

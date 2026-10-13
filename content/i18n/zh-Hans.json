@@ -54,6 +54,7 @@
   "populationEstimate": "估算人口",
   "populationAreaLabel": "查询面积",
   "populationMethod": "WorldPop 2025 估算；100 米网格，单位为每格人数。",
+  "populationSamplingMethod": "网格单元中心落在区域内时，计入该单元的全部数值；否则即使边界只穿过单元的一部分，也将其排除。只有数据源标记为 NoData 的水域才会排除。栅格使用地理坐标（EPSG:4326），面积按大地测量方法计算。",
   "populationSmallAreaResolution": "该区域小于名义 100 米网格单元；数值是网格分辨率估算，不是逐街道计数。",
   "populationDataGaps": "总数仅累加有数据的网格单元，并不代表整个区域。",
   "populationQueryFailed": "无法计算人口，请重试。",

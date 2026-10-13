@@ -19,7 +19,7 @@
   "contextHash": "3f0488730cc8487553295c934da319ca54b6637532839fefebf45d9ccd4ba0cc",
   "project": "Mapa Táctico",
   "portal": "https://atlas-escenarios-hud.yerrybatista.chatgpt.site/",
-  "updatedAt": "2026-10-13T23:45:44.975Z",
+  "updatedAt": "2026-10-13T23:54:42.104Z",
   "sprints": [
     {
       "number": 1,
@@ -7379,7 +7379,7 @@
     {
       "number": 3,
       "title": "Población y consulta territorial",
-      "updatedAt": "2026-10-13T23:45:44.975Z",
+      "updatedAt": "2026-10-13T23:54:42.104Z",
       "phase": "en_curso",
       "approval": {
         "status": "pendiente",
@@ -9816,6 +9816,30 @@
           "action": "set",
           "pointId": "S03-3B-03",
           "reference": "Sites 32, IAB: al activar Editar área, primero seleccioné el interior del polígono y luego arrastré un vértice; el área geodésica cambió de 0,192385 a 0,266614 km², sin mover el mapa. El intento previo arrastró el mapa antes de seleccionar el polígono y queda en historial. Falta verificar cancelar un dibujo incompleto y que no habilite consulta ni cifra."
+        },
+        {
+          "at": "2026-10-13T23:48:00.046Z",
+          "action": "set",
+          "pointId": "S03-3B-03",
+          "reference": "Sites 33, IAB: una vez seleccionado el polígono, arrastrar un vértice cambió el área geodésica de 0,192385 a 0,266614 km² sin desplazar el mapa. Borrar área eliminó geometría y resultado, y deshabilitó Calcular población. Al añadir solo dos vértices y pulsar Escape, el modo, la lista de vértices y los campos se limpiaron; Usar vértices, Borrar área y Calcular población quedaron deshabilitados y no apareció cifra."
+        },
+        {
+          "at": "2026-10-13T23:48:09.983Z",
+          "action": "set",
+          "pointId": "S03-3B-04",
+          "reference": "Sites 32/33 muestran el método WorldPop 2025, resolución de 100 m y unidad "
+        },
+        {
+          "at": "2026-10-13T23:49:03.700Z",
+          "action": "set",
+          "pointId": "S03-3B-05",
+          "reference": "El servicio usa el centro de cada celda EPSG:4326 y suma el Float32 completo cuando cae dentro; la máscara explícita excluye NoData y conserva celdas válidas de valor cero. La referencia Rasterio y el contador de celdas verifican esa regla, pero la interfaz aún no explica cómo se trata una celda cruzada parcialmente ni que agua solo se omite si figura como NoData. Añadiendo la explicación traducida antes de completar."
+        },
+        {
+          "at": "2026-10-13T23:54:42.104Z",
+          "action": "set",
+          "pointId": "S03-3B-05",
+          "reference": "Añadí populationSamplingMethod en los veinte catálogos (123 claves cada uno) y lo presento junto al resultado: regla del centro de celda, exclusión de celdas cruzadas parcialmente, NoData según máscara, CRS EPSG:4326 y área geodésica. Auditoría y compilación correctas; falta verificación pública."
         }
       ],
       "points": [
@@ -11945,9 +11969,9 @@
           "group": "Bloque 3B Área y cálculo",
           "text": "Permitir modificar y borrar el área. Cancelar un dibujo incompleto no crea una consulta ni una cifra aparentemente definitiva.",
           "kind": "operacion",
-          "status": "en_curso",
-          "evidence": "Sites 32, IAB: al activar Editar área, primero seleccioné el interior del polígono y luego arrastré un vértice; el área geodésica cambió de 0,192385 a 0,266614 km², sin mover el mapa. El intento previo arrastró el mapa antes de seleccionar el polígono y queda en historial. Falta verificar cancelar un dibujo incompleto y que no habilite consulta ni cifra.",
-          "updatedAt": "2026-10-13T23:45:44.975Z",
+          "status": "terminado",
+          "evidence": "Sites 33, IAB: una vez seleccionado el polígono, arrastrar un vértice cambió el área geodésica de 0,192385 a 0,266614 km² sin desplazar el mapa. Borrar área eliminó geometría y resultado, y deshabilitó Calcular población. Al añadir solo dos vértices y pulsar Escape, el modo, la lista de vértices y los campos se limpiaron; Usar vértices, Borrar área y Calcular población quedaron deshabilitados y no apareció cifra.",
+          "updatedAt": "2026-10-13T23:48:00.046Z",
           "history": [
             {
               "at": "2026-10-13T22:21:01.640Z",
@@ -11978,6 +12002,11 @@
               "at": "2026-10-13T23:45:44.975Z",
               "status": "en_curso",
               "evidence": "Sites 32, IAB: al activar Editar área, primero seleccioné el interior del polígono y luego arrastré un vértice; el área geodésica cambió de 0,192385 a 0,266614 km², sin mover el mapa. El intento previo arrastró el mapa antes de seleccionar el polígono y queda en historial. Falta verificar cancelar un dibujo incompleto y que no habilite consulta ni cifra."
+            },
+            {
+              "at": "2026-10-13T23:48:00.046Z",
+              "status": "terminado",
+              "evidence": "Sites 33, IAB: una vez seleccionado el polígono, arrastrar un vértice cambió el área geodésica de 0,192385 a 0,266614 km² sin desplazar el mapa. Borrar área eliminó geometría y resultado, y deshabilitó Calcular población. Al añadir solo dos vértices y pulsar Escape, el modo, la lista de vértices y los campos se limpiaron; Usar vértices, Borrar área y Calcular población quedaron deshabilitados y no apareció cifra."
             }
           ],
           "blockId": "3B"
@@ -11987,14 +12016,19 @@
           "group": "Bloque 3B Área y cálculo",
           "text": "Calcular población dentro del área respetando las unidades de la fuente. Si los datos representan densidad, convertirla con áreas correctas; si representan personas por celda, no multiplicar otra vez por superficie.",
           "kind": "operacion",
-          "status": "en_curso",
-          "evidence": "WorldPop 2025/100 m usa personas por celda sin multiplicar por área; la selección ADM2 llama al agregado preparado del featureId y el dibujo a la suma raster. Repetir contraste y cobertura en la versión revisable.",
-          "updatedAt": "2026-10-13T23:04:50.823Z",
+          "status": "terminado",
+          "evidence": "Sites 32/33 muestran el método WorldPop 2025, resolución de 100 m y unidad",
+          "updatedAt": "2026-10-13T23:48:09.983Z",
           "history": [
             {
               "at": "2026-10-13T23:04:50.823Z",
               "status": "en_curso",
               "evidence": "WorldPop 2025/100 m usa personas por celda sin multiplicar por área; la selección ADM2 llama al agregado preparado del featureId y el dibujo a la suma raster. Repetir contraste y cobertura en la versión revisable."
+            },
+            {
+              "at": "2026-10-13T23:48:09.983Z",
+              "status": "terminado",
+              "evidence": "Sites 32/33 muestran el método WorldPop 2025, resolución de 100 m y unidad"
             }
           ],
           "blockId": "3B"
@@ -12005,13 +12039,23 @@
           "text": "Documentar cómo se tratan las celdas que intersectan parcialmente el límite, el agua, los valores ausentes y los cambios de proyección. Si se supone distribución uniforme dentro de una celda, conservar esa suposición en metodología.",
           "kind": "operacion",
           "status": "en_curso",
-          "evidence": "docs/fuentes/poblacion-y-limites.md fija centro de celda, NoData explícito, proyección WGS84 y superficie geodésica; documenté límites de visualización separados del perímetro de cálculo. Faltan pruebas y verificación final.",
-          "updatedAt": "2026-10-13T23:04:50.939Z",
+          "evidence": "Añadí populationSamplingMethod en los veinte catálogos (123 claves cada uno) y lo presento junto al resultado: regla del centro de celda, exclusión de celdas cruzadas parcialmente, NoData según máscara, CRS EPSG:4326 y área geodésica. Auditoría y compilación correctas; falta verificación pública.",
+          "updatedAt": "2026-10-13T23:54:42.104Z",
           "history": [
             {
               "at": "2026-10-13T23:04:50.939Z",
               "status": "en_curso",
               "evidence": "docs/fuentes/poblacion-y-limites.md fija centro de celda, NoData explícito, proyección WGS84 y superficie geodésica; documenté límites de visualización separados del perímetro de cálculo. Faltan pruebas y verificación final."
+            },
+            {
+              "at": "2026-10-13T23:49:03.700Z",
+              "status": "en_curso",
+              "evidence": "El servicio usa el centro de cada celda EPSG:4326 y suma el Float32 completo cuando cae dentro; la máscara explícita excluye NoData y conserva celdas válidas de valor cero. La referencia Rasterio y el contador de celdas verifican esa regla, pero la interfaz aún no explica cómo se trata una celda cruzada parcialmente ni que agua solo se omite si figura como NoData. Añadiendo la explicación traducida antes de completar."
+            },
+            {
+              "at": "2026-10-13T23:54:42.104Z",
+              "status": "en_curso",
+              "evidence": "Añadí populationSamplingMethod en los veinte catálogos (123 claves cada uno) y lo presento junto al resultado: regla del centro de celda, exclusión de celdas cruzadas parcialmente, NoData según máscara, CRS EPSG:4326 y área geodésica. Auditoría y compilación correctas; falta verificación pública."
             }
           ],
           "blockId": "3B"

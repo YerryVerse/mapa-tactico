@@ -54,6 +54,7 @@
   "populationEstimate": "Población estimada",
   "populationAreaLabel": "Área consultada",
   "populationMethod": "Estimación WorldPop 2025; celdas de 100 m con unidad de personas por celda.",
+  "populationSamplingMethod": "Se suma el valor completo de una celda si su centro cae dentro del área; de lo contrario se excluye, aunque el límite la cruce parcialmente. El agua solo se omite si la fuente la marca como NoData. El raster usa coordenadas geográficas (EPSG:4326) y el área se calcula geodésicamente.",
   "populationSmallAreaResolution": "El área es menor que una celda nominal de 100 m; la cifra es una estimación de resolución de cuadrícula, no un conteo calle por calle.",
   "populationDataGaps": "El total suma solo las celdas con datos; no representa toda el área.",
   "populationQueryFailed": "No se pudo calcular la población. Inténtalo de nuevo.",

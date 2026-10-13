@@ -54,6 +54,7 @@
   "populationEstimate": "Ƙiyasin yawan jama’a",
   "populationAreaLabel": "Yankin bincike",
   "populationMethod": "Ƙiyasin WorldPop na 2025; ƙwayoyin mita 100, mutane a kowace ƙwaya.",
+  "populationSamplingMethod": "Ana ƙirga cikakkiyar ƙimar sel idan tsakiyarsa yana cikin yankin; in ba haka ba ana cire shi ko da iyaka ta ratsa wani ɓangare. Ana cire ruwa ne kawai idan tushen ya yi masa alamar NoData. Raster ɗin yana amfani da ma'aunin ƙasa (EPSG:4326), kuma ana lissafin faɗi ta hanyar geodesic.",
   "populationSmallAreaResolution": "Wannan yanki ya fi ƙaramin ƙwayar grid ta mita 100; adadin ƙiyasi ne bisa ƙudurin grid, ba ƙidayar kowane titi ba.",
   "populationDataGaps": "Jimillar ya haɗa sel ɗin da ke da bayanai kawai; ba ya wakiltar yankin gaba ɗaya.",
   "populationQueryFailed": "Ba a iya lissafa yawan jama’a ba. Sake gwadawa.",

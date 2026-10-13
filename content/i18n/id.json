@@ -54,6 +54,7 @@
   "populationEstimate": "Perkiraan populasi",
   "populationAreaLabel": "Area yang dihitung",
   "populationMethod": "Perkiraan WorldPop 2025; sel 100 m dengan satuan orang per sel.",
+  "populationSamplingMethod": "Nilai seluruh sel dijumlahkan jika pusatnya berada di dalam area; jika tidak, sel dikecualikan meski batas memotongnya sebagian. Air hanya dikecualikan jika sumber menandainya sebagai NoData. Raster memakai koordinat geografis (EPSG:4326); luas dihitung secara geodesik.",
   "populationSmallAreaResolution": "Area ini lebih kecil daripada satu sel kisi nominal 100 m; angka ini adalah estimasi resolusi kisi, bukan hitungan per jalan.",
   "populationDataGaps": "Jumlah hanya menjumlahkan sel yang memiliki data; ini tidak mewakili seluruh area.",
   "populationQueryFailed": "Populasi tidak dapat dihitung. Coba lagi.",

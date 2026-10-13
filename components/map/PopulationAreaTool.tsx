@@ -344,6 +344,7 @@ export default function PopulationAreaTool({map,open,onClose}:{map:Map|null;open
       <p className="population-value"><strong>{number(language,result.population,{maximumFractionDigits:0})}</strong> {t('populationPeople')}</p>
       <p>{t('populationAreaLabel')}: {number(language,result.areaKm2,{maximumFractionDigits:result.areaKm2<1?6:1})} km²</p>
       <p>{t('populationMethod')}</p>
+      <p>{t('populationSamplingMethod')}</p>
       {result.areaKm2<0.01&&<p role="status">{t('populationSmallAreaResolution')}</p>}
       {result.coverage.status==='partial'&&<p role="status">{t('populationDataGaps')} ({number(language,result.coverage.validGridCells)}/{number(language,result.coverage.intersectedGridCells)} {t('populationValidCells')})</p>}
     </article>}

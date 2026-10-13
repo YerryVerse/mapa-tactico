@@ -54,6 +54,7 @@
   "populationEstimate": "Population estimée",
   "populationAreaLabel": "Zone interrogée",
   "populationMethod": "Estimation WorldPop 2025 ; cellules de 100 m en personnes par cellule.",
+  "populationSamplingMethod": "Une cellule contribue avec sa valeur entière si son centre se trouve dans la zone ; sinon, elle est exclue même si la limite la traverse en partie. L’eau n’est exclue que si la source la marque NoData. Le raster utilise des coordonnées géographiques (EPSG:4326) et la superficie est calculée géodésiquement.",
   "populationSmallAreaResolution": "Cette zone est plus petite qu’une cellule de grille nominale de 100 m ; le chiffre est une estimation à la résolution de la grille, pas un décompte rue par rue.",
   "populationDataGaps": "Le total additionne uniquement les cellules avec des données ; il ne représente pas toute la zone.",
   "populationQueryFailed": "Impossible de calculer la population. Réessayez.",

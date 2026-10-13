@@ -54,6 +54,7 @@
   "populationEstimate": "Makadirio ya idadi ya watu",
   "populationAreaLabel": "Eneo lililoulizwa",
   "populationMethod": "Makadirio ya WorldPop ya 2025; seli za mita 100, watu kwa kila seli.",
+  "populationSamplingMethod": "Seli huchangia thamani yake yote ikiwa kitovu chake kiko ndani ya eneo; vinginevyo huondolewa hata kama mpaka unakata sehemu yake. Maji huondolewa tu chanzo kinapoyaweka alama ya NoData. Rasta hutumia viwianishi vya kijiografia (EPSG:4326), na eneo hukokotolewa kwa njia ya kijiodesia.",
   "populationSmallAreaResolution": "Eneo hili ni dogo kuliko seli ya kawaida ya gridi ya mita 100; idadi ni makadirio ya mwonekano wa gridi, si hesabu ya kila mtaa.",
   "populationDataGaps": "Jumla inajumlisha seli zenye data pekee; haiwakilishi eneo lote.",
   "populationQueryFailed": "Idadi ya watu haikuweza kuhesabiwa. Jaribu tena.",

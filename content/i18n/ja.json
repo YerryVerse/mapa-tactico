@@ -54,6 +54,7 @@
   "populationEstimate": "推定人口",
   "populationAreaLabel": "計算対象の面積",
   "populationMethod": "WorldPop 2025年推定値。100mセル、単位はセル当たりの人数。",
+  "populationSamplingMethod": "セルの中心が対象区域内にある場合、そのセルの値全体を加算します。中心が区域外なら、境界が一部を横切っていても除外します。水域はデータソースがNoDataと指定した場合にのみ除外されます。ラスターは地理座標系（EPSG:4326）を使用し、面積は測地線に沿って計算されます。",
   "populationSmallAreaResolution": "この区域は公称100 mグリッドセルより小さいため、数値はグリッド解像度での推定であり、街路ごとの人数ではありません。",
   "populationDataGaps": "合計にはデータのあるセルのみを加算しており、地域全体を表すものではありません。",
   "populationQueryFailed": "人口を計算できませんでした。再試行してください。",

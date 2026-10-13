@@ -54,6 +54,7 @@
   "populationEstimate": "Dân số ước tính",
   "populationAreaLabel": "Diện tích truy vấn",
   "populationMethod": "Ước tính WorldPop năm 2025; ô 100 m, đơn vị người mỗi ô.",
+  "populationSamplingMethod": "Một ô được tính toàn bộ giá trị nếu tâm ô nằm trong khu vực; nếu không thì ô bị loại, kể cả khi ranh giới chỉ cắt qua một phần. Nước chỉ bị loại khi nguồn đánh dấu là NoData. Raster dùng tọa độ địa lý (EPSG:4326), và diện tích được tính theo trắc địa.",
   "populationSmallAreaResolution": "Khu vực này nhỏ hơn một ô lưới danh nghĩa 100 m; con số là ước tính theo độ phân giải lưới, không phải số đếm theo từng con phố.",
   "populationDataGaps": "Tổng chỉ cộng các ô có dữ liệu; không đại diện cho toàn bộ khu vực.",
   "populationQueryFailed": "Không thể tính dân số. Hãy thử lại.",
