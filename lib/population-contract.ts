@@ -8,6 +8,8 @@ export const POPULATION_MAX_VERTICES=5_000;
 export const POPULATION_MAX_POLYGONS=12;
 export const POPULATION_ADMIN_MAX_VERTICES=500_000;
 export const POPULATION_ADMIN_MAX_POLYGONS=100_000;
+export const POPULATION_ADMIN_DISPLAY_MAX_VERTICES=20_000;
+export const POPULATION_ADMIN_DISPLAY_MAX_POLYGONS=12;
 export const POPULATION_MAX_AREA_KM2=50_000;
 export const POPULATION_DAILY_CALL_BUDGET=600;
 export const POPULATION_TIMEOUT_MS=20_000;
@@ -54,7 +56,7 @@ export const populationAdminBoundaryGeometrySchema=z.union([adminPolygonGeometry
 });
 export const populationAreaQuerySchema=z.object({
   geometry:populationGeometrySchema,
-  countryCodes:z.array(z.string().regex(/^[A-Z]{3}$/)).min(1).max(8).refine(codes=>new Set(codes).size===codes.length,'Country codes must be unique')
+  countryCodes:z.array(z.string().regex(/^[A-Z]{3}$/)).max(8).refine(codes=>new Set(codes).size===codes.length,'Country codes must be unique').optional()
 }).strict();
 export type PopulationGeometry=z.infer<typeof populationGeometrySchema>;
 export type PopulationAreaQuery=z.infer<typeof populationAreaQuerySchema>;
@@ -63,8 +65,7 @@ type PopulationRing=PopulationPosition[];
 
 export const populationErrorSchema=z.enum(['invalid_geometry','invalid_country','no_coverage','partial_coverage','area_limit','quota_exceeded','provider_timeout','provider_unavailable','provider_incompatible','query_failed']);
 export type PopulationError=z.infer<typeof populationErrorSchema>;
-export const populationReplySchema=z.union([
-  z.object({
+const populationAvailableReplySchema=z.object({
     status:z.literal('available'),
     geometryHash:z.string().regex(/^[0-9a-f]{64}$/),
     dataVersion:z.string().regex(/^[0-9a-f]{64}$/),
@@ -82,8 +83,20 @@ export const populationReplySchema=z.union([
     coverage:z.object({status:z.enum(['complete','partial']),validGridCells:z.number().int().positive(),intersectedGridCells:z.number().int().positive(),noDataGridCells:z.number().int().nonnegative()}).strict(),
     sourceDatasets:z.array(z.object({countryCode:z.string().regex(/^[A-Z]{3}$/),datasetId:z.string().min(1),sourceSha256:z.string().regex(/^[0-9a-f]{64}$/)}).strict()).min(1).max(8),
     processingTimeMs:z.number().int().nonnegative()
-  }).strict(),
-  z.object({status:z.enum(['error','no_coverage','partial_coverage']),error:populationErrorSchema,retryAfter:z.number().int().min(1).max(86_400).optional(),unsupportedCountryCodes:z.array(z.string().regex(/^[A-Z]{3}$/)).max(8).optional()}).strict()
+}).strict();
+const populationErrorReplySchema=z.object({status:z.enum(['error','no_coverage','partial_coverage']),error:populationErrorSchema,retryAfter:z.number().int().min(1).max(86_400).optional(),unsupportedCountryCodes:z.array(z.string().regex(/^[A-Z]{3}$/)).max(8).optional()}).strict();
+const populationAdminErrorReplySchema=z.object({status:z.enum(['error','no_coverage','partial_coverage']),error:z.string().min(1).max(80),retryAfter:z.number().int().min(1).max(86_400).optional(),unsupportedCountryCodes:z.array(z.string().regex(/^[A-Z]{3}$/)).max(8).optional()}).strict();
+export const populationAdminBoundarySchema=z.object({
+  boundaryLayerId:z.string().regex(/^[A-Z]{3}-ADM[012]-[A-Za-z0-9-]{3,80}$/),
+  featureId:z.string().min(1).max(160),name:z.string().min(1).max(240),countryCode:z.string().regex(/^[A-Z]{3}$/),
+  level:z.enum(['ADM0','ADM1','ADM2']),boundaryYear:z.string().min(1).max(20),license:z.string().min(1).max(240),source:z.string().min(1).max(240),
+  aliases:z.array(z.string().max(240)).max(10),geometryType:z.enum(['Polygon','MultiPolygon']),geometry:populationAdminBoundaryGeometrySchema.optional(),
+  geometryRole:z.literal('display_only'),geometrySimplified:z.boolean(),areaKm2:z.number().finite().positive().optional()
+}).strict();
+export const populationReplySchema=z.union([populationAvailableReplySchema,populationErrorReplySchema]);
+export const populationAdminReplySchema=z.union([
+  populationAvailableReplySchema.extend({boundary:populationAdminBoundarySchema}).strict(),
+  populationAdminErrorReplySchema
 ]);
 
 export function geometryVertexCount(geometry:PopulationGeometry){

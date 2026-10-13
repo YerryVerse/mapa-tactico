@@ -1,9 +1,10 @@
 import {area as geodesicArea} from '@turf/area';
 import {booleanValid} from '@turf/boolean-valid';
-import {verifyPopulationGeometryRuntime} from './population-geometry';
-import {canonicalGeometryKey,geometryVertexCount,populationAdminBoundaryGeometrySchema,populationAreaQuerySchema,populationReplySchema,POPULATION_ADMIN_MAX_VERTICES,POPULATION_CACHE_TTL_SECONDS,POPULATION_DAILY_CALL_BUDGET,POPULATION_MAX_AREA_KM2,POPULATION_MAX_BODY_BYTES,POPULATION_METHOD,POPULATION_RELEASE,POPULATION_RESOLUTION,POPULATION_SOURCE,POPULATION_TIMEOUT_MS,POPULATION_YEAR,type PopulationError,type PopulationGeometry} from './population-contract';
+import {normalizePopulationGeometry,verifyPopulationGeometryRuntime} from './population-geometry';
+import {canonicalGeometryKey,geometryVertexCount,populationAdminBoundaryGeometrySchema,populationAreaQuerySchema,populationGeometrySchema,populationReplySchema,POPULATION_ADMIN_MAX_VERTICES,POPULATION_CACHE_TTL_SECONDS,POPULATION_DAILY_CALL_BUDGET,POPULATION_MAX_AREA_KM2,POPULATION_MAX_BODY_BYTES,POPULATION_METHOD,POPULATION_RELEASE,POPULATION_RESOLUTION,POPULATION_SOURCE,POPULATION_TIMEOUT_MS,POPULATION_YEAR,type PopulationError,type PopulationGeometry} from './population-contract';
 import {adminLayerById,populationDataset,populationEdition,verifyPopulationCatalog} from './population-catalog';
 import {calculatePopulationFromAdminAggregate,calculatePopulationFromRasters,loadPopulationActivation,POPULATION_RASTER_MAX_BLOCKS_PER_QUERY,type PopulationRasterActivation} from './population-raster-service';
+import {POPULATION_COUNTRY_CELL_BUDGET,populationCountryCandidates} from './population-country-extents';
 
 const JSON_HEADERS={'Cache-Control':'no-store','Content-Type':'application/json; charset=utf-8'};
 let activeQueries=0;
@@ -70,15 +71,25 @@ export async function populationAreaResponse(request:Request,services:Services){
   let body:unknown;try{body=JSON.parse(raw);}catch{return fail(400,'invalid_geometry');}
   const parsed=populationAreaQuerySchema.safeParse(body);
   if(!parsed.success)return fail(400,'invalid_geometry');
-  const query=parsed.data;
+  const submitted=parsed.data;
+  let geometry:PopulationGeometry;
+  try{geometry=normalizePopulationGeometry(submitted.geometry);}catch{return fail(400,'invalid_geometry');}
+  const normalized=populationGeometrySchema.safeParse(geometry);
+  if(!normalized.success)return fail(400,'invalid_geometry');
   if(!verifyPopulationGeometryRuntime())return fail(503,'provider_incompatible');
-  if(!booleanValid(query.geometry))return fail(400,'invalid_geometry');
-  const geoAreaKm2=geodesicArea(query.geometry as never)/1_000_000;
+  if(!booleanValid(geometry))return fail(400,'invalid_geometry');
+  const geoAreaKm2=geodesicArea(geometry as never)/1_000_000;
   if(!Number.isFinite(geoAreaKm2)||geoAreaKm2<=0)return fail(400,'invalid_geometry');
   if(geoAreaKm2>POPULATION_MAX_AREA_KM2)return fail(413,'area_limit');
-  const unsupported=query.countryCodes.filter(code=>!populationDataset(code));
+  const candidates=populationCountryCandidates(geometry);
+  if(candidates.overBudget||candidates.cellsVisited>POPULATION_COUNTRY_CELL_BUDGET)return fail(413,'area_limit');
+  const countryCodes=candidates.countryCodes;
+  if(submitted.countryCodes?.some(code=>!countryCodes.includes(code)))return fail(400,'invalid_country');
+  if(countryCodes.length>8)return fail(413,'area_limit');
+  if(!countryCodes.length)return fail(422,'no_coverage');
+  const unsupported=countryCodes.filter(code=>!populationDataset(code));
   if(unsupported.length){
-    const hasSupported=query.countryCodes.some(code=>Boolean(populationDataset(code)));
+    const hasSupported=countryCodes.some(code=>Boolean(populationDataset(code)));
     return fail(422,hasSupported?'partial_coverage':'no_coverage',{unsupportedCountryCodes:unsupported});
   }
   if(!await verifyPopulationCatalog())return fail(503,'provider_incompatible');
@@ -86,8 +97,8 @@ export async function populationAreaResponse(request:Request,services:Services){
   let activation:PopulationRasterActivation;
   try{activation=await loadPopulationActivation(services.bucket);}
   catch(error){return failed(error,request.signal);}
-  const countryCodes=query.countryCodes.slice().sort();
-  const hash=await digest(`${activation.catalogSha256}\n${activation.release}\n${POPULATION_SOURCE}\n${POPULATION_METHOD}\n${countryCodes.join(',')}\n${canonicalGeometryKey(query.geometry)}`);
+  const activeCountryCodes=countryCodes.slice().sort();
+  const hash=await digest(`${activation.catalogSha256}\n${activation.release}\n${POPULATION_SOURCE}\n${POPULATION_METHOD}\n${activeCountryCodes.join(',')}\n${canonicalGeometryKey(geometry)}`);
   const key=cacheRequest(new URL(request.url).origin,hash);
   try{
     const cached=await services.cache?.match(key);
@@ -108,15 +119,15 @@ export async function populationAreaResponse(request:Request,services:Services){
       bucket:services.bucket,
       cache:services.cache,
       origin:new URL(request.url).origin,
-      geometry:query.geometry,
-      countryCodes,
+      geometry,
+      countryCodes:activeCountryCodes,
       activation,
       maxBlocks:POPULATION_RASTER_MAX_BLOCKS_PER_QUERY,
       signal:controller.signal,
       now:services.now
     });
     const coverage={status:result.noDataGridCells?'partial' as const:'complete' as const,validGridCells:result.validGridCells,intersectedGridCells:result.intersectedGridCells,noDataGridCells:result.noDataGridCells};
-    const reply={status:'available' as const,geometryHash:hash,dataVersion:result.dataVersion,countryCodes,population:result.population,areaKm2:geoAreaKm2,year:POPULATION_YEAR,edition:`${POPULATION_RELEASE}-v1` as const,resolution:POPULATION_RESOLUTION,units:'people_per_grid_cell' as const,method:POPULATION_METHOD,source:POPULATION_SOURCE,license:'CC-BY-4.0' as const,doi:'10.5258/SOTON/WP00839' as const,coverage,sourceDatasets:result.datasets,processingTimeMs:result.processingTimeMs};
+    const reply={status:'available' as const,geometryHash:hash,dataVersion:result.dataVersion,countryCodes:activeCountryCodes,population:result.population,areaKm2:geoAreaKm2,year:POPULATION_YEAR,edition:`${POPULATION_RELEASE}-v1` as const,resolution:POPULATION_RESOLUTION,units:'people_per_grid_cell' as const,method:POPULATION_METHOD,source:POPULATION_SOURCE,license:'CC-BY-4.0' as const,doi:'10.5258/SOTON/WP00839' as const,coverage,sourceDatasets:result.datasets,processingTimeMs:result.processingTimeMs};
     try{if(services.cache)await services.cache.put(key,Response.json(reply,{headers:{'Cache-Control':`public, max-age=${POPULATION_CACHE_TTL_SECONDS}`,'Content-Type':'application/json; charset=utf-8'}}));}catch{/* a cache write failure does not discard a verified raster result */}
     return Response.json(reply,{headers:JSON_HEADERS});
   }catch(error){return failed(error,controller.signal);}

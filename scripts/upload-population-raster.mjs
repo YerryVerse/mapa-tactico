@@ -1,6 +1,6 @@
 import {createHash} from 'node:crypto';
 import {createReadStream} from 'node:fs';
-import {mkdir,open,readFile,rename,stat,writeFile} from 'node:fs/promises';
+import {mkdir,open,readFile,rename,stat,unlink,writeFile} from 'node:fs/promises';
 import {dirname,join,resolve} from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {setTimeout as delay} from 'node:timers/promises';
@@ -11,6 +11,9 @@ const catalog=JSON.parse(await readFile(resolve(root,'data/population/catalog.js
 const endpoint=(process.env.POPULATION_INGEST_URL??'https://atlas-escenarios-hud.yerrybatista.chatgpt.site/api/ops/population/import').replace(/\/$/,'');
 const uploadConcurrency=Number(process.env.POPULATION_UPLOAD_CONCURRENCY??6);
 if(!Number.isSafeInteger(uploadConcurrency)||uploadConcurrency<1||uploadConcurrency>12)throw new Error('POPULATION_UPLOAD_CONCURRENCY must be an integer from 1 to 12.');
+const countryConcurrency=Number(process.env.POPULATION_COUNTRY_CONCURRENCY??4);
+if(!Number.isSafeInteger(countryConcurrency)||countryConcurrency<1||countryConcurrency>8)throw new Error('POPULATION_COUNTRY_CONCURRENCY must be an integer from 1 to 8.');
+const partConcurrency=4,maxConcurrentPartRequests=8;
 const args=process.argv.slice(2),selected=[];
 for(let index=0;index<args.length;index++){
   if(args[index]==='--country'&&args[index+1])selected.push(args[++index].toUpperCase());
@@ -22,9 +25,11 @@ if(countries.some(code=>!allCountries.includes(code)))throw new Error('A selecte
 
 async function readSecret(){
   if(process.env.POPULATION_INGEST_SECRET)return process.env.POPULATION_INGEST_SECRET;
-  process.stdout.write('Waiting for the operator secret on stdin (input is not echoed).\n');
+  process.stdout.write('Waiting for the operator secret on stdin (input is hidden).\n');
   const {createInterface}=await import('node:readline');
-  const reader=createInterface({input:process.stdin,crlfDelay:Infinity,terminal:false});
+  const terminal=Boolean(process.stdin.isTTY);
+  const quietOutput=terminal?{columns:process.stdout.columns??80,isTTY:true,on(){return this;},removeListener(){return this;},write(){return true;}}:undefined;
+  const reader=createInterface({input:process.stdin,...(quietOutput?{output:quietOutput}:{}),crlfDelay:Infinity,terminal});
   const secret=await new Promise((resolveSecret,reject)=>{reader.once('line',resolveSecret);reader.once('close',()=>reject(new Error('Operator secret was not supplied.')));});
   reader.close();
   if(typeof secret!=='string'||secret.length<32)throw new Error('The operator secret must contain at least 32 characters.');
@@ -35,6 +40,7 @@ const headers={'Authorization':`Bearer ${secret}`,'Accept':'application/json'};
 const statePath=join(runtimeRoot,'upload-progress.json');
 await mkdir(runtimeRoot,{recursive:true});
 let progress=await readFile(statePath,'utf8').then(JSON.parse).catch(error=>{if(error.code==='ENOENT')return {schemaVersion:1,assets:{},countries:{}};throw error;});
+let progressWriteSequence=0,progressWriteQueue=Promise.resolve();
 
 function sha256(bytes){return createHash('sha256').update(bytes).digest('hex');}
 async function fileSha256(path){
@@ -47,20 +53,31 @@ async function saveProgress(){
   const write=async()=>{
     const old=await readFile(statePath,'utf8').catch(error=>{if(error.code==='ENOENT')return null;throw error;});
     if(old===serialized)return;
-    const temporary=statePath+'.tmp';await writeFile(temporary,serialized,{encoding:'utf8'});await rename(temporary,statePath);
+    const temporary=`${statePath}.${process.pid}.${++progressWriteSequence}.tmp`;
+    await writeFile(temporary,serialized,{encoding:'utf8'});
+    let renameError;
+    for(let attempt=1;attempt<=6;attempt++){
+      try{await rename(temporary,statePath);return;}
+      catch(error){
+        renameError=error;
+        if(!['EPERM','EACCES','EBUSY'].includes(error.code)||attempt===6)break;
+        await delay(50*attempt);
+      }
+    }
+    await unlink(temporary).catch(()=>{});
+    throw renameError;
   };
   const pending=progressWriteQueue.then(write);
   progressWriteQueue=pending.catch(()=>{});
   await pending;
 }
-let progressWriteQueue=Promise.resolve();
-async function requestJson(action,body){
+async function requestJson(action,body,acceptedStatuses=[]){
   let lastError;
   for(let attempt=1;attempt<=5;attempt++){
     try{
       const response=await fetch(`${endpoint}?action=${action}`,{method:'POST',headers:{...headers,'Content-Type':'application/json'},body:JSON.stringify(body)});
       const result=await response.json().catch(()=>({error:'invalid_server_response'}));
-      if(response.ok)return result;
+      if(response.ok||acceptedStatuses.includes(response.status))return result;
       if(response.status<500||attempt===5)throw new Error(`Operator API action ${action} returned HTTP ${response.status}: ${result.error??'unknown_error'}`);
       lastError=new Error(`HTTP ${response.status}`);
     }catch(error){if(attempt===5)throw error;lastError=error;}
@@ -83,6 +100,19 @@ async function requestPart(key,uploadId,partNumber,bytes,partHash){
   throw lastError??new Error(`Could not upload part ${partNumber}.`);
 }
 
+let activePartRequests=0;
+const partRequestWaiters=[];
+async function withPartRequestSlot(operation){
+  if(activePartRequests>=maxConcurrentPartRequests)await new Promise(resolveRequest=>partRequestWaiters.push(resolveRequest));
+  else activePartRequests++;
+  try{return await operation();}
+  finally{
+    const next=partRequestWaiters.shift();
+    if(next)next();
+    else activePartRequests--;
+  }
+}
+
 async function uploadAsset(key,path,expectedSha256){
   const bytes=Number((await stat(path)).size);
   const actualSha256=await fileSha256(path);
@@ -98,22 +128,28 @@ async function uploadAsset(key,path,expectedSha256){
   const savedParts=new Map((start.parts??[]).map(part=>[Number(part.part_number??part.partNumber),part]));
   const file=await open(path,'r');
   try{
-    let offset=0,partNumber=1;
-    while(offset<bytes){
-      const length=Math.min(partBytes,bytes-offset),chunk=Buffer.allocUnsafe(length);
-      const read=await file.read(chunk,0,length,offset);
-      if(read.bytesRead!==length)throw new Error(`Local file was truncated during upload: ${key}`);
-      const partHash=sha256(chunk),saved=savedParts.get(partNumber);
-      if(saved){
-        if(saved.sha256!==partHash||Number(saved.bytes)!==length)throw new Error(`Server has a conflicting retry checkpoint for ${key}, part ${partNumber}.`);
-      }else{
-        await requestPart(key,start.uploadId,partNumber,chunk,partHash);
-      }
-      offset+=length;
-      progress.assets[key]={status:'uploading',sha256:actualSha256,bytes,completedParts:partNumber,updatedAt:new Date().toISOString()};
+    const totalParts=Math.ceil(bytes/partBytes),completedParts=new Set(savedParts.keys());
+    for(let firstPart=1;firstPart<=totalParts;firstPart+=partConcurrency){
+      const group=Array.from({length:Math.min(partConcurrency,totalParts-firstPart+1)},(_,index)=>firstPart+index);
+      await Promise.all(group.map(async partNumber=>{
+        const offset=(partNumber-1)*partBytes,length=Math.min(partBytes,bytes-offset),saved=savedParts.get(partNumber);
+        if(saved){
+          await withPartRequestSlot(async()=>{
+            const chunk=Buffer.allocUnsafe(length),read=await file.read(chunk,0,length,offset);
+            if(read.bytesRead!==length)throw new Error(`Local file was truncated during upload: ${key}`);
+            if(saved.sha256!==sha256(chunk)||Number(saved.bytes)!==length)throw new Error(`Server has a conflicting retry checkpoint for ${key}, part ${partNumber}.`);
+          });
+        }else await withPartRequestSlot(async()=>{
+          const chunk=Buffer.allocUnsafe(length),read=await file.read(chunk,0,length,offset);
+          if(read.bytesRead!==length)throw new Error(`Local file was truncated during upload: ${key}`);
+          await requestPart(key,start.uploadId,partNumber,chunk,sha256(chunk));
+        });
+        completedParts.add(partNumber);
+      }));
+      const uploadedBytes=Math.min(bytes,Math.max(...group)*partBytes);
+      progress.assets[key]={status:'uploading',sha256:actualSha256,bytes,completedParts:completedParts.size,updatedAt:new Date().toISOString()};
       await saveProgress();
-      if(partNumber===1||offset===bytes||partNumber%8===0)process.stdout.write(`${key}: ${offset}/${bytes} bytes\n`);
-      partNumber++;
+      if(bytes>=1024*1024&&(firstPart===1||firstPart+group.length-1===totalParts||firstPart%8===1))process.stdout.write(`${key}: ${uploadedBytes}/${bytes} bytes (${completedParts.size}/${totalParts} parts)\n`);
     }
   }finally{await file.close();}
   const complete=await requestJson('complete',{key,uploadId:start.uploadId,sha256:actualSha256,bytes});
@@ -133,6 +169,14 @@ async function uploadCountry(countryCode){
     if(manifest.administrativeCoverage?.status!=='unavailable'||manifest.administrativeCoverage?.reason!=='no_pinned_geoboundaries_layer')throw new Error(`Missing administrative coverage must be explicit for ${countryCode}.`);
   }else if(manifest.administrativeCoverage?.status!=='available'||manifest.administrativeCoverage.layers!==expectedLayers.length||manifest.administrativeCoverage.features!==actualLayers.reduce((total,layer)=>total+layer.featureCount,0)){
     throw new Error(`Administrative coverage totals differ from the prepared layers for ${countryCode}.`);
+  }
+  const previous=progress.countries[countryCode];
+  if(previous?.status==='country_ready'&&previous.sourceSha256===manifest.sourceSha256){
+    const verified=await requestJson('verify-country',{countryCode,sourceSha256:manifest.sourceSha256},[409,422]);
+    if(verified.status==='country_ready'&&verified.manifestSha256===previous.manifestSha256&&verified.assets===previous.assets){
+      process.stdout.write(`${countryCode}: revalidación de manifiesto y objetos correcta (${verified.assets})\n`);
+      return;
+    }
   }
   const files=[
     {key:manifest.storage.data.key,path:join(folder,'data.bin'),sha256:manifest.storage.data.sha256},
@@ -164,10 +208,14 @@ async function uploadCountry(countryCode){
 const migration=await requestJson('migrate',{});
 if(migration.status!=='applied')throw new Error('The operator migration did not complete.');
 process.stdout.write(`D1 migration ready: ${migration.migration}\n`);
-for(let index=0;index<countries.length;index++){
-  process.stdout.write(`[${index+1}/${countries.length}] ${countries[index]}\n`);
-  await uploadCountry(countries[index]);
-}
+let nextCountry=0;
+await Promise.all(Array.from({length:Math.min(countryConcurrency,countries.length)},async()=>{
+  while(nextCountry<countries.length){
+    const index=nextCountry++,countryCode=countries[index];
+    process.stdout.write(`[${index+1}/${countries.length}] ${countryCode}\n`);
+    await uploadCountry(countryCode);
+  }
+}));
 if(countries.length===allCountries.length&&countries.every((code,index)=>code===allCountries[index])){
   const result=await requestJson('activate',{});
   if(result.status!=='activated'&&result.status!=='already_active')throw new Error('The R2 release activation did not complete.');

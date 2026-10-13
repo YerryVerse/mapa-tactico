@@ -155,19 +155,27 @@ async function sync() {
   if (firstSprint < 0 || commonContracts < 0) throw new Error('Faltan sprints o contratos comunes.');
   const contextHash = contextHashForAcceptance(plan, firstSprint, commonContracts);
   let firstAffected = old?.contextHash && old.contextHash !== contextHash ? 1 : null;
+  const affectedBlockRanks = new Map();
   const sprints = parsePlan(plan).map(source => {
     const previous = old?.sprints.find(s => s.number === source.number);
+    const blockOrder = new Map([...new Set(source.points.map(point => point.blockId))].map((blockId, index) => [blockId, index]));
     let changed = false;
+    let firstChangedBlockRank = Number.POSITIVE_INFINITY;
     const points = source.points.map(point => {
       const found = previous?.points.find(p => p.id === point.id) ?? (point.kind === 'aceptacion' ? previous?.points.find(p => p.kind === 'aceptacion' && p.text === point.text) : null);
       if (found && found.text === point.text) return { ...found, ...point };
       changed ||= Boolean(previous);
+      if (previous) firstChangedBlockRank = Math.min(firstChangedBlockRank, blockOrder.get(point.blockId) ?? 0);
       return { ...point, status: 'pendiente', evidence: '', updatedAt: stamp, history: found ? [...found.history, { at: stamp, status: 'pendiente', evidence: 'Cambió el requisito en el plan; necesita nueva verificación.' }] : [] };
     });
+    const currentIds = new Set(source.points.map(point => point.id));
+    for (const point of previous?.points ?? []) if (!currentIds.has(point.id)) firstChangedBlockRank = Math.min(firstChangedBlockRank, blockOrder.get(point.blockId) ?? 0);
     changed ||= Boolean(previous && previous.points.length !== points.length);
     if (changed) {
+      const affectedRank = Number.isFinite(firstChangedBlockRank) ? firstChangedBlockRank : 0;
+      affectedBlockRanks.set(source.number, affectedRank);
       firstAffected = Math.min(firstAffected ?? source.number, source.number);
-      for (const point of points.filter(p => p.kind === 'aceptacion' && p.status === 'terminado')) {
+      for (const point of points.filter(p => p.kind === 'aceptacion' && p.status === 'terminado' && (blockOrder.get(p.blockId) ?? 0) >= affectedRank)) {
         point.status = 'pendiente';
         point.evidence = 'Reverificar: cambiaron los requisitos del sprint.';
         point.updatedAt = stamp;
@@ -187,7 +195,9 @@ async function sync() {
     for (const sprint of sprints.filter(s => s.number >= firstAffected)) {
       const previous = old?.sprints.find(s => s.number === sprint.number);
       if (!previous) continue;
-      for (const point of sprint.points.filter(p => p.kind === 'aceptacion' && p.status === 'terminado')) {
+      const blockOrder = new Map([...new Set(sprint.points.map(point => point.blockId))].map((blockId, index) => [blockId, index]));
+      const affectedRank = sprint.number === firstAffected ? affectedBlockRanks.get(sprint.number) ?? 0 : 0;
+      for (const point of sprint.points.filter(p => p.kind === 'aceptacion' && p.status === 'terminado' && (blockOrder.get(p.blockId) ?? 0) >= affectedRank)) {
         point.status = 'pendiente';
         point.evidence = `Reverificar: cambiaron los requisitos o contratos desde el sprint ${firstAffected}.`;
         point.updatedAt = stamp;

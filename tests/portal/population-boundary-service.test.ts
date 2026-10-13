@@ -1,5 +1,7 @@
 import {describe,it,expect,vi} from 'vitest';
 import {populationAdminResponse,searchAdministrativeBoundaries} from '../../lib/population-boundary-service';
+import {populationAdminReplySchema} from '../../lib/population-contract';
+import {populationBoundarySearchReplySchema} from '../../lib/population-boundary-contract';
 import {populationDatabase,populationMemoryCache,populationRasterFixture} from './population-raster-fixture';
 
 const geometry={type:'Polygon',coordinates:[[[-0.15,51.50],[-0.10,51.50],[-0.10,51.48],[-0.15,51.48],[-0.15,51.50]]]};
@@ -16,13 +18,16 @@ describe('geoBoundaries administrative identifiers',()=>{
     const s=await services(),request=new Request('https://atlas.test/api/population/boundaries?countryCode=GBR&level=ADM2&q=Westminster');
     const response=await searchAdministrativeBoundaries(request,s);
     expect(response.status).toBe(200);
-    expect(await response.json()).toMatchObject({status:'available',provider:'geoBoundaries',releaseType:'gbOpen',results:[{boundaryLayerId:layerId,featureId,name:'Westminster',countryCode:'GBR',level:'ADM2',boundaryYear:'2019',license:'Open Government Licence v3.0'}]});
+    const body=await response.json();
+    expect(populationBoundarySearchReplySchema.safeParse(body).success).toBe(true);
+    expect(body).toMatchObject({status:'available',provider:'geoBoundaries',releaseType:'gbOpen',results:[{boundaryLayerId:layerId,featureId,name:'Westminster',countryCode:'GBR',level:'ADM2',boundaryYear:'2019',license:'Open Government Licence v3.0'}]});
     expect(String(s.fetcher.mock.calls[0][0])).toMatch(/^https:\/\/github\.com\/wmgeolab\/geoBoundaries\/raw\/9469f09\/releaseData\/gbOpen\/GBR\/ADM2\//);
   });
   it('computes population from the server-fetched feature geometry, not a visitor-supplied polygon',async()=>{
     const s=await services(),request=new Request('https://atlas.test/api/population/admin',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({boundaryLayerId:layerId,featureId})});
     const response=await populationAdminResponse(request,s),body=await response.json() as Record<string,any>;
     expect(response.status).toBe(200);
+    expect(populationAdminReplySchema.safeParse(body).success).toBe(true);
     expect(body).toMatchObject({status:'available',year:2025,edition:'R2025A-v1',coverage:{status:'partial',noDataGridCells:1},boundary:{boundaryLayerId:layerId,featureId,name:'Westminster',countryCode:'GBR',level:'ADM2',boundaryYear:'2019',geometry}});
     expect(body.population).toBe(body.coverage.validGridCells-1);
     expect(s.fetcher).toHaveBeenCalledTimes(1);

@@ -2,15 +2,15 @@ import {describe,it,expect} from 'vitest';
 import {area as geodesicArea} from '@turf/area';
 import {booleanValid} from '@turf/boolean-valid';
 import polygonClipping from 'polygon-clipping';
-import {canonicalGeometryKey,POPULATION_MAX_AREA_KM2,type PopulationGeometry} from '../../lib/population-contract';
-import {geodesicAreaKm2,toClippingGeometry,verifyPopulationGeometryRuntime} from '../../lib/population-geometry';
+import {canonicalGeometryKey,populationGeometrySchema,POPULATION_MAX_AREA_KM2,POPULATION_MAX_BODY_BYTES,POPULATION_MAX_VERTICES,type PopulationGeometry} from '../../lib/population-contract';
+import {canonicalLongitude,geodesicAreaKm2,normalizePopulationGeometry,toClippingGeometry,verifyPopulationGeometryRuntime} from '../../lib/population-geometry';
 import {populationAreaResponse} from '../../lib/population-service';
 import {populationBoundaryCoverageSummary,verifyPopulationCatalog} from '../../lib/population-catalog';
 import {populationDatabase,populationMemoryCache,populationRasterFixture} from './population-raster-fixture';
 
 const london:PopulationGeometry={type:'Polygon',coordinates:[[[-0.15,51.50],[-0.10,51.50],[-0.10,51.48],[-0.15,51.48],[-0.15,51.50]]]};
-function request(geometry:PopulationGeometry=london,countryCodes=['GBR'],signal?:AbortSignal){
-  return new Request('https://atlas.test/api/population/area',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({geometry,countryCodes}),signal});
+function request(geometry:PopulationGeometry=london,countryCodes?:string[],signal?:AbortSignal){
+  return new Request('https://atlas.test/api/population/area',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({geometry,...(countryCodes?{countryCodes}:{})}),signal});
 }
 function rectangle(west:number,south:number,east:number,north:number):PopulationGeometry{
   return {type:'Polygon',coordinates:[[[west,south],[east,south],[east,north],[west,north],[west,south]]]};
@@ -50,9 +50,10 @@ describe('anonymous WorldPop raster query service',()=>{
   });
   it('distinguishes unsupported-country coverage from a geometry outside the raster',async()=>{
     const fixture=await populationRasterFixture(),database=populationDatabase();
-    const unsupported=await populationAreaResponse(request(london,['VAT']),{...database,bucket:fixture.bucket});
-    expect(unsupported.status).toBe(422);expect(await unsupported.json()).toMatchObject({status:'no_coverage',error:'no_coverage',unsupportedCountryCodes:['VAT']});
-    const outside=await populationAreaResponse(request(rectangle(140,-35,140.1,-34.9)),{...database,bucket:fixture.bucket});
+    const vatican=rectangle(12.449,41.899,12.456,41.906);
+    const unsupported=await populationAreaResponse(request(vatican,['VAT']),{...database,bucket:fixture.bucket});
+    expect(unsupported.status).toBe(422);expect(await unsupported.json()).toMatchObject({status:'partial_coverage',error:'partial_coverage',unsupportedCountryCodes:['VAT']});
+    const outside=await populationAreaResponse(request(rectangle(-140,0,-139.9,0.1)),{...database,bucket:fixture.bucket});
     expect(outside.status).toBe(422);expect(await outside.json()).toMatchObject({status:'no_coverage',error:'no_coverage'});
   });
   it('rejects malformed geometry and areas beyond the published limit before quota use',async()=>{
@@ -64,9 +65,22 @@ describe('anonymous WorldPop raster query service',()=>{
     expect((await populationAreaResponse(request(rectangle(-5,45,5,55)),{...database,bucket:fixture.bucket})).status).toBe(413);
     expect(database.prepare).not.toHaveBeenCalled();
   });
+  it('bounds request bytes and vertices before quota use or raster reads',async()=>{
+    const fixture=await populationRasterFixture(),database=populationDatabase();
+    const oversizedBody=new Request('https://atlas.test/api/population/area',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({geometry:london})+' '.repeat(POPULATION_MAX_BODY_BYTES+1)});
+    const byteReply=await populationAreaResponse(oversizedBody,{...database,bucket:fixture.bucket});
+    expect(byteReply.status).toBe(413);expect(await byteReply.json()).toMatchObject({error:'area_limit'});
+
+    const vertices=Array.from({length:POPULATION_MAX_VERTICES+1},()=>[0,0] as [number,number]);
+    const geometry={type:'Polygon' as const,coordinates:[vertices]};
+    expect(new TextEncoder().encode(JSON.stringify({geometry})).byteLength).toBeLessThan(POPULATION_MAX_BODY_BYTES);
+    const vertexReply=await populationAreaResponse(request(geometry),{...database,bucket:fixture.bucket});
+    expect(vertexReply.status).toBe(400);expect(await vertexReply.json()).toMatchObject({error:'invalid_geometry'});
+    expect(database.prepare).not.toHaveBeenCalled();expect(fixture.rangeReads).toHaveLength(0);
+  });
   it('applies the bounded R2 tile-read budget before loading a large raster window',async()=>{
     const fixture=await populationRasterFixture(),database=populationDatabase();
-    const response=await populationAreaResponse(request(rectangle(-1,50,1,52)),{...database,bucket:fixture.bucket});
+    const response=await populationAreaResponse(request(rectangle(-2,51.2,0,53.2)),{...database,bucket:fixture.bucket});
     expect(response.status).toBe(413);expect(await response.json()).toMatchObject({error:'area_limit'});
     expect(fixture.rangeReads).toHaveLength(0);
   });
@@ -100,6 +114,13 @@ describe('fixed geometry engine',()=>{
     expect(geodesicAreaKm2(london)).toBeLessThan(7.9);
     expect(geodesicArea(london as never)/1_000_000).toBeCloseTo(geodesicAreaKm2(london),8);
   });
+  it('accepts a small three-vertex polygon from the keyboard coordinate workflow',()=>{
+    const triangle:PopulationGeometry={type:'Polygon',coordinates:[[[-0.15,51.48],[-0.10,51.48],[-0.10,51.50],[-0.15,51.48]]]};
+    const normalized=normalizePopulationGeometry(triangle);
+    expect(populationGeometrySchema.safeParse(normalized).success).toBe(true);
+    expect(booleanValid(normalized)).toBe(true);
+    expect(geodesicAreaKm2(normalized)).toBeGreaterThan(0);
+  });
   it('unions shared areas before calculating, so overlaps count once',()=>{
     const a=toClippingGeometry(rectangle(0,0,2,1)),b=toClippingGeometry(rectangle(1,0,3,1));
     const merged=polygonClipping.union(a,b),overlap=polygonClipping.intersection(a,b);
@@ -111,5 +132,41 @@ describe('fixed geometry engine',()=>{
   it('produces the same cache identity when polygon orientation and starting point change',()=>{
     const rotated:PopulationGeometry={type:'Polygon',coordinates:[[[-0.10,51.50],[-0.10,51.48],[-0.15,51.48],[-0.15,51.50],[-0.10,51.50]]]};
     expect(canonicalGeometryKey(rotated)).toBe(canonicalGeometryKey(london));
+  });
+  it('splits a short antimeridian crossing into two small valid polygons',()=>{
+    const crossing=rectangle(179.5,10,-179.5,11),normalized=normalizePopulationGeometry(crossing);
+    expect(normalized.type).toBe('MultiPolygon');
+    expect(booleanValid(normalized)).toBe(true);
+    expect(geodesicAreaKm2(normalized)).toBeGreaterThan(11_000);
+    expect(geodesicAreaKm2(normalized)).toBeLessThan(13_000);
+    expect((normalized.type==='MultiPolygon'?normalized.coordinates:[])).toHaveLength(2);
+  });
+  it('normalizes the repeated rendered world to the same WGS84 area',()=>{
+    expect([canonicalLongitude(190),canonicalLongitude(181),canonicalLongitude(-181),canonicalLongitude(540)]).toEqual([-170,-179,179,180]);
+    const repeatedWorld:PopulationGeometry={type:'Polygon',coordinates:[[[190,10],[191,10],[191,11],[190,11],[190,10]]]};
+    const canonical:PopulationGeometry={type:'Polygon',coordinates:[[[-170,10],[-169,10],[-169,11],[-170,11],[-170,10]]]};
+    const normalized=normalizePopulationGeometry(repeatedWorld),expected=normalizePopulationGeometry(canonical);
+    expect(normalized).toEqual(expected);
+    expect(booleanValid(normalized)).toBe(true);
+    expect(geodesicAreaKm2(normalized)).toBeCloseTo(geodesicAreaKm2(expected),8);
+  });
+  it('unions repeated or overlapping polygons before counting their area',()=>{
+    const left=rectangle(0,0,1,1),right=rectangle(.5,0,1.5,1);
+    if(left.type!=='Polygon'||right.type!=='Polygon')throw new Error('Expected polygon fixtures');
+    const duplicated:PopulationGeometry={type:'MultiPolygon',coordinates:[left.coordinates,right.coordinates]};
+    const normalized=normalizePopulationGeometry(duplicated);
+    const expected=geodesicAreaKm2(normalizePopulationGeometry(rectangle(0,0,1.5,1)));
+    expect(normalized.type).toBe('Polygon');
+    expect(geodesicAreaKm2(normalized)).toBeCloseTo(expected,5);
+  });
+  it('keeps reversed coordinate order valid after normalization',()=>{
+    const reversed:PopulationGeometry={type:'Polygon',coordinates:[[[-0.10,51.48],[-0.10,51.50],[-0.15,51.50],[-0.15,51.48],[-0.10,51.48]]]};
+    const normalized=normalizePopulationGeometry(reversed),validated=populationGeometrySchema.safeParse(normalized);
+    expect(validated.success,JSON.stringify(validated.success?{}:validated.error.issues)).toBe(true);
+    expect(booleanValid(normalized)).toBe(true);
+  });
+  it('rejects an ambiguous polygon that spans most of the world without a date-line crossing edge',()=>{
+    const wide:PopulationGeometry={type:'Polygon',coordinates:[[[-170,-1],[-60,-1],[50,-1],[170,-1],[170,1],[50,1],[-60,1],[-170,1],[-170,-1]]]};
+    expect(()=>normalizePopulationGeometry(wide)).toThrow('population_geometry_wrap_ambiguous');
   });
 });

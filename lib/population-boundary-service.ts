@@ -1,6 +1,6 @@
 import {z} from 'zod';
 import {adminLayer,adminLayerById,verifyPopulationCatalog} from './population-catalog';
-import {geometryVertexCount,populationAdminBoundaryGeometrySchema,POPULATION_ADMIN_MAX_VERTICES} from './population-contract';
+import {geometryVertexCount,populationAdminBoundaryGeometrySchema,POPULATION_ADMIN_DISPLAY_MAX_POLYGONS,POPULATION_ADMIN_DISPLAY_MAX_VERTICES,POPULATION_ADMIN_MAX_VERTICES} from './population-contract';
 import {loadActivePopulationCountryManifest} from './population-raster-service';
 import {populationAdminAggregateResponse} from './population-service';
 
@@ -199,6 +199,7 @@ export async function populationAdminResponse(request:Request,services:BoundaryS
   if(geometryVertexCount(geometry.data)>POPULATION_ADMIN_MAX_VERTICES||new TextEncoder().encode(JSON.stringify(geometry.data)).byteLength>MAX_BOUNDARY_FILE_BYTES)return fail(413,'boundary_too_complex');
   if(indexedFeature&&((geometry.data as {type:string}).type!==indexedFeature.geometryType||geometryVertexCount(geometry.data)!==indexedFeature.displayVertices))return fail(503,'boundary_provider_incompatible');
   const info=indexedFeature?indexedBoundaryInfo(layer,indexedFeature):boundaryInfo(layer,feature!);
-  const administrativeBoundary={...info,geometryType:(geometry.data as {type?:unknown}).type,geometry:geometry.data,geometryRole:'display_only',geometrySimplified:indexedFeature?.geometrySimplified??false,...(indexedFeature?{areaKm2:indexedFeature.areaKm2}: {})};
+  const polygonCount=geometry.data.type==='Polygon'?1:geometry.data.coordinates.length,displayGeometry=geometryVertexCount(geometry.data)<=POPULATION_ADMIN_DISPLAY_MAX_VERTICES&&polygonCount<=POPULATION_ADMIN_DISPLAY_MAX_POLYGONS;
+  const administrativeBoundary={...info,geometryType:geometry.data.type,geometryRole:'display_only',geometrySimplified:indexedFeature?.geometrySimplified??false,...(displayGeometry?{geometry:geometry.data}:{}),...(indexedFeature?{areaKm2:indexedFeature.areaKm2}: {})};
   return populationAdminAggregateResponse(request,{...services,db:services.db,bucket:services.bucket},{countryCode:layer.countryCode,boundaryLayerId:layer.boundaryId,featureId:parsed.data.featureId,geometry:geometry.data,areaKm2:indexedFeature?.areaKm2,boundary:administrativeBoundary});
 }

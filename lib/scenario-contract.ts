@@ -8,7 +8,7 @@ export const contextSchema=z.object({
  location:z.object({label:z.string().min(1).max(200),lng:z.number().finite().min(-180).max(180),lat:z.number().finite().min(-90).max(90),source:sourceSchema}).strict().optional()
 }).strict();
 export type ContextEntry=z.infer<typeof contextSchema>;
-export type PortalState='exploration'|'search'|'location'|'menu'|'configuration'|'execution'|'result'|'information'|'disclaimer';
+export type PortalState='exploration'|'search'|'location'|'menu'|'population'|'configuration'|'execution'|'result'|'information'|'disclaimer';
 export function readCatalogue(input:unknown){const entries=z.array(contextSchema).min(1).max(200).parse(input);if(new Set(entries.map(e=>e.id)).size!==entries.length)throw new Error('Duplicate entry id');return entries;}
 export function resultSignature(entry:ContextEntry,inputs:{areaSignature?:string;locale?:string;point?:unknown;camera?:unknown}={}){
  if(entry.dependencies.includes('area')&&!inputs.areaSignature)throw new Error('Area required');
