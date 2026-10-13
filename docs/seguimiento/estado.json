@@ -19,7 +19,7 @@
   "contextHash": "3f0488730cc8487553295c934da319ca54b6637532839fefebf45d9ccd4ba0cc",
   "project": "Mapa Táctico",
   "portal": "https://atlas-escenarios-hud.yerrybatista.chatgpt.site/",
-  "updatedAt": "2026-10-13T23:29:41.544Z",
+  "updatedAt": "2026-10-13T23:34:16.878Z",
   "sprints": [
     {
       "number": 1,
@@ -7379,7 +7379,7 @@
     {
       "number": 3,
       "title": "Población y consulta territorial",
-      "updatedAt": "2026-10-13T23:29:41.544Z",
+      "updatedAt": "2026-10-13T23:34:16.878Z",
       "phase": "en_curso",
       "approval": {
         "status": "pendiente",
@@ -9780,6 +9780,18 @@
           "action": "set",
           "pointId": "S03-3B-02",
           "reference": "El flujo público de selección devolvió 206.028 personas para Westminster; se corrigió el modo del contorno para mostrarlo sin permitir que sustituya el agregado del servidor. Tests/build pasan; repetir la selección publicada antes de completar el punto."
+        },
+        {
+          "at": "2026-10-13T23:34:16.503Z",
+          "action": "set",
+          "pointId": "S03-3B-01",
+          "reference": "Verificación fallida en Sites 31, IAB: Londres→Westminster ADM2 entrega 206.028 personas, 22,9 km², fuente/año y cobertura parcial; el contorno geográfico no aparece aunque se marcó POLYGON_MODE. El punto permanece rojo mientras sustituyo la capa ilustrativa de Terra Draw por una capa GeoJSON de MapLibre y repito la prueba."
+        },
+        {
+          "at": "2026-10-13T23:34:16.878Z",
+          "action": "set",
+          "pointId": "S03-3B-02",
+          "reference": "Verificación fallida en Sites 31, IAB: Londres→Westminster ADM2 entrega 206.028 personas, 22,9 km², fuente/año y cobertura parcial; el contorno geográfico no aparece aunque se marcó POLYGON_MODE. El punto permanece rojo mientras sustituyo la capa ilustrativa de Terra Draw por una capa GeoJSON de MapLibre y repito la prueba."
         }
       ],
       "points": [
@@ -11761,9 +11773,9 @@
           "group": "Bloque 3B Área y cálculo",
           "text": "Permitir seleccionar una unidad administrativa local de geoBoundaries y consultar su población. Por decisión del usuario, preferir ADM2; mostrar el nombre, nivel, fuente y año del perímetro seleccionado. Si el país no tiene ADM2 publicado o la búsqueda no encuentra una unidad, explicar la falta y permitir dibujar un área manual.",
           "kind": "operacion",
-          "status": "en_curso",
-          "evidence": "Sites 30 confirmó selección y agregado de Westminster; el contorno ilustrativo no aparece por una diferencia de modo de Terra Draw. La corrección usa POLYGON_MODE, mantiene la geometría fuera del cálculo manual y cambia el aviso por uno veraz; TypeScript, 91 pruebas, auditoría de 20 idiomas y build pasan. Falta verificar Sites 31.",
-          "updatedAt": "2026-10-13T23:29:41.189Z",
+          "status": "no_completado",
+          "evidence": "Verificación fallida en Sites 31, IAB: Londres→Westminster ADM2 entrega 206.028 personas, 22,9 km², fuente/año y cobertura parcial; el contorno geográfico no aparece aunque se marcó POLYGON_MODE. El punto permanece rojo mientras sustituyo la capa ilustrativa de Terra Draw por una capa GeoJSON de MapLibre y repito la prueba.",
+          "updatedAt": "2026-10-13T23:34:16.503Z",
           "history": [
             {
               "at": "2026-10-13T22:13:20.406Z",
@@ -11824,6 +11836,11 @@
               "at": "2026-10-13T23:29:41.189Z",
               "status": "en_curso",
               "evidence": "Sites 30 confirmó selección y agregado de Westminster; el contorno ilustrativo no aparece por una diferencia de modo de Terra Draw. La corrección usa POLYGON_MODE, mantiene la geometría fuera del cálculo manual y cambia el aviso por uno veraz; TypeScript, 91 pruebas, auditoría de 20 idiomas y build pasan. Falta verificar Sites 31."
+            },
+            {
+              "at": "2026-10-13T23:34:16.503Z",
+              "status": "no_completado",
+              "evidence": "Verificación fallida en Sites 31, IAB: Londres→Westminster ADM2 entrega 206.028 personas, 22,9 km², fuente/año y cobertura parcial; el contorno geográfico no aparece aunque se marcó POLYGON_MODE. El punto permanece rojo mientras sustituyo la capa ilustrativa de Terra Draw por una capa GeoJSON de MapLibre y repito la prueba."
             }
           ]
         },
@@ -11832,9 +11849,9 @@
           "group": "Bloque 3B Área y cálculo",
           "text": "Añadir una herramienta de área demográfica, mediante dibujo de un polígono o selección de un límite disponible. No se trata de un radio de daño ni de la huella de un arma.",
           "kind": "operacion",
-          "status": "en_curso",
-          "evidence": "El flujo público de selección devolvió 206.028 personas para Westminster; se corrigió el modo del contorno para mostrarlo sin permitir que sustituya el agregado del servidor. Tests/build pasan; repetir la selección publicada antes de completar el punto.",
-          "updatedAt": "2026-10-13T23:29:41.544Z",
+          "status": "no_completado",
+          "evidence": "Verificación fallida en Sites 31, IAB: Londres→Westminster ADM2 entrega 206.028 personas, 22,9 km², fuente/año y cobertura parcial; el contorno geográfico no aparece aunque se marcó POLYGON_MODE. El punto permanece rojo mientras sustituyo la capa ilustrativa de Terra Draw por una capa GeoJSON de MapLibre y repito la prueba.",
+          "updatedAt": "2026-10-13T23:34:16.878Z",
           "history": [
             {
               "at": "2026-10-13T22:15:26.304Z",
@@ -11880,6 +11897,11 @@
               "at": "2026-10-13T23:29:41.544Z",
               "status": "en_curso",
               "evidence": "El flujo público de selección devolvió 206.028 personas para Westminster; se corrigió el modo del contorno para mostrarlo sin permitir que sustituya el agregado del servidor. Tests/build pasan; repetir la selección publicada antes de completar el punto."
+            },
+            {
+              "at": "2026-10-13T23:34:16.878Z",
+              "status": "no_completado",
+              "evidence": "Verificación fallida en Sites 31, IAB: Londres→Westminster ADM2 entrega 206.028 personas, 22,9 km², fuente/año y cobertura parcial; el contorno geográfico no aparece aunque se marcó POLYGON_MODE. El punto permanece rojo mientras sustituyo la capa ilustrativa de Terra Draw por una capa GeoJSON de MapLibre y repito la prueba."
             }
           ],
           "blockId": "3B"

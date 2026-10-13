@@ -13,12 +13,19 @@ import {populationBoundarySearchReplySchema,type PopulationBoundaryCandidate} fr
 import {populationAdmin2CountryCode} from '../../lib/population-country-code';
 
 const RENDER_MODE='population-render',POLYGON_MODE='population-polygon',SELECT_MODE='population-select';
+const BOUNDARY_OUTLINE_SOURCE='population-admin-boundary-outline',BOUNDARY_OUTLINE_FILL='population-admin-boundary-fill',BOUNDARY_OUTLINE_LINE='population-admin-boundary-line';
 type PopulationReply=Extract<ReturnType<typeof populationReplySchema.parse>,{status:'available'}>;
 type PopulationAdminReply=Extract<ReturnType<typeof populationAdminReplySchema.parse>,{status:'available'}>;
 type SelectedBoundary=Pick<PopulationAdminReply['boundary'],'boundaryLayerId'|'featureId'|'name'|'countryCode'|'level'|'boundaryYear'|'source'|'license'|'areaKm2'>&{outlineDisplayed:boolean;outlineSimplified:boolean};
 function stopTerraDraw(draw?:TerraDraw){
   if(!draw)return;
   try{draw.stop();}catch{/* The parent map may already have removed TerraDraw's style layers during HMR teardown. */}
+}
+function clearBoundaryOutline(map?:Map|null){
+  if(!map)return;
+  try{if(map.getLayer(BOUNDARY_OUTLINE_LINE))map.removeLayer(BOUNDARY_OUTLINE_LINE);}catch{}
+  try{if(map.getLayer(BOUNDARY_OUTLINE_FILL))map.removeLayer(BOUNDARY_OUTLINE_FILL);}catch{}
+  try{if(map.getSource(BOUNDARY_OUTLINE_SOURCE))map.removeSource(BOUNDARY_OUTLINE_SOURCE);}catch{}
 }
 
 export default function PopulationAreaTool({map,open,onClose}:{map:Map|null;open:boolean;onClose:()=>void}){
@@ -64,6 +71,7 @@ export default function PopulationAreaTool({map,open,onClose}:{map:Map|null;open
 
   const chooseCity=(place:SearchPlace)=>{
     const localized=localizePlace(place,language);cityRequestRef.current.controller?.abort();boundaryRequestRef.current.controller?.abort();boundaryRequestRef.current.id++;requestRef.current.controller?.abort();requestRef.current.controller=undefined;requestRef.current.id++;setQuerying(false);
+    clearBoundaryOutline(map);
     map?.jumpTo({center:[localized.lng,localized.lat],zoom:12});
     setSelectedCity(localized);setBoundaryQuery(localized.name);setBoundaryResults([]);setBoundarySearched(false);setBoundaryMessage('');setSelectedBoundary(null);setResult(null);setCityMessage('');
     if(!populationAdmin2CountryCode(localized.countryCode)){setBoundarySearched(true);setBoundaryMessage(t('populationBoundaryUnavailable'));}
@@ -108,23 +116,22 @@ export default function PopulationAreaTool({map,open,onClose}:{map:Map|null;open
       const boundary=reply.data.boundary;
       const draw=drawRef.current;
       try{draw?.clear();}catch{}
+      clearBoundaryOutline(map);
       completedIds.current.clear();
       try{draw?.setMode(RENDER_MODE);}catch{}
       setMode(RENDER_MODE);
       restoreMapDoubleClick();
       let outlineDisplayed=false;
-      if(boundary.geometry&&draw){
+      if(boundary.geometry&&map){
         const polygons=boundary.geometry.type==='Polygon'?[boundary.geometry.coordinates]:boundary.geometry.coordinates;
         const vertexCount=polygons.reduce((sum,polygon)=>sum+polygon.reduce((subtotal,ring)=>subtotal+ring.length,0),0);
         if(vertexCount<=POPULATION_ADMIN_DISPLAY_MAX_VERTICES&&polygons.length<=POPULATION_ADMIN_DISPLAY_MAX_POLYGONS){
-          let featureIds:string[]=[];
           try{
-            const features=polygons.map(coordinates=>({type:'Feature' as const,id:crypto.randomUUID(),properties:{mode:POLYGON_MODE},geometry:{type:'Polygon' as const,coordinates}}));
-            featureIds=features.map(feature=>String(feature.id));
-            const validation=draw.addFeatures(features);
-            if(validation.every(entry=>entry.valid))outlineDisplayed=true;
-            else draw.removeFeatures(featureIds);
-          }catch{completedIds.current.clear();try{draw.removeFeatures(featureIds);}catch{}}
+            map.addSource(BOUNDARY_OUTLINE_SOURCE,{type:'geojson',data:{type:'Feature',properties:{},geometry:boundary.geometry}});
+            map.addLayer({id:BOUNDARY_OUTLINE_FILL,type:'fill',source:BOUNDARY_OUTLINE_SOURCE,paint:{'fill-color':'#1597ff','fill-opacity':0.22}});
+            map.addLayer({id:BOUNDARY_OUTLINE_LINE,type:'line',source:BOUNDARY_OUTLINE_SOURCE,paint:{'line-color':'#ffffff','line-opacity':1,'line-width':2}});
+            outlineDisplayed=true;
+          }catch{clearBoundaryOutline(map);}
         }
       }
       setGeometryIfChanged(null);
@@ -211,7 +218,7 @@ export default function PopulationAreaTool({map,open,onClose}:{map:Map|null;open
     return()=>document.removeEventListener('keydown',handleEscape,true);
   },[open,mode,cancelIncompleteDrawing,restoreMapDoubleClick,onClose]);
 
-  useEffect(()=>()=>{requestRef.current.controller?.abort();cityRequestRef.current.controller?.abort();boundaryRequestRef.current.controller?.abort();restoreMapDoubleClick();},[restoreMapDoubleClick]);
+  useEffect(()=>()=>{requestRef.current.controller?.abort();cityRequestRef.current.controller?.abort();boundaryRequestRef.current.controller?.abort();clearBoundaryOutline(map);restoreMapDoubleClick();},[map,restoreMapDoubleClick]);
 
   const normalized=useMemo(()=>{
     if(!geometry)return null;
@@ -222,6 +229,7 @@ export default function PopulationAreaTool({map,open,onClose}:{map:Map|null;open
 
   const clearArea=()=>{
     requestRef.current.controller?.abort();requestRef.current.controller=undefined;requestRef.current.id++;
+    clearBoundaryOutline(map);
     completedIds.current.clear();drawRef.current?.clear();drawRef.current?.setMode(RENDER_MODE);setMode(RENDER_MODE);restoreMapDoubleClick();setGeometryIfChanged(null);setResult(null);setSelectedBoundary(null);setError('');setBoundaryMessage('');setQuerying(false);setDraftVertices([]);setCoordinateLng('');setCoordinateLat('');
   };
 
