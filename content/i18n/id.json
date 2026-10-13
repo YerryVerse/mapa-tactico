@@ -36,7 +36,7 @@
   "populationBoundaryUnavailable": "Layer ADM2 tidak tersedia untuk negara ini. Anda dapat menggambar area secara manual.",
   "populationBoundarySearchFailed": "Batas ini tidak dapat dicari atau dikueri. Coba lagi atau gambar areanya.",
   "populationBoundarySelected": "Batas administratif yang dikueri",
-  "populationBoundaryOutlineOmitted": "Batas ini terlalu rumit untuk digambar pada peta; estimasi tetap menggunakan seluruh unit administratif.",
+  "populationBoundaryOutlineOmitted": "Garis batas tidak ditampilkan di peta; perhitungan menggunakan seluruh unit administratif.",
   "populationBoundaryOutlineSimplified": "Garis batas pada peta disederhanakan hanya untuk tampilan; estimasi menggunakan batas administratif lengkap.",
   "drawArea": "Gambar area",
   "editArea": "Edit area",

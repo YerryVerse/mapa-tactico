@@ -36,7 +36,7 @@
   "populationBoundaryUnavailable": "या देशासाठी ADM2 स्तर उपलब्ध नाही. क्षेत्र स्वतः काढू शकता.",
   "populationBoundarySearchFailed": "ही सीमा शोधता किंवा विचारता आली नाही. पुन्हा प्रयत्न करा किंवा क्षेत्र काढा.",
   "populationBoundarySelected": "विचारलेली प्रशासकीय सीमा",
-  "populationBoundaryOutlineOmitted": "ही सीमा नकाशावर काढण्यासाठी खूप गुंतागुंतीची आहे; अंदाजात संपूर्ण प्रशासकीय घटक वापरला जातो.",
+  "populationBoundaryOutlineOmitted": "नकाशावर सीमारेषा दाखवलेली नाही; गणनेसाठी संपूर्ण प्रशासकीय एकक वापरले जाते.",
   "populationBoundaryOutlineSimplified": "नकाशावरील सीमा केवळ दाखवण्यासाठी सोपी केली आहे; अंदाजात संपूर्ण प्रशासकीय सीमा वापरली जाते.",
   "drawArea": "क्षेत्र काढा",
   "editArea": "क्षेत्र संपादित करा",

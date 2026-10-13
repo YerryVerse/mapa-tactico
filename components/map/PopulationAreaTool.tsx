@@ -119,10 +119,10 @@ export default function PopulationAreaTool({map,open,onClose}:{map:Map|null;open
         if(vertexCount<=POPULATION_ADMIN_DISPLAY_MAX_VERTICES&&polygons.length<=POPULATION_ADMIN_DISPLAY_MAX_POLYGONS){
           let featureIds:string[]=[];
           try{
-            const features=polygons.map(coordinates=>({type:'Feature' as const,id:crypto.randomUUID(),properties:{mode:RENDER_MODE},geometry:{type:'Polygon' as const,coordinates}}));
+            const features=polygons.map(coordinates=>({type:'Feature' as const,id:crypto.randomUUID(),properties:{mode:POLYGON_MODE},geometry:{type:'Polygon' as const,coordinates}}));
             featureIds=features.map(feature=>String(feature.id));
             const validation=draw.addFeatures(features);
-            if(validation.every(entry=>entry.valid)){completedIds.current=new Set(features.map(feature=>feature.id));outlineDisplayed=true;}
+            if(validation.every(entry=>entry.valid))outlineDisplayed=true;
             else draw.removeFeatures(featureIds);
           }catch{completedIds.current.clear();try{draw.removeFeatures(featureIds);}catch{}}
         }

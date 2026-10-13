@@ -36,7 +36,7 @@
   "populationBoundaryUnavailable": "لا تتوفر طبقة ADM2 لهذا البلد. يمكنك رسم المنطقة يدويًا.",
   "populationBoundarySearchFailed": "تعذر البحث عن هذه الحدود أو الاستعلام عنها. أعد المحاولة أو ارسم المنطقة.",
   "populationBoundarySelected": "الحد الإداري الذي تم الاستعلام عنه",
-  "populationBoundaryOutlineOmitted": "هذه الحدود معقدة جدًا لرسمها على الخريطة؛ ويظل التقدير مستخدمًا للوحدة الإدارية كاملة.",
+  "populationBoundaryOutlineOmitted": "لا يظهر حد المنطقة على الخريطة؛ ويستخدم الحساب الوحدة الإدارية كاملة.",
   "populationBoundaryOutlineSimplified": "تم تبسيط حدود الخريطة للعرض فقط؛ ويستخدم التقدير الحدود الإدارية كاملة.",
   "drawArea": "ارسم منطقة",
   "editArea": "عدّل المنطقة",

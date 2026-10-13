@@ -36,7 +36,7 @@
   "populationBoundaryUnavailable": "Aucune couche ADM2 n’est disponible pour ce pays. Vous pouvez dessiner la zone manuellement.",
   "populationBoundarySearchFailed": "Cette limite n’a pas pu être recherchée ou consultée. Réessayez ou dessinez la zone.",
   "populationBoundarySelected": "Limite administrative consultée",
-  "populationBoundaryOutlineOmitted": "Cette limite est trop complexe pour être dessinée sur la carte ; l’estimation utilise tout de même l’unité administrative complète.",
+  "populationBoundaryOutlineOmitted": "Le contour reste absent de la carte ; le calcul utilise la zone administrative complète.",
   "populationBoundaryOutlineSimplified": "Le contour affiché est simplifié uniquement pour la carte ; l’estimation utilise la limite administrative complète.",
   "drawArea": "Dessiner une zone",
   "editArea": "Modifier la zone",

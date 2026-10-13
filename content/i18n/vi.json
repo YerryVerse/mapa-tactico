@@ -36,7 +36,7 @@
   "populationBoundaryUnavailable": "Quốc gia này không có lớp ADM2. Bạn có thể tự vẽ khu vực.",
   "populationBoundarySearchFailed": "Không thể tìm hoặc truy vấn ranh giới này. Hãy thử lại hoặc vẽ khu vực.",
   "populationBoundarySelected": "Ranh giới hành chính đã truy vấn",
-  "populationBoundaryOutlineOmitted": "Ranh giới này quá phức tạp để vẽ trên bản đồ; phép ước tính vẫn dùng toàn bộ đơn vị hành chính.",
+  "populationBoundaryOutlineOmitted": "Đường viền không hiển thị trên bản đồ; phép tính sử dụng toàn bộ đơn vị hành chính.",
   "populationBoundaryOutlineSimplified": "Đường ranh trên bản đồ chỉ được đơn giản hóa để hiển thị; phép ước tính dùng ranh giới hành chính đầy đủ.",
   "drawArea": "Vẽ khu vực",
   "editArea": "Sửa khu vực",

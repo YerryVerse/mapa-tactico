@@ -36,7 +36,7 @@
   "populationBoundaryUnavailable": "Bu ülke için ADM2 katmanı yok. Alanı elle çizebilirsiniz.",
   "populationBoundarySearchFailed": "Bu sınır aranamadı veya sorgulanamadı. Yeniden deneyin ya da alanı çizin.",
   "populationBoundarySelected": "Sorgulanan idari sınır",
-  "populationBoundaryOutlineOmitted": "Bu sınır haritada çizilemeyecek kadar karmaşık; tahmin yine de idari birimin tamamını kullanır.",
+  "populationBoundaryOutlineOmitted": "Sınır çizgisi haritada gösterilmez; hesaplama idari birimin tamamını kullanır.",
   "populationBoundaryOutlineSimplified": "Haritadaki sınır çizgisi yalnızca görüntüleme için sadeleştirilmiştir; tahmin idari sınırın tamamını kullanır.",
   "drawArea": "Alan çiz",
   "editArea": "Alanı düzenle",

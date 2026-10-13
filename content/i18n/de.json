@@ -36,7 +36,7 @@
   "populationBoundaryUnavailable": "Für dieses Land ist keine ADM2-Ebene verfügbar. Sie können das Gebiet selbst zeichnen.",
   "populationBoundarySearchFailed": "Diese Grenze konnte nicht gesucht oder abgefragt werden. Versuchen Sie es erneut oder zeichnen Sie das Gebiet.",
   "populationBoundarySelected": "Abgefragte Verwaltungsgrenze",
-  "populationBoundaryOutlineOmitted": "Diese Grenze ist zu komplex für die Kartendarstellung; die Schätzung verwendet trotzdem die vollständige Verwaltungseinheit.",
+  "populationBoundaryOutlineOmitted": "Die Grenzlinie wird nicht auf der Karte angezeigt; die Berechnung verwendet die vollständige Verwaltungseinheit.",
   "populationBoundaryOutlineSimplified": "Die Kartenkontur wurde nur für die Anzeige vereinfacht; die Schätzung verwendet die vollständige Verwaltungsgrenze.",
   "drawArea": "Gebiet zeichnen",
   "editArea": "Gebiet bearbeiten",

@@ -36,7 +36,7 @@
   "populationBoundaryUnavailable": "इस देश के लिए ADM2 परत उपलब्ध नहीं है। आप क्षेत्र स्वयं बना सकते हैं।",
   "populationBoundarySearchFailed": "इस सीमा को खोजा या क्वेरी नहीं किया जा सका। फिर कोशिश करें या क्षेत्र बनाएँ।",
   "populationBoundarySelected": "क्वेरी की गई प्रशासनिक सीमा",
-  "populationBoundaryOutlineOmitted": "यह सीमा मानचित्र पर दिखाने के लिए बहुत जटिल है; अनुमान में पूरी प्रशासनिक इकाई का उपयोग होता है।",
+  "populationBoundaryOutlineOmitted": "मानचित्र पर सीमा का रेखांकन नहीं दिखाया गया है; गणना पूरी प्रशासनिक इकाई का उपयोग करती है।",
   "populationBoundaryOutlineSimplified": "मानचित्र की सीमा केवल प्रदर्शन के लिए सरल की गई है; अनुमान पूरी प्रशासनिक सीमा का उपयोग करता है।",
   "drawArea": "क्षेत्र बनाएं",
   "editArea": "क्षेत्र संपादित करें",

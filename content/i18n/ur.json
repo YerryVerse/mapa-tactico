@@ -36,7 +36,7 @@
   "populationBoundaryUnavailable": "اس ملک کے لیے ADM2 پرت دستیاب نہیں۔ آپ علاقہ خود بنا سکتے ہیں۔",
   "populationBoundarySearchFailed": "یہ حد تلاش یا استفسار نہیں ہو سکی۔ دوبارہ کوشش کریں یا علاقہ بنائیں۔",
   "populationBoundarySelected": "استفسار کی گئی انتظامی حد",
-  "populationBoundaryOutlineOmitted": "یہ حد نقشے پر دکھانے کے لیے بہت پیچیدہ ہے؛ تخمینہ پھر بھی پوری انتظامی اکائی استعمال کرتا ہے۔",
+  "populationBoundaryOutlineOmitted": "حد کا خاکہ نقشے پر نہیں دکھایا گیا؛ حساب پوری انتظامی اکائی استعمال کرتا ہے۔",
   "populationBoundaryOutlineSimplified": "نقشے کا خاکہ صرف دکھانے کے لیے سادہ کیا گیا ہے؛ تخمینہ پوری انتظامی حد استعمال کرتا ہے۔",
   "drawArea": "علاقہ بنائیں",
   "editArea": "علاقہ ترمیم کریں",

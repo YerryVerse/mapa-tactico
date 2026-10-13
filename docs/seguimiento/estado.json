@@ -19,7 +19,7 @@
   "contextHash": "3f0488730cc8487553295c934da319ca54b6637532839fefebf45d9ccd4ba0cc",
   "project": "Mapa Táctico",
   "portal": "https://atlas-escenarios-hud.yerrybatista.chatgpt.site/",
-  "updatedAt": "2026-10-13T23:22:32.622Z",
+  "updatedAt": "2026-10-13T23:29:41.544Z",
   "sprints": [
     {
       "number": 1,
@@ -7379,7 +7379,7 @@
     {
       "number": 3,
       "title": "Población y consulta territorial",
-      "updatedAt": "2026-10-13T23:22:32.622Z",
+      "updatedAt": "2026-10-13T23:29:41.544Z",
       "phase": "en_curso",
       "approval": {
         "status": "pendiente",
@@ -9732,6 +9732,54 @@
           "action": "set",
           "pointId": "S03-3B-02",
           "reference": "El endpoint POST público y su respuesta pasan el contrato Zod en producción, pero el cliente fallaba tras recibirlos. El dibujo del contorno ahora se trata como mejora visual opcional y no bloquea el agregado; falta repetir la consulta en Sites 30."
+        },
+        {
+          "at": "2026-10-13T23:26:00.531Z",
+          "action": "set",
+          "pointId": "S03-3B-01",
+          "reference": "Sites 30 despliega y los endpoints públicos anónimos siguen respondiendo 200; tras la única actualización permitida, el navegador mantuvo «Cargando mapa…» y no habilitó controles dentro de la verificación. Pendiente una prueba visible de selección; la vista local recuperó el globo tras más tiempo de carga."
+        },
+        {
+          "at": "2026-10-13T23:26:00.882Z",
+          "action": "set",
+          "pointId": "S03-3B-02",
+          "reference": "La API anónima de Westminster devuelve agregado y cobertura parcial; la interfaz de Sites 30 no quedó disponible tras actualizar y no fue posible comprobar el flujo corregido. La carga local tardó más de 5 s y luego terminó; repetir una prueba visible de la publicación sin recargar de nuevo."
+        },
+        {
+          "at": "2026-10-13T23:26:41.202Z",
+          "action": "set",
+          "pointId": "S03-3B-01",
+          "reference": "La búsqueda local de Andorra la Vella confirma que no hay capa ADM2 y explica que se dibuje el área manualmente; el endpoint público también responde no_coverage para AND. Westminster se encuentra en Sites 30 y la API anónima devuelve el agregado correcto, pero el flujo de navegador publicado todavía no quedó verificado después de la actualización."
+        },
+        {
+          "at": "2026-10-13T23:27:16.533Z",
+          "action": "set",
+          "pointId": "S03-3B-01",
+          "reference": "Casos de fallback verificados en local: Andorra la Vella encuentra una ciudad, informa «No ADM2 layer is available» y permite dibujar; para London + NoSuchDistrictXYZ explica que no hubo coincidencia y ofrece dibujo manual. Sites 30: la API anónima encuentra Westminster y entrega su agregado, pero la verificación visual del mapa/selección sigue pendiente por carga lenta."
+        },
+        {
+          "at": "2026-10-13T23:29:03.240Z",
+          "action": "set",
+          "pointId": "S03-3B-01",
+          "reference": "Sites 30, IAB: seleccioné London, Reino Unido y Westminster ADM2 (2019, ONS); la consulta anónima mostró 206.028 personas, 22,9 km² y 4.103/4.292 celdas válidas, con suma parcial explicada. El contorno no aparece porque la función Terra Draw lo intenta importar como modo de solo lectura; corregí el modo y el aviso en 20 idiomas. Falta publicar y verificar esa corrección."
+        },
+        {
+          "at": "2026-10-13T23:29:03.601Z",
+          "action": "set",
+          "pointId": "S03-3B-02",
+          "reference": "Sites 30 mostró el resultado real de Westminster desde la interfaz pública y sin credenciales, y confirmó cobertura parcial. El dibujo manual y edición tienen evidencia local; el contorno administrativo queda pendiente hasta cambiarlo a modo polígono y verificar la publicación corregida."
+        },
+        {
+          "at": "2026-10-13T23:29:41.189Z",
+          "action": "set",
+          "pointId": "S03-3B-01",
+          "reference": "Sites 30 confirmó selección y agregado de Westminster; el contorno ilustrativo no aparece por una diferencia de modo de Terra Draw. La corrección usa POLYGON_MODE, mantiene la geometría fuera del cálculo manual y cambia el aviso por uno veraz; TypeScript, 91 pruebas, auditoría de 20 idiomas y build pasan. Falta verificar Sites 31."
+        },
+        {
+          "at": "2026-10-13T23:29:41.544Z",
+          "action": "set",
+          "pointId": "S03-3B-02",
+          "reference": "El flujo público de selección devolvió 206.028 personas para Westminster; se corrigió el modo del contorno para mostrarlo sin permitir que sustituya el agregado del servidor. Tests/build pasan; repetir la selección publicada antes de completar el punto."
         }
       ],
       "points": [
@@ -11714,8 +11762,8 @@
           "text": "Permitir seleccionar una unidad administrativa local de geoBoundaries y consultar su población. Por decisión del usuario, preferir ADM2; mostrar el nombre, nivel, fuente y año del perímetro seleccionado. Si el país no tiene ADM2 publicado o la búsqueda no encuentra una unidad, explicar la falta y permitir dibujar un área manual.",
           "kind": "operacion",
           "status": "en_curso",
-          "evidence": "Selección de Westminster funciona en la búsqueda pública y el endpoint anónimo entrega 200 con agregado. Cambié la interfaz para que un fallo al dibujar el contorno ilustrativo no cancele el resultado demográfico; repetir el flujo Sites después de publicar la corrección.",
-          "updatedAt": "2026-10-13T23:22:32.221Z",
+          "evidence": "Sites 30 confirmó selección y agregado de Westminster; el contorno ilustrativo no aparece por una diferencia de modo de Terra Draw. La corrección usa POLYGON_MODE, mantiene la geometría fuera del cálculo manual y cambia el aviso por uno veraz; TypeScript, 91 pruebas, auditoría de 20 idiomas y build pasan. Falta verificar Sites 31.",
+          "updatedAt": "2026-10-13T23:29:41.189Z",
           "history": [
             {
               "at": "2026-10-13T22:13:20.406Z",
@@ -11751,6 +11799,31 @@
               "at": "2026-10-13T23:22:32.221Z",
               "status": "en_curso",
               "evidence": "Selección de Westminster funciona en la búsqueda pública y el endpoint anónimo entrega 200 con agregado. Cambié la interfaz para que un fallo al dibujar el contorno ilustrativo no cancele el resultado demográfico; repetir el flujo Sites después de publicar la corrección."
+            },
+            {
+              "at": "2026-10-13T23:26:00.531Z",
+              "status": "no_completado",
+              "evidence": "Sites 30 despliega y los endpoints públicos anónimos siguen respondiendo 200; tras la única actualización permitida, el navegador mantuvo «Cargando mapa…» y no habilitó controles dentro de la verificación. Pendiente una prueba visible de selección; la vista local recuperó el globo tras más tiempo de carga."
+            },
+            {
+              "at": "2026-10-13T23:26:41.202Z",
+              "status": "no_completado",
+              "evidence": "La búsqueda local de Andorra la Vella confirma que no hay capa ADM2 y explica que se dibuje el área manualmente; el endpoint público también responde no_coverage para AND. Westminster se encuentra en Sites 30 y la API anónima devuelve el agregado correcto, pero el flujo de navegador publicado todavía no quedó verificado después de la actualización."
+            },
+            {
+              "at": "2026-10-13T23:27:16.533Z",
+              "status": "no_completado",
+              "evidence": "Casos de fallback verificados en local: Andorra la Vella encuentra una ciudad, informa «No ADM2 layer is available» y permite dibujar; para London + NoSuchDistrictXYZ explica que no hubo coincidencia y ofrece dibujo manual. Sites 30: la API anónima encuentra Westminster y entrega su agregado, pero la verificación visual del mapa/selección sigue pendiente por carga lenta."
+            },
+            {
+              "at": "2026-10-13T23:29:03.240Z",
+              "status": "en_curso",
+              "evidence": "Sites 30, IAB: seleccioné London, Reino Unido y Westminster ADM2 (2019, ONS); la consulta anónima mostró 206.028 personas, 22,9 km² y 4.103/4.292 celdas válidas, con suma parcial explicada. El contorno no aparece porque la función Terra Draw lo intenta importar como modo de solo lectura; corregí el modo y el aviso en 20 idiomas. Falta publicar y verificar esa corrección."
+            },
+            {
+              "at": "2026-10-13T23:29:41.189Z",
+              "status": "en_curso",
+              "evidence": "Sites 30 confirmó selección y agregado de Westminster; el contorno ilustrativo no aparece por una diferencia de modo de Terra Draw. La corrección usa POLYGON_MODE, mantiene la geometría fuera del cálculo manual y cambia el aviso por uno veraz; TypeScript, 91 pruebas, auditoría de 20 idiomas y build pasan. Falta verificar Sites 31."
             }
           ]
         },
@@ -11760,8 +11833,8 @@
           "text": "Añadir una herramienta de área demográfica, mediante dibujo de un polígono o selección de un límite disponible. No se trata de un radio de daño ni de la huella de un arma.",
           "kind": "operacion",
           "status": "en_curso",
-          "evidence": "El endpoint POST público y su respuesta pasan el contrato Zod en producción, pero el cliente fallaba tras recibirlos. El dibujo del contorno ahora se trata como mejora visual opcional y no bloquea el agregado; falta repetir la consulta en Sites 30.",
-          "updatedAt": "2026-10-13T23:22:32.622Z",
+          "evidence": "El flujo público de selección devolvió 206.028 personas para Westminster; se corrigió el modo del contorno para mostrarlo sin permitir que sustituya el agregado del servidor. Tests/build pasan; repetir la selección publicada antes de completar el punto.",
+          "updatedAt": "2026-10-13T23:29:41.544Z",
           "history": [
             {
               "at": "2026-10-13T22:15:26.304Z",
@@ -11792,6 +11865,21 @@
               "at": "2026-10-13T23:22:32.622Z",
               "status": "en_curso",
               "evidence": "El endpoint POST público y su respuesta pasan el contrato Zod en producción, pero el cliente fallaba tras recibirlos. El dibujo del contorno ahora se trata como mejora visual opcional y no bloquea el agregado; falta repetir la consulta en Sites 30."
+            },
+            {
+              "at": "2026-10-13T23:26:00.882Z",
+              "status": "no_completado",
+              "evidence": "La API anónima de Westminster devuelve agregado y cobertura parcial; la interfaz de Sites 30 no quedó disponible tras actualizar y no fue posible comprobar el flujo corregido. La carga local tardó más de 5 s y luego terminó; repetir una prueba visible de la publicación sin recargar de nuevo."
+            },
+            {
+              "at": "2026-10-13T23:29:03.601Z",
+              "status": "en_curso",
+              "evidence": "Sites 30 mostró el resultado real de Westminster desde la interfaz pública y sin credenciales, y confirmó cobertura parcial. El dibujo manual y edición tienen evidencia local; el contorno administrativo queda pendiente hasta cambiarlo a modo polígono y verificar la publicación corregida."
+            },
+            {
+              "at": "2026-10-13T23:29:41.544Z",
+              "status": "en_curso",
+              "evidence": "El flujo público de selección devolvió 206.028 personas para Westminster; se corrigió el modo del contorno para mostrarlo sin permitir que sustituya el agregado del servidor. Tests/build pasan; repetir la selección publicada antes de completar el punto."
             }
           ],
           "blockId": "3B"

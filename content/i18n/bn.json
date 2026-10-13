@@ -36,7 +36,7 @@
   "populationBoundaryUnavailable": "এই দেশের জন্য ADM2 স্তর নেই। আপনি হাতে এলাকা আঁকতে পারেন।",
   "populationBoundarySearchFailed": "এই সীমানা খোঁজা বা যাচাই করা যায়নি। আবার চেষ্টা করুন অথবা এলাকা আঁকুন।",
   "populationBoundarySelected": "অনুসন্ধান করা প্রশাসনিক সীমানা",
-  "populationBoundaryOutlineOmitted": "মানচিত্রে আঁকার জন্য এই সীমানা অত্যন্ত জটিল; তবু অনুমানে সম্পূর্ণ প্রশাসনিক একক ব্যবহৃত হয়।",
+  "populationBoundaryOutlineOmitted": "মানচিত্রে সীমানার রেখা দেখানো হয় না; হিসাবটি পুরো প্রশাসনিক একক ব্যবহার করে।",
   "populationBoundaryOutlineSimplified": "মানচিত্রের রেখাটি শুধু প্রদর্শনের জন্য সরল করা হয়েছে; অনুমানে সম্পূর্ণ প্রশাসনিক সীমানা ব্যবহৃত হয়।",
   "drawArea": "এলাকা আঁকুন",
   "editArea": "এলাকা সম্পাদনা",

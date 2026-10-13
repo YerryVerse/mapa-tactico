@@ -36,7 +36,7 @@
   "populationBoundaryUnavailable": "この国ではADM2レイヤーを利用できません。範囲を手動で描画できます。",
   "populationBoundarySearchFailed": "境界を検索または照会できませんでした。再試行するか、範囲を描画してください。",
   "populationBoundarySelected": "照会した行政境界",
-  "populationBoundaryOutlineOmitted": "境界が複雑すぎるため地図には描画されませんが、推定には行政区域全体を使用します。",
+  "populationBoundaryOutlineOmitted": "境界線は地図に表示されません。計算には行政区域全体を使用します。",
   "populationBoundaryOutlineSimplified": "地図上の境界線は表示用にのみ簡略化されています。推定には行政境界全体を使用します。",
   "drawArea": "エリアを描く",
   "editArea": "エリアを編集",

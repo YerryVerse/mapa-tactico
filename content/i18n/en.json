@@ -36,7 +36,7 @@
   "populationBoundaryUnavailable": "No ADM2 layer is available for this country. You can draw the area manually.",
   "populationBoundarySearchFailed": "This boundary could not be searched or queried. Try again or draw the area.",
   "populationBoundarySelected": "Administrative boundary queried",
-  "populationBoundaryOutlineOmitted": "This boundary is too complex to draw on the map; the estimate still uses the full administrative unit.",
+  "populationBoundaryOutlineOmitted": "The boundary outline is not shown on the map; the calculation uses the full administrative unit.",
   "populationBoundaryOutlineSimplified": "The map outline is simplified for display only; the estimate uses the full administrative boundary.",
   "drawArea": "Draw area",
   "editArea": "Edit area",
