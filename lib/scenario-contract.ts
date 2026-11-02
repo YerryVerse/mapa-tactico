@@ -4,7 +4,8 @@ const sourceSchema=z.object({title:z.string().min(1).max(250),url:z.string().url
 export const contextSchema=z.object({
  id:z.string().regex(/^[a-z0-9-]+$/),eventId:z.string().regex(/^[a-z0-9-]+$/),version:z.string().min(1).max(80),category:z.enum(categories),
  title:z.string().min(1).max(200),description:z.string().min(1).max(4000),sources:z.array(sourceSchema).min(1).max(10),
- capabilities:z.array(z.literal('context')).min(1).max(1),dependencies:z.array(z.enum(['entry','area'])).min(1).max(2),
+ capabilities:z.array(z.enum(['context','blast'])).min(1).max(2),dependencies:z.array(z.enum(['entry','area'])).min(1).max(2),
+ yieldTonnesTNT:z.number().positive().optional(),element:z.string().min(1).max(100).optional(),elementQuantity:z.string().min(1).max(100).optional(),
  location:z.object({label:z.string().min(1).max(200),lng:z.number().finite().min(-180).max(180),lat:z.number().finite().min(-90).max(90),source:sourceSchema}).strict().optional()
 }).strict();
 export type ContextEntry=z.infer<typeof contextSchema>;

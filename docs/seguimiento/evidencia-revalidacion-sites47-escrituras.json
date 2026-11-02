@@ -1,0 +1,268 @@
+{
+  "center": [
+    0,
+    0
+  ],
+  "contextLayers": [],
+  "countryField": [
+    "get",
+    "name_pnb-Arab"
+  ],
+  "countryLabels": [
+    {
+      "engineId": "country-CV",
+      "id": "country-CV",
+      "name": "کابو وردے"
+    },
+    {
+      "engineId": "country-BM",
+      "id": "country-BM",
+      "name": "برمودا"
+    },
+    {
+      "engineId": "country-PM",
+      "id": "country-PM",
+      "name": "سینٹ پیئر تے میکیلون"
+    },
+    {
+      "engineId": "country-CW",
+      "id": "country-CW",
+      "name": "کیوراساؤ"
+    },
+    {
+      "engineId": "country-VE",
+      "id": "country-VE",
+      "name": "وینزویلا"
+    },
+    {
+      "engineId": "country-BF",
+      "id": "country-BF",
+      "name": "برکینا فاسو"
+    },
+    {
+      "engineId": "country-CO",
+      "id": "country-CO",
+      "name": "کولمبیا"
+    },
+    {
+      "engineId": "country-HT",
+      "id": "country-HT",
+      "name": "ہیٹی"
+    },
+    {
+      "engineId": "country-SN",
+      "id": "country-SN",
+      "name": "سینیگال"
+    },
+    {
+      "engineId": "country-CI",
+      "id": "country-CI",
+      "name": "کوت دیووار"
+    },
+    {
+      "engineId": "country-GN",
+      "id": "country-GN",
+      "name": "گنی"
+    },
+    {
+      "engineId": "country-GB",
+      "id": "country-GB",
+      "name": "متحدہ بادشاہی"
+    },
+    {
+      "engineId": "country-EH",
+      "id": "country-EH",
+      "name": "مغربی صحارا"
+    },
+    {
+      "engineId": "country-MV",
+      "id": "country-MV",
+      "name": "مالدیپ"
+    },
+    {
+      "engineId": "country-YE",
+      "id": "country-YE",
+      "name": "یمن"
+    },
+    {
+      "engineId": "country-EG",
+      "id": "country-EG",
+      "name": "مصر"
+    },
+    {
+      "engineId": "country-TG",
+      "id": "country-TG",
+      "name": "ٹوگو"
+    },
+    {
+      "engineId": "country-DZ",
+      "id": "country-DZ",
+      "name": "الجزائر"
+    },
+    {
+      "engineId": "country-TD",
+      "id": "country-TD",
+      "name": "چاڈ"
+    },
+    {
+      "engineId": "country-SA",
+      "id": "country-SA",
+      "name": "سعودی عرب"
+    },
+    {
+      "engineId": "country-NG",
+      "id": "country-NG",
+      "name": "نائجیریا"
+    },
+    {
+      "engineId": "country-IR",
+      "id": "country-IR",
+      "name": "ایران"
+    },
+    {
+      "engineId": "country-IT",
+      "id": "country-IT",
+      "name": "اٹلی"
+    },
+    {
+      "engineId": "country-IQ",
+      "id": "country-IQ",
+      "name": "عراق"
+    },
+    {
+      "engineId": "country-ER",
+      "id": "country-ER",
+      "name": "اریٹریا"
+    },
+    {
+      "engineId": "country-DJ",
+      "id": "country-DJ",
+      "name": "جبوتی"
+    },
+    {
+      "engineId": "country-GR",
+      "id": "country-GR",
+      "name": "یونان"
+    },
+    {
+      "engineId": "country-PL",
+      "id": "country-PL",
+      "name": "پولینڈ"
+    },
+    {
+      "engineId": "country-RO",
+      "id": "country-RO",
+      "name": "رومانیہ"
+    },
+    {
+      "engineId": "country-LY",
+      "id": "country-LY",
+      "name": "لیبیا"
+    },
+    {
+      "engineId": "country-GE",
+      "id": "country-GE",
+      "name": "جارجیا"
+    },
+    {
+      "engineId": "country-SE",
+      "id": "country-SE",
+      "name": "سویڈن"
+    },
+    {
+      "engineId": "country-RU",
+      "id": "country-RU",
+      "name": "روس"
+    },
+    {
+      "engineId": "country-UZ",
+      "id": "country-UZ",
+      "name": "ازبکستان"
+    },
+    {
+      "engineId": "country-FR",
+      "id": "country-FR",
+      "name": "فرانس"
+    },
+    {
+      "engineId": "country-ET",
+      "id": "country-ET",
+      "name": "ایتھوپیا"
+    },
+    {
+      "engineId": "country-FK",
+      "id": "country-FK",
+      "name": "فاکلینڈ جزیرے / مالویناس"
+    },
+    {
+      "engineId": "country-GS",
+      "id": "country-GS",
+      "name": "جنوبی جارجیا تے جنوبی سینڈوچ جزیرے"
+    },
+    {
+      "engineId": "country-PY",
+      "id": "country-PY",
+      "name": "پیراگوئے"
+    },
+    {
+      "engineId": "country-PE",
+      "id": "country-PE",
+      "name": "پیرو"
+    },
+    {
+      "engineId": "country-BO",
+      "id": "country-BO",
+      "name": "بولیویا"
+    },
+    {
+      "engineId": "country-IO",
+      "id": "country-IO",
+      "name": "بحر ہند دا برطانوی علاقہ"
+    },
+    {
+      "engineId": "country-MG",
+      "id": "country-MG",
+      "name": "مڈغاسکر"
+    },
+    {
+      "engineId": "country-GA",
+      "id": "country-GA",
+      "name": "گیبون"
+    },
+    {
+      "engineId": "country-ZW",
+      "id": "country-ZW",
+      "name": "زمبابوے"
+    },
+    {
+      "engineId": "country-BW",
+      "id": "country-BW",
+      "name": "بوٹسوانا"
+    },
+    {
+      "engineId": "country-NA",
+      "id": "country-NA",
+      "name": "نمیبیا"
+    },
+    {
+      "engineId": "country-CD",
+      "id": "country-CD",
+      "name": "کانگو — کنشاسا"
+    },
+    {
+      "engineId": "country-TZ",
+      "id": "country-TZ",
+      "name": "تنزانیہ"
+    }
+  ],
+  "fiveMetersCssPx": 0.0003613609694639308,
+  "projection": "globe",
+  "reference": null,
+  "scriptCount": 20,
+  "tilesLoaded": true,
+  "viewport": [
+    1440,
+    900
+  ],
+  "zoom": 2.5
+}

@@ -23,6 +23,15 @@ describe('geoBoundaries administrative identifiers',()=>{
     expect(body).toMatchObject({status:'available',provider:'geoBoundaries',releaseType:'gbOpen',results:[{boundaryLayerId:layerId,featureId,name:'Westminster',countryCode:'GBR',level:'ADM2',boundaryYear:'2019',license:'Open Government Licence v3.0'}]});
     expect(String(s.fetcher.mock.calls[0][0])).toMatch(/^https:\/\/github\.com\/wmgeolab\/geoBoundaries\/raw\/9469f09\/releaseData\/gbOpen\/GBR\/ADM2\//);
   });
+  it('resolves a localized country name to that country’s ADM0 boundary',async()=>{
+    const s=await services();
+    s.fetcher.mockResolvedValueOnce(Response.json({type:'FeatureCollection',features:[{type:'Feature',properties:{shapeID:'19620994',shapeName:'Germany',shapeGroup:'DEU',shapeType:'ADM0'},geometry}]}));
+    const response=await searchAdministrativeBoundaries(new Request('https://atlas.test/api/population/boundaries?countryCode=DEU&level=ADM0&q=Alemania'),s);
+    expect(response.status).toBe(200);
+    const body=await response.json();
+    expect(populationBoundarySearchReplySchema.safeParse(body).success).toBe(true);
+    expect(body).toMatchObject({status:'available',results:[{featureId:'19620994',name:'Germany',countryCode:'DEU',level:'ADM0'}]});
+  });
   it('computes population from the server-fetched feature geometry, not a visitor-supplied polygon',async()=>{
     const s=await services(),request=new Request('https://atlas.test/api/population/admin',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({boundaryLayerId:layerId,featureId})});
     const response=await populationAdminResponse(request,s),body=await response.json() as Record<string,any>;

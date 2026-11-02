@@ -1,25 +1,182 @@
 [
   {
-    "id": "beirut-2020-context",
-    "eventId": "beirut-2020",
-    "version": "context-20261011-2",
+    "id": "tanque-compresor",
+    "eventId": "tanque-compresor",
+    "version": "context-20261027",
     "category": "Accidente",
+    "title": "Tanque de aire comprimido",
+    "description": "Ejemplo elegido para ilustrar la escala de 1 kg. El accidente industrial documentado superó los 1.36 kg de TNT equivalente; no es una medición exacta de 1 kg ni una propiedad de cualquier compresor doméstico.",
+    "yieldTonnesTNT": 0.001,
+    "element": "Aire",
+    "elementQuantity": "Capacidad no definida",
+    "sources": [
+      {
+        "title": "Tanque de aire comprimido — Referencia técnica",
+        "url": "https://doi.org/10.1016/0013-7944(83)90037-1"
+      }
+    ],
     "capabilities": [
-      "context"
+      "context",
+      "blast"
+    ],
+    "dependencies": [
+      "entry"
+    ]
+  },
+  {
+    "id": "propano-25-lb",
+    "eventId": "propano-25-lb",
+    "version": "context-20261027",
+    "category": "Accidente",
+    "title": "Tanque de propano",
+    "description": "Estimación ilustrativa de nube de gas con factor supuesto del 10 %. No es la energía propia de ruptura del recipiente ni una medición de accidente doméstico.",
+    "yieldTonnesTNT": 0.013,
+    "element": "Propano",
+    "elementQuantity": "25 lb",
+    "sources": [
+      {
+        "title": "Tanque de propano — Referencia técnica",
+        "url": "https://www.epa.gov/sites/default/files/2013-11/documents/oca-chps.pdf"
+      }
+    ],
+    "capabilities": [
+      "context",
+      "blast"
+    ],
+    "dependencies": [
+      "entry"
+    ]
+  },
+  {
+    "id": "propano-50-lb",
+    "eventId": "propano-50-lb",
+    "version": "context-20261027",
+    "category": "Accidente",
+    "title": "Tanque de propano",
+    "description": "Estimación ilustrativa de nube de gas con factor supuesto del 10 %. No es la energía propia de ruptura del recipiente ni una medición de accidente doméstico.",
+    "yieldTonnesTNT": 0.025,
+    "element": "Propano",
+    "elementQuantity": "50 lb",
+    "sources": [
+      {
+        "title": "Tanque de propano — Referencia técnica",
+        "url": "https://www.epa.gov/sites/default/files/2013-11/documents/oca-chps.pdf"
+      }
+    ],
+    "capabilities": [
+      "context",
+      "blast"
+    ],
+    "dependencies": [
+      "entry"
+    ]
+  },
+  {
+    "id": "propano-100-lb",
+    "eventId": "propano-100-lb",
+    "version": "context-20261027",
+    "category": "Accidente",
+    "title": "Tanque de propano",
+    "description": "Estimación ilustrativa de nube de gas con factor supuesto del 10 %. No es la energía propia de ruptura del recipiente ni una medición de accidente doméstico.",
+    "yieldTonnesTNT": 0.05,
+    "element": "Propano",
+    "elementQuantity": "100 lb",
+    "sources": [
+      {
+        "title": "Tanque de propano — Referencia técnica",
+        "url": "https://www.epa.gov/sites/default/files/2013-11/documents/oca-chps.pdf"
+      }
+    ],
+    "capabilities": [
+      "context",
+      "blast"
+    ],
+    "dependencies": [
+      "entry"
+    ]
+  },
+  {
+    "id": "bani-500kg-escenario-propuesto",
+    "eventId": "bani-500kg-escenario-propuesto",
+    "version": "context-20261027",
+    "category": "Accidente",
+    "title": "Explosión de Baní",
+    "description": "Escenario propuesto por el usuario con referencia de 500 kg de TNT. La atribución a Baní no está confirmada; la cifra localizada es una afirmación sin cálculo publicado sobre San Cristóbal (2023). El propano es una equivalencia hipotética con factor energético del 10 %, no el combustible ni la cantidad documentados del accidente.",
+    "yieldTonnesTNT": 0.5,
+    "element": "Propano (equivalente)",
+    "elementQuantity": "996 lb",
+    "sources": [
+      {
+        "title": "Explosión de Baní — Referencia técnica",
+        "url": "https://costaverdedr.com/que-se-explique-esto/"
+      }
+    ],
+    "capabilities": [
+      "context",
+      "blast"
+    ],
+    "dependencies": [
+      "entry"
+    ]
+  },
+  {
+    "id": "tianjin-port-2015-main-explosion",
+    "eventId": "tianjin-port-2015-main-explosion",
+    "version": "context-20261027",
+    "category": "Accidente",
+    "title": "Puerto de Tianjin",
+    "description": "Referencia aproximada elegida por el usuario: 0.5 M de kg de TNT (500,000 kg). La fuente estima 430,000 kg para la explosión principal y 450,000 kg para la secuencia completa; se conservan esos valores publicados por separado. Revisión de cantidad del 26 de octubre de 2026: Inventario previo al accidente, no masa que se pueda afirmar que detonó íntegramente.",
+    "yieldTonnesTNT": 500,
+    "element": "Nitrato de amonio",
+    "elementQuantity": "800 t",
+    "sources": [
+      {
+        "title": "Puerto de Tianjin — Referencia técnica",
+        "url": "https://est.bit.edu.cn/english/headlines/b94705.htm"
+      }
+    ],
+    "capabilities": [
+      "context",
+      "blast"
     ],
     "dependencies": [
       "entry"
     ],
-    "title": "Beirut, 2020",
-    "description": "El 4 de agosto de 2020 se produjo una explosión en el puerto de Beirut, Líbano.",
+    "location": {
+      "label": "Puerto de Tianjin, China",
+      "lng": 117.7288,
+      "lat": 39.2078,
+      "source": {
+        "title": "GeoNames — Tianjin (puerto)",
+        "url": "https://www.geonames.org/1792947/tianjin.html"
+      }
+    }
+  },
+  {
+    "id": "beirut-port-2020-main-explosion",
+    "eventId": "beirut-port-2020-main-explosion",
+    "version": "context-20261027",
+    "category": "Accidente",
+    "title": "Puerto de Beirut",
+    "description": "Referencia aproximada elegida por el usuario: 1.2 M de kg de TNT (1,200,000 kg). El estudio de Rigby conserva su estimación central de 500,000 kg y su límite superior razonable de 1,120,000 kg; 1.2 M no es su estimación central. La cantidad de material corresponde al almacenamiento reportado.",
+    "yieldTonnesTNT": 1200,
+    "element": "Nitrato de amonio",
+    "elementQuantity": "2750 t",
     "sources": [
       {
-        "title": "ONU — Explosión en el puerto de Beirut (4 agosto 2020)",
-        "url": "https://peacekeeping.un.org/en/news/unifil-statement-on-the-explosion-in-beirut"
+        "title": "Puerto de Beirut — Referencia técnica",
+        "url": "https://eprints.whiterose.ac.uk/id/eprint/165010/"
       }
     ],
+    "capabilities": [
+      "context",
+      "blast"
+    ],
+    "dependencies": [
+      "entry"
+    ],
     "location": {
-      "label": "Beirut, Líbano",
+      "label": "Puerto de Beirut, Líbano",
       "lng": 35.50157,
       "lat": 33.89332,
       "source": {
@@ -29,23 +186,483 @@
     }
   },
   {
-    "id": "nuclear-humanitarian-context",
-    "eventId": "nuclear-humanitarian-context",
-    "version": "context-20261011",
+    "id": "military-moab-gbu43b-reference",
+    "eventId": "military-moab-gbu43b-reference",
+    "version": "context-20261027",
     "category": "Militar",
+    "title": "MOAB (GBU-43/B)",
+    "description": "Referencia publicada de 11 toneladas de TNT. La revisión jurídica USAF del 21 de marzo de 2003 declara 18,000 libras de H6; se conserva esa carga documental, sin confundirla con la masa de la ojiva o de toda la bomba. La cifra de equivalencia y la cantidad de carga proceden de documentos distintos; no se deriva un factor de rendimiento nuevo.",
+    "yieldTonnesTNT": 11,
+    "element": "H6",
+    "elementQuantity": "18000 lb",
+    "sources": [
+      {
+        "title": "MOAB (GBU-43/B) — Referencia técnica",
+        "url": "https://www.bundesheer.at/pdf_pool/publikationen/01_2022_s_iss_die_usa_-_interessen_und_strategien_web.pdf"
+      }
+    ],
     "capabilities": [
-      "context"
+      "context",
+      "blast"
+    ],
+    "dependencies": [
+      "entry"
+    ]
+  },
+  {
+    "id": "military-atbip-foab-reference",
+    "eventId": "military-atbip-foab-reference",
+    "version": "context-20261027",
+    "category": "Militar",
+    "title": "ATBIP (FOAB)",
+    "description": "44 toneladas de TNT es una declaración rusa de 2007 recogida por Reuters, no una medición independiente verificada. ATBIP es la denominación inglesa difundida para el arma conocida como FOAB. No se especifican composición ni cantidad del explosivo por falta de una documentación verificable del material.",
+    "yieldTonnesTNT": 44,
+    "element": "Explosivo termobárico",
+    "elementQuantity": "Carga no verificada",
+    "sources": [
+      {
+        "title": "ATBIP (FOAB) — Referencia técnica",
+        "url": "https://www.oneindia.com/2007/09/12/russia-tests-superstrength-bomb-military-says-1189553541.html"
+      }
+    ],
+    "capabilities": [
+      "context",
+      "blast"
+    ],
+    "dependencies": [
+      "entry"
+    ]
+  },
+  {
+    "id": "current-us-w76-2-reference",
+    "eventId": "current-us-w76-2-reference",
+    "version": "context-20261027",
+    "category": "Militar",
+    "title": "W76-2 (Estados Unidos)",
+    "description": "La selección compara máximos por modelo: B61-12 tiene ajustes de 0.3 a 50 kt y no sustituye la W76-2 de 8 kt como menor máximo por modelo. W88 tiene 455 kt. La B83-1 llega a 1.2 Mt y sigue en el arsenal según los presupuestos DOE, pero FAS estima que ya no está desplegada y está en proceso de retirada; el usuario eligió excluirla y usar la W88 como máximo operativo.",
+    "yieldTonnesTNT": 8000,
+    "element": "Material nuclear",
+    "elementQuantity": "No se detalla",
+    "sources": [
+      {
+        "title": "W76-2 (Estados Unidos) — Referencia técnica",
+        "url": "https://thebulletin.org/premium/2026-03/united-states-nuclear-weapons-2026/"
+      }
+    ],
+    "capabilities": [
+      "context",
+      "blast"
+    ],
+    "dependencies": [
+      "entry"
+    ]
+  },
+  {
+    "id": "current-ru-53t6-reference",
+    "eventId": "current-ru-53t6-reference",
+    "version": "context-20261027",
+    "category": "Militar",
+    "title": "Ojiva del 53T6 (Rusia)",
+    "description": "La tabla de FAS cuantifica el 53T6 en 10 kt y el Topol-M basado en silo en 800 kt. No publica una potencia numérica para Avangard ni para varias armas tácticas; algunos sistemas defensivos aparecen solo como low. Por ello, no permite confirmar extremos absolutos nacionales. No se suman ojivas MIRV ni se confunde misil y ojiva.",
+    "yieldTonnesTNT": 10000,
+    "element": "Material nuclear",
+    "elementQuantity": "No se detalla",
+    "sources": [
+      {
+        "title": "Ojiva del 53T6 (Rusia) — Referencia técnica",
+        "url": "https://thebulletin.org/premium/2026-05/russian-nuclear-weapons-2026/"
+      }
+    ],
+    "capabilities": [
+      "context",
+      "blast"
+    ],
+    "dependencies": [
+      "entry"
+    ]
+  },
+  {
+    "id": "hiroshima-1945-energy-reference",
+    "eventId": "hiroshima-1945-energy-reference",
+    "version": "context-20261027",
+    "category": "Militar",
+    "title": "Hiroshima",
+    "description": "Estimación histórica de energía total publicada por Los Álamos (Malik, LA-8819, 1985): 15 kt = 15,000,000 kg de TNT equivalente. M abrevia millones de kg. La cantidad del elemento corresponde al material nuclear cargado: aproximadamente 64 kg de uranio enriquecido. No es la masa total del artefacto ni la cantidad que llegó a fisionarse. En Hiroshima se trata de la masa de uranio enriquecido, no de uranio-235 puro.",
+    "yieldTonnesTNT": 15000,
+    "element": "Uranio enriquecido",
+    "elementQuantity": "64 kg",
+    "sources": [
+      {
+        "title": "Hiroshima — Referencia técnica",
+        "url": "https://www.osti.gov/manhattan-project-history/publications/LANLHiroshimaNagasakiYields.pdf"
+      }
+    ],
+    "capabilities": [
+      "context",
+      "blast"
     ],
     "dependencies": [
       "entry"
     ],
-    "title": "Consecuencias humanitarias nucleares",
-    "description": "El Comité Internacional de la Cruz Roja describe las consecuencias humanitarias del uso de armas nucleares.",
+    "location": {
+      "label": "Hiroshima, Japón",
+      "lng": 132.4553,
+      "lat": 34.3853,
+      "source": {
+        "title": "GeoNames — Hiroshima",
+        "url": "https://www.geonames.org/1862415/hiroshima-shi.html"
+      }
+    }
+  },
+  {
+    "id": "nagasaki-1945-energy-reference",
+    "eventId": "nagasaki-1945-energy-reference",
+    "version": "context-20261027",
+    "category": "Militar",
+    "title": "Nagasaki",
+    "description": "Estimación histórica de energía total publicada por Los Álamos (Malik, LA-8819, 1985): 21 kt = 21,000,000 kg de TNT equivalente. M abrevia millones de kg. La cantidad del elemento corresponde al material nuclear cargado: aproximadamente 6.2 kg de plutonio. No es la masa total del artefacto ni la cantidad que llegó a fisionarse.",
+    "yieldTonnesTNT": 21000,
+    "element": "Plutonio",
+    "elementQuantity": "6.2 kg",
     "sources": [
       {
-        "title": "CICR — Preguntas frecuentes sobre armas nucleares",
-        "url": "https://www.icrc.org/en/article/faq-nuclear-weapons"
+        "title": "Nagasaki — Referencia técnica",
+        "url": "https://www.osti.gov/manhattan-project-history/publications/LANLHiroshimaNagasakiYields.pdf"
       }
+    ],
+    "capabilities": [
+      "context",
+      "blast"
+    ],
+    "dependencies": [
+      "entry"
+    ],
+    "location": {
+      "label": "Nagasaki, Japón",
+      "lng": 129.8633,
+      "lat": 32.7737,
+      "source": {
+        "title": "GeoNames — Nagasaki",
+        "url": "https://www.geonames.org/1856177/nagasaki.html"
+      }
+    }
+  },
+  {
+    "id": "current-cn-df31a-reference",
+    "eventId": "current-cn-df31a-reference",
+    "version": "context-20261027",
+    "category": "Militar",
+    "title": "Ojiva del DF-31A (China)",
+    "description": "FAS 2026 estima 425 kt para DF-31A/AG, DF-31B, DF-41 y JL-3, y 4.5 Mt para DF-5A. DF-5C aparece como multi-MT, sin potencia numérica precisa y en introducción, y el artículo menciona el desarrollo de armas menores de 10 kt sin acreditar un modelo operativo cuantificado. No se puede confirmar un mínimo o máximo nacional absoluto; 425 kt y 4.5 Mt son extremos de los modelos operativos con cifra publicada en esta revisión.",
+    "yieldTonnesTNT": 425000,
+    "element": "Material nuclear",
+    "elementQuantity": "No se detalla",
+    "sources": [
+      {
+        "title": "Ojiva del DF-31A (China) — Referencia técnica",
+        "url": "https://thebulletin.org/premium/2026-07/chinese-nuclear-weapons-2026/"
+      }
+    ],
+    "capabilities": [
+      "context",
+      "blast"
+    ],
+    "dependencies": [
+      "entry"
     ]
+  },
+  {
+    "id": "current-us-w88-reference",
+    "eventId": "current-us-w88-reference",
+    "version": "context-20261027",
+    "category": "Militar",
+    "title": "W88 (Estados Unidos)",
+    "description": "La selección compara máximos por modelo: B61-12 tiene ajustes de 0.3 a 50 kt y no sustituye la W76-2 de 8 kt como menor máximo por modelo. W88 tiene 455 kt. La B83-1 llega a 1.2 Mt y sigue en el arsenal según los presupuestos DOE, pero FAS estima que ya no está desplegada y está en proceso de retirada; el usuario eligió excluirla y usar la W88 como máximo operativo.",
+    "yieldTonnesTNT": 455000,
+    "element": "Material nuclear",
+    "elementQuantity": "No se detalla",
+    "sources": [
+      {
+        "title": "W88 (Estados Unidos) — Referencia técnica",
+        "url": "https://thebulletin.org/premium/2026-03/united-states-nuclear-weapons-2026/"
+      }
+    ],
+    "capabilities": [
+      "context",
+      "blast"
+    ],
+    "dependencies": [
+      "entry"
+    ]
+  },
+  {
+    "id": "current-ru-topolm-reference",
+    "eventId": "current-ru-topolm-reference",
+    "version": "context-20261027",
+    "category": "Militar",
+    "title": "Ojiva del Topol-M (Rusia)",
+    "description": "La tabla de FAS cuantifica el 53T6 en 10 kt y el Topol-M basado en silo en 800 kt. No publica una potencia numérica para Avangard ni para varias armas tácticas; algunos sistemas defensivos aparecen solo como low. Por ello, no permite confirmar extremos absolutos nacionales. No se suman ojivas MIRV ni se confunde misil y ojiva.",
+    "yieldTonnesTNT": 800000,
+    "element": "Material nuclear",
+    "elementQuantity": "No se detalla",
+    "sources": [
+      {
+        "title": "Ojiva del Topol-M (Rusia) — Referencia técnica",
+        "url": "https://thebulletin.org/premium/2026-05/russian-nuclear-weapons-2026/"
+      }
+    ],
+    "capabilities": [
+      "context",
+      "blast"
+    ],
+    "dependencies": [
+      "entry"
+    ]
+  },
+  {
+    "id": "current-ru-avangard-reported-reference",
+    "eventId": "current-ru-avangard-reported-reference",
+    "version": "context-20261027",
+    "category": "Militar",
+    "title": "Avangard (Rusia)",
+    "description": "Avangard: la referencia numérica de 2,000,000 toneladas de TNT representa el umbral citado en un reporte de TASS de 2018, cuya fuente anónima afirma una potencia superior a ese valor. TASS declara no disponer de confirmación oficial. No es una potencia exacta, un máximo conocido ni una estimación numérica de FAS. FAS 2026 sí incluye el sistema entre las fuerzas desplegadas, pero deja su potencia sin cuantificar. No se recopila ni reconstruye la carga nuclear interna. La cifra visible se conserva sin símbolos, conforme al formato acordado; su carácter de umbral figura en esta nota y en el pie de la tabla.",
+    "yieldTonnesTNT": 2000000,
+    "element": "Material nuclear",
+    "elementQuantity": "No se detalla",
+    "sources": [
+      {
+        "title": "Avangard (Rusia) — Referencia técnica",
+        "url": "https://tass.ru/armiya-i-opk/5047200"
+      }
+    ],
+    "capabilities": [
+      "context",
+      "blast"
+    ],
+    "dependencies": [
+      "entry"
+    ]
+  },
+  {
+    "id": "current-cn-df5a-reference",
+    "eventId": "current-cn-df5a-reference",
+    "version": "context-20261027",
+    "category": "Militar",
+    "title": "Ojiva del DF-5A (China)",
+    "description": "FAS 2026 estima 425 kt para DF-31A/AG, DF-31B, DF-41 y JL-3, y 4.5 Mt para DF-5A. DF-5C aparece como multi-MT, sin potencia numérica precisa y en introducción, y el artículo menciona el desarrollo de armas menores de 10 kt sin acreditar un modelo operativo cuantificado. No se puede confirmar un mínimo o máximo nacional absoluto; 425 kt y 4.5 Mt son extremos de los modelos operativos con cifra publicada en esta revisión.",
+    "yieldTonnesTNT": 4500000,
+    "element": "Material nuclear",
+    "elementQuantity": "No se detalla",
+    "sources": [
+      {
+        "title": "Ojiva del DF-5A (China) — Referencia técnica",
+        "url": "https://thebulletin.org/premium/2026-07/chinese-nuclear-weapons-2026/"
+      }
+    ],
+    "capabilities": [
+      "context",
+      "blast"
+    ],
+    "dependencies": [
+      "entry"
+    ]
+  },
+  {
+    "id": "castle-bravo-1954-energy-reference",
+    "eventId": "castle-bravo-1954-energy-reference",
+    "version": "context-20261027",
+    "category": "Militar",
+    "title": "Castle Bravo",
+    "description": "Potencia histórica de la detonación Castle Bravo del 1 de marzo de 1954: 15 megatones, equivalentes a 15,000,000 toneladas de TNT. La cifra corresponde al ensayo realizado, no al rendimiento previsto. No se fija una masa del material nuclear sin una fuente verificable de esa cantidad.",
+    "yieldTonnesTNT": 15000000,
+    "element": "Material termonuclear",
+    "elementQuantity": "No se detalla",
+    "sources": [
+      {
+        "title": "Castle Bravo — Referencia técnica",
+        "url": "https://www.un.org/en/observances/end-nuclear-tests-day/history"
+      }
+    ],
+    "capabilities": [
+      "context",
+      "blast"
+    ],
+    "dependencies": [
+      "entry"
+    ],
+    "location": {
+      "label": "Atolón Bikini, Islas Marshall",
+      "lng": 165.274,
+      "lat": 11.697,
+      "source": {
+        "title": "GeoNames — Bikini Atoll",
+        "url": "https://www.geonames.org/2080554/bikini-atoll.html"
+      }
+    }
+  },
+  {
+    "id": "tsar-bomba-1961-energy-reference",
+    "eventId": "tsar-bomba-1961-energy-reference",
+    "version": "context-20261027",
+    "category": "Militar",
+    "title": "Bomba del Zar",
+    "description": "Potencia histórica del ensayo de 1961 según la ONU: 50 megatones, equivalentes a 50,000,000 toneladas de TNT. Se utiliza la referencia de la detonación realizada, no una capacidad de diseño hipotética. No se presenta como un rango ni se fija una masa del material nuclear sin una fuente verificable de esa cantidad.",
+    "yieldTonnesTNT": 50000000,
+    "element": "Material termonuclear",
+    "elementQuantity": "No se detalla",
+    "sources": [
+      {
+        "title": "Bomba del Zar — Referencia técnica",
+        "url": "https://www.un.org/en/observances/end-nuclear-tests-day/history"
+      }
+    ],
+    "capabilities": [
+      "context",
+      "blast"
+    ],
+    "dependencies": [
+      "entry"
+    ],
+    "location": {
+      "label": "Nueva Zembla, Rusia",
+      "lng": 73.85,
+      "lat": 73.807,
+      "source": {
+        "title": "GeoNames — Novaya Zemlya",
+        "url": "https://www.geonames.org/514493/novaya-zemlya.html"
+      }
+    }
+  },
+  {
+    "id": "tunguska-1908-energy-reference",
+    "eventId": "tunguska-1908-energy-reference",
+    "version": "context-20261027",
+    "category": "Natural",
+    "title": "Tunguska",
+    "description": "Intervalo de 10 a 20 Mt favorecido por los modelos revisados en el taller NASA de 2018. Existen estimaciones menores; no es un intervalo de consenso universal. Revisión de cantidad del 26 de octubre de 2026: Estimación divulgativa de la masa del objeto, no masa medida ni combustible. La energía de la tabla procede del taller NASA de 2018; no se afirma que ambas cifras sean parámetros de una misma reconstrucción.",
+    "yieldTonnesTNT": 20000000,
+    "element": "Objeto espacial",
+    "elementQuantity": "100000 t",
+    "sources": [
+      {
+        "title": "Tunguska — Referencia técnica",
+        "url": "https://ntrs.nasa.gov/api/citations/20190002302/downloads/20190002302.pdf"
+      }
+    ],
+    "capabilities": [
+      "context",
+      "blast"
+    ],
+    "dependencies": [
+      "entry"
+    ],
+    "location": {
+      "label": "Tunguska, Rusia",
+      "lng": 101.9,
+      "lat": 60.9167,
+      "source": {
+        "title": "GeoNames — Podkamennaya Tunguska",
+        "url": "https://www.geonames.org/1495679/podkamennaya-tunguska.html"
+      }
+    }
+  },
+  {
+    "id": "hunga-tonga-2022-energy-reference",
+    "eventId": "hunga-tonga-2022-energy-reference",
+    "version": "context-20261027",
+    "category": "Natural",
+    "title": "Hunga Tonga",
+    "description": "Estimación de 61 Mt de Díaz y Rigby (2022), obtenida mediante una relación empírica entre presión y distancia. Otros métodos producen cifras diferentes. No expresa solo energía acústica ni equivale a daños idénticos a una carga de TNT. Revisión de cantidad del 26 de octubre de 2026: Volumen equivalente de roca densa, no volumen de gas ni una carga química. Es un mínimo estimado, no un máximo conocido ni una cantidad exacta. No se convierte a masa con una densidad supuesta. La estimación energética de Díaz y Rigby se mantiene por separado.",
+    "yieldTonnesTNT": 61000000,
+    "element": "Magma",
+    "elementQuantity": "8 km³ DRE (mínimo)",
+    "sources": [
+      {
+        "title": "Hunga Tonga — Referencia técnica",
+        "url": "https://eprints.whiterose.ac.uk/id/eprint/191410/"
+      }
+    ],
+    "capabilities": [
+      "context",
+      "blast"
+    ],
+    "dependencies": [
+      "entry"
+    ],
+    "location": {
+      "label": "Hunga Tonga-Hunga Haʻapai, Tonga",
+      "lng": -175.388,
+      "lat": -20.536,
+      "source": {
+        "title": "GeoNames — Hunga Tonga",
+        "url": "https://www.geonames.org/4032470/hunga-tonga.html"
+      }
+    }
+  },
+  {
+    "id": "krakatoa-1883-energy-reference",
+    "eventId": "krakatoa-1883-energy-reference",
+    "version": "context-20261027",
+    "category": "Natural",
+    "title": "Krakatoa",
+    "description": "Press y Harkrider (1966) estimaron que una explosión de 100 a 150 Mt reproduciría el pulso de presión atmosférica de Krakatoa. Es una equivalencia de ese pulso, no una medición directa de toda la energía eruptiva. Revisión de cantidad del 26 de octubre de 2026: Volumen de material expulsado, no masa de combustible ni volumen exclusivamente de magma. NOAA publica 21 km³ y el ministerio de Indonesia 18 km³ con otras estimaciones; no se presentan como un único intervalo de medición.",
+    "yieldTonnesTNT": 150000000,
+    "element": "Magma y rocas",
+    "elementQuantity": "25 km³",
+    "sources": [
+      {
+        "title": "Krakatoa — Referencia técnica",
+        "url": "https://authors.library.caltech.edu/records/xvvaz-4pv10"
+      }
+    ],
+    "capabilities": [
+      "context",
+      "blast"
+    ],
+    "dependencies": [
+      "entry"
+    ],
+    "location": {
+      "label": "Krakatoa, Indonesia",
+      "lng": 105.423,
+      "lat": -6.102,
+      "source": {
+        "title": "GeoNames — Krakatau",
+        "url": "https://www.geonames.org/1639912/krakatau.html"
+      }
+    }
+  },
+  {
+    "id": "chicxulub-kpg-impact-energy-reference",
+    "eventId": "chicxulub-kpg-impact-energy-reference",
+    "version": "context-20261027",
+    "category": "Natural",
+    "title": "Chicxulub",
+    "description": "Referencia divulgativa del Lunar and Planetary Institute: 100 trillion tons de TNT, interpretadas en la escala científica de equivalencia TNT como 100,000,000,000,000 toneladas. Es una estimación puntual aproximada de energía del impacto, no un extremo superior universal de todas las publicaciones. La fuente da un diámetro de 10 a 15 km; se muestra 15 km y se conserva el intervalo. La cantidad visible expresa diámetro, no masa ni combustible. No se confunde el material terrestre excavado con la masa del asteroide. El impacto asociado a la extinción de los dinosaurios no avianos ocurrió hace unos 66 millones de años.",
+    "yieldTonnesTNT": 100000000000000,
+    "element": "Asteroide",
+    "elementQuantity": "15 km (diámetro)",
+    "sources": [
+      {
+        "title": "Chicxulub — Referencia técnica",
+        "url": "https://www.lpi.usra.edu/features/chicxulub/"
+      }
+    ],
+    "capabilities": [
+      "context",
+      "blast"
+    ],
+    "dependencies": [
+      "entry"
+    ],
+    "location": {
+      "label": "Cráter de Chicxulub, México",
+      "lng": -89.517,
+      "lat": 21.4,
+      "source": {
+        "title": "GeoNames — Chicxulub Puerto",
+        "url": "https://www.geonames.org/3531023/chicxulub-puerto.html"
+      }
+    }
   }
 ]

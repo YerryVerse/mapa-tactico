@@ -16,6 +16,7 @@ export const POPULATION_TIMEOUT_MS=20_000;
 export const POPULATION_CACHE_TTL_SECONDS=21_600;
 export const POPULATION_METHOD='cell_center_inside_polygon';
 export const POPULATION_SOURCE='WorldPop Global 2';
+export const POPULATION_UNITS='people_per_grid_cell' as const;
 
 const longitude=z.number().finite().min(-180).max(180);
 const latitude=z.number().finite().min(-90).max(90);
@@ -75,12 +76,15 @@ const populationAvailableReplySchema=z.object({
     year:z.literal(POPULATION_YEAR),
     edition:z.literal(`${POPULATION_RELEASE}-v1`),
     resolution:z.literal(POPULATION_RESOLUTION),
-    units:z.literal('people_per_grid_cell'),
+    units:z.literal(POPULATION_UNITS),
     method:z.literal(POPULATION_METHOD),
     source:z.literal(POPULATION_SOURCE),
     license:z.literal('CC-BY-4.0'),
     doi:z.literal('10.5258/SOTON/WP00839'),
-    coverage:z.object({status:z.enum(['complete','partial']),validGridCells:z.number().int().positive(),intersectedGridCells:z.number().int().positive(),noDataGridCells:z.number().int().nonnegative()}).strict(),
+    coverage:z.object({status:z.enum(['complete','partial']),validGridCells:z.number().int().positive(),intersectedGridCells:z.number().int().positive(),noDataGridCells:z.number().int().nonnegative()}).strict().superRefine((coverage,ctx)=>{
+      if(coverage.validGridCells+coverage.noDataGridCells!==coverage.intersectedGridCells)ctx.addIssue({code:'custom',message:'Population coverage cell counts do not add up'});
+      if(coverage.status!==(coverage.noDataGridCells?'partial':'complete'))ctx.addIssue({code:'custom',message:'Population coverage status does not match NoData cells'});
+    }),
     sourceDatasets:z.array(z.object({countryCode:z.string().regex(/^[A-Z]{3}$/),datasetId:z.string().min(1),sourceSha256:z.string().regex(/^[0-9a-f]{64}$/)}).strict()).min(1).max(8),
     processingTimeMs:z.number().int().nonnegative()
 }).strict();

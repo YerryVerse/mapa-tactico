@@ -1,0 +1,122 @@
+[
+  {
+    "dir": "ltr",
+    "lang": "es",
+    "text": "Explora países, ciudades y calles. Usa el zoom o la rueda; arrastra para mover el mapa.Tab recorre los controles. Las flechas desplazan el mapa cuando tiene el foco. «Elegir ubicación» permite introducir coordenadas. Escape o Atrás cierran el panel.Cartografía: OpenFreeMap, OpenMapTiles, OpenStreetMap. El detalle cartográfico varía según la región. No hay detalle local más allá de ±85,0511° de latitud.Catálogo de búsqueda: GeoNames (CC BY 4.0), Edición 11 de octubre de 2026; Natural Earth (Dominio público); Unicode CLDR 48 (Unicode-3.0). Países y ciudades con nombres alternativos y región. Localidades pequeñas pueden faltar.",
+    "time": "11 de octubre de 2026"
+  },
+  {
+    "dir": "ltr",
+    "lang": "en",
+    "text": "Explore countries, cities and streets. Use the zoom controls or scroll wheel; drag to move the map.Tab moves through controls. Arrow keys move the map when it has focus. Choose location lets you enter coordinates. Escape or Back closes the panel.Cartography: OpenFreeMap, OpenMapTiles, OpenStreetMap. Map detail varies by region. Local detail is unavailable beyond ±85.0511° latitude.Search catalogue: GeoNames (CC BY 4.0), Edition October 11, 2026; Natural Earth (Public domain); Unicode CLDR 48 (Unicode-3.0). Countries and cities include alternative names and regions. Small settlements may be missing.",
+    "time": "October 11, 2026"
+  },
+  {
+    "dir": "ltr",
+    "lang": "zh-Hans",
+    "text": "探索国家、城市和街道。使用缩放按钮或滚轮缩放；拖动以移动地图。使用 Tab 键在控件之间切换。地图获得焦点时，方向键可移动地图。通过“选择位置”可输入坐标。按 Escape 键或使用返回操作可关闭面板。地图数据: OpenFreeMap, OpenMapTiles, OpenStreetMap. 地图的详细程度因地区而异。纬度超出 ±85.0511° 时没有局部详细地图。搜索目录: GeoNames (CC BY 4.0), 版本 2026年10月11日; Natural Earth (公有领域); Unicode CLDR 48 (Unicode-3.0). 目录包含国家和城市的别名及所在地区。可能缺少小型城镇。",
+    "time": "2026年10月11日"
+  },
+  {
+    "dir": "ltr",
+    "lang": "hi",
+    "text": "देश, शहर और सड़कें देखें। ज़ूम बटन या स्क्रॉल व्हील का उपयोग करें; मानचित्र खिसकाने के लिए खींचें।Tab कुंजी से नियंत्रणों के बीच जाएँ। मानचित्र पर फ़ोकस होने पर दिशा कुंजियाँ उसे खिसकाती हैं। «स्थान चुनें» से निर्देशांक दर्ज किए जा सकते हैं। Escape या वापस जाने से पैनल बंद होता है।मानचित्रण: OpenFreeMap, OpenMapTiles, OpenStreetMap. मानचित्र का विवरण क्षेत्र के अनुसार बदलता है। ±85.0511° अक्षांश से आगे स्थानीय विवरण उपलब्ध नहीं है।खोज सूची: GeoNames (CC BY 4.0), संस्करण 11 अक्टूबर 2026; Natural Earth (सार्वजनिक डोमेन); Unicode CLDR 48 (Unicode-3.0). देश और शहर, उनके वैकल्पिक नामों और क्षेत्र सहित। छोटी बस्तियाँ सूची में न भी हों।",
+    "time": "11 अक्टूबर 2026"
+  },
+  {
+    "dir": "rtl",
+    "lang": "ar",
+    "text": "استكشف البلدان والمدن والشوارع. استخدم أزرار التكبير والتصغير أو عجلة الفأرة، واسحب لتحريك الخريطة.ينقلك مفتاح Tab بين عناصر التحكم. تحرّك مفاتيح الأسهم الخريطة عندما يكون التركيز عليها. يتيح «اختيار موقع» إدخال الإحداثيات. يغلق مفتاح Escape أو زر الرجوع اللوحة.بيانات الخرائط: OpenFreeMap, OpenMapTiles, OpenStreetMap. تختلف التفاصيل الجغرافية بحسب المنطقة. لا تتوفر تفاصيل محلية خارج خطي العرض ±85.0511°.فهرس البحث: GeoNames (CC BY 4.0), الإصدار 11 أكتوبر 2026; Natural Earth (الملك العام); Unicode CLDR 48 (Unicode-3.0). بلدان ومدن مع أسمائها البديلة ومناطقها. قد لا تتوفر بعض التجمعات السكانية الصغيرة.",
+    "time": "11 أكتوبر 2026"
+  },
+  {
+    "dir": "ltr",
+    "lang": "fr",
+    "text": "Explorez les pays, les villes et les rues. Utilisez les commandes de zoom ou la molette ; faites glisser la carte pour la déplacer.La touche Tab parcourt les commandes. Les flèches déplacent la carte lorsqu’elle a le focus. « Choisir un emplacement » permet de saisir des coordonnées. Échap ou Retour ferment le panneau.Cartographie: OpenFreeMap, OpenMapTiles, OpenStreetMap. Le niveau de détail cartographique varie selon la région. Aucun détail local n’est disponible au-delà de ±85,0511° de latitude.Catalogue de recherche: GeoNames (CC BY 4.0), Édition 11 octobre 2026; Natural Earth (Domaine public); Unicode CLDR 48 (Unicode-3.0). Pays et villes avec leurs noms alternatifs et leur région. Certaines petites localités peuvent être absentes.",
+    "time": "11 octobre 2026"
+  },
+  {
+    "dir": "ltr",
+    "lang": "bn",
+    "text": "দেশ, শহর ও রাস্তা ঘুরে দেখুন। জুম বোতাম বা মাউসের চাকা ব্যবহার করুন; মানচিত্র সরাতে টেনে নিন।Tab কী দিয়ে নিয়ন্ত্রণগুলির মধ্যে যান। মানচিত্রে ফোকাস থাকলে তীরচিহ্নের কী দিয়ে সেটি সরানো যায়। «স্থান বেছে নিন» থেকে স্থানাঙ্ক লেখা যায়। Escape বা ফিরে যাওয়ার মাধ্যমে প্যানেল বন্ধ হয়।মানচিত্রায়ন: OpenFreeMap, OpenMapTiles, OpenStreetMap. মানচিত্রের বিশদ অঞ্চলভেদে পরিবর্তিত হয়। ±85.0511° অক্ষাংশের বাইরে স্থানীয় বিশদ মানচিত্র নেই।অনুসন্ধানের তালিকা: GeoNames (CC BY 4.0), সংস্করণ ১১ অক্টোবর, ২০২৬; Natural Earth (পাবলিক ডোমেইন); Unicode CLDR 48 (Unicode-3.0). বিকল্প নাম ও অঞ্চলসহ দেশ এবং শহর। ছোট জনবসতি তালিকায় নাও থাকতে পারে।",
+    "time": "১১ অক্টোবর, ২০২৬"
+  },
+  {
+    "dir": "ltr",
+    "lang": "pt",
+    "text": "Explore países, cidades e ruas. Use o zoom ou a roda do mouse; arraste para mover o mapa.Tab percorre os controles. As setas movem o mapa quando ele está em foco. «Escolher localização» permite inserir coordenadas. Escape ou Voltar fecham o painel.Cartografia: OpenFreeMap, OpenMapTiles, OpenStreetMap. O detalhamento cartográfico varia conforme a região. Não há detalhes locais além de ±85,0511° de latitude.Catálogo de busca: GeoNames (CC BY 4.0), Edição 11 de outubro de 2026; Natural Earth (Domínio público); Unicode CLDR 48 (Unicode-3.0). Países e cidades com nomes alternativos e região. Algumas localidades pequenas podem não constar.",
+    "time": "11 de outubro de 2026"
+  },
+  {
+    "dir": "ltr",
+    "lang": "ru",
+    "text": "Исследуйте страны, города и улицы. Используйте кнопки масштаба или колесо мыши; перетаскивайте карту, чтобы перемещать её.Tab перемещает фокус между элементами управления. Стрелки перемещают карту, когда она в фокусе. Кнопка «Выбрать место» позволяет ввести координаты. Escape или кнопка «Назад» закрывают панель.Картография: OpenFreeMap, OpenMapTiles, OpenStreetMap. Детализация карты зависит от региона. За пределами широт ±85,0511° локальная детализация отсутствует.Каталог поиска: GeoNames (CC BY 4.0), Редакция 11 октября 2026 г.; Natural Earth (Общественное достояние); Unicode CLDR 48 (Unicode-3.0). Страны и города с альтернативными названиями и указанием региона. Небольшие населённые пункты могут отсутствовать.",
+    "time": "11 октября 2026 г."
+  },
+  {
+    "dir": "ltr",
+    "lang": "id",
+    "text": "Jelajahi negara, kota, dan jalan. Gunakan kontrol pembesaran atau roda tetikus; seret untuk menggeser peta.Tab berpindah antarkontrol. Tombol panah menggeser peta saat peta menerima fokus. «Pilih lokasi» memungkinkan Anda memasukkan koordinat. Escape atau Kembali menutup panel.Kartografi: OpenFreeMap, OpenMapTiles, OpenStreetMap. Detail kartografi berbeda menurut wilayah. Detail lokal tidak tersedia di luar ±85,0511° lintang.Katalog pencarian: GeoNames (CC BY 4.0), Edisi 11 Oktober 2026; Natural Earth (Domain publik); Unicode CLDR 48 (Unicode-3.0). Negara dan kota beserta nama alternatif dan wilayahnya. Beberapa permukiman kecil mungkin tidak tercantum.",
+    "time": "11 Oktober 2026"
+  },
+  {
+    "dir": "rtl",
+    "lang": "ur",
+    "text": "ممالک، شہر اور سڑکیں دیکھیں۔ قریب یا دور کرنے کے لیے زوم یا ماؤس کا پہیہ استعمال کریں؛ نقشہ حرکت دینے کے لیے گھسیٹیں۔Tab کنٹرولز کے درمیان لے جاتا ہے۔ نقشے پر فوکس ہونے پر تیر والی کلیدیں اسے حرکت دیتی ہیں۔ «مقام منتخب کریں» سے نقاط درج کیے جا سکتے ہیں۔ Escape یا واپس جانے سے پینل بند ہوتا ہے۔نقشہ سازی: OpenFreeMap, OpenMapTiles, OpenStreetMap. نقشے کی تفصیل علاقے کے لحاظ سے مختلف ہوتی ہے۔ عرض البلد ±85.0511° سے آگے مقامی تفصیل دستیاب نہیں۔تلاش کی فہرست: GeoNames (CC BY 4.0), نسخہ 11 اکتوبر، 2026; Natural Earth (عوامی ملکیت); Unicode CLDR 48 (Unicode-3.0). ممالک اور شہر ان کے متبادل ناموں اور علاقوں کے ساتھ شامل ہیں۔ چھوٹی آبادیاں موجود نہ بھی ہوں۔",
+    "time": "11 اکتوبر، 2026"
+  },
+  {
+    "dir": "ltr",
+    "lang": "de",
+    "text": "Erkunden Sie Länder, Städte und Straßen. Nutzen Sie die Zoomsteuerung oder das Mausrad; ziehen Sie die Karte, um sie zu verschieben.Mit Tab wechseln Sie zwischen den Bedienelementen. Die Pfeiltasten verschieben die Karte, wenn sie den Fokus hat. Unter «Standort auswählen» können Sie Koordinaten eingeben. Escape oder Zurück schließen das Bedienfeld.Kartografie: OpenFreeMap, OpenMapTiles, OpenStreetMap. Der kartografische Detailgrad variiert je nach Region. Jenseits von ±85,0511° Breitengrad sind keine lokalen Details verfügbar.Suchkatalog: GeoNames (CC BY 4.0), Ausgabe 11. Oktober 2026; Natural Earth (Gemeinfrei); Unicode CLDR 48 (Unicode-3.0). Länder und Städte mit alternativen Namen und Region. Kleine Orte können fehlen.",
+    "time": "11. Oktober 2026"
+  },
+  {
+    "dir": "ltr",
+    "lang": "ja",
+    "text": "国、都市、街路を探索できます。拡大・縮小ボタンやホイールを使い、ドラッグで地図を移動します。Tab キーで操作項目を移動できます。地図にフォーカスがあるときは矢印キーで地図を移動できます。「位置を選択」では座標を入力できます。Escape キーまたは戻る操作でパネルを閉じます。地図データ: OpenFreeMap, OpenMapTiles, OpenStreetMap. 地図の詳細度は地域によって異なります。緯度 ±85.0511° を超える地域には詳細地図がありません。検索用データ: GeoNames (CC BY 4.0), 版 2026年10月11日; Natural Earth (パブリックドメイン); Unicode CLDR 48 (Unicode-3.0). 別名と地域情報を含む国と都市の一覧です。小さな町などが含まれない場合があります。",
+    "time": "2026年10月11日"
+  },
+  {
+    "dir": "ltr",
+    "lang": "mr",
+    "text": "देश, शहरे आणि रस्ते पाहा. झूम बटणे किंवा माऊसचे चाक वापरा; नकाशा हलवण्यासाठी ओढा.Tab कळ वापरून नियंत्रणांमध्ये जा. नकाशावर फोकस असताना बाणांच्या कळांनी नकाशा हलवता येतो. «ठिकाण निवडा» यामधून निर्देशांक लिहिता येतात. Escape किंवा मागे जाण्याच्या कृतीने पॅनेल बंद होते.नकाशांकन: OpenFreeMap, OpenMapTiles, OpenStreetMap. नकाशाचे तपशील प्रदेशानुसार बदलतात. ±85.0511° अक्षांशाच्या पलीकडे स्थानिक तपशील उपलब्ध नाही.शोधसूची: GeoNames (CC BY 4.0), आवृत्ती ११ ऑक्टोबर, २०२६; Natural Earth (सार्वजनिक डोमेन); Unicode CLDR 48 (Unicode-3.0). पर्यायी नावे आणि प्रदेशासह देश व शहरे. लहान वसाहती सूचीमध्ये नसू शकतात.",
+    "time": "११ ऑक्टोबर, २०२६"
+  },
+  {
+    "dir": "ltr",
+    "lang": "vi",
+    "text": "Khám phá các quốc gia, thành phố và đường phố. Dùng các nút thu phóng hoặc con lăn chuột; kéo để di chuyển bản đồ.Phím Tab chuyển qua các nút điều khiển. Các phím mũi tên di chuyển bản đồ khi bản đồ đang có tiêu điểm. «Chọn vị trí» cho phép nhập tọa độ. Escape hoặc Quay lại đóng bảng điều khiển.Dữ liệu bản đồ: OpenFreeMap, OpenMapTiles, OpenStreetMap. Mức độ chi tiết của bản đồ thay đổi theo khu vực. Không có dữ liệu chi tiết cục bộ vượt quá vĩ độ ±85,0511°.Danh mục tìm kiếm: GeoNames (CC BY 4.0), Ấn bản 11 tháng 10, 2026; Natural Earth (Phạm vi công cộng); Unicode CLDR 48 (Unicode-3.0). Các quốc gia và thành phố kèm tên thay thế và khu vực. Một số địa phương nhỏ có thể không có trong danh mục.",
+    "time": "11 tháng 10, 2026"
+  },
+  {
+    "dir": "ltr",
+    "lang": "te",
+    "text": "దేశాలు, నగరాలు, వీధులను అన్వేషించండి. జూమ్ బటన్‌లు లేదా మౌస్ చక్రం ఉపయోగించండి; మ్యాప్‌ను కదిలించడానికి లాగండి.Tab కీతో నియంత్రణల మధ్య వెళ్లండి. మ్యాప్‌పై ఫోకస్ ఉన్నప్పుడు బాణం కీలు దాన్ని కదిలిస్తాయి. «ప్రదేశాన్ని ఎంచుకోండి» ద్వారా నిర్దేశాంకాలను నమోదు చేయవచ్చు. Escape లేదా వెనక్కి వెళ్లే చర్యతో ప్యానెల్ మూసివేయబడుతుంది.మ్యాప్ సమాచారం: OpenFreeMap, OpenMapTiles, OpenStreetMap. మ్యాప్ వివరాలు ప్రాంతాన్ని బట్టి మారుతాయి. ±85.0511° అక్షాంశం దాటి స్థానిక వివరాలు లేవు.శోధన జాబితా: GeoNames (CC BY 4.0), ఎడిషన్ 11 అక్టోబర్, 2026; Natural Earth (పబ్లిక్ డొమైన్); Unicode CLDR 48 (Unicode-3.0). ప్రత్యామ్నాయ పేర్లు, ప్రాంతంతో కూడిన దేశాలు, నగరాలు. చిన్న జనావాసాలు జాబితాలో ఉండకపోవచ్చు.",
+    "time": "11 అక్టోబర్, 2026"
+  },
+  {
+    "dir": "ltr",
+    "lang": "sw",
+    "text": "Chunguza nchi, majiji na mitaa. Tumia vitufe vya kukuza au gurudumu la kipanya; buruta ili kusogeza ramani.Tab hupitia vidhibiti. Vitufe vya mishale husogeza ramani ikiwa ndiyo yenye fokasi. «Chagua eneo» hukuwezesha kuingiza viwianishi. Escape au kitufe cha kurudi hufunga paneli.Uchoraji wa ramani: OpenFreeMap, OpenMapTiles, OpenStreetMap. Maelezo ya ramani hutofautiana kulingana na eneo. Hakuna maelezo ya eneo katika latitudo zinazozidi ±85.0511°.Orodha ya utafutaji: GeoNames (CC BY 4.0), Toleo 11 Oktoba 2026; Natural Earth (Mali ya umma); Unicode CLDR 48 (Unicode-3.0). Nchi na majiji pamoja na majina yao mbadala na maeneo yao. Makazi madogo yanaweza kukosekana.",
+    "time": "11 Oktoba 2026"
+  },
+  {
+    "dir": "ltr",
+    "lang": "ha-Latn",
+    "text": "Bincika ƙasashe, birane da tituna. Yi amfani da ƙarin girma ko dabaran linzamin kwamfuta; ja don motsa taswira.Tab yana kaiwa daga wani maɓallin sarrafawa zuwa wani. Maɓallan kibiya suna motsa taswira idan tana da fokus. «Zaɓi wuri» yana ba da damar shigar da ƙimomin wuri. Escape ko maɓallin komawa yana rufe ɓangaren bayani.Taswirori: OpenFreeMap, OpenMapTiles, OpenStreetMap. Cikakken bayanin taswira yana bambanta bisa ga yanki. Babu cikakken bayanin yankin bayan faɗin ƙasa ±85.0511°.Kundin bincike: GeoNames (CC BY 4.0), Bugu 11 Oktoba, 2026; Natural Earth (Mallakar jama'a); Unicode CLDR 48 (Unicode-3.0). Ƙasashe da birane tare da sauran sunayensu da yankinsu. Wasu ƙananan garuruwa na iya rasa.",
+    "time": "11 Oktoba, 2026"
+  },
+  {
+    "dir": "ltr",
+    "lang": "tr",
+    "text": "Ülkeleri, şehirleri ve sokakları keşfedin. Yakınlaştırma kontrollerini veya fare tekerleğini kullanın; haritayı hareket ettirmek için sürükleyin.Tab tuşu kontroller arasında geçiş yapar. Harita odaktayken ok tuşları haritayı hareket ettirir. «Konum seç» koordinat girmenizi sağlar. Escape veya Geri paneli kapatır.Haritacılık: OpenFreeMap, OpenMapTiles, OpenStreetMap. Harita ayrıntısı bölgeye göre değişir. ±85,0511° enlemin ötesinde yerel ayrıntı bulunmaz.Arama kataloğu: GeoNames (CC BY 4.0), Sürüm 11 Ekim 2026; Natural Earth (Kamu malı); Unicode CLDR 48 (Unicode-3.0). Alternatif adları ve bölgeleriyle ülkeler ve şehirler. Bazı küçük yerleşimler listede bulunmayabilir.",
+    "time": "11 Ekim 2026"
+  },
+  {
+    "dir": "rtl",
+    "lang": "pnb-Arab",
+    "text": "ملک، شہر تے سڑکاں ویکھو۔ نیڑے یا دور کرن لئی زوم یا ماؤس دا پہیہ ورتو؛ نقشہ ہلاؤن لئی کھچو۔Tab کنٹرولز وچکار لے جاندا اے۔ جدوں نقشے اُتے فوکس ہووے، تیر والیاں کلیداں اوہنوں ہلاندیاں نیں۔ «تھاں چنو» نال نقاط لکھے جا سکدے نیں۔ Escape یا واپس جان نال پینل بند ہو جاندا اے۔نقشہ سازی: OpenFreeMap, OpenMapTiles, OpenStreetMap. نقشے دی تفصیل علاقے دے حساب نال بدل دی اے۔ عرض بلد ±85.0511° توں اگے مقامی تفصیل نئیں ملدی۔لبھن دی فہرست: GeoNames (CC BY 4.0), نسخہ ۱۱ اکتوبر ۲۰۲۶; Natural Earth (عوامی ملکیت); Unicode CLDR 48 (Unicode-3.0). ملک تے شہر اوہناں دے ہور ناواں تے علاقے نال شامل نیں۔ چھوٹیاں آبادیاں فہرست وچوں رہ وی سکدیاں نیں۔",
+    "time": "۱۱ اکتوبر ۲۰۲۶"
+  }
+]

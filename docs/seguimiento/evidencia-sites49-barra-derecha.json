@@ -1,0 +1,507 @@
+{
+  "version": 49,
+  "source": "88b5a6fe444feb799c42ae1d9008fe751ebdc8bc",
+  "responsiveLocal": [
+    {
+      "actual": {
+        "height": 720,
+        "width": 1280
+      },
+      "name": "Find a place",
+      "panel": {
+        "bottom": 327,
+        "left": 856,
+        "right": 1196,
+        "top": 18
+      },
+      "requested": {
+        "height": 720,
+        "width": 1280
+      },
+      "separated": true,
+      "tools": {
+        "bottom": 571,
+        "left": 1216,
+        "right": 1268,
+        "top": 111
+      },
+      "viewportOverflow": false,
+      "withinViewport": true
+    },
+    {
+      "actual": {
+        "height": 720,
+        "width": 1280
+      },
+      "name": "Choose location",
+      "panel": {
+        "bottom": 465.5,
+        "left": 856,
+        "right": 1196,
+        "top": 18
+      },
+      "requested": {
+        "height": 720,
+        "width": 1280
+      },
+      "separated": true,
+      "tools": {
+        "bottom": 571,
+        "left": 1216,
+        "right": 1268,
+        "top": 111
+      },
+      "viewportOverflow": false,
+      "withinViewport": true
+    },
+    {
+      "actual": {
+        "height": 720,
+        "width": 1280
+      },
+      "name": "Scenarios",
+      "panel": {
+        "bottom": 372,
+        "left": 856,
+        "right": 1196,
+        "top": 18
+      },
+      "requested": {
+        "height": 720,
+        "width": 1280
+      },
+      "separated": true,
+      "tools": {
+        "bottom": 571,
+        "left": 1216,
+        "right": 1268,
+        "top": 111
+      },
+      "viewportOverflow": false,
+      "withinViewport": true
+    },
+    {
+      "actual": {
+        "height": 720,
+        "width": 1280
+      },
+      "name": "Population area",
+      "panel": {
+        "bottom": 668,
+        "left": 856,
+        "right": 1196,
+        "top": 18
+      },
+      "requested": {
+        "height": 720,
+        "width": 1280
+      },
+      "separated": true,
+      "tools": {
+        "bottom": 571,
+        "left": 1216,
+        "right": 1268,
+        "top": 111
+      },
+      "viewportOverflow": false,
+      "withinViewport": true
+    },
+    {
+      "actual": {
+        "height": 720,
+        "width": 1280
+      },
+      "name": "Menu",
+      "panel": {
+        "bottom": 287.5,
+        "left": 856,
+        "right": 1196,
+        "top": 18
+      },
+      "requested": {
+        "height": 720,
+        "width": 1280
+      },
+      "separated": true,
+      "tools": {
+        "bottom": 571,
+        "left": 1216,
+        "right": 1268,
+        "top": 111
+      },
+      "viewportOverflow": false,
+      "withinViewport": true
+    },
+    {
+      "actual": {
+        "height": 720,
+        "width": 1280
+      },
+      "name": "Language",
+      "panel": {
+        "bottom": 463,
+        "left": 856,
+        "right": 1196,
+        "top": 18
+      },
+      "requested": {
+        "height": 720,
+        "width": 1280
+      },
+      "separated": true,
+      "tools": {
+        "bottom": 571,
+        "left": 1216,
+        "right": 1268,
+        "top": 111
+      },
+      "viewportOverflow": false,
+      "withinViewport": true
+    },
+    {
+      "actual": {
+        "height": 720,
+        "width": 320
+      },
+      "name": "Find a place",
+      "panel": {
+        "bottom": 680,
+        "left": 12,
+        "right": 248,
+        "top": 385
+      },
+      "requested": {
+        "height": 720,
+        "width": 320
+      },
+      "separated": true,
+      "tools": {
+        "bottom": 558,
+        "left": 260,
+        "right": 312,
+        "top": 122
+      },
+      "viewportOverflow": false,
+      "withinViewport": true
+    },
+    {
+      "actual": {
+        "height": 720,
+        "width": 320
+      },
+      "name": "Choose location",
+      "panel": {
+        "bottom": 680,
+        "left": 12,
+        "right": 248,
+        "top": 334.40625
+      },
+      "requested": {
+        "height": 720,
+        "width": 320
+      },
+      "separated": true,
+      "tools": {
+        "bottom": 558,
+        "left": 260,
+        "right": 312,
+        "top": 122
+      },
+      "viewportOverflow": false,
+      "withinViewport": true
+    },
+    {
+      "actual": {
+        "height": 720,
+        "width": 320
+      },
+      "name": "Scenarios",
+      "panel": {
+        "bottom": 680,
+        "left": 12,
+        "right": 248,
+        "top": 340
+      },
+      "requested": {
+        "height": 720,
+        "width": 320
+      },
+      "separated": true,
+      "tools": {
+        "bottom": 558,
+        "left": 260,
+        "right": 312,
+        "top": 122
+      },
+      "viewportOverflow": false,
+      "withinViewport": true
+    },
+    {
+      "actual": {
+        "height": 720,
+        "width": 320
+      },
+      "name": "Population area",
+      "panel": {
+        "bottom": 680,
+        "left": 12,
+        "right": 248,
+        "top": 334.40625
+      },
+      "requested": {
+        "height": 720,
+        "width": 320
+      },
+      "separated": true,
+      "tools": {
+        "bottom": 558,
+        "left": 260,
+        "right": 312,
+        "top": 122
+      },
+      "viewportOverflow": false,
+      "withinViewport": true
+    },
+    {
+      "actual": {
+        "height": 720,
+        "width": 320
+      },
+      "name": "Menu",
+      "panel": {
+        "bottom": 680,
+        "left": 12,
+        "right": 248,
+        "top": 424.5
+      },
+      "requested": {
+        "height": 720,
+        "width": 320
+      },
+      "separated": true,
+      "tools": {
+        "bottom": 558,
+        "left": 260,
+        "right": 312,
+        "top": 122
+      },
+      "viewportOverflow": false,
+      "withinViewport": true
+    },
+    {
+      "actual": {
+        "height": 720,
+        "width": 320
+      },
+      "name": "Language",
+      "panel": {
+        "bottom": 680,
+        "left": 12,
+        "right": 248,
+        "top": 334.40625
+      },
+      "requested": {
+        "height": 720,
+        "width": 320
+      },
+      "separated": true,
+      "tools": {
+        "bottom": 558,
+        "left": 260,
+        "right": 312,
+        "top": 122
+      },
+      "viewportOverflow": false,
+      "withinViewport": true
+    },
+    {
+      "actual": {
+        "height": 320,
+        "width": 568
+      },
+      "name": "Find a place",
+      "panel": {
+        "bottom": 282,
+        "left": 12,
+        "right": 496,
+        "top": 128.40625
+      },
+      "requested": {
+        "height": 320,
+        "width": 568
+      },
+      "separated": true,
+      "tools": {
+        "bottom": 270,
+        "left": 508,
+        "right": 560,
+        "top": 12
+      },
+      "viewportOverflow": false,
+      "withinViewport": true
+    },
+    {
+      "actual": {
+        "height": 320,
+        "width": 568
+      },
+      "name": "Choose location",
+      "panel": {
+        "bottom": 282,
+        "left": 12,
+        "right": 496,
+        "top": 128.40625
+      },
+      "requested": {
+        "height": 320,
+        "width": 568
+      },
+      "separated": true,
+      "tools": {
+        "bottom": 270,
+        "left": 508,
+        "right": 560,
+        "top": 12
+      },
+      "viewportOverflow": false,
+      "withinViewport": true
+    },
+    {
+      "actual": {
+        "height": 320,
+        "width": 568
+      },
+      "name": "Scenarios",
+      "panel": {
+        "bottom": 282,
+        "left": 12,
+        "right": 496,
+        "top": 128.40625
+      },
+      "requested": {
+        "height": 320,
+        "width": 568
+      },
+      "separated": true,
+      "tools": {
+        "bottom": 270,
+        "left": 508,
+        "right": 560,
+        "top": 12
+      },
+      "viewportOverflow": false,
+      "withinViewport": true
+    },
+    {
+      "actual": {
+        "height": 320,
+        "width": 568
+      },
+      "name": "Population area",
+      "panel": {
+        "bottom": 282,
+        "left": 12,
+        "right": 496,
+        "top": 128.40625
+      },
+      "requested": {
+        "height": 320,
+        "width": 568
+      },
+      "separated": true,
+      "tools": {
+        "bottom": 270,
+        "left": 508,
+        "right": 560,
+        "top": 12
+      },
+      "viewportOverflow": false,
+      "withinViewport": true
+    },
+    {
+      "actual": {
+        "height": 320,
+        "width": 568
+      },
+      "name": "Menu",
+      "panel": {
+        "bottom": 282,
+        "left": 12,
+        "right": 496,
+        "top": 128.40625
+      },
+      "requested": {
+        "height": 320,
+        "width": 568
+      },
+      "separated": true,
+      "tools": {
+        "bottom": 270,
+        "left": 508,
+        "right": 560,
+        "top": 12
+      },
+      "viewportOverflow": false,
+      "withinViewport": true
+    },
+    {
+      "actual": {
+        "height": 320,
+        "width": 568
+      },
+      "name": "Language",
+      "panel": {
+        "bottom": 282,
+        "left": 12,
+        "right": 496,
+        "top": 128.40625
+      },
+      "requested": {
+        "height": 320,
+        "width": 568
+      },
+      "separated": true,
+      "tools": {
+        "bottom": 270,
+        "left": 508,
+        "right": 560,
+        "top": 12
+      },
+      "viewportOverflow": false,
+      "withinViewport": true
+    }
+  ],
+  "rtlText200Published": {
+    "fontSize": "32px",
+    "height": 720,
+    "language": "ar",
+    "panelOverflow": false,
+    "panelRight": 248,
+    "separated": true,
+    "toolbarLeft": 260,
+    "toolbarRight": 312,
+    "width": 320
+  },
+  "published": {
+    "buttons": [
+      "Zoom in",
+      "Zoom out",
+      "Global view",
+      "Find a place",
+      "Choose location",
+      "Scenarios",
+      "Population area",
+      "Language",
+      "Menu"
+    ],
+    "height": 872,
+    "markers": 0,
+    "panels": 0,
+    "toolbar": {
+      "left": 1194,
+      "right": 1246
+    },
+    "url": "https://atlas-escenarios-hud.yerrybatista.chatgpt.site/",
+    "width": 1258
+  }
+}

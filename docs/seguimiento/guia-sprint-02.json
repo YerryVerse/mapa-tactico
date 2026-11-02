@@ -1,9 +1,30 @@
 [
-  {"action":"Abrir Menú → Idioma. Buscar English o العربية y seleccionar una opción.","expected":"Veinte idiomas con nombres nativos y sin banderas; el filtro reduce la lista y los controles cambian sin recargar."},
-  {"action":"Buscar Alemania, elegir el país y cambiar idioma en la misma tarjeta a inglés, árabe, hindi o chino.","expected":"La consulta y la lista permanecen abiertas. Se localizan el país y los controles sin cambiar el punto ni el zoom. X o clic fuera cierra y conserva la ubicación."},
-  {"action":"Buscar ألمانيا o جرمنی. Probar también Santiago y cambiar idioma antes de elegir otra ciudad.","expected":"Alemania se encuentra con nombre árabe o shahmukhi. El componente país de las ciudades cambia de idioma; sus nombres publicados se conservan. Solo se ofrecen países y ciudades."},
-  {"action":"Elegir العربية, اردو o پنجابی. Abrir Elegir ubicación, reducir el ancho y ampliar texto al 200 %.","expected":"Paneles RTL y coordenadas legibles de izquierda a derecha; controles accesibles mediante desplazamiento vertical. El mapa conserva su orientación."},
-  {"action":"Abrir Escenarios → Accidente → Beirut, 2020 → Consultar. Cambiar idioma y revisar Información y Disclaimer.","expected":"La ficha y los textos existentes cambian de idioma conservando datos y fuentes. Información muestra la fecha en hausa al elegir Hausa, sin error ni fecha en inglés."},
-  {"action":"Elegir Português y recargar el portal.","expected":"Se conserva la selección manual si el navegador permite almacenamiento. Si no lo permite, los cambios siguen funcionando durante la sesión; sin preferencia guardada se usa el idioma compatible del navegador o español."},
-  {"action":"Abrir las flechas de los bloques del seguimiento del Sprint 2.","expected":"36 terminados, cero pendientes y cero no completados. Revisar operaciones, criterios y evidencias vigentes de Sites24 y Plan21; la URL y versión realmente probadas están registradas. La aprobación del usuario sigue pendiente hasta recibir su mensaje explícito."}
+  {
+    "action": "Pulsar el botón de traducción inmediatamente encima del menú de tres rayas, último control de la barra. Buscar English o العربية y seleccionar una opción; cerrar con X o Escape.",
+    "expected": "Veinte idiomas con nombres nativos y sin banderas; el filtro reduce la lista y los controles cambian sin recargar. El selector cierra conservando el panel, ubicación y resultado abiertos; el foco regresa al botón Idioma."
+  },
+  {
+    "action": "Buscar Alemania, elegir el país y cambiar idioma en la misma tarjeta a inglés, árabe, hindi o chino.",
+    "expected": "La consulta y la lista permanecen abiertas. Se localizan el país y los controles sin cambiar el punto ni el zoom. X o clic fuera cierra y conserva la ubicación."
+  },
+  {
+    "action": "Buscar ألمانيا o جرمنی. Probar también Santiago y cambiar idioma antes de elegir otra ciudad.",
+    "expected": "Alemania se encuentra con nombre árabe o shahmukhi. El componente país de las ciudades cambia de idioma; sus nombres publicados se conservan. Solo se ofrecen países y ciudades."
+  },
+  {
+    "action": "Elegir العربية, اردو o پنجابی. Abrir Elegir ubicación, reducir el ancho y ampliar texto al 200 %.",
+    "expected": "Paneles RTL y coordenadas legibles de izquierda a derecha; controles accesibles mediante desplazamiento vertical. El mapa conserva su orientación."
+  },
+  {
+    "action": "Abrir Escenarios → Accidente → Beirut, 2020 → Consultar. Cambiar idioma y revisar Información y Disclaimer.",
+    "expected": "La ficha y los textos existentes cambian de idioma conservando datos y fuentes. Información muestra la fecha en hausa al elegir Hausa, sin error ni fecha en inglés."
+  },
+  {
+    "action": "Abrir el portal sin elección previa; elegir Português y recargar.",
+    "expected": "La primera visita carga English, aunque el navegador prefiera español. Se conserva la selección manual válida si el navegador permite almacenamiento. Si no lo permite, la elección funciona durante la sesión y una nueva carga usa English."
+  },
+  {
+    "action": "Abrir las flechas de los bloques del seguimiento del Sprint 2.",
+    "expected": "Plan 29 / Sites 47: 36 puntos terminados y verificados, cero pendientes y cero no completados. El menú es el último control y el idioma está encima. Revisar las evidencias nuevas y la versión publicada; el cierre sigue pendiente de aprobación explícita del usuario."
+  }
 ]

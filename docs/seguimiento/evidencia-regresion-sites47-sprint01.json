@@ -1,0 +1,21 @@
+{
+  "first": {
+    "count": 8,
+    "markers": 0,
+    "panel": "search",
+    "point": "{\"lng\":-70.64827,\"lat\":-33.45694}",
+    "query": "Santiago"
+  },
+  "second": {
+    "count": 8,
+    "markers": 0,
+    "panel": "search",
+    "point": "{\"lng\":-70.69085,\"lat\":19.45036}",
+    "query": "Santiago"
+  },
+  "afterDrag": {
+    "markers": 0,
+    "panel": "exploration",
+    "point": "{\"lng\":-70.69085,\"lat\":19.45036}"
+  }
+}

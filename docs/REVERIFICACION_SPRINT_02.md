@@ -1,4 +1,14 @@
-# Reverificación del Sprint 2 · Plan 21
+# Revalidación del Sprint 2 · Plan29 / Sites47
+
+14 de octubre de2026, America/Santo_Domingo. Publicación verificada: https://atlas-escenarios-hud.yerrybatista.chatgpt.site/; fuente `c2a6499a69f1ca6b489bf1109f34b98fc4f9dda7`. Se comprueban2A→2B→2C enorden y se registra cada criterio mediante seguimiento-sprints.mjs. La verificación técnica no aprueba el sprint.
+
+- 2A: veinte opciones nativas y filtro sinacentos; English desde el primer renderizado, también con cabecera de navegador español; elección manualPortuguês conservada trasrecargar. Tests cubren valor inválido y almacenamiento bloqueado. Veinte cambios conservan exactamente punto−69.8845/18.4737, centro, zoom15 y firmaBeirut. Catálogos locales, sin traductor externo.
+- 2B:99/99pruebas, TypeScript y auditoría124claves poridioma. Un catálogoen aislado sinclose se rechaza con salida1. Revisiones lingüísticas identificadas de docs/i18n se conservan comoIA. Información muestra veinte textos y fechas; Hausa11Oktoba,2026 y shahmukhi۱۱اکتوبر۲۰۲۶. Texto200% real medido16→32px y22→44px medianteCSS temporal:320×720 para de/ar/ur/pnb/te/ja y1280×720 paraRTL, sin overflow horizontal. Coordenadas permanecenLTR; desplazamiento vertical conserva acciones. CSS y viewport restaurados. QA del mapa renderiza20muestras, con árabe, índicas yCJK visibles.
+- 2C:20 consultas HTTP anónimas con nombres locales deAlemania devuelven200,country-DE y el mismo anclaje9.678348/50.961733. Sugerencia, etiqueta renderizada yUbicación coinciden en20idiomas; punto, centro yzoom3 constantes y búsqueda abierta. Veinte Disclaimer distintos con5párrafos y mismo punto. Tests cubren239×20pares sinIntl, alias, clasificación y nombres oficiales decalles. Excepciones de nombres originales permanecen explícitas enmanifiesto y componenteUbicación.
+
+Evidencias nuevas: `docs/seguimiento/evidencia-revalidacion-sites47-2A.json`, `-texto.json`, `-formatos.json`, `-escrituras.json`, `-api-paises.json`, `-paises.json` y `-contenido.json`. Capturas: `sprint-02-sites47-texto200.jpg` y `sprint-02-sites47-escrituras.jpg`. Navegadorintegrado; sin pruebas nuevas enChrome. Sprint 1 conserva su aprobación vigente. Regresión en Sites 47: elegir Santiago de Chile y Santiago de los Caballeros conserva consulta y ocho resultados; el punto cambia a la ciudad elegida. Cerrar y arrastrar conservan la referencia, sin marcadores. Registro: evidencia-regresion-sites47-sprint01.json. Las 99 pruebas también cubren búsqueda, tipos, caché y contratos de fichas. No se retiró su aprobación. Sprint3 espera aprobación humana deSprint2 antes de registrar su revalidación.
+
+## Historial de reverificación · Plan21 / Sites24
 
 Revisión vigente tras el mensaje «Apruebo la revisión del Sprint 1 y continuar el Sprint 2». Se verifican los bloques2A→2B→2C en orden, con estados registrados mediante seguimiento-sprints.mjs. Producto: Sites24, SHA `2b859c535a70e94e4b467348a75b7f1594a1f514`; código funcional sin cambios respecto a esa publicación. Entorno: navegador integrado Chromium155; no pruebas nuevas en Chrome.
 

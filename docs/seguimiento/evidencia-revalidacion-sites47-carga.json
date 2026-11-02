@@ -1,0 +1,154 @@
+[
+  {
+    "case": 0,
+    "status": 200,
+    "elapsedMs": 4239,
+    "body": {
+      "status": "available",
+      "geometryHash": "126f851c52e6b84dc21a68aba333e9ac4732a5207ca19271ddb078658348bc58",
+      "dataVersion": "9e9c96808ce1ba9312eaac06b010234657dc96ac429f8df4d06cd38be33faea9",
+      "countryCodes": [
+        "FRA",
+        "GBR"
+      ],
+      "population": 8032609.445042303,
+      "areaKm2": 8276.064031880645,
+      "year": 2025,
+      "edition": "R2025A-v1",
+      "resolution": "100m",
+      "units": "people_per_grid_cell",
+      "method": "cell_center_inside_polygon",
+      "source": "WorldPop Global 2",
+      "license": "CC-BY-4.0",
+      "doi": "10.5258/SOTON/WP00839",
+      "coverage": {
+        "status": "partial",
+        "validGridCells": 863630,
+        "intersectedGridCells": 1555200,
+        "noDataGridCells": 691570
+      },
+      "sourceDatasets": [
+        {
+          "countryCode": "GBR",
+          "datasetId": "gbr_pop_2025_CN_100m_R2025A_v1",
+          "sourceSha256": "98a640f18c7f54ef647f766f7e4fb52a3938659f7e699ef71fe870727636240a"
+        }
+      ],
+      "processingTimeMs": 2483
+    }
+  },
+  {
+    "case": 1,
+    "status": 200,
+    "elapsedMs": 3612,
+    "body": {
+      "status": "available",
+      "geometryHash": "a7ed7efd31351d6687e9bb55ef62c56d42cabbcbc264bd7745e5061bacaa00fe",
+      "dataVersion": "9e9c96808ce1ba9312eaac06b010234657dc96ac429f8df4d06cd38be33faea9",
+      "countryCodes": [
+        "FRA",
+        "GBR"
+      ],
+      "population": 8032609.445042303,
+      "areaKm2": 8276.062202895067,
+      "year": 2025,
+      "edition": "R2025A-v1",
+      "resolution": "100m",
+      "units": "people_per_grid_cell",
+      "method": "cell_center_inside_polygon",
+      "source": "WorldPop Global 2",
+      "license": "CC-BY-4.0",
+      "doi": "10.5258/SOTON/WP00839",
+      "coverage": {
+        "status": "partial",
+        "validGridCells": 863630,
+        "intersectedGridCells": 1555200,
+        "noDataGridCells": 691570
+      },
+      "sourceDatasets": [
+        {
+          "countryCode": "GBR",
+          "datasetId": "gbr_pop_2025_CN_100m_R2025A_v1",
+          "sourceSha256": "98a640f18c7f54ef647f766f7e4fb52a3938659f7e699ef71fe870727636240a"
+        }
+      ],
+      "processingTimeMs": 1903
+    }
+  },
+  {
+    "case": 2,
+    "status": 200,
+    "elapsedMs": 3633,
+    "body": {
+      "status": "available",
+      "geometryHash": "f31412f3ddad1baf0c00b37df7cc444e980b66633cab26d1c29fc1edb9a37294",
+      "dataVersion": "9e9c96808ce1ba9312eaac06b010234657dc96ac429f8df4d06cd38be33faea9",
+      "countryCodes": [
+        "FRA",
+        "GBR"
+      ],
+      "population": 8032609.445042303,
+      "areaKm2": 8276.060373909278,
+      "year": 2025,
+      "edition": "R2025A-v1",
+      "resolution": "100m",
+      "units": "people_per_grid_cell",
+      "method": "cell_center_inside_polygon",
+      "source": "WorldPop Global 2",
+      "license": "CC-BY-4.0",
+      "doi": "10.5258/SOTON/WP00839",
+      "coverage": {
+        "status": "partial",
+        "validGridCells": 863630,
+        "intersectedGridCells": 1555200,
+        "noDataGridCells": 691570
+      },
+      "sourceDatasets": [
+        {
+          "countryCode": "GBR",
+          "datasetId": "gbr_pop_2025_CN_100m_R2025A_v1",
+          "sourceSha256": "98a640f18c7f54ef647f766f7e4fb52a3938659f7e699ef71fe870727636240a"
+        }
+      ],
+      "processingTimeMs": 2066
+    }
+  },
+  {
+    "case": 3,
+    "status": 200,
+    "elapsedMs": 3613,
+    "body": {
+      "status": "available",
+      "geometryHash": "93cdb9b34a4e1e312f0ecad0dbcac304ef1e3edd59521411a5cdb906c3c92bee",
+      "dataVersion": "9e9c96808ce1ba9312eaac06b010234657dc96ac429f8df4d06cd38be33faea9",
+      "countryCodes": [
+        "FRA",
+        "GBR"
+      ],
+      "population": 8032609.445042303,
+      "areaKm2": 8276.058544923068,
+      "year": 2025,
+      "edition": "R2025A-v1",
+      "resolution": "100m",
+      "units": "people_per_grid_cell",
+      "method": "cell_center_inside_polygon",
+      "source": "WorldPop Global 2",
+      "license": "CC-BY-4.0",
+      "doi": "10.5258/SOTON/WP00839",
+      "coverage": {
+        "status": "partial",
+        "validGridCells": 863630,
+        "intersectedGridCells": 1555200,
+        "noDataGridCells": 691570
+      },
+      "sourceDatasets": [
+        {
+          "countryCode": "GBR",
+          "datasetId": "gbr_pop_2025_CN_100m_R2025A_v1",
+          "sourceSha256": "98a640f18c7f54ef647f766f7e4fb52a3938659f7e699ef71fe870727636240a"
+        }
+      ],
+      "processingTimeMs": 2185
+    }
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "action": "Abrir Population area (icono de gráfico), buscar Germany y elegir el país. En Country (ADM0), pulsar Search y seleccionar el límite nacional.",
+    "expected": "84,401,511 personas modeladas para 2025 y 356,438.4 km². Se identifica ADM0, año del límite 2021, fuente y cobertura parcial; el límite complejo se calcula completo aunque su contorno no se dibuje."
+  },
+  {
+    "action": "Abrir Sources en el resultado.",
+    "expected": "Fecha de consulta, WorldPop Global 2 R2025A-v1, año 2025, resolución nominal 100 m, personas por celda, licencia, DOI y método de centro de celda. La cobertura no se presenta como porcentaje de población cubierta."
+  },
+  {
+    "action": "Buscar London, elegir London de England / United Kingdom. En Administrative unit (ADM2), buscar y elegir Westminster.",
+    "expected": "206,028 personas y 22.9 km²; límite ADM2 de 2019, fuente ONS y cobertura de 4,103/4,292 celdas. Elegir Andorra la Vella informa que no hay límite adecuado y permite dibujar."
+  },
+  {
+    "action": "Abrir Choose location e introducir longitud 13.405 y latitud 52.505. Volver a Population area y añadir vértices 13.4/52.5, 13.41/52.5 y 13.41/52.51; usar Use these vertices y Calculate population.",
+    "expected": "Triángulo de 0.376304 km² y 2,818 personas. Zoom − permite ver todos sus vértices. Edit area permite seleccionar y arrastrar un vértice; la cifra anterior desaparece. Clear area elimina forma y resultado. Escape cancela un dibujo incompleto; el doble clic no aumenta el zoom al finalizar."
+  },
+  {
+    "action": "Cambiar el idioma con una consulta abierta. Probar una ventana de 320 CSS px y texto al 200 %. Si aparece un error, usar Retry.",
+    "expected": "Se mantienen área, cifra y fuente al cambiar idioma. Las coordenadas se apilan en una columna en pantallas estrechas, sin solaparse; el panel conserva desplazamiento y teclado. Un fallo mantiene el área y no inventa población cero ni exige iniciar sesión."
+  },
+  {
+    "action": "Revisar las tres tablas del Sprint 3 y la entrega Sites 48.",
+    "expected": "Plan 29: 53 puntos terminados y verificados, cero pendientes técnicos y cero fallos. La aprobación del usuario y el Definition of Done permanecen pendientes hasta recibir su mensaje explícito."
+  }
+]

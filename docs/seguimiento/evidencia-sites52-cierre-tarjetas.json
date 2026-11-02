@@ -1,0 +1,71 @@
+{
+  "version": 52,
+  "source": "fcefc36f4e383cc3c5c8f891e0e23dc6dd22c6bf",
+  "local": {
+    "toggles": [
+      {
+        "focus": "Find a place",
+        "name": "Find a place",
+        "opened": 1,
+        "remainingPanels": 0
+      },
+      {
+        "focus": "Choose location",
+        "name": "Choose location",
+        "opened": 1,
+        "remainingPanels": 0
+      },
+      {
+        "focus": "Scenarios",
+        "name": "Scenarios",
+        "opened": 1,
+        "remainingPanels": 0
+      },
+      {
+        "focus": "Population area",
+        "name": "Population area",
+        "opened": 1,
+        "remainingPanels": 0
+      },
+      {
+        "focus": "Menu",
+        "name": "Menu",
+        "opened": 1,
+        "remainingPanels": 0
+      }
+    ],
+    "menuInside": 1,
+    "menuOutside": 0,
+    "menuDrag": 1,
+    "languageInside": 1,
+    "languageOutside": {
+      "dialogs": 0,
+      "focus": "Language",
+      "panel": "Find a place",
+      "query": "Santiago"
+    },
+    "languageRetoggle": {
+      "dialogs": 0,
+      "expanded": "false",
+      "query": "Santiago"
+    },
+    "languageDrag": 1
+  },
+  "narrow": {
+    "width": 320,
+    "height": 720,
+    "keyboardMenuToggle": true,
+    "languageToggle": true,
+    "languageOutside": true,
+    "menuOutside": true
+  },
+  "published": {
+    "menuToggle": true,
+    "menuOutside": true,
+    "languageToggle": true,
+    "languageOutside": true,
+    "preservedQuery": "Santiago",
+    "focus": "Language",
+    "recordToggle": true
+  }
+}

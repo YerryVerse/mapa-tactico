@@ -1,0 +1,100 @@
+{
+  "version": 51,
+  "source": "6b89f085fc9c1f561e9ea96dc3244083a0cacbae",
+  "base": "#003876",
+  "card": "#0054B1",
+  "hslLightnessIncreasePercent": 50,
+  "whiteTextContrast": 7.233909761565382,
+  "before": {
+    "cards": [
+      {
+        "background": "rgba(0, 0, 0, 0)",
+        "class": "population-boundary-search"
+      },
+      {
+        "background": "rgba(0, 0, 0, 0)",
+        "class": "population-boundary-search"
+      },
+      {
+        "background": "rgba(0, 0, 0, 0)",
+        "class": "population-coordinate-form"
+      }
+    ],
+    "query": "Santo Domingo",
+    "url": "https://atlas-escenarios-hud.yerrybatista.chatgpt.site/#population"
+  },
+  "local": {
+    "cards": [
+      {
+        "background": "rgb(0, 84, 177)",
+        "class": "population-boundary-search",
+        "color": "rgb(255, 255, 255)",
+        "overflow": false,
+        "radius": "10px"
+      },
+      {
+        "background": "rgb(0, 84, 177)",
+        "class": "population-boundary-search",
+        "color": "rgb(255, 255, 255)",
+        "overflow": false,
+        "radius": "10px"
+      },
+      {
+        "background": "rgb(0, 84, 177)",
+        "class": "population-coordinate-form",
+        "color": "rgb(255, 255, 255)",
+        "overflow": false,
+        "radius": "10px"
+      }
+    ],
+    "height": 764,
+    "width": 1186
+  },
+  "narrow": {
+    "cards": [
+      {
+        "background": "rgb(0, 84, 177)",
+        "class": "population-boundary-search",
+        "overflow": false
+      },
+      {
+        "background": "rgb(0, 84, 177)",
+        "class": "population-boundary-search",
+        "overflow": false
+      },
+      {
+        "background": "rgb(0, 84, 177)",
+        "class": "population-coordinate-form",
+        "overflow": false
+      }
+    ],
+    "height": 720,
+    "panelOverflow": false,
+    "width": 320
+  },
+  "published": {
+    "cards": [
+      {
+        "background": "rgb(0, 84, 177)",
+        "class": "population-boundary-search",
+        "color": "rgb(255, 255, 255)",
+        "radius": "10px"
+      },
+      {
+        "background": "rgb(0, 84, 177)",
+        "class": "population-boundary-search",
+        "color": "rgb(255, 255, 255)",
+        "radius": "10px"
+      },
+      {
+        "background": "rgb(0, 84, 177)",
+        "class": "population-coordinate-form",
+        "color": "rgb(255, 255, 255)",
+        "radius": "10px"
+      }
+    ],
+    "query": "Santo Domingo",
+    "selectedCity": "Santo DomingoCity · Nacional · Dominican Republic",
+    "url": "https://atlas-escenarios-hud.yerrybatista.chatgpt.site/#population"
+  }
+}

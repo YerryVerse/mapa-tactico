@@ -1,0 +1,66 @@
+[
+  {
+    "name": "Berlin keyboard triangle",
+    "status": 200,
+    "body": {
+      "status": "available",
+      "geometryHash": "becee1ed3ecb3779d43fa7f109520374127ff7531745eb440838b4532f1f68a5",
+      "dataVersion": "9e9c96808ce1ba9312eaac06b010234657dc96ac429f8df4d06cd38be33faea9",
+      "countryCodes": [
+        "DEU"
+      ],
+      "population": 2817.97092628479,
+      "areaKm2": 0.3763040399372731,
+      "year": 2025,
+      "edition": "R2025A-v1",
+      "resolution": "100m",
+      "units": "people_per_grid_cell",
+      "method": "cell_center_inside_polygon",
+      "source": "WorldPop Global 2",
+      "license": "CC-BY-4.0",
+      "doi": "10.5258/SOTON/WP00839",
+      "coverage": {
+        "status": "complete",
+        "validGridCells": 66,
+        "intersectedGridCells": 66,
+        "noDataGridCells": 0
+      },
+      "sourceDatasets": [
+        {
+          "countryCode": "DEU",
+          "datasetId": "deu_pop_2025_CN_100m_R2025A_v1",
+          "sourceSha256": "53f9913139a240237bf36183b145c548fb74690c96b4c6dc2e993d786d771a39"
+        }
+      ],
+      "processingTimeMs": 368
+    },
+    "elapsedMs": 2355
+  },
+  {
+    "name": "unclosed ring",
+    "status": 400,
+    "body": {
+      "status": "error",
+      "error": "invalid_geometry"
+    },
+    "elapsedMs": 74
+  },
+  {
+    "name": "crossed ring",
+    "status": 400,
+    "body": {
+      "status": "error",
+      "error": "invalid_geometry"
+    },
+    "elapsedMs": 521
+  },
+  {
+    "name": "body limit",
+    "status": 413,
+    "body": {
+      "status": "error",
+      "error": "area_limit"
+    },
+    "elapsedMs": 173
+  }
+]

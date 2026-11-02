@@ -1,0 +1,57 @@
+{
+  "cancel": {
+    "areaPresent": false,
+    "calculateDisabled": true,
+    "draftVertices": 0,
+    "resultPresent": false
+  },
+  "before": {
+    "center": [
+      13.404999999999973,
+      52.505000000000024
+    ],
+    "contextLayers": [],
+    "countryField": [
+      "get",
+      "name_en"
+    ],
+    "countryLabels": [],
+    "fiveMetersCssPx": 1.7194456812806609,
+    "projection": "globe",
+    "reference": null,
+    "scriptCount": 0,
+    "tilesLoaded": true,
+    "viewport": [
+      1141,
+      764
+    ],
+    "zoom": 14
+  },
+  "after": {
+    "area": "Queried area: 0.242578 km²",
+    "calculateDisabled": false,
+    "camera": {
+      "center": [
+        13.404999999999973,
+        52.505000000000024
+      ],
+      "contextLayers": [],
+      "countryField": [
+        "get",
+        "name_en"
+      ],
+      "countryLabels": [],
+      "fiveMetersCssPx": 1.7194456812806609,
+      "projection": "globe",
+      "reference": null,
+      "scriptCount": 0,
+      "tilesLoaded": true,
+      "viewport": [
+        1141,
+        764
+      ],
+      "zoom": 14
+    },
+    "markers": 0
+  }
+}

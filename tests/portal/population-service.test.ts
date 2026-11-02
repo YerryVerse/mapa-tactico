@@ -2,7 +2,7 @@ import {describe,it,expect} from 'vitest';
 import {area as geodesicArea} from '@turf/area';
 import {booleanValid} from '@turf/boolean-valid';
 import polygonClipping from 'polygon-clipping';
-import {canonicalGeometryKey,populationGeometrySchema,POPULATION_MAX_AREA_KM2,POPULATION_MAX_BODY_BYTES,POPULATION_MAX_VERTICES,type PopulationGeometry} from '../../lib/population-contract';
+import {canonicalGeometryKey,populationGeometrySchema,populationReplySchema,POPULATION_MAX_AREA_KM2,POPULATION_MAX_BODY_BYTES,POPULATION_MAX_VERTICES,type PopulationGeometry} from '../../lib/population-contract';
 import {canonicalLongitude,geodesicAreaKm2,normalizePopulationGeometry,toClippingGeometry,verifyPopulationGeometryRuntime} from '../../lib/population-geometry';
 import {populationAreaResponse} from '../../lib/population-service';
 import {populationBoundaryCoverageSummary,verifyPopulationCatalog} from '../../lib/population-catalog';
@@ -39,6 +39,41 @@ describe('anonymous WorldPop raster query service',()=>{
     expect(fixture.rangeReads[0].length).toBeGreaterThan(0);
     expect(database.prepare).toHaveBeenCalledTimes(1);
   });
+  it('rejects malformed totals, units and coverage instead of rendering them as population',async()=>{
+    const fixture=await populationRasterFixture(),response=await populationAreaResponse(request(),{...populationDatabase(),bucket:fixture.bucket});
+    const body=await response.json() as Record<string,any>;
+    expect(populationReplySchema.safeParse(body).success).toBe(true);
+    expect(populationReplySchema.safeParse({...body,population:Number.NaN}).success).toBe(false);
+    expect(populationReplySchema.safeParse({...body,units:'people'}).success).toBe(false);
+    expect(populationReplySchema.safeParse({...body,coverage:{...body.coverage,validGridCells:body.coverage.validGridCells+1}}).success).toBe(false);
+    expect(populationReplySchema.safeParse({...body,coverage:{...body.coverage,status:'complete'}}).success).toBe(false);
+  });
+  it('uses cell centers at polygon edges, preserves valid zero, and follows the explicit NoData mask',async()=>{
+    const fixture=await populationRasterFixture(),transform=fixture.manifest.transform,database=populationDatabase();
+    const centerColumn=Math.floor((-0.125-transform[2])/transform[0]);
+    const centerRow=Math.floor((transform[5]-51.49)/Math.abs(transform[4]));
+    const cellWidth=Math.abs(transform[0]),cellHeight=Math.abs(transform[4]);
+    const cellCenter=(column:number)=>({
+      longitude:transform[2]+(column+0.5)*transform[0],
+      latitude:transform[5]+(centerRow+0.5)*transform[4]
+    });
+    const zero=cellCenter(centerColumn+1),noData=cellCenter(centerColumn);
+    const centerArea:PopulationGeometry={type:'Polygon',coordinates:[[[zero.longitude-cellWidth*.1,zero.latitude-cellHeight*.1],[zero.longitude+cellWidth*.1,zero.latitude-cellHeight*.1],[zero.longitude+cellWidth*.1,zero.latitude+cellHeight*.1],[zero.longitude-cellWidth*.1,zero.latitude+cellHeight*.1],[zero.longitude-cellWidth*.1,zero.latitude-cellHeight*.1]]]};
+    const centerReply=await populationAreaResponse(request(centerArea,['GBR']),{...database,bucket:fixture.bucket});
+    const centerBody=await centerReply.json() as Record<string,any>;
+    expect(centerReply.status).toBe(200);
+    expect(centerBody).toMatchObject({status:'available',method:'cell_center_inside_polygon',population:0,coverage:{status:'complete',validGridCells:1,intersectedGridCells:1,noDataGridCells:0}});
+
+    const edgeOnlyArea:PopulationGeometry={type:'Polygon',coordinates:[[[zero.longitude+cellWidth*.1,zero.latitude-cellHeight*.1],[zero.longitude+cellWidth*.4,zero.latitude-cellHeight*.1],[zero.longitude+cellWidth*.4,zero.latitude+cellHeight*.1],[zero.longitude+cellWidth*.1,zero.latitude+cellHeight*.1],[zero.longitude+cellWidth*.1,zero.latitude-cellHeight*.1]]]};
+    const edgeReply=await populationAreaResponse(request(edgeOnlyArea,['GBR']),{...populationDatabase(),bucket:fixture.bucket});
+    expect(edgeReply.status).toBe(422);
+    expect(await edgeReply.json()).toMatchObject({status:'no_coverage',error:'no_coverage'});
+
+    const noDataArea:PopulationGeometry={type:'Polygon',coordinates:[[[noData.longitude-cellWidth*.1,noData.latitude-cellHeight*.1],[noData.longitude+cellWidth*.1,noData.latitude-cellHeight*.1],[noData.longitude+cellWidth*.1,noData.latitude+cellHeight*.1],[noData.longitude-cellWidth*.1,noData.latitude+cellHeight*.1],[noData.longitude-cellWidth*.1,noData.latitude-cellHeight*.1]]]};
+    const noDataReply=await populationAreaResponse(request(noDataArea,['GBR']),{...populationDatabase(),bucket:fixture.bucket});
+    expect(noDataReply.status).toBe(422);
+    expect(await noDataReply.json()).toMatchObject({status:'no_coverage',error:'no_coverage'});
+  });
   it('caches by normalized geometry and active release without retaining submitted geometry',async()=>{
     const fixture=await populationRasterFixture(),database=populationDatabase(),memory=populationMemoryCache();
     const first=await populationAreaResponse(request(),{...database,bucket:fixture.bucket,cache:memory.cache});
@@ -47,6 +82,19 @@ describe('anonymous WorldPop raster query service',()=>{
     expect(first.status).toBe(200);expect(second.status).toBe(200);expect(memory.match).toHaveBeenCalledTimes(3);expect(memory.put).toHaveBeenCalledTimes(2);
     expect(database.first).toHaveBeenCalledTimes(1);
     expect(fixture.rangeReads).toHaveLength(1);
+  });
+  it('keeps distinct cache identities for sub-grid changes in geometry and area precision',async()=>{
+    const fixture=await populationRasterFixture(),database=populationDatabase(),memory=populationMemoryCache();
+    const first=await populationAreaResponse(request(),{...database,bucket:fixture.bucket,cache:memory.cache});
+    const changed=structuredClone(london);
+    changed.coordinates[0][1][0]-=0.0000001;
+    const second=await populationAreaResponse(request(changed),{...database,bucket:fixture.bucket,cache:memory.cache});
+    const firstBody=await first.json() as Record<string,any>,secondBody=await second.json() as Record<string,any>;
+    expect(first.status).toBe(200);expect(second.status).toBe(200);
+    expect(secondBody.geometryHash).not.toBe(firstBody.geometryHash);
+    expect(secondBody.areaKm2).not.toBe(firstBody.areaKm2);
+    expect([...memory.records.keys()].some(key=>new URL(key).pathname.endsWith(`/${firstBody.geometryHash}`))).toBe(true);
+    expect([...memory.records.keys()].some(key=>new URL(key).pathname.endsWith(`/${secondBody.geometryHash}`))).toBe(true);
   });
   it('distinguishes unsupported-country coverage from a geometry outside the raster',async()=>{
     const fixture=await populationRasterFixture(),database=populationDatabase();

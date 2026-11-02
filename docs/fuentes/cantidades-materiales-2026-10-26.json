@@ -1,0 +1,227 @@
+{
+  "schemaVersion": 1,
+  "reviewDate": "2026-10-26",
+  "status": "partial_with_explicit_documentary_gaps_and_nuclear_internal_load_exclusions",
+  "scopeEs": "Cantidades del material del documento conceptual. No constituye confirmación de todas las cargas ni cambia las equivalencias energéticas.",
+  "rulesEs": [
+    "Separar inventario, carga, masa total del artefacto, masa del objeto y volumen eruptivo.",
+    "No inferir cantidades internas nucleares a partir de la potencia.",
+    "No convertir volúmenes naturales a masas mediante densidades elegidas arbitrariamente.",
+    "Una cota mínima no se presenta como máximo ni como cantidad exacta.",
+    "No presentar fuentes repetidas o una cifra declarada como verificación independiente."
+  ],
+  "records": [
+    {
+      "id": "tianjin-port-2015-main-explosion",
+      "status": "documented_inventory",
+      "element": "Nitrato de amonio",
+      "quantity": {
+        "value": 800,
+        "unit": "t",
+        "basis": "official_pre_accident_inventory_not_confirmed_reacted_mass"
+      },
+      "source": "https://www.xinhuanet.com/politics/2016-02/05/c_128706930.htm",
+      "title": "Informe oficial de investigación de Tianjin, reproducido por Xinhua, 5 de febrero de 2016",
+      "locator": "Sección sobre mercancías peligrosas presentes antes del accidente; 800 toneladas de nitrato de amonio.",
+      "limitation": "Inventario previo al accidente, no masa que se pueda afirmar que detonó íntegramente.",
+      "corroboratingSource": "https://www.mem.gov.cn/gk/zcjd/202109/t20210926_399099.shtml"
+    },
+    {
+      "id": "tunguska-1908-energy-reference",
+      "status": "published_estimate",
+      "element": "Objeto espacial",
+      "quantity": {
+        "value": 100000,
+        "unit": "t",
+        "approximate": true,
+        "basis": "nasa_public_estimate_of_impactor_mass_not_combustible_mass"
+      },
+      "source": "https://science.nasa.gov/solar-system/meteors-meteorites/facts/",
+      "title": "NASA Science: Meteors and Meteorites — Facts",
+      "locator": "Apartado sobre Tunguska: 100 millones de kilogramos de masa estimada, equivalentes a 100,000 toneladas.",
+      "limitation": "Estimación divulgativa de la masa del objeto, no masa medida ni combustible. La energía de la tabla procede del taller NASA de 2018; no se afirma que ambas cifras sean parámetros de una misma reconstrucción."
+    },
+    {
+      "id": "hunga-tonga-2022-energy-reference",
+      "status": "published_estimate",
+      "element": "Magma",
+      "quantity": {
+        "value": 8,
+        "unit": "km³",
+        "qualifier": "DRE (mínimo)",
+        "approximate": true,
+        "bound": "lower",
+        "basis": "published_lower_estimate_of_erupted_dense_rock_equivalent_magma_volume"
+      },
+      "source": "https://www.nature.com/articles/s41561-026-02099-7",
+      "title": "Ribó y colaboradores (2026): Rapid submarine caldera collapse during the 2022 climactic eruption of Hunga volcano (Tonga)",
+      "locator": "Apartado sobre volumen eruptivo: conclusión de al menos 8 km³ DRE. DOI: 10.1038/s41561-026-02099-7; publicado el 11 de septiembre de 2026.",
+      "limitation": "Volumen equivalente de roca densa, no volumen de gas ni una carga química. Es un mínimo estimado, no un máximo conocido ni una cantidad exacta. No se convierte a masa con una densidad supuesta. La estimación energética de Díaz y Rigby se mantiene por separado."
+    },
+    {
+      "id": "krakatoa-1883-energy-reference",
+      "status": "published_estimate",
+      "element": "Magma y rocas",
+      "quantity": {
+        "value": 25,
+        "unit": "km³",
+        "approximate": true,
+        "basis": "usgs_total_ejected_material_volume_including_new_magma_and_old_island_rock"
+      },
+      "source": "https://www.usgs.gov/news/volcano-watch-mixing-magmas-krakatau",
+      "title": "USGS Hawaiian Volcano Observatory: Volcano Watch — Mixing Magmas at Krakatau, 22 de mayo de 2003",
+      "locator": "Volumen de 25 km³ de material, incluyendo magma nuevo y fragmentos de la isla anterior.",
+      "limitation": "Volumen de material expulsado, no masa de combustible ni volumen exclusivamente de magma. NOAA publica 21 km³ y el ministerio de Indonesia 18 km³ con otras estimaciones; no se presentan como un único intervalo de medición.",
+      "alternativeSources": [
+        {
+          "url": "https://www.ncei.noaa.gov/news/day-historic-krakatau-eruption-1883",
+          "value": 21,
+          "unit": "km³"
+        },
+        {
+          "url": "https://www.esdm.go.id/en/media-center/news-archives/peringati-140-tahun-letusan-g-krakatau-mitigasi-bencana-geologi-sebuah-keharusan",
+          "value": 18,
+          "unit": "km³"
+        }
+      ]
+    },
+    {
+      "id": "tanque-compresor",
+      "status": "scenario_not_sufficiently_specified",
+      "displayLabelEs": "Capacidad no definida",
+      "reasonEs": "El ejemplo de 1 kg de TNT no identifica un recipiente con capacidad y estado del aire documentados. El resumen del caso industrial de Sissom y Scardina no publica la cantidad de aire. No se deduce una cantidad única de aire a partir de la energía.",
+      "source": "https://doi.org/10.1016/0013-7944(83)90037-1"
+    },
+    {
+      "id": "military-atbip-foab-reference",
+      "status": "no_unambiguous_verified_fill_quantity_found",
+      "displayLabelEs": "Carga no verificada",
+      "reasonEs": "Las fuentes revisadas repiten 7,100 kg unas veces como masa del artefacto y otras como carga. El texto original de Channel One accesible solo compara la masa de explosivo con MOAB sin cuantificarla; no se adopta 7,100 kg como carga confirmada. La composición detallada tampoco queda verificada.",
+      "source": null
+    },
+    {
+      "id": "current-us-w76-2-reference",
+      "status": "internal_nuclear_load_not_compiled",
+      "displayLabelEs": "No se detalla",
+      "reasonEs": "La tabla conserva la potencia pública del modelo o ensayo. No se recopilan ni reconstruyen cantidades de su carga nuclear interna. Este estado no afirma que una búsqueda haya demostrado que el dato sea secreto o inexistente.",
+      "source": null
+    },
+    {
+      "id": "current-ru-53t6-reference",
+      "status": "internal_nuclear_load_not_compiled",
+      "displayLabelEs": "No se detalla",
+      "reasonEs": "La tabla conserva la potencia pública del modelo o ensayo. No se recopilan ni reconstruyen cantidades de su carga nuclear interna. Este estado no afirma que una búsqueda haya demostrado que el dato sea secreto o inexistente.",
+      "source": null
+    },
+    {
+      "id": "current-cn-df31a-reference",
+      "status": "internal_nuclear_load_not_compiled",
+      "displayLabelEs": "No se detalla",
+      "reasonEs": "La tabla conserva la potencia pública del modelo o ensayo. No se recopilan ni reconstruyen cantidades de su carga nuclear interna. Este estado no afirma que una búsqueda haya demostrado que el dato sea secreto o inexistente.",
+      "source": null
+    },
+    {
+      "id": "current-us-w88-reference",
+      "status": "internal_nuclear_load_not_compiled",
+      "displayLabelEs": "No se detalla",
+      "reasonEs": "La tabla conserva la potencia pública del modelo o ensayo. No se recopilan ni reconstruyen cantidades de su carga nuclear interna. Este estado no afirma que una búsqueda haya demostrado que el dato sea secreto o inexistente.",
+      "source": null
+    },
+    {
+      "id": "current-ru-topolm-reference",
+      "status": "internal_nuclear_load_not_compiled",
+      "displayLabelEs": "No se detalla",
+      "reasonEs": "La tabla conserva la potencia pública del modelo o ensayo. No se recopilan ni reconstruyen cantidades de su carga nuclear interna. Este estado no afirma que una búsqueda haya demostrado que el dato sea secreto o inexistente.",
+      "source": null
+    },
+    {
+      "id": "current-cn-df5a-reference",
+      "status": "internal_nuclear_load_not_compiled",
+      "displayLabelEs": "No se detalla",
+      "reasonEs": "La tabla conserva la potencia pública del modelo o ensayo. No se recopilan ni reconstruyen cantidades de su carga nuclear interna. Este estado no afirma que una búsqueda haya demostrado que el dato sea secreto o inexistente.",
+      "source": null
+    },
+    {
+      "id": "castle-bravo-1954-energy-reference",
+      "status": "internal_nuclear_load_not_compiled",
+      "displayLabelEs": "No se detalla",
+      "reasonEs": "La tabla conserva la potencia pública del modelo o ensayo. No se recopilan ni reconstruyen cantidades de su carga nuclear interna. Este estado no afirma que una búsqueda haya demostrado que el dato sea secreto o inexistente.",
+      "source": null
+    },
+    {
+      "id": "tsar-bomba-1961-energy-reference",
+      "status": "internal_nuclear_load_not_compiled",
+      "displayLabelEs": "No se detalla",
+      "reasonEs": "La tabla conserva la potencia pública del modelo o ensayo. No se recopilan ni reconstruyen cantidades de su carga nuclear interna. Este estado no afirma que una búsqueda haya demostrado que el dato sea secreto o inexistente.",
+      "source": null
+    }
+  ],
+  "searchCoverage": [
+    {
+      "topic": "Tianjin",
+      "queries": [
+        "Tianjin 2015 accident investigation report 800 tonnes ammonium nitrate State Council",
+        "site.gov.cn 硝酸铵800吨 天津 2016"
+      ],
+      "outcomeEs": "Encontrado informe original reproducido por Xinhua y corroboración ministerial directa: 800 toneladas de inventario."
+    },
+    {
+      "topic": "Tunguska",
+      "queries": [
+        "site.nasa.gov Tunguska mass",
+        "Tunguska 220 million NASA",
+        "site.ntrs.nasa.gov Tunguska mass 1908 2019 asteroid kilograms"
+      ],
+      "outcomeEs": "NASA publica 100 millones de kg. El taller NASA de 2018 aporta otra reconstrucción energética; no se acoplan los parámetros como si fueran un solo modelo."
+    },
+    {
+      "topic": "Hunga Tonga",
+      "queries": [
+        "Hunga Tonga 2022 erupted magma mass kg DRE volume study",
+        "Hunga 2022 eruption 6.5 km3 Clare 2023"
+      ],
+      "outcomeEs": "Se revisaron volúmenes de depósitos, material desplazado y magma DRE. Se elige el mínimo de 8 km³ DRE del estudio primario de septiembre de 2026, manteniendo su carácter de cota inferior."
+    },
+    {
+      "topic": "Krakatoa",
+      "queries": [
+        "site.gov Krakatau 1883 18 cubic kilometers magma"
+      ],
+      "outcomeEs": "USGS informa 25 km³ de material total expulsado; NOAA 21 km³ y ESDM 18 km³. Se especifica qué material mide cada cifra."
+    },
+    {
+      "topic": "Compresor",
+      "queries": [
+        "air receiver 90037 explosion volume",
+        "Fatigue weld failure causes explosion of air receiver Sissom capacity"
+      ],
+      "outcomeEs": "Resumen primario accesible; no contiene cantidad de aire ni permite identificar el tanque conceptual de 1 kg equivalente. Sin acceso al texto completo no se atribuyen al artículo dimensiones no leídas."
+    },
+    {
+      "topic": "FOAB",
+      "queries": [
+        "FOAB 7100 kg explosive charge 2007 Reuters Russia",
+        "FOAB charge 7,100",
+        "site.1tv.ru 2007 7100 бомба",
+        "site.1tv.ru Самая мощная в мире вакуумная бомба"
+      ],
+      "outcomeEs": "El texto del anuncio original fue leído mediante descarga HTTPS normal. No cuantifica la carga. Publicaciones posteriores discrepan sobre si 7,100 kg es masa total o carga; no se adopta como cantidad verificada."
+    }
+  ],
+  "foabEvidence": {
+    "originalAnnouncement": "https://www.1tv.ru/news/2007-09-11/201295-samaya_moschnaya_v_mire_vakuumnaya_bomba_rossiyskie_ispytaniya",
+    "originalAnnouncementRead": true,
+    "originalTextQuantifiesCharge": false,
+    "candidateNotAdopted": {
+      "value": 7100,
+      "unit": "kg",
+      "reasonEs": "Ambigüedad entre masa de carga y artefacto; falta de corroboración primaria inequívoca."
+    },
+    "contrastingPublications": [
+      "https://euro-sd.com/2024/06/articles/39038/thermobaric-weapons-on-the-battlefield/",
+      "https://www.pravo.mgimo.ru/sites/default/files/2022/buyanov_yadernaya_gonka.pdf"
+    ],
+    "accessLimitEs": "La segunda publicación apareció en la búsqueda, pero no se pudo descargar; no se registra como documento leído."
+  },
+  "nuclearScopeEs": "Las ocho cargas internas nucleares nuevas no se investigaron ni estimaron. Se conserva el material histórico ya documentado de Hiroshima y Nagasaki; no se afirma una ausencia universal de datos públicos."
+}

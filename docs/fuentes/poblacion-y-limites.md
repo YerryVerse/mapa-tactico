@@ -49,3 +49,15 @@ Decisión de fuente del Sprint 3 elegida por el usuario el 12 de octubre de 2026
 - [WorldPop STAC API](https://stac.worldpop.org/)
 - [WorldPop REST API y límites anónimos](https://www.worldpop.org/sdi/introapi/)
 - [geoBoundaries API y licencias](https://www.geoboundaries.org/api.html)
+
+## Revalidación del 14 de octubre de 2026 · Sites 48
+
+Fuente publicada `9929abd02a46216e2280dc380472d285129f3847`, Plan 29. Los criterios se registraron en orden 3A → 3B → 3C después de la aprobación explícita del Sprint 2. Datos y cálculo no cambiaron: 241 países preparados en D1, mismos IDs y hashes de la edición R2025A-v1; Alemania y Westminster siguen coincidiendo exactamente con Rasterio. Australia usa su índice R2 y agregado original. No se repitió la carga de datos inmutables.
+
+Un triángulo independiente en Berlín dio 2817.97092628479 habitantes, 66 celdas válidas y 0.376304039937 km²; Rasterio dio la misma suma, diferencia cero. Cuatro solicitudes concurrentes acotadas respondieron 200 en 3.612–4.239 segundos. Cuerpo y áreas excesivos devuelven 413, geometrías inválidas 400 y falta de cobertura 422, sin cifras inventadas. El runtime de Sites registró una consulta correcta con 752 ms de pared y 167 ms de CPU. Los presupuestos no requieren métricas privadas de memoria.
+
+Se corrigió un solapamiento de las etiquetas de coordenadas: en ventanas estrechas ahora usan una sola columna y permiten ajustar palabras. La corrección se publicó y comprobó con texto al 200 %, 320 CSS px y seis idiomas, incluidos RTL. Edición de vértices, borrado, cancelación y doble clic pasan en Sites 48. Un resultado anterior desaparece al editar y una solicitud retenida no restaura un área borrada. La respuesta HTML malformada simulada únicamente en el navegador fue rechazada; Retry recuperó el resultado conservando el área. Las interceptaciones y estilos de prueba se retiraron.
+
+Veinte resultados y veinte errores de cobertura pasan en el navegador integrado, conservando la selección. Las 99 pruebas de la misma lógica de datos y TypeScript pasan; la compilación de Sites 48 pasa. La página inicial y sus 19 recursos JS/CSS se comprobaron anónimamente con HTTP 200. Audiencia pública y requires_byop=false confirmados. No se exige cuenta, clave del visitante, instalación ni infraestructura operada por el usuario.
+
+Evidencias: `docs/seguimiento/evidencia-revalidacion-sites47-*.json` para manifiesto, D1, referencias y límites; `evidencia-revalidacion-sites48-*.json` para interfaz, edición, dibujo, recuperación y resultados en veinte idiomas. La guía actual está en `docs/seguimiento/guia-sprint-03.json`; el sprint queda esperando aprobación humana, sin declarar cerrado el Definition of Done.

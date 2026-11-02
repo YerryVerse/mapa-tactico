@@ -3,6 +3,8 @@ import {adminLayer,adminLayerById,verifyPopulationCatalog} from './population-ca
 import {geometryVertexCount,populationAdminBoundaryGeometrySchema,POPULATION_ADMIN_DISPLAY_MAX_POLYGONS,POPULATION_ADMIN_DISPLAY_MAX_VERTICES,POPULATION_ADMIN_MAX_VERTICES} from './population-contract';
 import {loadActivePopulationCountryManifest} from './population-raster-service';
 import {populationAdminAggregateResponse} from './population-service';
+import {countryAliases} from './country-names';
+import {populationCountryAlpha2} from './population-country-code';
 
 const JSON_HEADERS={'Cache-Control':'no-store','Content-Type':'application/json; charset=utf-8'};
 const MAX_BOUNDARY_FILE_BYTES=12_000_000;
@@ -154,13 +156,15 @@ export async function searchAdministrativeBoundaries(request:Request,services:Bo
   if(!layer)return fail(404,'boundary_not_available');
   try{
     const query=normalizeName(parsed.data.q),indexed=await indexedBoundaryLayer(layer,url.origin,services);
+    const alpha2=populationCountryAlpha2(parsed.data.countryCode);
+    const translatedCountryName=parsed.data.level==='ADM0'&&Boolean(alpha2)&&countryAliases(alpha2!).some(alias=>normalizeName(alias).startsWith(query));
     const candidates=indexed?indexed.features.flatMap(feature=>{
       const info=indexedBoundaryInfo(layer,feature),names=[info.name,...info.aliases].map(normalizeName);
-      if(!names.some(name=>name.includes(query)))return [];
+      if(!names.some(name=>name.includes(query))&&!translatedCountryName)return [];
       return [{...info,geometryType:feature.geometryType,areaKm2:feature.areaKm2,geometrySimplified:feature.geometrySimplified}];
     }):(await readBoundaryLayer(layer,url.origin,services,request.signal)).flatMap(feature=>{
       const info=boundaryInfo(layer,feature),names=[info.name,...info.aliases].map(normalizeName);
-      if(!names.some(name=>name.includes(query)))return [];
+      if(!names.some(name=>name.includes(query))&&!translatedCountryName)return [];
       return [{...info,geometryType:(feature.geometry as {type?:unknown}).type}];
     });
     const matches=candidates.sort((a,b)=>{

@@ -1,0 +1,7 @@
+{
+  "fixture": "HTML instead of expected population JSON; browser-only interception removed",
+  "area": "Queried area: 0.376304 km²",
+  "button": "Retry",
+  "message": "Population could not be calculated. Try again.",
+  "resultPresent": false
+}

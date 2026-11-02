@@ -1,0 +1,116 @@
+[
+  {
+    "font": "32px",
+    "grid": "221px",
+    "labels": [
+      {
+        "s": 221,
+        "text": "Longitude",
+        "w": 221
+      },
+      {
+        "s": 221,
+        "text": "Latitude",
+        "w": 221
+      }
+    ],
+    "lang": "en",
+    "scroll": 279,
+    "width": 279
+  },
+  {
+    "font": "32px",
+    "grid": "221px",
+    "labels": [
+      {
+        "s": 221,
+        "text": "Längengrad",
+        "w": 221
+      },
+      {
+        "s": 221,
+        "text": "Breitengrad",
+        "w": 221
+      }
+    ],
+    "lang": "de",
+    "scroll": 279,
+    "width": 279
+  },
+  {
+    "font": "32px",
+    "grid": "221px",
+    "labels": [
+      {
+        "s": 221,
+        "text": "خط الطول",
+        "w": 221
+      },
+      {
+        "s": 221,
+        "text": "خط العرض",
+        "w": 221
+      }
+    ],
+    "lang": "ar",
+    "scroll": 279,
+    "width": 279
+  },
+  {
+    "font": "32px",
+    "grid": "221px",
+    "labels": [
+      {
+        "s": 221,
+        "text": "طول البلد",
+        "w": 221
+      },
+      {
+        "s": 221,
+        "text": "عرض البلد",
+        "w": 221
+      }
+    ],
+    "lang": "ur",
+    "scroll": 279,
+    "width": 279
+  },
+  {
+    "font": "32px",
+    "grid": "221px",
+    "labels": [
+      {
+        "s": 221,
+        "text": "طول بلد",
+        "w": 221
+      },
+      {
+        "s": 221,
+        "text": "عرض بلد",
+        "w": 221
+      }
+    ],
+    "lang": "pnb-Arab",
+    "scroll": 279,
+    "width": 279
+  },
+  {
+    "font": "32px",
+    "grid": "221px",
+    "labels": [
+      {
+        "s": 221,
+        "text": "రేఖాంశం",
+        "w": 221
+      },
+      {
+        "s": 221,
+        "text": "అక్షాంశం",
+        "w": 221
+      }
+    ],
+    "lang": "te",
+    "scroll": 279,
+    "width": 279
+  }
+]

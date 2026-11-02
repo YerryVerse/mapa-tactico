@@ -21,6 +21,7 @@ export const languages=[
 {id:'pnb-Arab',name:'پنجابی',searchName:'Western Punjabi punyabí occidental shahmukhi',dir:'rtl'}
 ] as const;
 export type Language=(typeof languages)[number]['id'];
+export const DEFAULT_LANGUAGE:Language='en';
 export const LANGUAGE_KEY='mapa-tactico.language.v1';
 export function isLanguage(value:unknown):value is Language{return languages.some(l=>l.id===value);}
 export function matchLanguage(tag:string):Language|null{
@@ -31,13 +32,11 @@ export function matchLanguage(tag:string):Language|null{
  if(base==='pnb'||base==='pa'&&parts.some(v=>['arab','pk'].includes(v)))return 'pnb-Arab';
  return languages.find(l=>l.id.split('-')[0]===base)?.id??null;
 }
-export function initialLanguage(saved:unknown,preferences:readonly string[]):Language{
- if(isLanguage(saved))return saved;
- for(const p of preferences){const matched=matchLanguage(p);if(matched)return matched;}
- return 'es';
+export function initialLanguage(saved:unknown):Language{
+ return isLanguage(saved)?saved:DEFAULT_LANGUAGE;
 }
-export function readLanguage(storage:Pick<Storage,'getItem'>|null,preferences:readonly string[]):Language{
+export function readLanguage(storage:Pick<Storage,'getItem'>|null):Language{
  let saved:unknown=null;try{saved=storage?.getItem(LANGUAGE_KEY);}catch{}
- return initialLanguage(saved,preferences);
+ return initialLanguage(saved);
 }
 export function rememberLanguage(storage:Pick<Storage,'setItem'>|null,language:Language){try{storage?.setItem(LANGUAGE_KEY,language);}catch{}}

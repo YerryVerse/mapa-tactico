@@ -8,7 +8,7 @@ const logs = path.join(root, '.sites-runtime', 'live-preview');
 mkdirSync(logs, { recursive: true });
 const services = [
   { name: 'seguimiento', port: 4174, route: '/estado.json', args: ['scripts/seguimiento-sprints.mjs', 'serve', '--port', '4174'], valid: text => JSON.parse(text).project === 'Mapa Táctico' },
-  { name: 'portal', port: 5173, route: '/', args: ['scripts/run-framework.mjs', 'dev', '--hostname', '127.0.0.1', '--port', '5173'], valid: text => text.includes('Mapa Táctico') && (text.includes('vite-rsc/entry-browser') || text.includes('/@vite/client')) }
+  { name: 'portal', port: 5273, route: '/', args: ['scripts/run-framework.mjs', 'dev', '--hostname', '127.0.0.1', '--port', '5273'], valid: text => text.includes('Mapa Táctico') && (text.includes('vite-rsc/entry-browser') || text.includes('/@vite/client')) }
 ];
 const listening = port => new Promise(resolve => {
   const socket = net.connect({ host: '127.0.0.1', port });

@@ -1,0 +1,1207 @@
+{
+  "schemaVersion": 1,
+  "updatedDate": "2026-10-26",
+  "status": "research_only_not_published",
+  "unitConversion": {
+    "gramsPerKilogram": 1000,
+    "kilogramsPerTonne": 1000,
+    "gramsPerTonne": 1000000,
+    "tonnesPerKiloton": 1000,
+    "kilogramsPerKiloton": 1000000,
+    "gramsPerKiloton": 1000000000
+  },
+  "references": [
+    {
+      "id": "passenger-car-tyre-burst-reference",
+      "labelEs": "Llanta de automóvil",
+      "displayTextEs": "Llanta de automóvil ≈ 1 g de TNT equivalente",
+      "displayTNTEquivalentG": 1,
+      "displayTNTEquivalentKg": 0.001,
+      "approximate": true,
+      "scaleRole": "lower_selected_reference_not_physical_minimum",
+      "selection": {
+        "date": "2026-10-21",
+        "userMessage": "ah bueno pues entonces tenemos la medida mas baja, vamos a anotarla como el estallido de una llanta de autos es un gramo o sea 1, porque un kilo son 1000, cierto",
+        "scopeEs": "Selección de referencia inferior redondeada para la escala propuesta; no aprueba un sprint ni acredita una función publicada."
+      },
+      "source": {
+        "title": "The Hazard Analysis of Tire Explosion",
+        "author": "LIN, KENG-WEN",
+        "year": 2021,
+        "institution": "National Kaohsiung University of Science and Technology",
+        "type": "master_thesis",
+        "url": "https://ndltd.ncl.edu.tw/cgi-bin/gs32/gsweb.cgi/login?o=dnclcdr&s=id%3D%22109NKUS0519019%22.&searchmode=basic",
+        "consultedDate": "2026-10-21",
+        "evidenceReviewed": "repository_abstract",
+        "case": "235 mm automobile tyre",
+        "reportedTNTEquivalentKg": 0.00113,
+        "reportedTNTEquivalentG": 1.13,
+        "valueType": "model_estimate_not_experimental_measurement",
+        "inflationPressureFromReviewedEvidence": null,
+        "internalVolumeFromReviewedEvidence": null
+      },
+      "limitationsEs": [
+        "El valor mostrado redondea 1,13 g del caso calculado por la fuente; no es una equivalencia universal de las llantas de automóvil.",
+        "El resumen consultado no permite identificar la presión ni el volumen usados, ni atribuir el valor específicamente a sobreinflado.",
+        "La selección no define una presión de ruptura, una energía máxima o mínima física, daños, fragmentos, radios ni lesiones.",
+        "La equivalencia en TNT expresa una comparación energética; no establece igualdad de efectos con una detonación de TNT."
+      ],
+      "elementEs": "Aire",
+      "energyMechanismEs": "Expansión del aire comprimido; no combustión del aire.",
+      "catalogSelection": {
+        "status": "retired",
+        "date": "2026-10-21",
+        "reasonEs": "El usuario retira la referencia de 1 g de la tabla; el compresor queda como referencia inferior de la selección, en la escala de 1 kg.",
+        "userMessage": "ok, estamos hablandoe entonces de kilogramos y no de gramos entonces podemos eliminar la referencia de la llanta de automovil"
+      }
+    },
+    {
+      "id": "air-compressor-tank-burst-reference",
+      "labelEs": "Tanque de aire comprimido",
+      "displayTextEs": "Tanque de aire comprimido · 0.001 toneladas de TNT equivalente",
+      "displayTNTEquivalentG": 1000,
+      "displayTNTEquivalentKg": 1,
+      "approximate": true,
+      "scaleRole": "selected_one_kg_reference_by_order_of_magnitude",
+      "selection": {
+        "date": "2026-10-21",
+        "userMessage": "entonces tomaremos la explosion del tanque de un compresor de aire como el ejemplo para 1kg",
+        "scopeEs": "Selección de ejemplo ilustrativo para la escala de 1 kg; no es una equivalencia medida de cualquier compresor ni aprueba un sprint o publicación."
+      },
+      "source": {
+        "title": "Fatigue weld failure causes explosion of air receiver",
+        "authors": [
+          "Leighton E. Sissom",
+          "Joseph T. Scardina"
+        ],
+        "year": 1983,
+        "journal": "Engineering Fracture Mechanics",
+        "volume": 17,
+        "issue": 5,
+        "pages": "405–414",
+        "url": "https://doi.org/10.1016/0013-7944(83)90037-1",
+        "consultedDate": "2026-10-21",
+        "evidenceReviewed": "publisher_abstract",
+        "case": "Industrial air receiver tank in a tyre recapping plant",
+        "reportedTNTEquivalentLb": {
+          "operator": ">",
+          "value": 3
+        },
+        "reportedTNTEquivalentKg": {
+          "operator": ">",
+          "value": 1.36077711
+        },
+        "valueType": "reported_accident_equivalence_not_a_universal_tank_value"
+      },
+      "limitationsEs": [
+        "1 kg es el ancla ilustrativa elegida para la escala, no el valor exacto del accidente: la fuente informa más de 3 lb de TNT, equivalentes a más de 1,36 kg.",
+        "El accidente corresponde a un depósito industrial; no se atribuye esa energía a todos los compresores domésticos o de taller.",
+        "Esta comparación por orden de magnitud no establece igualdad de onda, daños, fragmentos, radios ni lesiones."
+      ],
+      "elementEs": "Aire",
+      "energyMechanismEs": "Expansión del aire comprimido; no combustión del aire.",
+      "elementQuantity": null,
+      "elementQuantityStatus": "scenario_not_sufficiently_specified",
+      "elementQuantityReviewDate": "2026-10-26",
+      "elementQuantityAudit": "cantidades-materiales-2026-10-26.json",
+      "elementQuantityLimitationEs": "El ejemplo de 1 kg de TNT no identifica un recipiente con capacidad y estado del aire documentados. El resumen del caso industrial de Sissom y Scardina no publica la cantidad de aire. No se deduce una cantidad única de aire a partir de la energía."
+    },
+    {
+      "id": "domestic-propane-25lb-reference",
+      "labelEs": "Tanque de propano",
+      "displayTextEs": "Tanque de propano · 0.013 toneladas de TNT equivalente",
+      "elementEs": "Propano",
+      "displayTNTEquivalentG": 13000,
+      "displayTNTEquivalentKg": 13,
+      "approximate": true,
+      "modelId": "propane-vapor-cloud-illustration-10pct",
+      "fuelMassLb": 25,
+      "fuelMassKg": 11.33980925,
+      "calculatedTNTEquivalentKg": 12.555131906477737,
+      "valueType": "illustrative_model_estimate_not_accident_measurement",
+      "selection": {
+        "date": "2026-10-21",
+        "userMessage": "bien, ahora vamos a pasar al los tanques de gas propano y ponerlos en la tabla, los tanques de gas son de 25, 50 y 100 libras",
+        "scopeEs": "Incorporación al documento de conceptualización, sin publicación en el portal ni cierre de sprint."
+      },
+      "source": {
+        "yieldAssumption": "https://www.epa.gov/sites/default/files/2013-11/documents/oca-chps.pdf",
+        "yieldLocation": "Chapter 5, printed page 5-1, PDF page 55",
+        "heatOfCombustion": "https://doi.org/10.6028/NIST.TN.2126",
+        "conventionalTNTUnit": "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication811e1991.pdf"
+      },
+      "limitationsEs": [
+        "No es una medición de un accidente de cilindro ni un modelo validado para viviendas.",
+        "No describe por sí solo ruptura mecánica, BLEVE, incendio ni fragmentos.",
+        "Usa la unidad energética convencional de 4,184 MJ/kg de TNT; no reproduce el cálculo de distancias de la EPA, que emplea 4,680 MJ/kg.",
+        "El 10 % no es un rendimiento universal ni un máximo físico absoluto; no se calculan daños ni radios."
+      ],
+      "elementQuantity": {
+        "value": 25,
+        "unit": "lb",
+        "basis": "nominal_net_fuel_mass_excluding_container_tare"
+      }
+    },
+    {
+      "id": "domestic-propane-50lb-reference",
+      "labelEs": "Tanque de propano",
+      "displayTextEs": "Tanque de propano · 0.025 toneladas de TNT equivalente",
+      "elementEs": "Propano",
+      "displayTNTEquivalentG": 25000,
+      "displayTNTEquivalentKg": 25,
+      "approximate": true,
+      "modelId": "propane-vapor-cloud-illustration-10pct",
+      "fuelMassLb": 50,
+      "fuelMassKg": 22.6796185,
+      "calculatedTNTEquivalentKg": 25.110263812955473,
+      "valueType": "illustrative_model_estimate_not_accident_measurement",
+      "selection": {
+        "date": "2026-10-21",
+        "userMessage": "bien, ahora vamos a pasar al los tanques de gas propano y ponerlos en la tabla, los tanques de gas son de 25, 50 y 100 libras",
+        "scopeEs": "Incorporación al documento de conceptualización, sin publicación en el portal ni cierre de sprint."
+      },
+      "source": {
+        "yieldAssumption": "https://www.epa.gov/sites/default/files/2013-11/documents/oca-chps.pdf",
+        "yieldLocation": "Chapter 5, printed page 5-1, PDF page 55",
+        "heatOfCombustion": "https://doi.org/10.6028/NIST.TN.2126",
+        "conventionalTNTUnit": "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication811e1991.pdf"
+      },
+      "limitationsEs": [
+        "No es una medición de un accidente de cilindro ni un modelo validado para viviendas.",
+        "No describe por sí solo ruptura mecánica, BLEVE, incendio ni fragmentos.",
+        "Usa la unidad energética convencional de 4,184 MJ/kg de TNT; no reproduce el cálculo de distancias de la EPA, que emplea 4,680 MJ/kg.",
+        "El 10 % no es un rendimiento universal ni un máximo físico absoluto; no se calculan daños ni radios."
+      ],
+      "elementQuantity": {
+        "value": 50,
+        "unit": "lb",
+        "basis": "nominal_net_fuel_mass_excluding_container_tare"
+      }
+    },
+    {
+      "id": "domestic-propane-100lb-reference",
+      "labelEs": "Tanque de propano",
+      "displayTextEs": "Tanque de propano · 0.05 toneladas de TNT equivalente",
+      "elementEs": "Propano",
+      "displayTNTEquivalentG": 50000,
+      "displayTNTEquivalentKg": 50,
+      "approximate": true,
+      "modelId": "propane-vapor-cloud-illustration-10pct",
+      "fuelMassLb": 100,
+      "fuelMassKg": 45.359237,
+      "calculatedTNTEquivalentKg": 50.22052762591095,
+      "valueType": "illustrative_model_estimate_not_accident_measurement",
+      "selection": {
+        "date": "2026-10-21",
+        "userMessage": "bien, ahora vamos a pasar al los tanques de gas propano y ponerlos en la tabla, los tanques de gas son de 25, 50 y 100 libras",
+        "scopeEs": "Incorporación al documento de conceptualización, sin publicación en el portal ni cierre de sprint."
+      },
+      "source": {
+        "yieldAssumption": "https://www.epa.gov/sites/default/files/2013-11/documents/oca-chps.pdf",
+        "yieldLocation": "Chapter 5, printed page 5-1, PDF page 55",
+        "heatOfCombustion": "https://doi.org/10.6028/NIST.TN.2126",
+        "conventionalTNTUnit": "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication811e1991.pdf"
+      },
+      "limitationsEs": [
+        "No es una medición de un accidente de cilindro ni un modelo validado para viviendas.",
+        "No describe por sí solo ruptura mecánica, BLEVE, incendio ni fragmentos.",
+        "Usa la unidad energética convencional de 4,184 MJ/kg de TNT; no reproduce el cálculo de distancias de la EPA, que emplea 4,680 MJ/kg.",
+        "El 10 % no es un rendimiento universal ni un máximo físico absoluto; no se calculan daños ni radios."
+      ],
+      "elementQuantity": {
+        "value": 100,
+        "unit": "lb",
+        "basis": "nominal_net_fuel_mass_excluding_container_tare"
+      }
+    },
+    {
+      "id": "stationary-industrial-propane-1000-usgal-reference",
+      "labelEs": "Tanque industrial de propano",
+      "displayTextEs": "Tanque industrial de propano · 800 galones US ≈ 1,700 kg de TNT equivalente (hipótesis de nube de gas al 10 %)",
+      "elementEs": "Propano",
+      "elementQuantity": {
+        "value": 800,
+        "unit": "US_gal",
+        "basis": "assumed_liquid_fuel_load_not_nominal_vessel_capacity"
+      },
+      "displayTNTEquivalentG": 1700000,
+      "displayTNTEquivalentKg": 1700,
+      "displayRoundingKg": 100,
+      "approximate": true,
+      "modelId": "propane-vapor-cloud-illustration-10pct",
+      "tankSpecification": {
+        "type": "stationary_commercial_industrial_reference_not_universal_standard",
+        "nominalCapacityUSGal": 1000,
+        "assumedLiquidLoadUSGal": 800,
+        "assumedFillFraction": 0.8,
+        "densityLbPerUSGal": 4.24,
+        "densityTemperatureF": 60,
+        "derivedFuelMassLb": 3392.0,
+        "derivedFuelMassKg": 1538.58531904,
+        "sources": {
+          "commercialTankAndLoad": "https://www.amerigas.com/commercial-propane/propane-tank-sizes",
+          "industrialUse": "https://www.superiorpropane.com/industrial-propane",
+          "density": "https://www.cavagnagroup.com/wp-content/uploads/2025/11/Propane-Catalog-CNA-2025_5CA1419N_rev14.7_web.pdf",
+          "densityCorroboration": "https://netl.doe.gov/sites/default/files/netl-file/21CMOG_OG_Hamling.pdf"
+        },
+        "limitationsEs": [
+          "Se elige un formato representativo de 1,000 galones US; no es un tamaño estándar universal ni una identificación de un tanque observado por el usuario.",
+          "800 galones US es la carga ilustrativa de este ejemplo; la carga real cambia con el consumo.",
+          "La masa derivada usa densidad de propano puro a 60 °F; cambia con temperatura y composición.",
+          "La referencia TNT conserva la hipótesis de nube de gas al 10 %, no describe necesariamente un BLEVE ni mide un accidente real."
+        ]
+      },
+      "calculatedTNTEquivalentKg": 1703.4802970708993,
+      "selection": {
+        "date": "2026-10-21",
+        "userMessage": "bien, entonces vamos a agregar otra linea con un tanque de gas propano industrial de tamaño estandar de esos que tienen que ser recargados por un camión constantemente",
+        "scopeEs": "Una referencia estacionaria representativa para la tabla de conceptualización; no acredita publicación o cierre de sprint."
+      },
+      "source": {
+        "yieldAssumption": "https://www.epa.gov/sites/default/files/2013-11/documents/oca-chps.pdf",
+        "yieldLocation": "Chapter 5, printed page 5-1, PDF page 55",
+        "heatOfCombustion": "https://doi.org/10.6028/NIST.TN.2126",
+        "conventionalTNTUnit": "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication811e1991.pdf",
+        "commercialTankAndLoad": "https://www.amerigas.com/commercial-propane/propane-tank-sizes",
+        "industrialUse": "https://www.superiorpropane.com/industrial-propane",
+        "density": "https://www.cavagnagroup.com/wp-content/uploads/2025/11/Propane-Catalog-CNA-2025_5CA1419N_rev14.7_web.pdf",
+        "densityCorroboration": "https://netl.doe.gov/sites/default/files/netl-file/21CMOG_OG_Hamling.pdf"
+      },
+      "limitationsEs": [
+        "No es una medición de un accidente de cilindro ni un modelo validado para viviendas.",
+        "No describe por sí solo ruptura mecánica, BLEVE, incendio ni fragmentos.",
+        "Usa la unidad energética convencional de 4,184 MJ/kg de TNT; no reproduce el cálculo de distancias de la EPA, que emplea 4,680 MJ/kg.",
+        "El 10 % no es un rendimiento universal ni un máximo físico absoluto; no se calculan daños ni radios.",
+        "Se elige un formato representativo de 1,000 galones US; no es un tamaño estándar universal ni una identificación de un tanque observado por el usuario.",
+        "800 galones US es la carga ilustrativa de este ejemplo; la carga real cambia con el consumo.",
+        "La masa derivada usa densidad de propano puro a 60 °F; cambia con temperatura y composición.",
+        "La referencia TNT conserva la hipótesis de nube de gas al 10 %, no describe necesariamente un BLEVE ni mide un accidente real."
+      ],
+      "catalogSelection": {
+        "status": "retired",
+        "date": "2026-10-21",
+        "reasonEs": "Retirado de la tabla por instrucción explícita del usuario; se conserva el historial de investigación.",
+        "userMessage": "Vamos a agregar entonces una linea llamada \"Explosión de Baní\" que fue equivalente a 500 de TNT, calcula entonces el aproximado en gas propano, tambien elimina la linea: Tanque industrial de propano"
+      }
+    },
+    {
+      "id": "bani-500kg-escenario-propuesto",
+      "labelEs": "Explosión de Baní",
+      "elementEs": "Propano (equivalente)",
+      "displayTNTEquivalentKg": 500,
+      "valueType": "user_specified_scenario_not_verified_historical_yield",
+      "modelId": "propane-vapor-cloud-illustration-10pct",
+      "elementQuantity": {
+        "value": 996,
+        "unit": "lb",
+        "approximate": true,
+        "basis": "hypothetical_equivalent_fuel_mass_not_documented_accident_quantity"
+      },
+      "calculatedFuelMassKg": 451.6005620040241,
+      "calculatedFuelMassLb": 995.6088150336922,
+      "inverseFormula": "targetTNTEquivalentKg * conventionalTNTMJPerKg / (propaneNetMJPerKg * yieldFactor)",
+      "selection": {
+        "date": "2026-10-21",
+        "userMessage": "Vamos a agregar entonces una linea llamada \"Explosión de Baní\" que fue equivalente a 500 de TNT, calcula entonces el aproximado en gas propano, tambien elimina la linea: Tanque industrial de propano",
+        "scopeEs": "Escenario de conceptualización; no acredita un accidente histórico ni publicación en el portal."
+      },
+      "historicalAttribution": {
+        "status": "unverified",
+        "userRequestedLabel": "Explosión de Baní",
+        "locatedClaimLocation": "San Cristóbal, 14 de agosto de 2023",
+        "claimSource": "https://costaverdedr.com/que-se-explique-esto/",
+        "claimSourceType": "opinion_column_citing_unidentified_experts_without_calculation",
+        "verifiedHistoricalTNTEquivalentKg": null,
+        "actualFuel": null,
+        "actualFuelQuantity": null
+      },
+      "sources": {
+        "yieldAssumption": "https://www.epa.gov/sites/default/files/2013-11/documents/oca-chps.pdf",
+        "yieldLocation": "Chapter 5, printed page 5-1, PDF page 55",
+        "heatOfCombustion": "https://doi.org/10.6028/NIST.TN.2126",
+        "conventionalTNTUnit": "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication811e1991.pdf"
+      },
+      "limitationsEs": [
+        "Escenario propuesto por el usuario con referencia de 500 kg de TNT. La atribución a Baní no está confirmada; la cifra localizada es una afirmación sin cálculo publicado sobre San Cristóbal (2023). El propano es una equivalencia hipotética con factor energético del 10 %, no el combustible ni la cantidad documentados del accidente.",
+        "El factor energético del 10 % es un supuesto de comparación; no es una eficiencia universal ni determina daños."
+      ],
+      "displayTextEs": "Explosión de Baní · 0.5 toneladas de TNT equivalente"
+    },
+    {
+      "id": "tianjin-port-2015-main-explosion",
+      "elementQuantity": {
+        "value": 800,
+        "unit": "t",
+        "basis": "official_pre_accident_inventory_not_confirmed_reacted_mass"
+      },
+      "approximate": true,
+      "eventDate": "2015-08-12",
+      "country": "China",
+      "valueType": "user_selected_rounded_historical_reference",
+      "publishedSequenceTNTEquivalentKg": 450000,
+      "publishedFirstExplosionTNTEquivalentKg": 15000,
+      "labelEs": "Puerto de Tianjin",
+      "elementEs": "Nitrato de amonio",
+      "displayTNTEquivalentKg": 500000,
+      "limitationsEs": [
+        "Referencia aproximada elegida por el usuario: 0.5 M de kg de TNT (500,000 kg). La fuente estima 430,000 kg para la explosión principal y 450,000 kg para la secuencia completa; se conservan esos valores publicados por separado."
+      ],
+      "sources": {
+        "energyEstimate": "https://est.bit.edu.cn/english/headlines/b94705.htm"
+      },
+      "selection": {
+        "date": "2026-10-21",
+        "userMessage": "vamos a agregar el puerto de Tianjing y el Puerto de Beirut a la tabla",
+        "scopeEs": "Incorporación al HTML de conceptualización; no publicación en el portal ni cierre de sprint."
+      },
+      "displayTextEs": "Puerto de Tianjin · 500 toneladas de TNT equivalente",
+      "previousSelection": {
+        "displayTNTEquivalentKg": 430000,
+        "valueType": "published_investigation_estimate_main_explosion"
+      },
+      "publishedMainExplosionTNTEquivalentKg": 430000,
+      "selectionHistory": [
+        {
+          "date": "2026-10-21",
+          "displayTNTEquivalentKg": 500000,
+          "valueType": "user_selected_rounded_historical_reference",
+          "status": "superseded_by_user"
+        },
+        {
+          "date": "2026-10-21",
+          "displayTNTEquivalentKg": 430000,
+          "valueType": "published_investigation_estimate_main_explosion",
+          "status": "superseded_by_user"
+        }
+      ],
+      "elementQuantityStatus": "documented_inventory",
+      "elementQuantityReviewDate": "2026-10-26",
+      "elementQuantityAudit": "cantidades-materiales-2026-10-26.json",
+      "elementQuantityLimitationEs": "Inventario previo al accidente, no masa que se pueda afirmar que detonó íntegramente.",
+      "elementQuantitySource": "https://www.xinhuanet.com/politics/2016-02/05/c_128706930.htm"
+    },
+    {
+      "id": "beirut-port-2020-main-explosion",
+      "elementQuantity": {
+        "value": 2750,
+        "unit": "t",
+        "approximate": true,
+        "basis": "reported_stored_inventory_not_confirmed_reacted_mass"
+      },
+      "approximate": true,
+      "eventDate": "2020-08-04",
+      "country": "Líbano",
+      "valueType": "user_selected_approximate_historical_reference",
+      "publishedReasonableUpperLimitTNTEquivalentKg": 1120000,
+      "doi": "10.1007/s00193-020-00970-z",
+      "labelEs": "Puerto de Beirut",
+      "elementEs": "Nitrato de amonio",
+      "displayTNTEquivalentKg": 1200000,
+      "limitationsEs": [
+        "Referencia aproximada elegida por el usuario: 1.2 M de kg de TNT (1,200,000 kg). El estudio de Rigby conserva su estimación central de 500,000 kg y su límite superior razonable de 1,120,000 kg; 1.2 M no es su estimación central. La cantidad de material corresponde al almacenamiento reportado."
+      ],
+      "sources": {
+        "energyEstimate": "https://eprints.whiterose.ac.uk/id/eprint/165010/",
+        "reportedInventory": "https://eprints.whiterose.ac.uk/id/eprint/165010/8/Rigby2020_Article_PreliminaryYieldEstimationOfTh.pdf"
+      },
+      "selection": {
+        "date": "2026-10-21",
+        "userMessage": "vamos a agregar el puerto de Tianjing y el Puerto de Beirut a la tabla",
+        "scopeEs": "Incorporación al HTML de conceptualización; no publicación en el portal ni cierre de sprint."
+      },
+      "displayTextEs": "Puerto de Beirut · 1,200 toneladas de TNT equivalente",
+      "previousSelection": {
+        "displayTNTEquivalentKg": 500000,
+        "valueType": "published_video_reconstruction_best_estimate"
+      },
+      "publishedBestEstimateTNTEquivalentKg": 500000,
+      "selectionHistory": [
+        {
+          "date": "2026-10-21",
+          "displayTNTEquivalentKg": 1200000,
+          "valueType": "user_selected_approximate_historical_reference",
+          "status": "superseded_by_user"
+        },
+        {
+          "date": "2026-10-21",
+          "displayTNTEquivalentKg": 500000,
+          "valueType": "published_video_reconstruction_best_estimate",
+          "status": "superseded_by_user"
+        }
+      ]
+    },
+    {
+      "id": "hiroshima-1945-energy-reference",
+      "labelEs": "Hiroshima",
+      "elementEs": "Uranio enriquecido",
+      "elementQuantity": {
+        "value": 64,
+        "unit": "kg",
+        "approximate": true,
+        "basis": "reported_loaded_nuclear_material_mass_not_fissioned_mass_or_total_weapon_mass"
+      },
+      "eventDate": "1945-08-06",
+      "eventType": "historical_nuclear_bombing",
+      "valueType": "published_historical_total_energy_estimate",
+      "displayTNTEquivalentKg": 15000000,
+      "displayTextEs": "Hiroshima · 15,000 toneladas de TNT equivalente",
+      "source": {
+        "title": "The Yields of the Hiroshima and Nagasaki Nuclear Explosions",
+        "author": "John S. Malik",
+        "report": "LA-8819",
+        "institution": "Los Alamos National Laboratory",
+        "year": 1985,
+        "url": "https://www.osti.gov/manhattan-project-history/publications/LANLHiroshimaNagasakiYields.pdf",
+        "evidenceReviewed": "PDF page 4 abstract; current best estimates 15 kt and 21 kt",
+        "materialIdentificationSource": "https://www.rerf.or.jp/uploads/2017/09/briefdescript_e.pdf"
+      },
+      "publishedOutsideUncertaintyPercent": 20,
+      "limitationsEs": [
+        "Estimación histórica de energía total publicada por Los Álamos (Malik, LA-8819, 1985): 15 kt = 15,000,000 kg de TNT equivalente. M abrevia millones de kg. La cantidad del elemento corresponde al material nuclear cargado: aproximadamente 64 kg de uranio enriquecido. No es la masa total del artefacto ni la cantidad que llegó a fisionarse. En Hiroshima se trata de la masa de uranio enriquecido, no de uranio-235 puro."
+      ],
+      "selection": {
+        "date": "2026-10-21",
+        "userMessage": "entonces vamos con las de hiroshima y nagasaki en esta nomenclatura serian 15 M y 21 M",
+        "scopeEs": "Comparación histórica en la tabla de conceptualización; no implementa simulaciones ni publica cambios en el portal."
+      },
+      "elementQuantitySource": "https://www.rerf.or.jp/en/faq/",
+      "quantityVerification": {
+        "date": "2026-10-21",
+        "status": "verified_published_historical_quantity",
+        "userMessage": "como que no se sabe la cantidad del elemento que habia en las bombas atómicas? resuelve eso"
+      }
+    },
+    {
+      "id": "nagasaki-1945-energy-reference",
+      "labelEs": "Nagasaki",
+      "elementEs": "Plutonio",
+      "elementQuantity": {
+        "value": 6.2,
+        "unit": "kg",
+        "approximate": true,
+        "basis": "reported_loaded_nuclear_material_mass_not_fissioned_mass_or_total_weapon_mass"
+      },
+      "eventDate": "1945-08-09",
+      "eventType": "historical_nuclear_bombing",
+      "valueType": "published_historical_total_energy_estimate",
+      "displayTNTEquivalentKg": 21000000,
+      "displayTextEs": "Nagasaki · 21,000 toneladas de TNT equivalente",
+      "source": {
+        "title": "The Yields of the Hiroshima and Nagasaki Nuclear Explosions",
+        "author": "John S. Malik",
+        "report": "LA-8819",
+        "institution": "Los Alamos National Laboratory",
+        "year": 1985,
+        "url": "https://www.osti.gov/manhattan-project-history/publications/LANLHiroshimaNagasakiYields.pdf",
+        "evidenceReviewed": "PDF page 4 abstract; current best estimates 15 kt and 21 kt",
+        "materialIdentificationSource": "https://www.rerf.or.jp/uploads/2017/09/briefdescript_e.pdf"
+      },
+      "publishedOutsideUncertaintyPercent": 10,
+      "limitationsEs": [
+        "Estimación histórica de energía total publicada por Los Álamos (Malik, LA-8819, 1985): 21 kt = 21,000,000 kg de TNT equivalente. M abrevia millones de kg. La cantidad del elemento corresponde al material nuclear cargado: aproximadamente 6.2 kg de plutonio. No es la masa total del artefacto ni la cantidad que llegó a fisionarse."
+      ],
+      "selection": {
+        "date": "2026-10-21",
+        "userMessage": "entonces vamos con las de hiroshima y nagasaki en esta nomenclatura serian 15 M y 21 M",
+        "scopeEs": "Comparación histórica en la tabla de conceptualización; no implementa simulaciones ni publica cambios en el portal."
+      },
+      "elementQuantitySource": "https://www.sipri.org/commentary/expert-comment/2016/another-nuclear-test-announced-north-korea-searching-plan-action",
+      "quantityVerification": {
+        "date": "2026-10-21",
+        "status": "verified_published_historical_quantity",
+        "userMessage": "como que no se sabe la cantidad del elemento que habia en las bombas atómicas? resuelve eso"
+      }
+    },
+    {
+      "id": "tunguska-1908-energy-reference",
+      "labelEs": "Tunguska",
+      "explosionType": "Natural",
+      "elementEs": "Objeto espacial",
+      "elementQuantity": {
+        "value": 100000,
+        "unit": "t",
+        "approximate": true,
+        "basis": "nasa_public_estimate_of_impactor_mass_not_combustible_mass"
+      },
+      "eventDate": "1908-06-30",
+      "eventType": "natural_atmospheric_airburst",
+      "valueType": "published_model_energy_range",
+      "source": {
+        "url": "https://ntrs.nasa.gov/api/citations/20190002302/downloads/20190002302.pdf"
+      },
+      "limitationsEs": [
+        "Intervalo de 10 a 20 Mt favorecido por los modelos revisados en el taller NASA de 2018. Existen estimaciones menores; no es un intervalo de consenso universal."
+      ],
+      "displayTNTEquivalentKgRange": {
+        "min": 10000000000,
+        "max": 20000000000
+      },
+      "displayTextEs": "Tunguska · 20,000,000 toneladas de TNT equivalente",
+      "displayTNTEquivalentKg": 20000000000,
+      "selection": {
+        "date": "2026-10-25",
+        "basis": "upper_endpoint_of_published_reference_range",
+        "userMessage": "si hay un rango tomaremos el valor mas alto"
+      },
+      "elementQuantityStatus": "published_estimate",
+      "elementQuantityReviewDate": "2026-10-26",
+      "elementQuantityAudit": "cantidades-materiales-2026-10-26.json",
+      "elementQuantityLimitationEs": "Estimación divulgativa de la masa del objeto, no masa medida ni combustible. La energía de la tabla procede del taller NASA de 2018; no se afirma que ambas cifras sean parámetros de una misma reconstrucción.",
+      "elementQuantitySource": "https://science.nasa.gov/solar-system/meteors-meteorites/facts/"
+    },
+    {
+      "id": "hunga-tonga-2022-energy-reference",
+      "labelEs": "Hunga Tonga",
+      "explosionType": "Natural",
+      "elementEs": "Magma",
+      "elementQuantity": {
+        "value": 8,
+        "unit": "km³",
+        "qualifier": "DRE (mínimo)",
+        "approximate": true,
+        "bound": "lower",
+        "basis": "published_lower_estimate_of_erupted_dense_rock_equivalent_magma_volume"
+      },
+      "eventDate": "2022-01-15",
+      "eventType": "natural_volcanic_eruption",
+      "valueType": "published_pressure_based_energy_estimate",
+      "source": {
+        "url": "https://eprints.whiterose.ac.uk/id/eprint/191410/",
+        "doi": "10.1007/s00193-022-01092-4"
+      },
+      "limitationsEs": [
+        "Estimación de 61 Mt de Díaz y Rigby (2022), obtenida mediante una relación empírica entre presión y distancia. Otros métodos producen cifras diferentes. No expresa solo energía acústica ni equivale a daños idénticos a una carga de TNT."
+      ],
+      "displayTNTEquivalentKg": 61000000000,
+      "displayTextEs": "Hunga Tonga · 61,000,000 toneladas de TNT equivalente",
+      "elementQuantityStatus": "published_estimate",
+      "elementQuantityReviewDate": "2026-10-26",
+      "elementQuantityAudit": "cantidades-materiales-2026-10-26.json",
+      "elementQuantityLimitationEs": "Volumen equivalente de roca densa, no volumen de gas ni una carga química. Es un mínimo estimado, no un máximo conocido ni una cantidad exacta. No se convierte a masa con una densidad supuesta. La estimación energética de Díaz y Rigby se mantiene por separado.",
+      "elementQuantitySource": "https://www.nature.com/articles/s41561-026-02099-7"
+    },
+    {
+      "id": "krakatoa-1883-energy-reference",
+      "labelEs": "Krakatoa",
+      "explosionType": "Natural",
+      "elementEs": "Magma y rocas",
+      "elementQuantity": {
+        "value": 25,
+        "unit": "km³",
+        "approximate": true,
+        "basis": "usgs_total_ejected_material_volume_including_new_magma_and_old_island_rock"
+      },
+      "eventDate": "1883-08-27",
+      "eventType": "natural_volcanic_eruption",
+      "valueType": "published_atmospheric_pressure_pulse_equivalence_range",
+      "source": {
+        "url": "https://authors.library.caltech.edu/records/xvvaz-4pv10",
+        "doi": "10.1126/science.154.3754.1325"
+      },
+      "limitationsEs": [
+        "Press y Harkrider (1966) estimaron que una explosión de 100 a 150 Mt reproduciría el pulso de presión atmosférica de Krakatoa. Es una equivalencia de ese pulso, no una medición directa de toda la energía eruptiva."
+      ],
+      "displayTNTEquivalentKgRange": {
+        "min": 100000000000,
+        "max": 150000000000
+      },
+      "displayTextEs": "Krakatoa · 150,000,000 toneladas de TNT equivalente",
+      "displayTNTEquivalentKg": 150000000000,
+      "selection": {
+        "date": "2026-10-25",
+        "basis": "upper_endpoint_of_published_reference_range",
+        "userMessage": "si hay un rango tomaremos el valor mas alto"
+      },
+      "elementQuantityStatus": "published_estimate",
+      "elementQuantityReviewDate": "2026-10-26",
+      "elementQuantityAudit": "cantidades-materiales-2026-10-26.json",
+      "elementQuantityLimitationEs": "Volumen de material expulsado, no masa de combustible ni volumen exclusivamente de magma. NOAA publica 21 km³ y el ministerio de Indonesia 18 km³ con otras estimaciones; no se presentan como un único intervalo de medición.",
+      "elementQuantitySource": "https://www.usgs.gov/news/volcano-watch-mixing-magmas-krakatau"
+    },
+    {
+      "id": "military-an-m30a1-tnt-reference",
+      "labelEs": "Bomba AN-M30A1 (100 libras)",
+      "explosionType": "Militar",
+      "elementEs": "TNT",
+      "elementQuantity": {
+        "value": 57,
+        "unit": "lb",
+        "basis": "published_main_explosive_fill_mass_not_total_bomb_mass"
+      },
+      "eventType": "historical_non_nuclear_munition_reference",
+      "valueType": "rounded_tnt_main_fill_mass_equivalence",
+      "displayTNTEquivalentKg": 26.0,
+      "displayTextEs": "Bomba AN-M30A1 (100 libras) · 0.026 toneladas de TNT equivalente",
+      "source": {
+        "url": "https://extapps.dec.ny.gov/data/DecDocs/152224/Report.HW.152224.2007-09-03.archives_search.pdf"
+      },
+      "limitationsEs": [
+        "Referencia histórica de la versión AN-M30A1 cargada con TNT. La clase 100 libras es nominal del artefacto completo; la carga principal documentada es 57 libras de TNT (25.85476509 kg). La referencia energética se redondea a tres decimales de tonelada. No es una equivalencia universal de cualquier bomba de esa clase ni compara variantes con otros rellenos. No añade un modelo de daños."
+      ],
+      "selection": {
+        "date": "2026-10-25",
+        "scopeEs": "Comparación histórica y conceptual. El usuario aclaró que 200 libras se refería a la clase de 250 libras. No implementa simulaciones ni publica cambios en el portal."
+      },
+      "nominalWeightClassLb": 100,
+      "calculatedMainFillTNTEquivalentKg": 25.85476509,
+      "tableStatus": "removed_by_user",
+      "removal": {
+        "date": "2026-10-25",
+        "userMessage": "estos no son significativas, vamos a eliminarlas",
+        "scopeEs": "Retiradas las tres bombas AN de la tabla de conceptualización. Datos conservados como historial documental."
+      }
+    },
+    {
+      "id": "military-an-m57a1-tnt-reference",
+      "labelEs": "Bomba AN-M57A1 (250 libras)",
+      "explosionType": "Militar",
+      "elementEs": "TNT",
+      "elementQuantity": {
+        "value": 127,
+        "unit": "lb",
+        "basis": "published_main_explosive_fill_mass_not_total_bomb_mass"
+      },
+      "eventType": "historical_non_nuclear_munition_reference",
+      "valueType": "rounded_tnt_main_fill_mass_equivalence",
+      "displayTNTEquivalentKg": 58.0,
+      "displayTextEs": "Bomba AN-M57A1 (250 libras) · 0.058 toneladas de TNT equivalente",
+      "source": {
+        "url": "https://www.bulletpicker.com/pdf/complete-round-charts-miscellaneous-1961.pdf"
+      },
+      "limitationsEs": [
+        "Referencia histórica de la versión AN-M57A1 cargada con TNT. La clase 250 libras es nominal del artefacto completo; la carga principal documentada es 127 libras de TNT (57.60623099 kg). La referencia energética se redondea a tres decimales de tonelada. No es una equivalencia universal de cualquier bomba de esa clase ni compara variantes con otros rellenos. No añade un modelo de daños."
+      ],
+      "selection": {
+        "date": "2026-10-25",
+        "scopeEs": "Comparación histórica y conceptual. El usuario aclaró que 200 libras se refería a la clase de 250 libras. No implementa simulaciones ni publica cambios en el portal."
+      },
+      "nominalWeightClassLb": 250,
+      "calculatedMainFillTNTEquivalentKg": 57.60623099,
+      "tableStatus": "removed_by_user",
+      "removal": {
+        "date": "2026-10-25",
+        "userMessage": "estos no son significativas, vamos a eliminarlas",
+        "scopeEs": "Retiradas las tres bombas AN de la tabla de conceptualización. Datos conservados como historial documental."
+      }
+    },
+    {
+      "id": "military-an-m65a1-tnt-reference",
+      "labelEs": "Bomba AN-M65A1 (1,000 libras)",
+      "explosionType": "Militar",
+      "elementEs": "TNT",
+      "elementQuantity": {
+        "value": 555,
+        "unit": "lb",
+        "basis": "published_main_explosive_fill_mass_not_total_bomb_mass"
+      },
+      "eventType": "historical_non_nuclear_munition_reference",
+      "valueType": "rounded_tnt_main_fill_mass_equivalence",
+      "displayTNTEquivalentKg": 252.0,
+      "displayTextEs": "Bomba AN-M65A1 (1,000 libras) · 0.252 toneladas de TNT equivalente",
+      "source": {
+        "url": "https://www.bulletpicker.com/pdf/complete-round-charts-miscellaneous-1961.pdf"
+      },
+      "limitationsEs": [
+        "Referencia histórica de la versión AN-M65A1 cargada con TNT. La clase 1,000 libras es nominal del artefacto completo; la carga principal documentada es 555 libras de TNT (251.74376535 kg). La referencia energética se redondea a tres decimales de tonelada. No es una equivalencia universal de cualquier bomba de esa clase ni compara variantes con otros rellenos. No añade un modelo de daños."
+      ],
+      "selection": {
+        "date": "2026-10-25",
+        "scopeEs": "Comparación histórica y conceptual. El usuario aclaró que 200 libras se refería a la clase de 250 libras. No implementa simulaciones ni publica cambios en el portal."
+      },
+      "nominalWeightClassLb": 1000,
+      "calculatedMainFillTNTEquivalentKg": 251.74376535000002,
+      "tableStatus": "removed_by_user",
+      "removal": {
+        "date": "2026-10-25",
+        "userMessage": "estos no son significativas, vamos a eliminarlas",
+        "scopeEs": "Retiradas las tres bombas AN de la tabla de conceptualización. Datos conservados como historial documental."
+      }
+    },
+    {
+      "id": "military-moab-gbu43b-reference",
+      "labelEs": "MOAB (GBU-43/B)",
+      "explosionType": "Militar",
+      "elementEs": "H6",
+      "elementQuantity": {
+        "value": 18000,
+        "unit": "lb",
+        "basis": "explosive_fill_reported_in_usaf_legal_review_2003"
+      },
+      "eventType": "historical_non_nuclear_munition_reference",
+      "valueType": "published_approximate_yield_reference",
+      "displayTNTEquivalentKg": 11000.0,
+      "displayTextEs": "MOAB (GBU-43/B) · 11 toneladas de TNT equivalente",
+      "source": {
+        "url": "https://www.bundesheer.at/pdf_pool/publikationen/01_2022_s_iss_die_usa_-_interessen_und_strategien_web.pdf"
+      },
+      "limitationsEs": [
+        "Referencia publicada de 11 toneladas de TNT. La revisión jurídica USAF del 21 de marzo de 2003 declara 18,000 libras de H6; se conserva esa carga documental, sin confundirla con la masa de la ojiva o de toda la bomba. La cifra de equivalencia y la cantidad de carga proceden de documentos distintos; no se deriva un factor de rendimiento nuevo."
+      ],
+      "selection": {
+        "date": "2026-10-25",
+        "scopeEs": "Comparación histórica y conceptual. El usuario aclaró que 200 libras se refería a la clase de 250 libras. No implementa simulaciones ni publica cambios en el portal."
+      },
+      "materialSource": "https://man.fas.org/dod-101/sys/smart/moab.pdf"
+    },
+    {
+      "id": "military-atbip-foab-reference",
+      "labelEs": "ATBIP (FOAB)",
+      "explosionType": "Militar",
+      "elementEs": "Explosivo termobárico",
+      "elementQuantity": null,
+      "eventType": "reported_non_nuclear_munition_reference",
+      "valueType": "russian_declared_yield_not_independently_verified",
+      "displayTNTEquivalentKg": 44000.0,
+      "displayTextEs": "ATBIP (FOAB) · 44 toneladas de TNT equivalente",
+      "source": {
+        "url": "https://www.oneindia.com/2007/09/12/russia-tests-superstrength-bomb-military-says-1189553541.html"
+      },
+      "limitationsEs": [
+        "44 toneladas de TNT es una declaración rusa de 2007 recogida por Reuters, no una medición independiente verificada. ATBIP es la denominación inglesa difundida para el arma conocida como FOAB. No se especifican composición ni cantidad del explosivo por falta de una documentación verificable del material."
+      ],
+      "selection": {
+        "date": "2026-10-25",
+        "scopeEs": "Comparación histórica y conceptual. El usuario aclaró que 200 libras se refería a la clase de 250 libras. No implementa simulaciones ni publica cambios en el portal."
+      },
+      "corroboratingPublication": "https://www.bundesheer.at/pdf_pool/publikationen/01_2022_s_iss_die_usa_-_interessen_und_strategien_web.pdf",
+      "elementQuantityStatus": "no_unambiguous_verified_fill_quantity_found",
+      "elementQuantityReviewDate": "2026-10-26",
+      "elementQuantityAudit": "cantidades-materiales-2026-10-26.json",
+      "elementQuantityLimitationEs": "Las fuentes revisadas repiten 7,100 kg unas veces como masa del artefacto y otras como carga. El texto original de Channel One accesible solo compara la masa de explosivo con MOAB sin cuantificarla; no se adopta 7,100 kg como carga confirmada. La composición detallada tampoco queda verificada."
+    },
+    {
+      "id": "castle-bravo-1954-energy-reference",
+      "labelEs": "Castle Bravo",
+      "explosionType": "Militar",
+      "elementEs": "Material termonuclear",
+      "elementQuantity": null,
+      "eventDate": "1954-03-01",
+      "country": "Estados Unidos",
+      "eventType": "historical_nuclear_test",
+      "valueType": "published_historical_detonation_yield",
+      "publishedTNTEquivalentMt": 15,
+      "displayTNTEquivalentKg": 15000000000,
+      "displayTextEs": "Castle Bravo · 15,000,000 toneladas de TNT equivalente",
+      "source": {
+        "title": "International Day against Nuclear Tests — History",
+        "institution": "United Nations",
+        "url": "https://www.un.org/en/observances/end-nuclear-tests-day/history"
+      },
+      "limitationsEs": [
+        "Potencia histórica de la detonación Castle Bravo del 1 de marzo de 1954: 15 megatones, equivalentes a 15,000,000 toneladas de TNT. La cifra corresponde al ensayo realizado, no al rendimiento previsto. No se fija una masa del material nuclear sin una fuente verificable de esa cantidad."
+      ],
+      "selection": {
+        "date": "2026-10-25",
+        "userMessage": "vamos entonces a agregar las detonaciones nucleares mas potentes como la castle bravo y la bomba del zar.",
+        "scopeEs": "Referencias históricas en la tabla de conceptualización. Sin simulación de ataques ni cambios publicados en el portal."
+      },
+      "corroboratingSource": "https://www.energy.gov/sites/default/files/DOENTSAtmospheric.pdf",
+      "elementQuantityStatus": "internal_nuclear_load_not_compiled",
+      "elementQuantityReviewDate": "2026-10-26",
+      "elementQuantityAudit": "cantidades-materiales-2026-10-26.json",
+      "elementQuantityLimitationEs": "La tabla conserva la potencia pública del modelo o ensayo. No se recopilan ni reconstruyen cantidades de su carga nuclear interna. Este estado no afirma que una búsqueda haya demostrado que el dato sea secreto o inexistente."
+    },
+    {
+      "id": "tsar-bomba-1961-energy-reference",
+      "labelEs": "Bomba del Zar",
+      "explosionType": "Militar",
+      "elementEs": "Material termonuclear",
+      "elementQuantity": null,
+      "eventDate": "1961-10-30",
+      "country": "Unión Soviética",
+      "eventType": "historical_nuclear_test",
+      "valueType": "published_historical_detonation_yield",
+      "publishedTNTEquivalentMt": 50,
+      "displayTNTEquivalentKg": 50000000000,
+      "displayTextEs": "Bomba del Zar · 50,000,000 toneladas de TNT equivalente",
+      "source": {
+        "title": "International Day against Nuclear Tests — History",
+        "institution": "United Nations",
+        "url": "https://www.un.org/en/observances/end-nuclear-tests-day/history"
+      },
+      "limitationsEs": [
+        "Potencia histórica del ensayo de 1961 según la ONU: 50 megatones, equivalentes a 50,000,000 toneladas de TNT. Se utiliza la referencia de la detonación realizada, no una capacidad de diseño hipotética. No se presenta como un rango ni se fija una masa del material nuclear sin una fuente verificable de esa cantidad."
+      ],
+      "selection": {
+        "date": "2026-10-25",
+        "userMessage": "vamos entonces a agregar las detonaciones nucleares mas potentes como la castle bravo y la bomba del zar.",
+        "scopeEs": "Referencias históricas en la tabla de conceptualización. Sin simulación de ataques ni cambios publicados en el portal."
+      },
+      "elementQuantityStatus": "internal_nuclear_load_not_compiled",
+      "elementQuantityReviewDate": "2026-10-26",
+      "elementQuantityAudit": "cantidades-materiales-2026-10-26.json",
+      "elementQuantityLimitationEs": "La tabla conserva la potencia pública del modelo o ensayo. No se recopilan ni reconstruyen cantidades de su carga nuclear interna. Este estado no afirma que una búsqueda haya demostrado que el dato sea secreto o inexistente."
+    },
+    {
+      "id": "current-us-w76-2-reference",
+      "labelEs": "W76-2 (Estados Unidos)",
+      "country": "Estados Unidos",
+      "explosionType": "Militar",
+      "elementEs": "Material nuclear",
+      "elementQuantity": null,
+      "eventType": "public_estimate_of_current_nuclear_model",
+      "valueType": "estimated_model_maximum_not_absolute_national_extremum",
+      "serviceStatus": "assigned_to_operational_forces_in_fas_2026_assessment",
+      "displayTNTEquivalentKg": 8000000,
+      "displayTextEs": "W76-2 (Estados Unidos) · 8,000 toneladas de TNT equivalente",
+      "publishedYieldKt": 8,
+      "nationalComparisonRole": "lower_quantified_model_maximum",
+      "absoluteNationalExtremumConfirmed": false,
+      "source": {
+        "title": "United States nuclear weapons, 2026",
+        "url": "https://thebulletin.org/premium/2026-03/united-states-nuclear-weapons-2026/",
+        "tableUrl": "https://thebulletin.org/wp-content/uploads/2026/03/rbul_a_2633029_t0001.pdf",
+        "publicationDate": "2026-03-12"
+      },
+      "limitationsEs": [
+        "La selección compara máximos por modelo: B61-12 tiene ajustes de 0.3 a 50 kt y no sustituye la W76-2 de 8 kt como menor máximo por modelo. W88 tiene 455 kt. La B83-1 llega a 1.2 Mt y sigue en el arsenal según los presupuestos DOE, pero FAS estima que ya no está desplegada y está en proceso de retirada; el usuario eligió excluirla y usar la W88 como máximo operativo."
+      ],
+      "selection": {
+        "date": "2026-10-25",
+        "comparison": "maximum_yield_per_model",
+        "scopeEs": "Extremos de los modelos operativos con potencia numérica publicada en FAS 2026; no son extremos nacionales absolutos confirmados. Comparación conceptual, sin modelos de empleo ni cambios en el portal.",
+        "usMaximumUserChoice": "Usar W88: solo modelos operativos"
+      },
+      "elementQuantityStatus": "internal_nuclear_load_not_compiled",
+      "elementQuantityReviewDate": "2026-10-26",
+      "elementQuantityAudit": "cantidades-materiales-2026-10-26.json",
+      "elementQuantityLimitationEs": "La tabla conserva la potencia pública del modelo o ensayo. No se recopilan ni reconstruyen cantidades de su carga nuclear interna. Este estado no afirma que una búsqueda haya demostrado que el dato sea secreto o inexistente."
+    },
+    {
+      "id": "current-ru-53t6-reference",
+      "labelEs": "Ojiva del 53T6 (Rusia)",
+      "country": "Rusia",
+      "explosionType": "Militar",
+      "elementEs": "Material nuclear",
+      "elementQuantity": null,
+      "eventType": "public_estimate_of_current_nuclear_model",
+      "valueType": "estimated_model_maximum_not_absolute_national_extremum",
+      "serviceStatus": "assigned_to_operational_forces_in_fas_2026_assessment",
+      "displayTNTEquivalentKg": 10000000,
+      "displayTextEs": "Ojiva del 53T6 (Rusia) · 10,000 toneladas de TNT equivalente",
+      "publishedYieldKt": 10,
+      "nationalComparisonRole": "lower_quantified_model_maximum",
+      "absoluteNationalExtremumConfirmed": false,
+      "source": {
+        "title": "Russian nuclear weapons, 2026",
+        "url": "https://thebulletin.org/premium/2026-05/russian-nuclear-weapons-2026/",
+        "tableUrl": "https://thebulletin.org/wp-content/uploads/2026/05/rbul_a_2659527_t0001-full.pdf",
+        "publicationDate": "2026-05-14"
+      },
+      "limitationsEs": [
+        "La tabla de FAS cuantifica el 53T6 en 10 kt y el Topol-M basado en silo en 800 kt. No publica una potencia numérica para Avangard ni para varias armas tácticas; algunos sistemas defensivos aparecen solo como low. Por ello, no permite confirmar extremos absolutos nacionales. No se suman ojivas MIRV ni se confunde misil y ojiva."
+      ],
+      "selection": {
+        "date": "2026-10-25",
+        "comparison": "maximum_yield_per_model",
+        "scopeEs": "Extremos de los modelos operativos con potencia numérica publicada en FAS 2026; no son extremos nacionales absolutos confirmados. Comparación conceptual, sin modelos de empleo ni cambios en el portal."
+      },
+      "elementQuantityStatus": "internal_nuclear_load_not_compiled",
+      "elementQuantityReviewDate": "2026-10-26",
+      "elementQuantityAudit": "cantidades-materiales-2026-10-26.json",
+      "elementQuantityLimitationEs": "La tabla conserva la potencia pública del modelo o ensayo. No se recopilan ni reconstruyen cantidades de su carga nuclear interna. Este estado no afirma que una búsqueda haya demostrado que el dato sea secreto o inexistente."
+    },
+    {
+      "id": "current-cn-df31a-reference",
+      "labelEs": "Ojiva del DF-31A (China)",
+      "country": "China",
+      "explosionType": "Militar",
+      "elementEs": "Material nuclear",
+      "elementQuantity": null,
+      "eventType": "public_estimate_of_current_nuclear_model",
+      "valueType": "estimated_model_maximum_not_absolute_national_extremum",
+      "serviceStatus": "assigned_to_operational_forces_in_fas_2026_assessment",
+      "displayTNTEquivalentKg": 425000000,
+      "displayTextEs": "Ojiva del DF-31A (China) · 425,000 toneladas de TNT equivalente",
+      "publishedYieldKt": 425,
+      "nationalComparisonRole": "lower_quantified_model_maximum",
+      "absoluteNationalExtremumConfirmed": false,
+      "source": {
+        "title": "Chinese nuclear weapons, 2026",
+        "url": "https://thebulletin.org/premium/2026-07/chinese-nuclear-weapons-2026/",
+        "tableUrl": "https://thebulletin.org/wp-content/uploads/2026/07/rbul_a_2691662_t0001.pdf",
+        "publicationDate": "2026-07-08"
+      },
+      "limitationsEs": [
+        "FAS 2026 estima 425 kt para DF-31A/AG, DF-31B, DF-41 y JL-3, y 4.5 Mt para DF-5A. DF-5C aparece como multi-MT, sin potencia numérica precisa y en introducción, y el artículo menciona el desarrollo de armas menores de 10 kt sin acreditar un modelo operativo cuantificado. No se puede confirmar un mínimo o máximo nacional absoluto; 425 kt y 4.5 Mt son extremos de los modelos operativos con cifra publicada en esta revisión."
+      ],
+      "selection": {
+        "date": "2026-10-25",
+        "comparison": "maximum_yield_per_model",
+        "scopeEs": "Extremos de los modelos operativos con potencia numérica publicada en FAS 2026; no son extremos nacionales absolutos confirmados. Comparación conceptual, sin modelos de empleo ni cambios en el portal."
+      },
+      "elementQuantityStatus": "internal_nuclear_load_not_compiled",
+      "elementQuantityReviewDate": "2026-10-26",
+      "elementQuantityAudit": "cantidades-materiales-2026-10-26.json",
+      "elementQuantityLimitationEs": "La tabla conserva la potencia pública del modelo o ensayo. No se recopilan ni reconstruyen cantidades de su carga nuclear interna. Este estado no afirma que una búsqueda haya demostrado que el dato sea secreto o inexistente."
+    },
+    {
+      "id": "current-us-w88-reference",
+      "labelEs": "W88 (Estados Unidos)",
+      "country": "Estados Unidos",
+      "explosionType": "Militar",
+      "elementEs": "Material nuclear",
+      "elementQuantity": null,
+      "eventType": "public_estimate_of_current_nuclear_model",
+      "valueType": "estimated_model_maximum_not_absolute_national_extremum",
+      "serviceStatus": "assigned_to_operational_forces_in_fas_2026_assessment",
+      "displayTNTEquivalentKg": 455000000,
+      "displayTextEs": "W88 (Estados Unidos) · 455,000 toneladas de TNT equivalente",
+      "publishedYieldKt": 455,
+      "nationalComparisonRole": "upper_quantified_operational_model_maximum",
+      "absoluteNationalExtremumConfirmed": false,
+      "source": {
+        "title": "United States nuclear weapons, 2026",
+        "url": "https://thebulletin.org/premium/2026-03/united-states-nuclear-weapons-2026/",
+        "tableUrl": "https://thebulletin.org/wp-content/uploads/2026/03/rbul_a_2633029_t0001.pdf",
+        "publicationDate": "2026-03-12"
+      },
+      "limitationsEs": [
+        "La selección compara máximos por modelo: B61-12 tiene ajustes de 0.3 a 50 kt y no sustituye la W76-2 de 8 kt como menor máximo por modelo. W88 tiene 455 kt. La B83-1 llega a 1.2 Mt y sigue en el arsenal según los presupuestos DOE, pero FAS estima que ya no está desplegada y está en proceso de retirada; el usuario eligió excluirla y usar la W88 como máximo operativo."
+      ],
+      "selection": {
+        "date": "2026-10-25",
+        "comparison": "maximum_yield_per_model",
+        "scopeEs": "Extremos de los modelos operativos con potencia numérica publicada en FAS 2026; no son extremos nacionales absolutos confirmados. Comparación conceptual, sin modelos de empleo ni cambios en el portal.",
+        "usMaximumUserChoice": "Usar W88: solo modelos operativos"
+      },
+      "elementQuantityStatus": "internal_nuclear_load_not_compiled",
+      "elementQuantityReviewDate": "2026-10-26",
+      "elementQuantityAudit": "cantidades-materiales-2026-10-26.json",
+      "elementQuantityLimitationEs": "La tabla conserva la potencia pública del modelo o ensayo. No se recopilan ni reconstruyen cantidades de su carga nuclear interna. Este estado no afirma que una búsqueda haya demostrado que el dato sea secreto o inexistente."
+    },
+    {
+      "id": "current-ru-topolm-reference",
+      "labelEs": "Ojiva del Topol-M (Rusia)",
+      "country": "Rusia",
+      "explosionType": "Militar",
+      "elementEs": "Material nuclear",
+      "elementQuantity": null,
+      "eventType": "public_estimate_of_current_nuclear_model",
+      "valueType": "estimated_model_maximum_not_absolute_national_extremum",
+      "serviceStatus": "assigned_to_operational_forces_in_fas_2026_assessment",
+      "displayTNTEquivalentKg": 800000000,
+      "displayTextEs": "Ojiva del Topol-M (Rusia) · 800,000 toneladas de TNT equivalente",
+      "publishedYieldKt": 800,
+      "nationalComparisonRole": "upper_quantified_model_maximum",
+      "absoluteNationalExtremumConfirmed": false,
+      "source": {
+        "title": "Russian nuclear weapons, 2026",
+        "url": "https://thebulletin.org/premium/2026-05/russian-nuclear-weapons-2026/",
+        "tableUrl": "https://thebulletin.org/wp-content/uploads/2026/05/rbul_a_2659527_t0001-full.pdf",
+        "publicationDate": "2026-05-14"
+      },
+      "limitationsEs": [
+        "La tabla de FAS cuantifica el 53T6 en 10 kt y el Topol-M basado en silo en 800 kt. No publica una potencia numérica para Avangard ni para varias armas tácticas; algunos sistemas defensivos aparecen solo como low. Por ello, no permite confirmar extremos absolutos nacionales. No se suman ojivas MIRV ni se confunde misil y ojiva."
+      ],
+      "selection": {
+        "date": "2026-10-25",
+        "comparison": "maximum_yield_per_model",
+        "scopeEs": "Extremos de los modelos operativos con potencia numérica publicada en FAS 2026; no son extremos nacionales absolutos confirmados. Comparación conceptual, sin modelos de empleo ni cambios en el portal."
+      },
+      "elementQuantityStatus": "internal_nuclear_load_not_compiled",
+      "elementQuantityReviewDate": "2026-10-26",
+      "elementQuantityAudit": "cantidades-materiales-2026-10-26.json",
+      "elementQuantityLimitationEs": "La tabla conserva la potencia pública del modelo o ensayo. No se recopilan ni reconstruyen cantidades de su carga nuclear interna. Este estado no afirma que una búsqueda haya demostrado que el dato sea secreto o inexistente."
+    },
+    {
+      "id": "current-cn-df5a-reference",
+      "labelEs": "Ojiva del DF-5A (China)",
+      "country": "China",
+      "explosionType": "Militar",
+      "elementEs": "Material nuclear",
+      "elementQuantity": null,
+      "eventType": "public_estimate_of_current_nuclear_model",
+      "valueType": "estimated_model_maximum_not_absolute_national_extremum",
+      "serviceStatus": "assigned_to_operational_forces_in_fas_2026_assessment",
+      "displayTNTEquivalentKg": 4500000000,
+      "displayTextEs": "Ojiva del DF-5A (China) · 4,500,000 toneladas de TNT equivalente",
+      "publishedYieldKt": 4500,
+      "nationalComparisonRole": "upper_quantified_model_maximum",
+      "absoluteNationalExtremumConfirmed": false,
+      "source": {
+        "title": "Chinese nuclear weapons, 2026",
+        "url": "https://thebulletin.org/premium/2026-07/chinese-nuclear-weapons-2026/",
+        "tableUrl": "https://thebulletin.org/wp-content/uploads/2026/07/rbul_a_2691662_t0001.pdf",
+        "publicationDate": "2026-07-08"
+      },
+      "limitationsEs": [
+        "FAS 2026 estima 425 kt para DF-31A/AG, DF-31B, DF-41 y JL-3, y 4.5 Mt para DF-5A. DF-5C aparece como multi-MT, sin potencia numérica precisa y en introducción, y el artículo menciona el desarrollo de armas menores de 10 kt sin acreditar un modelo operativo cuantificado. No se puede confirmar un mínimo o máximo nacional absoluto; 425 kt y 4.5 Mt son extremos de los modelos operativos con cifra publicada en esta revisión."
+      ],
+      "selection": {
+        "date": "2026-10-25",
+        "comparison": "maximum_yield_per_model",
+        "scopeEs": "Extremos de los modelos operativos con potencia numérica publicada en FAS 2026; no son extremos nacionales absolutos confirmados. Comparación conceptual, sin modelos de empleo ni cambios en el portal."
+      },
+      "elementQuantityStatus": "internal_nuclear_load_not_compiled",
+      "elementQuantityReviewDate": "2026-10-26",
+      "elementQuantityAudit": "cantidades-materiales-2026-10-26.json",
+      "elementQuantityLimitationEs": "La tabla conserva la potencia pública del modelo o ensayo. No se recopilan ni reconstruyen cantidades de su carga nuclear interna. Este estado no afirma que una búsqueda haya demostrado que el dato sea secreto o inexistente."
+    },
+    {
+      "id": "chicxulub-kpg-impact-energy-reference",
+      "labelEs": "Chicxulub",
+      "explosionType": "Natural",
+      "elementEs": "Asteroide",
+      "elementQuantity": {
+        "value": 15,
+        "unit": "km",
+        "qualifier": "(diámetro)",
+        "approximate": true,
+        "basis": "upper_endpoint_of_published_impactor_diameter_range_not_mass"
+      },
+      "elementQuantityRange": {
+        "min": 10,
+        "max": 15,
+        "unit": "km",
+        "quantity": "impactor_diameter"
+      },
+      "eventType": "natural_asteroid_surface_impact",
+      "valueType": "published_approximate_total_impact_energy_reference",
+      "displayTNTEquivalentKg": 100000000000000000,
+      "displayTNTEquivalentTonnes": 100000000000000,
+      "displayTextEs": "Chicxulub · 100,000,000,000,000 toneladas de TNT equivalente",
+      "source": {
+        "title": "International Consensus — Link Between Asteroid Impact and Mass Extinction Is Rock Solid",
+        "publisher": "Lunar and Planetary Institute",
+        "url": "https://www.lpi.usra.edu/features/chicxulub/",
+        "publicationDate": "2010-03-04",
+        "energyLocator": "Párrafo que describe el cráter y la equivalencia de 100 trillion tons de TNT.",
+        "sizeLocator": "Párrafo siguiente: diámetro del objeto de 10 a 15 km."
+      },
+      "corroboratingEnergySource": {
+        "title": "Microbial Sulfur Isotope Fractionation in the Chicxulub Hydrothermal System",
+        "url": "https://journals.sagepub.com/doi/full/10.1089/ast.2020.2286",
+        "year": 2021,
+        "locator": "Discusión: energía cinética de unos 100 millones de megatones."
+      },
+      "ageSource": "https://www.nature.com/articles/s41467-020-15269-x",
+      "limitationsEs": [
+        "Referencia divulgativa del Lunar and Planetary Institute: 100 trillion tons de TNT, interpretadas en la escala científica de equivalencia TNT como 100,000,000,000,000 toneladas. Es una estimación puntual aproximada de energía del impacto, no un extremo superior universal de todas las publicaciones. La fuente da un diámetro de 10 a 15 km; se muestra 15 km y se conserva el intervalo. La cantidad visible expresa diámetro, no masa ni combustible. No se confunde el material terrestre excavado con la masa del asteroide. El impacto asociado a la extinción de los dinosaurios no avianos ocurrió hace unos 66 millones de años."
+      ],
+      "selection": {
+        "date": "2026-10-26",
+        "scopeEs": "Nueva referencia natural solicitada por el usuario; se mantiene la cifra puntual LPI sin convertirla en máximo científico absoluto. No modifica referencias anteriores ni el portal."
+      }
+    },
+    {
+      "id": "current-ru-avangard-reported-reference",
+      "labelEs": "Avangard (Rusia)",
+      "country": "Rusia",
+      "explosionType": "Militar",
+      "elementEs": "Material nuclear",
+      "elementQuantity": null,
+      "elementQuantityStatus": "internal_nuclear_load_not_compiled",
+      "eventType": "public_report_of_current_nuclear_model",
+      "valueType": "unconfirmed_reported_lower_threshold_not_exact_yield",
+      "displayTNTEquivalentKg": 2000000000,
+      "displayTNTEquivalentTonnes": 2000000,
+      "referenceBound": {
+        "type": "strict_lower",
+        "grams": "2000000000000",
+        "upper": null,
+        "officiallyConfirmed": false
+      },
+      "source": {
+        "title": "TASS: fuente sobre los primeros portadores de Avangard",
+        "url": "https://tass.ru/armiya-i-opk/5047200",
+        "publicationDate": "2018-03-20",
+        "locatorEs": "Declaración de la fuente anónima: más de 2 megatones. Advertencia posterior de TASS: sin confirmación oficial."
+      },
+      "serviceStatusSource": "https://thebulletin.org/premium/2026-05/russian-nuclear-weapons-2026/",
+      "limitationsEs": [
+        "Avangard: la referencia numérica de 2,000,000 toneladas de TNT representa el umbral citado en un reporte de TASS de 2018, cuya fuente anónima afirma una potencia superior a ese valor. TASS declara no disponer de confirmación oficial. No es una potencia exacta, un máximo conocido ni una estimación numérica de FAS. FAS 2026 sí incluye el sistema entre las fuerzas desplegadas, pero deja su potencia sin cuantificar."
+      ],
+      "selection": {
+        "date": "2026-10-26",
+        "userMessage": "vamos a incluir el Avangard",
+        "scopeEs": "Referencia conceptual adicional con umbral no confirmado; no sustituye la comparación de máximos cuantificados FAS ni aprueba un sprint."
+      }
+    }
+  ],
+  "models": {
+    "propane-vapor-cloud-illustration-10pct": {
+      "id": "propane-vapor-cloud-illustration-10pct",
+      "type": "illustrative_energy_calculation_not_validated_domestic_prediction",
+      "assumptionsEs": [
+        "Propano puro como referencia, no mezcla de GLP certificada.",
+        "Masa nominal completa de combustible; excluye la tara del recipiente.",
+        "Toda la carga liberada forma parte de una nube combustible hipotética.",
+        "Factor energético supuesto del 10 %, tomado de la hipótesis industrial de la guía EPA."
+      ],
+      "kgPerPound": 0.45359237,
+      "propaneNetMJPerKg": 46.32412304175474,
+      "yieldFactor": 0.1,
+      "conventionalTNTMJPerKg": 4.184,
+      "formula": "fuelMassLb * kgPerPound * propaneNetMJPerKg * yieldFactor / conventionalTNTMJPerKg",
+      "roundingEs": "Redondeo a kilogramos enteros de TNT equivalente; gramos derivados del valor mostrado.",
+      "sources": {
+        "yieldAssumption": "https://www.epa.gov/sites/default/files/2013-11/documents/oca-chps.pdf",
+        "yieldLocation": "Chapter 5, printed page 5-1, PDF page 55",
+        "heatOfCombustion": "https://doi.org/10.6028/NIST.TN.2126",
+        "conventionalTNTUnit": "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication811e1991.pdf"
+      },
+      "limitationsEs": [
+        "No es una medición de un accidente de cilindro ni un modelo validado para viviendas.",
+        "No describe por sí solo ruptura mecánica, BLEVE, incendio ni fragmentos.",
+        "Usa la unidad energética convencional de 4,184 MJ/kg de TNT; no reproduce el cálculo de distancias de la EPA, que emplea 4,680 MJ/kg.",
+        "El 10 % no es un rendimiento universal ni un máximo físico absoluto; no se calculan daños ni radios."
+      ]
+    }
+  },
+  "presentation": {
+    "referenceUnit": "tonnes_TNT_equivalent",
+    "columnLabelEs": "Referencia · toneladas de TNT",
+    "sourceQuantity": "displayTNTEquivalentKg",
+    "sourceDivisor": 1000,
+    "changeDate": "2026-10-22",
+    "userMessage": "entonces hay que expresar las explosiones en toneladas cuando te las pidas asi no me confundo",
+    "scopeEs": "Cantidades completas en toneladas de TNT; sin M. Se conservan las energías y cantidades de combustible anteriores. Se añaden únicamente los tres eventos naturales solicitados.",
+    "rangePolicy": "maximum",
+    "showApproximationSymbol": false,
+    "rangePolicyDate": "2026-10-25"
+  },
+  "presentationHistory": [
+    {
+      "referenceUnit": "kg_TNT_equivalent",
+      "columnLabelEs": "Referencia · kg de TNT",
+      "sourceQuantity": "displayTNTEquivalentKg",
+      "sourceDivisor": 1,
+      "changeDate": "2026-10-21",
+      "userMessage": "podemos dejar entonces 0.5 M y 1.2 M",
+      "scopeEs": "M significa millones de kg de TNT, no megatones. Referencias aproximadas elegidas por el usuario: Tianjin 500,000 kg y Beirut 1,200,000 kg.",
+      "compactNotation": {
+        "compactThresholdKg": 100000,
+        "millionKgDivisor": 1000000,
+        "millionSuffix": " M"
+      }
+    }
+  ],
+  "materialQuantityReview": {
+    "date": "2026-10-26",
+    "audit": "../fuentes/cantidades-materiales-2026-10-26.json",
+    "newlyQuantifiedRows": [
+      "tianjin-port-2015-main-explosion",
+      "tunguska-1908-energy-reference",
+      "hunga-tonga-2022-energy-reference",
+      "krakatoa-1883-energy-reference"
+    ],
+    "unresolvedDocumentaryRows": [
+      "tanque-compresor",
+      "military-atbip-foab-reference"
+    ],
+    "nuclearInternalLoadRowsNotCompiled": [
+      "current-us-w76-2-reference",
+      "current-ru-53t6-reference",
+      "current-cn-df31a-reference",
+      "current-us-w88-reference",
+      "current-ru-topolm-reference",
+      "current-cn-df5a-reference",
+      "castle-bravo-1954-energy-reference",
+      "tsar-bomba-1961-energy-reference"
+    ],
+    "allQuantitiesDetermined": false,
+    "energyReferencesChanged": false,
+    "scopeEs": "Investigación de cantidades y presentación del documento conceptual; no modifica el portal, no aprueba ni cierra un sprint."
+  }
+}

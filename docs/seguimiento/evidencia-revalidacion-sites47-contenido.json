@@ -1,0 +1,346 @@
+{
+  "location": [
+    {
+      "country": "country-DE",
+      "label": "Alemania",
+      "lang": "es",
+      "point": "{\"lng\":9.678348,\"lat\":50.961733}"
+    },
+    {
+      "country": "country-DE",
+      "label": "Germany",
+      "lang": "en",
+      "point": "{\"lng\":9.678348,\"lat\":50.961733}"
+    },
+    {
+      "country": "country-DE",
+      "label": "德国",
+      "lang": "zh-Hans",
+      "point": "{\"lng\":9.678348,\"lat\":50.961733}"
+    },
+    {
+      "country": "country-DE",
+      "label": "जर्मनी",
+      "lang": "hi",
+      "point": "{\"lng\":9.678348,\"lat\":50.961733}"
+    },
+    {
+      "country": "country-DE",
+      "label": "ألمانيا",
+      "lang": "ar",
+      "point": "{\"lng\":9.678348,\"lat\":50.961733}"
+    },
+    {
+      "country": "country-DE",
+      "label": "Allemagne",
+      "lang": "fr",
+      "point": "{\"lng\":9.678348,\"lat\":50.961733}"
+    },
+    {
+      "country": "country-DE",
+      "label": "জার্মানি",
+      "lang": "bn",
+      "point": "{\"lng\":9.678348,\"lat\":50.961733}"
+    },
+    {
+      "country": "country-DE",
+      "label": "Alemanha",
+      "lang": "pt",
+      "point": "{\"lng\":9.678348,\"lat\":50.961733}"
+    },
+    {
+      "country": "country-DE",
+      "label": "Германия",
+      "lang": "ru",
+      "point": "{\"lng\":9.678348,\"lat\":50.961733}"
+    },
+    {
+      "country": "country-DE",
+      "label": "Jerman",
+      "lang": "id",
+      "point": "{\"lng\":9.678348,\"lat\":50.961733}"
+    },
+    {
+      "country": "country-DE",
+      "label": "جرمنی",
+      "lang": "ur",
+      "point": "{\"lng\":9.678348,\"lat\":50.961733}"
+    },
+    {
+      "country": "country-DE",
+      "label": "Deutschland",
+      "lang": "de",
+      "point": "{\"lng\":9.678348,\"lat\":50.961733}"
+    },
+    {
+      "country": "country-DE",
+      "label": "ドイツ",
+      "lang": "ja",
+      "point": "{\"lng\":9.678348,\"lat\":50.961733}"
+    },
+    {
+      "country": "country-DE",
+      "label": "जर्मनी",
+      "lang": "mr",
+      "point": "{\"lng\":9.678348,\"lat\":50.961733}"
+    },
+    {
+      "country": "country-DE",
+      "label": "Đức",
+      "lang": "vi",
+      "point": "{\"lng\":9.678348,\"lat\":50.961733}"
+    },
+    {
+      "country": "country-DE",
+      "label": "జర్మనీ",
+      "lang": "te",
+      "point": "{\"lng\":9.678348,\"lat\":50.961733}"
+    },
+    {
+      "country": "country-DE",
+      "label": "Ujerumani",
+      "lang": "sw",
+      "point": "{\"lng\":9.678348,\"lat\":50.961733}"
+    },
+    {
+      "country": "country-DE",
+      "label": "Jamus",
+      "lang": "ha-Latn",
+      "point": "{\"lng\":9.678348,\"lat\":50.961733}"
+    },
+    {
+      "country": "country-DE",
+      "label": "Almanya",
+      "lang": "tr",
+      "point": "{\"lng\":9.678348,\"lat\":50.961733}"
+    },
+    {
+      "country": "country-DE",
+      "label": "جرمنی",
+      "lang": "pnb-Arab",
+      "point": "{\"lng\":9.678348,\"lat\":50.961733}"
+    }
+  ],
+  "disclaimer": [
+    {
+      "lang": "es",
+      "paragraphs": [
+        "Mapa Táctico permite consultar cartografía e información de contexto. Los datos geográficos pueden ser incompletos o estar desactualizados. La escala visual no equivale a precisión del dato.",
+        "La información histórica conserva sus fuentes. Una cifra de población en un área no constituye una predicción de heridos ni fallecidos. El portal no sustituye avisos oficiales ni decisiones de emergencia.",
+        "La consulta de acontecimientos militares y nucleares se limita a información histórica y humanitaria. El portal no calcula ataques sobre ubicaciones reales.",
+        "Cartografía: OpenFreeMap, OpenMapTiles, OpenStreetMap y sus colaboradores. Las consultas cartográficas transmiten las teselas necesarias para la vista.",
+        "El buscador utiliza un catálogo alojado en Sites. La aplicación no almacena perfiles ni consultas individuales; la cuota utiliza un contador global. Sites y los proveedores cartográficos tratan los datos técnicos de sus peticiones según sus políticas."
+      ],
+      "point": "{\"lng\":9.678348,\"lat\":50.961733}"
+    },
+    {
+      "lang": "en",
+      "paragraphs": [
+        "Mapa Táctico provides maps and contextual information. Geographic data may be incomplete or outdated. Visual scale does not establish data accuracy.",
+        "Historical information retains its sources. An area's population count is not a prediction of injuries or deaths. The portal does not replace official warnings or emergency decisions.",
+        "Military and nuclear events are covered through historical and humanitarian information. The portal does not calculate attacks on real locations.",
+        "Cartography: OpenFreeMap, OpenMapTiles, OpenStreetMap and its contributors. Map queries transmit the tiles required for the current view.",
+        "The search uses a catalogue hosted on Sites. The application does not store profiles or individual queries; its quota uses a global counter. Sites and map providers process technical request data according to their policies."
+      ],
+      "point": "{\"lng\":9.678348,\"lat\":50.961733}"
+    },
+    {
+      "lang": "zh-Hans",
+      "paragraphs": [
+        "Mapa Táctico 可用于查阅地图和背景信息。地理数据可能不完整或已过时。显示比例尺不代表数据精度。",
+        "历史信息保留其来源。某区域的人口数量不能作为受伤或死亡人数的预测。本网站不能替代官方通告或应急决策。",
+        "对军事和核事件的查询仅限历史与人道主义信息。本网站不计算针对真实地点的攻击。",
+        "地图数据: OpenFreeMap, OpenMapTiles, OpenStreetMap 及其贡献者. 地图查询会传输当前视图所需的地图瓦片。",
+        "搜索功能使用托管在 Sites 上的目录。应用不存储个人档案或单次查询；搜索限额使用全局计数器。Sites 和地图数据提供方按各自政策处理请求中的技术数据。"
+      ],
+      "point": "{\"lng\":9.678348,\"lat\":50.961733}"
+    },
+    {
+      "lang": "hi",
+      "paragraphs": [
+        "Mapa Táctico पर मानचित्र और संदर्भ जानकारी देखी जा सकती है। भौगोलिक डेटा अधूरा या पुराना हो सकता है। दिखने वाला पैमाना डेटा की सटीकता नहीं दर्शाता।",
+        "ऐतिहासिक जानकारी के स्रोत सुरक्षित रखे जाते हैं। किसी क्षेत्र की आबादी की संख्या घायल या मृत लोगों की भविष्यवाणी नहीं है। यह पोर्टल आधिकारिक चेतावनियों या आपातकालीन निर्णयों का विकल्प नहीं है।",
+        "सैन्य और परमाणु घटनाओं की जानकारी ऐतिहासिक और मानवीय संदर्भ तक सीमित है। पोर्टल वास्तविक स्थानों पर हमलों की गणना नहीं करता।",
+        "मानचित्रण: OpenFreeMap, OpenMapTiles, OpenStreetMap और उसके योगदानकर्ता. मानचित्र अनुरोधों में मौजूदा दृश्य के लिए आवश्यक मानचित्र टाइलें भेजी जाती हैं।",
+        "खोज सुविधा Sites पर रखी गई सूची का उपयोग करती है। ऐप व्यक्तिगत प्रोफ़ाइल या अलग-अलग खोजों को संग्रहीत नहीं करता; सीमा के लिए एक वैश्विक काउंटर इस्तेमाल होता है। Sites और मानचित्र प्रदाता अपने अनुरोधों के तकनीकी डेटा को अपनी नीतियों के अनुसार संभालते हैं।"
+      ],
+      "point": "{\"lng\":9.678348,\"lat\":50.961733}"
+    },
+    {
+      "lang": "ar",
+      "paragraphs": [
+        "يتيح Mapa Táctico الاطّلاع على الخرائط ومعلومات السياق. قد تكون البيانات الجغرافية ناقصة أو غير محدّثة. لا يعني المقياس المرئي أن البيانات تتمتع بالدقة نفسها.",
+        "تحتفظ المعلومات التاريخية بمصادرها. لا يمثل عدد السكان في منطقة توقعًا لأعداد الجرحى أو الوفيات. لا يحل الموقع محل التنبيهات الرسمية أو القرارات المتعلقة بالطوارئ.",
+        "تقتصر استعراضات الأحداث العسكرية والنووية على المعلومات التاريخية والإنسانية. لا يحسب الموقع نتائج هجمات على مواقع حقيقية.",
+        "بيانات الخرائط: OpenFreeMap, OpenMapTiles, OpenStreetMap والمساهمون فيه. تنقل طلبات الخرائط البلاطات اللازمة للعرض.",
+        "يستخدم محرك البحث فهرسًا مستضافًا على Sites. لا يخزن التطبيق ملفات شخصية أو استعلامات فردية؛ وتستخدم حصة البحث عدادًا عامًا. تعالج Sites ومزوّدو الخرائط البيانات التقنية للطلبات وفقًا لسياساتهم."
+      ],
+      "point": "{\"lng\":9.678348,\"lat\":50.961733}"
+    },
+    {
+      "lang": "fr",
+      "paragraphs": [
+        "Mapa Táctico permet de consulter des cartes et des informations de contexte. Les données géographiques peuvent être incomplètes ou obsolètes. L’échelle visuelle ne correspond pas à la précision des données.",
+        "Les informations historiques conservent leurs sources. Un nombre d’habitants dans une zone ne constitue pas une prévision de blessés ou de décès. Le portail ne remplace ni les alertes officielles ni les décisions d’urgence.",
+        "La consultation d’événements militaires et nucléaires se limite aux informations historiques et humanitaires. Le portail ne calcule pas d’attaques sur des emplacements réels.",
+        "Cartographie: OpenFreeMap, OpenMapTiles, OpenStreetMap et ses contributeurs. Les requêtes cartographiques transmettent les tuiles nécessaires à la vue.",
+        "La recherche utilise un catalogue hébergé sur Sites. L’application ne stocke ni profils ni recherches individuelles ; le quota utilise un compteur global. Sites et les fournisseurs cartographiques traitent les données techniques de leurs requêtes conformément à leurs politiques."
+      ],
+      "point": "{\"lng\":9.678348,\"lat\":50.961733}"
+    },
+    {
+      "lang": "bn",
+      "paragraphs": [
+        "Mapa Táctico-তে মানচিত্র ও প্রাসঙ্গিক তথ্য দেখা যায়। ভৌগোলিক তথ্য অসম্পূর্ণ বা পুরোনো হতে পারে। দৃশ্যমান স্কেল তথ্যের নির্ভুলতা নির্দেশ করে না।",
+        "ঐতিহাসিক তথ্যের উৎস রাখা হয়। কোনো এলাকার জনসংখ্যা আহত বা মৃতের সংখ্যার পূর্বাভাস নয়। এই পোর্টাল সরকারি সতর্কতা বা জরুরি সিদ্ধান্তের বিকল্প নয়।",
+        "সামরিক ও পারমাণবিক ঘটনা সংক্রান্ত তথ্য ঐতিহাসিক ও মানবিক প্রেক্ষাপটে সীমাবদ্ধ। পোর্টাল বাস্তব স্থানের ওপর আক্রমণের হিসাব করে না।",
+        "মানচিত্রায়ন: OpenFreeMap, OpenMapTiles, OpenStreetMap ও এর অবদানকারীরা. মানচিত্রের অনুরোধে বর্তমান দৃশ্যের জন্য প্রয়োজনীয় মানচিত্র টাইল পাঠানো হয়।",
+        "অনুসন্ধানে Sites-এ রাখা একটি তালিকা ব্যবহার করা হয়। অ্যাপ ব্যক্তিগত প্রোফাইল বা আলাদা অনুসন্ধান সংরক্ষণ করে না; সীমা নির্ধারণে একটি বৈশ্বিক কাউন্টার ব্যবহৃত হয়। Sites ও মানচিত্র প্রদানকারীরা অনুরোধের প্রযুক্তিগত তথ্য তাদের নিজস্ব নীতি অনুযায়ী প্রক্রিয়া করে।"
+      ],
+      "point": "{\"lng\":9.678348,\"lat\":50.961733}"
+    },
+    {
+      "lang": "pt",
+      "paragraphs": [
+        "Mapa Táctico permite consultar mapas e informações de contexto. Os dados geográficos podem estar incompletos ou desatualizados. A escala visual não equivale à precisão dos dados.",
+        "As informações históricas mantêm suas fontes. Um número de habitantes em uma área não constitui uma previsão de feridos ou mortos. O portal não substitui alertas oficiais nem decisões de emergência.",
+        "A consulta de acontecimentos militares e nucleares limita-se a informações históricas e humanitárias. O portal não calcula ataques em localizações reais.",
+        "Cartografia: OpenFreeMap, OpenMapTiles, OpenStreetMap e seus colaboradores. As consultas cartográficas transmitem os blocos de mapa necessários à visualização.",
+        "O buscador usa um catálogo hospedado no Sites. A aplicação não armazena perfis nem consultas individuais; a cota usa um contador global. O Sites e os fornecedores cartográficos tratam os dados técnicos de suas requisições conforme suas políticas."
+      ],
+      "point": "{\"lng\":9.678348,\"lat\":50.961733}"
+    },
+    {
+      "lang": "ru",
+      "paragraphs": [
+        "Mapa Táctico позволяет просматривать карты и сопроводительные сведения. Географические данные могут быть неполными или устаревшими. Масштаб отображения не означает соответствующей точности данных.",
+        "Исторические сведения сохраняют ссылки на источники. Численность населения в районе не является прогнозом числа раненых или погибших. Портал не заменяет официальные предупреждения или решения в чрезвычайных ситуациях.",
+        "Сведения о военных и ядерных событиях ограничиваются исторической и гуманитарной информацией. Портал не рассчитывает атаки на реальные места.",
+        "Картография: OpenFreeMap, OpenMapTiles, OpenStreetMap и его участники. Картографические запросы передают фрагменты карты, необходимые для отображения.",
+        "Поиск использует каталог, размещённый на Sites. Приложение не сохраняет профили или отдельные запросы; для лимита используется общий счётчик. Sites и поставщики картографических данных обрабатывают технические данные запросов согласно своим правилам."
+      ],
+      "point": "{\"lng\":9.678348,\"lat\":50.961733}"
+    },
+    {
+      "lang": "id",
+      "paragraphs": [
+        "Mapa Táctico memungkinkan Anda mengakses peta dan informasi latar belakang. Data geografis mungkin tidak lengkap atau sudah kedaluwarsa. Skala visual tidak menunjukkan tingkat ketelitian data.",
+        "Informasi sejarah tetap menyertakan sumbernya. Jumlah penduduk di suatu wilayah bukanlah prediksi jumlah orang yang terluka atau meninggal. Portal ini tidak menggantikan peringatan resmi ataupun keputusan dalam keadaan darurat.",
+        "Informasi tentang peristiwa militer dan nuklir terbatas pada konteks sejarah dan kemanusiaan. Portal ini tidak menghitung serangan terhadap lokasi nyata.",
+        "Kartografi: OpenFreeMap, OpenMapTiles, OpenStreetMap dan para kontributornya. Permintaan peta mentransmisikan ubin peta yang diperlukan untuk tampilan.",
+        "Pencarian menggunakan katalog yang dihosting di Sites. Aplikasi tidak menyimpan profil atau pencarian individual; kuota menggunakan penghitung global. Sites dan penyedia peta memproses data teknis permintaan sesuai kebijakan masing-masing."
+      ],
+      "point": "{\"lng\":9.678348,\"lat\":50.961733}"
+    },
+    {
+      "lang": "ur",
+      "paragraphs": [
+        "Mapa Táctico نقشوں اور سیاق و سباق کی معلومات دیکھنے کی سہولت دیتا ہے۔ جغرافیائی معلومات نامکمل یا پرانی ہو سکتی ہیں۔ نظر آنے والا پیمانہ معلومات کی درستگی کے برابر نہیں ہے۔",
+        "تاریخی معلومات کے ماخذ برقرار رکھے جاتے ہیں۔ کسی علاقے کی آبادی کی تعداد زخمیوں یا اموات کی پیش گوئی نہیں ہے۔ یہ پورٹل سرکاری انتباہات یا ہنگامی فیصلوں کا متبادل نہیں۔",
+        "عسکری اور جوہری واقعات کی معلومات تاریخی اور انسانی پہلوؤں تک محدود ہیں۔ پورٹل حقیقی مقامات پر حملوں کے نتائج کا حساب نہیں لگاتا۔",
+        "نقشہ سازی: OpenFreeMap, OpenMapTiles, OpenStreetMap اور اس کے معاونین. نقشے کی درخواستیں منظر کے لیے ضروری نقشے کی ٹائلیں منتقل کرتی ہیں۔",
+        "تلاش کے لیے Sites پر موجود فہرست استعمال ہوتی ہے۔ ایپ ذاتی پروفائل یا انفرادی تلاشیں محفوظ نہیں کرتی؛ حد کے لیے مشترکہ شمارندہ استعمال ہوتا ہے۔ Sites اور نقشوں کے فراہم کنندگان درخواستوں کے تکنیکی ڈیٹا کو اپنی پالیسیوں کے مطابق سنبھالتے ہیں۔"
+      ],
+      "point": "{\"lng\":9.678348,\"lat\":50.961733}"
+    },
+    {
+      "lang": "de",
+      "paragraphs": [
+        "Mapa Táctico bietet Karten und Hintergrundinformationen. Die geografischen Daten können unvollständig oder veraltet sein. Der sichtbare Maßstab entspricht nicht der Genauigkeit der Daten.",
+        "Historische Informationen behalten ihre Quellenangaben. Die Bevölkerungszahl eines Gebiets ist keine Vorhersage über Verletzte oder Todesopfer. Das Portal ersetzt weder offizielle Warnungen noch Entscheidungen in Notfällen.",
+        "Die Abfrage militärischer und nuklearer Ereignisse beschränkt sich auf historische und humanitäre Informationen. Das Portal berechnet keine Angriffe auf reale Standorte.",
+        "Kartografie: OpenFreeMap, OpenMapTiles, OpenStreetMap und seine Mitwirkenden. Kartenabfragen übertragen die für die Ansicht benötigten Kartenkacheln.",
+        "Die Suche verwendet einen auf Sites gehosteten Katalog. Die Anwendung speichert weder Profile noch individuelle Abfragen; das Kontingent verwendet einen globalen Zähler. Sites und die Kartenanbieter verarbeiten die technischen Daten ihrer Anfragen gemäß ihren Richtlinien."
+      ],
+      "point": "{\"lng\":9.678348,\"lat\":50.961733}"
+    },
+    {
+      "lang": "ja",
+      "paragraphs": [
+        "Mapa Táctico では地図と背景情報を参照できます。地理データは不完全または古い場合があります。表示上の縮尺はデータの精度を示すものではありません。",
+        "歴史情報には出典を保持しています。ある地域の人口は、負傷者数や死亡者数の予測ではありません。本サイトは公式の注意情報や緊急時の判断に代わるものではありません。",
+        "軍事および核関連の出来事の参照は、歴史情報と人道上の情報に限定されます。本サイトは実在の場所への攻撃を計算しません。",
+        "地図データ: OpenFreeMap, OpenMapTiles, OpenStreetMap とその貢献者. 地図の照会では、現在の表示に必要な地図タイルを送受信します。",
+        "検索には Sites に保存されたデータを使用します。アプリは個人のプロフィールや個々の検索内容を保存しません。検索の制限には全体のカウンターを使用します。Sites と地図データの提供元は、それぞれの方針に従ってリクエストの技術データを扱います。"
+      ],
+      "point": "{\"lng\":9.678348,\"lat\":50.961733}"
+    },
+    {
+      "lang": "mr",
+      "paragraphs": [
+        "Mapa Táctico वर नकाशे आणि संदर्भातील माहिती पाहता येते. भौगोलिक डेटा अपूर्ण किंवा जुना असू शकतो. दिसणारे प्रमाण डेटा किती अचूक आहे हे दर्शवत नाही.",
+        "ऐतिहासिक माहितीचे स्रोत कायम ठेवले जातात. एखाद्या क्षेत्रातील लोकसंख्या हा जखमी किंवा मृत व्यक्तींच्या संख्येचा अंदाज नाही. हे पोर्टल अधिकृत सूचना किंवा आपत्कालीन निर्णयांना पर्याय नाही.",
+        "लष्करी आणि अणुविषयक घटनांची माहिती ऐतिहासिक व मानवताविषयक संदर्भांपुरती मर्यादित आहे. पोर्टल वास्तविक ठिकाणांवरील हल्ल्यांची गणना करत नाही.",
+        "नकाशांकन: OpenFreeMap, OpenMapTiles, OpenStreetMap आणि त्याचे योगदानकर्ते. नकाशाच्या विनंत्यांमधून सध्याच्या दृश्यासाठी आवश्यक नकाशा टाइल पाठवल्या जातात.",
+        "शोधासाठी Sites वर ठेवलेली सूची वापरली जाते. ॲप वैयक्तिक प्रोफाइल किंवा स्वतंत्र शोध जतन करत नाही; मर्यादेसाठी एक जागतिक काउंटर वापरला जातो. Sites आणि नकाशा पुरवठादार विनंत्यांमधील तांत्रिक डेटा त्यांच्या धोरणांनुसार हाताळतात."
+      ],
+      "point": "{\"lng\":9.678348,\"lat\":50.961733}"
+    },
+    {
+      "lang": "vi",
+      "paragraphs": [
+        "Mapa Táctico cho phép tra cứu bản đồ và thông tin bối cảnh. Dữ liệu địa lý có thể không đầy đủ hoặc đã lỗi thời. Tỷ lệ hiển thị không tương đương với độ chính xác của dữ liệu.",
+        "Thông tin lịch sử được giữ nguyên nguồn tham khảo. Dân số trong một khu vực không phải là dự đoán số người bị thương hoặc tử vong. Cổng thông tin không thay thế cảnh báo chính thức hay quyết định trong tình huống khẩn cấp.",
+        "Việc tra cứu các sự kiện quân sự và hạt nhân chỉ giới hạn ở thông tin lịch sử và nhân đạo. Cổng thông tin không tính toán các cuộc tấn công vào vị trí có thật.",
+        "Dữ liệu bản đồ: OpenFreeMap, OpenMapTiles, OpenStreetMap và những người đóng góp. Các yêu cầu bản đồ truyền những ô bản đồ cần thiết cho chế độ xem.",
+        "Công cụ tìm kiếm sử dụng danh mục được lưu trữ trên Sites. Ứng dụng không lưu hồ sơ người dùng hay các truy vấn riêng lẻ; hạn mức sử dụng bộ đếm chung. Sites và các nhà cung cấp bản đồ xử lý dữ liệu kỹ thuật của các yêu cầu theo chính sách của họ."
+      ],
+      "point": "{\"lng\":9.678348,\"lat\":50.961733}"
+    },
+    {
+      "lang": "te",
+      "paragraphs": [
+        "Mapa Táctico ద్వారా మ్యాప్‌లు, సందర్భ సమాచారాన్ని చూడవచ్చు. భౌగోళిక డేటా అసంపూర్ణంగా లేదా పాతదిగా ఉండవచ్చు. కనిపించే కొలమానం డేటా ఖచ్చితత్వాన్ని సూచించదు.",
+        "చారిత్రక సమాచారానికి సంబంధించిన మూలాలు అలాగే ఉంచబడతాయి. ఒక ప్రాంతపు జనాభా సంఖ్య గాయపడిన లేదా మరణించిన వారి సంఖ్యకు అంచనా కాదు. ఈ పోర్టల్ అధికారిక హెచ్చరికలు లేదా అత్యవసర నిర్ణయాలకు ప్రత్యామ్నాయం కాదు.",
+        "సైనిక, అణు సంఘటనల సమాచారం చారిత్రక, మానవతా సందర్భాలకు మాత్రమే పరిమితం. ఈ పోర్టల్ వాస్తవ ప్రదేశాలపై దాడులను లెక్కించదు.",
+        "మ్యాప్ సమాచారం: OpenFreeMap, OpenMapTiles, OpenStreetMap మరియు దాని సహకారులు. మ్యాప్ అభ్యర్థనల్లో ప్రస్తుత దృశ్యానికి అవసరమైన మ్యాప్ టైల్స్ పంపబడతాయి.",
+        "శోధన Sites‌లో ఉంచిన జాబితాను ఉపయోగిస్తుంది. యాప్ వ్యక్తిగత ప్రొఫైల్‌లు లేదా విడివిడి శోధనలను నిల్వ చేయదు; పరిమితి కోసం ఒక ప్రపంచవ్యాప్త కౌంటర్ ఉపయోగించబడుతుంది. Sites, మ్యాప్ ప్రదాతలు అభ్యర్థనల సాంకేతిక డేటాను వారి విధానాల ప్రకారం నిర్వహిస్తారు."
+      ],
+      "point": "{\"lng\":9.678348,\"lat\":50.961733}"
+    },
+    {
+      "lang": "sw",
+      "paragraphs": [
+        "Mapa Táctico hukuwezesha kuangalia ramani na taarifa za muktadha. Data za kijiografia zinaweza kuwa pungufu au zimepitwa na wakati. Kipimo cha mwonekano hakimaanishi usahihi wa data.",
+        "Taarifa za kihistoria zinahifadhi vyanzo vyake. Idadi ya watu katika eneo si utabiri wa waliojeruhiwa au waliofariki. Tovuti hii haichukui nafasi ya tahadhari rasmi au maamuzi ya dharura.",
+        "Taarifa kuhusu matukio ya kijeshi na ya nyuklia zimewekewa mipaka ya historia na masuala ya kibinadamu. Tovuti hii haikokotoi mashambulizi kwenye maeneo halisi.",
+        "Uchoraji wa ramani: OpenFreeMap, OpenMapTiles, OpenStreetMap na wachangiaji wake. Maombi ya ramani huhamisha vigae vinavyohitajika kwa mwonekano.",
+        "Utafutaji hutumia orodha inayohifadhiwa kwenye Sites. Programu haihifadhi wasifu wala utafutaji wa mtu mmoja mmoja; kikomo hutumia kihesabu cha pamoja. Sites na watoa huduma za ramani hushughulikia data za kiufundi za maombi kwa mujibu wa sera zao."
+      ],
+      "point": "{\"lng\":9.678348,\"lat\":50.961733}"
+    },
+    {
+      "lang": "ha-Latn",
+      "paragraphs": [
+        "Mapa Táctico yana ba da damar duba taswira da bayanan mahallin abubuwa. Bayanan yanayin ƙasa na iya zama ba cikakku ba ko tsofaffi. Ma'aunin da ake gani ba ya nufin cewa bayanan suna da irin wannan daidaito.",
+        "Bayanan tarihi suna riƙe madogararsu. Adadin jama'a a yanki ba hasashen waɗanda za su ji rauni ko su mutu ba ne. Wannan shafi ba ya maye gurbin sanarwar hukuma ko shawarar gaggawa.",
+        "Duba abubuwan soja da nukiliya ya takaita ga bayanan tarihi da na jin ƙai. Shafin ba ya lissafa hare-hare a wuraren da suke a zahiri.",
+        "Taswirori: OpenFreeMap, OpenMapTiles, OpenStreetMap da masu ba da gudummawarsa. Buƙatun taswira suna aika sassan taswirar da ake buƙata don abin da ake gani.",
+        "Binciken yana amfani da kundin da aka ajiye a Sites. Manhajar ba ta adana bayanan martaba ko binciken mutum ɗaya ɗaya; ana amfani da ma'aunin ƙidaya guda ɗaya na duk masu amfani wajen iyaka. Sites da masu samar da taswira suna sarrafa bayanan fasaha na buƙatunsu bisa manufofinsu."
+      ],
+      "point": "{\"lng\":9.678348,\"lat\":50.961733}"
+    },
+    {
+      "lang": "tr",
+      "paragraphs": [
+        "Mapa Táctico, haritaları ve bağlamsal bilgileri incelemenizi sağlar. Coğrafi veriler eksik veya güncelliğini yitirmiş olabilir. Görsel ölçek, veri doğruluğuna eşdeğer değildir.",
+        "Tarihsel bilgiler kaynaklarıyla birlikte sunulur. Bir bölgenin nüfusu, yaralı veya ölü sayısına ilişkin bir tahmin değildir. Portal, resmî uyarıların veya acil durum kararlarının yerini tutmaz.",
+        "Askerî ve nükleer olayların incelenmesi, tarihsel ve insani bilgilerle sınırlıdır. Portal, gerçek konumlara yönelik saldırıları hesaplamaz.",
+        "Haritacılık: OpenFreeMap, OpenMapTiles, OpenStreetMap ve katkıda bulunanlar. Harita sorguları, görünüm için gerekli harita döşemelerini iletir.",
+        "Arama, Sites üzerinde barındırılan bir katalog kullanır. Uygulama, profilleri veya bireysel sorguları saklamaz; kota için küresel bir sayaç kullanılır. Sites ve harita sağlayıcıları, isteklerin teknik verilerini kendi politikalarına göre işler."
+      ],
+      "point": "{\"lng\":9.678348,\"lat\":50.961733}"
+    },
+    {
+      "lang": "pnb-Arab",
+      "paragraphs": [
+        "Mapa Táctico نقشے تے پس منظر دی معلومات ویکھن دی سہولت دیندا اے۔ جغرافیائی معلومات ادھوریاں یا پرانیاں ہو سکدیاں نیں۔ وکھائی دیندا پیمانہ معلومات دی درستگی دے برابر نئیں ہوندا۔",
+        "تاریخی معلومات دے ماخذ رکھے جاندے نیں۔ کسے علاقے دی آبادی دی گنتی زخمی لوکاں یا موتاں دی پیش گوئی نئیں اے۔ ایہ پورٹل سرکاری چتاونیاں یا ہنگامی فیصلے دی تھاں نئیں لیندا۔",
+        "فوجی تے جوہری واقعات دی جانکاری تاریخی تے انسانی معلومات تک محدود اے۔ پورٹل اصلی تھاواں اُتے حملیاں دے نتیجے دا حساب نئیں کردا۔",
+        "نقشہ سازی: OpenFreeMap, OpenMapTiles, OpenStreetMap تے ایہدے حصہ پاؤن والے. نقشے دیاں درخواستاں منظر لئی لوڑ دیاں نقشے دیاں ٹائلیں بھیجدیاں نیں۔",
+        "لبھن لئی Sites اُتے رکھی فہرست ورتی جاندی اے۔ ایپ ذاتی پروفائل یا اک اک تلاش محفوظ نئیں کردی؛ حد لئی سانجھا گنتی کار ورتیا جاندا اے۔ Sites تے نقشے دے فراہم کرن والے درخواستاں دے تکنیکی ڈیٹے نوں اپنی پالیسی دے مطابق ورتدے نیں۔"
+      ],
+      "point": "{\"lng\":9.678348,\"lat\":50.961733}"
+    }
+  ]
+}

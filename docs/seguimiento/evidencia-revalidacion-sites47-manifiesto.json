@@ -1,0 +1,53 @@
+{
+  "sourceHash": "20715e75e4c02dc9fb35789052599dc4710d65b27c26251b0ea9c454896ad151",
+  "runtimeHash": "9e9c96808ce1ba9312eaac06b010234657dc96ac429f8df4d06cd38be33faea9",
+  "source": "WorldPop Global 2",
+  "release": "R2025A-v1",
+  "year": 2025,
+  "resolution": "100m",
+  "units": "people per grid cell; do not multiply by area",
+  "noData": -99999,
+  "crs": "EPSG:4326",
+  "license": "CC-BY-4.0",
+  "doi": "10.5258/SOTON/WP00839",
+  "datasets": 241,
+  "missing": [
+    "ATF",
+    "BVT",
+    "HMD",
+    "IOT",
+    "SGS",
+    "UMI",
+    "VAT"
+  ],
+  "boundaries": {
+    "ADM0": 230,
+    "ADM1": 198,
+    "ADM2": 180
+  },
+  "firstDatasetKeys": [
+    "countryCode",
+    "countryName",
+    "datasetId",
+    "year",
+    "edition",
+    "resolution",
+    "units",
+    "crs",
+    "pixelSizeDegrees",
+    "dimensions",
+    "dataType",
+    "noDataValue",
+    "compression",
+    "bounds",
+    "fileSize",
+    "dataUrl",
+    "doi",
+    "description",
+    "providerChecksum",
+    "metadataSha256"
+  ],
+  "countriesMatch": true,
+  "readyRows": 241,
+  "datasetIdsMatch": true
+}

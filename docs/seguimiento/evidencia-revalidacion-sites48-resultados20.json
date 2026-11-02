@@ -1,0 +1,162 @@
+[
+  {
+    "boundary": "Perímetro administrativo consultado: the Federal Republic of Germany (ADM0, 2021) · Alemania",
+    "heading": "Población estimada",
+    "lang": "es",
+    "result": "Población estimada84.401.511 personasÁrea consultada: 356.438,4 km²Estimación WorldPop 2025; celdas de 100 m con unidad de personas por celda.FuentesConsulta: 14 de octubre de 2026 · WorldPop Global 2 · R2025A-v1 · 2025 · 100m · people_per_grid_cell · CC BY 4.0Se suma el valor completo de una celda si su centro cae dentro del área; de lo contrario se excluye, aunque el límite la cruce parcialmente. El agua solo se omite si la fuente la marca como NoData. El raster usa coordenadas geográficas (EPSG:4326) y el área se calcula geodésicamente.DOI: 10.5258/SOTON/WP00839El total suma solo las celdas con datos; no representa toda el área. (22.066.924/66.162.421 celdas válidas)",
+    "source": "Federal Agency for Cartography and Geodesy · Data license Germany - Attribution - Version 2.0",
+    "value": "84.401.511"
+  },
+  {
+    "boundary": "Administrative boundary queried: the Federal Republic of Germany (ADM0, 2021) · Germany",
+    "heading": "Estimated population",
+    "lang": "en",
+    "result": "Estimated population84,401,511 peopleQueried area: 356,438.4 km²WorldPop 2025 estimate; 100 m cells measured in people per cell.SourcesQuery: October 14, 2026 · WorldPop Global 2 · R2025A-v1 · 2025 · 100m · people_per_grid_cell · CC BY 4.0A cell contributes its full value when its center is inside the area; otherwise it is excluded, even if the boundary crosses part of it. Water is excluded only when the source marks it as NoData. The raster uses geographic coordinates (EPSG:4326), and area is calculated geodesically.DOI: 10.5258/SOTON/WP00839The total sums only cells with data; it does not represent the entire area. (22,066,924/66,162,421 valid cells)",
+    "source": "Federal Agency for Cartography and Geodesy · Data license Germany - Attribution - Version 2.0",
+    "value": "84,401,511"
+  },
+  {
+    "boundary": "已查询的行政边界: the Federal Republic of Germany (ADM0, 2021) · 德国",
+    "heading": "估算人口",
+    "lang": "zh-Hans",
+    "result": "估算人口84,401,511 人查询面积: 356,438.4 km²WorldPop 2025 估算；100 米网格，单位为每格人数。来源资料查询: 2026年10月14日 · WorldPop Global 2 · R2025A-v1 · 2025 · 100m · people_per_grid_cell · CC BY 4.0网格单元中心落在区域内时，计入该单元的全部数值；否则即使边界只穿过单元的一部分，也将其排除。只有数据源标记为 NoData 的水域才会排除。栅格使用地理坐标（EPSG:4326），面积按大地测量方法计算。DOI: 10.5258/SOTON/WP00839总数仅累加有数据的网格单元，并不代表整个区域。 (22,066,924/66,162,421 有效网格)",
+    "source": "Federal Agency for Cartography and Geodesy · Data license Germany - Attribution - Version 2.0",
+    "value": "84,401,511"
+  },
+  {
+    "boundary": "क्वेरी की गई प्रशासनिक सीमा: the Federal Republic of Germany (ADM0, 2021) · जर्मनी",
+    "heading": "अनुमानित जनसंख्या",
+    "lang": "hi",
+    "result": "अनुमानित जनसंख्या8,44,01,511 लोगक्वेरी क्षेत्र: 3,56,438.4 km²WorldPop 2025 अनुमान; 100 मीटर कोशिकाएं, प्रति कोशिका व्यक्तियों में।स्रोतजानकारी प्राप्त करना: 14 अक्टूबर 2026 · WorldPop Global 2 · R2025A-v1 · 2025 · 100m · people_per_grid_cell · CC BY 4.0किसी सेल का पूरा मान तभी जोड़ा जाता है जब उसका केंद्र क्षेत्र के भीतर हो; अन्यथा सीमा उसे आंशिक रूप से काटे तब भी उसे बाहर रखा जाता है। पानी केवल तभी बाहर रखा जाता है जब स्रोत उसे NoData चिह्नित करे। रास्टर भौगोलिक निर्देशांक (EPSG:4326) का उपयोग करता है और क्षेत्रफल भूगणितीय रूप से निकाला जाता है।DOI: 10.5258/SOTON/WP00839कुल में केवल डेटा वाली कोशिकाएँ जोड़ी जाती हैं; यह पूरे क्षेत्र का प्रतिनिधित्व नहीं करता। (2,20,66,924/6,61,62,421 मान्य कोशिकाएं)",
+    "source": "Federal Agency for Cartography and Geodesy · Data license Germany - Attribution - Version 2.0",
+    "value": "8,44,01,511"
+  },
+  {
+    "boundary": "الحد الإداري الذي تم الاستعلام عنه: the Federal Republic of Germany (ADM0, 2021) · ألمانيا",
+    "heading": "السكان المقدّرون",
+    "lang": "ar",
+    "result": "السكان المقدّرون84,401,511 شخصالمساحة المستعلم عنها: 356,438.4 km²تقدير WorldPop لعام 2025؛ خلايا 100 م ووحدتها أشخاص لكل خلية.المصادرالاستعلام: 14 أكتوبر 2026 · WorldPop Global 2 · R2025A-v1 · 2025 · 100m · people_per_grid_cell · CC BY 4.0تُحتسب قيمة الخلية كاملة إذا كان مركزها داخل المنطقة؛ وإلا تُستبعد حتى إن قطعها الحد جزئياً. لا تُستبعد المياه إلا إذا صنّفها المصدر على أنها NoData. يستخدم الراستر إحداثيات جغرافية (EPSG:4326)، وتُحسب المساحة جيوديسياً.DOI: 10.5258/SOTON/WP00839المجموع يجمع الخلايا التي تتوفر لها بيانات فقط؛ ولا يمثل المنطقة كاملة. (22,066,924/66,162,421 خلايا صالحة)",
+    "source": "Federal Agency for Cartography and Geodesy · Data license Germany - Attribution - Version 2.0",
+    "value": "84,401,511"
+  },
+  {
+    "boundary": "Limite administrative consultée: the Federal Republic of Germany (ADM0, 2021) · Allemagne",
+    "heading": "Population estimée",
+    "lang": "fr",
+    "result": "Population estimée84 401 511 personnesZone interrogée: 356 438,4 km²Estimation WorldPop 2025 ; cellules de 100 m en personnes par cellule.SourcesConsultation: 14 octobre 2026 · WorldPop Global 2 · R2025A-v1 · 2025 · 100m · people_per_grid_cell · CC BY 4.0Une cellule contribue avec sa valeur entière si son centre se trouve dans la zone ; sinon, elle est exclue même si la limite la traverse en partie. L’eau n’est exclue que si la source la marque NoData. Le raster utilise des coordonnées géographiques (EPSG:4326) et la superficie est calculée géodésiquement.DOI: 10.5258/SOTON/WP00839Le total additionne uniquement les cellules avec des données ; il ne représente pas toute la zone. (22 066 924/66 162 421 cellules valides)",
+    "source": "Federal Agency for Cartography and Geodesy · Data license Germany - Attribution - Version 2.0",
+    "value": "84 401 511"
+  },
+  {
+    "boundary": "অনুসন্ধান করা প্রশাসনিক সীমানা: the Federal Republic of Germany (ADM0, 2021) · জার্মানি",
+    "heading": "আনুমানিক জনসংখ্যা",
+    "lang": "bn",
+    "result": "আনুমানিক জনসংখ্যা৮,৪৪,০১,৫১১ জনঅনুসন্ধান করা এলাকা: ৩,৫৬,৪৩৮.৪ km²WorldPop ২০২৫ অনুমান; ১০০ মিটার সেল, প্রতি সেলে মানুষের একক।উৎসতথ্য সংগ্রহ: ১৪ অক্টোবর, ২০২৬ · WorldPop Global 2 · R2025A-v1 · 2025 · 100m · people_per_grid_cell · CC BY 4.0কোনো গ্রিড সেলের কেন্দ্র এলাকার ভেতরে থাকলে তার সম্পূর্ণ মান যোগ হয়; না হলে সীমানা সেলটিকে আংশিক কাটলেও সেটি বাদ যায়। উৎসে NoData হিসেবে চিহ্নিত হলেই শুধু জল বাদ পড়ে। রাস্টারটি ভৌগোলিক স্থানাঙ্ক (EPSG:4326) ব্যবহার করে; ক্ষেত্রফল জিওডেসিক পদ্ধতিতে গণনা হয়।DOI: 10.5258/SOTON/WP00839মোট সংখ্যাটি শুধু তথ্য থাকা গ্রিড কোষ যোগ করে; এটি পুরো এলাকা বোঝায় না। (২,২০,৬৬,৯২৪/৬,৬১,৬২,৪২১ বৈধ সেল)",
+    "source": "Federal Agency for Cartography and Geodesy · Data license Germany - Attribution - Version 2.0",
+    "value": "৮,৪৪,০১,৫১১"
+  },
+  {
+    "boundary": "Limite administrativo consultado: the Federal Republic of Germany (ADM0, 2021) · Alemanha",
+    "heading": "População estimada",
+    "lang": "pt",
+    "result": "População estimada84.401.511 pessoasÁrea consultada: 356.438,4 km²Estimativa WorldPop de 2025; células de 100 m em pessoas por célula.FontesConsulta: 14 de outubro de 2026 · WorldPop Global 2 · R2025A-v1 · 2025 · 100m · people_per_grid_cell · CC BY 4.0A célula contribui com seu valor inteiro quando seu centro está dentro da área; caso contrário, é excluída, mesmo se o limite a cruzar parcialmente. A água só é excluída quando a fonte a marca como NoData. O raster usa coordenadas geográficas (EPSG:4326), e a área é calculada geodesicamente.DOI: 10.5258/SOTON/WP00839O total soma apenas as células com dados; não representa toda a área. (22.066.924/66.162.421 células válidas)",
+    "source": "Federal Agency for Cartography and Geodesy · Data license Germany - Attribution - Version 2.0",
+    "value": "84.401.511"
+  },
+  {
+    "boundary": "Запрошенная административная граница: the Federal Republic of Germany (ADM0, 2021) · Германия",
+    "heading": "Оценка населения",
+    "lang": "ru",
+    "result": "Оценка населения84 401 511 человекОбласть запроса: 356 438,4 km²Оценка WorldPop за 2025 год; ячейки 100 м, человек на ячейку.ИсточникиЗапрос: 14 октября 2026 г. · WorldPop Global 2 · R2025A-v1 · 2025 · 100m · people_per_grid_cell · CC BY 4.0Ячейка учитывается целиком, если её центр находится внутри области; иначе она исключается, даже если граница проходит через её часть. Вода исключается только если источник помечает её как NoData. Растр использует географические координаты (EPSG:4326), площадь рассчитывается геодезически.DOI: 10.5258/SOTON/WP00839В сумму входят только ячейки с данными; она не представляет всю территорию. (22 066 924/66 162 421 действующих ячеек)",
+    "source": "Federal Agency for Cartography and Geodesy · Data license Germany - Attribution - Version 2.0",
+    "value": "84 401 511"
+  },
+  {
+    "boundary": "Batas administratif yang dikueri: the Federal Republic of Germany (ADM0, 2021) · Jerman",
+    "heading": "Perkiraan populasi",
+    "lang": "id",
+    "result": "Perkiraan populasi84.401.511 orangArea yang dihitung: 356.438,4 km²Perkiraan WorldPop 2025; sel 100 m dengan satuan orang per sel.SumberPencarian: 14 Oktober 2026 · WorldPop Global 2 · R2025A-v1 · 2025 · 100m · people_per_grid_cell · CC BY 4.0Nilai seluruh sel dijumlahkan jika pusatnya berada di dalam area; jika tidak, sel dikecualikan meski batas memotongnya sebagian. Air hanya dikecualikan jika sumber menandainya sebagai NoData. Raster memakai koordinat geografis (EPSG:4326); luas dihitung secara geodesik.DOI: 10.5258/SOTON/WP00839Jumlah hanya menjumlahkan sel yang memiliki data; ini tidak mewakili seluruh area. (22.066.924/66.162.421 sel valid)",
+    "source": "Federal Agency for Cartography and Geodesy · Data license Germany - Attribution - Version 2.0",
+    "value": "84.401.511"
+  },
+  {
+    "boundary": "استفسار کی گئی انتظامی حد: the Federal Republic of Germany (ADM0, 2021) · جرمنی",
+    "heading": "آبادی کا تخمینہ",
+    "lang": "ur",
+    "result": "آبادی کا تخمینہ84,401,511 افراداستعلام کا علاقہ: 356,438.4 km²WorldPop 2025 تخمینہ؛ 100 میٹر خلیے، فی خلیہ افراد کی اکائی۔ماخذمعلومات کی درخواست: 14 اکتوبر، 2026 · WorldPop Global 2 · R2025A-v1 · 2025 · 100m · people_per_grid_cell · CC BY 4.0اگر سیل کا مرکز علاقے کے اندر ہو تو اس کی پوری قدر شامل ہوتی ہے؛ ورنہ حد اسے جزوی طور پر کاٹے تب بھی اسے خارج کیا جاتا ہے۔ پانی صرف اسی صورت میں خارج ہوتا ہے جب ماخذ اسے NoData نشان زد کرے۔ راسٹر جغرافیائی نقاط (EPSG:4326) استعمال کرتا ہے اور رقبہ جیوڈیٹک طریقے سے نکالا جاتا ہے۔DOI: 10.5258/SOTON/WP00839مجموعے میں صرف ڈیٹا والے خانے شامل ہیں؛ یہ پورے علاقے کی نمائندگی نہیں کرتا۔ (22,066,924/66,162,421 درست خلیے)",
+    "source": "Federal Agency for Cartography and Geodesy · Data license Germany - Attribution - Version 2.0",
+    "value": "84,401,511"
+  },
+  {
+    "boundary": "Abgefragte Verwaltungsgrenze: the Federal Republic of Germany (ADM0, 2021) · Deutschland",
+    "heading": "Geschätzte Bevölkerung",
+    "lang": "de",
+    "result": "Geschätzte Bevölkerung84.401.511 PersonenAbgefragtes Gebiet: 356.438,4 km²WorldPop-Schätzung für 2025; 100-m-Zellen in Personen je Zelle.QuellenAbfrage: 14. Oktober 2026 · WorldPop Global 2 · R2025A-v1 · 2025 · 100m · people_per_grid_cell · CC BY 4.0Eine Zelle geht mit ihrem vollen Wert ein, wenn ihr Mittelpunkt im Gebiet liegt; andernfalls wird sie ausgeschlossen, auch wenn die Grenze sie teilweise schneidet. Wasser wird nur ausgeschlossen, wenn die Quelle es als NoData markiert. Das Raster nutzt geografische Koordinaten (EPSG:4326); die Fläche wird geodätisch berechnet.DOI: 10.5258/SOTON/WP00839Die Summe berücksichtigt nur Zellen mit Daten und bildet nicht das gesamte Gebiet ab. (22.066.924/66.162.421 gültige Zellen)",
+    "source": "Federal Agency for Cartography and Geodesy · Data license Germany - Attribution - Version 2.0",
+    "value": "84.401.511"
+  },
+  {
+    "boundary": "照会した行政境界: the Federal Republic of Germany (ADM0, 2021) · ドイツ",
+    "heading": "推定人口",
+    "lang": "ja",
+    "result": "推定人口84,401,511 人計算対象の面積: 356,438.4 km²WorldPop 2025年推定値。100mセル、単位はセル当たりの人数。出典資料の取得: 2026年10月14日 · WorldPop Global 2 · R2025A-v1 · 2025 · 100m · people_per_grid_cell · CC BY 4.0セルの中心が対象区域内にある場合、そのセルの値全体を加算します。中心が区域外なら、境界が一部を横切っていても除外します。水域はデータソースがNoDataと指定した場合にのみ除外されます。ラスターは地理座標系（EPSG:4326）を使用し、面積は測地線に沿って計算されます。DOI: 10.5258/SOTON/WP00839合計にはデータのあるセルのみを加算しており、地域全体を表すものではありません。 (22,066,924/66,162,421 有効セル)",
+    "source": "Federal Agency for Cartography and Geodesy · Data license Germany - Attribution - Version 2.0",
+    "value": "84,401,511"
+  },
+  {
+    "boundary": "विचारलेली प्रशासकीय सीमा: the Federal Republic of Germany (ADM0, 2021) · जर्मनी",
+    "heading": "अंदाजित लोकसंख्या",
+    "lang": "mr",
+    "result": "अंदाजित लोकसंख्या८,४४,०१,५११ लोकक्वेरी केलेले क्षेत्र: ३,५६,४३८.४ km²WorldPop २०२५ अंदाज; १०० मीटर सेल, प्रति सेल व्यक्ती.स्रोतमाहिती मिळवत आहे: १४ ऑक्टोबर, २०२६ · WorldPop Global 2 · R2025A-v1 · 2025 · 100m · people_per_grid_cell · CC BY 4.0ज्या ग्रिड सेलचे केंद्र क्षेत्राच्या आत असते त्याचे संपूर्ण मूल्य मोजले जाते; अन्यथा सीमा सेलला अंशतः छेदत असली तरी तो वगळला जातो. स्रोताने NoData म्हणून चिन्हांकित केले असेल तेव्हाच पाणी वगळले जाते. रास्टरमध्ये भौगोलिक निर्देशांक (EPSG:4326) वापरले आहेत आणि क्षेत्रफळ भूगणितीय पद्धतीने मोजले जाते.DOI: 10.5258/SOTON/WP00839एकूणात फक्त डेटा असलेल्या सेलची बेरीज आहे; ते संपूर्ण क्षेत्राचे प्रतिनिधित्व करत नाही. (२,२०,६६,९२४/६,६१,६२,४२१ वैध सेल)",
+    "source": "Federal Agency for Cartography and Geodesy · Data license Germany - Attribution - Version 2.0",
+    "value": "८,४४,०१,५११"
+  },
+  {
+    "boundary": "Ranh giới hành chính đã truy vấn: the Federal Republic of Germany (ADM0, 2021) · Đức",
+    "heading": "Dân số ước tính",
+    "lang": "vi",
+    "result": "Dân số ước tính84.401.511 ngườiDiện tích truy vấn: 356.438,4 km²Ước tính WorldPop năm 2025; ô 100 m, đơn vị người mỗi ô.NguồnTra cứu: 14 tháng 10, 2026 · WorldPop Global 2 · R2025A-v1 · 2025 · 100m · people_per_grid_cell · CC BY 4.0Một ô được tính toàn bộ giá trị nếu tâm ô nằm trong khu vực; nếu không thì ô bị loại, kể cả khi ranh giới chỉ cắt qua một phần. Nước chỉ bị loại khi nguồn đánh dấu là NoData. Raster dùng tọa độ địa lý (EPSG:4326), và diện tích được tính theo trắc địa.DOI: 10.5258/SOTON/WP00839Tổng chỉ cộng các ô có dữ liệu; không đại diện cho toàn bộ khu vực. (22.066.924/66.162.421 ô hợp lệ)",
+    "source": "Federal Agency for Cartography and Geodesy · Data license Germany - Attribution - Version 2.0",
+    "value": "84.401.511"
+  },
+  {
+    "boundary": "ప్రశ్నించిన పరిపాలనా సరిహద్దు: the Federal Republic of Germany (ADM0, 2021) · జర్మనీ",
+    "heading": "అంచనా జనాభా",
+    "lang": "te",
+    "result": "అంచనా జనాభా8,44,01,511 మందిక్వెరీ చేసిన విస్తీర్ణం: 3,56,438.4 km²WorldPop 2025 అంచనా; 100 మీటర్ల కణాలు, ఒక్కో కణానికి వ్యక్తులు.మూలాలుసమాచారాన్ని పొందడం: 14 అక్టోబర్, 2026 · WorldPop Global 2 · R2025A-v1 · 2025 · 100m · people_per_grid_cell · CC BY 4.0ఒక కణం కేంద్రం ప్రాంతం లోపల ఉంటే దాని పూర్తి విలువను కలుపుతాం; లేకపోతే సరిహద్దు దానిని కొంతవరకు దాటినా దానిని మినహాయిస్తాం. మూలం NoDataగా గుర్తించినప్పుడే నీటిని మినహాయిస్తాం. రాస్టర్ భౌగోళిక కోఆర్డినేట్లు (EPSG:4326) ఉపయోగిస్తుంది; విస్తీర్ణం జియోడెసిక్ విధానంలో లెక్కించబడుతుంది.DOI: 10.5258/SOTON/WP00839మొత్తంలో డేటా ఉన్న కణాలు మాత్రమే కలుపుతారు; ఇది మొత్తం ప్రాంతాన్ని సూచించదు. (2,20,66,924/6,61,62,421 చెల్లుబాటు అయ్యే కణాలు)",
+    "source": "Federal Agency for Cartography and Geodesy · Data license Germany - Attribution - Version 2.0",
+    "value": "8,44,01,511"
+  },
+  {
+    "boundary": "Mpaka wa kiutawala ulioulizwa: the Federal Republic of Germany (ADM0, 2021) · Ujerumani",
+    "heading": "Makadirio ya idadi ya watu",
+    "lang": "sw",
+    "result": "Makadirio ya idadi ya watu84,401,511 watuEneo lililoulizwa: 356,438.4 km²Makadirio ya WorldPop ya 2025; seli za mita 100, watu kwa kila seli.VyanzoOmbi la taarifa: 14 Oktoba 2026 · WorldPop Global 2 · R2025A-v1 · 2025 · 100m · people_per_grid_cell · CC BY 4.0Seli huchangia thamani yake yote ikiwa kitovu chake kiko ndani ya eneo; vinginevyo huondolewa hata kama mpaka unakata sehemu yake. Maji huondolewa tu chanzo kinapoyaweka alama ya NoData. Rasta hutumia viwianishi vya kijiografia (EPSG:4326), na eneo hukokotolewa kwa njia ya kijiodesia.DOI: 10.5258/SOTON/WP00839Jumla inajumlisha seli zenye data pekee; haiwakilishi eneo lote. (22,066,924/66,162,421 seli halali)",
+    "source": "Federal Agency for Cartography and Geodesy · Data license Germany - Attribution - Version 2.0",
+    "value": "84,401,511"
+  },
+  {
+    "boundary": "Iyakokin gudanarwa da aka bincika: the Federal Republic of Germany (ADM0, 2021) · Jamus",
+    "heading": "Ƙiyasin yawan jama’a",
+    "lang": "ha-Latn",
+    "result": "Ƙiyasin yawan jama’a84,401,511 mutaneYankin bincike: 356,438.4 km²Ƙiyasin WorldPop na 2025; ƙwayoyin mita 100, mutane a kowace ƙwaya.MadogaraBuƙatar bayani: 14 Oktoba, 2026 · WorldPop Global 2 · R2025A-v1 · 2025 · 100m · people_per_grid_cell · CC BY 4.0Ana ƙirga cikakkiyar ƙimar sel idan tsakiyarsa yana cikin yankin; in ba haka ba ana cire shi ko da iyaka ta ratsa wani ɓangare. Ana cire ruwa ne kawai idan tushen ya yi masa alamar NoData. Raster ɗin yana amfani da ma'aunin ƙasa (EPSG:4326), kuma ana lissafin faɗi ta hanyar geodesic.DOI: 10.5258/SOTON/WP00839Jimillar ya haɗa sel ɗin da ke da bayanai kawai; ba ya wakiltar yankin gaba ɗaya. (22,066,924/66,162,421 ƙwayoyi masu inganci)",
+    "source": "Federal Agency for Cartography and Geodesy · Data license Germany - Attribution - Version 2.0",
+    "value": "84,401,511"
+  },
+  {
+    "boundary": "Sorgulanan idari sınır: the Federal Republic of Germany (ADM0, 2021) · Almanya",
+    "heading": "Tahmini nüfus",
+    "lang": "tr",
+    "result": "Tahmini nüfus84.401.511 kişiSorgulanan alan: 356.438,4 km²2025 WorldPop tahmini; 100 m hücreler, hücre başına kişi birimi.KaynaklarSorgu: 14 Ekim 2026 · WorldPop Global 2 · R2025A-v1 · 2025 · 100m · people_per_grid_cell · CC BY 4.0Bir hücrenin merkezi alanın içindeyse hücrenin değeri tam olarak eklenir; değilse sınır hücrenin bir kısmını kesse bile hücre dışarıda bırakılır. Su yalnızca kaynak NoData olarak işaretlediyse hariç tutulur. Raster coğrafi koordinatları (EPSG:4326) kullanır; alan jeodezik yöntemle hesaplanır.DOI: 10.5258/SOTON/WP00839Toplam yalnızca verisi bulunan hücreleri toplar; alanın tamamını temsil etmez. (22.066.924/66.162.421 geçerli hücre)",
+    "source": "Federal Agency for Cartography and Geodesy · Data license Germany - Attribution - Version 2.0",
+    "value": "84.401.511"
+  },
+  {
+    "boundary": "پُچھی گئی انتظامی حد: the Federal Republic of Germany (ADM0, 2021) · جرمنی",
+    "heading": "اندازاً آبادی",
+    "lang": "pnb-Arab",
+    "result": "اندازاً آبادی۸۴٬۴۰۱٬۵۱۱ لوکسوال والا علاقہ: ۳۵۶٬۴۳۸٫۴ km²WorldPop 2025 دا اندازہ؛ 100 میٹر خانے، ہر خانے وچ افراد دی اکائی۔ماخذمعلومات دی پُچھ گِچھ: ۱۴ اکتوبر ۲۰۲۶ · WorldPop Global 2 · R2025A-v1 · 2025 · 100m · people_per_grid_cell · CC BY 4.0جس سیل دا مرکز علاقے دے اندر ہووے، اوہدی پوری قدر جمع ہوندی اے؛ نہیں تے حد سیل نوں جزوی طور تے کاٹے وی، اوہ شامل نہیں ہوندا۔ پانی صرف اوہدوں خارج ہوندا اے جدوں ماخذ اوہنوں NoData قرار دیندا اے۔ راسٹر جغرافیائی محددات (EPSG:4326) ورتدا اے؛ رقبہ جیوڈیٹک طریقے نال حساب ہوندا اے۔DOI: 10.5258/SOTON/WP00839کل وچ صرف اوہ خانے جوڑے گئے نیں جنہاں وچ ڈیٹا اے؛ ایہہ سارے علاقے دی نمائندگی نئیں کردا۔ (۲۲٬۰۶۶٬۹۲۴/۶۶٬۱۶۲٬۴۲۱ درست خانے)",
+    "source": "Federal Agency for Cartography and Geodesy · Data license Germany - Attribution - Version 2.0",
+    "value": "۸۴٬۴۰۱٬۵۱۱"
+  }
+]

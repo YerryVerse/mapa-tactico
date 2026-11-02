@@ -1,0 +1,54 @@
+{
+  "before": {
+    "area": "Queried area: 0.376304 km²",
+    "camera": {
+      "center": [
+        13.405000000000086,
+        52.50499999999934
+      ],
+      "contextLayers": [],
+      "countryField": [
+        "get",
+        "name_en"
+      ],
+      "countryLabels": [],
+      "fiveMetersCssPx": 1.7194456812806609,
+      "projection": "globe",
+      "reference": null,
+      "scriptCount": 0,
+      "tilesLoaded": true,
+      "viewport": [
+        1141,
+        764
+      ],
+      "zoom": 14
+    },
+    "result": "Estimated population2,818 peopleQueried area: 0.376304 km²WorldPop 2025 estimate; 100 m cells measured in people per cell.SourcesQuery: October 14, 2026 · WorldPop Global 2 · R2025A-v1 · 2025 · 100m · people_per_grid_cell · CC BY 4.0A cell contributes its full value when its center is inside the area; otherwise it is excluded, even if the boundary crosses part of it. Water is excluded only when the source marks it as NoData. The raster uses geographic coordinates (EPSG:4326), and area is calculated geodesically.DOI: 10.5258/SOTON/WP00839"
+  },
+  "after": {
+    "area": "Queried area: 0.414654 km²",
+    "camera": {
+      "center": [
+        13.405000000000086,
+        52.50499999999934
+      ],
+      "contextLayers": [],
+      "countryField": [
+        "get",
+        "name_en"
+      ],
+      "countryLabels": [],
+      "fiveMetersCssPx": 1.7194456812806609,
+      "projection": "globe",
+      "reference": null,
+      "scriptCount": 0,
+      "tilesLoaded": true,
+      "viewport": [
+        1141,
+        764
+      ],
+      "zoom": 14
+    },
+    "resultPresent": false
+  }
+}

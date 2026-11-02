@@ -1,0 +1,81 @@
+{
+  "pageStatus": 200,
+  "assets": [
+    {
+      "path": "/_next/static/css/index.DTLJ5Rxe.css",
+      "status": 200
+    },
+    {
+      "path": "/_next/static/chunks/index-BNOdF8Og.js",
+      "status": 200
+    },
+    {
+      "path": "/_next/static/chunks/rolldown-runtime-C60lm6uB.js",
+      "status": 200
+    },
+    {
+      "path": "/_next/static/chunks/framework-D_rUT4EX.js",
+      "status": 200
+    },
+    {
+      "path": "/_next/static/chunks/app-elements-H_Dr48wG.js",
+      "status": 200
+    },
+    {
+      "path": "/_next/static/chunks/hash-Cp347hhd.js",
+      "status": 200
+    },
+    {
+      "path": "/_next/static/chunks/record-uXSNv6cl.js",
+      "status": 200
+    },
+    {
+      "path": "/_next/static/chunks/app-rsc-cache-busting-C63U4cik.js",
+      "status": 200
+    },
+    {
+      "path": "/_next/static/chunks/app-rsc-render-mode-CvTCGruk.js",
+      "status": 200
+    },
+    {
+      "path": "/_next/static/chunks/headers-C_MtfdF4.js",
+      "status": 200
+    },
+    {
+      "path": "/_next/static/chunks/protocol-headers-B9-bVeat.js",
+      "status": 200
+    },
+    {
+      "path": "/_next/static/chunks/deployment-id-DFhHa9wO.js",
+      "status": 200
+    },
+    {
+      "path": "/_next/static/chunks/navigation-errors-D5LMQqDL.js",
+      "status": 200
+    },
+    {
+      "path": "/_next/static/chunks/layout-segment-context-CduL0xRh.js",
+      "status": 200
+    },
+    {
+      "path": "/_next/static/chunks/LanguageProvider-CAc9LLex.js",
+      "status": 200
+    },
+    {
+      "path": "/_next/static/chunks/Portal-CBuPczlO.js",
+      "status": 200
+    },
+    {
+      "path": "/_next/static/chunks/catalogue-C3BAexnI.js",
+      "status": 200
+    },
+    {
+      "path": "/_next/static/chunks/locale-format-BorQiM8O.js",
+      "status": 200
+    },
+    {
+      "path": "/_next/static/chunks/Globe-D5brAo2w.js",
+      "status": 200
+    }
+  ]
+}

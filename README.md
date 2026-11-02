@@ -6,13 +6,13 @@ Portal de Sites en desarrollo por sprints. Identidad conservada: appgprj_6aca232
 
 Sprint1 implementado: TypeScript/React/Vinext, globo MapLibre6.13.0 azul sobre espacio negro con estrellas estáticas, calles vectoriales OpenFreeMap, búsqueda pública de países y ciudades y paneles/fichas bajo demanda. La publicación realmente verificada, sus evidencias y la aprobación humana se registran en docs/seguimiento/estado.json. Solo el usuario aprueba el cierre; este texto no concede aprobación ni inicia Sprint2.
 
-El prototipo D3 y sus porcentajes ficticios no forman parte de la nueva aplicación. Las fichas de contexto disponibles se consultan desde Escenarios y usan el renderizador común, fuentes y limpieza de capas documentados en docs/CONTRATO_DE_FICHAS.md. La búsqueda y sus límites están en docs/DECISION_BUSCADOR.md. La población real por área, veinte idiomas y catálogos completos pertenecen a sprints posteriores. Mantener el alcance documentado en el plan.
+El prototipo D3 y sus porcentajes ficticios no forman parte de la nueva aplicación. Las fichas de contexto disponibles se consultan desde Escenarios y usan el renderizador común, fuentes y limpieza de capas documentados en docs/CONTRATO_DE_FICHAS.md. La búsqueda y sus límites están en docs/DECISION_BUSCADOR.md. La población territorial está en el sprint 3; consulta su estado comprobado y lo que falta en docs/seguimiento/sprint-03.html. El runtime y los recursos de producción son administrados por Sites; las herramientas locales de desarrollo no son necesarias para quienes visitan el portal. Mantener el alcance documentado en el plan.
 
 ## Ejecutar y comprobar
 
 Usar Node>=22.13.0 y el starter oficial de Sites. Dependencias fijadas y package-lock.json. Instalar con el helper oficial install-dependencies.mjs. Este host Windows necesita el entrypoint oficial de npm si su shim falla; ver docs/DECISION_CARTOGRAFICA.md. No modificar npm global ni la configuración del usuario.
 
-- Desarrollo: npm run dev, URL127.0.0.1:5173. Regenera el worker oficial del paquete en public/map-worker.
+- Desarrollo: npm run dev, URL 127.0.0.1:5273. Regenera el worker oficial del paquete en public/map-worker.
 - Verificación: npm run check y npm test. Las pruebas del seguimiento se ejecutan aparte con node tests/seguimiento-sprints.test.mjs.
 - Build: helper oficial build-site.mjs. En este host: node scripts/sites-build-windows.mjs lo invoca con reparación del shim solo en su proceso.
 - Vista compilada: npm start. Detener esa vista antes de reconstruir en Windows para liberar dist.

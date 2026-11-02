@@ -1,5 +1,11 @@
 # Revisión técnica del plan de sprints de Mapa Táctico
 
+Plan v29, 14 de octubre de 2026: el usuario sitúa el menú de tres rayas al final de la barra vertical, primero contando desde abajo. El acceso directo al idioma queda inmediatamente encima; el orden visual coincide con el del documento y teclado. Se actualiza 2A-04 y la guía de revisión sin dar por aprobados los sprints abiertos.
+
+Plan v28, 14 de octubre de 2026: por instrucción del usuario, English es el idioma predeterminado desde el primer renderizado. La elección manual guardada válida conserva prioridad; sin ella, incluso con navegador en español o almacenamiento bloqueado, se utiliza English. La preferencia automática del navegador deja de determinar el idioma inicial. Se actualizan 2A-02/03 y sus criterios, conservando Sprint2 y dependientes abiertos.
+
+Plan v27, 14 de octubre de 2026: el usuario no encuentra el control de idioma en la barra del mapa. El acceso oculto dentro de cada panel se complementa con un botón de traducción siempre visible, con nombre accesible «Idioma», que abre los veinte idiomas directamente. El selector se cierra con botón o Escape, devuelve el foco al acceso y conserva consultas, geometrías y cámara. Se reabre la aceptación del Sprint 2 y las entregas dependientes hasta comprobar la corrección y obtener nueva aprobación.
+
 Fecha: 10 de octubre de 2026. La sección de materiales y energía forma parte del sprint 9 y la entrega integral corresponde al sprint 10. La revisión de los diez sprints encontró veinte problemas o ambigüedades relevantes, corregidos en la versión 2 del [plan de sprints](PLAN_DE_SPRINTS.md).
 
 Las correcciones se formularon durante la planificación, antes de iniciar la implementación. El usuario autorizó el sprint 1 el 10 de octubre de 2026; su estado actual y sus publicaciones parciales se registran en el seguimiento, sin conceder aprobación al sprint. El plan distingue decisiones técnicas que debe resolver cada bloque de funciones ya demostradas: una tecnología propuesta no constituye una integración comprobada.
@@ -7,6 +13,8 @@ Las correcciones se formularon durante la planificación, antes de iniciar la im
 La versión 6 del plan conserva las veinte soluciones iniciales e incorpora doce hallazgos de la auditoría final descrita al final de este documento. El [protocolo persistente de seguimiento y aprobación](PROTOCOLO_DE_SPRINTS.md) conserva los HTML como documentos de control con las reglas vigentes del plan. Cada bloque tiene criterios propios al final de su tabla y no se pasa al siguiente hasta cumplirlos. La implementación de estas soluciones se registra con evidencia durante su ejecución. Solo el usuario aprueba el cierre de cada sprint después de revisar la funcionalidad en la versión del portal indicada. [Índice de seguimiento](seguimiento/index.html).
 
 ## Hallazgos y correcciones
+
+Plan v35, 2 de noviembre de 2026: el usuario solicita cambiar el puerto del portal local para evitar colisiones con otros proyectos en desarrollo (como 3D Master en 5173). Se migra el portal local a http://127.0.0.1:5273/ con actualización en caliente, conservando el servidor de seguimiento en 4174. Se sincronizan planes y documentación de control.
 
 Plan v22, 12/10/2026: por instrucción del usuario, las filas pendientes también usan fondo naranja y texto blanco, igual que las filas en curso; terminado sigue verde y no completado rojo, ambos con texto blanco. Se sincroniza la vista de seguimiento, su generador y los diez HTML. Es un ajuste visual administrativo sin cambios en el portal ni en sus criterios de aceptación.
 
@@ -152,3 +160,12 @@ Al ejecutar el sprint se detectó que la primera operación aún decía integrar
 ## Selección sucesiva de resultados — plan versión19
 
 El usuario solicita conservar abierta la búsqueda al elegir una ciudad. La operación 1B-05 y su criterio de ambigüedad especifican consulta/lista/posición de lectura persistentes, cierre con X o clic fuera y conservación de la última ubicación. Se distingue un arrastre de un clic para mantener la exploración con la lista visible. El clic de cierre sobre el mapa no debe crear otro punto; la navegación a otra herramienta mantiene su acción normal. Escape y devolución del foco se conservan. Se reabre la aceptación anterior del buscador y la del Sprint2 dependiente, con historial, sin conceder nuevas aprobaciones. Los diez HTML reflejan el plan19. La evidencia de ejecución se registra en docs/CAMBIO_BUSQUEDA_PERSISTENTE.md y en el seguimiento.
+
+
+## Revisión del runtime de Sites y evidencia de capacidad — plan versión 26
+
+El sitio publicado conserva el proyecto Sites público, versión 34. La guía oficial de Sites del entorno confirma que Sites provisiona los bindings D1/R2 declarados en .openai/hosting.json y ejecuta las rutas de servidor en su Worker administrado. El portal no requiere un servidor, base de datos, bucket ni instalación que el usuario tenga que alojar u operar. Las teselas públicas del mapa son una dependencia de contenido sin clave del usuario.
+
+La consulta poblacional acota el cuerpo a 65.536 bytes, el área dibujada a 50.000 km², el dibujo a 5.000 vértices y ocho países, y cada cálculo raster a 32 bloques. Mantiene cuatro consultas concurrentes, un límite diario y un tiempo máximo; procesa los bloques uno por uno y usa agregados preparados para unidades grandes. Las pruebas y los registros del Worker permiten observar la respuesta, la CPU y el tiempo. El conector disponible no entrega una cifra interna de memoria por solicitud, por lo que no se presenta una como si hubiera sido medida ni se exige conectar un servicio de métricas externo.
+
+Cuatro consultas anónimas simultáneas de 30 bloques al Site v34 respondieron 200 en 7,6–8,1 s. Se releyeron los registros de Sites: en los cuatro eventos el tiempo de pared fue 8,4–8,8 s y la CPU 2,15–2,83 s; en las últimas tres horas se observaron 24 invocaciones correctas y ninguna fallida. Estas son las métricas disponibles del runtime; no se requiere una medición de memoria por solicitud ni conectar monitoreo externo. Se conserva la audiencia pública. Se retiró del código el helper de inicio de sesión del starter, que no estaba conectado a ninguna página ni ruta. Esta revisión no altera el flujo de visitantes ni añade credenciales de acceso.

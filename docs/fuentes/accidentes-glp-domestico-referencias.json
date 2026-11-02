@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "researchDate": "2026-10-20",
+  "status": "research_only_not_published",
+  "interpretation": "Chemical combustion energy reference; not blast energy, blast yield, damage radius or accident measurement.",
+  "thermodynamicBasis": {
+    "temperatureK": 298.15,
+    "phase": "gaseous fuel",
+    "heatingValue": "net",
+    "combustion": "complete",
+    "units": {
+      "molarMass": "g/mol",
+      "molarHeat": "kJ/mol",
+      "specificHeat": "MJ/kg"
+    },
+    "source": "https://doi.org/10.6028/NIST.TN.2126",
+    "table": "4.10",
+    "printedPage": 355,
+    "pdfPageOneBased": 364
+  },
+  "components": {
+    "propane": {
+      "molarMassGPerMol": 44.0956,
+      "netKJPerMol": 2042.69,
+      "grossKJPerMol": 2218.66,
+      "netMJPerKg": 46.32412304175474,
+      "grossMJPerKg": 50.314770634711856
+    },
+    "nButane": {
+      "molarMassGPerMol": 58.12,
+      "netKJPerMol": 2657.31,
+      "grossKJPerMol": 2877.28,
+      "netMJPerKg": 45.721094287680664,
+      "grossMJPerKg": 49.505849965588446
+    }
+  },
+  "examples": [
+    {
+      "label": "5 kg netos",
+      "massKg": 5,
+      "chemicalEnergyNetMJ": 231.6206152087737,
+      "chemicalEnergyKWh": 64.33905978021491
+    },
+    {
+      "label": "25 lb netas (hipótesis de contenido)",
+      "massKg": 11.33980925,
+      "chemicalEnergyNetMJ": 525.3067189670285,
+      "chemicalEnergyKWh": 145.9185330463968
+    },
+    {
+      "label": "15 kg netos",
+      "massKg": 15,
+      "chemicalEnergyNetMJ": 694.861845626321,
+      "chemicalEnergyKWh": 193.01717934064473
+    }
+  ],
+  "conversion": {
+    "kgPerAvoirdupoisPound": 0.45359237,
+    "MJPerKWh": 3.6
+  },
+  "compositionCaution": "LPG composition is not fixed; component references do not certify any supplier's product.",
+  "inputCaution": "Actual net fuel mass is separate from nominal cylinder capacity, water volume and tare.",
+  "sources": {
+    "propaneMolarMass": "https://webbook.nist.gov/cgi/cbook.cgi?Name=propane&cTC=on&cTG=on&cTP=on",
+    "nButaneMolarMass": "NIST TN 2126, Table 1.2, 58.12 g/mol rounded",
+    "mechanisms": "https://www.hse.gov.uk/comah/assets/docs/lpg.pdf",
+    "LPG": "https://www.cdc.gov/niosh/npg/npgd0679.html",
+    "cylinderDefinitions": "https://indocal.gob.do/download/2046/reglamentos-tecnicos-dominicanos/48516/rtd-69-glp-2-da-rev-2012.pdf",
+    "smallCylinderIncident": "https://stacks.cdc.gov/view/cdc/164968",
+    "massConversion": "https://nvlpubs.nist.gov/nistpubs/Legacy/IR/nistir4941.pdf"
+  }
+}

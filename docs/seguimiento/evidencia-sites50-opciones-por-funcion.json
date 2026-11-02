@@ -1,0 +1,203 @@
+{
+  "version": 50,
+  "source": "542259402cafaea1c7386c73ff18dda84d08a8c5",
+  "localPanels": [
+    {
+      "buttons": [
+        "Close",
+        "Search"
+      ],
+      "labels": [
+        "Country or city"
+      ],
+      "languageSelectors": 0,
+      "links": [],
+      "name": "Find a place",
+      "title": "Find a place"
+    },
+    {
+      "buttons": [
+        "Close",
+        "Use location",
+        "Use map center"
+      ],
+      "labels": [
+        "Longitude",
+        "Latitude"
+      ],
+      "languageSelectors": 0,
+      "links": [],
+      "name": "Choose location",
+      "title": "Location"
+    },
+    {
+      "buttons": [
+        "Close",
+        "Accident",
+        "Military",
+        "View record"
+      ],
+      "labels": [
+        "Beirut, 2020"
+      ],
+      "languageSelectors": 0,
+      "links": [],
+      "name": "Scenarios",
+      "title": "Scenarios"
+    },
+    {
+      "buttons": [
+        "Close",
+        "Search",
+        "Add vertex",
+        "Remove last vertex",
+        "Use these vertices",
+        "Draw area",
+        "Edit area",
+        "Clear area",
+        "Calculate population"
+      ],
+      "labels": [
+        "Country or city",
+        "Longitude",
+        "Latitude"
+      ],
+      "languageSelectors": 0,
+      "links": [],
+      "name": "Population area",
+      "title": "Population area"
+    },
+    {
+      "buttons": [
+        "Close"
+      ],
+      "labels": [],
+      "languageSelectors": 0,
+      "links": [
+        "Information",
+        "Disclaimer"
+      ],
+      "name": "Menu",
+      "title": "Menu"
+    }
+  ],
+  "localExtra": [
+    {
+      "languageSelectors": 0,
+      "title": "Information"
+    },
+    {
+      "languageSelectors": 0,
+      "title": "Disclaimer"
+    },
+    {
+      "languageSelectors": 0,
+      "title": "Beirut, 2020"
+    }
+  ],
+  "narrow": [
+    {
+      "height": 720,
+      "languageSelectors": 0,
+      "name": "Find a place",
+      "panelOverflow": false,
+      "title": "Find a place",
+      "toolbarSeparate": true,
+      "width": 320
+    },
+    {
+      "height": 720,
+      "languageSelectors": 0,
+      "name": "Choose location",
+      "panelOverflow": false,
+      "title": "Location",
+      "toolbarSeparate": true,
+      "width": 320
+    },
+    {
+      "height": 720,
+      "languageSelectors": 0,
+      "name": "Scenarios",
+      "panelOverflow": false,
+      "title": "Scenarios",
+      "toolbarSeparate": true,
+      "width": 320
+    },
+    {
+      "height": 720,
+      "languageSelectors": 0,
+      "name": "Population area",
+      "panelOverflow": false,
+      "title": "Population area",
+      "toolbarSeparate": true,
+      "width": 320
+    },
+    {
+      "height": 720,
+      "languageSelectors": 0,
+      "name": "Menu",
+      "panelOverflow": false,
+      "title": "Menu",
+      "toolbarSeparate": true,
+      "width": 320
+    }
+  ],
+  "manualLanguagePreservesQuery": {
+    "embeddedSelectors": 0,
+    "focus": "Idioma",
+    "language": "es",
+    "panel": "Buscar lugar",
+    "query": "Santiago"
+  },
+  "rtl": {
+    "labels": [
+      "بلد أو مدينة"
+    ],
+    "lang": "ar",
+    "languageSelectors": 0,
+    "query": "Santiago"
+  },
+  "publishedPanels": [
+    {
+      "embeddedSelectors": 0,
+      "name": "Find a place",
+      "title": "Find a place"
+    },
+    {
+      "embeddedSelectors": 0,
+      "name": "Choose location",
+      "title": "Location"
+    },
+    {
+      "embeddedSelectors": 0,
+      "name": "Scenarios",
+      "title": "Scenarios"
+    },
+    {
+      "embeddedSelectors": 0,
+      "name": "Population area",
+      "title": "Population area"
+    },
+    {
+      "embeddedSelectors": 0,
+      "name": "Menu",
+      "title": "Menu"
+    },
+    {
+      "embeddedSelectors": 0,
+      "name": "Information",
+      "title": "Information"
+    },
+    {
+      "embeddedSelectors": 0,
+      "name": "Disclaimer",
+      "title": "Disclaimer"
+    },
+    {
+      "embeddedSelectors": 0,
+      "name": "Historical record",
+      "title": "Beirut, 2020"
+    }
+  ],
+  "languagesInDedicatedDialog": 20
+}

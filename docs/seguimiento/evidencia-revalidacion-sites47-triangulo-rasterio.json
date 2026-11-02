@@ -1,0 +1,8 @@
+{
+  "reference": "Independent Rasterio / official DEU GeoTIFF",
+  "method": "cell center",
+  "population": 2817.97092628479,
+  "validCells": 66,
+  "servicePopulation": 2817.97092628479,
+  "difference": 0.0
+}

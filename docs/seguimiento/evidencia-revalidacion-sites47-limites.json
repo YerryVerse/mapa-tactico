@@ -1,0 +1,32 @@
+{
+  "contractNote": "Geometry queries use HTTP422 for no_coverage; the initial404 expectation was corrected against population-service.ts.",
+  "rows": [
+    {
+      "name": "area limit",
+      "status": 413,
+      "body": {
+        "status": "error",
+        "error": "area_limit"
+      },
+      "expected": 413
+    },
+    {
+      "name": "vertex limit",
+      "status": 400,
+      "body": {
+        "status": "error",
+        "error": "invalid_geometry"
+      },
+      "expected": 400
+    },
+    {
+      "name": "ocean no coverage",
+      "status": 422,
+      "body": {
+        "status": "no_coverage",
+        "error": "no_coverage"
+      },
+      "expected": 422
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "reviewDate": "2026-10-25",
+  "scopeEs": "Comparación pública de potencias estimadas por ojiva o bomba de China, Rusia y Estados Unidos. No contiene ubicaciones, despliegues concretos, planes de empleo ni modelos de efectos.",
+  "selectionRules": {
+    "comparison": "maximum_yield_per_model",
+    "rangePolicy": "maximum",
+    "displayUnit": "tonnes_TNT_equivalent",
+    "displayApproximationSymbol": false,
+    "ordering": "ascending_yield",
+    "absoluteNationalExtremumConfirmed": false,
+    "countryScope": [
+      "China",
+      "Rusia",
+      "Estados Unidos"
+    ],
+    "operationalScopeEs": "Modelos asignados a fuerzas operativas según FAS 2026. El usuario eligió explícitamente la W88 como máximo estadounidense y excluir la B83-1 de esta selección por su situación de retirada."
+  },
+  "sources": {
+    "Estados Unidos": {
+      "title": "United States nuclear weapons, 2026",
+      "url": "https://thebulletin.org/premium/2026-03/united-states-nuclear-weapons-2026/",
+      "tableUrl": "https://thebulletin.org/wp-content/uploads/2026/03/rbul_a_2633029_t0001.pdf",
+      "publicationDate": "2026-03-12"
+    },
+    "Rusia": {
+      "title": "Russian nuclear weapons, 2026",
+      "url": "https://thebulletin.org/premium/2026-05/russian-nuclear-weapons-2026/",
+      "tableUrl": "https://thebulletin.org/wp-content/uploads/2026/05/rbul_a_2659527_t0001-full.pdf",
+      "publicationDate": "2026-05-14"
+    },
+    "China": {
+      "title": "Chinese nuclear weapons, 2026",
+      "url": "https://thebulletin.org/premium/2026-07/chinese-nuclear-weapons-2026/",
+      "tableUrl": "https://thebulletin.org/wp-content/uploads/2026/07/rbul_a_2691662_t0001.pdf",
+      "publicationDate": "2026-07-08"
+    }
+  },
+  "candidates": [
+    {
+      "id": "current-us-w76-2-reference",
+      "name": "W76-2 (Estados Unidos)",
+      "country": "Estados Unidos",
+      "role": "lower_quantified_model_maximum",
+      "yieldKt": 8,
+      "sourceRangeKt": null
+    },
+    {
+      "id": "current-ru-53t6-reference",
+      "name": "Ojiva del 53T6 (Rusia)",
+      "country": "Rusia",
+      "role": "lower_quantified_model_maximum",
+      "yieldKt": 10,
+      "sourceRangeKt": null
+    },
+    {
+      "id": "current-cn-df31a-reference",
+      "name": "Ojiva del DF-31A (China)",
+      "country": "China",
+      "role": "lower_quantified_model_maximum",
+      "yieldKt": 425,
+      "sourceRangeKt": null
+    },
+    {
+      "id": "current-us-w88-reference",
+      "name": "W88 (Estados Unidos)",
+      "country": "Estados Unidos",
+      "role": "upper_quantified_operational_model_maximum",
+      "yieldKt": 455,
+      "sourceRangeKt": null
+    },
+    {
+      "id": "current-ru-topolm-reference",
+      "name": "Ojiva del Topol-M (Rusia)",
+      "country": "Rusia",
+      "role": "upper_quantified_model_maximum",
+      "yieldKt": 800,
+      "sourceRangeKt": null
+    },
+    {
+      "id": "current-cn-df5a-reference",
+      "name": "Ojiva del DF-5A (China)",
+      "country": "China",
+      "role": "upper_quantified_model_maximum",
+      "yieldKt": 4500,
+      "sourceRangeKt": null
+    }
+  ],
+  "countryLimitationsEs": {
+    "Estados Unidos": "La selección compara máximos por modelo: B61-12 tiene ajustes de 0.3 a 50 kt y no sustituye la W76-2 de 8 kt como menor máximo por modelo. W88 tiene 455 kt. La B83-1 llega a 1.2 Mt y sigue en el arsenal según los presupuestos DOE, pero FAS estima que ya no está desplegada y está en proceso de retirada; el usuario eligió excluirla y usar la W88 como máximo operativo.",
+    "Rusia": "La tabla de FAS cuantifica el 53T6 en 10 kt y el Topol-M basado en silo en 800 kt. No publica una potencia numérica para Avangard ni para varias armas tácticas; algunos sistemas defensivos aparecen solo como low. Por ello, no permite confirmar extremos absolutos nacionales. No se suman ojivas MIRV ni se confunde misil y ojiva.",
+    "China": "FAS 2026 estima 425 kt para DF-31A/AG, DF-31B, DF-41 y JL-3, y 4.5 Mt para DF-5A. DF-5C aparece como multi-MT, sin potencia numérica precisa y en introducción, y el artículo menciona el desarrollo de armas menores de 10 kt sin acreditar un modelo operativo cuantificado. No se puede confirmar un mínimo o máximo nacional absoluto; 425 kt y 4.5 Mt son extremos de los modelos operativos con cifra publicada en esta revisión."
+  },
+  "b83Decision": "user_selected_operational_models_w88_excludes_b83",
+  "b83BudgetSource": "https://www.energy.gov/documents/doe-fy-2027-volume-1-wa",
+  "b83DecisionRecord": {
+    "date": "2026-10-25",
+    "userAnswer": "Usar W88: solo modelos operativos",
+    "questionItemId": "call_5289347ffc9843a7896bec0d0e6837b8",
+    "scopeEs": "Selección de referencia conceptual; no constituye aprobación de un sprint."
+  },
+  "supplementalReportedReferences": [
+    {
+      "id": "current-ru-avangard-reported-reference",
+      "name": "Avangard (Rusia)",
+      "country": "Rusia",
+      "reportedYieldLowerThresholdTonnes": 2000000,
+      "boundType": "strict_lower",
+      "reportedUpperThresholdTonnes": null,
+      "yieldOfficiallyConfirmed": false,
+      "sourceUrl": "https://tass.ru/armiya-i-opk/5047200",
+      "serviceStatusSource": "https://thebulletin.org/premium/2026-05/russian-nuclear-weapons-2026/",
+      "includedByUser": {
+        "date": "2026-10-26",
+        "message": "vamos a incluir el Avangard"
+      },
+      "noteEs": "Avangard: la referencia numérica de 2,000,000 toneladas de TNT representa el umbral citado en un reporte de TASS de 2018, cuya fuente anónima afirma una potencia superior a ese valor. TASS declara no disponer de confirmación oficial. No es una potencia exacta, un máximo conocido ni una estimación numérica de FAS. FAS 2026 sí incluye el sistema entre las fuerzas desplegadas, pero deja su potencia sin cuantificar."
+    }
+  ]
+}

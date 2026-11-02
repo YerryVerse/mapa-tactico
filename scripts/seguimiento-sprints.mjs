@@ -44,7 +44,7 @@ const guides = {
     ['Abrir el selector de idioma y comprobar sus veinte opciones.', 'Los idiomas se identifican por nombres nativos, sin banderas; todos son seleccionables.'],
     ['Cambiar entre español, inglés, árabe, hindi y chino con una ubicación elegida.', 'Cambian interfaz y nombres de países; ubicación y resultado vigente permanecen. No hay glifos vacíos ni texto recortado.'],
     ['Elegir árabe, urdu o punyabí occidental y recorrer los controles.', 'Paneles y texto tienen dirección correcta; coordenadas y cifras son legibles. El mapa mantiene su orientación geográfica.'],
-    ['Elegir un idioma manualmente y volver a abrir el portal.', 'Se conserva la elección. Sin preferencia guardada se utiliza una preferencia compatible del navegador o español.']
+    ['Elegir un idioma manualmente y volver a abrir el portal.', 'Se conserva la elección manual válida. Sin preferencia guardada se carga English desde el primer renderizado, independientemente del idioma del navegador.']
   ],
   3: [
     ['Buscar una ciudad y abrir su consulta poblacional.', 'El total identifica año, fuente y perímetro; no se confunde una coordenada central con los límites de la ciudad.'],
@@ -233,14 +233,18 @@ async function restoreDisplayOnlyInvalidation() {
   ]);
   const firstSprint = plan.indexOf('## Sprint 1 ');
   const commonContracts = plan.indexOf('## Contratos comunes');
-  if (firstSprint < 0 || commonContracts < 0 || !plan.includes('Revisión técnica: versión 22 del plan') || !plan.includes('Este ajuste administrativo no modifica los requisitos funcionales del portal ni requiere repetir su aceptación.')) {
-    throw new Error('La recuperación solo aplica al ajuste visual administrativo documentado en el plan v22.');
+  const displayOnlyChange = plan.includes('Revisión técnica: versión 22 del plan') && plan.includes('Este ajuste administrativo no modifica los requisitos funcionales del portal ni requiere repetir su aceptación.');
+  const sitesClarification = plan.includes('Revisión técnica: versión 26 del plan') && plan.includes('El runtime y los bindings D1/R2 de producción los administra OpenAI Sites; el portal publicado no exige que el usuario aloje u opere servidores, bases de datos, buckets ni instalaciones.');
+  if (firstSprint < 0 || commonContracts < 0 || (!displayOnlyChange && !sitesClarification)) {
+    throw new Error('La recuperación solo aplica a cambios administrativos documentados y con contexto funcional sin cambios.');
   }
   const unchangedContext = contextHashForAcceptance(plan, firstSprint, commonContracts);
   const priorContextHash = '3f0488730cc8487553295c934da319ca54b6637532839fefebf45d9ccd4ba0cc';
   if (unchangedContext !== priorContextHash) throw new Error('El contexto funcional también cambió; no se restaurarán aprobaciones automáticamente.');
 
-  const invalidationAt = state.updatedAt;
+  const invalidationEvents = state.sprints.filter(item => item.number <= 2).map(sprint => [...sprint.history].reverse().find(event => event.action === 'aceptacion_invalidada'));
+  const invalidationAt = invalidationEvents[0]?.at;
+  if (!invalidationAt || invalidationEvents.some(event => event?.at !== invalidationAt)) throw new Error('Los sprints 1 y 2 no comparten la misma invalidación administrativa más reciente.');
   const sprintOneEvidence = await readFile(path.join(root, 'docs', 'REVERIFICACION_SPRINT_02.md'), 'utf8');
   const sourceHash = /Producto: Sites24, SHA `([^`]+)`/.exec(sprintOneEvidence)?.[1];
   const sprintTwoAcceptance = await readFile(path.join(root, 'docs', 'ACEPTACION_SPRINT_02.md'), 'utf8');
@@ -253,7 +257,7 @@ async function restoreDisplayOnlyInvalidation() {
     const invalidation = [...sprint.history].reverse().find(event => event.action === 'aceptacion_invalidada');
     const laterReopen = sprint.history.some(event => ['reabierto', 'reject'].includes(event.action) && event.at > lastApproval?.at && event.at < invalidation?.at);
     if (sprint.phase !== 'pendiente' || !lastApproval || !invalidation || invalidation.at !== invalidationAt || lastApproval.at >= invalidation.at || laterReopen) {
-      throw new Error(`Sprint ${sprint.number} no cumple las condiciones de una invalidación visual corregible.`);
+      throw new Error(`Sprint ${sprint.number} no cumple las condiciones de una invalidación administrativa corregible.`);
     }
     for (const point of sprint.points) {
       if (point.kind === 'operacion') {
@@ -275,13 +279,14 @@ async function restoreDisplayOnlyInvalidation() {
       ? { url: portal, version: `Sites24 · fuente ${sourceHash} · sin marcador automático · revisión aprobada de Sprint 1`, preparedAt: priorReview.at }
       : { url: published[1], version: `Sites24 · fuente ${published[2]} · versión ${published[3]}`, preparedAt: priorReview.at };
     sprint.updatedAt = stamp;
-    sprint.history.push({ at: stamp, action: 'aceptacion_restaurada', reference: `Se corrige la invalidación automática por cambio administrativo de colores en Plan v22. Requisitos y evidencias funcionales preservados; aprobación explícita original de ${lastApproval.at}: ${lastApproval.reference}` });
+    const reason = sitesClarification ? 'Se corrige la invalidación automática por aclaración documental del runtime ya administrado por Sites en Plan v26.' : 'Se corrige la invalidación automática por cambio administrativo de colores en Plan v22.';
+    sprint.history.push({ at: stamp, action: 'aceptacion_restaurada', reference: `${reason} Requisitos y evidencias funcionales preservados; aprobación explícita original de ${lastApproval.at}: ${lastApproval.reference}` });
   }
   state.planHash = hash(plan);
   state.contextHash = unchangedContext;
   state.updatedAt = stamp;
   await save(state);
-  console.log('Aprobaciones y evidencias históricas de los sprints 1 y 2 restauradas; el cambio de colores no alteró el contexto funcional.');
+  console.log(`Aprobaciones y evidencias históricas de los sprints 1 y 2 restauradas; ${sitesClarification ? 'la aclaración de Sites' : 'el cambio de colores'} no alteró el contexto funcional.`);
 }
 
 function pointRows(points) {
@@ -482,7 +487,7 @@ async function serve() {
 try {
   if (command === 'sync') await sync();
   else if (command === 'serve') await serve();
-  else if (command === 'restore-display-only-invalidation') await restoreDisplayOnlyInvalidation();
+  else if (['restore-display-only-invalidation', 'restore-administrative-invalidation'].includes(command)) await restoreDisplayOnlyInvalidation();
   else if (['start', 'set', 'review', 'guide', 'approve', 'reject', 'reopen'].includes(command)) await mutate();
   else console.log('Comandos: sync | serve [--port 4174] | start --sprint N | set --id ID --status ESTADO --evidence TEXTO | guide --sprint N --file JSON_DE_PASOS | review --sprint N --url URL --version VERSION | approve/reject/reopen --sprint N --reference MENSAJE_DEL_USUARIO');
 } catch (error) { console.error(error.message); process.exitCode = 1; }

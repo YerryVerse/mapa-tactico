@@ -1,0 +1,142 @@
+[
+  {
+    "area": "Área consultada: 0,437184 km²",
+    "button": "Reintentar",
+    "lang": "es",
+    "message": "No hay datos de población disponibles para esta área; esto no significa cero habitantes.",
+    "resultPresent": false
+  },
+  {
+    "area": "Queried area: 0.437184 km²",
+    "button": "Retry",
+    "lang": "en",
+    "message": "Population data is unavailable for this area; this does not mean zero people.",
+    "resultPresent": false
+  },
+  {
+    "area": "查询面积: 0.437184 km²",
+    "button": "重试",
+    "lang": "zh-Hans",
+    "message": "此区域没有可用的人口数据；这不表示人口为零。",
+    "resultPresent": false
+  },
+  {
+    "area": "क्वेरी क्षेत्र: 0.437184 km²",
+    "button": "फिर कोशिश करें",
+    "lang": "hi",
+    "message": "इस क्षेत्र के लिए जनसंख्या डेटा उपलब्ध नहीं है; इसका अर्थ शून्य निवासी नहीं है।",
+    "resultPresent": false
+  },
+  {
+    "area": "المساحة المستعلم عنها: 0.437184 km²",
+    "button": "إعادة المحاولة",
+    "lang": "ar",
+    "message": "لا تتوفر بيانات سكانية لهذه المنطقة؛ وهذا لا يعني أن عدد السكان صفر.",
+    "resultPresent": false
+  },
+  {
+    "area": "Zone interrogée: 0,437184 km²",
+    "button": "Réessayer",
+    "lang": "fr",
+    "message": "Aucune donnée de population n’est disponible pour cette zone ; cela ne signifie pas zéro habitant.",
+    "resultPresent": false
+  },
+  {
+    "area": "অনুসন্ধান করা এলাকা: ০.৪৩৭১৮৪ km²",
+    "button": "আবার চেষ্টা করুন",
+    "lang": "bn",
+    "message": "এই এলাকার জন্য জনসংখ্যার তথ্য নেই; এর অর্থ শূন্য মানুষ নয়।",
+    "resultPresent": false
+  },
+  {
+    "area": "Área consultada: 0,437184 km²",
+    "button": "Tentar novamente",
+    "lang": "pt",
+    "message": "Não há dados populacionais disponíveis para esta área; isso não significa zero habitantes.",
+    "resultPresent": false
+  },
+  {
+    "area": "Область запроса: 0,437184 km²",
+    "button": "Повторить",
+    "lang": "ru",
+    "message": "Для этой области нет данных о населении; это не означает нулевое население.",
+    "resultPresent": false
+  },
+  {
+    "area": "Area yang dihitung: 0,437184 km²",
+    "button": "Coba lagi",
+    "lang": "id",
+    "message": "Data populasi tidak tersedia untuk area ini; bukan berarti jumlah penduduknya nol.",
+    "resultPresent": false
+  },
+  {
+    "area": "استعلام کا علاقہ: 0.437184 km²",
+    "button": "دوبارہ کوشش کریں",
+    "lang": "ur",
+    "message": "اس علاقے کے لیے آبادی کا ڈیٹا موجود نہیں؛ اس کا مطلب صفر آبادی نہیں ہے۔",
+    "resultPresent": false
+  },
+  {
+    "area": "Abgefragtes Gebiet: 0,437184 km²",
+    "button": "Erneut versuchen",
+    "lang": "de",
+    "message": "Für dieses Gebiet sind keine Bevölkerungsdaten verfügbar; das bedeutet nicht null Einwohner.",
+    "resultPresent": false
+  },
+  {
+    "area": "計算対象の面積: 0.437184 km²",
+    "button": "再試行",
+    "lang": "ja",
+    "message": "このエリアの人口データはありません。人口がゼロという意味ではありません。",
+    "resultPresent": false
+  },
+  {
+    "area": "क्वेरी केलेले क्षेत्र: ०.४३७१८४ km²",
+    "button": "पुन्हा प्रयत्न करा",
+    "lang": "mr",
+    "message": "या क्षेत्रासाठी लोकसंख्या डेटा उपलब्ध नाही; याचा अर्थ लोकसंख्या शून्य नाही.",
+    "resultPresent": false
+  },
+  {
+    "area": "Diện tích truy vấn: 0,437184 km²",
+    "button": "Thử lại",
+    "lang": "vi",
+    "message": "Không có dữ liệu dân số cho khu vực này; điều đó không có nghĩa là không có người.",
+    "resultPresent": false
+  },
+  {
+    "area": "క్వెరీ చేసిన విస్తీర్ణం: 0.437184 km²",
+    "button": "మళ్లీ ప్రయత్నించండి",
+    "lang": "te",
+    "message": "ఈ ప్రాంతానికి జనాభా డేటా లేదు; దీని అర్థం జనాభా సున్నా కాదు.",
+    "resultPresent": false
+  },
+  {
+    "area": "Eneo lililoulizwa: 0.437184 km²",
+    "button": "Jaribu tena",
+    "lang": "sw",
+    "message": "Hakuna data ya idadi ya watu kwa eneo hili; haimaanishi kuwa hakuna watu.",
+    "resultPresent": false
+  },
+  {
+    "area": "Yankin bincike: 0.437184 km²",
+    "button": "Sake gwadawa",
+    "lang": "ha-Latn",
+    "message": "Babu bayanan yawan jama’a ga wannan yanki; wannan ba yana nufin mutane sifili ba.",
+    "resultPresent": false
+  },
+  {
+    "area": "Sorgulanan alan: 0,437184 km²",
+    "button": "Yeniden dene",
+    "lang": "tr",
+    "message": "Bu alan için nüfus verisi yok; bu, nüfusun sıfır olduğu anlamına gelmez.",
+    "resultPresent": false
+  },
+  {
+    "area": "سوال والا علاقہ: ۰٫۴۳۷۱۸۴ km²",
+    "button": "فیر کوشش کرو",
+    "lang": "pnb-Arab",
+    "message": "ایس علاقے لئی آبادی دا ڈیٹا نہیں؛ ایہ صفر آبادی نہیں دسد ا۔",
+    "resultPresent": false
+  }
+]

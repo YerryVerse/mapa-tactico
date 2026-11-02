@@ -1,0 +1,716 @@
+{
+  "version": 47,
+  "before": {
+    "camera": {
+      "center": [
+        -69.8845,
+        18.47369999999999
+      ],
+      "contextLayers": [
+        "context-point",
+        "context-label"
+      ],
+      "countryField": [
+        "get",
+        "name_pt"
+      ],
+      "countryLabels": [],
+      "fiveMetersCssPx": 2.2069523355307297,
+      "projection": "globe",
+      "reference": null,
+      "scriptCount": 0,
+      "tilesLoaded": true,
+      "viewport": [
+        1141,
+        764
+      ],
+      "zoom": 15
+    },
+    "point": "{\"lng\":-69.8845,\"lat\":18.4737}",
+    "signature": "{\"id\":\"beirut-2020-context\",\"version\":\"context-20261011-2\"}"
+  },
+  "options": [
+    {
+      "id": "es",
+      "name": "Español"
+    },
+    {
+      "id": "en",
+      "name": "English✓"
+    },
+    {
+      "id": "zh-Hans",
+      "name": "简体中文"
+    },
+    {
+      "id": "hi",
+      "name": "हिन्दी"
+    },
+    {
+      "id": "ar",
+      "name": "العربية"
+    },
+    {
+      "id": "fr",
+      "name": "Français"
+    },
+    {
+      "id": "bn",
+      "name": "বাংলা"
+    },
+    {
+      "id": "pt",
+      "name": "Português"
+    },
+    {
+      "id": "ru",
+      "name": "Русский"
+    },
+    {
+      "id": "id",
+      "name": "Bahasa Indonesia"
+    },
+    {
+      "id": "ur",
+      "name": "اردو"
+    },
+    {
+      "id": "de",
+      "name": "Deutsch"
+    },
+    {
+      "id": "ja",
+      "name": "日本語"
+    },
+    {
+      "id": "mr",
+      "name": "मराठी"
+    },
+    {
+      "id": "vi",
+      "name": "Tiếng Việt"
+    },
+    {
+      "id": "te",
+      "name": "తెలుగు"
+    },
+    {
+      "id": "sw",
+      "name": "Kiswahili"
+    },
+    {
+      "id": "ha-Latn",
+      "name": "Hausa"
+    },
+    {
+      "id": "tr",
+      "name": "Türkçe"
+    },
+    {
+      "id": "pnb-Arab",
+      "name": "پنجابی"
+    }
+  ],
+  "rows": [
+    {
+      "camera": {
+        "center": [
+          -69.8845,
+          18.47369999999999
+        ],
+        "contextLayers": [],
+        "countryField": [
+          "get",
+          "name_es"
+        ],
+        "countryLabels": [],
+        "fiveMetersCssPx": 2.2069523355307297,
+        "projection": "globe",
+        "reference": null,
+        "scriptCount": 0,
+        "tilesLoaded": true,
+        "viewport": [
+          1141,
+          764
+        ],
+        "zoom": 15
+      },
+      "dir": "ltr",
+      "lang": "es",
+      "panel": "result",
+      "point": "{\"lng\":-69.8845,\"lat\":18.4737}",
+      "signature": "{\"id\":\"beirut-2020-context\",\"version\":\"context-20261011-2\"}",
+      "text": "Beirut, 2020IdiomaBuscar idiomaEspañol✓English简体中文हिन्दीالعربيةFrançaisবাংলাPortuguêsРусскийBahasa IndonesiaاردوDeutsch日本語मराठीTiếng ViệtతెలుగుKiswahiliHausaTürkçeپنجابیEl 4 de agosto de 2020 se produjo una explosión en el puerto de Beirut, Líbano.Ver ubicación del registroUbicación de referenciaBeirut, LíbanoGeoNames — Beirut (ciudad) ↗FuentesONU — Explosión en el puerto de Beirut (4 agosto 2020) ↗Elegir otro escenario"
+    },
+    {
+      "camera": {
+        "center": [
+          -69.8845,
+          18.47369999999999
+        ],
+        "contextLayers": [],
+        "countryField": [
+          "get",
+          "name_en"
+        ],
+        "countryLabels": [],
+        "fiveMetersCssPx": 2.2069523355307297,
+        "projection": "globe",
+        "reference": null,
+        "scriptCount": 0,
+        "tilesLoaded": true,
+        "viewport": [
+          1141,
+          764
+        ],
+        "zoom": 15
+      },
+      "dir": "ltr",
+      "lang": "en",
+      "panel": "result",
+      "point": "{\"lng\":-69.8845,\"lat\":18.4737}",
+      "signature": "{\"id\":\"beirut-2020-context\",\"version\":\"context-20261011-2\"}",
+      "text": "Beirut, 2020LanguageFind a languageEspañolEnglish✓简体中文हिन्दीالعربيةFrançaisবাংলাPortuguêsРусскийBahasa IndonesiaاردوDeutsch日本語मराठीTiếng ViệtతెలుగుKiswahiliHausaTürkçeپنجابیAn explosion occurred in the port of Beirut, Lebanon, on 4 August 2020.View record locationReference locationBeirut, LebanonGeoNames — Beirut (city) ↗SourcesUN — Explosion in the port of Beirut (4 August 2020) ↗Choose another scenario"
+    },
+    {
+      "camera": {
+        "center": [
+          -69.8845,
+          18.47369999999999
+        ],
+        "contextLayers": [],
+        "countryField": [
+          "get",
+          "name_zh-Hans"
+        ],
+        "countryLabels": [],
+        "fiveMetersCssPx": 2.2069523355307297,
+        "projection": "globe",
+        "reference": null,
+        "scriptCount": 0,
+        "tilesLoaded": true,
+        "viewport": [
+          1141,
+          764
+        ],
+        "zoom": 15
+      },
+      "dir": "ltr",
+      "lang": "zh-Hans",
+      "panel": "result",
+      "point": "{\"lng\":-69.8845,\"lat\":18.4737}",
+      "signature": "{\"id\":\"beirut-2020-context\",\"version\":\"context-20261011-2\"}",
+      "text": "贝鲁特，2020 年语言搜索语言EspañolEnglish简体中文✓हिन्दीالعربيةFrançaisবাংলাPortuguêsРусскийBahasa IndonesiaاردوDeutsch日本語मराठीTiếng ViệtతెలుగుKiswahiliHausaTürkçeپنجابی2020 年 8 月 4 日，黎巴嫩贝鲁特港发生爆炸。查看记录的位置参考位置黎巴嫩贝鲁特GeoNames — 贝鲁特（城市） ↗来源联合国 — 贝鲁特港爆炸（2020 年 8 月 4 日） ↗选择其他情景"
+    },
+    {
+      "camera": {
+        "center": [
+          -69.8845,
+          18.47369999999999
+        ],
+        "contextLayers": [],
+        "countryField": [
+          "get",
+          "name_hi"
+        ],
+        "countryLabels": [],
+        "fiveMetersCssPx": 2.2069523355307297,
+        "projection": "globe",
+        "reference": null,
+        "scriptCount": 0,
+        "tilesLoaded": true,
+        "viewport": [
+          1141,
+          764
+        ],
+        "zoom": 15
+      },
+      "dir": "ltr",
+      "lang": "hi",
+      "panel": "result",
+      "point": "{\"lng\":-69.8845,\"lat\":18.4737}",
+      "signature": "{\"id\":\"beirut-2020-context\",\"version\":\"context-20261011-2\"}",
+      "text": "बेरूत, 2020भाषाभाषा खोजेंEspañolEnglish简体中文हिन्दी✓العربيةFrançaisবাংলাPortuguêsРусскийBahasa IndonesiaاردوDeutsch日本語मराठीTiếng ViệtతెలుగుKiswahiliHausaTürkçeپنجابی4 अगस्त 2020 को लेबनान के बेरूत बंदरगाह में विस्फोट हुआ था।अभिलेख का स्थान देखेंसंदर्भ स्थानबेरूत, लेबनानGeoNames — बेरूत (शहर) ↗स्रोतसंयुक्त राष्ट्र — बेरूत बंदरगाह में विस्फोट (4 अगस्त 2020) ↗दूसरा परिदृश्य चुनें"
+    },
+    {
+      "camera": {
+        "center": [
+          -69.8845,
+          18.47369999999999
+        ],
+        "contextLayers": [],
+        "countryField": [
+          "get",
+          "name_ar"
+        ],
+        "countryLabels": [],
+        "fiveMetersCssPx": 2.2069523355307297,
+        "projection": "globe",
+        "reference": null,
+        "scriptCount": 0,
+        "tilesLoaded": true,
+        "viewport": [
+          1141,
+          764
+        ],
+        "zoom": 15
+      },
+      "dir": "rtl",
+      "lang": "ar",
+      "panel": "result",
+      "point": "{\"lng\":-69.8845,\"lat\":18.4737}",
+      "signature": "{\"id\":\"beirut-2020-context\",\"version\":\"context-20261011-2\"}",
+      "text": "بيروت، 2020اللغةالبحث عن لغةEspañolEnglish简体中文हिन्दीالعربية✓FrançaisবাংলাPortuguêsРусскийBahasa IndonesiaاردوDeutsch日本語मराठीTiếng ViệtతెలుగుKiswahiliHausaTürkçeپنجابیوقع انفجار في مرفأ بيروت، لبنان، في 4 أغسطس 2020.عرض موقع الحدث المسجلالموقع المرجعيبيروت، لبنانGeoNames — بيروت (مدينة) ↗المصادرالأمم المتحدة — انفجار مرفأ بيروت (4 أغسطس 2020) ↗اختيار سيناريو آخر"
+    },
+    {
+      "camera": {
+        "center": [
+          -69.8845,
+          18.47369999999999
+        ],
+        "contextLayers": [],
+        "countryField": [
+          "get",
+          "name_fr"
+        ],
+        "countryLabels": [],
+        "fiveMetersCssPx": 2.2069523355307297,
+        "projection": "globe",
+        "reference": null,
+        "scriptCount": 0,
+        "tilesLoaded": true,
+        "viewport": [
+          1141,
+          764
+        ],
+        "zoom": 15
+      },
+      "dir": "ltr",
+      "lang": "fr",
+      "panel": "result",
+      "point": "{\"lng\":-69.8845,\"lat\":18.4737}",
+      "signature": "{\"id\":\"beirut-2020-context\",\"version\":\"context-20261011-2\"}",
+      "text": "Beyrouth, 2020LangueRechercher une langueEspañolEnglish简体中文हिन्दीالعربيةFrançais✓বাংলাPortuguêsРусскийBahasa IndonesiaاردوDeutsch日本語मराठीTiếng ViệtతెలుగుKiswahiliHausaTürkçeپنجابیLe 4 août 2020, une explosion s’est produite dans le port de Beyrouth, au Liban.Voir l’emplacement de la ficheEmplacement de référenceBeyrouth, LibanGeoNames — Beyrouth (ville) ↗SourcesONU — Explosion dans le port de Beyrouth (4 août 2020) ↗Choisir un autre scénario"
+    },
+    {
+      "camera": {
+        "center": [
+          -69.8845,
+          18.47369999999999
+        ],
+        "contextLayers": [],
+        "countryField": [
+          "get",
+          "name_bn"
+        ],
+        "countryLabels": [],
+        "fiveMetersCssPx": 2.2069523355307297,
+        "projection": "globe",
+        "reference": null,
+        "scriptCount": 0,
+        "tilesLoaded": true,
+        "viewport": [
+          1141,
+          764
+        ],
+        "zoom": 15
+      },
+      "dir": "ltr",
+      "lang": "bn",
+      "panel": "result",
+      "point": "{\"lng\":-69.8845,\"lat\":18.4737}",
+      "signature": "{\"id\":\"beirut-2020-context\",\"version\":\"context-20261011-2\"}",
+      "text": "বৈরুত, 2020ভাষাভাষা খুঁজুনEspañolEnglish简体中文हिन्दीالعربيةFrançaisবাংলা✓PortuguêsРусскийBahasa IndonesiaاردوDeutsch日本語मराठीTiếng ViệtతెలుగుKiswahiliHausaTürkçeپنجابی4 আগস্ট 2020-এ লেবাননের বৈরুত বন্দরে একটি বিস্ফোরণ ঘটে।নথির স্থান দেখুনউল্লেখিত স্থানবৈরুত, লেবাননGeoNames — বৈরুত (শহর) ↗উৎসজাতিসংঘ — বৈরুত বন্দরের বিস্ফোরণ (4 আগস্ট 2020) ↗অন্য পরিস্থিতি বেছে নিন"
+    },
+    {
+      "camera": {
+        "center": [
+          -69.8845,
+          18.47369999999999
+        ],
+        "contextLayers": [],
+        "countryField": [
+          "get",
+          "name_pt"
+        ],
+        "countryLabels": [],
+        "fiveMetersCssPx": 2.2069523355307297,
+        "projection": "globe",
+        "reference": null,
+        "scriptCount": 0,
+        "tilesLoaded": true,
+        "viewport": [
+          1141,
+          764
+        ],
+        "zoom": 15
+      },
+      "dir": "ltr",
+      "lang": "pt",
+      "panel": "result",
+      "point": "{\"lng\":-69.8845,\"lat\":18.4737}",
+      "signature": "{\"id\":\"beirut-2020-context\",\"version\":\"context-20261011-2\"}",
+      "text": "Beirute, 2020IdiomaBuscar idiomaEspañolEnglish简体中文हिन्दीالعربيةFrançaisবাংলাPortuguês✓РусскийBahasa IndonesiaاردوDeutsch日本語मराठीTiếng ViệtతెలుగుKiswahiliHausaTürkçeپنجابیEm 4 de agosto de 2020, ocorreu uma explosão no porto de Beirute, no Líbano.Ver localização do registroLocalização de referênciaBeirute, LíbanoGeoNames — Beirute (cidade) ↗FontesONU — Explosão no porto de Beirute (4 de agosto de 2020) ↗Escolher outro cenário"
+    },
+    {
+      "camera": {
+        "center": [
+          -69.8845,
+          18.47369999999999
+        ],
+        "contextLayers": [],
+        "countryField": [
+          "get",
+          "name_ru"
+        ],
+        "countryLabels": [],
+        "fiveMetersCssPx": 2.2069523355307297,
+        "projection": "globe",
+        "reference": null,
+        "scriptCount": 0,
+        "tilesLoaded": true,
+        "viewport": [
+          1141,
+          764
+        ],
+        "zoom": 15
+      },
+      "dir": "ltr",
+      "lang": "ru",
+      "panel": "result",
+      "point": "{\"lng\":-69.8845,\"lat\":18.4737}",
+      "signature": "{\"id\":\"beirut-2020-context\",\"version\":\"context-20261011-2\"}",
+      "text": "Бейрут, 2020ЯзыкНайти языкEspañolEnglish简体中文हिन्दीالعربيةFrançaisবাংলাPortuguêsРусский✓Bahasa IndonesiaاردوDeutsch日本語मराठीTiếng ViệtతెలుగుKiswahiliHausaTürkçeپنجابی4 августа 2020 года в порту Бейрута, Ливан, произошёл взрыв.Показать место зарегистрированного событияМесто, указанное в источникеБейрут, ЛиванGeoNames — Бейрут (город) ↗ИсточникиООН — Взрыв в порту Бейрута (4 августа 2020 года) ↗Выбрать другой сценарий"
+    },
+    {
+      "camera": {
+        "center": [
+          -69.8845,
+          18.47369999999999
+        ],
+        "contextLayers": [],
+        "countryField": [
+          "get",
+          "name_id"
+        ],
+        "countryLabels": [],
+        "fiveMetersCssPx": 2.2069523355307297,
+        "projection": "globe",
+        "reference": null,
+        "scriptCount": 0,
+        "tilesLoaded": true,
+        "viewport": [
+          1141,
+          764
+        ],
+        "zoom": 15
+      },
+      "dir": "ltr",
+      "lang": "id",
+      "panel": "result",
+      "point": "{\"lng\":-69.8845,\"lat\":18.4737}",
+      "signature": "{\"id\":\"beirut-2020-context\",\"version\":\"context-20261011-2\"}",
+      "text": "Beirut, 2020BahasaCari bahasaEspañolEnglish简体中文हिन्दीالعربيةFrançaisবাংলাPortuguêsРусскийBahasa Indonesia✓اردوDeutsch日本語मराठीTiếng ViệtతెలుగుKiswahiliHausaTürkçeپنجابیPada 4 Agustus 2020, terjadi ledakan di pelabuhan Beirut, Lebanon.Lihat lokasi dalam catatanLokasi rujukanBeirut, LebanonGeoNames — Beirut (kota) ↗SumberPBB — Ledakan di pelabuhan Beirut (4 Agustus 2020) ↗Pilih skenario lain"
+    },
+    {
+      "camera": {
+        "center": [
+          -69.8845,
+          18.47369999999999
+        ],
+        "contextLayers": [],
+        "countryField": [
+          "get",
+          "name_ur"
+        ],
+        "countryLabels": [],
+        "fiveMetersCssPx": 2.2069523355307297,
+        "projection": "globe",
+        "reference": null,
+        "scriptCount": 0,
+        "tilesLoaded": true,
+        "viewport": [
+          1141,
+          764
+        ],
+        "zoom": 15
+      },
+      "dir": "rtl",
+      "lang": "ur",
+      "panel": "result",
+      "point": "{\"lng\":-69.8845,\"lat\":18.4737}",
+      "signature": "{\"id\":\"beirut-2020-context\",\"version\":\"context-20261011-2\"}",
+      "text": "بیروت، 2020زبانزبان تلاش کریںEspañolEnglish简体中文हिन्दीالعربيةFrançaisবাংলাPortuguêsРусскийBahasa Indonesiaاردو✓Deutsch日本語मराठीTiếng ViệtతెలుగుKiswahiliHausaTürkçeپنجابی4 اگست 2020 کو لبنان کے شہر بیروت کی بندرگاہ پر دھماکا ہوا۔درج شدہ واقعے کا مقام دیکھیںحوالہ جاتی مقامبیروت، لبنانGeoNames — بیروت (شہر) ↗ماخذاقوام متحدہ — بیروت کی بندرگاہ پر دھماکا (4 اگست 2020) ↗دوسرا منظرنامہ منتخب کریں"
+    },
+    {
+      "camera": {
+        "center": [
+          -69.8845,
+          18.47369999999999
+        ],
+        "contextLayers": [],
+        "countryField": [
+          "get",
+          "name_de"
+        ],
+        "countryLabels": [],
+        "fiveMetersCssPx": 2.2069523355307297,
+        "projection": "globe",
+        "reference": null,
+        "scriptCount": 0,
+        "tilesLoaded": true,
+        "viewport": [
+          1141,
+          764
+        ],
+        "zoom": 15
+      },
+      "dir": "ltr",
+      "lang": "de",
+      "panel": "result",
+      "point": "{\"lng\":-69.8845,\"lat\":18.4737}",
+      "signature": "{\"id\":\"beirut-2020-context\",\"version\":\"context-20261011-2\"}",
+      "text": "Beirut, 2020SpracheSprache suchenEspañolEnglish简体中文हिन्दीالعربيةFrançaisবাংলাPortuguêsРусскийBahasa IndonesiaاردوDeutsch✓日本語मराठीTiếng ViệtతెలుగుKiswahiliHausaTürkçeپنجابیAm 4. August 2020 ereignete sich eine Explosion im Hafen von Beirut im Libanon.Standort des Eintrags anzeigenReferenzstandortBeirut, LibanonGeoNames — Beirut (Stadt) ↗QuellenUN — Explosion im Hafen von Beirut (4. August 2020) ↗Anderes Szenario auswählen"
+    },
+    {
+      "camera": {
+        "center": [
+          -69.8845,
+          18.47369999999999
+        ],
+        "contextLayers": [],
+        "countryField": [
+          "get",
+          "name_ja"
+        ],
+        "countryLabels": [],
+        "fiveMetersCssPx": 2.2069523355307297,
+        "projection": "globe",
+        "reference": null,
+        "scriptCount": 0,
+        "tilesLoaded": true,
+        "viewport": [
+          1141,
+          764
+        ],
+        "zoom": 15
+      },
+      "dir": "ltr",
+      "lang": "ja",
+      "panel": "result",
+      "point": "{\"lng\":-69.8845,\"lat\":18.4737}",
+      "signature": "{\"id\":\"beirut-2020-context\",\"version\":\"context-20261011-2\"}",
+      "text": "ベイルート、2020 年言語言語を検索EspañolEnglish简体中文हिन्दीالعربيةFrançaisবাংলাPortuguêsРусскийBahasa IndonesiaاردوDeutsch日本語✓मराठीTiếng ViệtతెలుగుKiswahiliHausaTürkçeپنجابی2020 年 8 月 4 日、レバノンのベイルート港で爆発が発生しました。記録の位置を表示参考位置レバノン、ベイルートGeoNames — ベイルート（都市） ↗出典国際連合 — ベイルート港の爆発（2020 年 8 月 4 日） ↗別のシナリオを選択"
+    },
+    {
+      "camera": {
+        "center": [
+          -69.8845,
+          18.47369999999999
+        ],
+        "contextLayers": [],
+        "countryField": [
+          "get",
+          "name_mr"
+        ],
+        "countryLabels": [],
+        "fiveMetersCssPx": 2.2069523355307297,
+        "projection": "globe",
+        "reference": null,
+        "scriptCount": 0,
+        "tilesLoaded": true,
+        "viewport": [
+          1141,
+          764
+        ],
+        "zoom": 15
+      },
+      "dir": "ltr",
+      "lang": "mr",
+      "panel": "result",
+      "point": "{\"lng\":-69.8845,\"lat\":18.4737}",
+      "signature": "{\"id\":\"beirut-2020-context\",\"version\":\"context-20261011-2\"}",
+      "text": "बेरूत, 2020भाषाभाषा शोधाEspañolEnglish简体中文हिन्दीالعربيةFrançaisবাংলাPortuguêsРусскийBahasa IndonesiaاردوDeutsch日本語मराठी✓Tiếng ViệtతెలుగుKiswahiliHausaTürkçeپنجابی4 ऑगस्ट 2020 रोजी लेबनॉनमधील बेरूत बंदरात स्फोट झाला.नोंदीतील ठिकाण पाहासंदर्भातील ठिकाणबेरूत, लेबनॉनGeoNames — बेरूत (शहर) ↗स्रोतसंयुक्त राष्ट्र — बेरूत बंदरातील स्फोट (4 ऑगस्ट 2020) ↗दुसरी परिस्थिती निवडा"
+    },
+    {
+      "camera": {
+        "center": [
+          -69.8845,
+          18.47369999999999
+        ],
+        "contextLayers": [],
+        "countryField": [
+          "get",
+          "name_vi"
+        ],
+        "countryLabels": [],
+        "fiveMetersCssPx": 2.2069523355307297,
+        "projection": "globe",
+        "reference": null,
+        "scriptCount": 0,
+        "tilesLoaded": true,
+        "viewport": [
+          1141,
+          764
+        ],
+        "zoom": 15
+      },
+      "dir": "ltr",
+      "lang": "vi",
+      "panel": "result",
+      "point": "{\"lng\":-69.8845,\"lat\":18.4737}",
+      "signature": "{\"id\":\"beirut-2020-context\",\"version\":\"context-20261011-2\"}",
+      "text": "Beirut, 2020Ngôn ngữTìm ngôn ngữEspañolEnglish简体中文हिन्दीالعربيةFrançaisবাংলাPortuguêsРусскийBahasa IndonesiaاردوDeutsch日本語मराठीTiếng Việt✓తెలుగుKiswahiliHausaTürkçeپنجابیNgày 4 tháng 8 năm 2020, một vụ nổ xảy ra tại cảng Beirut, Liban.Xem vị trí trong hồ sơVị trí tham chiếuBeirut, LibanGeoNames — Beirut (thành phố) ↗NguồnLiên Hợp Quốc — Vụ nổ tại cảng Beirut (4 tháng 8 năm 2020) ↗Chọn kịch bản khác"
+    },
+    {
+      "camera": {
+        "center": [
+          -69.8845,
+          18.47369999999999
+        ],
+        "contextLayers": [],
+        "countryField": [
+          "get",
+          "name_te"
+        ],
+        "countryLabels": [],
+        "fiveMetersCssPx": 2.2069523355307297,
+        "projection": "globe",
+        "reference": null,
+        "scriptCount": 0,
+        "tilesLoaded": true,
+        "viewport": [
+          1141,
+          764
+        ],
+        "zoom": 15
+      },
+      "dir": "ltr",
+      "lang": "te",
+      "panel": "result",
+      "point": "{\"lng\":-69.8845,\"lat\":18.4737}",
+      "signature": "{\"id\":\"beirut-2020-context\",\"version\":\"context-20261011-2\"}",
+      "text": "బీరూట్, 2020భాషభాషను వెతకండిEspañolEnglish简体中文हिन्दीالعربيةFrançaisবাংলাPortuguêsРусскийBahasa IndonesiaاردوDeutsch日本語मराठीTiếng Việtతెలుగు✓KiswahiliHausaTürkçeپنجابی2020 ఆగస్టు 4న లెబనాన్‌లోని బీరూట్ నౌకాశ్రయంలో పేలుడు జరిగింది.నమోదులోని ప్రదేశాన్ని చూడండిసూచించిన ప్రదేశంబీరూట్, లెబనాన్GeoNames — బీరూట్ (నగరం) ↗మూలాలుఐక్యరాజ్యసమితి — బీరూట్ నౌకాశ్రయంలో పేలుడు (2020 ఆగస్టు 4) ↗మరో పరిస్థితిని ఎంచుకోండి"
+    },
+    {
+      "camera": {
+        "center": [
+          -69.8845,
+          18.47369999999999
+        ],
+        "contextLayers": [],
+        "countryField": [
+          "get",
+          "name_sw"
+        ],
+        "countryLabels": [],
+        "fiveMetersCssPx": 2.2069523355307297,
+        "projection": "globe",
+        "reference": null,
+        "scriptCount": 0,
+        "tilesLoaded": true,
+        "viewport": [
+          1141,
+          764
+        ],
+        "zoom": 15
+      },
+      "dir": "ltr",
+      "lang": "sw",
+      "panel": "result",
+      "point": "{\"lng\":-69.8845,\"lat\":18.4737}",
+      "signature": "{\"id\":\"beirut-2020-context\",\"version\":\"context-20261011-2\"}",
+      "text": "Beirut, 2020LughaTafuta lughaEspañolEnglish简体中文हिन्दीالعربيةFrançaisবাংলাPortuguêsРусскийBahasa IndonesiaاردوDeutsch日本語मराठीTiếng ViệtతెలుగుKiswahili✓HausaTürkçeپنجابیTarehe 4 Agosti 2020, mlipuko ulitokea katika bandari ya Beirut, Lebanoni.Angalia eneo la tukio lililorekodiwaEneo la rejeleoBeirut, LebanoniGeoNames — Beirut (jiji) ↗VyanzoUmoja wa Mataifa — Mlipuko katika bandari ya Beirut (4 Agosti 2020) ↗Chagua tukio jingine"
+    },
+    {
+      "camera": {
+        "center": [
+          -69.8845,
+          18.47369999999999
+        ],
+        "contextLayers": [],
+        "countryField": [
+          "get",
+          "name_ha-Latn"
+        ],
+        "countryLabels": [],
+        "fiveMetersCssPx": 2.2069523355307297,
+        "projection": "globe",
+        "reference": null,
+        "scriptCount": 0,
+        "tilesLoaded": true,
+        "viewport": [
+          1141,
+          764
+        ],
+        "zoom": 15
+      },
+      "dir": "ltr",
+      "lang": "ha-Latn",
+      "panel": "result",
+      "point": "{\"lng\":-69.8845,\"lat\":18.4737}",
+      "signature": "{\"id\":\"beirut-2020-context\",\"version\":\"context-20261011-2\"}",
+      "text": "Beirut, 2020HarsheNemo harsheEspañolEnglish简体中文हिन्दीالعربيةFrançaisবাংলাPortuguêsРусскийBahasa IndonesiaاردوDeutsch日本語मराठीTiếng ViệtతెలుగుKiswahiliHausa✓TürkçeپنجابیA ranar 4 ga Agusta 2020, an yi fashewa a tashar jiragen ruwa ta Beirut a Lebanon.Duba wurin abin da aka rubutaWurin da aka ambataBeirut, LebanonGeoNames — Beirut (birni) ↗MadogaraMajalisar Ɗinkin Duniya — Fashewa a tashar jiragen ruwa ta Beirut (4 ga Agusta 2020) ↗Zaɓi wani yanayi"
+    },
+    {
+      "camera": {
+        "center": [
+          -69.8845,
+          18.47369999999999
+        ],
+        "contextLayers": [],
+        "countryField": [
+          "get",
+          "name_tr"
+        ],
+        "countryLabels": [],
+        "fiveMetersCssPx": 2.2069523355307297,
+        "projection": "globe",
+        "reference": null,
+        "scriptCount": 0,
+        "tilesLoaded": true,
+        "viewport": [
+          1141,
+          764
+        ],
+        "zoom": 15
+      },
+      "dir": "ltr",
+      "lang": "tr",
+      "panel": "result",
+      "point": "{\"lng\":-69.8845,\"lat\":18.4737}",
+      "signature": "{\"id\":\"beirut-2020-context\",\"version\":\"context-20261011-2\"}",
+      "text": "Beyrut, 2020DilDil araEspañolEnglish简体中文हिन्दीالعربيةFrançaisবাংলাPortuguêsРусскийBahasa IndonesiaاردوDeutsch日本語मराठीTiếng ViệtతెలుగుKiswahiliHausaTürkçe✓پنجابی4 Ağustos 2020 tarihinde Lübnan’ın Beyrut limanında bir patlama meydana geldi.Kaydın konumunu gösterReferans konumuBeyrut, LübnanGeoNames — Beyrut (şehir) ↗KaynaklarBM — Beyrut limanındaki patlama (4 Ağustos 2020) ↗Başka senaryo seç"
+    },
+    {
+      "camera": {
+        "center": [
+          -69.8845,
+          18.47369999999999
+        ],
+        "contextLayers": [],
+        "countryField": [
+          "get",
+          "name_pnb-Arab"
+        ],
+        "countryLabels": [],
+        "fiveMetersCssPx": 2.2069523355307297,
+        "projection": "globe",
+        "reference": null,
+        "scriptCount": 0,
+        "tilesLoaded": true,
+        "viewport": [
+          1141,
+          764
+        ],
+        "zoom": 15
+      },
+      "dir": "rtl",
+      "lang": "pnb-Arab",
+      "panel": "result",
+      "point": "{\"lng\":-69.8845,\"lat\":18.4737}",
+      "signature": "{\"id\":\"beirut-2020-context\",\"version\":\"context-20261011-2\"}",
+      "text": "بیروت، 2020بولیبولی لبھوEspañolEnglish简体中文हिन्दीالعربيةFrançaisবাংলাPortuguêsРусскийBahasa IndonesiaاردوDeutsch日本語मराठीTiếng ViệtతెలుగుKiswahiliHausaTürkçeپنجابی✓4 اگست 2020 نوں لبنان دے شہر بیروت دی بندرگاہ اُتے دھماکا ہویا۔درج کیتے واقعے دی تھاں ویکھوحوالے دی تھاںبیروت، لبنانGeoNames — بیروت (شہر) ↗ماخذاقوام متحدہ — بیروت دی بندرگاہ اُتے دھماکا (4 اگست 2020) ↗کوئی ہور منظرنامہ چنو"
+    }
+  ]
+}

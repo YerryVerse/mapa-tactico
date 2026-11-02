@@ -1,0 +1,56 @@
+[
+  {
+    "at": 1791975210017,
+    "path": "/api/population/area",
+    "status": 200,
+    "outcome": "ok",
+    "cpuMs": 167,
+    "wallMs": 752,
+    "version": "6ff9a2cd-7739-48af-9ea7-4bf22fdd5925"
+  },
+  {
+    "at": 1791975181401,
+    "path": "/",
+    "status": 200,
+    "outcome": "ok",
+    "cpuMs": 15,
+    "wallMs": 19,
+    "version": "6ff9a2cd-7739-48af-9ea7-4bf22fdd5925"
+  },
+  {
+    "at": 1791975180988,
+    "path": "/",
+    "status": 200,
+    "outcome": "ok",
+    "cpuMs": 46,
+    "wallMs": 58,
+    "version": "6ff9a2cd-7739-48af-9ea7-4bf22fdd5925"
+  },
+  {
+    "at": 1791975138283,
+    "path": "/",
+    "status": 200,
+    "outcome": "ok",
+    "cpuMs": 62,
+    "wallMs": 80,
+    "version": "6ff9a2cd-7739-48af-9ea7-4bf22fdd5925"
+  },
+  {
+    "at": 1791975135888,
+    "path": "/_next/static/chunks/layout-segment-context-CduL0xRh.js",
+    "status": 404,
+    "outcome": "ok",
+    "cpuMs": 27,
+    "wallMs": 41,
+    "version": "61cfd489-2810-48b1-8cf7-364450873949"
+  },
+  {
+    "at": 1791975135490,
+    "path": "/",
+    "status": 200,
+    "outcome": "ok",
+    "cpuMs": 43,
+    "wallMs": 53,
+    "version": "6ff9a2cd-7739-48af-9ea7-4bf22fdd5925"
+  }
+]

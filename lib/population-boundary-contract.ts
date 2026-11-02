@@ -3,7 +3,7 @@ import {z} from 'zod';
 const boundaryCandidateSchema=z.object({
   boundaryLayerId:z.string().regex(/^[A-Z]{3}-ADM[012]-[A-Za-z0-9-]{3,80}$/),
   featureId:z.string().min(1).max(160),name:z.string().min(1).max(240),countryCode:z.string().regex(/^[A-Z]{3}$/),
-  level:z.literal('ADM2'),boundaryYear:z.string().min(1).max(20),license:z.string().min(1).max(240),source:z.string().min(1).max(240),
+  level:z.enum(['ADM0','ADM2']),boundaryYear:z.string().min(1).max(20),license:z.string().min(1).max(240),source:z.string().min(1).max(240),
   aliases:z.array(z.string().max(240)).max(10),geometryType:z.enum(['Polygon','MultiPolygon']),areaKm2:z.number().finite().positive().optional(),geometrySimplified:z.boolean().optional()
 }).strict();
 

@@ -1,0 +1,11 @@
+{
+  "pending": {
+    "busy": "true",
+    "resultPresent": false
+  },
+  "after": {
+    "areaPresent": false,
+    "calculateDisabled": true,
+    "resultPresent": false
+  }
+}

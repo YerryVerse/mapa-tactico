@@ -1,0 +1,288 @@
+[
+  {
+    "countryCode": "DEU",
+    "searchStatus": 200,
+    "candidates": {
+      "status": "available",
+      "provider": "geoBoundaries",
+      "releaseType": "gbOpen",
+      "results": [
+        {
+          "boundaryLayerId": "DEU-ADM0-19620994",
+          "featureId": "19620994B64591758255713",
+          "name": "the Federal Republic of Germany",
+          "countryCode": "DEU",
+          "level": "ADM0",
+          "boundaryYear": "2021",
+          "license": "Data license Germany - Attribution - Version 2.0",
+          "source": "Federal Agency for Cartography and Geodesy",
+          "aliases": [],
+          "geometryType": "MultiPolygon"
+        }
+      ]
+    },
+    "adminStatus": 200,
+    "result": {
+      "status": "available",
+      "geometryHash": "0182faa24739a001caee412b147d0d5402165a393d41995829bb381f6e14b1e3",
+      "dataVersion": "9e9c96808ce1ba9312eaac06b010234657dc96ac429f8df4d06cd38be33faea9",
+      "countryCodes": [
+        "DEU"
+      ],
+      "population": 84401511.0616047,
+      "areaKm2": 356438.39499001205,
+      "year": 2025,
+      "edition": "R2025A-v1",
+      "resolution": "100m",
+      "units": "people_per_grid_cell",
+      "method": "cell_center_inside_polygon",
+      "source": "WorldPop Global 2",
+      "license": "CC-BY-4.0",
+      "doi": "10.5258/SOTON/WP00839",
+      "coverage": {
+        "status": "partial",
+        "validGridCells": 22066924,
+        "intersectedGridCells": 66162421,
+        "noDataGridCells": 44095497
+      },
+      "sourceDatasets": [
+        {
+          "countryCode": "DEU",
+          "datasetId": "deu_pop_2025_CN_100m_R2025A_v1",
+          "sourceSha256": "53f9913139a240237bf36183b145c548fb74690c96b4c6dc2e993d786d771a39"
+        }
+      ],
+      "processingTimeMs": 0,
+      "boundary": {
+        "boundaryLayerId": "DEU-ADM0-19620994",
+        "featureId": "19620994B64591758255713",
+        "name": "the Federal Republic of Germany",
+        "countryCode": "DEU",
+        "level": "ADM0",
+        "boundaryYear": "2021",
+        "license": "Data license Germany - Attribution - Version 2.0",
+        "source": "Federal Agency for Cartography and Geodesy",
+        "aliases": [],
+        "geometryType": "MultiPolygon",
+        "geometryRole": "display_only",
+        "geometrySimplified": false
+      }
+    },
+    "elapsedMs": 2559
+  },
+  {
+    "countryCode": "GBR",
+    "searchStatus": 200,
+    "candidates": {
+      "status": "available",
+      "provider": "geoBoundaries",
+      "releaseType": "gbOpen",
+      "results": [
+        {
+          "boundaryLayerId": "GBR-ADM2-9080712",
+          "featureId": "9080712B54935279696040",
+          "name": "Westminster",
+          "countryCode": "GBR",
+          "level": "ADM2",
+          "boundaryYear": "2019",
+          "license": "Open Government Licence v3.0",
+          "source": "Office for National Statistics Open Geography Portal",
+          "aliases": [],
+          "geometryType": "Polygon"
+        }
+      ]
+    },
+    "adminStatus": 200,
+    "result": {
+      "status": "available",
+      "geometryHash": "c0d25167c95b296a61f7fe8db1989febf961f9705bfe4560e86b39fbc55d4769",
+      "dataVersion": "9e9c96808ce1ba9312eaac06b010234657dc96ac429f8df4d06cd38be33faea9",
+      "countryCodes": [
+        "GBR"
+      ],
+      "population": 206027.97752704192,
+      "areaKm2": 22.862006689320236,
+      "year": 2025,
+      "edition": "R2025A-v1",
+      "resolution": "100m",
+      "units": "people_per_grid_cell",
+      "method": "cell_center_inside_polygon",
+      "source": "WorldPop Global 2",
+      "license": "CC-BY-4.0",
+      "doi": "10.5258/SOTON/WP00839",
+      "coverage": {
+        "status": "partial",
+        "validGridCells": 4103,
+        "intersectedGridCells": 4292,
+        "noDataGridCells": 189
+      },
+      "sourceDatasets": [
+        {
+          "countryCode": "GBR",
+          "datasetId": "gbr_pop_2025_CN_100m_R2025A_v1",
+          "sourceSha256": "98a640f18c7f54ef647f766f7e4fb52a3938659f7e699ef71fe870727636240a"
+        }
+      ],
+      "processingTimeMs": 0,
+      "boundary": {
+        "boundaryLayerId": "GBR-ADM2-9080712",
+        "featureId": "9080712B54935279696040",
+        "name": "Westminster",
+        "countryCode": "GBR",
+        "level": "ADM2",
+        "boundaryYear": "2019",
+        "license": "Open Government Licence v3.0",
+        "source": "Office for National Statistics Open Geography Portal",
+        "aliases": [],
+        "geometryType": "Polygon",
+        "geometryRole": "display_only",
+        "geometrySimplified": false,
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -0.11160678750862,
+                51.51533799695561
+              ],
+              [
+                -0.129361450349643,
+                51.5134832609334
+              ],
+              [
+                -0.152732420226796,
+                51.537519143528804
+              ],
+              [
+                -0.191483481915455,
+                51.53628936444309
+              ],
+              [
+                -0.196568744529984,
+                51.527653972554056
+              ],
+              [
+                -0.205309897927594,
+                51.53295691813311
+              ],
+              [
+                -0.21602889331714,
+                51.52792816066051
+              ],
+              [
+                -0.179570818350525,
+                51.49777836018933
+              ],
+              [
+                -0.158468622949821,
+                51.50224817229959
+              ],
+              [
+                -0.150000889186005,
+                51.485467340556845
+              ],
+              [
+                -0.128471262440794,
+                51.485063944337014
+              ],
+              [
+                -0.111580481254835,
+                51.5108316453289
+              ],
+              [
+                -0.11160678750862,
+                51.51533799695561
+              ]
+            ]
+          ]
+        }
+      }
+    },
+    "elapsedMs": 797
+  },
+  {
+    "countryCode": "AUS",
+    "searchStatus": 200,
+    "candidates": {
+      "status": "available",
+      "provider": "geoBoundaries",
+      "releaseType": "gbOpen",
+      "results": [
+        {
+          "boundaryLayerId": "AUS-ADM0-85198719",
+          "featureId": "85198719B13759021872828",
+          "name": "Australia",
+          "countryCode": "AUS",
+          "level": "ADM0",
+          "boundaryYear": "2021",
+          "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+          "source": "Australian Bureau of Statistics",
+          "aliases": [],
+          "geometryType": "MultiPolygon",
+          "areaKm2": 7702848.31719507,
+          "geometrySimplified": true
+        }
+      ]
+    },
+    "adminStatus": 200,
+    "result": {
+      "status": "available",
+      "geometryHash": "81b138416e1d253ec71b076df346337f075a5950aa3d075455dd20ae23b5dd4a",
+      "dataVersion": "9e9c96808ce1ba9312eaac06b010234657dc96ac429f8df4d06cd38be33faea9",
+      "countryCodes": [
+        "AUS"
+      ],
+      "population": 26832710.632786494,
+      "areaKm2": 7702848.31719507,
+      "year": 2025,
+      "edition": "R2025A-v1",
+      "resolution": "100m",
+      "units": "people_per_grid_cell",
+      "method": "cell_center_inside_polygon",
+      "source": "WorldPop Global 2",
+      "license": "CC-BY-4.0",
+      "doi": "10.5258/SOTON/WP00839",
+      "coverage": {
+        "status": "partial",
+        "validGridCells": 17445365,
+        "intersectedGridCells": 1001648697,
+        "noDataGridCells": 984203332
+      },
+      "sourceDatasets": [
+        {
+          "countryCode": "AUS",
+          "datasetId": "aus_pop_2025_CN_100m_R2025A_v1",
+          "sourceSha256": "3e4bb205a2bae23355ee181750063ad5abc937258c78cffb59878d1b154091a4"
+        }
+      ],
+      "processingTimeMs": 0,
+      "boundary": {
+        "boundaryLayerId": "AUS-ADM0-85198719",
+        "featureId": "85198719B13759021872828",
+        "name": "Australia",
+        "countryCode": "AUS",
+        "level": "ADM0",
+        "boundaryYear": "2021",
+        "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+        "source": "Australian Bureau of Statistics",
+        "aliases": [],
+        "geometryType": "MultiPolygon",
+        "geometryRole": "display_only",
+        "geometrySimplified": true,
+        "areaKm2": 7702848.31719507
+      }
+    },
+    "elapsedMs": 2152
+  },
+  {
+    "countryCode": "ALA",
+    "searchStatus": 404,
+    "candidates": {
+      "status": "no_coverage",
+      "error": "boundary_not_available"
+    },
+    "adminStatus": null,
+    "result": null,
+    "elapsedMs": 101
+  }
+]

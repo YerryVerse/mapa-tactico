@@ -1,0 +1,1640 @@
+{
+  "location": [
+    {
+      "actions": [
+        {
+          "scroll": 42,
+          "text": "",
+          "width": 42
+        },
+        {
+          "scroll": 230,
+          "text": "Español",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "English",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "简体中文",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "हिन्दी",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "العربية",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "Français",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "বাংলা",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "Português",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "Русский",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "Bahasa Indonesia",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "اردو",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "Deutsch✓",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "日本語",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "मराठी",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "Tiếng Việt",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "తెలుగు",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "Kiswahili",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "Hausa",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "Türkçe",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "پنجابی",
+          "width": 230
+        },
+        {
+          "scroll": 247,
+          "text": "Standort verwenden",
+          "width": 247
+        },
+        {
+          "scroll": 247,
+          "text": "Kartenmitte verwenden",
+          "width": 247
+        },
+        {
+          "scroll": 247,
+          "text": "Standort entfernen",
+          "width": 247
+        }
+      ],
+      "dialog": {
+        "buttons": [
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          }
+        ],
+        "font": "32px",
+        "scroll": 279,
+        "title": "44px",
+        "width": 279
+      },
+      "dir": "ltr",
+      "fields": [
+        {
+          "dir": "ltr",
+          "font": "32px",
+          "id": "_r_1_",
+          "value": ""
+        },
+        {
+          "dir": "ltr",
+          "font": "32px",
+          "id": "lng",
+          "value": "-69.884500"
+        },
+        {
+          "dir": "ltr",
+          "font": "32px",
+          "id": "lat",
+          "value": "18.473700"
+        }
+      ],
+      "font": "32px",
+      "lang": "de",
+      "panelScrollWidth": 279,
+      "panelWidth": 279,
+      "title": "44px",
+      "width": 320
+    },
+    {
+      "actions": [
+        {
+          "scroll": 42,
+          "text": "",
+          "width": 42
+        },
+        {
+          "scroll": 230,
+          "text": "Español",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "English",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "简体中文",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "हिन्दी",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "العربية✓",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "Français",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "বাংলা",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "Português",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "Русский",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "Bahasa Indonesia",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "اردو",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "Deutsch",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "日本語",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "मराठी",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "Tiếng Việt",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "తెలుగు",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "Kiswahili",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "Hausa",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "Türkçe",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "پنجابی",
+          "width": 230
+        },
+        {
+          "scroll": 247,
+          "text": "استخدام الموقع",
+          "width": 247
+        },
+        {
+          "scroll": 247,
+          "text": "استخدام مركز الخريطة",
+          "width": 247
+        },
+        {
+          "scroll": 127,
+          "text": "إزالة الموقع",
+          "width": 127
+        }
+      ],
+      "dialog": {
+        "buttons": [
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          }
+        ],
+        "font": "32px",
+        "scroll": 279,
+        "title": "44px",
+        "width": 279
+      },
+      "dir": "rtl",
+      "fields": [
+        {
+          "dir": "rtl",
+          "font": "32px",
+          "id": "_r_1_",
+          "value": ""
+        },
+        {
+          "dir": "ltr",
+          "font": "32px",
+          "id": "lng",
+          "value": "-69.884500"
+        },
+        {
+          "dir": "ltr",
+          "font": "32px",
+          "id": "lat",
+          "value": "18.473700"
+        }
+      ],
+      "font": "32px",
+      "lang": "ar",
+      "panelScrollWidth": 279,
+      "panelWidth": 279,
+      "title": "44px",
+      "width": 320
+    },
+    {
+      "actions": [
+        {
+          "scroll": 42,
+          "text": "",
+          "width": 42
+        },
+        {
+          "scroll": 230,
+          "text": "Español",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "English",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "简体中文",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "हिन्दी",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "العربية",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "Français",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "বাংলা",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "Português",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "Русский",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "Bahasa Indonesia",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "اردو✓",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "Deutsch",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "日本語",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "मराठी",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "Tiếng Việt",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "తెలుగు",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "Kiswahili",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "Hausa",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "Türkçe",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "پنجابی",
+          "width": 230
+        },
+        {
+          "scroll": 247,
+          "text": "یہ مقام استعمال کریں",
+          "width": 247
+        },
+        {
+          "scroll": 247,
+          "text": "نقشے کا مرکز استعمال کریں",
+          "width": 247
+        },
+        {
+          "scroll": 125,
+          "text": "مقام ہٹائیں",
+          "width": 125
+        }
+      ],
+      "dialog": {
+        "buttons": [
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          }
+        ],
+        "font": "32px",
+        "scroll": 279,
+        "title": "44px",
+        "width": 279
+      },
+      "dir": "rtl",
+      "fields": [
+        {
+          "dir": "rtl",
+          "font": "32px",
+          "id": "_r_1_",
+          "value": ""
+        },
+        {
+          "dir": "ltr",
+          "font": "32px",
+          "id": "lng",
+          "value": "-69.884500"
+        },
+        {
+          "dir": "ltr",
+          "font": "32px",
+          "id": "lat",
+          "value": "18.473700"
+        }
+      ],
+      "font": "32px",
+      "lang": "ur",
+      "panelScrollWidth": 279,
+      "panelWidth": 279,
+      "title": "44px",
+      "width": 320
+    },
+    {
+      "actions": [
+        {
+          "scroll": 42,
+          "text": "",
+          "width": 42
+        },
+        {
+          "scroll": 230,
+          "text": "Español",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "English",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "简体中文",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "हिन्दी",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "العربية",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "Français",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "বাংলা",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "Português",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "Русский",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "Bahasa Indonesia",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "اردو",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "Deutsch",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "日本語",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "मराठी",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "Tiếng Việt",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "తెలుగు",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "Kiswahili",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "Hausa",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "Türkçe",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "پنجابی✓",
+          "width": 230
+        },
+        {
+          "scroll": 247,
+          "text": "ایہ تھاں ورتو",
+          "width": 247
+        },
+        {
+          "scroll": 209,
+          "text": "نقشے دا مرکز ورتو",
+          "width": 209
+        },
+        {
+          "scroll": 100,
+          "text": "تھاں ہٹاؤ",
+          "width": 100
+        }
+      ],
+      "dialog": {
+        "buttons": [
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          }
+        ],
+        "font": "32px",
+        "scroll": 279,
+        "title": "44px",
+        "width": 279
+      },
+      "dir": "rtl",
+      "fields": [
+        {
+          "dir": "rtl",
+          "font": "32px",
+          "id": "_r_1_",
+          "value": ""
+        },
+        {
+          "dir": "ltr",
+          "font": "32px",
+          "id": "lng",
+          "value": "-69.884500"
+        },
+        {
+          "dir": "ltr",
+          "font": "32px",
+          "id": "lat",
+          "value": "18.473700"
+        }
+      ],
+      "font": "32px",
+      "lang": "pnb-Arab",
+      "panelScrollWidth": 279,
+      "panelWidth": 279,
+      "title": "44px",
+      "width": 320
+    },
+    {
+      "actions": [
+        {
+          "scroll": 42,
+          "text": "",
+          "width": 42
+        },
+        {
+          "scroll": 230,
+          "text": "Español",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "English",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "简体中文",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "हिन्दी",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "العربية",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "Français",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "বাংলা",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "Português",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "Русский",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "Bahasa Indonesia",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "اردو",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "Deutsch",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "日本語",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "मराठी",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "Tiếng Việt",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "తెలుగు✓",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "Kiswahili",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "Hausa",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "Türkçe",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "پنجابی",
+          "width": 230
+        },
+        {
+          "scroll": 247,
+          "text": "ఈ ప్రదేశాన్ని ఉపయోగించండి",
+          "width": 247
+        },
+        {
+          "scroll": 247,
+          "text": "మ్యాప్ మధ్య బిందువును ఉపయోగించండి",
+          "width": 247
+        },
+        {
+          "scroll": 247,
+          "text": "ప్రదేశాన్ని తీసివేయండి",
+          "width": 247
+        }
+      ],
+      "dialog": {
+        "buttons": [
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          }
+        ],
+        "font": "32px",
+        "scroll": 279,
+        "title": "44px",
+        "width": 279
+      },
+      "dir": "ltr",
+      "fields": [
+        {
+          "dir": "ltr",
+          "font": "32px",
+          "id": "_r_1_",
+          "value": ""
+        },
+        {
+          "dir": "ltr",
+          "font": "32px",
+          "id": "lng",
+          "value": "-69.884500"
+        },
+        {
+          "dir": "ltr",
+          "font": "32px",
+          "id": "lat",
+          "value": "18.473700"
+        }
+      ],
+      "font": "32px",
+      "lang": "te",
+      "panelScrollWidth": 279,
+      "panelWidth": 279,
+      "title": "44px",
+      "width": 320
+    },
+    {
+      "actions": [
+        {
+          "scroll": 42,
+          "text": "",
+          "width": 42
+        },
+        {
+          "scroll": 230,
+          "text": "Español",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "English",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "简体中文",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "हिन्दी",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "العربية",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "Français",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "বাংলা",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "Português",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "Русский",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "Bahasa Indonesia",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "اردو",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "Deutsch",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "日本語✓",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "मराठी",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "Tiếng Việt",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "తెలుగు",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "Kiswahili",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "Hausa",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "Türkçe",
+          "width": 230
+        },
+        {
+          "scroll": 230,
+          "text": "پنجابی",
+          "width": 230
+        },
+        {
+          "scroll": 247,
+          "text": "この位置を使用",
+          "width": 247
+        },
+        {
+          "scroll": 247,
+          "text": "地図の中心を使用",
+          "width": 247
+        },
+        {
+          "scroll": 160,
+          "text": "位置を削除",
+          "width": 160
+        }
+      ],
+      "dialog": {
+        "buttons": [
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          },
+          {
+            "s": 230,
+            "w": 230
+          }
+        ],
+        "font": "32px",
+        "scroll": 279,
+        "title": "44px",
+        "width": 279
+      },
+      "dir": "ltr",
+      "fields": [
+        {
+          "dir": "ltr",
+          "font": "32px",
+          "id": "_r_1_",
+          "value": ""
+        },
+        {
+          "dir": "ltr",
+          "font": "32px",
+          "id": "lng",
+          "value": "-69.884500"
+        },
+        {
+          "dir": "ltr",
+          "font": "32px",
+          "id": "lat",
+          "value": "18.473700"
+        }
+      ],
+      "font": "32px",
+      "lang": "ja",
+      "panelScrollWidth": 279,
+      "panelWidth": 279,
+      "title": "44px",
+      "width": 320
+    }
+  ],
+  "disclaimer": [
+    {
+      "font": "32px",
+      "lang": "de",
+      "paragraphs": [
+        {
+          "s": 247,
+          "w": 247
+        },
+        {
+          "s": 247,
+          "w": 247
+        },
+        {
+          "s": 247,
+          "w": 247
+        },
+        {
+          "s": 247,
+          "w": 247
+        },
+        {
+          "s": 247,
+          "w": 247
+        }
+      ],
+      "s": 279,
+      "w": 279,
+      "width": 320
+    },
+    {
+      "font": "32px",
+      "lang": "ar",
+      "paragraphs": [
+        {
+          "s": 247,
+          "w": 247
+        },
+        {
+          "s": 247,
+          "w": 247
+        },
+        {
+          "s": 247,
+          "w": 247
+        },
+        {
+          "s": 247,
+          "w": 247
+        },
+        {
+          "s": 247,
+          "w": 247
+        }
+      ],
+      "s": 279,
+      "w": 279,
+      "width": 320
+    },
+    {
+      "font": "32px",
+      "lang": "ur",
+      "paragraphs": [
+        {
+          "s": 247,
+          "w": 247
+        },
+        {
+          "s": 247,
+          "w": 247
+        },
+        {
+          "s": 247,
+          "w": 247
+        },
+        {
+          "s": 247,
+          "w": 247
+        },
+        {
+          "s": 247,
+          "w": 247
+        }
+      ],
+      "s": 279,
+      "w": 279,
+      "width": 320
+    },
+    {
+      "font": "32px",
+      "lang": "pnb-Arab",
+      "paragraphs": [
+        {
+          "s": 247,
+          "w": 247
+        },
+        {
+          "s": 247,
+          "w": 247
+        },
+        {
+          "s": 247,
+          "w": 247
+        },
+        {
+          "s": 247,
+          "w": 247
+        },
+        {
+          "s": 247,
+          "w": 247
+        }
+      ],
+      "s": 279,
+      "w": 279,
+      "width": 320
+    },
+    {
+      "font": "32px",
+      "lang": "te",
+      "paragraphs": [
+        {
+          "s": 247,
+          "w": 247
+        },
+        {
+          "s": 247,
+          "w": 247
+        },
+        {
+          "s": 247,
+          "w": 247
+        },
+        {
+          "s": 247,
+          "w": 247
+        },
+        {
+          "s": 247,
+          "w": 247
+        }
+      ],
+      "s": 279,
+      "w": 279,
+      "width": 320
+    },
+    {
+      "font": "32px",
+      "lang": "ja",
+      "paragraphs": [
+        {
+          "s": 247,
+          "w": 247
+        },
+        {
+          "s": 247,
+          "w": 247
+        },
+        {
+          "s": 247,
+          "w": 247
+        },
+        {
+          "s": 247,
+          "w": 247
+        },
+        {
+          "s": 247,
+          "w": 247
+        }
+      ],
+      "s": 279,
+      "w": 279,
+      "width": 320
+    }
+  ],
+  "wide": [
+    {
+      "dir": "rtl",
+      "font": "32px",
+      "lang": "ar",
+      "s": 323,
+      "w": 323,
+      "width": 1280
+    },
+    {
+      "dir": "rtl",
+      "font": "32px",
+      "lang": "ur",
+      "s": 323,
+      "w": 323,
+      "width": 1280
+    },
+    {
+      "dir": "rtl",
+      "font": "32px",
+      "lang": "pnb-Arab",
+      "s": 323,
+      "w": 323,
+      "width": 1280
+    }
+  ]
+}
