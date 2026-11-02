@@ -77,7 +77,7 @@ export default function Portal(){
   if(typeof label?.properties?.id!=='string'||label.geometry.type!=='Point')return;
   const [x,y]=label.geometry.coordinates;setPoint({lng:x,lat:y});setSelectedCountry(label.properties.id);setLng(String(x.toFixed(6)));setLat(String(y.toFixed(6)));
  };map.on('mousedown',down);map.on('touchstart',down);map.on('dragstart',drag);map.on('click',click);return()=>{map.off('mousedown',down);map.off('touchstart',down);map.off('dragstart',drag);map.off('click',click);};},[map]);
- useEffect(()=>{if(!map)return;const frame=()=>{const small=window.matchMedia('(max-width:600px)').matches;const padding=hasPanel?(small?{top:0,bottom:Math.min(window.innerHeight*.48,380)+38,left:0,right:0}:{top:0,bottom:0,left:0,right:444}):{top:0,bottom:0,left:0,right:0};const p=pointRef.current;map.easeTo({center:hasPanel&&p&&Math.abs(p.lat)<=85.05112878?p:map.getCenter(),padding,duration:250,essential:true});};frame();window.addEventListener('resize',frame);return()=>window.removeEventListener('resize',frame);},[map,hasPanel]);
+ useEffect(()=>{if(!map)return;const frame=()=>{const small=window.matchMedia('(max-width:600px)').matches;const padding=hasPanel?(small?{top:0,bottom:Math.min(window.innerHeight*.48,380)+38,left:0,right:0}:{top:0,bottom:0,left:0,right:444}):{top:0,bottom:0,left:0,right:0};map.easeTo({padding,duration:250,essential:true});};frame();window.addEventListener('resize',frame);return()=>window.removeEventListener('resize',frame);},[map,hasPanel]);
  useEffect(()=>{
   if(!map)return;
   const canvas=map.getCanvas();
@@ -109,10 +109,8 @@ export default function Portal(){
   const target = detonated ? detonationPoint : point;
   const active = detonated && selected ? selected : activeResult;
   if(!active) return;
-  const cleanupContext=!detonated?mountContextLayer(map,{...active,...(active.location?{location:{...active.location,label:active.location.label}}:{})}):undefined;
-  const cleanupBlast=detonated && target ? mountBlastLayer(map,active,target) : undefined;
+  const cleanupBlast=detonated && detonationPoint && selected ? mountBlastLayer(map,selected,detonationPoint) : undefined;
   return()=>{
-    cleanupContext?.();
     cleanupBlast?.();
   };
  },[map,activeResult,language,point,detonated,selected,detonationPoint]);

@@ -144,7 +144,9 @@ export default function ContextCard({
       {onLocate && (
         <div className="blast-action-wrap">
           <button type="button" className="primary" onClick={onLocate}>
-            {entry.location ? t('viewReference') : (isEs ? 'Ver afectación en el mapa' : 'View blast on map')}
+            {targetPoint
+              ? (isEs ? 'Centrar detonación en el mapa' : 'Center blast on map')
+              : (entry.location ? t('viewReference') : (isEs ? 'Ver afectación en el mapa' : 'View blast on map'))}
           </button>
         </div>
       )}
