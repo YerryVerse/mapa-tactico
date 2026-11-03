@@ -21,7 +21,8 @@ export default function Globe({diagnostics=false,onReady}:{diagnostics?:boolean,
   (async()=>{try{
    const ml=await import('maplibre-gl');
    if(cancelled||!container.current)return;
-   ml.setWorkerUrl('/map-worker/maplibre-gl-worker-6.13.0.mjs');
+   const base = typeof document !== 'undefined' ? (document.baseURI || window.location.href) : 'http://127.0.0.1/';
+    ml.setWorkerUrl(new URL('map-worker/maplibre-gl-worker-6.13.0.mjs', base).href);
    map=new ml.Map({container:container.current,style:atlasStyle(languageRef.current),center:[-30,20],zoom:1.25,minZoom:0,maxZoom:22,pitch:0,maxPitch:0,dragRotate:false,touchPitch:false,zoomLevelsToOverscale:8,attributionControl:{compact:false},renderWorldCopies:true,localIdeographFontFamily:false});
    mapRef.current=map;
    if(diagnosticsRef.current)map.addControl(new ml.NavigationControl({showCompass:false}),'bottom-right');
